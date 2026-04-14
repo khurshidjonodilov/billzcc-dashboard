@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BILLZ — Колл-центр, Апрель 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<style>
+  :root {
+    --bg: #0a0e1a;
+    --surface: #111827;
+    --surface2: #1a2234;
+    --border: rgba(255,255,255,0.07);
+    --border2: rgba(255,255,255,0.12);
+    --text: #f0f4ff;
+    --muted: #8892aa;
+    --accent: #4f8ef7;
+    --accent2: #7c3aed;
+    --green: #10b981;
+    --red: #ef4444;
+    --amber: #f59e0b;
+    --teal: #14b8a6;
+    --font-display: 'Syne', sans-serif;
+    --font-body: 'DM Sans', sans-serif;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-body);
+    font-size: 14px;
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+
+  /* Subtle grid background */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(79,142,247,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(79,142,247,0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .page { position: relative; z-index: 1; max-width: 1320px; margin: 0 auto; padding: 32px 24px 64px; }
+
+  /* Header */
+  .header { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 40px; padding-bottom: 28px; border-bottom: 1px solid var(--border); }
+  .header-left {}
+  .logo { font-family: var(--font-display); font-size: 13px; font-weight: 700; letter-spacing: 0.15em; color: var(--accent); text-transform: uppercase; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+  .logo-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); display: inline-block; }
+  .header h1 { font-family: var(--font-display); font-size: 32px; font-weight: 800; color: var(--text); line-height: 1.1; margin-bottom: 8px; }
+  .header-meta { font-size: 13px; color: var(--muted); display: flex; gap: 20px; flex-wrap: wrap; margin-top: 6px; }
+  .header-meta span { display: flex; align-items: center; gap: 6px; }
+  .header-meta span::before { content: ''; width: 3px; height: 3px; border-radius: 50%; background: var(--muted); display: inline-block; }
+  .header-meta span:first-child::before { display: none; }
+  .header-badge { background: rgba(79,142,247,0.1); border: 1px solid rgba(79,142,247,0.2); border-radius: 8px; padding: 8px 16px; font-family: var(--font-display); font-size: 11px; font-weight: 600; color: var(--accent); letter-spacing: 0.08em; text-align: right; }
+  .header-badge .big { font-size: 22px; display: block; margin-top: 4px; color: var(--text); }
+
+  /* KPI Grid */
+  .kpi-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 32px; }
+  .kpi-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 23px; position: relative; overflow: hidden; transition: border-color 0.2s; }
+  .kpi-card:hover { border-color: var(--border2); }
+  .kpi-card::after { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; border-radius: 12px 12px 0 0; }
+  .kpi-card.blue::after { background: linear-gradient(90deg, var(--accent), #818cf8); }
+  .kpi-card.green::after { background: linear-gradient(90deg, var(--green), #34d399); }
+  .kpi-card.red::after { background: linear-gradient(90deg, var(--red), #f87171); }
+  .kpi-card.amber::after { background: linear-gradient(90deg, var(--amber), #fcd34d); }
+  .kpi-label { font-size: 10px; font-weight: 500; letter-spacing: 0.1em; color: var(--muted); text-transform: uppercase; margin-bottom: 10px; }
+  .kpi-value { font-family: var(--font-display); font-size: 30px; font-weight: 600; color: var(--text); line-height: normal; margin-bottom: 8px; }
+  .kpi-sub { font-size: 12px; }
+  .kpi-sub.good { color: var(--green); }
+  .kpi-sub.bad { color: var(--red); }
+  .kpi-sub.warn { color: var(--amber); }
+  .kpi-sub.neutral { color: var(--muted); }
+
+  /* Alerts */
+  .alerts-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 32px; }
+  .alert { border-radius: 10px; padding: 16px 18px; border: 1px solid; }
+  .alert.red { background: rgba(239,68,68,0.05); border-color: rgba(239,68,68,0.2); }
+  .alert.amber { background: rgba(245,158,11,0.05); border-color: rgba(245,158,11,0.2); }
+  .alert-title { font-family: var(--font-display); font-size: 13px; font-weight: 700; margin-bottom: 6px; }
+  .alert.red .alert-title { color: #f87171; }
+  .alert.amber .alert-title { color: #fcd34d; }
+  .alert-body { font-size: 12px; color: #9ca3b8; line-height: 1.6; }
+
+  /* Charts grid */
+  .charts-row { display: grid; gap: 16px; margin-bottom: 16px; }
+  .charts-row.two { grid-template-columns: 1fr 1fr; }
+  .charts-row.three { grid-template-columns: 1fr 1fr 1fr; }
+  .charts-row.one { grid-template-columns: 1fr; }
+  .charts-row.wide-narrow { grid-template-columns: 2fr 1fr; }
+
+  .chart-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 20px; }
+  .chart-title { font-family: var(--font-display); font-size: 12px; font-weight: 700; letter-spacing: 0.08em; color: var(--muted); text-transform: uppercase; margin-bottom: 16px; }
+  .chart-wrap { position: relative; }
+
+  /* Legend */
+  .legend { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 12px; }
+  .legend-item { display: flex; align-items: center; gap: 6px; font-size: 11px; color: var(--muted); }
+  .legend-dot { width: 8px; height: 8px; border-radius: 2px; flex-shrink: 0; }
+
+  /* Operator table */
+  .op-table { width: 100%; border-collapse: collapse; }
+  .op-table th { font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); font-weight: 500; padding: 0 10px 12px; text-align: left; border-bottom: 1px solid var(--border); }
+  .op-table td { padding: 10px; font-size: 12px; border-bottom: 1px solid var(--border); }
+  .op-table tr:last-child td { border-bottom: none; }
+  .op-table tr:hover td { background: rgba(255,255,255,0.02); }
+  .rate-badge { display: inline-block; font-size: 10px; font-weight: 600; padding: 3px 8px; border-radius: 20px; }
+  .rate-badge.good { background: rgba(16,185,129,0.12); color: #34d399; }
+  .rate-badge.warn { background: rgba(245,158,11,0.12); color: #fcd34d; }
+  .rate-badge.bad { background: rgba(239,68,68,0.12); color: #f87171; }
+  .time-badge { font-size: 11px; font-weight: 500; }
+  .time-badge.fast { color: var(--green); }
+  .time-badge.mid { color: var(--amber); }
+  .time-badge.slow { color: var(--red); }
+  .mini-bar-wrap { display: flex; align-items: center; gap: 8px; }
+  .mini-bar-bg { flex: 1; height: 4px; background: var(--surface2); border-radius: 2px; }
+  .mini-bar-fill { height: 4px; border-radius: 2px; background: var(--accent); }
+
+  /* Footer */
+  .footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
+  .footer-left { font-size: 11px; color: var(--muted); }
+  .footer-right { font-size: 11px; color: var(--muted); font-family: var(--font-display); letter-spacing: 0.05em; }
+
+  /* Animations */
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  .kpi-card { animation: fadeUp 0.4s ease both; }
+  .kpi-card:nth-child(1) { animation-delay: 0.05s; }
+  .kpi-card:nth-child(2) { animation-delay: 0.10s; }
+  .kpi-card:nth-child(3) { animation-delay: 0.15s; }
+  .kpi-card:nth-child(4) { animation-delay: 0.20s; }
+  .kpi-card:nth-child(5) { animation-delay: 0.25s; }
+  .kpi-card:nth-child(6) { animation-delay: 0.30s; }
+  .kpi-card:nth-child(7) { animation-delay: 0.35s; }
+  .kpi-card:nth-child(8) { animation-delay: 0.40s; }
+
+  @media (max-width: 1100px) {
+    .kpi-grid { grid-template-columns: repeat(4, 1fr); }
+    .charts-row.three { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 800px) {
+    .kpi-grid { grid-template-columns: repeat(2, 1fr); }
+    .charts-row.two, .charts-row.wide-narrow { grid-template-columns: 1fr; }
+    .alerts-grid { grid-template-columns: 1fr; }
+    .header { flex-direction: column; gap: 16px; }
+    .header h1 { font-size: 24px; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- Header -->
+  <div class="header">
+    <div class="header-left">
+      <div class="logo"><span class="logo-dot"></span>BILLZ Analytics</div>
+      <h1>Колл-центр — Апрель 2026</h1>
+      <div class="header-meta">
+        <span>1–14 апреля 2026</span>
+        <span>14 рабочих дней</span>
+        <span>Источник: Omnidesk CRM</span>
+        <span>CPT: 9 865 сум</span>
+      </div>
+    </div>
+    <div class="header-badge">
+      Оценочные затраты
+      <span class="big">58.1 млн сум</span>
+    </div>
+  </div>
+
+  <!-- KPIs -->
+  <div class="kpi-grid">
+    <div class="kpi-card blue">
+      <div class="kpi-label">Всего тикетов</div>
+      <div class="kpi-value">5 893</div>
+      <div class="kpi-sub neutral">≈ 421 в день</div>
+    </div>
+    <div class="kpi-card red">
+      <div class="kpi-label">Нежелательные</div>
+      <div class="kpi-value">51.0%</div>
+      <div class="kpi-sub bad">3 005 тикетов ↑</div>
+    </div>
+    <div class="kpi-card amber">
+      <div class="kpi-label">Повторные обращения</div>
+      <div class="kpi-value">12.1%</div>
+      <div class="kpi-sub warn">569 из 4 703</div>
+    </div>
+    <div class="kpi-card red">
+      <div class="kpi-label">Anydesk-тикеты</div>
+      <div class="kpi-value">1 187</div>
+      <div class="kpi-sub bad">20.1% от всех</div>
+    </div>
+    <div class="kpi-card green">
+      <div class="kpi-label">Закрыто</div>
+      <div class="kpi-value">98.8%</div>
+      <div class="kpi-sub good">5 825 из 5 893 ✓</div>
+    </div>
+    <div class="kpi-card blue">
+      <div class="kpi-label">Медиана закрытия</div>
+      <div class="kpi-value">3.7 ч</div>
+      <div class="kpi-sub neutral">среднее 26.0 ч</div>
+    </div>
+    <div class="kpi-card green">
+      <div class="kpi-label">Рейтинг «Отлично»</div>
+      <div class="kpi-value">95.5%</div>
+      <div class="kpi-sub good">360 из 377 оценок</div>
+    </div>
+    <div class="kpi-card amber">
+      <div class="kpi-label">Открытых тикетов</div>
+      <div class="kpi-value">40</div>
+      <div class="kpi-sub warn">23 без ответственного</div>
+    </div>
+    <div class="kpi-card blue">
+      <div class="kpi-label">Тикетов на клиента</div>
+      <div class="kpi-value">1.56</div>
+      <div class="kpi-sub neutral">на 14 апр · 3 784 клиентов</div>
+    </div>
+    <div class="kpi-card blue">
+      <div class="kpi-label">Тикетов на пользователя</div>
+      <div class="kpi-value">0.79</div>
+      <div class="kpi-sub neutral">на 14 апр · 7 425 польз.</div>
+    </div>
+  </div>
+
+  <!-- Alerts -->
+  <div class="alerts-grid">
+    <div class="alert red">
+      <div class="alert-title">Нежелательный тип превысил 50%</div>
+      <div class="alert-body">3 005 нежелательных vs 2 519 желательных. Основные категории: оплата тарифа (708), ссылки для оплаты (268), вход в аккаунт (212). Требуется автоматизация типовых запросов.</div>
+    </div>
+    <div class="alert amber">
+      <div class="alert-title">Anydesk-нагрузка выросла в 6+ раз</div>
+      <div class="alert-body">1 187 тикетов через Anydesk — 20% объёма. В марте было 173. Без выделенного специалиста нагрузка ляжет на общую команду и ухудшит SLA.</div>
+    </div>
+    <div class="alert amber">
+      <div class="alert-title">Высокий разброс времени закрытия</div>
+      <div class="alert-body">Медиана 3.7 ч vs среднее 26.0 ч. 449 тикетов закрыты позже 3 дней. Максимум — 1 703 ч. Нужна автоматическая эскалация для долгих тикетов.</div>
+    </div>
+    <div class="alert red">
+      <div class="alert-title">40 открытых тикетов на момент выгрузки</div>
+      <div class="alert-body">Из них 23 без назначенного ответственного. Все — 14 апреля. Основной оператор с открытыми: Сардор Б. (6 тикетов). Требует ручного контроля.</div>
+    </div>
+  </div>
+
+  <!-- Row 1: Daily + Channels -->
+  <div class="charts-row wide-narrow">
+    <div class="chart-card">
+      <div class="chart-title">Тикеты по дням — 1–14 апреля</div>
+      <div class="legend">
+        <div class="legend-item"><span class="legend-dot" style="background:#4f8ef7"></span>Желательные</div>
+        <div class="legend-item"><span class="legend-dot" style="background:#ef4444"></span>Нежелательные</div>
+      </div>
+      <div class="chart-wrap" style="height:220px"><canvas id="dailyChart"></canvas></div>
+    </div>
+    <div class="chart-card">
+      <div class="chart-title">Каналы обращений</div>
+      <div class="legend">
+        <div class="legend-item"><span class="legend-dot" style="background:#4f8ef7"></span>Звонки 52%</div>
+        <div class="legend-item"><span class="legend-dot" style="background:#7c3aed"></span>Telegram 42%</div>
+        <div class="legend-item"><span class="legend-dot" style="background:#14b8a6"></span>Чат 6%</div>
+      </div>
+      <div class="chart-wrap" style="height:220px"><canvas id="channelChart"></canvas></div>
+    </div>
+  </div>
+
+  <!-- Row 2: Labels + Type breakdown -->
+  <div class="charts-row two">
+    <div class="chart-card">
+      <div class="chart-title">Топ-10 меток по объёму</div>
+      <div class="chart-wrap" style="height:300px"><canvas id="labelsChart"></canvas></div>
+    </div>
+    <div class="chart-card">
+      <div class="chart-title">Желательные vs Нежелательные — топ метки</div>
+      <div class="legend">
+        <div class="legend-item"><span class="legend-dot" style="background:#10b981"></span>Желательные</div>
+        <div class="legend-item"><span class="legend-dot" style="background:#ef4444"></span>Нежелательные</div>
+      </div>
+      <div class="chart-wrap" style="height:300px"><canvas id="typeChart"></canvas></div>
+    </div>
+  </div>
+
+  <!-- Row 3: Closure + Priority -->
+  <div class="charts-row two">
+    <div class="chart-card">
+      <div class="chart-title">Распределение по времени закрытия</div>
+      <div class="chart-wrap" style="height:240px"><canvas id="closureChart"></canvas></div>
+    </div>
+    <div class="chart-card">
+      <div class="chart-title">Приоритеты тикетов</div>
+      <div class="legend">
+        <div class="legend-item"><span class="legend-dot" style="background:#6b7280"></span>Низкий 42%</div>
+        <div class="legend-item"><span class="legend-dot" style="background:#4f8ef7"></span>Средний 49%</div>
+        <div class="legend-item"><span class="legend-dot" style="background:#ef4444"></span>Высокий 9%</div>
+        <div class="legend-item"><span class="legend-dot" style="background:#7f1d1d"></span>Критич. 0.1%</div>
+      </div>
+      <div class="chart-wrap" style="height:240px"><canvas id="priorityChart"></canvas></div>
+    </div>
+  </div>
+
+  <!-- Row 4: Companies -->
+  <div class="charts-row one">
+    <div class="chart-card">
+      <div class="chart-title">Топ-10 компаний — желательные vs нежелательные</div>
+      <div class="legend">
+        <div class="legend-item"><span class="legend-dot" style="background:#10b981"></span>Желательные</div>
+        <div class="legend-item"><span class="legend-dot" style="background:#ef4444"></span>Нежелательные</div>
+      </div>
+      <div class="chart-wrap" style="height:260px"><canvas id="compChart"></canvas></div>
+    </div>
+  </div>
+
+  <!-- Row 5: Operators table -->
+  <div class="charts-row one">
+    <div class="chart-card">
+      <div class="chart-title">Нагрузка и производительность операторов</div>
+      <table class="op-table">
+        <thead>
+          <tr>
+            <th>Оператор</th>
+            <th>Тикеты</th>
+            <th style="min-width:140px">Нагрузка</th>
+            <th>Ср. закрытие</th>
+            <th>Закрываемость</th>
+          </tr>
+        </thead>
+        <tbody id="opBody"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <div class="footer-left">BILLZ Call Centre Analytics &nbsp;·&nbsp; Данные: Omnidesk CRM &nbsp;·&nbsp; Период: 1–14 апреля 2026</div>
+    <div class="footer-right">CPT: 9 865 сум / тикет</div>
+  </div>
+
+</div>
+
+<script>
+const D = {"kpis":{"total":5893,"cost_mln":58.1,"undesired_pct":51.0,"undesired_cnt":3005,"repeat_pct":12.1,"repeat_cnt":569,"closed_pct":98.8,"closed_cnt":5825,"median_close":3.7,"mean_close":26.0,"anydesk_cnt":1187,"anydesk_pct":20.1,"rating_pct":95.5,"rating_good":360,"rating_total":377,"open_tickets":40,"cpt":9865,"period":"1–14 апреля 2026"},"daily":{"labels":["1 апр","2 апр","3 апр","4 апр","5 апр","6 апр","7 апр","8 апр","9 апр","10 апр","11 апр","12 апр","13 апр","14 апр"],"tickets":[523,533,570,432,364,364,354,346,340,447,432,584,500,104],"desired":[186,291,272,164,141,200,154,167,154,226,273,90,167,34],"undesired":[315,207,276,267,199,150,181,157,159,197,146,440,284,27]},"channels":{"labels":["Входящие звонки","ТГ (учётка 1144)","ТГ (бот)","Веб-чат","Чаты и мессенджеры"],"values":[3081,1987,461,335,29]},"labels":{"names":["Оплата за тариф","Ссылка для оплаты","Помощь со входом","Установка принтера","Блокировка аккаунта","Изменение товара","Кассовые смены","Вопрос не по пр.","Консультация долга","Создание роли"],"values":[708,268,212,189,132,116,109,103,75,71]},"label_type":{"names":["Оплата за тариф","Ссылка для оплаты","Помощь со входом","Установка принтера","Блокировка акк.","Кассовые смены","Изменение товара","Вопрос не по пр."],"desired":[223,68,56,136,42,34,50,31],"undesired":[425,197,155,49,83,75,58,66]},"closure":{"labels":["< 1 ч","1 – 4 ч","4 – 12 ч","12 – 24 ч","1 – 3 дня","Свыше 3 дней"],"values":[1171,1776,1327,479,460,449]},"companies":{"names":["BILLZ","Bloom","INBAZAR","Kolbasachi","gross-market","seoul-market1","Я родился","akula-mobile","X-sport","BUTTONSHOP"],"desired":[339,30,16,30,21,19,4,13,11,10],"undesired":[516,41,45,23,26,8,22,10,9,8]},"operators":{"names":["Анасхон","Робия Р.","Алиёр","Атабек","Нурилло","Тожмухаммад","Сардор Б.","Ардак","Авазбек","Робия А.","Иззатбек","Шохина","Дильшод","Нурлан","Камолиддин"],"tickets":[790,680,576,571,557,496,482,428,416,343,200,200,82,28,20],"avg_close":[25.7,36.2,21.4,24.9,22.8,22.1,34.1,31.7,22.3,28.4,5.5,14.2,43.9,4.9,31.4],"close_rate":[99.9,98.2,99.7,98.9,99.8,100.0,97.1,100.0,98.8,99.7,100.0,100.0,100.0,100.0,85.0]},"priority":{"labels":["Средний","Низкий","Высокий","Критический"],"values":[2867,2483,536,7]}};
+
+Chart.defaults.color = '#8892aa';
+Chart.defaults.font.family = "'DM Sans', sans-serif";
+Chart.defaults.font.size = 11;
+
+const gridColor = 'rgba(255,255,255,0.05)';
+const baseOpts = { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } } };
+
+// Daily stacked bar
+new Chart(document.getElementById('dailyChart'), {
+  type: 'bar',
+  data: {
+    labels: D.daily.labels,
+    datasets: [
+      { label: 'Желательные', data: D.daily.desired, backgroundColor: '#4f8ef7', borderRadius: 2, stack: 'a' },
+      { label: 'Нежелательные', data: D.daily.undesired, backgroundColor: '#ef4444', borderRadius: 2, stack: 'a' }
+    ]
+  },
+  options: { ...baseOpts, scales: {
+    x: { grid: { display: false }, ticks: { font: { size: 10 } }, stacked: true },
+    y: { grid: { color: gridColor }, stacked: true, ticks: { font: { size: 10 } } }
+  }}
+});
+
+// Channel doughnut
+new Chart(document.getElementById('channelChart'), {
+  type: 'doughnut',
+  data: {
+    labels: D.channels.labels,
+    datasets: [{ data: D.channels.values, backgroundColor: ['#4f8ef7','#7c3aed','#6366f1','#14b8a6','#6b7280'], borderWidth: 2, borderColor: '#111827' }]
+  },
+  options: { ...baseOpts, cutout: '64%' }
+});
+
+// Labels horizontal bar
+new Chart(document.getElementById('labelsChart'), {
+  type: 'bar',
+  data: {
+    labels: D.labels.names,
+    datasets: [{ data: D.labels.values, backgroundColor: '#4f8ef7', borderRadius: 3 }]
+  },
+  options: { ...baseOpts, indexAxis: 'y', scales: {
+    x: { grid: { color: gridColor }, ticks: { font: { size: 10 } } },
+    y: { grid: { display: false }, ticks: { font: { size: 10 } } }
+  }}
+});
+
+// Type breakdown
+new Chart(document.getElementById('typeChart'), {
+  type: 'bar',
+  data: {
+    labels: D.label_type.names,
+    datasets: [
+      { label: 'Желательные', data: D.label_type.desired, backgroundColor: '#10b981', borderRadius: 3 },
+      { label: 'Нежелательные', data: D.label_type.undesired, backgroundColor: '#ef4444', borderRadius: 3 }
+    ]
+  },
+  options: { ...baseOpts, scales: {
+    x: { grid: { display: false }, ticks: { font: { size: 9 }, maxRotation: 30 } },
+    y: { grid: { color: gridColor }, ticks: { font: { size: 10 } } }
+  }}
+});
+
+// Closure bar
+const closureColors = ['#10b981','#4f8ef7','#f59e0b','#f97316','#ef4444','#991b1b'];
+new Chart(document.getElementById('closureChart'), {
+  type: 'bar',
+  data: {
+    labels: D.closure.labels,
+    datasets: [{ data: D.closure.values, backgroundColor: closureColors, borderRadius: 4 }]
+  },
+  options: { ...baseOpts, scales: {
+    x: { grid: { display: false }, ticks: { font: { size: 11 } } },
+    y: { grid: { color: gridColor }, ticks: { font: { size: 10 } } }
+  }}
+});
+
+// Priority doughnut
+new Chart(document.getElementById('priorityChart'), {
+  type: 'doughnut',
+  data: {
+    labels: D.priority.labels,
+    datasets: [{ data: D.priority.values, backgroundColor: ['#4f8ef7','#6b7280','#ef4444','#7f1d1d'], borderWidth: 2, borderColor: '#111827' }]
+  },
+  options: { ...baseOpts, cutout: '64%' }
+});
+
+// Companies stacked horizontal
+new Chart(document.getElementById('compChart'), {
+  type: 'bar',
+  data: {
+    labels: D.companies.names,
+    datasets: [
+      { label: 'Желательные', data: D.companies.desired, backgroundColor: '#10b981', borderRadius: 3, stack: 'c' },
+      { label: 'Нежелательные', data: D.companies.undesired, backgroundColor: '#ef4444', borderRadius: 3, stack: 'c' }
+    ]
+  },
+  options: { ...baseOpts, indexAxis: 'y', scales: {
+    x: { grid: { color: gridColor }, stacked: true, ticks: { font: { size: 10 } } },
+    y: { grid: { display: false }, stacked: true, ticks: { font: { size: 11 } } }
+  }}
+});
+
+// Operators table
+const maxT = Math.max(...D.operators.tickets);
+const tbody = document.getElementById('opBody');
+D.operators.names.forEach((name, i) => {
+  const t = D.operators.tickets[i];
+  const avg = D.operators.avg_close[i];
+  const cr = D.operators.close_rate[i];
+  const barW = Math.round(t / maxT * 100);
+  const rateClass = cr >= 99.5 ? 'good' : cr >= 97 ? 'warn' : 'bad';
+  const timeClass = avg <= 15 ? 'fast' : avg <= 30 ? 'mid' : 'slow';
+  tbody.innerHTML += `<tr>
+    <td style="font-weight:500;color:#f0f4ff">${name}</td>
+    <td style="font-weight:600;color:#f0f4ff">${t.toLocaleString('ru')}</td>
+    <td><div class="mini-bar-wrap"><div class="mini-bar-bg"><div class="mini-bar-fill" style="width:${barW}%"></div></div><span style="font-size:10px;color:#8892aa;min-width:28px">${barW}%</span></div></td>
+    <td><span class="time-badge ${timeClass}">${avg} ч</span></td>
+    <td><span class="rate-badge ${rateClass}">${cr}%</span></td>
+  </tr>`;
+});
+</script>
+</body>
+</html>

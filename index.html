@@ -46,12 +46,12 @@
   <div class="row wn">
     <div class="card">
       <div class="card-hd"><div class="card-title">Тикеты по неделям</div></div>
-      <div class="leg"><div class="li"><span class="ld" style="background:#4DA87C"></span>Желательные</div><div class="li"><span class="ld" style="background:#C85A55"></span>Нежелательные</div></div>
+      <div class="leg"><div class="li"><span class="ld" style="background:#059669"></span>Желательные</div><div class="li"><span class="ld" style="background:#F87171"></span>Нежелательные</div></div>
       <div style="position:relative;height:210px"><canvas id="weeklyChart"></canvas></div>
     </div>
     <div class="card">
       <div class="card-hd"><div class="card-title">Каналы обращений</div></div>
-      <div class="leg"><div class="li"><span class="ld" style="background:#E8B86D"></span>Звонки 52%</div><div class="li"><span class="ld" style="background:#7EC8A4"></span>Telegram 42%</div><div class="li"><span class="ld" style="background:#C9963A"></span>Чат 6%</div></div>
+      <div class="leg"><div class="li"><span class="ld" style="background:#2563EB"></span>Звонки 52%</div><div class="li"><span class="ld" style="background:#34D399"></span>Telegram 42%</div><div class="li"><span class="ld" style="background:#1D4ED8"></span>Чат 6%</div></div>
       <div style="position:relative;height:210px"><canvas id="channelChart"></canvas></div>
     </div>
   </div>
@@ -188,28 +188,28 @@ function render() {
   charts.channel = buildDoughnut('channelChart',
     ['Звонки','ТГ учётка','ТГ бот','Веб-чат','Прочее'],
     [3081,1987,461,335,29],
-    ['#E8B86D','#7EC8A4','#C9963A','#A89070','#4A4438']
+    ['#2563EB','#34D399','#1D4ED8','#94A3B8','#334155']
   );
 
   // SLA donut
   charts.sla = buildDoughnut('slaChart',
     [`Соблюдён ${fmt.pct(D.sla_pct)}`, `Не соблюдён ${fmt.pct(D.sla_not_met)}`],
     [D.sla_pct, D.sla_not_met],
-    ['#7EC8A4','#E8736D']
+    ['#34D399','#DC2626']
   );
 
   // Type donut
   charts.type = buildDoughnut('typeChart',
     ['Желательные','Нежелательные'],
     [D.desired, D.undesired],
-    ['#4DA87C','#C85A55']
+    ['#059669','#F87171']
   );
 
   // Priority
   charts.priority = buildDoughnut('priorityChart',
     ['Средний','Низкий','Высокий','Критич.'],
     [2867,2483,536,7],
-    ['#E8B86D','#4A4438','#E8736D','#6B1A18']
+    ['#2563EB','#334155','#DC2626','#7F1D1D']
   );
 
   // Operators table

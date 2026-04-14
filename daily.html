@@ -56,10 +56,10 @@
     </div>
     <div class="card">
       <div class="card-hd"><div class="card-title">Распределение типов</div></div>
-      <div class="leg"><div class="li"><span class="ld" style="background:#7EC8A4"></span>SLA соблюдён</div><div class="li"><span class="ld" style="background:#E8736D"></span>Не соблюдён</div></div>
+      <div class="leg"><div class="li"><span class="ld" style="background:#34D399"></span>SLA соблюдён</div><div class="li"><span class="ld" style="background:#DC2626"></span>Не соблюдён</div></div>
       <div style="position:relative;height:150px"><canvas id="slaChart"></canvas></div>
       <div style="margin-top:14px">
-        <div class="leg"><div class="li"><span class="ld" style="background:#4DA87C"></span>Желательные</div><div class="li"><span class="ld" style="background:#C85A55"></span>Нежелательные</div></div>
+        <div class="leg"><div class="li"><span class="ld" style="background:#059669"></span>Желательные</div><div class="li"><span class="ld" style="background:#F87171"></span>Нежелательные</div></div>
         <div style="position:relative;height:130px"><canvas id="typeChart"></canvas></div>
       </div>
     </div>
@@ -162,15 +162,15 @@ function render() {
   const mx = Math.max(...HOURLY_VALS);
   charts.hourly = new Chart(document.getElementById('hourlyChart'), {
     type:'bar',
-    data:{labels:HOURLY_LABELS,datasets:[{data:HOURLY_VALS,backgroundColor:HOURLY_VALS.map(v=>{const r=v/mx;return r>.85?'#E8736D':r>.55?'#E8B86D':r>.25?'#7EC8A4':'#2A2620';}),borderRadius:3}]},
+    data:{labels:HOURLY_LABELS,datasets:[{data:HOURLY_VALS,backgroundColor:HOURLY_VALS.map(v=>{const r=v/mx;return r>.85?'#DC2626':r>.55?'#2563EB':r>.25?'#34D399':'#2A2620';}),borderRadius:3}]},
     options:{...chartBase,scales:{x:{grid:{display:false},ticks:{font:{size:10}}},y:{grid:{color:'rgba(255,255,255,0.04)'},ticks:{font:{size:10}}}}}
   });
 
   charts.sla = buildDoughnut('slaChart',
-    ['Соблюдён','Не соблюдён'],[D.sla_pct,D.sla_not_met],['#7EC8A4','#E8736D']
+    ['Соблюдён','Не соблюдён'],[D.sla_pct,D.sla_not_met],['#34D399','#DC2626']
   );
   charts.type = buildDoughnut('typeChart',
-    ['Желательные','Нежелательные'],[D.desired,D.undesired],['#4DA87C','#C85A55']
+    ['Желательные','Нежелательные'],[D.desired,D.undesired],['#059669','#F87171']
   );
 
   const ops = D.operators||DK.operators;

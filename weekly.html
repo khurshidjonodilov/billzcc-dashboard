@@ -44,7 +44,7 @@
   <div class="row one">
     <div class="card">
       <div class="card-hd"><div class="card-title">Тикеты по дням</div></div>
-      <div class="leg"><div class="li"><span class="ld" style="background:#4DA87C"></span>Желательные</div><div class="li"><span class="ld" style="background:#C85A55"></span>Нежелательные</div></div>
+      <div class="leg"><div class="li"><span class="ld" style="background:#059669"></span>Желательные</div><div class="li"><span class="ld" style="background:#F87171"></span>Нежелательные</div></div>
       <div style="position:relative;height:200px"><canvas id="dailyChart"></canvas></div>
     </div>
   </div>
@@ -57,10 +57,10 @@
     </div>
     <div class="card">
       <div class="card-hd"><div class="card-title">SLA и типы</div></div>
-      <div class="leg"><div class="li"><span class="ld" style="background:#7EC8A4"></span>Соблюдён</div><div class="li"><span class="ld" style="background:#E8736D"></span>Не соблюдён</div></div>
+      <div class="leg"><div class="li"><span class="ld" style="background:#34D399"></span>Соблюдён</div><div class="li"><span class="ld" style="background:#DC2626"></span>Не соблюдён</div></div>
       <div style="position:relative;height:150px"><canvas id="slaChart"></canvas></div>
       <div style="margin-top:14px">
-        <div class="leg"><div class="li"><span class="ld" style="background:#4DA87C"></span>Желательные</div><div class="li"><span class="ld" style="background:#C85A55"></span>Нежелательные</div></div>
+        <div class="leg"><div class="li"><span class="ld" style="background:#059669"></span>Желательные</div><div class="li"><span class="ld" style="background:#F87171"></span>Нежелательные</div></div>
         <div style="position:relative;height:130px"><canvas id="typeChart"></canvas></div>
       </div>
     </div>
@@ -171,10 +171,10 @@ function render() {
   }
 
   charts.sla = buildDoughnut('slaChart',
-    ['Соблюдён','Не соблюдён'],[D.sla_pct,D.sla_not_met],['#7EC8A4','#E8736D']
+    ['Соблюдён','Не соблюдён'],[D.sla_pct,D.sla_not_met],['#34D399','#DC2626']
   );
   charts.type = buildDoughnut('typeChart',
-    ['Желательные','Нежелательные'],[D.desired,D.undesired],['#4DA87C','#C85A55']
+    ['Желательные','Нежелательные'],[D.desired,D.undesired],['#059669','#F87171']
   );
 
   const ops = D.operators||WK.operators;

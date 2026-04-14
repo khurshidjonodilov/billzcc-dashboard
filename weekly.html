@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BILLZ CC · Еженедельный</title>
+<link rel="stylesheet" href="shared.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<script src="data.js"></script>
+<script src="shared.js"></script>
+</head>
+<body>
+<nav class="top-nav">
+  <div class="nav-brand">BILLZ · CC</div>
+  <a href="index.html" class="nav-link">Ежемесячно</a>
+  <a href="weekly.html" class="nav-link active">Еженедельно</a>
+  <a href="daily.html" class="nav-link">Ежедневно</a>
+  <div class="nav-right" id="navPeriod"></div>
+</nav>
+<div class="wrap">
+  <div class="phdr">
+    <div>
+      <div class="phdr-eyebrow">BILLZ · Колл-центр · Еженедельный отчёт</div>
+      <div class="phdr-title"><em id="wTitle">Неделя</em></div>
+      <div class="phdr-sub" id="wSub"></div>
+      <div class="period-bar" id="weekSwitcher"></div>
+      <div style="margin-top:8px">
+        <button class="period-btn active" id="btnWith" onclick="setMode('with')">Полная статистика</button>
+        <button class="period-btn" id="btnWithout" onclick="setMode('without')">Без «Массового сбоя»</button>
+      </div>
+    </div>
+    <div class="phdr-right">
+      <div class="cost-ey">Затраты за неделю</div>
+      <div class="cost-n" id="costVal">—</div>
+      <div class="cost-d">сум</div>
+      <div class="live"><span class="live-dot"></span>данные актуальны</div>
+    </div>
+  </div>
+
+  <div class="kpi-grid" id="kpiGrid"></div>
+  <div class="alert-grid" id="alertGrid"></div>
+
+  <div class="sec"><div class="sec-num">01</div><div class="sec-title">Динамика по дням недели</div><div class="sec-line"></div></div>
+  <div class="row one">
+    <div class="card">
+      <div class="card-hd"><div class="card-title">Тикеты по дням</div></div>
+      <div class="leg"><div class="li"><span class="ld" style="background:#4DA87C"></span>Желательные</div><div class="li"><span class="ld" style="background:#C85A55"></span>Нежелательные</div></div>
+      <div style="position:relative;height:200px"><canvas id="dailyChart"></canvas></div>
+    </div>
+  </div>
+
+  <div class="sec"><div class="sec-num">02</div><div class="sec-title">Нагрузка на операторов</div><div class="sec-line"></div></div>
+  <div class="row two">
+    <div class="card">
+      <div class="card-hd"><div class="card-title">Производительность</div><div class="card-note">SLA = % ответов ≤ 1 мин</div></div>
+      <table class="tbl"><thead><tr><th>Оператор</th><th>Тикеты</th><th>Нагрузка</th><th>Ср. время</th><th>Закрыто</th><th>SLA</th><th>Затраты</th></tr></thead><tbody id="opTable"></tbody></table>
+    </div>
+    <div class="card">
+      <div class="card-hd"><div class="card-title">SLA и типы</div></div>
+      <div class="leg"><div class="li"><span class="ld" style="background:#7EC8A4"></span>Соблюдён</div><div class="li"><span class="ld" style="background:#E8736D"></span>Не соблюдён</div></div>
+      <div style="position:relative;height:150px"><canvas id="slaChart"></canvas></div>
+      <div style="margin-top:14px">
+        <div class="leg"><div class="li"><span class="ld" style="background:#4DA87C"></span>Желательные</div><div class="li"><span class="ld" style="background:#C85A55"></span>Нежелательные</div></div>
+        <div style="position:relative;height:130px"><canvas id="typeChart"></canvas></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec"><div class="sec-num">03</div><div class="sec-title">Метки — затраты по CPT</div><div class="sec-line"></div></div>
+  <div class="row two">
+    <div class="card">
+      <div class="card-hd"><div class="card-title">Топ меток по стоимости</div></div>
+      <table class="tbl"><thead><tr><th>Метка</th><th>Тикеты</th><th>Объём</th><th>Тип</th><th>Затраты</th></tr></thead><tbody id="lblTable"></tbody></table>
+    </div>
+    <div class="card">
+      <div class="card-hd"><div class="card-title">Топ меток — объём</div></div>
+      <div style="position:relative;height:280px"><canvas id="labelsChart"></canvas></div>
+    </div>
+  </div>
+
+  <div class="sec"><div class="sec-num">04</div><div class="sec-title">Топ-10 компаний · разбивка по меткам</div><div class="sec-line"></div></div>
+  <div class="row one">
+    <div class="card">
+      <div class="card-hd"><div class="card-title">Компания · тикеты · затраты · топ метки</div></div>
+      <div id="companiesBlock"></div>
+    </div>
+  </div>
+
+  <div class="ftr">
+    <div class="fl">BILLZ · CC Intelligence · Omnidesk CRM · без тикетов Дильшода</div>
+    <div class="fr">Еженедельный отчёт · <span id="ftrPeriod"></span></div>
+  </div>
+</div>
+
+<script>
+const W = BILLZ_DATA.weekly;
+const D_ALL = BILLZ_DATA.daily;
+let currentWeek = Object.keys(W).sort().pop();
+let mode = 'with';
+let charts = {};
+
+// Build week switcher
+const switcher = document.getElementById('weekSwitcher');
+Object.keys(W).sort().forEach(k => {
+  const btn = document.createElement('button');
+  btn.className = 'period-btn' + (k===currentWeek?' active':'');
+  btn.textContent = W[k].label;
+  btn.onclick = () => {
+    currentWeek = k;
+    switcher.querySelectorAll('.period-btn').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    render();
+  };
+  switcher.appendChild(btn);
+});
+
+function setMode(m) {
+  mode = m;
+  document.getElementById('btnWith').classList.toggle('active', m==='with');
+  document.getElementById('btnWithout').classList.toggle('active', m==='without');
+  render();
+}
+
+function render() {
+  const WK = W[currentWeek];
+  const D = mode==='with' ? WK : {...WK, ...WK.no_massoviy};
+
+  document.getElementById('wTitle').textContent = WK.label;
+  document.getElementById('wSub').textContent = `Неделя ${WK.week_num} · ${D.tickets} тикетов`;
+  document.getElementById('navPeriod').textContent = WK.label;
+  document.getElementById('ftrPeriod').textContent = WK.label;
+  document.getElementById('costVal').textContent = fmt.mln(D.cost);
+
+  document.getElementById('kpiGrid').innerHTML = [
+    kpi('Всего тикетов',    fmt.num(D.tickets),              `за неделю`,'gold'),
+    kpi('Нежелательные',    fmt.pct(D.undesired/D.tickets*100),`${fmt.num(D.undesired)} тикетов`,'rose','▲'),
+    kpi('SLA соблюдён',     fmt.pct(D.sla_pct),              `не соблюдён: ${fmt.pct(D.sla_not_met)}`, D.sla_pct>=98?'sage':'rose'),
+    kpi('AFRT',             D.afrt,                           `ср. первый ответ`,'gold'),
+    kpi('Повторные',        fmt.pct(D.repeat_pct),           `повторные обращения`,'rose','⚠'),
+    kpi('Закрыто',          fmt.pct(D.closed/D.tickets*100), `${fmt.num(D.closed)} из ${fmt.num(D.tickets)}`,'sage','✓'),
+    kpi('LCR',              fmt.pct(D.lcr),                  `из ОнлайнПБХ`,'gold'),
+    kpi('Массовый сбой',    fmt.num(D.massoviy_cnt||0),      `тикетов`,mode==='without'?'sage':'rose'),
+    kpi('Звонки',           fmt.num(D.calls),                `из ${fmt.num(D.tickets)}`,'gold'),
+    kpi('Чаты/мессенджеры', fmt.num(D.chats),                `из ${fmt.num(D.tickets)}`,'gold'),
+  ].join('');
+
+  document.getElementById('alertGrid').innerHTML = `
+    <div class="alert ${D.undesired/D.tickets>0.5?'rose':'gold'}"><div class="alert-num">01</div><div><div class="al-label">Нежелательные ${fmt.pct(D.undesired/D.tickets*100)}</div><div class="al-txt">${fmt.num(D.undesired)} нежелательных vs ${fmt.num(D.desired)} желательных за неделю.</div></div></div>
+    <div class="alert gold"><div class="alert-num">02</div><div><div class="al-label">SLA · AFRT</div><div class="al-txt">SLA соблюдён: ${fmt.pct(D.sla_pct)} · не соблюдён: ${fmt.pct(D.sla_not_met)}. AFRT: ${D.afrt}.</div></div></div>
+    <div class="alert gold"><div class="alert-num">03</div><div><div class="al-label">Затраты недели</div><div class="al-txt">${fmt.mln(D.cost)} · ${fmt.num(D.tickets)} тикетов × 9 865 сум.</div></div></div>
+    <div class="alert gold"><div class="alert-num">04</div><div><div class="al-label">Каналы</div><div class="al-txt">Звонки: ${fmt.num(D.calls)} · Чаты: ${fmt.num(D.chats)}. Повторные: ${fmt.pct(D.repeat_pct)}.</div></div></div>
+  `;
+
+  Object.values(charts).forEach(c=>c.destroy()); charts={};
+
+  // Daily in week
+  const weekNum = WK.week_num;
+  const daysInWeek = Object.entries(D_ALL)
+    .filter(([k,v]) => {
+      const d = new Date(k);
+      const iso = getISOWeek(d);
+      return iso === weekNum;
+    }).sort(([a],[b])=>a.localeCompare(b));
+
+  if(daysInWeek.length) {
+    charts.daily = buildStackedBar('dailyChart',
+      daysInWeek.map(([k,v])=>v.label),
+      daysInWeek.map(([k,v])=>mode==='with'?v.desired:(v.no_massoviy?.desired||v.desired)),
+      daysInWeek.map(([k,v])=>mode==='with'?v.undesired:(v.no_massoviy?.undesired||v.undesired))
+    );
+  }
+
+  charts.sla = buildDoughnut('slaChart',
+    ['Соблюдён','Не соблюдён'],[D.sla_pct,D.sla_not_met],['#7EC8A4','#E8736D']
+  );
+  charts.type = buildDoughnut('typeChart',
+    ['Желательные','Нежелательные'],[D.desired,D.undesired],['#4DA87C','#C85A55']
+  );
+
+  const ops = D.operators||WK.operators;
+  const maxT = Math.max(...ops.map(o=>o.tickets));
+  document.getElementById('opTable').innerHTML = ops.map(op=>{
+    const bw=Math.round(op.tickets/maxT*100);
+    const rc=op.close_rate>=99.5?'ok':op.close_rate>=97?'warn':'bad';
+    const tc=op.avg_close<=15?'f':op.avg_close<=30?'m':'s';
+    const sc=(op.sla_pct||0)>=98?'ok':(op.sla_pct||0)>=95?'warn':'bad';
+    return `<tr><td class="n-name">${op.name}</td><td class="n-num">${fmt.num(op.tickets)}</td><td><div class="bw"><div class="bb"><div class="bf" style="width:${bw}%"></div></div><span class="bp">${bw}%</span></div></td><td><span class="tv ${tc}">${op.avg_close} ч</span></td><td><span class="b ${rc}">${op.close_rate}%</span></td><td><span class="b ${sc}">${op.sla_pct||0}%</span></td><td class="cost-cell">${fmt.mln(op.cost)}</td></tr>`;
+  }).join('');
+
+  const lbls = D.top_labels||WK.top_labels;
+  const maxL = Math.max(...lbls.slice(0,12).map(l=>l.tickets));
+  document.getElementById('lblTable').innerHTML = lbls.slice(0,12).map(l=>labelRow(l,maxL)).join('');
+  const t8 = lbls.slice(0,8);
+  charts.labels = buildHorizBar('labelsChart',
+    t8.map(l=>l.name.length>30?l.name.slice(0,30)+'…':l.name),
+    t8.map(l=>l.tickets),
+    (_,i)=>`rgba(232,184,109,${1-i*0.1})`
+  );
+
+  const comps = D.top_companies||WK.top_companies;
+  document.getElementById('companiesBlock').innerHTML = comps.map((c,i)=>companyBlock(c,i)).join('');
+}
+
+function getISOWeek(date) {
+  const d = new Date(Date.UTC(date.getFullYear(),date.getMonth(),date.getDate()));
+  d.setUTCDate(d.getUTCDate()+4-(d.getUTCDay()||7));
+  const yearStart = new Date(Date.UTC(d.getUTCFullYear(),0,1));
+  return Math.ceil((((d-yearStart)/86400000)+1)/7);
+}
+
+render();
+</script>
+</body>
+</html>

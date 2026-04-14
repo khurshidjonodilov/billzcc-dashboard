@@ -15716,7 +15716,7 @@ const BILLZ_DATA = {
       "art_raw": 17.2,
       "sla_pct": 98.8,
       "sla_not_met": 1.2,
-      "lcr": 0,
+      "lcr": 7,
       "repeat_pct": 13.2,
       "cost": 4922635,
       "massoviy_cnt": 0,

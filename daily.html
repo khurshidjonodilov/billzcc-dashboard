@@ -85,6 +85,13 @@
     </div>
   </div>
 
+
+      <!-- INSIGHTS -->
+      <div class="sec"><div class="sec-num">05</div><div class="sec-title">Инсайты и выводы дня</div><div class="sec-line"></div></div>
+      <div class="row one" id="insightsBlock" style="display:none">
+        <div class="card" id="insightsCard"></div>
+      </div>
+
   <div class="ftr">
     <div class="fl">BILLZ · CC Intelligence · Omnidesk CRM · без тикетов Дильшода</div>
     <div class="fr">Ежедневный отчёт · <span id="ftrPeriod"></span></div>
@@ -196,6 +203,52 @@ function render() {
 
   const comps = D.top_companies||DK.top_companies;
   document.getElementById('companiesBlock').innerHTML = comps.map((c,i)=>companyBlock(c,i)).join('');
+  // Insights block
+  const insBlock = document.getElementById('insightsBlock');
+  const insCard = document.getElementById('insightsCard');
+  if (DK.insights) {
+    insBlock.style.display = 'block';
+    const ins = DK.insights;
+    const peaksHtml = (DK.peaks||[]).map(p =>
+      `<div style="display:flex;align-items:center;gap:12px;padding:8px 0;border-bottom:1px solid var(--br)">
+        <div style="font-family:var(--mono);font-size:13px;font-weight:600;color:var(--text);min-width:52px">${p.hour}</div>
+        <div style="flex:1;font-size:12px;color:var(--text2)">${p.missed} пропущенных · ${p.operators} оператор(ов) в линии</div>
+        <span class="b bad">${p.missed} пропущ.</span>
+      </div>`
+    ).join('');
+
+    const highlightsHtml = (ins.highlights||[]).map(h =>
+      `<div style="display:flex;align-items:flex-start;gap:8px;padding:6px 0;font-size:13px;color:var(--text2)">${h}</div>`
+    ).join('');
+
+    const issuesHtml = (ins.top_issues||[]).map(i =>
+      `<div style="display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid var(--br);font-size:12px">
+        <span style="color:var(--text2)">${i.label}</span>
+        <span style="font-family:var(--mono);font-weight:700;color:var(--blue2)">${i.count}</span>
+      </div>`
+    ).join('');
+
+    insCard.innerHTML = `
+      <div class="card-hd"><div class="card-title">Инсайты · ${DK.label}</div><div class="card-note">LCR: ${DK.lcr}% · Макс. операторов: ${DK.max_operators||'—'}</div></div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+        <div>
+          <div style="font-size:11px;font-weight:700;color:var(--text3);text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px">Сводка</div>
+          <div style="font-size:13px;color:var(--text2);line-height:1.7;margin-bottom:14px">${ins.summary||''}</div>
+          <div style="font-size:11px;font-weight:700;color:var(--text3);text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px">Вывод и рекомендация</div>
+          <div style="font-size:13px;color:var(--text2);line-height:1.7;padding:12px;background:var(--blue-lt);border-radius:8px;border-left:3px solid var(--blue)">${ins.conclusion||''}</div>
+          ${peaksHtml ? `<div style="font-size:11px;font-weight:700;color:var(--text3);text-transform:uppercase;letter-spacing:.06em;margin:14px 0 8px">Пики пропущенных</div>${peaksHtml}` : ''}
+        </div>
+        <div>
+          <div style="font-size:11px;font-weight:700;color:var(--text3);text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px">Ключевые факты</div>
+          ${highlightsHtml}
+          ${issuesHtml ? `<div style="font-size:11px;font-weight:700;color:var(--text3);text-transform:uppercase;letter-spacing:.06em;margin:14px 0 8px">Топ обращений (из ОнлайнПБХ)</div>${issuesHtml}` : ''}
+        </div>
+      </div>
+    `;
+  } else {
+    insBlock.style.display = 'none';
+  }
+
 }
 
 render();

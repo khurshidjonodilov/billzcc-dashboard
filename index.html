@@ -15,6 +15,7 @@
   <a href="index.html" class="nav-link active">Ежемесячно</a>
   <a href="weekly.html" class="nav-link">Еженедельно</a>
   <a href="daily.html" class="nav-link">Ежедневно</a>
+  <button class="nav-report-btn" onclick="openMonthlyReport()">📋 Отчёт апрель</button>
   <div class="nav-right" id="navPeriod"></div>
 </nav>
 <div class="wrap">
@@ -257,5 +258,430 @@ function render() {
 
 render();
 </script>
+<!-- ═══════════════════════════════════════════════════ MONTHLY REPORT MODAL -->
+<div id="monthlyModal" class="mr-overlay" onclick="if(event.target===this)closeMonthlyReport()">
+  <div class="mr-panel">
+
+    <!-- Header -->
+    <div class="mr-header">
+      <div class="mr-header-left">
+        <div class="mr-eyebrow">BILLZ · CONTACT CENTER · ЕЖЕМЕСЯЧНЫЙ ОТЧЁТ</div>
+        <div class="mr-title">Апрель <span>2026</span></div>
+        <div class="mr-sub">06.04 — 16.04.2026 · 11 рабочих дней · Источник: Omnidesk CRM</div>
+      </div>
+      <div class="mr-header-right">
+        <div class="mr-cost-label">Итого затрат</div>
+        <div class="mr-cost-val">44.2 млн сўм</div>
+        <div class="mr-cost-sub">4 483 тикета × 9 865 сўм</div>
+      </div>
+      <button class="mr-close" onclick="closeMonthlyReport()">✕</button>
+    </div>
+
+    <!-- Tabs -->
+    <div class="mr-tabs">
+      <button class="mr-tab active" onclick="mrTab(this,'mr-overview')">Обзор</button>
+      <button class="mr-tab" onclick="mrTab(this,'mr-daily')">По дням</button>
+      <button class="mr-tab" onclick="mrTab(this,'mr-lcr')">LCR & Причины</button>
+      <button class="mr-tab" onclick="mrTab(this,'mr-ops')">Операторы</button>
+      <button class="mr-tab" onclick="mrTab(this,'mr-cost')">Затраты</button>
+      <button class="mr-tab" onclick="mrTab(this,'mr-recs')">Рекомендации</button>
+    </div>
+
+    <div class="mr-body">
+
+      <!-- ─── TAB: ОБЗОР ─────────────────────────────────────────────────── -->
+      <div id="mr-overview" class="mr-section active">
+
+        <!-- Situation table -->
+        <div class="mr-block-title">Что произошло в период</div>
+        <table class="mr-tbl">
+          <thead><tr><th>Параметр</th><th>Норма</th><th>Факт апрель</th></tr></thead>
+          <tbody>
+            <tr><td>Плановый объём</td><td>~200 входящих/день</td><td>Пиковые дни: 239–273 звонка</td></tr>
+            <tr><td>Команда (план)</td><td>13 операторов</td><td class="mr-red">Фактически: 10 (–3 форс-мажор)</td></tr>
+            <tr><td>Больничные</td><td>0 человек</td><td class="mr-red">Алишерова Робия + Шохинабону: 06–19.04</td></tr>
+            <tr><td>Отпуск</td><td>По графику</td><td class="mr-amber">Иззатбек: 04–19.04 (пересечение с пиком)</td></tr>
+            <tr><td>Технический инцидент</td><td>Нет</td><td class="mr-red">12.04: сбой Rahmat → +149 аномальных звонков за 4 ч</td></tr>
+            <tr><td>LCR среднее</td><td class="mr-green">&lt; 5% (цель)</td><td class="mr-red">8.2% (факт) — превышение в 4 из 11 дней</td></tr>
+          </tbody>
+        </table>
+
+        <!-- KPI cards -->
+        <div class="mr-block-title" style="margin-top:20px">Ключевые показатели</div>
+        <div class="mr-kpi-grid">
+          <div class="mr-kpi"><div class="mr-kpi-label">Всего тикетов</div><div class="mr-kpi-val" style="color:#60A5FA">4 483</div><div class="mr-kpi-sub">вход. + чаты + исход.</div></div>
+          <div class="mr-kpi"><div class="mr-kpi-label">Входящие звонки</div><div class="mr-kpi-val" style="color:#60A5FA">2 398</div><div class="mr-kpi-sub">за 11 рабочих дней</div></div>
+          <div class="mr-kpi"><div class="mr-kpi-label">Пропущено</div><div class="mr-kpi-val" style="color:#F87171">206</div><div class="mr-kpi-sub">LCR среднее: 8.2%</div></div>
+          <div class="mr-kpi"><div class="mr-kpi-label">FRT (первый ответ)</div><div class="mr-kpi-val" style="color:#34D399">50 сек</div><div class="mr-kpi-sub">среднее по чатам</div></div>
+          <div class="mr-kpi"><div class="mr-kpi-label">Время ответа</div><div class="mr-kpi-val" style="color:#34D399">54 сек</div><div class="mr-kpi-sub">среднее по ответам</div></div>
+          <div class="mr-kpi"><div class="mr-kpi-label">CSAT Отлично</div><div class="mr-kpi-val" style="color:#34D399">95%</div><div class="mr-kpi-sub">из 286 оценок</div></div>
+          <div class="mr-kpi"><div class="mr-kpi-label">Cost per Ticket</div><div class="mr-kpi-val" style="color:#FCD34D">9 865 сўм</div><div class="mr-kpi-sub">Итого: 44.2 млн сўм</div></div>
+          <div class="mr-kpi"><div class="mr-kpi-label">Тикетов / магазин</div><div class="mr-kpi-val" style="color:#60A5FA">1.11</div><div class="mr-kpi-sub">Магазинов: 4 045</div></div>
+          <div class="mr-kpi"><div class="mr-kpi-label">Тикетов / польз.</div><div class="mr-kpi-val" style="color:#60A5FA">0.1236</div><div class="mr-kpi-sub">Пользователей: 36 264</div></div>
+        </div>
+
+        <!-- SLA status -->
+        <div class="mr-block-title" style="margin-top:20px">SLA — статус показателей</div>
+        <table class="mr-tbl">
+          <thead><tr><th>Показатель</th><th>Факт</th><th>Цель</th><th>Статус</th></tr></thead>
+          <tbody>
+            <tr><td>LCR средний</td><td class="mr-red">8.2%</td><td>&lt; 5%</td><td><span class="mr-badge warn">⚠ Выше нормы</span></td></tr>
+            <tr><td>Дней с LCR &gt; 10%</td><td class="mr-red">4 из 11</td><td>0 дней</td><td><span class="mr-badge bad">❌ Нарушение</span></td></tr>
+            <tr><td>FRT среднее</td><td>50 сек</td><td>&lt; 60 сек</td><td><span class="mr-badge ok">✅ Норма</span></td></tr>
+            <tr><td>Среднее время ответа</td><td>54 сек</td><td>&lt; 120 сек</td><td><span class="mr-badge ok">✅ Норма</span></td></tr>
+            <tr><td>CSAT Отлично</td><td>95%</td><td>&gt; 90%</td><td><span class="mr-badge ok">✅ Норма</span></td></tr>
+            <tr><td>Cost per Ticket</td><td>9 865 сўм</td><td>&lt; 12 000</td><td><span class="mr-badge ok">✅ В норме</span></td></tr>
+          </tbody>
+        </table>
+
+        <!-- Conclusions -->
+        <div class="mr-block-title" style="margin-top:20px">Главные выводы</div>
+        <div class="mr-conclusions">
+          <div class="mr-concl red"><div class="mr-concl-icon">🔴</div><div><div class="mr-concl-title">Системный дефицит операторов</div><div class="mr-concl-text">Одновременное отсутствие 3 человек (2 больничных + отпуск) при объёме 180–273 входящих/день создало неустранимый дефицит мощности. LCR превысил 10% в 4 из 11 дней.</div></div></div>
+          <div class="mr-concl red"><div class="mr-concl-icon">🔴</div><div><div class="mr-concl-title">Инцидент 12.04 — урок для процессов</div><div class="mr-concl-text">Технический сбой Rahmat удвоил нагрузку на CC за 4 часа (+149 звонков). Без оперативного информирования клиентов (SMS/Push) такие инциденты будут повторяться.</div></div></div>
+          <div class="mr-concl amber"><div class="mr-concl-icon">🟠</div><div><div class="mr-concl-title">Утренняя смена — главный уязвимый час</div><div class="mr-concl-text">08:00–10:00: критически мало операторов. 14.04 — 21 пропущенный при 1 операторе в 09:00. Смена должна начинаться не позже 08:00 с минимум 3 операторами.</div></div></div>
+          <div class="mr-concl green"><div class="mr-concl-icon">🟡</div><div><div class="mr-concl-title">CSAT и скорость ответа — сильная сторона</div><div class="mr-concl-text">Несмотря на нагрузку, CSAT «Отлично» = 95%, FRT = 50 сек. Команда сохраняет качество даже в стрессовых условиях.</div></div></div>
+          <div class="mr-concl green"><div class="mr-concl-icon">🟡</div><div><div class="mr-concl-title">Cost per Ticket = 9 865 сўм — рычаг оптимизации</div><div class="mr-concl-text">Итого за период: 44.2 млн сўм. Документооборот (оплата тарифа) — 552 тикета = 5.4 млн сўм. FAQ и самообслуживание снизят этот блок на 30–40%.</div></div></div>
+        </div>
+      </div>
+
+      <!-- ─── TAB: ПО ДНЯМ ───────────────────────────────────────────────── -->
+      <div id="mr-daily" class="mr-section">
+        <div class="mr-block-title">Ежедневная динамика</div>
+        <div style="background:rgba(255,243,205,0.08);border:1px solid rgba(245,158,11,0.3);border-radius:8px;padding:10px 14px;margin-bottom:14px;font-size:12px;color:#FCD34D">
+          ⚠ 12.04: Инцидент Rahmat — 149 аномальных обращений исключены. Очищенный LCR = 7.1%
+        </div>
+        <table class="mr-tbl mr-tbl-daily">
+          <thead><tr><th>Дата</th><th>Вход.</th><th>Исход.</th><th>Пропущ.</th><th>LCR %</th><th>Чаты</th><th>FRT сек</th><th>Отв. сек</th><th>Операт.</th></tr></thead>
+          <tbody id="mr-daily-tbody"></tbody>
+          <tfoot><tr class="mr-total"><td>ИТОГО / СР.</td><td>2 398</td><td>881</td><td>206</td><td>8.2%</td><td>2 554</td><td>50</td><td>54</td><td>—</td></tr></tfoot>
+        </table>
+      </div>
+
+      <!-- ─── TAB: LCR ───────────────────────────────────────────────────── -->
+      <div id="mr-lcr" class="mr-section">
+        <div class="mr-block-title">Динамика LCR по дням</div>
+        <table class="mr-tbl">
+          <thead><tr><th>Дата</th><th>Входящие</th><th>Пропущено</th><th>LCR %</th><th>Комментарий</th></tr></thead>
+          <tbody>
+            <tr><td>06.04</td><td>194</td><td>7</td><td><span class="mr-badge ok">3.6%</span></td><td>Вечерний пик 22:00, нехватка операторов</td></tr>
+            <tr><td>07.04</td><td>211</td><td>9</td><td><span class="mr-badge ok">4.2%</span></td><td>Пик 15:00 при 8 операторах — одновременные звонки</td></tr>
+            <tr><td>08.04</td><td>196</td><td>12</td><td><span class="mr-badge warn">6.2%</span></td><td>Вечер 21-23:00: 1-3 оператора, 10 пропущенных</td></tr>
+            <tr><td>09.04</td><td>179</td><td>17</td><td><span class="mr-badge warn">9.4%</span></td><td>Утренний пик 11:00: 10 пропущ. при 3 операторах</td></tr>
+            <tr><td>10.04</td><td>237</td><td>23</td><td><span class="mr-badge warn">9.7%</span></td><td>08:00 — 1 оператор на смене; начало дня критично</td></tr>
+            <tr><td>11.04</td><td>239</td><td>25</td><td><span class="mr-badge bad">10.0%</span></td><td>Системный дефицит: больничные (2 опер.) + отпуск</td></tr>
+            <tr><td>12.04</td><td>183</td><td>13</td><td><span class="mr-badge warn">7.1%</span></td><td>ИНЦИДЕНТ Rahmat 09-13ч + больничные. Очищено: 7.1%</td></tr>
+            <tr><td>13.04</td><td>271</td><td>19</td><td><span class="mr-badge warn">7.0%</span></td><td>9 операторов (доп. смены) — лучший день недели</td></tr>
+            <tr><td>14.04</td><td>273</td><td>49</td><td><span class="mr-badge bad">17.9%</span></td><td>09-11ч: 21+10+8 пропущ. при 1-3 операторах</td></tr>
+            <tr><td>15.04</td><td>191</td><td>9</td><td><span class="mr-badge ok">4.7%</span></td><td>Нормализация: равномерный поток, 7 операторов</td></tr>
+            <tr><td>16.04</td><td>224</td><td>23</td><td><span class="mr-badge bad">10.2%</span></td><td>Пик 11-12ч при 4-5 операторах — локальный дефицит</td></tr>
+          </tbody>
+        </table>
+
+        <div class="mr-block-title" style="margin-top:24px">Root Cause Analysis — причины высокого LCR</div>
+        <div class="mr-causes">
+          <div class="mr-cause red"><div class="mr-cause-sev">🔴 Высокое</div><div class="mr-cause-body"><div class="mr-cause-title">Больничный: Алишерова Робия (06–19.04)</div><div class="mr-cause-desc">–1 оператор, 10 рабочих дней · <em>Реш.: резервный пул 2-3 операторов для экстренного вызова</em></div></div></div>
+          <div class="mr-cause red"><div class="mr-cause-sev">🔴 Высокое</div><div class="mr-cause-body"><div class="mr-cause-title">Больничный: Шохинабону (06–19.04)</div><div class="mr-cause-desc">–1 оператор, 10 рабочих дней · <em>Реш.: кросс-тренинг операторов 2-й линии</em></div></div></div>
+          <div class="mr-cause red"><div class="mr-cause-sev">🔴 Критично</div><div class="mr-cause-body"><div class="mr-cause-title">Инцидент Rahmat 12.04 (09:00–13:00)</div><div class="mr-cause-desc">+149 аномальных звонков за 4 ч · <em>Реш.: SMS/Push клиентам при инцидентах автоматически</em></div></div></div>
+          <div class="mr-cause amber"><div class="mr-cause-sev">🟠 Среднее</div><div class="mr-cause-body"><div class="mr-cause-title">Отпуск: Иззатбек (04–19.04)</div><div class="mr-cause-desc">–1 оператор + ранние смены не закрыты · <em>Реш.: не более 1 в отпуске одновременно</em></div></div></div>
+          <div class="mr-cause amber"><div class="mr-cause-sev">🟠 Среднее</div><div class="mr-cause-body"><div class="mr-cause-title">Дефицит утренней смены (08:00–10:00)</div><div class="mr-cause-desc">1-3 оператора в пиковые часы · <em>Реш.: сдвинуть начало смены на 08:00</em></div></div></div>
+          <div class="mr-cause yellow"><div class="mr-cause-sev">🟡 Низкое</div><div class="mr-cause-body"><div class="mr-cause-title">Длинные звонки &gt; 20 мин блокируют операторов</div><div class="mr-cause-desc">Снижение пропускной способности · <em>Реш.: FAQ и база знаний для топ-5 категорий</em></div></div></div>
+          <div class="mr-cause yellow"><div class="mr-cause-sev">🟡 Низкое</div><div class="mr-cause-body"><div class="mr-cause-title">Исходящие в пиковые часы (11.04: 95 исходящих)</div><div class="mr-cause-desc">Снижает доступность для входящих · <em>Реш.: перенести исходящие на 17:00–19:00</em></div></div></div>
+        </div>
+      </div>
+
+      <!-- ─── TAB: ОПЕРАТОРЫ ─────────────────────────────────────────────── -->
+      <div id="mr-ops" class="mr-section">
+        <div style="background:rgba(255,243,205,0.08);border:1px solid rgba(245,158,11,0.3);border-radius:8px;padding:10px 14px;margin-bottom:14px;font-size:12px;color:#FCD34D">
+          ⚕ Больничный 06–19.04: Алишерова Робия + Шохинабону &nbsp;|&nbsp; Отпуск 04–19.04: Иззатбек
+        </div>
+        <table class="mr-tbl">
+          <thead><tr><th>Оператор</th><th>Тикеты</th><th>FRT сек</th><th>Отв. сек</th><th>Закр. мин</th><th>CSAT %</th><th>Ранг</th></tr></thead>
+          <tbody>
+            <tr><td class="mr-op-name">Анасхон</td><td class="mr-blue">739</td><td>25</td><td>23</td><td>23.2</td><td><span class="mr-badge ok">96%</span></td><td>🥇 #1</td></tr>
+            <tr><td class="mr-op-name">Нурилло</td><td class="mr-blue">461</td><td>44</td><td>43</td><td>20.4</td><td><span class="mr-badge ok">96%</span></td><td>#2</td></tr>
+            <tr><td class="mr-op-name">Робия Р.</td><td class="mr-blue">579</td><td>52</td><td>69</td><td>37.9</td><td><span class="mr-badge ok">94%</span></td><td>#3</td></tr>
+            <tr><td class="mr-op-name">Атабек</td><td class="mr-blue">449</td><td>59</td><td>51</td><td>31.9</td><td><span class="mr-badge ok">100%</span></td><td>#4</td></tr>
+            <tr><td class="mr-op-name">Ардак</td><td class="mr-blue">366</td><td>54</td><td>45</td><td>42.0</td><td><span class="mr-badge ok">100%</span></td><td>#5</td></tr>
+            <tr><td class="mr-op-name">Алиёр</td><td class="mr-blue">415</td><td>55</td><td>60</td><td>25.9</td><td><span class="mr-badge ok">96%</span></td><td>#6</td></tr>
+            <tr><td class="mr-op-name">Сардор Б.</td><td class="mr-blue">374</td><td>55</td><td>61</td><td>21.8</td><td><span class="mr-badge ok">100%</span></td><td>#7</td></tr>
+            <tr><td class="mr-op-name">Авазбек</td><td class="mr-blue">388</td><td>50</td><td>56</td><td>23.0</td><td><span class="mr-badge warn">90%</span></td><td>#8</td></tr>
+            <tr><td class="mr-op-name">Тожмухаммад</td><td class="mr-blue">386</td><td>58</td><td>58</td><td>22.5</td><td><span class="mr-badge warn">90%</span></td><td>#9</td></tr>
+            <tr><td class="mr-op-name">Робия А. 🏥</td><td class="mr-blue">92</td><td>31</td><td>32</td><td>23.8</td><td><span class="mr-badge ok">100%</span></td><td>#10</td></tr>
+            <tr><td class="mr-op-name">Шохина 🏥</td><td class="mr-blue">33</td><td>26</td><td>49</td><td>12.2</td><td><span class="mr-badge ok">100%</span></td><td>#11</td></tr>
+            <tr><td class="mr-op-name">Нурлан</td><td class="mr-blue">28</td><td>67</td><td>67</td><td>6.4</td><td><span class="mr-badge ok">100%</span></td><td>#12</td></tr>
+            <tr><td class="mr-op-name">Камолиддин</td><td class="mr-blue">64</td><td>78</td><td>68</td><td>19.6</td><td><span class="mr-badge ok">100%</span></td><td>#13</td></tr>
+            <tr><td class="mr-op-name">Дильшод</td><td class="mr-blue">109</td><td>153</td><td>191</td><td>62.5</td><td><span class="mr-badge ok">100%</span></td><td>#14</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- ─── TAB: ЗАТРАТЫ ───────────────────────────────────────────────── -->
+      <div id="mr-cost" class="mr-section">
+        <div class="mr-kpi-grid" style="grid-template-columns:repeat(4,1fr);margin-bottom:20px">
+          <div class="mr-kpi"><div class="mr-kpi-label">CpT</div><div class="mr-kpi-val" style="color:#FCD34D">9 865 сўм</div><div class="mr-kpi-sub">за 1 тикет</div></div>
+          <div class="mr-kpi"><div class="mr-kpi-label">Итого за период</div><div class="mr-kpi-val" style="color:#FCD34D">44.2 млн</div><div class="mr-kpi-sub">4 483 тикета</div></div>
+          <div class="mr-kpi"><div class="mr-kpi-label">Стоимость / магазин</div><div class="mr-kpi-val" style="color:#60A5FA">10 933</div><div class="mr-kpi-sub">сўм · 4 045 магаз.</div></div>
+          <div class="mr-kpi"><div class="mr-kpi-label">Тикетов / польз.</div><div class="mr-kpi-val" style="color:#60A5FA">0.1236</div><div class="mr-kpi-sub">36 264 пользов.</div></div>
+        </div>
+
+        <div class="mr-block-title">Стоимость по категориям (топ 15)</div>
+        <table class="mr-tbl">
+          <thead><tr><th>Категория</th><th>Тикеты</th><th>Доля</th><th>Затраты (сўм)</th><th>Приоритет</th></tr></thead>
+          <tbody>
+            <tr><td>Документооборот — Оплата за тариф</td><td class="mr-blue">552</td><td>25.1%</td><td class="mr-cost-num">5 445 480</td><td><span class="mr-badge bad">🔴 Критичный</span></td></tr>
+            <tr><td>Документооборот — Создание ссылки для оплаты</td><td class="mr-blue">214</td><td>9.7%</td><td class="mr-cost-num">2 111 110</td><td><span class="mr-badge warn">🟠 Высокий</span></td></tr>
+            <tr><td>Оборудование — Установка/Настройка принтера</td><td class="mr-blue">174</td><td>7.9%</td><td class="mr-cost-num">1 716 510</td><td><span class="mr-badge warn">🟠 Высокий</span></td></tr>
+            <tr><td>Учётная запись — Блокировка/Разблокировка</td><td class="mr-blue">134</td><td>6.1%</td><td class="mr-cost-num">1 321 910</td><td><span class="mr-badge warn">🟠 Высокий</span></td></tr>
+            <tr><td>Учётная запись — Помощь со входом</td><td class="mr-blue">113</td><td>5.1%</td><td class="mr-cost-num">1 114 745</td><td><span class="mr-badge warn">🟠 Высокий</span></td></tr>
+            <tr><td>Каталог — изменение свойств товара</td><td class="mr-blue">100</td><td>4.6%</td><td class="mr-cost-num">986 500</td><td><span class="mr-badge info">🟡 Средний</span></td></tr>
+            <tr><td>Вопрос не по программе</td><td class="mr-blue">78</td><td>3.6%</td><td class="mr-cost-num">769 470</td><td><span class="mr-badge info">🟡 Средний</span></td></tr>
+            <tr><td>Каталог — настройка печати ценника</td><td class="mr-blue">71</td><td>3.2%</td><td class="mr-cost-num">700 415</td><td><span class="mr-badge info">🟡 Средний</span></td></tr>
+            <tr><td>Кассовые смены — Открытие/Закрытие</td><td class="mr-blue">70</td><td>3.2%</td><td class="mr-cost-num">690 550</td><td><span class="mr-badge info">🟡 Средний</span></td></tr>
+            <tr><td>Управление — Создание/Редактирование роли</td><td class="mr-blue">64</td><td>2.9%</td><td class="mr-cost-num">631 360</td><td><span class="mr-badge info">🟡 Средний</span></td></tr>
+            <tr><td>Учётная запись — Создание магазина</td><td class="mr-blue">61</td><td>2.8%</td><td class="mr-cost-num">601 765</td><td><span class="mr-badge info">🟡 Средний</span></td></tr>
+            <tr><td>Документооборот — Консультация по долгу</td><td class="mr-blue">54</td><td>2.5%</td><td class="mr-cost-num">532 710</td><td><span class="mr-badge info">🟡 Средний</span></td></tr>
+            <tr><td>Настройка — Установка BILLZ PAY/Payme/Epos</td><td class="mr-blue">50</td><td>2.3%</td><td class="mr-cost-num">493 250</td><td><span class="mr-badge info">🟡 Средний</span></td></tr>
+            <tr><td>Управление — Создание/Редактирование сотрудника</td><td class="mr-blue">46</td><td>2.1%</td><td class="mr-cost-num">453 790</td><td><span class="mr-badge info">🟡 Средний</span></td></tr>
+            <tr><td>Новая продажа — Не удаётся сделать продажу</td><td class="mr-blue">43</td><td>2.0%</td><td class="mr-cost-num">424 195</td><td><span class="mr-badge">⚪ Низкий</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- ─── TAB: РЕКОМЕНДАЦИИ ──────────────────────────────────────────── -->
+      <div id="mr-recs" class="mr-section">
+        <div class="mr-block-title">Приоритетный план действий</div>
+        <div class="mr-recs-list">
+          <div class="mr-rec red"><div class="mr-rec-num">01</div><div class="mr-rec-body"><div class="mr-rec-prio">🔴 Критично · Немедленно</div><div class="mr-rec-title">Создать резервный пул операторов</div><div class="mr-rec-text">2-3 обученных оператора для экстренного выхода при больничных. Договориться заранее, установить компенсацию. <strong>Эффект: LCR ↓ 3–5% в кризисные дни.</strong></div></div></div>
+          <div class="mr-rec red"><div class="mr-rec-num">02</div><div class="mr-rec-body"><div class="mr-rec-prio">🔴 Критично · 1 неделя</div><div class="mr-rec-title">Запретить исходящие до 16:00</div><div class="mr-rec-text">11.04: 95 исходящих при LCR 10% — прямая потеря клиентов. Утро и обед — только входящие. <strong>Эффект: LCR ↓ 1–2% в пиковые часы.</strong></div></div></div>
+          <div class="mr-rec red"><div class="mr-rec-num">03</div><div class="mr-rec-body"><div class="mr-rec-prio">🔴 Критично · 2–4 недели</div><div class="mr-rec-title">SMS/Push клиентам при инцидентах</div><div class="mr-rec-text">12.04 — 4 часа без информирования, 149 лишних звонков. Автоматическое уведомление при сбоях. <strong>Эффект: снижение аномальных обращений на 50%+.</strong></div></div></div>
+          <div class="mr-rec amber"><div class="mr-rec-num">04</div><div class="mr-rec-body"><div class="mr-rec-prio">🟠 Высокое · 1 неделя</div><div class="mr-rec-title">Начало утренней смены — 08:00, минимум 3 оператора</div><div class="mr-rec-text">14.04 в 09:00 — 21 пропущенный при 1 операторе. <strong>Эффект: устранение утренних пиков.</strong></div></div></div>
+          <div class="mr-rec amber"><div class="mr-rec-num">05</div><div class="mr-rec-body"><div class="mr-rec-prio">🟠 Высокое · 3–4 недели</div><div class="mr-rec-title">FAQ / база знаний для топ-5 категорий</div><div class="mr-rec-text">Оплата тарифа (552), ссылки для оплаты (214), блокировки (134), принтеры (174) — 1 074 тикета = 10.6 млн сўм. <strong>Эффект: AHT ↓ 20–30%.</strong></div></div></div>
+          <div class="mr-rec amber"><div class="mr-rec-num">06</div><div class="mr-rec-body"><div class="mr-rec-prio">🟠 Высокое · 1–2 месяца</div><div class="mr-rec-title">Самообслуживание по «Оплата тарифа»</div><div class="mr-rec-text">552 тикета = 5.4 млн сўм. Автоматизация снизит до нуля. <strong>Эффект: экономия ~2.2 млн сўм/период.</strong></div></div></div>
+          <div class="mr-rec gray"><div class="mr-rec-num">07</div><div class="mr-rec-body"><div class="mr-rec-prio">🟡 Среднее · Следующий квартал</div><div class="mr-rec-title">График отпусков: не более 1 одновременно</div><div class="mr-rec-text">Апрель — 3 отсутствия одновременно. <strong>Эффект: стабильный LCR &lt; 5%.</strong></div></div></div>
+          <div class="mr-rec gray"><div class="mr-rec-num">08</div><div class="mr-rec-body"><div class="mr-rec-prio">🟡 Среднее · 2–3 месяца</div><div class="mr-rec-title">Рассмотреть найм 1–2 операторов</div><div class="mr-rec-text">Объём растёт (239+ вх/день), тикетов/магазин = 1.11. При росте базы нагрузка будет расти. <strong>Эффект: устранение системного дефицита.</strong></div></div></div>
+        </div>
+      </div>
+
+    </div><!-- /mr-body -->
+  </div><!-- /mr-panel -->
+</div><!-- /monthlyModal -->
+
+<style>
+/* ── Nav button ── */
+.nav-report-btn {
+  margin-left: 16px;
+  font-family: var(--sans); font-size: 12px; font-weight: 600;
+  padding: 6px 14px; border-radius: 7px;
+  border: 1px solid rgba(59,130,246,0.4);
+  background: rgba(59,130,246,0.12);
+  color: var(--blue2); cursor: pointer;
+  transition: all .15s;
+}
+.nav-report-btn:hover { background: rgba(59,130,246,0.25); border-color: var(--blue2); }
+
+/* ── Modal overlay ── */
+.mr-overlay {
+  display: none; position: fixed; inset: 0; z-index: 1000;
+  background: rgba(5,10,20,0.85);
+  backdrop-filter: blur(6px);
+  overflow-y: auto;
+  padding: 24px 16px;
+}
+.mr-overlay.open { display: flex; align-items: flex-start; justify-content: center; }
+
+.mr-panel {
+  background: #0E1A30;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 16px;
+  width: 100%; max-width: 940px;
+  box-shadow: 0 24px 80px rgba(0,0,0,0.6);
+  overflow: hidden;
+  position: relative;
+}
+
+/* ── Header ── */
+.mr-header {
+  background: linear-gradient(135deg, #0D1F3C 0%, #111D35 100%);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  padding: 24px 28px 20px;
+  display: grid; grid-template-columns: 1fr auto;
+  gap: 20px; align-items: start;
+  position: relative;
+}
+.mr-header::before {
+  content:''; position:absolute; top:0; left:0; right:0; height:2px;
+  background: linear-gradient(90deg, #3B82F6, #60A5FA, transparent);
+}
+.mr-eyebrow { font-family:var(--mono); font-size:9px; letter-spacing:.2em; color:var(--text4); text-transform:uppercase; margin-bottom:8px; }
+.mr-title { font-size:30px; font-weight:800; color:#fff; line-height:1; margin-bottom:4px; }
+.mr-title span { color:var(--blue2); }
+.mr-sub { font-size:12px; color:var(--text3); }
+.mr-header-right { text-align:right; }
+.mr-cost-label { font-family:var(--mono); font-size:9px; letter-spacing:.15em; color:var(--text4); text-transform:uppercase; margin-bottom:4px; }
+.mr-cost-val { font-size:26px; font-weight:800; color:#fff; line-height:1; }
+.mr-cost-sub { font-size:11px; color:var(--text4); margin-top:3px; }
+.mr-close {
+  position:absolute; top:16px; right:16px;
+  background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1);
+  color:var(--text3); border-radius:6px; padding:4px 10px;
+  font-size:14px; cursor:pointer; transition:all .15s;
+}
+.mr-close:hover { background:rgba(255,255,255,0.12); color:#fff; }
+
+/* ── Tabs ── */
+.mr-tabs {
+  display:flex; gap:0; background:#0A1526;
+  border-bottom:1px solid rgba(255,255,255,0.08);
+  padding:0 20px; overflow-x:auto;
+}
+.mr-tab {
+  font-family:var(--sans); font-size:12px; font-weight:600;
+  padding:12px 18px; border:none; background:transparent;
+  color:var(--text3); cursor:pointer; white-space:nowrap;
+  border-bottom:2px solid transparent; transition:all .15s;
+}
+.mr-tab:hover { color:var(--text2); }
+.mr-tab.active { color:#fff; border-bottom-color:var(--blue); }
+
+/* ── Body ── */
+.mr-body { padding:24px 28px; max-height:70vh; overflow-y:auto; }
+.mr-section { display:none; }
+.mr-section.active { display:block; }
+
+.mr-block-title {
+  font-family:var(--sans); font-size:11px; font-weight:700;
+  letter-spacing:.08em; text-transform:uppercase; color:var(--blue2);
+  margin-bottom:12px;
+  display:flex; align-items:center; gap:8px;
+}
+.mr-block-title::before {
+  content:''; width:3px; height:12px; border-radius:2px;
+  background:var(--blue); flex-shrink:0;
+}
+
+/* ── Tables ── */
+.mr-tbl { width:100%; border-collapse:collapse; font-size:12px; }
+.mr-tbl th { font-family:var(--sans); font-size:10px; font-weight:600; letter-spacing:.06em; text-transform:uppercase; color:var(--text4); padding:0 10px 10px; text-align:left; border-bottom:1px solid rgba(255,255,255,0.08); }
+.mr-tbl td { padding:9px 10px; border-bottom:1px solid rgba(255,255,255,0.04); color:var(--text2); }
+.mr-tbl tr:hover td { background:rgba(255,255,255,0.03); }
+.mr-tbl tfoot .mr-total td { border-top:1px solid rgba(255,255,255,0.12); color:#fff; font-weight:700; background:rgba(59,130,246,0.08); padding:10px; }
+.mr-tbl-daily { font-size:11px; }
+.mr-blue { color:var(--blue2) !important; font-weight:700; }
+.mr-red  { color:var(--red2)  !important; }
+.mr-green{ color:var(--green2)!important; }
+.mr-amber{ color:var(--amber2)!important; }
+.mr-op-name { font-weight:700; color:#fff !important; }
+.mr-cost-num { font-family:var(--mono); font-size:11px; color:var(--text3); }
+
+/* ── Badges ── */
+.mr-badge { display:inline-block; font-size:10px; font-weight:600; padding:2px 8px; border-radius:4px; }
+.mr-badge.ok   { background:rgba(16,185,129,.12); color:var(--green2); border:1px solid rgba(52,211,153,.2); }
+.mr-badge.warn { background:rgba(245,158,11,.12); color:var(--amber2); border:1px solid rgba(252,211,77,.2); }
+.mr-badge.bad  { background:rgba(239,68,68,.12);  color:var(--red2);   border:1px solid rgba(248,113,113,.2); }
+.mr-badge.info { background:rgba(59,130,246,.12); color:var(--blue2);  border:1px solid rgba(96,165,250,.2); }
+.mr-badge      { background:rgba(100,116,139,.12);color:var(--text3);  border:1px solid rgba(100,116,139,.2); }
+
+/* ── KPI mini grid ── */
+.mr-kpi-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-bottom:16px; }
+.mr-kpi { background:#152038; border:1px solid rgba(255,255,255,0.07); border-radius:10px; padding:14px 16px; }
+.mr-kpi-label { font-size:10px; font-weight:500; color:var(--text3); margin-bottom:6px; }
+.mr-kpi-val   { font-size:22px; font-weight:800; line-height:1; margin-bottom:4px; }
+.mr-kpi-sub   { font-size:10px; color:var(--text4); }
+
+/* ── Conclusions ── */
+.mr-conclusions { display:flex; flex-direction:column; gap:8px; }
+.mr-concl { display:flex; gap:12px; padding:12px 14px; border-radius:8px; border:1px solid; }
+.mr-concl.red    { background:rgba(239,68,68,.07);   border-color:rgba(239,68,68,.2); }
+.mr-concl.amber  { background:rgba(245,158,11,.07);  border-color:rgba(245,158,11,.2); }
+.mr-concl.green  { background:rgba(252,211,77,.05);  border-color:rgba(252,211,77,.15); }
+.mr-concl-icon   { font-size:18px; flex-shrink:0; margin-top:1px; }
+.mr-concl-title  { font-size:13px; font-weight:700; color:#fff; margin-bottom:4px; }
+.mr-concl-text   { font-size:12px; color:var(--text2); line-height:1.6; }
+
+/* ── Causes ── */
+.mr-causes { display:flex; flex-direction:column; gap:8px; }
+.mr-cause { display:flex; gap:12px; padding:10px 14px; border-radius:8px; border:1px solid; align-items:flex-start; }
+.mr-cause.red    { background:rgba(239,68,68,.07);   border-color:rgba(239,68,68,.2); }
+.mr-cause.amber  { background:rgba(245,158,11,.07);  border-color:rgba(245,158,11,.2); }
+.mr-cause.yellow { background:rgba(252,211,77,.05);  border-color:rgba(252,211,77,.15); }
+.mr-cause-sev    { font-size:10px; font-weight:700; white-space:nowrap; min-width:90px; padding-top:2px; }
+.mr-cause-title  { font-size:12px; font-weight:700; color:#fff; margin-bottom:3px; }
+.mr-cause-desc   { font-size:11px; color:var(--text2); line-height:1.6; }
+.mr-cause-desc em { color:var(--blue2); font-style:normal; }
+
+/* ── Recommendations ── */
+.mr-recs-list { display:flex; flex-direction:column; gap:8px; }
+.mr-rec { display:flex; gap:14px; padding:14px 16px; border-radius:10px; border:1px solid; align-items:flex-start; }
+.mr-rec.red    { background:rgba(239,68,68,.07);   border-color:rgba(239,68,68,.2); }
+.mr-rec.amber  { background:rgba(245,158,11,.07);  border-color:rgba(245,158,11,.2); }
+.mr-rec.gray   { background:rgba(100,116,139,.07); border-color:rgba(100,116,139,.2); }
+.mr-rec-num    { font-family:var(--mono); font-size:20px; font-weight:800; color:rgba(255,255,255,0.15); flex-shrink:0; line-height:1; margin-top:2px; }
+.mr-rec-prio   { font-size:10px; font-weight:700; letter-spacing:.05em; text-transform:uppercase; color:var(--text3); margin-bottom:4px; }
+.mr-rec.red   .mr-rec-prio { color:var(--red2); }
+.mr-rec.amber .mr-rec-prio { color:var(--amber2); }
+.mr-rec-title  { font-size:13px; font-weight:700; color:#fff; margin-bottom:5px; }
+.mr-rec-text   { font-size:12px; color:var(--text2); line-height:1.6; }
+.mr-rec-text strong { color:#fff; }
+
+@media(max-width:700px){
+  .mr-panel{border-radius:12px}
+  .mr-header{grid-template-columns:1fr;padding:16px}
+  .mr-body{padding:16px}
+  .mr-kpi-grid{grid-template-columns:repeat(2,1fr)}
+}
+</style>
+
+<script>
+// ── Daily table data ────────────────────────────────────────────────────────
+const mrDailyData = [
+  ['06.04','194','118','7','3.6%','234','42','48','8'],
+  ['07.04','211','97','9','4.2%','208','51','59','8'],
+  ['08.04','196','74','12','6.2%','194','48','52','6'],
+  ['09.04','179','74','17','9.4%','199','49','63','6'],
+  ['10.04','237','50','23','9.7%','244','61','60','10'],
+  ['11.04','239','95','25','10.0%','244','48','57','7'],
+  ['12.04','183','44','13','7.1%','316','52','54','6'],
+  ['13.04','271','41','19','7.0%','293','52','57','9'],
+  ['14.04','273','73','49','17.9%','222','45','49','8'],
+  ['15.04','191','79','9','4.7%','201','68','49','7'],
+  ['16.04','224','136','23','10.2%','199','29','39','7'],
+];
+const mrLcrBad  = lcr => parseFloat(lcr) > 10;
+const mrLcrWarn = lcr => parseFloat(lcr) >= 7 && parseFloat(lcr) <= 10;
+
+document.getElementById('mr-daily-tbody').innerHTML = mrDailyData.map(r => {
+  const lcr = r[4];
+  const lcrClass = mrLcrBad(lcr) ? 'bad' : mrLcrWarn(lcr) ? 'warn' : 'ok';
+  const rowBg = mrLcrBad(lcr) ? 'background:rgba(239,68,68,.06)' : '';
+  return `<tr style="${rowBg}">
+    <td style="font-weight:600;color:#fff">${r[0]}</td>
+    <td>${r[1]}</td><td>${r[2]}</td>
+    <td style="color:${mrLcrBad(lcr)?'#F87171':''}">${r[3]}</td>
+    <td><span class="mr-badge ${lcrClass}">${lcr}</span></td>
+    <td>${r[5]}</td><td>${r[6]}</td><td>${r[7]}</td><td>${r[8]}</td>
+  </tr>`;
+}).join('');
+
+// ── Modal open/close ────────────────────────────────────────────────────────
+function openMonthlyReport() {
+  document.getElementById('monthlyModal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeMonthlyReport() {
+  document.getElementById('monthlyModal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', e => { if(e.key==='Escape') closeMonthlyReport(); });
+
+// ── Tab switching ────────────────────────────────────────────────────────────
+function mrTab(btn, sectionId) {
+  document.querySelectorAll('.mr-tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.mr-section').forEach(s => s.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById(sectionId).classList.add('active');
+}
+</script>
+
 </body>
 </html>

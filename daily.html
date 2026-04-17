@@ -163,13 +163,17 @@ function render() {
 
   Object.values(charts).forEach(c=>c.destroy()); charts={};
 
-  // Hourly (shared across all days for now — per-day hourly not in CSV)
-  const mx = Math.max(...HOURLY_VALS);
-  charts.hourly = new Chart(document.getElementById('hourlyChart'), {
-    type:'bar',
-    data:{labels:HOURLY_LABELS,datasets:[{data:HOURLY_VALS,backgroundColor:HOURLY_VALS.map(v=>{const r=v/mx;return r>.85?'#DC2626':r>.55?'#2563EB':r>.25?'#34D399':'#2A2620';}),borderRadius:3}]},
-    options:{...chartBase,scales:{x:{grid:{display:false},ticks:{font:{size:10}}},y:{grid:{color:'rgba(255,255,255,0.04)'},ticks:{font:{size:10}}}}}
-  });
+  // Hourly — per-day data from DK.hourly
+  if (DK.hourly && Object.keys(DK.hourly).length > 0) {
+    const hKeys = Object.keys(DK.hourly).sort();
+    const hVals = hKeys.map(h => DK.hourly[h] || 0);
+    const mxH = Math.max(...hVals);
+    charts.hourly = new Chart(document.getElementById('hourlyChart'), {
+      type:'bar',
+      data:{labels:hKeys.map(h=>h+':00'),datasets:[{data:hVals,backgroundColor:hVals.map(v=>{const r=v/mxH;return r>.85?'#EF4444':r>.55?'#F59E0B':r>.25?'#3B82F6':'#1C2A4A';}),borderRadius:3}]},
+      options:{...chartBase,scales:{x:{grid:{display:false},ticks:{font:{size:10}}},y:{grid:{color:'rgba(255,255,255,0.06)'},ticks:{font:{size:10}}}}}
+    });
+  }
 
   charts.sla = buildDoughnut('slaChart',
     ['Соблюдён','Не соблюдён'],[D.sla_pct,D.sla_not_met],['#34D399','#DC2626']

@@ -34,6 +34,9 @@ function kpi(label, value, sub, color='blue', flag='') {
     red:   {ac:`linear-gradient(90deg,${C.red},${C.red2})`,     num:C.red2,   fb:'rgba(239,68,68,.12)',  fc:'rgba(248,113,113,.25)',ft:C.red2},
     amber: {ac:`linear-gradient(90deg,${C.amber},${C.amber2})`, num:C.amber2, fb:'rgba(245,158,11,.12)', fc:'rgba(252,211,77,.25)', ft:C.amber2},
     dark:  {ac:`linear-gradient(90deg,#334155,#64748B)`,        num:'#94A3B8', fb:'rgba(100,116,139,.1)',fc:'rgba(148,163,184,.2)', ft:'#94A3B8'},
+    gold:  {ac:`linear-gradient(90deg,${C.amber},${C.amber2})`, num:C.amber2, fb:'rgba(245,158,11,.12)', fc:'rgba(252,211,77,.25)', ft:C.amber2},
+    sage:  {ac:`linear-gradient(90deg,${C.green},${C.green2})`, num:C.green2, fb:'rgba(16,185,129,.12)', fc:'rgba(52,211,153,.25)', ft:C.green2},
+    rose:  {ac:`linear-gradient(90deg,${C.red},${C.red2})`,     num:C.red2,   fb:'rgba(239,68,68,.12)',  fc:'rgba(248,113,113,.25)',ft:C.red2},
   }[color]||{ac:`linear-gradient(90deg,${C.blueDk},${C.blue2})`,num:C.blue2,fb:'rgba(59,130,246,.15)',fc:'rgba(96,165,250,.35)',ft:C.blue2};
 
   const flagHtml = flag

@@ -13,7 +13,7 @@ const BILLZ_DATA = {
     "art_raw": 25.7,
     "sla_pct": 98.3,
     "sla_not_met": 1.7,
-    "lcr": 0,
+    "lcr": 8.2,
     "repeat_pct": 12.1,
     "cost": 57325515,
     "massoviy_cnt": 111,
@@ -597,7 +597,8 @@ const BILLZ_DATA = {
           "sla_pct": 78.9,
           "cost": 197300
         }
-      ]
+      ],
+      "lcr": 7.1
     },
     "operators": [
       {
@@ -1171,12 +1172,12 @@ const BILLZ_DATA = {
         ]
       }
     ],
-    "label": "Апрель 2026 (1–14)",
+    "label": "Апрель 2026",
     "rating_pct": 95.5,
-    "clients": 3784,
-    "users": 7425,
-    "tpc": 1.54,
-    "tpu": 0.78,
+    "clients": 4045,
+    "users": 36264,
+    "tpc": 1.44,
+    "tpu": 0.1602,
     "cpt": 9865,
     "newcomers": {
       "context": "Апрель 2026: нехватка сотрудников из-за болезней и отпусков. 3 новичка — 2 только на чатах, 1 (Авазбек) уже полноценно работает.",

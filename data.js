@@ -19755,5 +19755,442 @@ const BILLZ_DATA = {
       ],
       "team_context": "📅 Воскресенье — неполный рабочий день. 6 операторов на смене."
     }
+  },
+  "quarterly": {
+    "period": "Февраль–Апрель 2026",
+    "months": [
+      "Февраль",
+      "Март",
+      "Апрель"
+    ],
+    "summary": {
+      "total_tickets": 32865,
+      "total_cost_mln": 321.76,
+      "avg_cpt": 9800,
+      "lcr_avg": 5.14,
+      "csat_pct": 95.1,
+      "sla_pct": 74.1,
+      "frt_avg_sec": 62.0,
+      "frt_med_sec": 30.0,
+      "repeat_pct_avg": 8.3,
+      "undesired_pct_avg": 52.8,
+      "massoviy_tickets": 1758,
+      "massoviy_cost_mln": 17.0
+    },
+    "by_month": [
+      {
+        "name": "Февраль",
+        "cpt": 9670,
+        "tickets": 12557,
+        "calls": 6497,
+        "chats": 5910,
+        "desired": 4035,
+        "undesired": 6573,
+        "undesired_pct": 52.3,
+        "csat_pct": 95.2,
+        "sla_pct": 68.6,
+        "frt_avg_sec": 69.8,
+        "frt_med_sec": 36.0,
+        "close_med_min": 3.6,
+        "repeat_pct": 6.3,
+        "lcr": 3.85,
+        "cost_mln": 121.43,
+        "massoviy_cnt": 1122
+      },
+      {
+        "name": "Март",
+        "cpt": 9865,
+        "tickets": 12343,
+        "calls": 6299,
+        "chats": 5889,
+        "desired": 4934,
+        "undesired": 6989,
+        "undesired_pct": 56.6,
+        "csat_pct": 94.8,
+        "sla_pct": 76.6,
+        "frt_avg_sec": 62.8,
+        "frt_med_sec": 30.0,
+        "close_med_min": 3.2,
+        "repeat_pct": 9.1,
+        "lcr": 3.78,
+        "cost_mln": 121.76,
+        "massoviy_cnt": 559
+      },
+      {
+        "name": "Апрель",
+        "cpt": 9865,
+        "tickets": 7965,
+        "calls": 4249,
+        "chats": 3685,
+        "desired": 3484,
+        "undesired": 3994,
+        "undesired_pct": 50.1,
+        "csat_pct": 95.3,
+        "sla_pct": 77.2,
+        "frt_avg_sec": 52.6,
+        "frt_med_sec": 30.0,
+        "close_med_min": 3.8,
+        "repeat_pct": 9.6,
+        "lcr": 7.8,
+        "cost_mln": 78.57,
+        "massoviy_cnt": 0
+      }
+    ],
+    "operator_ranking": [
+      {
+        "rank": 1,
+        "name": "Анасхон",
+        "score": 88.7,
+        "total": 3849,
+        "csat_pct": 97.5,
+        "sla_pct": 92.7,
+        "frt_med_sec": 12,
+        "kk": 100,
+        "test": 94.0,
+        "undes_pct": 67.8,
+        "cost_mln": 37.68
+      },
+      {
+        "rank": 2,
+        "name": "Нурилло",
+        "score": 86.5,
+        "total": 2916,
+        "csat_pct": 94.6,
+        "sla_pct": 83.9,
+        "frt_med_sec": 24,
+        "kk": 100,
+        "test": 91.5,
+        "undes_pct": 46.8,
+        "cost_mln": 28.56
+      },
+      {
+        "rank": 3,
+        "name": "Ардак",
+        "score": 86.2,
+        "total": 2641,
+        "csat_pct": 97.8,
+        "sla_pct": 69.6,
+        "frt_med_sec": 36,
+        "kk": 100,
+        "test": 91.0,
+        "undes_pct": 9.7,
+        "cost_mln": 25.87
+      },
+      {
+        "rank": 4,
+        "name": "Авазбек",
+        "score": 85.3,
+        "total": 993,
+        "csat_pct": 94.6,
+        "sla_pct": 71.7,
+        "frt_med_sec": 24,
+        "kk": 95,
+        "test": 85.0,
+        "undes_pct": 17.0,
+        "cost_mln": 9.74
+      },
+      {
+        "rank": 5,
+        "name": "Атабек",
+        "score": 85.1,
+        "total": 2344,
+        "csat_pct": 95.8,
+        "sla_pct": 79.7,
+        "frt_med_sec": 30,
+        "kk": 100,
+        "test": 95.0,
+        "undes_pct": 52.9,
+        "cost_mln": 23.04
+      },
+      {
+        "rank": 6,
+        "name": "Робия Р.",
+        "score": 82.0,
+        "total": 2977,
+        "csat_pct": 94.7,
+        "sla_pct": 74.5,
+        "frt_med_sec": 30,
+        "kk": 100,
+        "test": 91.5,
+        "undes_pct": 65.3,
+        "cost_mln": 29.15
+      },
+      {
+        "rank": 7,
+        "name": "Алиёр",
+        "score": 81.6,
+        "total": 2918,
+        "csat_pct": 96.1,
+        "sla_pct": 69.8,
+        "frt_med_sec": 42,
+        "kk": 100,
+        "test": 90.0,
+        "undes_pct": 46.4,
+        "cost_mln": 28.56
+      },
+      {
+        "rank": 8,
+        "name": "Сардор Б.",
+        "score": 80.2,
+        "total": 2609,
+        "csat_pct": 96.4,
+        "sla_pct": 59.4,
+        "frt_med_sec": 48,
+        "kk": 100,
+        "test": 91.5,
+        "undes_pct": 35.0,
+        "cost_mln": 25.57
+      },
+      {
+        "rank": 9,
+        "name": "Иззатбек",
+        "score": 78.8,
+        "total": 2905,
+        "csat_pct": 90.5,
+        "sla_pct": 66.2,
+        "frt_med_sec": 42,
+        "kk": 100,
+        "test": 92.5,
+        "undes_pct": 56.5,
+        "cost_mln": 28.39
+      },
+      {
+        "rank": 10,
+        "name": "Шохина",
+        "score": 78.8,
+        "total": 1551,
+        "csat_pct": 92.9,
+        "sla_pct": 74.9,
+        "frt_med_sec": 30,
+        "kk": 100,
+        "test": 66.0,
+        "undes_pct": 55.7,
+        "cost_mln": 15.18
+      },
+      {
+        "rank": 11,
+        "name": "Робия А.",
+        "score": 77.9,
+        "total": 2780,
+        "csat_pct": 95.1,
+        "sla_pct": 66.8,
+        "frt_med_sec": 36,
+        "kk": 100,
+        "test": 93.5,
+        "undes_pct": 87.7,
+        "cost_mln": 27.17
+      },
+      {
+        "rank": 12,
+        "name": "Тожмухаммад",
+        "score": 76.0,
+        "total": 2804,
+        "csat_pct": 93.7,
+        "sla_pct": 68.5,
+        "frt_med_sec": 42,
+        "kk": 96,
+        "test": 78.5,
+        "undes_pct": 70.1,
+        "cost_mln": 27.44
+      },
+      {
+        "rank": 13,
+        "name": "Азизбек",
+        "score": 66.3,
+        "total": 1175,
+        "csat_pct": 93.9,
+        "sla_pct": 39.6,
+        "frt_med_sec": 90,
+        "kk": 95,
+        "test": 80.0,
+        "undes_pct": 51.3,
+        "cost_mln": 11.46
+      }
+    ],
+    "label_categories": {
+      "senior": {
+        "description": "Требует Иззатбека или Атабека",
+        "tickets": 3048,
+        "cost_mln": 30.1,
+        "labels": [
+          {
+            "name": "Баг (реквест)",
+            "tickets": 385,
+            "med_close_min": 29.3
+          },
+          {
+            "name": "Реквест (внутренний запрос)",
+            "tickets": 104,
+            "med_close_min": 22.9
+          },
+          {
+            "name": "Бэклог",
+            "tickets": 58,
+            "med_close_min": 38.0
+          },
+          {
+            "name": "Импорт — импорт товаров через Excel",
+            "tickets": 375,
+            "med_close_min": 5.0
+          },
+          {
+            "name": "Оборудование — Установка Anydesk/Desktop",
+            "tickets": 280,
+            "med_close_min": 5.0
+          },
+          {
+            "name": "Отчёты — Разбор отчётов",
+            "tickets": 272,
+            "med_close_min": 4.3
+          },
+          {
+            "name": "Настройка — Установка BILLZ PAY/Epos/PAX",
+            "tickets": 196,
+            "med_close_min": 6.3
+          },
+          {
+            "name": "Desktop — Ошибка синхронизации",
+            "tickets": 47,
+            "med_close_min": 9.5
+          },
+          {
+            "name": "SMS рассылка — Создание/Шаблонирование",
+            "tickets": 114,
+            "med_close_min": 3.2
+          },
+          {
+            "name": "API — Консультация по API",
+            "tickets": 71,
+            "med_close_min": 3.2
+          }
+        ]
+      },
+      "middle": {
+        "description": "Опытный оператор (Middle+)",
+        "tickets": 4820,
+        "cost_mln": 47.5,
+        "labels": [
+          {
+            "name": "Оборудование — Установка/Настройка принтера",
+            "tickets": 1115,
+            "med_close_min": 5.3
+          },
+          {
+            "name": "Каталог — изменение свойств товара",
+            "tickets": 754,
+            "med_close_min": 6.3
+          },
+          {
+            "name": "Каталог — настройка печати ценника",
+            "tickets": 666,
+            "med_close_min": 4.3
+          },
+          {
+            "name": "Управление — Создание/Редактирование роли",
+            "tickets": 491,
+            "med_close_min": 4.2
+          },
+          {
+            "name": "Новая продажа — Не удаётся сделать продажу",
+            "tickets": 462,
+            "med_close_min": 4.3
+          },
+          {
+            "name": "Оборудование — Установка/Настройка весов",
+            "tickets": 98,
+            "med_close_min": 6.9
+          },
+          {
+            "name": "Маркетинг — Сертификат/Ваучер",
+            "tickets": 96,
+            "med_close_min": 4.1
+          },
+          {
+            "name": "Учётная запись — Не удаётся войти",
+            "tickets": 69,
+            "med_close_min": 6.1
+          }
+        ]
+      },
+      "junior": {
+        "description": "Любой оператор",
+        "tickets": 11652,
+        "cost_mln": 114.9,
+        "labels": [
+          {
+            "name": "Документооборот — Оплата за тариф",
+            "tickets": 1924,
+            "med_close_min": 2.6
+          },
+          {
+            "name": "Массовый сбой BILLZ",
+            "tickets": 1758,
+            "med_close_min": 2.2
+          },
+          {
+            "name": "Документооборот — Создание ссылки для оплаты",
+            "tickets": 1292,
+            "med_close_min": 1.2
+          },
+          {
+            "name": "Кассовые смены — Открытие/Закрытие",
+            "tickets": 1270,
+            "med_close_min": 1.0
+          },
+          {
+            "name": "Учётная запись — Помощь со входом",
+            "tickets": 1028,
+            "med_close_min": 3.7
+          },
+          {
+            "name": "Учётная запись — Блокировка/Разблокировка",
+            "tickets": 834,
+            "med_close_min": 2.0
+          },
+          {
+            "name": "Вопрос не по программе",
+            "tickets": 495,
+            "med_close_min": 2.7
+          },
+          {
+            "name": "Учётная запись — Создание магазина",
+            "tickets": 382,
+            "med_close_min": 2.3
+          },
+          {
+            "name": "Новая продажа — Возврат/Обмен",
+            "tickets": 313,
+            "med_close_min": 3.6
+          },
+          {
+            "name": "Каталог — запрос на добавление товара",
+            "tickets": 304,
+            "med_close_min": 3.4
+          }
+        ]
+      }
+    },
+    "insights": {
+      "positives": [
+        "CSAT держится выше 94% все 3 месяца — стабильное качество даже при форс-мажорах",
+        "FRT медиана 30 сек — очень быстрый первый ответ по всем месяцам",
+        "SLA улучшилось с 68.6% (фев) до 77.2% (апр) — позитивный тренд",
+        "Закрытие тикетов 99.8–100% — отличная операционная дисциплина"
+      ],
+      "negatives": [
+        "Нежелательные обращения >50% все 3 месяца — системная проблема классификации",
+        "Массовый сбой BILLZ (фев): 1758 тикетов = 17 млн сўм за один инцидент",
+        "LCR апрель 7.8% — рост из-за 3 форс-мажоров и инцидента Rahmat",
+        "Повторные обращения выросли: 6.3% → 9.6% — каждый 10-й клиент возвращается",
+        "Азизбек SLA 39.6% — критически ниже команды"
+      ],
+      "recommendations": [
+        "Расследовать нежелательные >50%: классификация или реальное качество?",
+        "Создать резервный пул 2-3 операторов для форс-мажоров",
+        "Автоматические SMS/Push при инцидентах — экономия 8–9 млн сўм",
+        "FAQ для топ-5 категорий — потенциал экономии 13–18 млн сўм/квартал",
+        "Маршрутизация по уровням: SENIOR/MIDDLE/JUNIOR снизит AHT на 15–20%"
+      ]
+    }
   }
 };

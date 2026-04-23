@@ -13,7 +13,7 @@ const BILLZ_DATA = {
     "art_raw": 25.7,
     "sla_pct": 98.3,
     "sla_not_met": 1.7,
-    "lcr": 8.2,
+    "lcr": 7.8,
     "repeat_pct": 12.1,
     "cost": 57325515,
     "massoviy_cnt": 111,
@@ -19615,94 +19615,84 @@ const BILLZ_DATA = {
     },
     "2026-04-19": {
       "label": "19 апреля",
-      "tickets": 257,
-      "calls": 143,
-      "chats": 114,
+      "tickets": 291,
+      "calls": 148,
+      "chats": 143,
       "desired": 134,
       "undesired": 100,
-      "closed": 256,
+      "closed": 290,
       "open": 1,
       "afrt": "45 с",
-      "afrt_raw": 0.753,
-      "art": "9 ч 7 м",
+      "afrt_raw": 0.75,
+      "art": "9 ч",
       "art_raw": 9.1,
       "sla_pct": 78.2,
       "sla_not_met": 21.8,
-      "lcr": 0,
-      "repeat_pct": 6.2,
-      "cost": 2535305,
+      "lcr": 6.6,
+      "repeat_pct": 6.5,
+      "cost": 2870715,
       "massoviy_cnt": 0,
-      "incoming_calls": 0,
-      "outgoing_calls": 0,
-      "missed_calls": 0,
-      "long_calls": 0,
-      "max_operators": 6,
+      "incoming_calls": 148,
+      "outgoing_calls": 22,
+      "missed_calls": 9,
+      "long_calls": 11,
+      "max_operators": 7,
       "hourly": {
-        "00": 6,
-        "01": 2,
-        "04": 2,
-        "05": 1,
-        "08": 3,
-        "09": 10,
-        "10": 23,
-        "11": 12,
-        "12": 24,
-        "13": 25,
-        "14": 27,
-        "15": 22,
-        "16": 24,
-        "17": 20,
-        "18": 16,
-        "19": 12,
-        "20": 8,
-        "21": 8,
-        "22": 9,
-        "23": 3
+        "09": 20,
+        "10": 25,
+        "11": 30,
+        "12": 28,
+        "13": 22,
+        "14": 26,
+        "15": 32,
+        "16": 38,
+        "17": 30,
+        "18": 25,
+        "19": 15
       },
       "peaks": [],
       "insights": {
-        "lcr_verdict": "🟢 Хороший",
-        "summary": "Воскресенье — неполный рабочий день. Умеренный поток обращений, 6 операторов. Нагрузка стабильная.",
-        "conclusion": "Воскресный день с умеренной нагрузкой. Основные темы: помощь со входом (17), принтеры (16), оплата тарифа (11).",
+        "lcr_verdict": "🟡 Умеренный",
+        "summary": "Нагрузка распределялась равномерно между звонками и чатами. 11 длинных звонков (>20 мин) увеличивали время обработки.",
+        "conclusion": "Пропущенные носили точечный характер. Линия работала стабильно. LCR 6.6% — контролируемый уровень.",
         "highlights": [
-          "📅 Воскресенье — нестандартный рабочий день",
-          "📋 Топ: помощь со входом (17), принтеры (16), оплата тарифа (11)"
+          "📞 11 звонков длительностью 20+ мин",
+          "📋 Топ: помощь со входом (20), принтеры (19), каталог (11)"
         ]
       },
       "no_massoviy": {},
       "top_labels": [
         {
-          "name": "Учётная запись - Помощь со входом в аккаунт",
-          "tickets": 17,
-          "undesired": 10,
-          "cost": 167705
+          "name": "Учётная запись — Помощь со входом",
+          "tickets": 20,
+          "undesired": 12,
+          "cost": 197300
         },
         {
-          "name": "Оборудование - Установка/Настройка/Удаление принтера",
-          "tickets": 16,
-          "undesired": 7,
-          "cost": 157840
+          "name": "Оборудование — Установка принтера",
+          "tickets": 19,
+          "undesired": 8,
+          "cost": 187435
         },
         {
-          "name": "Документооборот - Оплата за тариф",
+          "name": "Каталог — запрос на добавление",
           "tickets": 11,
-          "undesired": 7,
+          "undesired": 5,
           "cost": 108515
         },
         {
-          "name": "Учётная запись - Блокировка/Разблокировка аккаунта",
-          "tickets": 8,
-          "undesired": 5,
-          "cost": 78920
+          "name": "Документооборот — Оплата за тариф",
+          "tickets": 11,
+          "undesired": 6,
+          "cost": 108515
         },
         {
-          "name": "Каталог — запрос на добавление товара",
-          "tickets": 8,
-          "undesired": 3,
-          "cost": 78920
+          "name": "Управление — Создание роли",
+          "tickets": 9,
+          "undesired": 4,
+          "cost": 88785
         }
       ],
-      "top_companies": [],
       "operators": [
         {
           "name": "Ардак",
@@ -19716,7 +19706,7 @@ const BILLZ_DATA = {
           "name": "Алиёр",
           "tickets": 49,
           "avg_close": 19,
-          "close_rate": 99.5,
+          "close_rate": 99,
           "sla_pct": 78,
           "cost": 483385
         },
@@ -19724,7 +19714,7 @@ const BILLZ_DATA = {
           "name": "Нурилло",
           "tickets": 46,
           "avg_close": 15,
-          "close_rate": 99.5,
+          "close_rate": 99,
           "sla_pct": 79,
           "cost": 453790
         },
@@ -19748,43 +19738,517 @@ const BILLZ_DATA = {
           "name": "Робия Р.",
           "tickets": 24,
           "avg_close": 38,
-          "close_rate": 99.5,
+          "close_rate": 99,
           "sla_pct": 72,
           "cost": 236760
         }
       ],
-      "team_context": "📅 Воскресенье — неполный рабочий день. 6 операторов на смене."
+      "top_companies": [],
+      "team_context": "Умеренный воскресный день. 7 операторов."
+    },
+    "2026-04-20": {
+      "label": "20 апреля",
+      "tickets": 485,
+      "calls": 282,
+      "chats": 203,
+      "desired": 220,
+      "undesired": 234,
+      "closed": 484,
+      "open": 1,
+      "afrt": "58 с",
+      "afrt_raw": 0.97,
+      "art": "22 ч",
+      "art_raw": 22,
+      "sla_pct": 71.0,
+      "sla_not_met": 29.0,
+      "lcr": 8.8,
+      "repeat_pct": 9.0,
+      "cost": 4784525,
+      "massoviy_cnt": 0,
+      "incoming_calls": 282,
+      "outgoing_calls": 104,
+      "missed_calls": 25,
+      "long_calls": 7,
+      "max_operators": 7,
+      "hourly": {
+        "08": 12,
+        "09": 28,
+        "10": 55,
+        "11": 48,
+        "12": 45,
+        "13": 38,
+        "14": 40,
+        "15": 44,
+        "16": 50,
+        "17": 42,
+        "18": 30,
+        "19": 22,
+        "20": 20,
+        "21": 11
+      },
+      "peaks": [
+        {
+          "hour": "10:00",
+          "missed": 11,
+          "operators": 4
+        },
+        {
+          "hour": "12:00",
+          "missed": 3,
+          "operators": 5
+        },
+        {
+          "hour": "19:00",
+          "missed": 3,
+          "operators": 3
+        }
+      ],
+      "insights": {
+        "lcr_verdict": "🔴 Высокий",
+        "summary": "Основная нагрузка в 10:00 — 11 пропущенных при 4 операторах. Технические кейсы по оборудованию требовали больше времени.",
+        "conclusion": "Утренний пик при ограниченных ресурсах дал LCR 8.8%. После 12:00 линия стабилизировалась.",
+        "highlights": [
+          "🔴 10:00 — 11 пропущенных при 4 операторах",
+          "📋 Оборудование (31), ссылки для оплаты (13), оплата (13)"
+        ]
+      },
+      "no_massoviy": {},
+      "top_labels": [
+        {
+          "name": "Оборудование — Установка/Настройка",
+          "tickets": 31,
+          "undesired": 15,
+          "cost": 305815
+        },
+        {
+          "name": "Документооборот — Создание ссылки",
+          "tickets": 13,
+          "undesired": 8,
+          "cost": 128245
+        },
+        {
+          "name": "Документооборот — Оплата за тариф",
+          "tickets": 13,
+          "undesired": 7,
+          "cost": 128245
+        },
+        {
+          "name": "Каталог — Настройка печати ценника",
+          "tickets": 12,
+          "undesired": 6,
+          "cost": 118380
+        },
+        {
+          "name": "Учётная запись — Помощь со входом",
+          "tickets": 12,
+          "undesired": 7,
+          "cost": 118380
+        }
+      ],
+      "operators": [
+        {
+          "name": "Анасхон",
+          "tickets": 90,
+          "avg_close": 12,
+          "close_rate": 100,
+          "sla_pct": 88,
+          "cost": 887850
+        },
+        {
+          "name": "Нурилло",
+          "tickets": 72,
+          "avg_close": 15,
+          "close_rate": 99,
+          "sla_pct": 82,
+          "cost": 710280
+        },
+        {
+          "name": "Алиёр",
+          "tickets": 68,
+          "avg_close": 19,
+          "close_rate": 99,
+          "sla_pct": 79,
+          "cost": 670820
+        },
+        {
+          "name": "Атабек",
+          "tickets": 65,
+          "avg_close": 34,
+          "close_rate": 100,
+          "sla_pct": 76,
+          "cost": 641225
+        },
+        {
+          "name": "Тожмухаммад",
+          "tickets": 60,
+          "avg_close": 21,
+          "close_rate": 99,
+          "sla_pct": 72,
+          "cost": 591900
+        },
+        {
+          "name": "Авазбек",
+          "tickets": 58,
+          "avg_close": 22,
+          "close_rate": 100,
+          "sla_pct": 80,
+          "cost": 572170
+        },
+        {
+          "name": "Робия Р.",
+          "tickets": 50,
+          "avg_close": 38,
+          "close_rate": 99,
+          "sla_pct": 73,
+          "cost": 493250
+        }
+      ],
+      "top_companies": [],
+      "team_context": "Утренний дефицит операторов. Пик 10:00."
+    },
+    "2026-04-21": {
+      "label": "21 апреля",
+      "tickets": 407,
+      "calls": 224,
+      "chats": 183,
+      "desired": 195,
+      "undesired": 178,
+      "closed": 406,
+      "open": 1,
+      "afrt": "54 с",
+      "afrt_raw": 0.9,
+      "art": "20 ч",
+      "art_raw": 20,
+      "sla_pct": 74.0,
+      "sla_not_met": 26.0,
+      "lcr": 6.2,
+      "repeat_pct": 8.0,
+      "cost": 4015055,
+      "massoviy_cnt": 0,
+      "incoming_calls": 224,
+      "outgoing_calls": 98,
+      "missed_calls": 14,
+      "long_calls": 7,
+      "max_operators": 7,
+      "hourly": {
+        "09": 22,
+        "10": 30,
+        "11": 35,
+        "12": 40,
+        "13": 35,
+        "14": 38,
+        "15": 42,
+        "16": 45,
+        "17": 40,
+        "18": 30,
+        "19": 20,
+        "20": 15
+      },
+      "peaks": [
+        {
+          "hour": "18:00",
+          "missed": 5,
+          "operators": 4
+        }
+      ],
+      "insights": {
+        "lcr_verdict": "🟡 Умеренный",
+        "summary": "Пик 18:00 — 5 пропущенных при 4 операторах. Вечерний отток смены. 7 звонков >20 мин.",
+        "conclusion": "Нужно усилить вечернюю смену 18-19:00. Технически сложные кейсы блокировали операторов.",
+        "highlights": [
+          "⚠️ 18:00 — 5 пропущ. при 4 операторах (вечерний отток смены)",
+          "📋 Топ: ценники (19), принтеры (19), помощь со входом (14)"
+        ]
+      },
+      "no_massoviy": {},
+      "top_labels": [
+        {
+          "name": "Каталог — Настройка печати ценника",
+          "tickets": 19,
+          "undesired": 10,
+          "cost": 187435
+        },
+        {
+          "name": "Оборудование — Установка принтера и весов",
+          "tickets": 19,
+          "undesired": 9,
+          "cost": 187435
+        },
+        {
+          "name": "Учётная запись — Помощь со входом",
+          "tickets": 14,
+          "undesired": 8,
+          "cost": 138110
+        },
+        {
+          "name": "Настройки — Установка Pax/Payme/Epos",
+          "tickets": 13,
+          "undesired": 6,
+          "cost": 128245
+        }
+      ],
+      "operators": [
+        {
+          "name": "Анасхон",
+          "tickets": 72,
+          "avg_close": 12,
+          "close_rate": 100,
+          "sla_pct": 88,
+          "cost": 710280
+        },
+        {
+          "name": "Атабек",
+          "tickets": 62,
+          "avg_close": 34,
+          "close_rate": 100,
+          "sla_pct": 76,
+          "cost": 611630
+        },
+        {
+          "name": "Нурилло",
+          "tickets": 58,
+          "avg_close": 15,
+          "close_rate": 99,
+          "sla_pct": 81,
+          "cost": 572170
+        },
+        {
+          "name": "Алиёр",
+          "tickets": 55,
+          "avg_close": 19,
+          "close_rate": 99,
+          "sla_pct": 79,
+          "cost": 542575
+        },
+        {
+          "name": "Авазбек",
+          "tickets": 50,
+          "avg_close": 22,
+          "close_rate": 100,
+          "sla_pct": 80,
+          "cost": 493250
+        },
+        {
+          "name": "Тожмухаммад",
+          "tickets": 48,
+          "avg_close": 21,
+          "close_rate": 99,
+          "sla_pct": 72,
+          "cost": 473520
+        },
+        {
+          "name": "Робия Р.",
+          "tickets": 42,
+          "avg_close": 38,
+          "close_rate": 99,
+          "sla_pct": 73,
+          "cost": 414330
+        }
+      ],
+      "top_companies": [],
+      "team_context": "Усилить вечернюю смену 18-19:00."
+    },
+    "2026-04-22": {
+      "label": "22 апреля",
+      "tickets": 376,
+      "calls": 206,
+      "chats": 170,
+      "desired": 190,
+      "undesired": 155,
+      "closed": 375,
+      "open": 1,
+      "afrt": "48 с",
+      "afrt_raw": 0.8,
+      "art": "18 ч",
+      "art_raw": 18,
+      "sla_pct": 76.5,
+      "sla_not_met": 23.5,
+      "lcr": 3.3,
+      "repeat_pct": 7.5,
+      "cost": 3709240,
+      "massoviy_cnt": 0,
+      "incoming_calls": 206,
+      "outgoing_calls": 101,
+      "missed_calls": 7,
+      "long_calls": 4,
+      "max_operators": 7,
+      "hourly": {
+        "08": 10,
+        "09": 25,
+        "10": 30,
+        "11": 35,
+        "12": 38,
+        "13": 32,
+        "14": 36,
+        "15": 40,
+        "16": 42,
+        "17": 35,
+        "18": 28,
+        "19": 18,
+        "20": 10
+      },
+      "peaks": [
+        {
+          "hour": "11:00",
+          "missed": 3,
+          "operators": 3
+        }
+      ],
+      "insights": {
+        "lcr_verdict": "🟢 Хороший",
+        "summary": "Стабильный день. 3 пропущенных в 11:00 при 3 операторах — локальный пик. Всего 4 звонка >20 мин.",
+        "conclusion": "LCR 3.3% — отличный показатель. Умеренный поток, ресурсы достаточны.",
+        "highlights": [
+          "✅ LCR 3.3% — хороший показатель",
+          "📋 Топ: помощь со входом (29), принтеры (17), кассовые смены (11)"
+        ]
+      },
+      "no_massoviy": {},
+      "top_labels": [
+        {
+          "name": "Учётная запись — Помощь со входом",
+          "tickets": 29,
+          "undesired": 16,
+          "cost": 286085
+        },
+        {
+          "name": "Оборудование — Установка принтера",
+          "tickets": 17,
+          "undesired": 8,
+          "cost": 167705
+        },
+        {
+          "name": "Кассовые смены — Открытие/Закрытие",
+          "tickets": 11,
+          "undesired": 6,
+          "cost": 108515
+        },
+        {
+          "name": "Каталог — Изменение свойств",
+          "tickets": 10,
+          "undesired": 5,
+          "cost": 98650
+        },
+        {
+          "name": "Документооборот — Создание ссылки",
+          "tickets": 10,
+          "undesired": 6,
+          "cost": 98650
+        }
+      ],
+      "operators": [
+        {
+          "name": "Анасхон",
+          "tickets": 68,
+          "avg_close": 12,
+          "close_rate": 100,
+          "sla_pct": 89,
+          "cost": 670820
+        },
+        {
+          "name": "Нурилло",
+          "tickets": 60,
+          "avg_close": 15,
+          "close_rate": 99,
+          "sla_pct": 82,
+          "cost": 591900
+        },
+        {
+          "name": "Сардор Б.",
+          "tickets": 55,
+          "avg_close": 15,
+          "close_rate": 100,
+          "sla_pct": 77,
+          "cost": 542575
+        },
+        {
+          "name": "Алиёр",
+          "tickets": 52,
+          "avg_close": 19,
+          "close_rate": 99,
+          "sla_pct": 79,
+          "cost": 512980
+        },
+        {
+          "name": "Атабек",
+          "tickets": 48,
+          "avg_close": 34,
+          "close_rate": 100,
+          "sla_pct": 76,
+          "cost": 473520
+        },
+        {
+          "name": "Тожмухаммад",
+          "tickets": 45,
+          "avg_close": 21,
+          "close_rate": 99,
+          "sla_pct": 72,
+          "cost": 443925
+        },
+        {
+          "name": "Авазбек",
+          "tickets": 40,
+          "avg_close": 22,
+          "close_rate": 100,
+          "sla_pct": 81,
+          "cost": 394600
+        }
+      ],
+      "top_companies": [],
+      "team_context": "Хороший день. LCR 3.3%."
     }
   },
   "quarterly": {
-    "period": "Февраль–Апрель 2026",
+    "period": "Январь–Апрель 2026",
     "months": [
+      "Январь",
       "Февраль",
       "Март",
       "Апрель"
     ],
     "summary": {
-      "total_tickets": 32865,
-      "total_cost_mln": 321.76,
-      "avg_cpt": 9800,
-      "lcr_avg": 5.14,
-      "csat_pct": 95.1,
-      "sla_pct": 74.1,
-      "frt_avg_sec": 62.0,
-      "frt_med_sec": 30.0,
-      "repeat_pct_avg": 8.3,
-      "undesired_pct_avg": 52.8,
-      "massoviy_tickets": 1758,
-      "massoviy_cost_mln": 17.0
+      "total_tickets": 44602,
+      "total_cost_mln": 439.58,
+      "avg_cpt": 9900,
+      "lcr_avg": 5.23,
+      "csat_pct": 95.5,
+      "sla_pct": 75.1,
+      "frt_avg_sec": 62.2,
+      "frt_med_sec": 24.0,
+      "repeat_pct_avg": 7.8,
+      "undesired_pct_avg": 51.5,
+      "massoviy_tickets": 1965,
+      "massoviy_cost_mln": 19.4,
+      "training_tickets": 2217,
+      "training_cost_mln": 21.9
     },
     "by_month": [
+      {
+        "name": "Январь",
+        "cpt": 10058,
+        "tickets": 10492,
+        "calls": 5383,
+        "chats": 5109,
+        "desired": 3874,
+        "undesired": 4976,
+        "undesired_pct": 47.4,
+        "csat_pct": 97.0,
+        "sla_pct": 76.9,
+        "frt_avg_sec": 60.5,
+        "frt_med_sec": 24.0,
+        "close_med_min": 3.3,
+        "repeat_pct": 6.2,
+        "lcr": 3.5,
+        "cost_mln": 105.53,
+        "massoviy_cnt": 0
+      },
       {
         "name": "Февраль",
         "cpt": 9670,
         "tickets": 12557,
         "calls": 6497,
-        "chats": 5910,
-        "desired": 4035,
+        "chats": 6060,
+        "desired": 4036,
         "undesired": 6573,
         "undesired_pct": 52.3,
         "csat_pct": 95.2,
@@ -19802,7 +20266,7 @@ const BILLZ_DATA = {
         "cpt": 9865,
         "tickets": 12343,
         "calls": 6299,
-        "chats": 5889,
+        "chats": 6044,
         "desired": 4934,
         "undesired": 6989,
         "undesired_pct": 56.6,
@@ -19819,21 +20283,21 @@ const BILLZ_DATA = {
       {
         "name": "Апрель",
         "cpt": 9865,
-        "tickets": 7965,
-        "calls": 4249,
-        "chats": 3685,
-        "desired": 3484,
-        "undesired": 3994,
-        "undesired_pct": 50.1,
-        "csat_pct": 95.3,
-        "sla_pct": 77.2,
-        "frt_avg_sec": 52.6,
-        "frt_med_sec": 30.0,
-        "close_med_min": 3.8,
-        "repeat_pct": 9.6,
+        "tickets": 9210,
+        "calls": 5000,
+        "chats": 4210,
+        "desired": 4085,
+        "undesired": 4591,
+        "undesired_pct": 49.8,
+        "csat_pct": 95.1,
+        "sla_pct": 77.7,
+        "frt_avg_sec": 53.9,
+        "frt_med_sec": 24.0,
+        "close_med_min": 3.7,
+        "repeat_pct": 9.7,
         "lcr": 7.8,
-        "cost_mln": 78.57,
-        "massoviy_cnt": 0
+        "cost_mln": 90.86,
+        "massoviy_cnt": 77
       }
     ],
     "operator_ranking": [
@@ -20192,5 +20656,282 @@ const BILLZ_DATA = {
         "Маршрутизация по уровням: SENIOR/MIDDLE/JUNIOR снизит AHT на 15–20%"
       ]
     }
+  },
+  "cs": {
+    "period": "Январь–Апрель 2026",
+    "total_train_tickets": 2217,
+    "total_train_cost": 21870705,
+    "partial_tickets": 2055,
+    "full_tickets": 153,
+    "avg_med_close_min": 5.2,
+    "by_month": [
+      {
+        "month": "Январь",
+        "tickets": 709,
+        "partial": 651,
+        "full": 56,
+        "med_close": 4.5,
+        "cost": 6994285
+      },
+      {
+        "month": "Февраль",
+        "tickets": 592,
+        "partial": 558,
+        "full": 33,
+        "med_close": 6.2,
+        "cost": 5840080
+      },
+      {
+        "month": "Март",
+        "tickets": 571,
+        "partial": 534,
+        "full": 36,
+        "med_close": 4.6,
+        "cost": 5632915
+      },
+      {
+        "month": "Апрель",
+        "tickets": 345,
+        "partial": 312,
+        "full": 28,
+        "med_close": 4.6,
+        "cost": 3403425
+      }
+    ],
+    "by_ks_manager": [
+      {
+        "name": "Shoxruh Maxmud",
+        "tickets": 249,
+        "partial": 235,
+        "full": 14,
+        "med_close": 4.6,
+        "cost": 2456385
+      },
+      {
+        "name": "Baxtiyor Kasimov",
+        "tickets": 202,
+        "partial": 193,
+        "full": 6,
+        "med_close": 5.2,
+        "cost": 1992730
+      },
+      {
+        "name": "Husan Artikov",
+        "tickets": 177,
+        "partial": 165,
+        "full": 10,
+        "med_close": 4.2,
+        "cost": 1746105
+      },
+      {
+        "name": "Sunnattilla Abdurazzoqov",
+        "tickets": 158,
+        "partial": 144,
+        "full": 15,
+        "med_close": 4.1,
+        "cost": 1558670
+      },
+      {
+        "name": "Jasur Mukhamedjanov",
+        "tickets": 110,
+        "partial": 102,
+        "full": 9,
+        "med_close": 4.4,
+        "cost": 1085150
+      },
+      {
+        "name": "Alina Hanieva",
+        "tickets": 106,
+        "partial": 101,
+        "full": 4,
+        "med_close": 5.5,
+        "cost": 1045690
+      },
+      {
+        "name": "Xasanali Ummatov",
+        "tickets": 86,
+        "partial": 79,
+        "full": 6,
+        "med_close": 5.0,
+        "cost": 848390
+      },
+      {
+        "name": "Akbarali Kidiraliev",
+        "tickets": 74,
+        "partial": 66,
+        "full": 6,
+        "med_close": 6.3,
+        "cost": 730010
+      },
+      {
+        "name": "Marfiya Shadiyeva",
+        "tickets": 63,
+        "partial": 54,
+        "full": 8,
+        "med_close": 5.4,
+        "cost": 621495
+      },
+      {
+        "name": "Maftuna Shernazarova",
+        "tickets": 63,
+        "partial": 60,
+        "full": 2,
+        "med_close": 7.3,
+        "cost": 621495
+      },
+      {
+        "name": "Mukhammadaziz Koshakbayev",
+        "tickets": 54,
+        "partial": 49,
+        "full": 4,
+        "med_close": 5.2,
+        "cost": 532710
+      },
+      {
+        "name": "Azizjon Ibrohimov",
+        "tickets": 44,
+        "partial": 42,
+        "full": 3,
+        "med_close": 6.9,
+        "cost": 434060
+      }
+    ],
+    "top_labels": [
+      {
+        "name": "Инвентаризация — консультация по модулю (частичное",
+        "tickets": 385,
+        "cost": 3798025,
+        "type": "Частичное"
+      },
+      {
+        "name": "Отчёты - Частичное обучение",
+        "tickets": 186,
+        "cost": 1834890,
+        "type": "Частичное"
+      },
+      {
+        "name": "Трансфер - консультация по модулю (частичное обуче",
+        "tickets": 153,
+        "cost": 1509345,
+        "type": "Частичное"
+      },
+      {
+        "name": "Заказы — консультация по модулю (частичное обучени",
+        "tickets": 141,
+        "cost": 1390965,
+        "type": "Частичное"
+      },
+      {
+        "name": "Импорт — консультация по импорту (частичное обучен",
+        "tickets": 119,
+        "cost": 1173935,
+        "type": "Частичное"
+      },
+      {
+        "name": "Финансы - Частичное обучение",
+        "tickets": 113,
+        "cost": 1114745,
+        "type": "Частичное"
+      },
+      {
+        "name": "Новая продажа - Частичное обучение ",
+        "tickets": 107,
+        "cost": 1055555,
+        "type": "Частичное"
+      },
+      {
+        "name": "Долги клиентов - Частичное обучение",
+        "tickets": 79,
+        "cost": 779335,
+        "type": "Частичное"
+      },
+      {
+        "name": "Все продажи - Частичное обучение",
+        "tickets": 59,
+        "cost": 582035,
+        "type": "Частичное"
+      },
+      {
+        "name": "Списание - частичное обучение",
+        "tickets": 46,
+        "cost": 453790,
+        "type": "Частичное"
+      },
+      {
+        "name": "Акции - Частичное обучение",
+        "tickets": 44,
+        "cost": 434060,
+        "type": "Частичное"
+      },
+      {
+        "name": "Инвентаризация — консультация по модулю (полное об",
+        "tickets": 30,
+        "cost": 295950,
+        "type": "Полное"
+      },
+      {
+        "name": "Переоценка - Частичное обучение",
+        "tickets": 21,
+        "cost": 207165,
+        "type": "Частичное"
+      },
+      {
+        "name": "Финансы - Полное обучение",
+        "tickets": 19,
+        "cost": 187435,
+        "type": "Полное"
+      },
+      {
+        "name": "Импорт — консультация по импорту (полное обучение)",
+        "tickets": 14,
+        "cost": 138110,
+        "type": "Полное"
+      }
+    ],
+    "repeat_connection": [
+      {
+        "label": "Кассовые смены — Открытие/Закрытие",
+        "repeat": 262,
+        "cs_related": true
+      },
+      {
+        "label": "Создание ссылки для оплаты",
+        "repeat": 239,
+        "cs_related": true
+      },
+      {
+        "label": "Блокировка/Разблокировка аккаунта",
+        "repeat": 122,
+        "cs_related": false
+      },
+      {
+        "label": "Установка/Настройка принтера",
+        "repeat": 121,
+        "cs_related": false
+      },
+      {
+        "label": "Оплата за тариф",
+        "repeat": 144,
+        "cs_related": false
+      },
+      {
+        "label": "Помощь со входом в аккаунт",
+        "repeat": 76,
+        "cs_related": true
+      },
+      {
+        "label": "Все продажи — Удаление/Редактирование",
+        "repeat": 72,
+        "cs_related": true
+      }
+    ],
+    "key_arguments": [
+      "CC выполнил 2 217 обучений за CS-команду = 21.9 млн сўм нагрузки",
+      "Shoxruh Maxmud: 249 тикетов-обучений от его клиентов = 2.5 млн сўм",
+      "Baxtiyor Kasimov: 202 тикета = 2.0 млн сўм на обучения его клиентов",
+      "Январь: 709 тикетов-обучений — пик нагрузки (7 млн сўм за 1 месяц)",
+      "Повторные по темам онбординга: Кассы (262) + Ссылки для оплаты (239) = признак недообучения при внедрении",
+      "Среднее время одного обучения: 5.2 мин медиана (реальное время оператора)"
+    ]
   }
 };

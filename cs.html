@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BILLZ CC · Customer Success Анализ</title>
+<link rel="stylesheet" href="shared.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<script src="data.js"></script>
+<script src="shared.js"></script>
+<style>
+.cs-argument {
+  background: rgba(124,58,237,0.08);
+  border: 1px solid rgba(124,58,237,0.3);
+  border-radius: 10px;
+  padding: 14px 18px;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+.cs-arg-num {
+  font-family: var(--mono);
+  font-size: 22px;
+  font-weight: 800;
+  color: rgba(196,148,255,0.6);
+  flex-shrink: 0;
+  line-height: 1;
+  margin-top: 2px;
+}
+.cs-arg-text {
+  font-size: 13px;
+  color: var(--text2);
+  line-height: 1.6;
+}
+.cs-arg-text strong { color: #C4A4FF; }
+.cs-badge {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: rgba(124,58,237,0.15);
+  color: #C4A4FF;
+  border: 1px solid rgba(124,58,237,0.3);
+}
+.cs-badge.warn { background: rgba(245,158,11,0.12); color: var(--amber2); border-color: rgba(252,211,77,.2); }
+.cs-badge.ok   { background: rgba(16,185,129,0.12); color: var(--green2); border-color: rgba(52,211,153,.2); }
+</style>
+</head>
+<body>
+<nav class="top-nav">
+  <div class="nav-brand">BILLZ · CC</div>
+  <a href="index.html"     class="nav-link">Ежемесячно</a>
+  <a href="weekly.html"    class="nav-link">Еженедельно</a>
+  <a href="daily.html"     class="nav-link">Ежедневно</a>
+  <a href="quarterly.html" class="nav-link">Квартал</a>
+  <a href="cs.html"        class="nav-link active">Customer Success</a>
+  <div class="nav-right">Янв–Апр 2026</div>
+</nav>
+
+<div class="wrap">
+  <div class="phdr">
+    <div>
+      <div class="phdr-eyebrow">BILLZ · CC Intelligence · Customer Success Анализ</div>
+      <div class="phdr-title">CS <em>Обучения</em></div>
+      <div class="phdr-sub">CC выполнял работу CS-команды · Январь–Апрель 2026</div>
+      <div class="phdr-pills">
+        <span class="pill a">2 217 тикетов-обучений</span>
+        <span class="pill" style="color:#F87171;border-color:rgba(239,68,68,0.3)">21.9 млн сўм</span>
+        <span class="pill">12 КС-менеджеров затронуто</span>
+        <span class="pill">Медиана: 5.2 мин/обучение</span>
+      </div>
+    </div>
+    <div class="phdr-right">
+      <div class="cost-ey">Затраты CC на обучения</div>
+      <div class="cost-n" style="color:#F87171">21.9 млн</div>
+      <div class="cost-d">сўм · за 4 месяца</div>
+      <div class="live" style="color:#C4A4FF"><span class="live-dot" style="background:#C4A4FF"></span>аргументы для митинга</div>
+    </div>
+  </div>
+
+  <!-- KPI Grid -->
+  <div class="kpi-grid" id="kpiGrid"></div>
+
+  <!-- Key Arguments for meeting -->
+  <div class="sec"><div class="sec-num">01</div><div class="sec-title">Аргументы для митинга с CS-командой</div><div class="sec-line"></div></div>
+  <div id="argumentsBlock"></div>
+
+  <!-- Monthly trend -->
+  <div class="sec"><div class="sec-num">02</div><div class="sec-title">Динамика обучений по месяцам</div><div class="sec-line"></div></div>
+  <div class="row two">
+    <div class="card">
+      <div class="card-hd"><div class="card-title">Тикеты-обучения и затраты</div></div>
+      <div style="position:relative;height:200px"><canvas id="monthlyChart"></canvas></div>
+    </div>
+    <div class="card">
+      <div class="card-hd"><div class="card-title">Частичное vs Полное обучение</div></div>
+      <div style="position:relative;height:200px"><canvas id="typeChart"></canvas></div>
+    </div>
+  </div>
+
+  <!-- By KS Manager -->
+  <div class="sec"><div class="sec-num">03</div><div class="sec-title">Нагрузка по КС менеджерам</div><div class="sec-line"></div></div>
+  <div class="row two">
+    <div class="card">
+      <div class="card-hd">
+        <div class="card-title">Топ КС менеджеров по количеству обучений от CC</div>
+        <div class="card-note">Чем больше — тем хуже работает онбординг этого менеджера</div>
+      </div>
+      <table class="tbl">
+        <thead><tr><th>#</th><th>КС Менеджер</th><th>Тикеты</th><th>Частич.</th><th>Полных</th><th>Мед.время</th><th>Затраты</th></tr></thead>
+        <tbody id="ksTable"></tbody>
+      </table>
+    </div>
+    <div class="card">
+      <div class="card-hd"><div class="card-title">Топ КС — объём обучений</div></div>
+      <div style="position:relative;height:320px"><canvas id="ksChart"></canvas></div>
+    </div>
+  </div>
+
+  <!-- Training labels -->
+  <div class="sec"><div class="sec-num">04</div><div class="sec-title">Топ категорий обучений</div><div class="sec-line"></div></div>
+  <div class="row two">
+    <div class="card">
+      <div class="card-hd">
+        <div class="card-title">Метки обучений — объём и затраты</div>
+        <div class="card-note">Каждый тикет = 9 865 сўм нагрузки на CC</div>
+      </div>
+      <table class="tbl" id="labelsTable">
+        <thead><tr><th>Метка обучения</th><th>Тикеты</th><th>Тип</th><th>Затраты (сўм)</th></tr></thead>
+        <tbody id="labelsTbody"></tbody>
+      </table>
+    </div>
+    <div class="card">
+      <div class="card-hd"><div class="card-title">Распределение по модулям</div></div>
+      <div style="position:relative;height:300px"><canvas id="labelsChart"></canvas></div>
+    </div>
+  </div>
+
+  <!-- Repeat connection -->
+  <div class="sec"><div class="sec-num">05</div><div class="sec-title">Связь обучений с повторными обращениями</div><div class="sec-line"></div></div>
+  <div class="row one">
+    <div class="card">
+      <div class="card-hd">
+        <div class="card-title">Повторные обращения по темам онбординга = признак недообучения CS</div>
+        <div class="card-note" style="color:#34D399">🎓 = должно быть закрыто в онбординге CS</div>
+      </div>
+      <div style="background:rgba(52,211,153,0.07);border:1px solid rgba(52,211,153,0.2);border-radius:8px;padding:12px 16px;margin-bottom:14px;font-size:12px;color:var(--text2)">
+        💡 <strong style="color:#34D399">Гипотеза:</strong> Клиенты, которых обучал CC (а не CS-команда), чаще возвращаются с повторными обращениями.
+        Кассовые смены (262 повтора) и Создание ссылок (239 повтора) — это базовые навыки, которые клиент должен освоить при онбординге.
+        Повторные обращения по этим темам = прямое следствие неполного обучения при внедрении.
+      </div>
+      <table class="tbl">
+        <thead><tr><th>Метка</th><th>Повторных</th><th>Затраты повт.</th><th>Связь с CS</th></tr></thead>
+        <tbody id="repeatTable"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Conclusions -->
+  <div class="sec"><div class="sec-num">06</div><div class="sec-title">Выводы и требуемые действия</div><div class="sec-line"></div></div>
+  <div class="alert-grid">
+    <div class="alert rose">
+      <div class="alert-num">❌</div>
+      <div>
+        <div class="al-label">CC — не CS. 21.9 млн сўм потери</div>
+        <div class="al-txt">2 217 тикетов на обучения должны были закрыть CS-менеджеры при онбординге. Каждый такой тикет — это время оператора CC, которое должно идти на поддержку, а не на обучение.</div>
+      </div>
+    </div>
+    <div class="alert rose">
+      <div class="alert-num">❌</div>
+      <div>
+        <div class="al-label">Повторные — следствие недообучения CS</div>
+        <div class="al-txt">Кассы (262 повт) + Ссылки для оплаты (239 повт) — клиенты не умеют базового. Если бы CS провёл полный онбординг, CC не получал бы эти повторные обращения.</div>
+      </div>
+    </div>
+    <div class="alert gold">
+      <div class="alert-num">⚠️</div>
+      <div>
+        <div class="al-label">Shoxruh Maxmud: 249 тикетов-обучений</div>
+        <div class="al-txt">Топ-1 КС-менеджер по количеству обучений, которые CC делал за него. Затраты: 2.46 млн сўм. Средняя медиана закрытия 4.6 мин — это реальное время работы операторов.</div>
+      </div>
+    </div>
+    <div class="alert gold">
+      <div class="alert-num">💡</div>
+      <div>
+        <div class="al-label">Требуемые действия от CS</div>
+        <div class="al-txt">1. Ввести стандарт онбординга: базовые модули (Кассы, Оплата, Ссылки) — обязательно при внедрении. 2. КС-менеджер отвечает за повторные по своим клиентам в первые 3 месяца. 3. Частичные обучения через CC → платная услуга или тикет на CS.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ftr">
+    <div class="fl">BILLZ · CC Intelligence · Customer Success Анализ · Янв–Апр 2026</div>
+    <div class="fr">Подготовлено для митинга с CS-командой</div>
+  </div>
+</div>
+
+<script>
+const CS = BILLZ_DATA.cs;
+
+// ── KPI Grid ──────────────────────────────────────────────────────────────────
+document.getElementById('kpiGrid').innerHTML = [
+  kpi('Тикетов-обучений', fmt.num(CS.total_train_tickets), 'CC делал вместо CS', 'rose', '❗'),
+  kpi('Затраты CC на CS', (CS.total_train_cost/1_000_000).toFixed(1)+' млн', '4 месяца · avg CPT 9 865', 'rose', '💰'),
+  kpi('Частичное обучение', fmt.num(CS.partial_tickets), `${(CS.partial_tickets/CS.total_train_tickets*100).toFixed(1)}% от обучений`, 'rose'),
+  kpi('Полное обучение', fmt.num(CS.full_tickets), `${(CS.full_tickets/CS.total_train_tickets*100).toFixed(1)}% — CC делал онбординг`, 'rose'),
+  kpi('Мед. время обучения', CS.avg_med_close_min+' мин', 'реальные минуты оператора CC', 'amber'),
+  kpi('КС менеджеров', fmt.num(CS.by_ks_manager.length), 'у которых CC делал обучения', 'amber'),
+  kpi('Пик — Январь', '709 тик', '7.0 млн сўм за 1 месяц', 'rose', '📈'),
+  kpi('Повт. по онбордингу', '501+', 'Кассы(262)+Ссылки(239)', 'rose', '⚠'),
+  kpi('Экономия если CS работает', '21.9 млн/год', 'если закрыть онбординг в CS', 'sage', '✓'),
+  kpi('Тикеты/КС менеджер', (CS.total_train_tickets/CS.by_ks_manager.length).toFixed(0), 'среднее обучений на 1 КС', 'amber'),
+].join('');
+
+// ── Arguments ────────────────────────────────────────────────────────────────
+document.getElementById('argumentsBlock').innerHTML = CS.key_arguments.map((arg,i)=>`
+  <div class="cs-argument">
+    <div class="cs-arg-num">0${i+1}</div>
+    <div class="cs-arg-text">${arg.replace(/(\d[\d\s]*млн)/g,'<strong>$1</strong>').replace(/(\d[\d\s]*тикет)/g,'<strong>$1</strong>')}</div>
+  </div>`).join('');
+
+// ── Charts ────────────────────────────────────────────────────────────────────
+const monthNames = CS.by_month.map(m=>m.month);
+const monthTickets = CS.by_month.map(m=>m.tickets);
+const monthCosts = CS.by_month.map(m=>Math.round(m.cost/1000));
+
+// Monthly tickets bar
+new Chart(document.getElementById('monthlyChart'), {
+  type:'bar',
+  data:{labels:monthNames, datasets:[
+    {label:'Тикеты-обучения', data:monthTickets, backgroundColor:'rgba(196,148,255,0.8)', borderRadius:4, yAxisID:'y'},
+    {label:'Затраты тыс.', data:monthCosts, backgroundColor:'rgba(239,68,68,0.6)', borderRadius:4, yAxisID:'y1'},
+  ]},
+  options:{...chartBase, scales:{
+    x:{grid:{display:false}},
+    y:{grid:{color:CHART_GRID}, title:{display:true,text:'Тикеты',color:'#7E92BC',font:{size:10}}},
+    y1:{position:'right',grid:{display:false},title:{display:true,text:'тыс. сўм',color:'#7E92BC',font:{size:10}}},
+  }, plugins:{...chartBase.plugins, legend:{display:true,labels:{color:'#7E92BC',font:{size:10}}}}},
+});
+
+// Partial vs Full doughnut
+const byMonth_partial = CS.by_month.map(m=>m.partial);
+const byMonth_full    = CS.by_month.map(m=>m.full);
+new Chart(document.getElementById('typeChart'), {
+  type:'bar',
+  data:{labels:monthNames, datasets:[
+    {label:'Частичное', data:byMonth_partial, backgroundColor:'rgba(196,148,255,0.8)', borderRadius:3, stack:'a'},
+    {label:'Полное',    data:byMonth_full,    backgroundColor:'rgba(239,68,68,0.7)',   borderRadius:3, stack:'a'},
+  ]},
+  options:{...chartBase, scales:{
+    x:{grid:{display:false},stacked:true},
+    y:{grid:{color:CHART_GRID},stacked:true},
+  }, plugins:{...chartBase.plugins, legend:{display:true,labels:{color:'#7E92BC',font:{size:10}}}}},
+});
+
+// KS Manager bar
+const ks = CS.by_ks_manager;
+new Chart(document.getElementById('ksChart'), {
+  type:'bar',
+  data:{
+    labels: ks.map(k=>k.name.length>18?k.name.slice(0,18)+'…':k.name),
+    datasets:[{
+      label:'Тикеты-обучения',
+      data: ks.map(k=>k.tickets),
+      backgroundColor: ks.map((_,i)=>`rgba(124,58,237,${1-i*0.07})`),
+      borderRadius:3,
+    }],
+  },
+  options:{...chartBase, indexAxis:'y',
+    scales:{
+      x:{grid:{color:CHART_GRID}},
+      y:{grid:{display:false},ticks:{font:{size:9}}},
+    },
+  },
+});
+
+// KS Table
+document.getElementById('ksTable').innerHTML = ks.map((k,i)=>{
+  const costCol = k.cost > 1_500_000 ? '#F87171' : k.cost > 700_000 ? '#FCD34D' : '#7E92BC';
+  return `<tr>
+    <td style="font-weight:700;color:var(--amber2)">${i+1}</td>
+    <td class="n-name">${k.name.length>22?k.name.slice(0,22)+'…':k.name}</td>
+    <td class="n-num">${fmt.num(k.tickets)}</td>
+    <td>${fmt.num(k.partial)}</td>
+    <td>${fmt.num(k.full)}</td>
+    <td style="font-family:var(--mono);font-size:11px">${k.med_close>0?k.med_close+' мин':'—'}</td>
+    <td style="color:${costCol};font-weight:700;font-family:var(--mono);font-size:11px">${fmt.mln(k.cost)}</td>
+  </tr>`;
+}).join('');
+
+// Training labels chart
+const lblData = CS.top_labels.slice(0,10);
+new Chart(document.getElementById('labelsChart'), {
+  type:'bar',
+  data:{
+    labels: lblData.map(l=>l.name.length>28?l.name.slice(0,28)+'…':l.name),
+    datasets:[{
+      label:'Тикеты',
+      data: lblData.map(l=>l.tickets),
+      backgroundColor: lblData.map(l=>
+        l.type==='Полное' ? 'rgba(239,68,68,0.8)' :
+        l.type==='Частичное' ? 'rgba(196,148,255,0.8)' : 'rgba(245,158,11,0.8)'
+      ),
+      borderRadius:3,
+    }],
+  },
+  options:{...chartBase, indexAxis:'y',
+    scales:{
+      x:{grid:{color:CHART_GRID}},
+      y:{grid:{display:false},ticks:{font:{size:9}}},
+    },
+  },
+});
+
+// Labels table
+document.getElementById('labelsTbody').innerHTML = CS.top_labels.map((l,i)=>{
+  const typeCls = l.type==='Полное' ? 'bad' : l.type==='Частичное' ? '' : 'warn';
+  const typeTxt = l.type==='Полное' ? 'Полное' : l.type==='Частичное' ? 'Частичное' : 'Консультация';
+  return `<tr>
+    <td class="lbl-name">${l.name}</td>
+    <td class="n-num">${fmt.num(l.tickets)}</td>
+    <td><span class="b ${typeCls}">${typeTxt}</span></td>
+    <td class="cost-cell">${fmt.num(l.cost)}</td>
+  </tr>`;
+}).join('');
+
+// Repeat table
+document.getElementById('repeatTable').innerHTML = CS.repeat_connection.map((r,i)=>{
+  const csClass = r.cs_related ? 'ok' : '';
+  const csTxt   = r.cs_related ? '🎓 Онбординг CS' : '⚙️ Тех. проблема';
+  return `<tr style="${r.cs_related?'background:rgba(52,211,153,0.05)':''}">
+    <td class="lbl-name">${r.label}</td>
+    <td style="color:#F87171;font-weight:700">${fmt.num(r.repeat)}</td>
+    <td class="cost-cell">${fmt.num(r.repeat*9865)}</td>
+    <td><span class="b ${csClass}">${csTxt}</span></td>
+  </tr>`;
+}).join('');
+</script>
+</body>
+</html>

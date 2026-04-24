@@ -8,6 +8,18 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 <script src="data.js"></script>
 <script src="shared.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<style>
+.export-bar{margin-top:32px;padding:20px 24px;background:var(--surface);border:1px solid var(--br2);border-radius:12px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.export-bar-left{display:flex;flex-direction:column;gap:4px}
+.export-bar-title{font-size:13px;font-weight:700;color:var(--text)}
+.export-bar-sub{font-size:11px;color:var(--text3)}
+.export-btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--sans);font-size:13px;font-weight:600;padding:10px 22px;border-radius:8px;cursor:pointer;border:none;transition:all .18s;background:linear-gradient(135deg,#1A7A4A,#10B981);color:#fff;box-shadow:0 2px 12px rgba(16,185,129,0.25)}
+.export-btn:hover{transform:translateY(-1px);box-shadow:0 4px 20px rgba(16,185,129,0.4)}
+.export-btn:active{transform:translateY(0)}
+.export-btn svg{width:16px;height:16px;flex-shrink:0}
+.export-btn.loading{opacity:.7;pointer-events:none}
+</style>
 </head>
 <body>
 <nav class="top-nav">
@@ -87,6 +99,23 @@
       <div id="companiesBlock"></div>
     </div>
   </div>
+
+  
+<!-- ── Export Bar ─────────────────────────────────────────────────────────── -->
+<div class="export-bar">
+  <div class="export-bar-left">
+    <div class="export-bar-title">📥 Скачать данные — Еженедельный отчёт</div>
+    <div class="export-bar-sub">Все данные текущего раздела будут выгружены в Excel файл · несколько листов</div>
+  </div>
+  <button class="export-btn" id="exportBtn" onclick="checkAndExport()">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
+      <polyline points="7 10 12 15 17 10"/>
+      <line x1="12" y1="15" x2="12" y2="3"/>
+    </svg>
+    Скачать Excel
+  </button>
+</div>
 
   <div class="ftr">
     <div class="fl">BILLZ · CC Intelligence · Omnidesk CRM · без тикетов Дильшода</div>
@@ -212,5 +241,81 @@ function getISOWeek(date) {
 
 render();
 </script>
+
+<script>
+function exportCSExcel() {
+  const btn = document.getElementById('exportBtn');
+  btn.classList.add('loading'); btn.textContent = '⏳ Формируется...';
+  setTimeout(() => {
+    const W = BILLZ_DATA.weekly;
+    const wKey = Object.keys(W).sort().pop();
+    const WK = W[wKey];
+    const wb = XLSX.utils.book_new();
+
+    // Summary
+    const sum = [
+      ['Еженедельный отчёт CC — ' + WK.label],
+      [],
+      ['Показатель','Значение'],
+      ['Тикеты', WK.tickets],
+      ['Желательных', WK.desired],
+      ['Нежелательных', WK.undesired],
+      ['Нежел. %', +(WK.undesired/WK.tickets*100).toFixed(1)],
+      ['SLA соблюдён %', WK.sla_pct],
+      ['SLA не соблюдён %', WK.sla_not_met],
+      ['AFRT', WK.afrt],
+      ['LCR %', WK.lcr],
+      ['Повторные %', WK.repeat_pct],
+      ['Звонки', WK.calls],
+      ['Чаты', WK.chats],
+      ['Закрыто', WK.closed],
+      ['Открыто', WK.open],
+      ['Затраты (сўм)', WK.cost],
+      ['Массовый сбой', WK.massoviy_cnt || 0],
+    ];
+    XLSX.utils.book_append_sheet(wb, XLSX.utils.aoa_to_sheet(sum), 'Сводка');
+
+    // Operators
+    const ops = WK.operators || [];
+    if (ops.length) {
+      const opH = ['Оператор','Тикеты','Ср. время','Закрыто %','SLA %','Затраты'];
+      const opR = ops.map(o => [o.name, o.tickets, o.avg_close, o.close_rate, o.sla_pct||0, o.cost]);
+      XLSX.utils.book_append_sheet(wb, XLSX.utils.aoa_to_sheet([opH, ...opR]), 'Операторы');
+    }
+
+    // Labels
+    const lbls = WK.top_labels || [];
+    if (lbls.length) {
+      const lH = ['Метка','Тикеты','Нежелательных','Затраты'];
+      const lR = lbls.map(l => [l.name, l.tickets, l.undesired||0, l.cost]);
+      XLSX.utils.book_append_sheet(wb, XLSX.utils.aoa_to_sheet([lH, ...lR]), 'Метки');
+    }
+
+    // All weeks summary
+    const allWH = ['Неделя','Тикеты','Желат.','Нежелат.','SLA %','LCR %','Затраты'];
+    const allWR = Object.entries(W).sort().map(([k,v]) =>
+      [v.label, v.tickets, v.desired, v.undesired, v.sla_pct, v.lcr, v.cost]);
+    XLSX.utils.book_append_sheet(wb, XLSX.utils.aoa_to_sheet([allWH, ...allWR]), 'Все недели');
+
+    XLSX.writeFile(wb, 'CC_Еженедельный_' + wKey + '.xlsx');
+    btn.classList.remove('loading');
+    btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Скачать Excel';
+  }, 100);
+}
+</script>
+
+
+<script>
+function checkAndExport() {
+  const pwd = prompt('🔒 Введите пароль для скачивания:');
+  if (pwd === null) return; // cancelled
+  if (pwd === 'khbillz2023') {
+    exportCSExcel();
+  } else {
+    alert('❌ Неверный пароль. Доступ запрещён.');
+  }
+}
+</script>
+
 </body>
 </html>

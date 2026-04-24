@@ -8,6 +8,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 <script src="data.js"></script>
 <script src="shared.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 <style>
 .cs-insight{background:rgba(124,58,237,0.07);border:1px solid rgba(124,58,237,0.22);border-radius:10px;padding:16px 18px;display:flex;gap:14px;align-items:flex-start;margin-bottom:8px;transition:border-color .2s}
 .cs-insight:hover{border-color:rgba(124,58,237,0.4)}
@@ -45,6 +46,17 @@
 .repeat-label{flex:1;font-size:12px;color:var(--text2)}
 .repeat-count{font-weight:700;color:var(--red2);font-family:var(--mono);font-size:12px;width:36px;text-align:right}
 .repeat-cost{font-family:var(--mono);font-size:10px;color:var(--text3);width:70px;text-align:right}
+</style>
+<style>
+.export-bar{margin-top:32px;padding:20px 24px;background:var(--surface);border:1px solid var(--br2);border-radius:12px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.export-bar-left{display:flex;flex-direction:column;gap:4px}
+.export-bar-title{font-size:13px;font-weight:700;color:var(--text)}
+.export-bar-sub{font-size:11px;color:var(--text3)}
+.export-btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--sans);font-size:13px;font-weight:600;padding:10px 22px;border-radius:8px;cursor:pointer;border:none;transition:all .18s;background:linear-gradient(135deg,#1A7A4A,#10B981);color:#fff;box-shadow:0 2px 12px rgba(16,185,129,0.25)}
+.export-btn:hover{transform:translateY(-1px);box-shadow:0 4px 20px rgba(16,185,129,0.4)}
+.export-btn:active{transform:translateY(0)}
+.export-btn svg{width:16px;height:16px;flex-shrink:0}
+.export-btn.loading{opacity:.7;pointer-events:none}
 </style>
 </head>
 <body>
@@ -152,6 +164,23 @@
 
   <div class="sec"><div class="sec-num">07</div><div class="sec-title">Что нужно сделать на стороне CS</div><div class="sec-line"></div></div>
   <div class="alert-grid" id="conclusionsGrid"></div>
+
+  
+<!-- ── Export Bar ─────────────────────────────────────────────────────────── -->
+<div class="export-bar">
+  <div class="export-bar-left">
+    <div class="export-bar-title">📥 Скачать данные — CS Анализ</div>
+    <div class="export-bar-sub">Все данные текущего раздела будут выгружены в Excel файл · несколько листов</div>
+  </div>
+  <button class="export-btn" id="exportBtn" onclick="checkAndExport()">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
+      <polyline points="7 10 12 15 17 10"/>
+      <line x1="12" y1="15" x2="12" y2="3"/>
+    </svg>
+    Скачать Excel
+  </button>
+</div>
 
   <div class="ftr">
     <div class="fl">BILLZ · CC Intelligence · Customer Success Анализ · Янв–Апр 2026</div>
@@ -344,5 +373,93 @@ document.getElementById('conclusionsGrid').innerHTML = `
     <div class="al-txt">Обучение по модулям — CS. Технические ошибки и баги — CC. Частичные обучения через CC должны фиксироваться как пробел онбординга и инициировать запрос к закреплённому КС-менеджеру клиента.</div>
   </div></div>`;
 </script>
+
+<script>
+function exportCSExcel() {
+  const btn = document.getElementById('exportBtn');
+  btn.classList.add('loading'); btn.textContent = '⏳ Формируется...';
+
+  setTimeout(() => {
+    const CS = BILLZ_DATA.cs;
+    const wb = XLSX.utils.book_new();
+
+    // Sheet 1: Summary KPIs
+    const summary = [
+      ['Customer Success — Анализ обучений', 'Январь–Апрель 2026'],
+      [],
+      ['Показатель', 'Значение', 'Пояснение'],
+      ['Всего тикетов-обучений', CS.total_train_tickets, '5.0% от объёма CC'],
+      ['Затраты CC на обучения (сўм)', CS.total_train_cost, '2 217 × 9 865 сўм'],
+      ['Затраты (млн сўм)', +(CS.total_train_cost/1e6).toFixed(2), ''],
+      ['Частичных обучений', CS.partial_tickets, (CS.partial_tickets/CS.total_train_tickets*100).toFixed(1)+'%'],
+      ['Полных обучений', CS.full_tickets, (CS.full_tickets/CS.total_train_tickets*100).toFixed(1)+'%'],
+      ['Медиана времени звонка (мин)', CS.avg_call_min, 'реальное время · не тикета'],
+      ['Медиана закрытия тикета (мин)', CS.avg_med_close_min, 'только системное время'],
+      ['Магазинов', CS.stores_count, 'на 24 апреля 2026'],
+      ['Пользователей', CS.users_count, 'на 24 апреля 2026'],
+      ['Обращений на 1 магазин', CS.tpc, 'всего тикетов CC / магазинов'],
+      ['Обращений на 1 пользователя', CS.tpu, 'всего тикетов CC / пользователей'],
+      ['Обучений на 1 магазин', CS.train_tpc, 'тикетов-обучений / магазинов'],
+    ];
+    XLSX.utils.book_append_sheet(wb, XLSX.utils.aoa_to_sheet(summary), 'Сводка');
+
+    // Sheet 2: KS Managers
+    const ksHeaders = ['КС Менеджер','Тикеты','Частичных','Полных','Мед. мин','Затраты (сўм)','Магазинов','Большая база','Примечание'];
+    const ksRows = CS.by_ks_manager.map(k => [
+      k.name, k.tickets, k.partial, k.full, k.med_close, k.cost, k.stores,
+      k.big_base ? 'Да' : 'Нет', k.note || ''
+    ]);
+    XLSX.utils.book_append_sheet(wb, XLSX.utils.aoa_to_sheet([ksHeaders, ...ksRows]), 'КС Менеджеры');
+
+    // Sheet 3: Stores
+    const stHeaders = ['Магазин','Тикеты','Частичных','Полных','Мед. мин закр.','Затраты (сўм)'];
+    const stRows = CS.by_store.map(s => [s.name, s.tickets, s.partial, s.full, s.med_close, s.cost]);
+    XLSX.utils.book_append_sheet(wb, XLSX.utils.aoa_to_sheet([stHeaders, ...stRows]), 'По магазинам');
+
+    // Sheet 4: Store × KS
+    const skHeaders = ['Магазин','КС Менеджер','Тикеты','Частичных','Полных','Затраты (сўм)'];
+    const skRows = CS.by_store_ks.map(r => [r.store, r.ks, r.tickets, r.partial, r.full, r.cost]);
+    XLSX.utils.book_append_sheet(wb, XLSX.utils.aoa_to_sheet([skHeaders, ...skRows]), 'Магазин × КС');
+
+    // Sheet 5: Labels
+    const lblHeaders = ['Модуль обучения','Тикеты','Тип','Затраты (сўм)'];
+    const lblRows = CS.top_labels.map(l => [l.name, l.tickets, l.type, l.cost]);
+    XLSX.utils.book_append_sheet(wb, XLSX.utils.aoa_to_sheet([lblHeaders, ...lblRows]), 'Модули обучений');
+
+    // Sheet 6: Monthly
+    const mHeaders = ['Месяц','Тикеты','Частичных','Полных','Мед. закр. мин','Затраты (сўм)'];
+    const mRows = CS.by_month.map(m => [m.month, m.tickets, m.partial, m.full, m.med_close, m.cost]);
+    XLSX.utils.book_append_sheet(wb, XLSX.utils.aoa_to_sheet([mHeaders, ...mRows]), 'По месяцам');
+
+    // Sheet 7: Repeat connection
+    const rpHeaders = ['Метка','Повторных','Затраты повт. (сўм)','Связь с онбордингом CS','Контекст'];
+    const rpRows = CS.repeat_connection.map(r => [r.label, r.repeat, r.repeat*9865, r.cs_related?'Да':'Нет', r.context]);
+    XLSX.utils.book_append_sheet(wb, XLSX.utils.aoa_to_sheet([rpHeaders, ...rpRows]), 'Повторные обращения');
+
+    // Sheet 8: Insights & Recommendations
+    const insHeaders = ['Тип','Иконка','Заголовок','Описание'];
+    const insRows = CS.insights.map(i => [i.type, i.icon, i.title, i.text]);
+    XLSX.utils.book_append_sheet(wb, XLSX.utils.aoa_to_sheet([insHeaders, ...insRows]), 'Выводы и рекомендации');
+
+    XLSX.writeFile(wb, 'CS_Обучения_Янв_Апр_2026.xlsx');
+    btn.classList.remove('loading');
+    btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Скачать Excel';
+  }, 100);
+}
+</script>
+
+
+<script>
+function checkAndExport() {
+  const pwd = prompt('🔒 Введите пароль для скачивания:');
+  if (pwd === null) return; // cancelled
+  if (pwd === 'khbillz2023') {
+    exportCSExcel();
+  } else {
+    alert('❌ Неверный пароль. Доступ запрещён.');
+  }
+}
+</script>
+
 </body>
 </html>

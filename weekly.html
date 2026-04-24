@@ -29,6 +29,7 @@
   <a href="quarterly.html" class="nav-link">Квартал</a>
   <a href="cs.html" class="nav-link">CS Анализ</a>
   <a href="daily.html" class="nav-link">Ежедневно</a>
+  <button class="theme-toggle" onclick="toggleTheme()" id="themeBtn"><span class="toggle-icon">☀️</span><span id="themeLabel">Светлая</span></button>
   <div class="nav-right" id="navPeriod"></div>
 </nav>
 <div class="wrap">
@@ -243,66 +244,6 @@ render();
 </script>
 
 <script>
-function exportCSExcel() {
-  const btn = document.getElementById('exportBtn');
-  btn.classList.add('loading'); btn.textContent = '⏳ Формируется...';
-  setTimeout(() => {
-    const W = BILLZ_DATA.weekly;
-    const wKey = Object.keys(W).sort().pop();
-    const WK = W[wKey];
-    const wb = XLSX.utils.book_new();
-
-    // Summary
-    const sum = [
-      ['Еженедельный отчёт CC — ' + WK.label],
-      [],
-      ['Показатель','Значение'],
-      ['Тикеты', WK.tickets],
-      ['Желательных', WK.desired],
-      ['Нежелательных', WK.undesired],
-      ['Нежел. %', +(WK.undesired/WK.tickets*100).toFixed(1)],
-      ['SLA соблюдён %', WK.sla_pct],
-      ['SLA не соблюдён %', WK.sla_not_met],
-      ['AFRT', WK.afrt],
-      ['LCR %', WK.lcr],
-      ['Повторные %', WK.repeat_pct],
-      ['Звонки', WK.calls],
-      ['Чаты', WK.chats],
-      ['Закрыто', WK.closed],
-      ['Открыто', WK.open],
-      ['Затраты (сўм)', WK.cost],
-      ['Массовый сбой', WK.massoviy_cnt || 0],
-    ];
-    XLSX.utils.book_append_sheet(wb, XLSX.utils.aoa_to_sheet(sum), 'Сводка');
-
-    // Operators
-    const ops = WK.operators || [];
-    if (ops.length) {
-      const opH = ['Оператор','Тикеты','Ср. время','Закрыто %','SLA %','Затраты'];
-      const opR = ops.map(o => [o.name, o.tickets, o.avg_close, o.close_rate, o.sla_pct||0, o.cost]);
-      XLSX.utils.book_append_sheet(wb, XLSX.utils.aoa_to_sheet([opH, ...opR]), 'Операторы');
-    }
-
-    // Labels
-    const lbls = WK.top_labels || [];
-    if (lbls.length) {
-      const lH = ['Метка','Тикеты','Нежелательных','Затраты'];
-      const lR = lbls.map(l => [l.name, l.tickets, l.undesired||0, l.cost]);
-      XLSX.utils.book_append_sheet(wb, XLSX.utils.aoa_to_sheet([lH, ...lR]), 'Метки');
-    }
-
-    // All weeks summary
-    const allWH = ['Неделя','Тикеты','Желат.','Нежелат.','SLA %','LCR %','Затраты'];
-    const allWR = Object.entries(W).sort().map(([k,v]) =>
-      [v.label, v.tickets, v.desired, v.undesired, v.sla_pct, v.lcr, v.cost]);
-    XLSX.utils.book_append_sheet(wb, XLSX.utils.aoa_to_sheet([allWH, ...allWR]), 'Все недели');
-
-    XLSX.writeFile(wb, 'CC_Еженедельный_' + wKey + '.xlsx');
-    btn.classList.remove('loading');
-    btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Скачать Excel';
-  }, 100);
-}
-</script>
 
 
 <script>
@@ -314,6 +255,76 @@ function checkAndExport() {
   } else {
     alert('❌ Неверный пароль. Доступ запрещён.');
   }
+}
+</script>
+
+
+<script>
+function exportCSExcel() {
+  const btn = document.getElementById('exportBtn');
+  btn.classList.add('loading'); btn.textContent = '⏳ Формируется...';
+  setTimeout(() => {
+    const W   = BILLZ_DATA.weekly;
+    const wKey = Object.keys(W).sort().pop();
+    const WK  = W[wKey];
+    const wb  = XLSX.utils.book_new();
+    function makeSheet(rows, colWidths) {
+      const ws = XLSX.utils.aoa_to_sheet(rows);
+      ws['!cols'] = colWidths.map(w => ({ wch: w }));
+      return ws;
+    }
+
+    // Summary
+    const sum = [
+      ['CONTACT CENTER — ЕЖЕНЕДЕЛЬНЫЙ ОТЧЁТ', '', WK.label, ''],
+      ['', '', '', ''],
+      ['Показатель','Значение','Единица','Пояснение'],
+      ['Тикеты',WK.tickets,'тикетов',''],
+      ['Желательных',WK.desired,'тикетов',''],
+      ['Нежелательных',WK.undesired,'тикетов',(WK.undesired/WK.tickets*100).toFixed(1)+'%'],
+      ['SLA соблюдён',WK.sla_pct,'%','ответы ≤ 1 мин'],
+      ['SLA не соблюдён',WK.sla_not_met,'%',''],
+      ['AFRT',WK.afrt,'','среднее время первого ответа'],
+      ['LCR',WK.lcr,'%','Lost Call Rate'],
+      ['Повторные',WK.repeat_pct,'%',''],
+      ['Звонки',WK.calls,'тикетов',''],
+      ['Чаты',WK.chats,'тикетов',''],
+      ['Закрыто',WK.closed,'тикетов',''],
+      ['Открыто',WK.open,'тикетов',''],
+      ['Затраты',WK.cost,'сўм',(WK.cost/1e6).toFixed(2)+' млн'],
+      ['Массовый сбой',WK.massoviy_cnt||0,'тикетов',''],
+    ];
+    XLSX.utils.book_append_sheet(wb, makeSheet(sum,[30,14,12,34]), '📊 Сводка недели');
+
+    // Operators
+    const ops = WK.operators || [];
+    if(ops.length){
+      const maxT = Math.max(...ops.map(o=>o.tickets));
+      const opH = ['#','Оператор','Тикеты','Нагрузка%','Ср. время (ч)','Закрыто%','SLA%','Затраты (сўм)'];
+      const opR = ops.map((o,i)=>[i+1,o.name,o.tickets,Math.round(o.tickets/maxT*100),o.avg_close,o.close_rate,o.sla_pct||0,o.cost]);
+      XLSX.utils.book_append_sheet(wb, makeSheet([opH,...opR],[4,20,10,12,14,12,10,18]), '👥 Операторы');
+    }
+
+    // Labels
+    const lbls = WK.top_labels || [];
+    if(lbls.length){
+      const tot = lbls.reduce((s,l)=>s+l.tickets,0);
+      const lH=['#','Метка','Тикеты','%','Нежелательных','Затраты'];
+      const lR=lbls.map((l,i)=>[i+1,l.name,l.tickets,+(l.tickets/tot*100).toFixed(1),l.undesired||0,l.cost]);
+      XLSX.utils.book_append_sheet(wb, makeSheet([lH,...lR],[4,44,10,8,16,18]), '🏷 Метки');
+    }
+
+    // All weeks
+    const allWH=['Неделя','Тикеты','Желат.','Нежелат.','Нежелат%','SLA%','LCR%','Повт%','Затраты','Затраты млн'];
+    const allWR=Object.entries(W).sort().map(([k,v])=>[
+      v.label,v.tickets,v.desired,v.undesired,+(v.undesired/v.tickets*100).toFixed(1),
+      v.sla_pct,v.lcr,v.repeat_pct,v.cost,+(v.cost/1e6).toFixed(2)]);
+    XLSX.utils.book_append_sheet(wb, makeSheet([allWH,...allWR],[14,10,10,12,12,10,10,10,16,14]), '📅 Все недели');
+
+    XLSX.writeFile(wb, 'CC_Еженедельный_'+wKey+'.xlsx');
+    btn.classList.remove('loading');
+    btn.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Скачать Excel';
+  },100);
 }
 </script>
 

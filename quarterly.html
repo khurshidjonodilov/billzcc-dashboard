@@ -29,6 +29,7 @@
   <a href="daily.html"     class="nav-link">Ежедневно</a>
   <a href="quarterly.html" class="nav-link active">Кварtal аналитика</a>
   <a href="cs.html" class="nav-link">CS Анализ</a>
+  <button class="theme-toggle" onclick="toggleTheme()" id="themeBtn"><span class="toggle-icon">☀️</span><span id="themeLabel">Светлая</span></button>
   <div class="nav-right" id="navPeriod"></div>
 </nav>
 
@@ -459,74 +460,6 @@ document.getElementById('ftrPeriod').textContent = Q.period;
 </script>
 
 <script>
-function exportCSExcel() {
-  const btn = document.getElementById('exportBtn');
-  btn.classList.add('loading'); btn.textContent = '⏳ Формируется...';
-  setTimeout(() => {
-    const Q = BILLZ_DATA.quarterly;
-    const wb = XLSX.utils.book_new();
-
-    // Summary
-    const s = Q.summary;
-    const sum = [
-      ['Квартальный отчёт CC — ' + Q.period],
-      [],
-      ['Показатель','Значение'],
-      ['Всего тикетов', s.total_tickets],
-      ['Затраты (млн сўм)', s.total_cost_mln],
-      ['Средний CPT', s.avg_cpt],
-      ['LCR среднее %', s.lcr_avg],
-      ['CSAT Отлично %', s.csat_pct],
-      ['SLA %', s.sla_pct],
-      ['FRT среднее (сек)', s.frt_avg_sec],
-      ['FRT медиана (сек)', s.frt_med_sec],
-      ['Повторные % (ср.)', s.repeat_pct_avg],
-      ['Нежелательные % (ср.)', s.undesired_pct_avg],
-      ['Массовый сбой (тикеты)', s.massoviy_tickets],
-      ['Массовый сбой (млн сўм)', s.massoviy_cost_mln],
-      ['Тикетов-обучений CS', s.training_tickets || 0],
-      ['Затраты на обучения (млн)', s.training_cost_mln || 0],
-    ];
-    XLSX.utils.book_append_sheet(wb, XLSX.utils.aoa_to_sheet(sum), 'Сводка');
-
-    // By month
-    const mH = ['Месяц','CPT','Тикеты','Звонки','Чаты','Желат.','Нежелат.%','CSAT%','SLA%','FRT сек','LCR%','Повт%','Затраты млн','Масс.сбой'];
-    const mR = Q.by_month.map(m => [
-      m.name, m.cpt, m.tickets, m.calls, m.chats,
-      m.desired, m.undesired_pct, m.csat_pct, m.sla_pct,
-      m.frt_avg_sec, m.lcr, m.repeat_pct, m.cost_mln, m.massoviy_cnt
-    ]);
-    XLSX.utils.book_append_sheet(wb, XLSX.utils.aoa_to_sheet([mH, ...mR]), 'По месяцам');
-
-    // Operator ranking
-    const ops = Q.operator_ranking || [];
-    if (ops.length) {
-      const opH = ['#','Оператор','Score','CSAT%','SLA%','FRT мед (сек)','KK','Тест','Нежел%','Повт%','Тикеты','Затраты млн'];
-      const opR = ops.map(o => [o.rank, o.name, o.score, o.csat_pct, o.sla_pct, o.frt_med_sec,
-        o.kk, o.test, o.undes_pct, o.repeat_pct || 0, o.total, o.cost_mln]);
-      XLSX.utils.book_append_sheet(wb, XLSX.utils.aoa_to_sheet([opH, ...opR]), 'Рейтинг операторов');
-    }
-
-    // Label categories
-    const lc = Q.label_categories;
-    if (lc) {
-      const levels = [{key:'senior',name:'SENIOR'},{key:'middle',name:'MIDDLE'},{key:'junior',name:'JUNIOR'}];
-      const lcRows = [['Уровень','Описание','Метка','Тикеты','Мед. закр. (мин)','Затраты']];
-      levels.forEach(lv => {
-        const data = lc[lv.key];
-        if (data?.labels) {
-          data.labels.forEach(l => lcRows.push([lv.name, data.description, l.name, l.tickets, l.med_close_min, l.tickets*9865]));
-        }
-      });
-      XLSX.utils.book_append_sheet(wb, XLSX.utils.aoa_to_sheet(lcRows), 'Категории меток');
-    }
-
-    XLSX.writeFile(wb, 'CC_Квартальный_' + Q.period.replace(/\s/g,'_') + '.xlsx');
-    btn.classList.remove('loading');
-    btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Скачать Excel';
-  }, 100);
-}
-</script>
 
 
 <script>
@@ -538,6 +471,73 @@ function checkAndExport() {
   } else {
     alert('❌ Неверный пароль. Доступ запрещён.');
   }
+}
+</script>
+
+
+<script>
+function exportCSExcel() {
+  const btn = document.getElementById('exportBtn');
+  btn.classList.add('loading'); btn.textContent = '⏳ Формируется...';
+  setTimeout(() => {
+    const Q  = BILLZ_DATA.quarterly;
+    const s  = Q.summary;
+    const wb = XLSX.utils.book_new();
+    function makeSheet(rows, colWidths) {
+      const ws = XLSX.utils.aoa_to_sheet(rows);
+      ws['!cols'] = colWidths.map(w => ({ wch: w }));
+      return ws;
+    }
+
+    // Summary
+    const sum=[
+      ['CONTACT CENTER — КВАРТАЛЬНЫЙ ОТЧЁТ','',Q.period,''],
+      ['','','',''],
+      ['Показатель','Значение','Единица','Пояснение'],
+      ['Всего тикетов',s.total_tickets,'тикетов',''],
+      ['Затраты',s.total_cost_mln,'млн сўм',''],
+      ['Средний CPT',s.avg_cpt,'сўм','Cost per Ticket'],
+      ['LCR среднее',s.lcr_avg,'%','Lost Call Rate'],
+      ['CSAT Отлично',s.csat_pct,'%',''],
+      ['SLA',s.sla_pct,'%','ответы ≤ 1 мин'],
+      ['FRT среднее',s.frt_avg_sec,'сек',''],
+      ['FRT медиана',s.frt_med_sec,'сек',''],
+      ['Повторные',s.repeat_pct_avg,'%','среднее'],
+      ['Нежелательные',s.undesired_pct_avg,'%','среднее'],
+      ['Массовый сбой',s.massoviy_tickets,'тикетов',s.massoviy_cost_mln+' млн сўм'],
+      ['Тикетов-обучений CS',s.training_tickets||0,'тикетов',''],
+      ['Затраты на обучения',s.training_cost_mln||0,'млн сўм',''],
+    ];
+    XLSX.utils.book_append_sheet(wb, makeSheet(sum,[36,14,12,34]),'📊 Сводка');
+
+    // By month
+    const mH=['Месяц','CPT','Тикеты','Звонки','Чаты','Желат.','Нежелат%','CSAT%','SLA%','FRT сек','LCR%','Повт%','Затраты млн','Масс.сбой'];
+    const mR=Q.by_month.map(m=>[m.name,m.cpt,m.tickets,m.calls,m.chats,m.desired,m.undesired_pct,m.csat_pct,m.sla_pct,m.frt_avg_sec,m.lcr,m.repeat_pct,m.cost_mln,m.massoviy_cnt]);
+    XLSX.utils.book_append_sheet(wb, makeSheet([mH,...mR],[12,10,10,10,10,10,12,10,10,10,10,10,14,12]),'📅 По месяцам');
+
+    // Operator ranking
+    const ops=Q.operator_ranking||[];
+    if(ops.length){
+      const opH=['#','Оператор','Score','CSAT%','SLA%','FRT мед(сек)','KK','Тест','Нежел%','Тикеты','Затраты млн'];
+      const opR=ops.map(o=>[o.rank,o.name,o.score,o.csat_pct,o.sla_pct,o.frt_med_sec,o.kk,o.test,o.undes_pct,o.total,o.cost_mln]);
+      XLSX.utils.book_append_sheet(wb, makeSheet([opH,...opR],[4,20,10,10,10,14,8,8,10,10,14]),'🏆 Рейтинг операторов');
+    }
+
+    // Label categories
+    const lc=Q.label_categories;
+    if(lc){
+      const lcRows=[['Уровень','Описание','Метка','Тикеты','Мед. закр (мин)','Затраты (сўм)']];
+      [['senior','SENIOR'],['middle','MIDDLE'],['junior','JUNIOR']].forEach(([k,name])=>{
+        const data=lc[k];
+        if(data?.labels) data.labels.forEach(l=>lcRows.push([name,data.description,l.name,l.tickets,l.med_close_min,l.tickets*9865]));
+      });
+      XLSX.utils.book_append_sheet(wb, makeSheet(lcRows,[10,22,48,10,16,18]),'🏷 Категории меток');
+    }
+
+    XLSX.writeFile(wb,'CC_Квартальный_'+Q.period.replace(/[\s–]/g,'_')+'.xlsx');
+    btn.classList.remove('loading');
+    btn.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Скачать Excel';
+  },100);
 }
 </script>
 

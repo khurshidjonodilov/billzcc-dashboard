@@ -30,6 +30,7 @@
   <a href="cs.html" class="nav-link">CS Анализ</a>
   <a href="daily.html" class="nav-link">Ежедневно</a>
   <button class="nav-report-btn" onclick="openMonthlyReport()">📋 Отчёт апрель</button>
+  <button class="theme-toggle" onclick="toggleTheme()" id="themeBtn"><span class="toggle-icon">☀️</span><span id="themeLabel">Светлая</span></button>
   <div class="nav-right" id="navPeriod"></div>
 </nav>
 <div class="wrap">
@@ -672,73 +673,6 @@ function mrTab(btn, sectionId) {
 
 
 <script>
-function exportCSExcel() {
-  const btn = document.getElementById('exportBtn');
-  btn.classList.add('loading'); btn.textContent = '⏳ Формируется...';
-  setTimeout(() => {
-    const M = BILLZ_DATA.monthly;
-    const W = BILLZ_DATA.weekly;
-    const wb = XLSX.utils.book_new();
-
-    // Summary
-    const sum = [
-      ['Ежемесячный отчёт CC — Апрель 2026'],
-      [],
-      ['Показатель','Значение'],
-      ['Всего тикетов', M.tickets],
-      ['CPT (сўм)', M.cpt],
-      ['Затраты (сўм)', M.cost],
-      ['LCR %', M.lcr],
-      ['CSAT Отлично %', M.rating_pct],
-      ['SLA соблюдён %', M.sla_pct],
-      ['SLA не соблюдён %', M.sla_not_met],
-      ['AFRT', M.afrt],
-      ['Звонки', M.calls],
-      ['Чаты', M.chats],
-      ['Желательных', M.desired],
-      ['Нежелательных', M.undesired],
-      ['Закрыто', M.closed],
-      ['Открыто', M.open],
-      ['Повторные %', M.repeat_pct],
-      ['Тикетов / клиент (магазин)', M.tpc],
-      ['Тикетов / пользователь', M.tpu],
-      ['Клиентов (магазинов)', M.clients],
-      ['Пользователей', M.users],
-      ['Массовый сбой (тикеты)', M.massoviy_cnt],
-    ];
-    XLSX.utils.book_append_sheet(wb, XLSX.utils.aoa_to_sheet(sum), 'Сводка');
-
-    // Operators
-    const ops = M.operators || [];
-    if (ops.length) {
-      const opH = ['Оператор','Тикеты','Ср. время закр.','Закрыто %','SLA %','Рейтинг %','Оценок','Затраты'];
-      const opR = ops.map(o => [o.name, o.tickets, o.avg_close, o.close_rate, o.sla_pct||0, o.rating_pct||0, o.rated||0, o.cost]);
-      XLSX.utils.book_append_sheet(wb, XLSX.utils.aoa_to_sheet([opH, ...opR]), 'Операторы');
-    }
-
-    // Top labels
-    const lbls = M.top_labels || [];
-    if (lbls.length) {
-      const lH = ['Метка','Тикеты','Нежелательных','Затраты (сўм)'];
-      const lR = lbls.map(l => [l.name, l.tickets, l.undesired||0, l.cost]);
-      XLSX.utils.book_append_sheet(wb, XLSX.utils.aoa_to_sheet([lH, ...lR]), 'Топ меток');
-    }
-
-    // Top companies
-    const comps = M.top_companies || [];
-    if (comps.length) {
-      const cH = ['Компания','Тикеты','Нежелательных %','Затраты','Топ метка'];
-      const cR = comps.map(c => [c.name, c.tickets, c.undesired ? Math.round(c.undesired/c.tickets*100) : 0, c.cost,
-        c.top_labels?.[0]?.label || '']);
-      XLSX.utils.book_append_sheet(wb, XLSX.utils.aoa_to_sheet([cH, ...cR]), 'Компании');
-    }
-
-    XLSX.writeFile(wb, 'CC_Ежемесячный_Апрель_2026.xlsx');
-    btn.classList.remove('loading');
-    btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Скачать Excel';
-  }, 100);
-}
-</script>
 
 
 <script>
@@ -750,6 +684,82 @@ function checkAndExport() {
   } else {
     alert('❌ Неверный пароль. Доступ запрещён.');
   }
+}
+</script>
+
+
+<script>
+function exportCSExcel() {
+  const btn = document.getElementById('exportBtn');
+  btn.classList.add('loading'); btn.textContent = '⏳ Формируется...';
+  setTimeout(() => {
+    const M  = BILLZ_DATA.monthly;
+    const wb = XLSX.utils.book_new();
+    function makeSheet(rows, colWidths) {
+      const ws = XLSX.utils.aoa_to_sheet(rows);
+      ws['!cols'] = colWidths.map(w => ({ wch: w }));
+      return ws;
+    }
+
+    // Summary
+    const sum = [
+      ['CONTACT CENTER — ЕЖЕМЕСЯЧНЫЙ ОТЧЁТ', '', 'Апрель 2026', ''],
+      ['', '', '', ''],
+      ['КЛЮЧЕВЫЕ МЕТРИКИ', '', '', ''],
+      ['Показатель', 'Значение', 'Единица', 'Пояснение'],
+      ['Всего тикетов', M.tickets, 'тикетов', '≈'+Math.round(M.tickets/14)+' в день'],
+      ['CPT', M.cpt, 'сўм', 'Cost per Ticket'],
+      ['Затраты', M.cost, 'сўм', (M.cost/1e6).toFixed(2)+' млн'],
+      ['LCR', M.lcr, '%', 'Lost Call Rate'],
+      ['CSAT Отлично', M.rating_pct, '%', M.operators?.reduce((s,o)=>s+(o.rated||0),0)+' оценок'],
+      ['SLA соблюдён', M.sla_pct, '%', 'ответы ≤ 1 мин'],
+      ['SLA не соблюдён', M.sla_not_met, '%', ''],
+      ['AFRT', M.afrt, '', 'среднее время первого ответа'],
+      ['Звонки', M.calls, 'тикетов', ''],
+      ['Чаты', M.chats, 'тикетов', ''],
+      ['Желательных', M.desired, 'тикетов', ''],
+      ['Нежелательных', M.undesired, 'тикетов', ''],
+      ['Закрыто', M.closed, 'тикетов', (M.closed/M.tickets*100).toFixed(1)+'%'],
+      ['Открыто', M.open, 'тикетов', ''],
+      ['Повторные', M.repeat_pct, '%', 'повторные обращения'],
+      ['Тикетов / магазин', M.tpc, '', M.clients.toLocaleString('ru')+' магазинов'],
+      ['Тикетов / пользователь', M.tpu, '', M.users.toLocaleString('ru')+' пользователей'],
+      ['Массовый сбой', M.massoviy_cnt, 'тикетов', ''],
+    ];
+    XLSX.utils.book_append_sheet(wb, makeSheet(sum, [30, 16, 14, 38]), '📊 Сводка');
+
+    // Operators
+    const ops = M.operators || [];
+    if (ops.length) {
+      const opH = ['#', 'Оператор', 'Тикеты', 'Нагрузка%', 'Ср. время (ч)', 'Закрыто%', 'SLA%', 'Рейтинг%', 'Оценок', 'Затраты (сўм)', 'Затраты (млн)'];
+      const maxT = Math.max(...ops.map(o=>o.tickets));
+      const opR  = ops.map((o,i) => [i+1, o.name, o.tickets, Math.round(o.tickets/maxT*100),
+        o.avg_close, o.close_rate, o.sla_pct||0, o.rating_pct||0, o.rated||0, o.cost, +(o.cost/1e6).toFixed(3)]);
+      XLSX.utils.book_append_sheet(wb, makeSheet([opH,...opR],[4,20,10,12,14,12,10,12,10,18,14]), '👥 Операторы');
+    }
+
+    // Labels
+    const lbls = M.top_labels || [];
+    if (lbls.length) {
+      const lH = ['#','Метка','Тикеты','% от меток','Нежелательных','Затраты (сўм)','Затраты (млн)'];
+      const tot = lbls.reduce((s,l)=>s+l.tickets,0);
+      const lR  = lbls.map((l,i)=>[i+1,l.name,l.tickets,+(l.tickets/tot*100).toFixed(1),l.undesired||0,l.cost,+(l.cost/1e6).toFixed(3)]);
+      XLSX.utils.book_append_sheet(wb, makeSheet([lH,...lR],[4,44,10,12,16,18,14]), '🏷 Топ меток');
+    }
+
+    // Companies
+    const comps = M.top_companies || [];
+    if (comps.length) {
+      const cH = ['#','Компания','Тикеты','Нежелат%','Затраты (сўм)','Топ метка'];
+      const cR  = comps.map((c,i)=>[i+1,c.name,c.tickets,
+        c.undesired?Math.round(c.undesired/c.tickets*100):0,c.cost,c.top_labels?.[0]?.label||'']);
+      XLSX.utils.book_append_sheet(wb, makeSheet([cH,...cR],[4,28,10,12,18,38]), '🏢 Компании');
+    }
+
+    XLSX.writeFile(wb, 'CC_Ежемесячный_Апрель_2026.xlsx');
+    btn.classList.remove('loading');
+    btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Скачать Excel';
+  }, 100);
 }
 </script>
 

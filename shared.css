@@ -101,6 +101,121 @@ body::before {
   color: var(--text4); font-weight: 400;
 }
 
+
+/* ── LIGHT THEME ── */
+body.light {
+  --bg:        #F0F4FA;
+  --nav-bg:    #FFFFFF;
+  --surface:   #FFFFFF;
+  --surface2:  #F0F4FA;
+  --surface3:  #E2E8F4;
+  --card:      #FFFFFF;
+  --card2:     #F8FAFF;
+
+  --br:        rgba(0,0,0,0.08);
+  --br2:       rgba(0,0,0,0.12);
+  --br3:       rgba(0,0,0,0.18);
+
+  --blue:      #2563EB;
+  --blue2:     #1D4ED8;
+  --blue3:     #3B82F6;
+  --blue-dk:   #1E40AF;
+  --blue-lt:   rgba(37,99,235,0.08);
+  --blue-mid:  rgba(37,99,235,0.2);
+
+  --green:     #059669;
+  --green2:    #047857;
+  --green-lt:  rgba(5,150,105,0.1);
+
+  --red:       #DC2626;
+  --red2:      #B91C1C;
+  --red-lt:    rgba(220,38,38,0.08);
+
+  --amber:     #D97706;
+  --amber2:    #B45309;
+  --amber-lt:  rgba(217,119,6,0.1);
+
+  --text:      #0F172A;
+  --text2:     #1E293B;
+  --text3:     #475569;
+  --text4:     #94A3B8;
+}
+
+body.light::before {
+  background:
+    radial-gradient(ellipse 80% 50% at 20% 0%, rgba(37,99,235,0.04) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 40% at 80% 100%, rgba(29,78,216,0.03) 0%, transparent 60%);
+}
+
+body.light .top-nav { box-shadow: 0 1px 0 rgba(0,0,0,0.08); }
+body.light .nav-link { color: #475569; }
+body.light .nav-link:hover { color: #1E293B; }
+body.light .nav-link.active { color: #1D4ED8; border-bottom-color: #1D4ED8; }
+body.light .nav-brand { color: #0F172A; }
+body.light .nav-right { color: #94A3B8; }
+
+body.light .kpi { box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
+body.light .card { box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
+body.light .phdr { box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
+
+body.light .tbl th { color: #64748B; }
+body.light .tbl td { color: #1E293B; }
+body.light .tbl tr:hover td { background: #F8FAFF; }
+body.light .n-name  { color: #0F172A !important; }
+body.light .n-num   { color: #1D4ED8 !important; }
+body.light .cost-cell { color: #475569 !important; }
+body.light .lbl-name  { color: #1E293B !important; }
+
+body.light .alert.rose { background: rgba(220,38,38,0.06); border-color: rgba(220,38,38,0.2); }
+body.light .alert.gold { background: rgba(217,119,6,0.06);  border-color: rgba(217,119,6,0.2); }
+body.light .alert.rose .alert-num { color: #B91C1C; }
+body.light .alert.gold .alert-num { color: #B45309; }
+body.light .alert.rose .al-label  { color: #B91C1C; }
+body.light .alert.gold .al-label  { color: #B45309; }
+body.light .al-txt { color: #1E293B; }
+
+body.light .b.ok   { background: rgba(5,150,105,0.1);  color: #047857; }
+body.light .b.warn { background: rgba(217,119,6,0.1);  color: #B45309; }
+body.light .b.bad  { background: rgba(220,38,38,0.1);  color: #B91C1C; }
+body.light .b.info { background: rgba(37,99,235,0.08); color: #1D4ED8; }
+
+body.light .period-btn { background: #F0F4FA; border-color: #CBD5E1; color: #475569; }
+body.light .period-btn:hover { color: #1E293B; border-color: #94A3B8; }
+body.light .period-btn.active { background: #1D4ED8; color: #fff; border-color: #1D4ED8; }
+
+body.light .comp-name   { color: #0F172A; }
+body.light .comp-labels { }
+body.light .comp-label  { background: #F0F4FA; border-color: #E2E8F4; color: #475569; }
+body.light .comp-label strong { color: #1E293B; }
+body.light .sec-num { color: #1D4ED8; background: rgba(37,99,235,0.08); border-color: rgba(37,99,235,0.2); }
+body.light .sec-title { color: #0F172A; }
+body.light .card-title { color: #1E293B; }
+body.light .kpi-tag { color: #475569; }
+body.light .kpi-sub { color: #475569; }
+body.light .phdr-sub { color: #475569; }
+body.light .phdr-eyebrow { color: #94A3B8; }
+body.light .cost-ey { color: #94A3B8; }
+body.light .cost-d  { color: #94A3B8; }
+body.light .fl, body.light .fr { color: #94A3B8; }
+
+/* ── THEME TOGGLE BUTTON ── */
+.theme-toggle {
+  margin-left: 12px;
+  background: none;
+  border: 1px solid var(--br2);
+  border-radius: 20px;
+  padding: 5px 12px;
+  cursor: pointer;
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text3);
+  display: flex; align-items: center; gap: 6px;
+  transition: all .18s;
+}
+.theme-toggle:hover { color: var(--text); border-color: var(--br3); }
+.theme-toggle .toggle-icon { font-size: 14px; }
+
 /* ── WRAP ── */
 .wrap { position: relative; z-index: 1; max-width: 1380px; margin: 0 auto; padding: 28px 36px 80px; }
 

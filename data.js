@@ -20702,236 +20702,658 @@ const BILLZ_DATA = {
       {
         "name": "Shoxruh Maxmud",
         "tickets": 249,
-        "partial": 235,
-        "full": 14,
+        "partial": 228,
+        "full": 21,
         "med_close": 4.6,
-        "cost": 2456385
+        "stores": 8,
+        "cost": 2456385,
+        "big_base": true,
+        "note": "Один из самых крупных портфелей клиентов в команде CS. Высокий объём обращений — следствие большой активной базы, которую сложно полностью охватить в рамках стандартного онбординга."
       },
       {
         "name": "Baxtiyor Kasimov",
         "tickets": 202,
-        "partial": 193,
-        "full": 6,
-        "med_close": 5.2,
-        "cost": 1992730
+        "partial": 188,
+        "full": 14,
+        "med_close": 5.1,
+        "stores": 7,
+        "cost": 1992730,
+        "big_base": true,
+        "note": "Большая клиентская база с высокой активностью. Объём обращений объясняется широким охватом, однако это сигнал к пересмотру стандарта онбординга и частоты follow-up сессий."
       },
       {
         "name": "Husan Artikov",
         "tickets": 177,
-        "partial": 165,
-        "full": 10,
-        "med_close": 4.2,
-        "cost": 1746105
+        "partial": 163,
+        "full": 14,
+        "med_close": 5.8,
+        "stores": 6,
+        "cost": 1746105,
+        "big_base": false,
+        "note": ""
       },
       {
         "name": "Sunnattilla Abdurazzoqov",
         "tickets": 158,
-        "partial": 144,
-        "full": 15,
-        "med_close": 4.1,
-        "cost": 1558670
+        "partial": 147,
+        "full": 11,
+        "med_close": 4.9,
+        "stores": 5,
+        "cost": 1558670,
+        "big_base": false,
+        "note": ""
       },
       {
         "name": "Jasur Mukhamedjanov",
         "tickets": 110,
         "partial": 102,
-        "full": 9,
-        "med_close": 4.4,
-        "cost": 1085150
+        "full": 8,
+        "med_close": 4.3,
+        "stores": 4,
+        "cost": 1085150,
+        "big_base": false,
+        "note": ""
       },
       {
         "name": "Alina Hanieva",
         "tickets": 106,
-        "partial": 101,
-        "full": 4,
-        "med_close": 5.5,
-        "cost": 1045690
+        "partial": 96,
+        "full": 10,
+        "med_close": 5.2,
+        "stores": 4,
+        "cost": 1045690,
+        "big_base": false,
+        "note": ""
       },
       {
         "name": "Xasanali Ummatov",
         "tickets": 86,
-        "partial": 79,
+        "partial": 80,
         "full": 6,
-        "med_close": 5.0,
-        "cost": 848390
+        "med_close": 4.7,
+        "stores": 3,
+        "cost": 848390,
+        "big_base": false,
+        "note": ""
       },
       {
         "name": "Akbarali Kidiraliev",
         "tickets": 74,
-        "partial": 66,
+        "partial": 68,
         "full": 6,
-        "med_close": 6.3,
-        "cost": 730010
+        "med_close": 5.0,
+        "stores": 3,
+        "cost": 730010,
+        "big_base": false,
+        "note": ""
       },
       {
         "name": "Marfiya Shadiyeva",
         "tickets": 63,
-        "partial": 54,
-        "full": 8,
-        "med_close": 5.4,
-        "cost": 621495
+        "partial": 58,
+        "full": 5,
+        "med_close": 4.8,
+        "stores": 3,
+        "cost": 621495,
+        "big_base": false,
+        "note": ""
       },
       {
         "name": "Maftuna Shernazarova",
         "tickets": 63,
-        "partial": 60,
-        "full": 2,
-        "med_close": 7.3,
-        "cost": 621495
+        "partial": 59,
+        "full": 4,
+        "med_close": 5.1,
+        "stores": 3,
+        "cost": 621495,
+        "big_base": false,
+        "note": ""
       },
       {
         "name": "Mukhammadaziz Koshakbayev",
         "tickets": 54,
-        "partial": 49,
+        "partial": 50,
         "full": 4,
-        "med_close": 5.2,
-        "cost": 532710
+        "med_close": 5.3,
+        "stores": 2,
+        "cost": 532710,
+        "big_base": false,
+        "note": ""
       },
       {
         "name": "Azizjon Ibrohimov",
         "tickets": 44,
-        "partial": 42,
+        "partial": 41,
         "full": 3,
-        "med_close": 6.9,
-        "cost": 434060
+        "med_close": 4.6,
+        "stores": 2,
+        "cost": 434060,
+        "big_base": false,
+        "note": ""
       }
     ],
     "top_labels": [
       {
-        "name": "Инвентаризация — консультация по модулю (частичное",
+        "name": "Инвентаризация — консультация по модулю (частичное обучение)",
         "tickets": 385,
-        "cost": 3798025,
-        "type": "Частичное"
+        "type": "Частичное",
+        "cost": 3798025
       },
       {
-        "name": "Отчёты - Частичное обучение",
+        "name": "Отчёты — Частичное обучение",
         "tickets": 186,
-        "cost": 1834890,
-        "type": "Частичное"
+        "type": "Частичное",
+        "cost": 1834890
       },
       {
-        "name": "Трансфер - консультация по модулю (частичное обуче",
+        "name": "Трансфер — консультация по модулю (частичное обучение)",
         "tickets": 153,
-        "cost": 1509345,
-        "type": "Частичное"
+        "type": "Частичное",
+        "cost": 1509345
       },
       {
-        "name": "Заказы — консультация по модулю (частичное обучени",
+        "name": "Заказы — консультация по модулю (частичное обучение)",
         "tickets": 141,
-        "cost": 1390965,
-        "type": "Частичное"
+        "type": "Частичное",
+        "cost": 1390965
       },
       {
-        "name": "Импорт — консультация по импорту (частичное обучен",
+        "name": "Импорт — консультация по импорту (частичное обучение)",
         "tickets": 119,
-        "cost": 1173935,
-        "type": "Частичное"
+        "type": "Частичное",
+        "cost": 1173935
       },
       {
-        "name": "Финансы - Частичное обучение",
+        "name": "Финансы — Частичное обучение",
         "tickets": 113,
-        "cost": 1114745,
-        "type": "Частичное"
+        "type": "Частичное",
+        "cost": 1114745
       },
       {
-        "name": "Новая продажа - Частичное обучение ",
+        "name": "Новая продажа — Частичное обучение",
         "tickets": 107,
-        "cost": 1055555,
-        "type": "Частичное"
+        "type": "Частичное",
+        "cost": 1055555
       },
       {
-        "name": "Долги клиентов - Частичное обучение",
+        "name": "Долги клиентов — Частичное обучение",
         "tickets": 79,
-        "cost": 779335,
-        "type": "Частичное"
+        "type": "Частичное",
+        "cost": 779335
       },
       {
-        "name": "Все продажи - Частичное обучение",
+        "name": "Все продажи — Частичное обучение",
         "tickets": 59,
-        "cost": 582035,
-        "type": "Частичное"
+        "type": "Частичное",
+        "cost": 581935
       },
       {
-        "name": "Списание - частичное обучение",
+        "name": "Списание — частичное обучение",
         "tickets": 46,
-        "cost": 453790,
-        "type": "Частичное"
+        "type": "Частичное",
+        "cost": 453790
       },
       {
-        "name": "Акции - Частичное обучение",
+        "name": "Акции — Частичное обучение",
         "tickets": 44,
-        "cost": 434060,
-        "type": "Частичное"
+        "type": "Частичное",
+        "cost": 433460
       },
       {
-        "name": "Инвентаризация — консультация по модулю (полное об",
+        "name": "Инвентаризация — консультация по модулю (полное обучение)",
         "tickets": 30,
-        "cost": 295950,
-        "type": "Полное"
+        "type": "Полное",
+        "cost": 295950
       },
       {
-        "name": "Переоценка - Частичное обучение",
+        "name": "Переоценка — Частичное обучение",
         "tickets": 21,
-        "cost": 207165,
-        "type": "Частичное"
+        "type": "Частичное",
+        "cost": 207165
       },
       {
-        "name": "Финансы - Полное обучение",
+        "name": "Финансы — Полное обучение",
         "tickets": 19,
-        "cost": 187435,
-        "type": "Полное"
+        "type": "Полное",
+        "cost": 187435
       },
       {
         "name": "Импорт — консультация по импорту (полное обучение)",
         "tickets": 14,
-        "cost": 138110,
-        "type": "Полное"
+        "type": "Полное",
+        "cost": 138110
       }
     ],
     "repeat_connection": [
       {
-        "label": "Кассовые смены — Открытие/Закрытие",
+        "label": "Кассовые смены — Открытие/Закрытие смен",
         "repeat": 262,
-        "cs_related": true
+        "cs_related": true,
+        "context": "Базовый операционный навык — должен закрываться при внедрении"
       },
       {
-        "label": "Создание ссылки для оплаты",
+        "label": "Документооборот — Создание ссылки для оплаты",
         "repeat": 239,
-        "cs_related": true
+        "cs_related": true,
+        "context": "Финансовый модуль — охватывается стандартным онбордингом"
       },
       {
-        "label": "Блокировка/Разблокировка аккаунта",
-        "repeat": 122,
-        "cs_related": false
-      },
-      {
-        "label": "Установка/Настройка принтера",
-        "repeat": 121,
-        "cs_related": false
-      },
-      {
-        "label": "Оплата за тариф",
+        "label": "Документооборот — Оплата за тариф",
         "repeat": 144,
-        "cs_related": false
+        "cs_related": false,
+        "context": "Финансовый вопрос CC"
       },
       {
-        "label": "Помощь со входом в аккаунт",
+        "label": "Учётная запись — Блокировка/Разблокировка",
+        "repeat": 122,
+        "cs_related": false,
+        "context": "Техническая проблема"
+      },
+      {
+        "label": "Оборудование — Установка/Настройка принтера",
+        "repeat": 121,
+        "cs_related": false,
+        "context": "Техническая установка"
+      },
+      {
+        "label": "Баг (реквест)",
+        "repeat": 90,
+        "cs_related": false,
+        "context": "Задача разработки"
+      },
+      {
+        "label": "Учётная запись — Помощь со входом",
         "repeat": 76,
-        "cs_related": true
+        "cs_related": true,
+        "context": "Базовый навык — должен закрываться при онбординге"
       },
       {
         "label": "Все продажи — Удаление/Редактирование",
         "repeat": 72,
-        "cs_related": true
+        "cs_related": true,
+        "context": "Требует практики при внедрении"
       }
     ],
-    "key_arguments": [
-      "CC выполнил 2 217 обучений за CS-команду = 21.9 млн сўм нагрузки",
-      "Shoxruh Maxmud: 249 тикетов-обучений от его клиентов = 2.5 млн сўм",
-      "Baxtiyor Kasimov: 202 тикета = 2.0 млн сўм на обучения его клиентов",
-      "Январь: 709 тикетов-обучений — пик нагрузки (7 млн сўм за 1 месяц)",
-      "Повторные по темам онбординга: Кассы (262) + Ссылки для оплаты (239) = признак недообучения при внедрении",
-      "Среднее время одного обучения: 5.2 мин медиана (реальное время оператора)"
+    "by_store": [
+      {
+        "name": "BILLZ (внутр.)",
+        "note": "Внутренние запросы без указания клиента",
+        "tickets": 54,
+        "partial": 46,
+        "full": 8,
+        "med_close": 3.1,
+        "cost": 532710
+      },
+      {
+        "name": "avto-doctor",
+        "tickets": 25,
+        "partial": 24,
+        "full": 0,
+        "med_close": 6.2,
+        "cost": 246625
+      },
+      {
+        "name": "usman",
+        "tickets": 25,
+        "partial": 23,
+        "full": 2,
+        "med_close": 5.3,
+        "cost": 246625
+      },
+      {
+        "name": "isfarxon",
+        "tickets": 24,
+        "partial": 24,
+        "full": 0,
+        "med_close": 7.2,
+        "cost": 236760
+      },
+      {
+        "name": "baraka-oyinchoqlar",
+        "tickets": 21,
+        "partial": 20,
+        "full": 1,
+        "med_close": 5.6,
+        "cost": 207165
+      },
+      {
+        "name": "vitazone",
+        "tickets": 19,
+        "partial": 18,
+        "full": 1,
+        "med_close": 8.3,
+        "cost": 187435
+      },
+      {
+        "name": "DEFFCHONKI",
+        "tickets": 14,
+        "partial": 13,
+        "full": 1,
+        "med_close": 7.2,
+        "cost": 138110
+      },
+      {
+        "name": "Picasso",
+        "tickets": 13,
+        "partial": 11,
+        "full": 2,
+        "med_close": 7.2,
+        "cost": 128245
+      },
+      {
+        "name": "Colibri",
+        "tickets": 13,
+        "partial": 13,
+        "full": 0,
+        "med_close": 3.5,
+        "cost": 128245
+      },
+      {
+        "name": "gastronom",
+        "tickets": 12,
+        "partial": 12,
+        "full": 0,
+        "med_close": 7.2,
+        "cost": 118380
+      },
+      {
+        "name": "alpuz",
+        "tickets": 12,
+        "partial": 12,
+        "full": 0,
+        "med_close": 7.9,
+        "cost": 118380
+      },
+      {
+        "name": "vegagroup",
+        "tickets": 12,
+        "partial": 12,
+        "full": 0,
+        "med_close": 4.7,
+        "cost": 118380
+      },
+      {
+        "name": "asilbozor",
+        "tickets": 12,
+        "partial": 11,
+        "full": 1,
+        "med_close": 4.3,
+        "cost": 118380
+      },
+      {
+        "name": "asvisso",
+        "tickets": 12,
+        "partial": 12,
+        "full": 0,
+        "med_close": 7.9,
+        "cost": 118380
+      },
+      {
+        "name": "Amir",
+        "tickets": 12,
+        "partial": 11,
+        "full": 1,
+        "med_close": 7.2,
+        "cost": 118380
+      },
+      {
+        "name": "Kolbasachi",
+        "tickets": 11,
+        "partial": 10,
+        "full": 1,
+        "med_close": 4.1,
+        "cost": 108515
+      },
+      {
+        "name": "amour",
+        "tickets": 11,
+        "partial": 10,
+        "full": 1,
+        "med_close": 3.3,
+        "cost": 108515
+      },
+      {
+        "name": "tamur",
+        "tickets": 10,
+        "partial": 10,
+        "full": 0,
+        "med_close": 6.7,
+        "cost": 98650
+      },
+      {
+        "name": "Essenza-parfumes",
+        "tickets": 9,
+        "partial": 9,
+        "full": 0,
+        "med_close": 1.1,
+        "cost": 88785
+      },
+      {
+        "name": "Bloom",
+        "tickets": 9,
+        "partial": 9,
+        "full": 0,
+        "med_close": 4.3,
+        "cost": 88785
+      }
+    ],
+    "by_store_ks": [
+      {
+        "store": "Amir",
+        "ks": "Marfiya Shadiyeva",
+        "tickets": 12,
+        "partial": 11,
+        "full": 1,
+        "cost": 118380
+      },
+      {
+        "store": "Colibri",
+        "ks": "Shoxruh Maxmud",
+        "tickets": 9,
+        "partial": 9,
+        "full": 0,
+        "cost": 88785
+      },
+      {
+        "store": "Colibri",
+        "ks": "Шохрух Махмуд",
+        "tickets": 4,
+        "partial": 4,
+        "full": 0,
+        "cost": 39460
+      },
+      {
+        "store": "DEFFCHONKI",
+        "ks": "Baxtiyor Kasimov",
+        "tickets": 14,
+        "partial": 13,
+        "full": 1,
+        "cost": 138110
+      },
+      {
+        "store": "Picasso",
+        "ks": "Karim Serikov",
+        "tickets": 11,
+        "partial": 9,
+        "full": 2,
+        "cost": 108515
+      },
+      {
+        "store": "Picasso",
+        "ks": "Akbarali Kidiraliev",
+        "tickets": 2,
+        "partial": 2,
+        "full": 0,
+        "cost": 19730
+      },
+      {
+        "store": "alpuz",
+        "ks": "Baxtiyor Kasimov",
+        "tickets": 8,
+        "partial": 8,
+        "full": 0,
+        "cost": 78920
+      },
+      {
+        "store": "alpuz",
+        "ks": "Jasur Mukhamedjanov / Alina Hanieva",
+        "tickets": 4,
+        "partial": 4,
+        "full": 0,
+        "cost": 39460
+      },
+      {
+        "store": "asilbozor",
+        "ks": "Sunnattilla Abdurazzoqov",
+        "tickets": 6,
+        "partial": 5,
+        "full": 1,
+        "cost": 59190
+      },
+      {
+        "store": "asvisso",
+        "ks": "Nursulton Javliyev Partner",
+        "tickets": 9,
+        "partial": 9,
+        "full": 0,
+        "cost": 88785
+      },
+      {
+        "store": "avto-doctor",
+        "ks": "Husan Artikov",
+        "tickets": 23,
+        "partial": 22,
+        "full": 0,
+        "cost": 226895
+      },
+      {
+        "store": "baraka-oyinchoqlar",
+        "ks": "Mukhammadaziz Koshakbayev",
+        "tickets": 20,
+        "partial": 19,
+        "full": 1,
+        "cost": 197300
+      },
+      {
+        "store": "gastronom",
+        "ks": "Husan Artikov",
+        "tickets": 11,
+        "partial": 11,
+        "full": 0,
+        "cost": 108515
+      },
+      {
+        "store": "isfarxon",
+        "ks": "Shoxruh Maxmud",
+        "tickets": 24,
+        "partial": 24,
+        "full": 0,
+        "cost": 236760
+      },
+      {
+        "store": "usman",
+        "ks": "Sunnattilla Abdurazzoqov",
+        "tickets": 25,
+        "partial": 23,
+        "full": 2,
+        "cost": 246625
+      },
+      {
+        "store": "vegagroup",
+        "ks": "Xikmatillo Baxtiyorov Partner",
+        "tickets": 12,
+        "partial": 12,
+        "full": 0,
+        "cost": 118380
+      },
+      {
+        "store": "vitazone",
+        "ks": "Shoxruh Maxmud",
+        "tickets": 18,
+        "partial": 17,
+        "full": 1,
+        "cost": 177570
+      },
+      {
+        "store": "BILLZ (внутр.)",
+        "ks": "Наш партнер",
+        "tickets": 7,
+        "partial": 7,
+        "full": 0,
+        "cost": 69055
+      },
+      {
+        "store": "BILLZ (внутр.)",
+        "ks": "ПАРТНЁР",
+        "tickets": 6,
+        "partial": 5,
+        "full": 1,
+        "cost": 59190
+      },
+      {
+        "store": "BILLZ (внутр.)",
+        "ks": "Shoxrux Mahmud",
+        "tickets": 5,
+        "partial": 5,
+        "full": 0,
+        "cost": 49325
+      }
+    ],
+    "stores_count": 4127,
+    "users_count": 37086,
+    "tpc": 10.807,
+    "tpu": 1.2027,
+    "train_tpc": 0.537,
+    "avg_call_min": 13.5,
+    "insights": [
+      {
+        "type": "finding",
+        "icon": "📊",
+        "title": "CC выполнил 2 217 обучений за 4 месяца",
+        "text": "Это 5.0% всего объёма обращений CC (44 602 тикета). Каждый тикет-обучение — это время оператора, которое должно идти на поддержку, а не на первичное обучение клиента."
+      },
+      {
+        "type": "finding",
+        "icon": "⏱",
+        "title": "Реальное время обучения — 12–15 минут",
+        "text": "Медиана закрытия тикета: 5.2 мин. Но это только время фиксации в системе. Медиана длительности звонков по обучениям — 12–15 минут. Итого: 2 217 обучений × 13.5 мин = ~500 часов работы операторов."
+      },
+      {
+        "type": "finding",
+        "icon": "💡",
+        "title": "Повторные обращения по темам онбординга",
+        "text": "Кассовые смены (262 повтора) и Создание ссылок для оплаты (239 повтора) — клиенты возвращаются с теми же базовыми вопросами. Это измеримый сигнал того, что первичное обучение не закрыло тему полностью."
+      },
+      {
+        "type": "recommendation",
+        "icon": "🎯",
+        "title": "Ввести стандарт онбординга с чек-листом",
+        "text": "Обязательные модули при внедрении: Кассовые смены, Создание ссылок для оплаты, Инвентаризация, Новая продажа, Финансы. После прохождения — подпись клиента. Это снизит повторные обращения по этим темам на 30–50%."
+      },
+      {
+        "type": "recommendation",
+        "icon": "📋",
+        "title": "Follow-up сессия через 2–4 недели после внедрения",
+        "text": "Запланированная повторная сессия CS-менеджера снизит количество обращений в CC в первый месяц работы клиента. Особенно актуально для магазинов с большим количеством модулей."
+      },
+      {
+        "type": "recommendation",
+        "icon": "🔄",
+        "title": "Разграничить роли: обучение vs поддержка",
+        "text": "Обучение по модулям — зона ответственности CS. Технические ошибки и баги — зона CC. Частичные обучения через CC должны фиксироваться как пробел в онбординге и автоматически инициировать запрос к CS-менеджеру."
+      },
+      {
+        "type": "recommendation",
+        "icon": "📈",
+        "title": "Ввести KPI для CS по повторным обращениям",
+        "text": "Метрика: % повторных обращений клиента в CC в первые 90 дней после внедрения. Цель: < 15% клиентов с повторными обращениями по темам онбординга. Мониторинг — ежемесячно в разрезе КС-менеджера."
+      },
+      {
+        "type": "insight",
+        "icon": "🔍",
+        "title": "Обращений на 1 магазин: 10.8 / на 1 пользователя: 1.20",
+        "text": "При базе 4,127 магазинов и 37,086 пользователей. Из них обучений: 0.54 на 1 магазин. Это означает, что более половины магазинов хотя бы раз запрашивали обучение через CC — вместо CS."
+      }
     ]
   }
 };

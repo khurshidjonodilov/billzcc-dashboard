@@ -672,96 +672,117 @@ function mrTab(btn, sectionId) {
 
 
 
-<script>
 
 
 <script>
-function checkAndExport() {
+/* ── Theme system ─────────────────────────────────────────────────────────── */
+(function(){
+  if(localStorage.getItem('billz_theme')==='light'){
+    document.documentElement.classList.add('light-mode');
+    document.body.classList.add('light');
+  }
+})();
+
+function toggleTheme(){
+  const isLight = document.body.classList.toggle('light');
+  document.documentElement.classList.toggle('light-mode', isLight);
+  localStorage.setItem('billz_theme', isLight ? 'light' : 'dark');
+  const btn = document.getElementById('themeBtn');
+  if(btn){
+    btn.querySelector('.toggle-icon').textContent = isLight ? '🌙' : '☀️';
+    btn.querySelector('#themeLabel').textContent  = isLight ? 'Тёмная' : 'Светлая';
+  }
+  // Rebuild charts if render() exists (re-applies correct colors)
+  if(typeof render === 'function'){ try{ render(); }catch(e){} }
+}
+
+document.addEventListener('DOMContentLoaded', function(){
+  const isLight = document.body.classList.contains('light');
+  const btn = document.getElementById('themeBtn');
+  if(btn){
+    btn.querySelector('.toggle-icon').textContent = isLight ? '🌙' : '☀️';
+    btn.querySelector('#themeLabel').textContent  = isLight ? 'Тёмная' : 'Светлая';
+  }
+});
+
+/* ── Password-protected download ─────────────────────────────────────────── */
+function checkAndExport(){
   const pwd = prompt('🔒 Введите пароль для скачивания:');
-  if (pwd === null) return; // cancelled
-  if (pwd === 'khbillz2023') {
+  if(pwd === null) return;
+  if(pwd === 'khbillz2023'){
     exportCSExcel();
   } else {
     alert('❌ Неверный пароль. Доступ запрещён.');
   }
 }
 </script>
-
-
 <script>
-function exportCSExcel() {
+function exportCSExcel(){
   const btn = document.getElementById('exportBtn');
   btn.classList.add('loading'); btn.textContent = '⏳ Формируется...';
+  function makeSheet(rows, colWidths){
+    const ws = XLSX.utils.aoa_to_sheet(rows);
+    ws['!cols'] = colWidths.map(w => ({ wch: w }));
+    return ws;
+  }
   setTimeout(() => {
-    const M  = BILLZ_DATA.monthly;
+    
+    const M = BILLZ_DATA.monthly;
     const wb = XLSX.utils.book_new();
-    function makeSheet(rows, colWidths) {
-      const ws = XLSX.utils.aoa_to_sheet(rows);
-      ws['!cols'] = colWidths.map(w => ({ wch: w }));
-      return ws;
-    }
 
-    // Summary
     const sum = [
-      ['CONTACT CENTER — ЕЖЕМЕСЯЧНЫЙ ОТЧЁТ', '', 'Апрель 2026', ''],
-      ['', '', '', ''],
-      ['КЛЮЧЕВЫЕ МЕТРИКИ', '', '', ''],
-      ['Показатель', 'Значение', 'Единица', 'Пояснение'],
-      ['Всего тикетов', M.tickets, 'тикетов', '≈'+Math.round(M.tickets/14)+' в день'],
-      ['CPT', M.cpt, 'сўм', 'Cost per Ticket'],
-      ['Затраты', M.cost, 'сўм', (M.cost/1e6).toFixed(2)+' млн'],
-      ['LCR', M.lcr, '%', 'Lost Call Rate'],
-      ['CSAT Отлично', M.rating_pct, '%', M.operators?.reduce((s,o)=>s+(o.rated||0),0)+' оценок'],
-      ['SLA соблюдён', M.sla_pct, '%', 'ответы ≤ 1 мин'],
-      ['SLA не соблюдён', M.sla_not_met, '%', ''],
-      ['AFRT', M.afrt, '', 'среднее время первого ответа'],
-      ['Звонки', M.calls, 'тикетов', ''],
-      ['Чаты', M.chats, 'тикетов', ''],
-      ['Желательных', M.desired, 'тикетов', ''],
-      ['Нежелательных', M.undesired, 'тикетов', ''],
-      ['Закрыто', M.closed, 'тикетов', (M.closed/M.tickets*100).toFixed(1)+'%'],
-      ['Открыто', M.open, 'тикетов', ''],
-      ['Повторные', M.repeat_pct, '%', 'повторные обращения'],
-      ['Тикетов / магазин', M.tpc, '', M.clients.toLocaleString('ru')+' магазинов'],
-      ['Тикетов / пользователь', M.tpu, '', M.users.toLocaleString('ru')+' пользователей'],
-      ['Массовый сбой', M.massoviy_cnt, 'тикетов', ''],
+      ['CONTACT CENTER — ЕЖЕМЕСЯЧНЫЙ ОТЧЁТ', 'Апрель 2026'],
+      [],
+      ['Показатель','Значение','Пояснение'],
+      ['Всего тикетов', M.tickets, '≈'+Math.round(M.tickets/14)+' в день'],
+      ['CPT', M.cpt, 'Cost per Ticket, сўм'],
+      ['Затраты', M.cost, (M.cost/1e6).toFixed(2)+' млн сўм'],
+      ['LCR', M.lcr, '% — Lost Call Rate'],
+      ['CSAT Отлично', M.rating_pct, '%'],
+      ['SLA соблюдён', M.sla_pct, '%'],
+      ['SLA не соблюдён', M.sla_not_met, '%'],
+      ['AFRT', M.afrt, 'среднее время первого ответа'],
+      ['Звонки', M.calls, 'тикетов'],
+      ['Чаты', M.chats, 'тикетов'],
+      ['Желательных', M.desired, 'тикетов'],
+      ['Нежелательных', M.undesired, 'тикетов'],
+      ['Закрыто', M.closed, (M.closed/M.tickets*100).toFixed(1)+'%'],
+      ['Повторные', M.repeat_pct, '%'],
+      ['Тикетов / магазин', M.tpc, M.clients.toLocaleString('ru')+' магазинов'],
+      ['Тикетов / пользователь', M.tpu, M.users.toLocaleString('ru')+' пользователей'],
+      ['Массовый сбой', M.massoviy_cnt, 'тикетов'],
     ];
-    XLSX.utils.book_append_sheet(wb, makeSheet(sum, [30, 16, 14, 38]), '📊 Сводка');
+    XLSX.utils.book_append_sheet(wb, makeSheet(sum,[30,16,38]), '📊 Сводка');
 
-    // Operators
-    const ops = M.operators || [];
-    if (ops.length) {
-      const opH = ['#', 'Оператор', 'Тикеты', 'Нагрузка%', 'Ср. время (ч)', 'Закрыто%', 'SLA%', 'Рейтинг%', 'Оценок', 'Затраты (сўм)', 'Затраты (млн)'];
+    const ops = M.operators||[];
+    if(ops.length){
       const maxT = Math.max(...ops.map(o=>o.tickets));
-      const opR  = ops.map((o,i) => [i+1, o.name, o.tickets, Math.round(o.tickets/maxT*100),
-        o.avg_close, o.close_rate, o.sla_pct||0, o.rating_pct||0, o.rated||0, o.cost, +(o.cost/1e6).toFixed(3)]);
-      XLSX.utils.book_append_sheet(wb, makeSheet([opH,...opR],[4,20,10,12,14,12,10,12,10,18,14]), '👥 Операторы');
+      const opH=['#','Оператор','Тикеты','Нагрузка%','Ср.время ч','Закрыто%','SLA%','Рейтинг%','Оценок','Затраты сўм','Затраты млн'];
+      const opR=ops.map((o,i)=>[i+1,o.name,o.tickets,Math.round(o.tickets/maxT*100),o.avg_close,o.close_rate,o.sla_pct||0,o.rating_pct||0,o.rated||0,o.cost,+(o.cost/1e6).toFixed(3)]);
+      XLSX.utils.book_append_sheet(wb, makeSheet([opH,...opR],[4,20,10,12,12,10,10,10,10,18,12]),'👥 Операторы');
     }
 
-    // Labels
-    const lbls = M.top_labels || [];
-    if (lbls.length) {
-      const lH = ['#','Метка','Тикеты','% от меток','Нежелательных','Затраты (сўм)','Затраты (млн)'];
-      const tot = lbls.reduce((s,l)=>s+l.tickets,0);
-      const lR  = lbls.map((l,i)=>[i+1,l.name,l.tickets,+(l.tickets/tot*100).toFixed(1),l.undesired||0,l.cost,+(l.cost/1e6).toFixed(3)]);
-      XLSX.utils.book_append_sheet(wb, makeSheet([lH,...lR],[4,44,10,12,16,18,14]), '🏷 Топ меток');
+    const lbls=M.top_labels||[];
+    if(lbls.length){
+      const tot=lbls.reduce((s,l)=>s+l.tickets,0);
+      const lH=['#','Метка','Тикеты','%','Нежелательных','Затраты сўм','Затраты млн'];
+      const lR=lbls.map((l,i)=>[i+1,l.name,l.tickets,+(l.tickets/tot*100).toFixed(1),l.undesired||0,l.cost,+(l.cost/1e6).toFixed(3)]);
+      XLSX.utils.book_append_sheet(wb, makeSheet([lH,...lR],[4,44,10,8,14,18,12]),'🏷 Метки');
     }
 
-    // Companies
-    const comps = M.top_companies || [];
-    if (comps.length) {
-      const cH = ['#','Компания','Тикеты','Нежелат%','Затраты (сўм)','Топ метка'];
-      const cR  = comps.map((c,i)=>[i+1,c.name,c.tickets,
-        c.undesired?Math.round(c.undesired/c.tickets*100):0,c.cost,c.top_labels?.[0]?.label||'']);
-      XLSX.utils.book_append_sheet(wb, makeSheet([cH,...cR],[4,28,10,12,18,38]), '🏢 Компании');
+    const comps=M.top_companies||[];
+    if(comps.length){
+      const cH=['#','Компания','Тикеты','Нежелат%','Затраты сўм','Топ метка'];
+      const cR=comps.map((c,i)=>[i+1,c.name,c.tickets,c.undesired?Math.round(c.undesired/c.tickets*100):0,c.cost,c.top_labels?.[0]?.label||'']);
+      XLSX.utils.book_append_sheet(wb, makeSheet([cH,...cR],[4,28,10,12,18,38]),'🏢 Компании');
     }
 
     XLSX.writeFile(wb, 'CC_Ежемесячный_Апрель_2026.xlsx');
+
     btn.classList.remove('loading');
     btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Скачать Excel';
-  }, 100);
+  }, 150);
 }
 </script>
-
 </body>
 </html>

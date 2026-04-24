@@ -302,69 +302,96 @@ function render() {
 render();
 </script>
 
-<script>
 
 
 <script>
-function checkAndExport() {
+/* ── Theme system ─────────────────────────────────────────────────────────── */
+(function(){
+  if(localStorage.getItem('billz_theme')==='light'){
+    document.documentElement.classList.add('light-mode');
+    document.body.classList.add('light');
+  }
+})();
+
+function toggleTheme(){
+  const isLight = document.body.classList.toggle('light');
+  document.documentElement.classList.toggle('light-mode', isLight);
+  localStorage.setItem('billz_theme', isLight ? 'light' : 'dark');
+  const btn = document.getElementById('themeBtn');
+  if(btn){
+    btn.querySelector('.toggle-icon').textContent = isLight ? '🌙' : '☀️';
+    btn.querySelector('#themeLabel').textContent  = isLight ? 'Тёмная' : 'Светлая';
+  }
+  // Rebuild charts if render() exists (re-applies correct colors)
+  if(typeof render === 'function'){ try{ render(); }catch(e){} }
+}
+
+document.addEventListener('DOMContentLoaded', function(){
+  const isLight = document.body.classList.contains('light');
+  const btn = document.getElementById('themeBtn');
+  if(btn){
+    btn.querySelector('.toggle-icon').textContent = isLight ? '🌙' : '☀️';
+    btn.querySelector('#themeLabel').textContent  = isLight ? 'Тёмная' : 'Светлая';
+  }
+});
+
+/* ── Password-protected download ─────────────────────────────────────────── */
+function checkAndExport(){
   const pwd = prompt('🔒 Введите пароль для скачивания:');
-  if (pwd === null) return; // cancelled
-  if (pwd === 'khbillz2023') {
+  if(pwd === null) return;
+  if(pwd === 'khbillz2023'){
     exportCSExcel();
   } else {
     alert('❌ Неверный пароль. Доступ запрещён.');
   }
 }
 </script>
-
-
 <script>
-function exportCSExcel() {
+function exportCSExcel(){
   const btn = document.getElementById('exportBtn');
   btn.classList.add('loading'); btn.textContent = '⏳ Формируется...';
+  function makeSheet(rows, colWidths){
+    const ws = XLSX.utils.aoa_to_sheet(rows);
+    ws['!cols'] = colWidths.map(w => ({ wch: w }));
+    return ws;
+  }
   setTimeout(() => {
+    
     const D_ALL = BILLZ_DATA.daily;
     const keys  = Object.keys(D_ALL).sort();
     const curKey = keys[keys.length-1];
     const DK = D_ALL[curKey];
     const wb = XLSX.utils.book_new();
-    function makeSheet(rows, colWidths) {
-      const ws = XLSX.utils.aoa_to_sheet(rows);
-      ws['!cols'] = colWidths.map(w => ({ wch: w }));
-      return ws;
-    }
 
-    // Current day
     const sum=[
-      ['CONTACT CENTER — ЕЖЕДНЕВНЫЙ ОТЧЁТ','',DK.label||curKey,''],
-      ['','','',''],
-      ['Показатель','Значение','Единица','Пояснение'],
-      ['Тикеты',DK.tickets,'тикетов',''],
-      ['Звонки',DK.calls,'тикетов',''],
-      ['Чаты',DK.chats,'тикетов',''],
-      ['Желательных',DK.desired,'тикетов',''],
-      ['Нежелательных',DK.undesired,'тикетов',''],
-      ['Закрыто',DK.closed,'тикетов',''],
-      ['LCR',DK.lcr,'%','Lost Call Rate'],
-      ['SLA соблюдён',DK.sla_pct,'%',''],
-      ['SLA не соблюдён',DK.sla_not_met,'%',''],
-      ['AFRT',DK.afrt,'',''],
-      ['Повторные',DK.repeat_pct,'%',''],
-      ['Затраты',DK.cost,'сўм',(DK.cost/1e6).toFixed(3)+' млн'],
-      ['Входящих звонков',DK.incoming_calls||0,'звонков',''],
-      ['Исходящих звонков',DK.outgoing_calls||0,'звонков',''],
-      ['Пропущенных',DK.missed_calls||0,'звонков',''],
-      ['Звонков 20+ мин',DK.long_calls||0,'звонков',''],
-      ['Макс. операторов',DK.max_operators||0,'человек',''],
+      ['CONTACT CENTER — ЕЖЕДНЕВНЫЙ ОТЧЁТ', DK.label||curKey],
+      [],
+      ['Показатель','Значение','Пояснение'],
+      ['Тикеты',DK.tickets,''],
+      ['Звонки',DK.calls,''],
+      ['Чаты',DK.chats,''],
+      ['Желательных',DK.desired,''],
+      ['Нежелательных',DK.undesired,''],
+      ['Закрыто',DK.closed,''],
+      ['LCR',DK.lcr,'%'],
+      ['SLA соблюдён',DK.sla_pct,'%'],
+      ['AFRT',DK.afrt,''],
+      ['Повторные',DK.repeat_pct,'%'],
+      ['Затраты',DK.cost,'сўм · '+(DK.cost/1e6).toFixed(3)+' млн'],
+      ['Входящих',DK.incoming_calls||0,'звонков'],
+      ['Исходящих',DK.outgoing_calls||0,'звонков'],
+      ['Пропущенных',DK.missed_calls||0,'звонков'],
+      ['Звонков 20+ мин',DK.long_calls||0,''],
+      ['Макс. операторов',DK.max_operators||0,'человек'],
     ];
-    XLSX.utils.book_append_sheet(wb, makeSheet(sum,[30,14,12,34]), '📊 День '+( DK.label||curKey));
+    XLSX.utils.book_append_sheet(wb, makeSheet(sum,[30,14,30]),'📊 '+( DK.label||curKey));
 
     const ops=DK.operators||[];
     if(ops.length){
       const maxT=Math.max(...ops.map(o=>o.tickets));
-      const opH=['#','Оператор','Тикеты','Нагрузка%','Ср. время (ч)','Закрыто%','SLA%','Затраты'];
+      const opH=['#','Оператор','Тикеты','Нагрузка%','Ср.время ч','Закрыто%','SLA%','Затраты'];
       const opR=ops.map((o,i)=>[i+1,o.name,o.tickets,Math.round(o.tickets/maxT*100),o.avg_close,o.close_rate,o.sla_pct||0,o.cost]);
-      XLSX.utils.book_append_sheet(wb, makeSheet([opH,...opR],[4,20,10,12,14,12,10,18]),'👥 Операторы');
+      XLSX.utils.book_append_sheet(wb, makeSheet([opH,...opR],[4,20,10,12,12,10,10,18]),'👥 Операторы');
     }
 
     const lbls=DK.top_labels||[];
@@ -374,17 +401,16 @@ function exportCSExcel() {
       XLSX.utils.book_append_sheet(wb, makeSheet([lH,...lR],[4,44,10,16,18]),'🏷 Метки');
     }
 
-    // All days
     const allH=['Дата','Метка','Тикеты','Звонки','Чаты','LCR%','SLA%','Нежел.','Повт%','Пропущ.','Затраты'];
     const allR=keys.map(k=>{const d=D_ALL[k];return[k,d.label||k,d.tickets,d.calls,d.chats,d.lcr,d.sla_pct,d.undesired,d.repeat_pct,d.missed_calls||0,d.cost];});
     XLSX.utils.book_append_sheet(wb, makeSheet([allH,...allR],[14,16,10,10,10,8,8,10,8,10,16]),'📅 Все дни');
 
     XLSX.writeFile(wb,'CC_Ежедневный_'+curKey+'.xlsx');
+
     btn.classList.remove('loading');
-    btn.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Скачать Excel';
-  },100);
+    btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Скачать Excel';
+  }, 150);
 }
 </script>
-
 </body>
 </html>

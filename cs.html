@@ -389,48 +389,7 @@ document.getElementById('conclusionsGrid').innerHTML = `
 
 
 
-<script>
-/* ── Theme system ─────────────────────────────────────────────────────────── */
-(function(){
-  if(localStorage.getItem('billz_theme')==='light'){
-    document.documentElement.classList.add('light-mode');
-    document.body.classList.add('light');
-  }
-})();
 
-function toggleTheme(){
-  const isLight = document.body.classList.toggle('light');
-  document.documentElement.classList.toggle('light-mode', isLight);
-  localStorage.setItem('billz_theme', isLight ? 'light' : 'dark');
-  const btn = document.getElementById('themeBtn');
-  if(btn){
-    btn.querySelector('.toggle-icon').textContent = isLight ? '🌙' : '☀️';
-    btn.querySelector('#themeLabel').textContent  = isLight ? 'Тёмная' : 'Светлая';
-  }
-  // Rebuild charts if render() exists (re-applies correct colors)
-  if(typeof render === 'function'){ try{ render(); }catch(e){} }
-}
-
-document.addEventListener('DOMContentLoaded', function(){
-  const isLight = document.body.classList.contains('light');
-  const btn = document.getElementById('themeBtn');
-  if(btn){
-    btn.querySelector('.toggle-icon').textContent = isLight ? '🌙' : '☀️';
-    btn.querySelector('#themeLabel').textContent  = isLight ? 'Тёмная' : 'Светлая';
-  }
-});
-
-/* ── Password-protected download ─────────────────────────────────────────── */
-function checkAndExport(){
-  const pwd = prompt('🔒 Введите пароль для скачивания:');
-  if(pwd === null) return;
-  if(pwd === 'khbillz2023'){
-    exportCSExcel();
-  } else {
-    alert('❌ Неверный пароль. Доступ запрещён.');
-  }
-}
-</script>
 <script>
 function exportCSExcel(){
   const btn = document.getElementById('exportBtn');

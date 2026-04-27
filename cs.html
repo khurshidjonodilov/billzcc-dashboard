@@ -185,6 +185,22 @@
 
   
   <!-- ── SECTION 08: CHAT SHARE HISTORY ─────────────────────────────────── -->
+  
+  <!-- Monthly chat share breakdown -->
+  <div class="sec"><div class="sec-num">08a</div><div class="sec-title">Доля чатов — разбивка по месяцам</div><div class="sec-line"></div></div>
+  <div class="row one">
+    <div class="card">
+      <div class="card-hd">
+        <div class="card-title">Средняя доля чатов по месяцам</div>
+        <div class="card-note">Тренд: декабрь→апрель — устойчивое снижение</div>
+      </div>
+      <table class="tbl">
+        <thead><tr><th>Месяц</th><th>Недель</th><th>Звонки ср.</th><th>Чаты ср.</th><th>Диапазон чатов</th><th>LCR >5сек ср.</th></tr></thead>
+        <tbody id="chatMonthlyBreakdown"></tbody>
+      </table>
+    </div>
+  </div>
+
   <div class="sec"><div class="sec-num">08</div><div class="sec-title">Доля чатов — динамика с декабря 2025</div><div class="sec-line"></div></div>
   <div class="row two">
     <div class="card">
@@ -583,6 +599,57 @@ function exportCSExcel(){
       <div style="font-size:11px;color:var(--text3);line-height:1.6">${c.text}</div>
     </div>`).join('');
 })();
+</script>
+
+
+<script>
+/* ── Chat share by month ─────────────────────────────────────────────────── */
+document.addEventListener('DOMContentLoaded', function() {
+  const hist = BILLZ_DATA.cs.chat_share_history || [];
+  if(!hist.length) return;
+
+  // Group by month
+  const monthMap = {
+    '29.12.2025':'Декабрь 2025','05.01.2026':'Январь','12.01.2026':'Январь',
+    '19.01.2026':'Январь','26.01.2026':'Январь','02.02.2026':'Февраль',
+    '09.02.2026':'Февраль','16.02.2026':'Февраль','23.02.2026':'Февраль',
+    '02.03.2026':'Март','09.03.2026':'Март','16.03.2026':'Март','23.03.2026':'Март',
+    '30.03.2026':'Март','06.04.2026':'Апрель','13.04.2026':'Апрель','20.04.2026':'Апрель',
+  };
+  const months = {};
+  hist.forEach(h => {
+    const m = monthMap[h.date] || 'Другой';
+    if(!months[m]) months[m] = [];
+    months[m].push(h);
+  });
+
+  // Build monthly summary
+  const monthSummary = Object.entries(months).map(([name, weeks]) => ({
+    name,
+    avg_chats: +(weeks.reduce((s,w)=>s+w.chats_pct,0)/weeks.length).toFixed(1),
+    avg_calls: +(weeks.reduce((s,w)=>s+w.calls_pct,0)/weeks.length).toFixed(1),
+    avg_lcr:   +(weeks.reduce((s,w)=>s+w.lcr_5sec,0)/weeks.length).toFixed(2),
+    weeks: weeks.length,
+    min_chats: Math.min(...weeks.map(w=>w.chats_pct)),
+    max_chats: Math.max(...weeks.map(w=>w.chats_pct)),
+  }));
+
+  // Inject monthly table if container exists
+  const el = document.getElementById('chatMonthlyBreakdown');
+  if(!el) return;
+  el.innerHTML = monthSummary.map(m => {
+    const trend = m.name === 'Апрель' ? '📉' : m.avg_chats > 48 ? '📈' : '➡️';
+    const col = m.avg_chats < 43 ? '#F87171' : m.avg_chats > 49 ? '#34D399' : '#FCD34D';
+    return `<tr>
+      <td style="font-weight:700;color:var(--text)">${m.name}</td>
+      <td style="text-align:center">${m.weeks} нед.</td>
+      <td style="text-align:center;color:var(--text3)">${m.avg_calls.toFixed(1)}%</td>
+      <td style="font-weight:700;color:${col};text-align:center">${m.avg_chats.toFixed(1)}% ${trend}</td>
+      <td style="text-align:center;font-size:10px;color:var(--text4)">${m.min_chats}–${m.max_chats}%</td>
+      <td style="font-weight:600;color:${m.avg_lcr>5?'#F87171':'#34D399'};text-align:center">${m.avg_lcr.toFixed(2)}%</td>
+    </tr>`;
+  }).join('');
+});
 </script>
 
 </body>

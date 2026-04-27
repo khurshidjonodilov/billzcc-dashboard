@@ -29,7 +29,7 @@
   <a href="quarterly.html" class="nav-link">Квартал</a>
   <a href="cs.html" class="nav-link">CS Анализ</a>
   <a href="daily.html" class="nav-link">Ежедневно</a>
-  <button class="nav-report-btn" onclick="openMonthlyReport()">📋 Отчёт апрель</button>
+  <button class="nav-report-btn" onclick="openMonthlyReport()">📋 Отчёт апрель 2026</button>
   <button class="theme-toggle" onclick="toggleTheme()" id="themeBtn"><span class="toggle-icon">☀️</span><span id="themeLabel">Светлая</span></button>
   <div class="nav-right" id="navPeriod"></div>
 </nav>
@@ -53,6 +53,28 @@
   <div class="period-bar">
     <button class="period-btn active" id="btnWith" onclick="setMode('with')">Полная статистика</button>
     <button class="period-btn" id="btnWithout" onclick="setMode('without')">Без «Массового сбоя»</button>
+  </div>
+
+  
+  <!-- Team status alert -->
+  <div id="teamAlert" style="background:linear-gradient(135deg,rgba(239,68,68,0.12),rgba(245,158,11,0.08));
+    border:1px solid rgba(239,68,68,0.3);border-radius:12px;padding:14px 20px;margin-bottom:16px;
+    display:flex;gap:14px;align-items:flex-start">
+    <div style="font-size:24px;flex-shrink:0">⚠️</div>
+    <div style="flex:1">
+      <div style="font-size:12px;font-weight:700;color:#F87171;letter-spacing:.05em;text-transform:uppercase;margin-bottom:6px">
+        Дефицит команды — контекст для данных
+      </div>
+      <div style="font-size:12px;color:var(--text2);line-height:1.7">
+        Уволены: <strong style="color:#fff">Шохинабону</strong> (учёба) и <strong style="color:#fff">Нурлан</strong>.
+        Алишерова Робия переведена в КС. Итого: <strong style="color:#FCD34D">11 операторов, 7–8 в смене</strong>.
+        Именно эти сотрудники перекрывали пиковые часы <strong style="color:#F87171">17:00–22:00</strong>.
+        Команда держится на допчасах — риск выгорания.
+        Заявка в HR подана. Митинг с КС в среду.
+      </div>
+    </div>
+    <button onclick="this.parentElement.style.display='none'"
+      style="background:none;border:none;color:var(--text4);cursor:pointer;font-size:16px;flex-shrink:0;padding:0 4px">✕</button>
   </div>
 
   <div class="kpi-grid" id="kpiGrid"></div>
@@ -181,6 +203,14 @@ function render() {
   const isClean = mode === 'without';
 
   // KPIs
+  
+  // Team context alert (if available)
+  const ts = BILLZ_DATA.team_status;
+  if(ts) {
+    const ta = document.getElementById('teamAlert');
+    if(ta) ta.style.display = 'flex';
+  }
+
   document.getElementById('kpiGrid').innerHTML = [
     kpi('Всего тикетов',     fmt.num(D.tickets),              `≈ ${Math.round(D.tickets/14)} в день`, 'gold'),
     kpi('Нежелательные',     fmt.pct(D.undesired/D.tickets*100), `${fmt.num(D.undesired)} тикетов`,   'rose','▲'),
@@ -191,7 +221,7 @@ function render() {
     kpi('LCR',               fmt.pct(D.lcr),                  `из ОнлайнПБХ · вводи вручную`,        'gold'),
     kpi('Тикетов / клиент', M.tpc.toFixed(2),                 `${fmt.num(M.clients)} клиентов`,      'gold'),
     kpi('Тикетов / польз.', M.tpu.toFixed(2),                 `${fmt.num(M.users)} польз.`,          'gold'),
-    kpi('Рейтинг «Отлично»',fmt.pct(M.rating_pct),           `${M.rating_pct}% положит. оценок`,    'sage','✓'),
+    kpi('Рейтинг «Отлично»',fmt.pct((M.rating_pct||M.csat_pct||0)),           `${(M.rating_pct||M.csat_pct||0)}% положит. оценок`,    'sage','✓'),
   ].join('');
 
   // SLA not met big number
@@ -202,7 +232,7 @@ function render() {
     <div class="alert ${D.undesired/D.tickets>0.5?'rose':'gold'}"><div class="alert-num">01</div><div><div class="al-label">${D.undesired/D.tickets>0.5?'Critical':'High'} · Нежелательные ${fmt.pct(D.undesired/D.tickets*100)}</div><div class="al-txt">${fmt.num(D.undesired)} нежелательных vs ${fmt.num(D.desired)} желательных.${isClean?' (Без Массового сбоя)':''}</div></div></div>
     <div class="alert gold"><div class="alert-num">02</div><div><div class="al-label">Info · SLA и скорость ответа</div><div class="al-txt">SLA соблюдён: ${fmt.pct(D.sla_pct)} · не соблюдён: ${fmt.pct(D.sla_not_met)}. AFRT: ${D.afrt}.</div></div></div>
     <div class="alert gold"><div class="alert-num">03</div><div><div class="al-label">Info · Затраты</div><div class="al-txt">Оценочные затраты: ${fmt.mln(D.cost)}. CPT: ${fmt.num(M.cpt)} сум. Тикетов/клиент: ${M.tpc} · /польз.: ${M.tpu}.</div></div></div>
-    <div class="alert ${D.repeat_pct>15?'rose':'gold'}"><div class="alert-num">04</div><div><div class="al-label">Info · Повторные ${fmt.pct(D.repeat_pct)}</div><div class="al-txt">Рейтинг «Отлично»: ${fmt.pct(M.rating_pct)}. Открытых: ${fmt.num(D.open)} тикетов на момент выгрузки.</div></div></div>
+    <div class="alert ${D.repeat_pct>15?'rose':'gold'}"><div class="alert-num">04</div><div><div class="al-label">Info · Повторные ${fmt.pct(D.repeat_pct)}</div><div class="al-txt">Рейтинг «Отлично»: ${fmt.pct((M.rating_pct||M.csat_pct||0))}. Открытых: ${fmt.num(D.open)} тикетов на момент выгрузки.</div></div></div>
   `;
 
   // Charts — destroy and rebuild
@@ -538,7 +568,7 @@ function mrRender() {
   const cpt = M.cpt || 9865;
 
   // Header
-  document.getElementById('mr-h-sub').textContent  = M.label + ' · Источник: Omnidesk CRM';
+  document.getElementById('mr-h-sub').textContent  = M.label || 'Апрель 2026' + ' · Источник: Omnidesk CRM';
   document.getElementById('mr-h-cost').textContent  = fmt.mln(M.cost);
   document.getElementById('mr-h-cost-sub').textContent = fmt.num(M.tickets) + ' тикетов × ' + fmt.num(cpt) + ' сўм';
 
@@ -552,7 +582,7 @@ function mrRender() {
     ['Входящие звонки',    fmt.num(M.calls),                  '#60A5FA', 'за период'],
     ['Пропущено',          fmt.num(M.tickets - M.closed),     '#F87171', 'LCR среднее: ' + M.lcr + '%'],
     ['FRT (первый ответ)', M.afrt,                            '#34D399', 'среднее по чатам'],
-    ['CSAT Отлично',       fmt.pct(M.rating_pct),             '#34D399', fmt.num(M.operators ? M.operators.reduce((s,o)=>s+o.rated,0) : 0) + ' оценок'],
+    ['CSAT Отлично',       fmt.pct((M.rating_pct||M.csat_pct||0)),             '#34D399', fmt.num(M.operators ? M.operators.reduce((s,o)=>s+o.rated,0) : 0) + ' оценок'],
     ['Cost per Ticket',    fmt.num(cpt) + ' сўм',             '#FCD34D', 'Итого: ' + fmt.mln(M.cost)],
     ['Тикетов / магазин',  M.tpc.toFixed(2),                  '#60A5FA', 'Магазинов: ' + fmt.num(M.clients)],
     ['Тикетов / польз.',   M.tpu.toFixed(4),                  '#60A5FA', 'Пользователей: ' + fmt.num(M.users)],
@@ -564,7 +594,7 @@ function mrRender() {
 
   // Conclusions dynamic
   const csatEl = document.getElementById('mr-concl-csat');
-  if(csatEl) csatEl.textContent = `Несмотря на нагрузку, CSAT «Отлично» = ${fmt.pct(M.rating_pct)}, FRT = ${M.afrt}. Команда сохраняет качество даже в стрессовых условиях.`;
+  if(csatEl) csatEl.textContent = `Несмотря на нагрузку, CSAT «Отлично» = ${fmt.pct((M.rating_pct||M.csat_pct||0))}, FRT = ${M.afrt}. Команда сохраняет качество даже в стрессовых условиях.`;
   const costEl = document.getElementById('mr-concl-cost');
   if(costEl) {
     const topLbl = M.top_labels && M.top_labels[0];
@@ -576,7 +606,7 @@ function mrRender() {
   const slaItems = [
     ['LCR средний',          M.lcr + '%',                   '< 5%',     M.lcr > 5 ? 'warn' : 'ok',  M.lcr > 5 ? '⚠ Выше нормы' : '✅ Норма'],
     ['FRT среднее',          M.afrt,                         '< 60 сек', 'ok',                        '✅ Норма'],
-    ['CSAT Отлично',         fmt.pct(M.rating_pct),         '> 90%',    M.rating_pct>90?'ok':'warn', M.rating_pct>90?'✅ Норма':'⚠ Внимание'],
+    ['CSAT Отлично',         fmt.pct((M.rating_pct||M.csat_pct||0)),         '> 90%',    (M.rating_pct||M.csat_pct||0)>90?'ok':'warn', (M.rating_pct||M.csat_pct||0)>90?'✅ Норма':'⚠ Внимание'],
     ['SLA соблюдён',         fmt.pct(M.sla_pct),            '> 85%',    M.sla_pct>85?'ok':'warn',   M.sla_pct>85?'✅ Норма':'⚠ Внимание'],
     ['Cost per Ticket',      fmt.num(cpt) + ' сўм',          '< 12 000', 'ok',                        '✅ В норме'],
     ['Тикетов / магазин',    M.tpc.toFixed(2),              '—',        'info',                      'Мониторинг'],
@@ -738,7 +768,7 @@ function exportCSExcel(){
       ['CPT', M.cpt, 'Cost per Ticket, сўм'],
       ['Затраты', M.cost, (M.cost/1e6).toFixed(2)+' млн сўм'],
       ['LCR', M.lcr, '% — Lost Call Rate'],
-      ['CSAT Отлично', M.rating_pct, '%'],
+      ['CSAT Отлично', (M.rating_pct||M.csat_pct||0), '%'],
       ['SLA соблюдён', M.sla_pct, '%'],
       ['SLA не соблюдён', M.sla_not_met, '%'],
       ['AFRT', M.afrt, 'среднее время первого ответа'],

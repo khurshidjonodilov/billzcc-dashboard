@@ -125,7 +125,20 @@
 
   
 <!-- ── Export Bar ─────────────────────────────────────────────────────────── -->
-<div class="export-bar">
+
+  <div class="sec"><div class="sec-num">05</div><div class="sec-title">Доля звонков и чатов</div><div class="sec-line"></div></div>
+  <div class="row two">
+    <div class="card">
+      <div class="card-hd"><div class="card-title">Звонки vs Чаты за неделю</div><div class="card-note" id="wChannelNote"></div></div>
+      <div style="position:relative;height:160px"><canvas id="wChannelChart"></canvas></div>
+    </div>
+    <div class="card">
+      <div class="card-hd"><div class="card-title">Все недели — доля чатов</div><div class="card-note">CPT затраты по неделям</div></div>
+      <div style="position:relative;height:160px"><canvas id="wAllWeeksChart"></canvas></div>
+    </div>
+  </div>
+
+  <div class="export-bar">
   <div class="export-bar-left">
     <div class="export-bar-title">📥 Скачать данные — Еженедельный отчёт</div>
     <div class="export-bar-sub">Все данные текущего раздела будут выгружены в Excel файл · несколько листов</div>
@@ -186,16 +199,16 @@ function render() {
   document.getElementById('costVal').textContent = fmt.mln(D.cost);
 
   document.getElementById('kpiGrid').innerHTML = [
-    kpi('Всего тикетов',    fmt.num(D.tickets),              `за неделю`,'gold'),
-    kpi('Нежелательные',    fmt.pct(D.undesired/D.tickets*100),`${fmt.num(D.undesired)} тикетов`,'rose','▲'),
-    kpi('SLA соблюдён',     fmt.pct(D.sla_pct),              `не соблюдён: ${fmt.pct(D.sla_not_met)}`, D.sla_pct>=98?'sage':'rose'),
-    kpi('AFRT',             D.afrt,                           `ср. первый ответ`,'gold'),
-    kpi('Повторные',        fmt.pct(D.repeat_pct),           `повторные обращения`,'rose','⚠'),
-    kpi('Закрыто',          fmt.pct(D.closed/D.tickets*100), `${fmt.num(D.closed)} из ${fmt.num(D.tickets)}`,'sage','✓'),
-    kpi('LCR',              fmt.pct(D.lcr),                  `из ОнлайнПБХ`,'gold'),
-    kpi('Массовый сбой',    fmt.num(D.massoviy_cnt||0),      `тикетов`,mode==='without'?'sage':'rose'),
-    kpi('Звонки',           fmt.num(D.calls),                `из ${fmt.num(D.tickets)}`,'gold'),
-    kpi('Чаты/мессенджеры', fmt.num(D.chats),                `из ${fmt.num(D.tickets)}`,'gold'),
+    kpi('Всего тикетов',   fmt.num(D.tickets),              `за неделю`,                            'blue',  '', [], [`Звонки: ${fmt.num(D.calls)}`, `Чаты: ${fmt.num(D.chats)}`]),
+    kpi('LCR (> 5 сек)',   fmt.pct(D.lcr),                  `из ОнлайнПБХ`,                         D.lcr>5?'red':'sage', D.lcr>5?'▲':'✓'),
+    kpi('SLA соблюдён',    fmt.pct(D.sla_pct),              `Не соблюдён: ${fmt.pct(D.sla_not_met)}`,D.sla_pct>=80?'sage':'amber'),
+    kpi('AFRT',            D.afrt,                          `ср. первый ответ`,                     'blue'),
+    kpi('CSAT «Отлично»',  fmt.pct(D.csat_pct||95),         `оценки клиентов`,                      'green', '✓'),
+    kpi('Нежелательные',   fmt.pct(D.undesired/D.tickets*100), `${fmt.num(D.undesired)} тикетов`,  'red',   '▲'),
+    kpi('Доля чатов',      fmt.pct(D.chats/D.tickets*100),  `Звонки: ${fmt.pct(D.calls/D.tickets*100)}`, 'purple'),
+    kpi('Повторные',       fmt.pct(D.repeat_pct),           `повторные обращения`,                  D.repeat_pct>9?'red':'amber', '⚠'),
+    kpi('Затраты',         fmt.mln(D.cost),                 `${fmt.num(D.tickets)} × 9 865 сўм`,    'amber'),
+    kpi('Обучений (CC)',   fmt.num(D.massoviy_cnt||0),       `тикетов CS через CC`,                 'dark'),
   ].join('');
 
   document.getElementById('alertGrid').innerHTML = `
@@ -253,6 +266,26 @@ function render() {
 
   const comps = D.top_companies||WK.top_companies;
   document.getElementById('companiesBlock').innerHTML = comps.map((c,i)=>companyBlock(c,i)).join('');
+
+  // Channel share
+  if(charts.wChannel) charts.wChannel.destroy();
+  charts.wChannel = new Chart(document.getElementById('wChannelChart'), {
+    type:'doughnut',
+    data:{labels:['Звонки','Чаты'],datasets:[{data:[D.calls,D.chats],
+      backgroundColor:['rgba(59,130,246,0.8)','rgba(139,92,246,0.8)'],borderWidth:0}]},
+    options:{...chartBase,cutout:'60%',plugins:{...chartBase.plugins,
+      legend:{display:true,position:'right',labels:{color:'#64748B',font:{size:11},padding:12}}}}
+  });
+  document.getElementById('wChannelNote').textContent=`Звонки: ${fmt.pct(D.calls/D.tickets*100)} · Чаты: ${fmt.pct(D.chats/D.tickets*100)}`;
+
+  // All weeks comparison
+  const allW = Object.entries(W).sort();
+  if(charts.wAllWeeks) charts.wAllWeeks.destroy();
+  charts.wAllWeeks = buildChannelChart('wAllWeeksChart',
+    allW.map(([k,v])=>v.label),
+    allW.map(([k,v])=>+(v.calls/v.tickets*100).toFixed(1)),
+    allW.map(([k,v])=>+(v.chats/v.tickets*100).toFixed(1))
+  );
 }
 
 function getISOWeek(date) {

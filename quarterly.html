@@ -152,7 +152,20 @@
 
   
 <!-- ── Export Bar ─────────────────────────────────────────────────────────── -->
-<div class="export-bar">
+
+  <div class="sec"><div class="sec-num">07</div><div class="sec-title">Доля звонков и чатов — квартальная динамика</div><div class="sec-line"></div></div>
+  <div class="row two">
+    <div class="card">
+      <div class="card-hd"><div class="card-title">Звонки vs Чаты по месяцам</div></div>
+      <div style="position:relative;height:200px"><canvas id="qChannelChart"></canvas></div>
+    </div>
+    <div class="card">
+      <div class="card-hd"><div class="card-title">Доля чатов — 17 недель</div><div class="card-note" style="color:var(--red2)">Снижение с нед 12 (51.3%) до нед 17 (39.9%)</div></div>
+      <div style="position:relative;height:200px"><canvas id="qChat17Chart"></canvas></div>
+    </div>
+  </div>
+
+  <div class="export-bar">
   <div class="export-bar-left">
     <div class="export-bar-title">📥 Скачать данные — Квартальный отчёт</div>
     <div class="export-bar-sub">Все данные текущего раздела будут выгружены в Excel файл · несколько листов</div>
@@ -566,5 +579,33 @@ function exportCSExcel(){
   }, 150);
 }
 </script>
+
+<script>
+/* ── Quarterly channel charts ─────────────────────────────────────────────── */
+(function(){
+  const Q = BILLZ_DATA.quarterly;
+  if(!Q) return;
+  buildChannelChart('qChannelChart',
+    Q.by_month.map(m=>m.name),
+    Q.by_month.map(m=>+(m.calls/m.tickets*100).toFixed(1)),
+    Q.by_month.map(m=>+(m.chats/m.tickets*100).toFixed(1))
+  );
+  const hist = (BILLZ_DATA.cs||{}).chat_share_history||[];
+  if(hist.length) {
+    new Chart(document.getElementById('qChat17Chart'), {
+      type:'line',
+      data:{labels:hist.map(h=>h.week),datasets:[
+        {label:'Чаты %',data:hist.map(h=>h.chats_pct),borderColor:'#8B5CF6',backgroundColor:'rgba(139,92,246,0.07)',borderWidth:2,pointRadius:3,fill:true,tension:0.35},
+        {label:'LCR >5сек %',data:hist.map(h=>h.lcr_5sec),borderColor:'#EF4444',borderWidth:1.5,pointRadius:2,fill:false,tension:0.35},
+      ]},
+      options:{...chartBase,scales:{
+        x:{grid:{display:false},ticks:{font:{size:9},color:'#334155'}},
+        y:{grid:{color:CHART_GRID},ticks:{font:{size:9},callback:v=>v+'%'}},
+      },plugins:{...chartBase.plugins,legend:{display:true,labels:{color:'#64748B',font:{size:10}}}}},
+    });
+  }
+})();
+</script>
+
 </body>
 </html>

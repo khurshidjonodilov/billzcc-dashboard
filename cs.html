@@ -183,6 +183,37 @@
   </button>
 </div>
 
+  
+  <!-- ── SECTION 08: CHAT SHARE HISTORY ─────────────────────────────────── -->
+  <div class="sec"><div class="sec-num">08</div><div class="sec-title">Доля чатов — динамика с декабря 2025</div><div class="sec-line"></div></div>
+  <div class="row two">
+    <div class="card">
+      <div class="card-hd">
+        <div class="card-title">Доля чатов по неделям (17 недель)</div>
+        <div class="card-note" style="color:#F87171">Минимум нед 17: 39.9% · Пик нед 12: 51.3%</div>
+      </div>
+      <div style="position:relative;height:260px"><canvas id="chatShareChart"></canvas></div>
+    </div>
+    <div class="card">
+      <div class="card-hd">
+        <div class="card-title">Таблица: чаты % и LCR (>5сек) по неделям</div>
+      </div>
+      <div style="max-height:280px;overflow-y:auto">
+        <table class="tbl">
+          <thead><tr><th>Неделя</th><th>Дата</th><th>Звонки%</th><th>Чаты%</th><th>LCR >5сек%</th></tr></thead>
+          <tbody id="chatHistoryTable"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="row one">
+    <div class="card">
+      <div class="card-hd"><div class="card-title">Почему доля чатов не растёт — анализ причин</div></div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:4px" id="chatCausesGrid"></div>
+    </div>
+  </div>
+
+
   <div class="ftr">
     <div class="fl">BILLZ · CC Intelligence · Customer Success Анализ · Янв–Апр 2026</div>
     <div class="fr">Данные: Omnidesk CRM · 44 602 тикета · 4 месяца</div>
@@ -490,5 +521,69 @@ function exportCSExcel(){
   }, 150);
 }
 </script>
+
+<script>
+/* ── Chat share history chart ─────────────────────────────────────────────── */
+(function(){
+  const hist = BILLZ_DATA.cs.chat_share_history || [];
+  if(!hist.length) return;
+
+  // Chart
+  new Chart(document.getElementById('chatShareChart'), {
+    type:'line',
+    data:{
+      labels: hist.map(h=>h.week),
+      datasets:[
+        {label:'Чаты %', data:hist.map(h=>h.chats_pct),
+         borderColor:'#7C3AED', backgroundColor:'rgba(124,58,237,0.1)',
+         borderWidth:2.5, pointRadius:5, fill:true, tension:0.3},
+        {label:'LCR >5сек %', data:hist.map(h=>h.lcr_5sec),
+         borderColor:'#EF4444', borderWidth:2, pointRadius:4, fill:false, tension:0.3},
+      ]
+    },
+    options:{...chartBase, scales:{
+      x:{grid:{display:false}, ticks:{font:{size:9}}},
+      y:{grid:{color:CHART_GRID}, min:0, max:60},
+    }, plugins:{...chartBase.plugins, legend:{display:true, labels:{color:'#7E92BC',font:{size:10}}}}},
+  });
+
+  // Table
+  const maxChats = Math.max(...hist.map(h=>h.chats_pct));
+  const minChats = Math.min(...hist.map(h=>h.chats_pct));
+  document.getElementById('chatHistoryTable').innerHTML = hist.map(h=>{
+    const isMax = h.chats_pct === maxChats;
+    const isMin = h.chats_pct === minChats;
+    const bg = isMax ? 'background:rgba(52,211,153,0.07)' : isMin ? 'background:rgba(239,68,68,0.07)' : '';
+    const col = isMax ? '#34D399' : isMin ? '#F87171' : 'var(--text2)';
+    const lcr_col = h.lcr_5sec >= 7 ? '#F87171' : h.lcr_5sec >= 5 ? '#FCD34D' : '#34D399';
+    return `<tr style="${bg}">
+      <td style="font-weight:600;color:var(--blue2)">${h.week}</td>
+      <td style="font-family:var(--mono);font-size:10px;color:var(--text3)">${h.date}</td>
+      <td style="color:var(--text3)">${h.calls_pct.toFixed(1)}%</td>
+      <td style="font-weight:700;color:${col}">${h.chats_pct.toFixed(1)}%${isMax?' 🏆':isMin?' ⚠':''}  </td>
+      <td style="font-weight:600;color:${lcr_col}">${h.lcr_5sec.toFixed(2)}%</td>
+    </tr>`;
+  }).join('');
+
+  // Causes grid
+  const causes = [
+    {icon:'📞', color:'#F87171', title:'Технические темы = звонок',
+     text:'Принтеры, Desktop, Epos, Инвентаризация невозможно решить в чате. Доля этих тем растёт.'},
+    {icon:'⚡', color:'#FCD34D', title:'Срочность = звонок',
+     text:'Кассовые смены и вход в аккаунт — клиент в магазине, нужен быстрый ответ. Чат кажется медленнее.'},
+    {icon:'📉', color:'#F87171', title:'Корреляция с LCR',
+     text:'При высоком LCR недозвонившиеся пишут в чат. При низком LCR клиенты дозваниваются — чаты падают.'},
+    {icon:'🔇', color:'#FCD34D', title:'Нет перевода в чат',
+     text:'Отсутствует IVR-опция и скрипт оператора. Клиента не предлагают написать в чат как альтернативу.'},
+  ];
+  document.getElementById('chatCausesGrid').innerHTML = causes.map(c=>`
+    <div style="background:rgba(255,255,255,0.03);border:1px solid var(--br2);border-radius:8px;padding:14px 16px">
+      <div style="font-size:20px;margin-bottom:6px">${c.icon}</div>
+      <div style="font-size:12px;font-weight:700;color:${c.color};margin-bottom:4px">${c.title}</div>
+      <div style="font-size:11px;color:var(--text3);line-height:1.6">${c.text}</div>
+    </div>`).join('');
+})();
+</script>
+
 </body>
 </html>

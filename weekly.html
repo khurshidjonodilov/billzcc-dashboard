@@ -177,7 +177,37 @@ Object.keys(W).sort().forEach(k => {
     currentWeek = k;
     switcher.querySelectorAll('.period-btn').forEach(b=>b.classList.remove('active'));
     btn.classList.add('active');
-    render();
+    
+  // SLA formula note in weekly
+  const slaNote = document.createElement('div');
+  slaNote.style.cssText = 'font-family:var(--mono);font-size:9px;color:var(--t4);padding:6px 10px;border-left:2px solid rgba(59,130,246,0.3);margin-bottom:12px;line-height:1.5';
+  slaNote.innerHTML = '📐 SLA = FRT≤1мин / замеренных чатов × 100 · LCR = пропущ.>5сек / входящие × 100 (АТС) · CSAT = Отлично / оценённых × 100 · Затраты = тикеты × CPT 9 865 сум';
+  document.getElementById('alertGrid').after(slaNote);
+
+
+  // Team context for w16/w17
+  const ts = BILLZ_DATA.monthly?.team_changes || [];
+  const wkNum = WK.week_num;
+  if (ts.length && (wkNum === 16 || wkNum === 17)) {
+    let existing = document.getElementById('weekTeamNote');
+    if (!existing) {
+      existing = document.createElement('div');
+      existing.id = 'weekTeamNote';
+      existing.className = 'team-alert';
+      existing.style.marginBottom = '14px';
+      document.getElementById('kpiGrid').before(existing);
+    }
+    existing.innerHTML = `<div class="team-alert-icon">⚠️</div><div>
+      <div class="team-alert-title">Контекст недели ${wkNum} — изменения в команде</div>
+      <div class="team-alert-text">В апреле уволены <strong style="color:#fff">Шохинабону</strong> и <strong style="color:#fff">Нурлан</strong>. Алишерова переведена в КС. Итого: <strong style="color:#FCD34D">11 операторов, 7–8 в смене</strong>. Именно они перекрывали вечерний пик <strong style="color:#F87171">17:00–22:00</strong>. Влияет на LCR этих недель.</div>
+    </div>`;
+    existing.style.display = 'flex';
+  } else {
+    const el = document.getElementById('weekTeamNote');
+    if (el) el.style.display = 'none';
+  }
+
+render();
   };
   switcher.appendChild(btn);
 });

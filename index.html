@@ -2,830 +2,400 @@
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BILLZ CC · Ежемесячный</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>BILLZ CC · Ежемесячно</title>
 <link rel="stylesheet" href="shared.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 <script src="data.js"></script>
 <script src="shared.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
-<style>
-.export-bar{margin-top:32px;padding:20px 24px;background:var(--surface);border:1px solid var(--br2);border-radius:12px;display:flex;align-items:center;justify-content:space-between;gap:16px}
-.export-bar-left{display:flex;flex-direction:column;gap:4px}
-.export-bar-title{font-size:13px;font-weight:700;color:var(--text)}
-.export-bar-sub{font-size:11px;color:var(--text3)}
-.export-btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--sans);font-size:13px;font-weight:600;padding:10px 22px;border-radius:8px;cursor:pointer;border:none;transition:all .18s;background:linear-gradient(135deg,#1A7A4A,#10B981);color:#fff;box-shadow:0 2px 12px rgba(16,185,129,0.25)}
-.export-btn:hover{transform:translateY(-1px);box-shadow:0 4px 20px rgba(16,185,129,0.4)}
-.export-btn:active{transform:translateY(0)}
-.export-btn svg{width:16px;height:16px;flex-shrink:0}
-.export-btn.loading{opacity:.7;pointer-events:none}
-</style>
 </head>
 <body>
 <nav class="top-nav">
-  <div class="nav-brand">BILLZ · CC</div>
-  <a href="index.html" class="nav-link active">Ежемесячно</a>
-  <a href="weekly.html" class="nav-link">Еженедельно</a>
+  <div class="nav-brand">
+    <div class="nav-brand-dot">B</div>
+    BILLZ · CC
+  </div>
+  <a href="index.html"     class="nav-link active">Ежемесячно</a>
+  <a href="weekly.html"    class="nav-link">Еженедельно</a>
   <a href="quarterly.html" class="nav-link">Квартал</a>
-  <a href="cs.html" class="nav-link">CS Анализ</a>
-  <a href="daily.html" class="nav-link">Ежедневно</a>
-  <button class="nav-report-btn" onclick="openMonthlyReport()">📋 Отчёт апрель 2026</button>
-  <button class="theme-toggle" onclick="toggleTheme()" id="themeBtn"><span class="toggle-icon">☀️</span><span id="themeLabel">Светлая</span></button>
-  <div class="nav-right" id="navPeriod"></div>
+  <a href="cs.html"        class="nav-link">CS Анализ</a>
+  <a href="daily.html"     class="nav-link">Ежедневно</a>
+  <div class="nav-right">
+    <button class="theme-toggle" onclick="toggleTheme()" id="themeBtn">
+      <span class="toggle-icon">☀️</span><span id="themeLabel">Светлая</span>
+    </button>
+  </div>
 </nav>
+
 <div class="wrap">
+  <!-- PAGE HEADER -->
   <div class="phdr">
     <div>
-      <div class="phdr-eyebrow">BILLZ · Колл-центр · Ежемесячный отчёт</div>
-      <div class="phdr-title">Апрель <em>2026</em></div>
-      <div class="phdr-sub" id="mainSub"></div>
-      <div class="phdr-pills" id="mainPills"></div>
+      <div class="phdr-eyebrow">BILLZ · КОЛЛ-ЦЕНТР · ЕЖЕМЕСЯЧНЫЙ ОТЧЁТ</div>
+      <div class="phdr-title" id="phTitle">Апрель <em>2026</em></div>
+      <div class="phdr-sub" id="phSub"></div>
+      <div class="phdr-pills" id="phPills"></div>
     </div>
     <div class="phdr-right">
-      <div class="cost-ey">Оценочные затраты</div>
+      <div class="cost-ey">ЗАТРАТЫ ЗА МЕСЯЦ</div>
       <div class="cost-n" id="costVal">—</div>
-      <div class="cost-d">сум · за период</div>
-      <div class="live"><span class="live-dot"></span>данные актуальны</div>
+      <div class="cost-d">сум · тикеты × CPT</div>
+      <div class="live"><span class="live-dot"></span>данные актуальны · 27.04.2026</div>
     </div>
   </div>
 
-  <!-- Toggle: с Массовым сбоем / без -->
-  <div class="period-bar">
-    <button class="period-btn active" id="btnWith" onclick="setMode('with')">Полная статистика</button>
-    <button class="period-btn" id="btnWithout" onclick="setMode('without')">Без «Массового сбоя»</button>
-  </div>
-
-  
-  <!-- Team status alert -->
-  <div id="teamAlert" style="background:linear-gradient(135deg,rgba(239,68,68,0.12),rgba(245,158,11,0.08));
-    border:1px solid rgba(239,68,68,0.3);border-radius:12px;padding:14px 20px;margin-bottom:16px;
-    display:flex;gap:14px;align-items:flex-start">
-    <div style="font-size:24px;flex-shrink:0">⚠️</div>
-    <div style="flex:1">
-      <div style="font-size:12px;font-weight:700;color:#F87171;letter-spacing:.05em;text-transform:uppercase;margin-bottom:6px">
-        Дефицит команды — контекст для данных
-      </div>
-      <div style="font-size:12px;color:var(--text2);line-height:1.7">
-        Уволены: <strong style="color:#fff">Шохинабону</strong> (учёба) и <strong style="color:#fff">Нурлан</strong>.
-        Алишерова Робия переведена в КС. Итого: <strong style="color:#FCD34D">11 операторов, 7–8 в смене</strong>.
-        Именно эти сотрудники перекрывали пиковые часы <strong style="color:#F87171">17:00–22:00</strong>.
-        Команда держится на допчасах — риск выгорания.
-        Заявка в HR подана. Митинг с КС в среду.
-      </div>
+  <!-- TEAM CHANGES (only for April — here) -->
+  <div class="team-alert" id="teamChangesAlert">
+    <div class="team-alert-icon">⚠️</div>
+    <div>
+      <div class="team-alert-title">Изменения в команде — апрель 2026</div>
+      <div class="team-alert-text" id="teamChangesText"></div>
     </div>
     <button onclick="this.parentElement.style.display='none'"
-      style="background:none;border:none;color:var(--text4);cursor:pointer;font-size:16px;flex-shrink:0;padding:0 4px">✕</button>
+      style="background:none;border:none;color:#4B5563;cursor:pointer;font-size:15px;margin-left:auto;flex-shrink:0">✕</button>
   </div>
 
+  <!-- KPIs -->
   <div class="kpi-grid" id="kpiGrid"></div>
+
+  <!-- ALERTS -->
   <div class="alert-grid" id="alertGrid"></div>
 
-  <div class="sec"><div class="sec-num">01</div><div class="sec-title">Динамика по неделям</div><div class="sec-line"></div></div>
+  <!-- 01 OPERATORS -->
+  <div class="sec"><div class="sec-num">01</div><div class="sec-title">Операторы — апрель 2026</div><div class="sec-line"></div></div>
   <div class="row wn">
     <div class="card">
-      <div class="card-hd"><div class="card-title">Тикеты по неделям</div></div>
-      <div class="leg"><div class="li"><span class="ld" style="background:#059669"></span>Желательные</div><div class="li"><span class="ld" style="background:#F87171"></span>Нежелательные</div></div>
-      <div style="position:relative;height:210px"><canvas id="weeklyChart"></canvas></div>
-    </div>
-    <div class="card">
-      <div class="card-hd"><div class="card-title">Каналы обращений</div></div>
-      <div class="leg"><div class="li"><span class="ld" style="background:#2563EB"></span>Звонки 52%</div><div class="li"><span class="ld" style="background:#34D399"></span>Telegram 42%</div><div class="li"><span class="ld" style="background:#1D4ED8"></span>Чат 6%</div></div>
-      <div style="position:relative;height:210px"><canvas id="channelChart"></canvas></div>
-    </div>
-  </div>
-
-  <div class="sec"><div class="sec-num">02</div><div class="sec-title">Метрики качества</div><div class="sec-line"></div></div>
-  <div class="row three">
-    <div class="card">
-      <div class="card-hd"><div class="card-title">SLA (скорость ответа ≤ 1 мин)</div></div>
-      <div style="position:relative;height:175px"><canvas id="slaChart"></canvas></div>
-      <div style="text-align:center;margin-top:10px">
-        <div style="font-family:var(--mono);font-size:9px;color:var(--dim);margin-bottom:4px">НЕ СОБЛЮДЁН</div>
-        <div style="font-family:var(--serif);font-size:28px;font-weight:700;color:var(--rose)" id="slaNotMet">—</div>
+      <div class="card-hd">
+        <div class="card-title">Производительность операторов</div>
+        <div class="card-note">SLA = % чатов с FRT ≤ 1 мин · CSAT = Отлично / оценённых</div>
       </div>
+      <table class="tbl">
+        <thead><tr><th>Оператор</th><th>Тикеты</th><th>Нагрузка</th><th>Ср. закрытие</th><th>Закрыто</th><th>SLA</th><th>CSAT</th><th>Затраты</th></tr></thead>
+        <tbody id="opTable"></tbody>
+      </table>
+      <div class="card-formula">📐 Нагрузка = тикеты оператора / макс. тикеты × 100 · Затраты = тикеты × CPT (9 865 сум)</div>
     </div>
     <div class="card">
-      <div class="card-hd"><div class="card-title">Типы обращений</div></div>
-      <div style="position:relative;height:175px"><canvas id="typeChart"></canvas></div>
-    </div>
-    <div class="card">
-      <div class="card-hd"><div class="card-title">Приоритеты</div></div>
-      <div style="position:relative;height:175px"><canvas id="priorityChart"></canvas></div>
-    </div>
-  </div>
-
-  <div class="sec"><div class="sec-num">03</div><div class="sec-title">Нагрузка на операторов</div><div class="sec-line"></div></div>
-  <div class="row two">
-    <div class="card">
-      <div class="card-hd"><div class="card-title">Производительность</div><div class="card-note">SLA = % ответов ≤ 1 мин</div></div>
-      <table class="tbl"><thead><tr><th>Оператор</th><th>Тикеты</th><th>Нагрузка</th><th>Ср. время</th><th>Закрыто</th><th>SLA</th><th>Затраты</th></tr></thead><tbody id="opTable"></tbody></table>
-    </div>
-    <div class="card">
-      <div class="card-hd"><div class="card-title">Рейтинг «Отлично»</div></div>
-      <div id="ratingRows" style="padding-top:4px"></div>
+      <div class="card-hd"><div class="card-title">Доля звонков vs чатов</div><div class="card-note" id="chanNote"></div></div>
+      <div style="position:relative;height:200px"><canvas id="chanChart"></canvas></div>
+      <div class="card-formula">📐 Доля чатов = кол-во чатов / все тикеты × 100</div>
     </div>
   </div>
 
-  <div class="sec"><div class="sec-num">04</div><div class="sec-title">Метки — затраты по CPT</div><div class="sec-line"></div></div>
+  <!-- 02 LABELS -->
+  <div class="sec"><div class="sec-num">02</div><div class="sec-title">Топ меток и затраты (CPT)</div><div class="sec-line"></div></div>
   <div class="row two">
     <div class="card">
-      <div class="card-hd"><div class="card-title">Топ меток по стоимости</div><div class="card-note">тикеты × CPT</div></div>
-      <table class="tbl"><thead><tr><th>Метка</th><th>Тикеты</th><th>Объём</th><th>Тип</th><th>Затраты</th></tr></thead><tbody id="lblTable"></tbody></table>
+      <div class="card-hd"><div class="card-title">Топ-12 меток по объёму</div><div class="card-note">каждый тикет = 9 865 сум</div></div>
+      <table class="tbl">
+        <thead><tr><th>Метка</th><th>Тикеты</th><th>Объём</th><th>Нежел.</th><th>Затраты</th></tr></thead>
+        <tbody id="lblTable"></tbody>
+      </table>
+      <div class="card-formula">📐 % нежел. = нежелательные тикеты по метке / всего по метке × 100</div>
     </div>
     <div class="card">
-      <div class="card-hd"><div class="card-title">Топ меток — объём</div></div>
+      <div class="card-hd"><div class="card-title">Топ-8 меток — объём</div></div>
       <div style="position:relative;height:300px"><canvas id="labelsChart"></canvas></div>
+      <div class="card-formula">📐 Затраты метки = тикеты по метке × CPT 9 865 сум</div>
     </div>
   </div>
 
-  <div class="sec"><div class="sec-num">05</div><div class="sec-title">Топ-10 компаний · разбивка по меткам</div><div class="sec-line"></div></div>
+  <!-- 03 COMPANIES -->
+  <div class="sec"><div class="sec-num">03</div><div class="sec-title">Топ-10 компаний · разбивка по меткам</div><div class="sec-line"></div></div>
   <div class="row one">
     <div class="card">
-      <div class="card-hd"><div class="card-title">Компания · тикеты · затраты · топ метки</div><div class="card-note" id="cptNote">CPT: 9 865 сум</div></div>
+      <div class="card-hd"><div class="card-title">Компании · тикеты · затраты · топ метки</div></div>
       <div id="companiesBlock"></div>
+      <div class="card-formula">📐 % нежел. = нежелательные тикеты компании / все тикеты компании × 100 · Затраты = тикеты × CPT</div>
     </div>
   </div>
 
-  
-<!-- ── Export Bar ─────────────────────────────────────────────────────────── -->
-
-  <!-- Channel share section -->
-  <div class="sec"><div class="sec-num">05</div><div class="sec-title">Доля звонков и чатов</div><div class="sec-line"></div></div>
+  <!-- 04 CHAT TRENDS -->
+  <div class="sec"><div class="sec-num">04</div><div class="sec-title">Доля чатов — динамика (17 недель) и причины снижения</div><div class="sec-line"></div></div>
   <div class="row two">
     <div class="card">
-      <div class="card-hd">
-        <div class="card-title">Звонки vs Чаты — текущий месяц</div>
-        <div class="card-note" id="channelNote"></div>
-      </div>
-      <div style="position:relative;height:160px"><canvas id="channelMonthChart"></canvas></div>
+      <div class="card-hd"><div class="card-title">Доля чатов по неделям</div><div class="card-note" style="color:var(--red2)">Минимум: нед 17 = 39.9%</div></div>
+      <div style="position:relative;height:200px"><canvas id="chatTrendChart"></canvas></div>
+      <div class="card-formula">📐 Доля чатов нед N = чаты нед N / тикеты нед N × 100</div>
     </div>
     <div class="card">
-      <div class="card-hd"><div class="card-title">Динамика доли чатов (17 недель)</div><div class="card-note" style="color:var(--red2)">Тренд: снижение с марта</div></div>
-      <div style="position:relative;height:160px"><canvas id="chatTrendChart"></canvas></div>
+      <div class="card-hd"><div class="card-title">Почему не растёт доля чатов</div></div>
+      <div id="chatCauses"></div>
     </div>
   </div>
 
+  <!-- EXPORT -->
   <div class="export-bar">
-  <div class="export-bar-left">
-    <div class="export-bar-title">📥 Скачать данные — Ежемесячный отчёт</div>
-    <div class="export-bar-sub">Все данные текущего раздела будут выгружены в Excel файл · несколько листов</div>
+    <div class="export-bar-left">
+      <div class="export-bar-title">📥 Скачать — Ежемесячный отчёт апрель 2026</div>
+      <div class="export-bar-sub">Excel · Сводка · Операторы · Метки · Компании · пароль для скачивания</div>
+    </div>
+    <button class="export-btn" id="exportBtn" onclick="checkAndExport()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
+        <polyline points="7 10 12 15 17 10"/>
+        <line x1="12" y1="15" x2="12" y2="3"/>
+      </svg>
+      Скачать Excel
+    </button>
   </div>
-  <button class="export-btn" id="exportBtn" onclick="checkAndExport()">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-      <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
-      <polyline points="7 10 12 15 17 10"/>
-      <line x1="12" y1="15" x2="12" y2="3"/>
-    </svg>
-    Скачать Excel
-  </button>
-</div>
 
   <div class="ftr">
     <div class="fl">BILLZ · CC Intelligence · Omnidesk CRM · без тикетов Дильшода</div>
-    <div class="fr">Ежемесячный отчёт · <span id="ftrPeriod"></span><span style="font-size:10px;color:var(--text4);font-family:var(--mono)">📅 Обновлено: <strong style="color:var(--text3)">27.04.2026</strong></span>
+    <div class="fr">
+      <span>📅 Обновлено: <strong style="color:var(--t2)">27.04.2026</strong></span>
+      <span>Ежемесячно · Апрель 2026</span>
     </div>
   </div>
 </div>
 
 <script>
+const charts = {};
 const M = BILLZ_DATA.monthly;
-const W = BILLZ_DATA.weekly;
-let mode = 'with';
-let charts = {};
+const CPT = 9865;
+const STORES = M.clients || 4165;
+const USERS  = M.users  || 37260;
 
-document.getElementById('mainSub').textContent = M.label;
-document.getElementById('navPeriod').textContent = M.label;
-document.getElementById('ftrPeriod').textContent = M.label;
-document.getElementById('costVal').textContent = fmt.mln(M.cost);
-document.getElementById('mainPills').innerHTML = `
-  <span class="pill a">${fmt.num(M.tickets)} тикетов</span>
-  <span class="pill">CPT: ${fmt.num(M.cpt)} сум</span>
-  <span class="pill">${M.clients.toLocaleString('ru')} клиентов</span>
-  <span class="pill">${M.users.toLocaleString('ru')} пользователей</span>
-  <span class="pill">Массовый сбой: ${M.massoviy_cnt} тик.</span>
+/* Header */
+document.getElementById('phSub').textContent =
+  `${fmt.num(M.tickets)} тикетов · ${fmt.num(M.calls)} звонков · ${fmt.num(M.chats)} чатов · CPT ${fmt.num(CPT)} сум`;
+document.getElementById('costVal').textContent = fmt.mlnS(M.cost);
+document.getElementById('phPills').innerHTML = [
+  `<span class="pill a">LCR ${M.lcr}%</span>`,
+  `<span class="pill ${M.csat_pct >= 95 ? 'g' : ''}">CSAT ${M.csat_pct}%</span>`,
+  `<span class="pill">SLA ${M.sla_pct}% (чаты)</span>`,
+  `<span class="pill">${fmt.num(STORES)} магазинов · ${fmt.num(USERS)} польз.</span>`,
+  `<span class="pill r">${fmt.num(M.training_tickets || 0)} обучений через CC</span>`,
+].join('');
+
+/* Team changes */
+const tc = M.team_changes || [];
+if (tc.length) {
+  document.getElementById('teamChangesText').innerHTML =
+    `Уволены: ${tc.filter(x=>x.status==='уволена'||x.status==='уволен').map(x=>`<strong style="color:#fff">${x.name}</strong> (${x.reason})`).join(', ')}. ` +
+    `Переведена в КС: <strong style="color:#fff">Алишерова Робия</strong>. ` +
+    `Итого: <strong style="color:#FCD34D">11 операторов, 7–8 в смене</strong>. ` +
+    `Уволенные перекрывали вечерний пик <strong style="color:#F87171">17:00–22:00</strong>. ` +
+    `Команда держится на допчасах — риск выгорания. Заявка в HR подана.`;
+} else {
+  document.getElementById('teamChangesAlert').style.display = 'none';
+}
+
+/* KPIs */
+const totalDesired = M.desired; const totalUndesired = M.undesired;
+const undPct = totalUndesired / M.tickets * 100;
+document.getElementById('kpiGrid').innerHTML = [
+  kpi('Всего тикетов', fmt.num(M.tickets), `≈${Math.round(M.tickets/30)} тикетов/день`,
+    'blue', '', [], [`Звонки: ${fmt.num(M.calls)}`, `Чаты: ${fmt.num(M.chats)}`],
+    'Сумма всех тикетов за месяц · Звонки = Поступило вручную'),
+
+  kpi('LCR (>5 сек)', fmt.pct(M.lcr), 'Lost Call Rate · цель <5%',
+    M.lcr > 7 ? 'red' : M.lcr > 5 ? 'amber' : 'sage',
+    M.lcr > 7 ? '▲' : '', [], ['Пик 17:00–22:00'],
+    'Пропущ. >5сек / все входящие × 100 · данные из АТС'),
+
+  kpi('CSAT «Отлично»', fmt.pct(M.csat_pct), `${M.csat_rated || 631} оценок из ${fmt.num(M.tickets)}`,
+    M.csat_pct >= 95 ? 'green' : 'amber', '✓', [],
+    [`Оценено: ${M.csat_rated || 631} (${((M.csat_rated||631)/M.tickets*100).toFixed(1)}%)`],
+    'Оценок «Отлично» / всего оценок × 100 · оценивают ~6% тикетов'),
+
+  kpi('SLA ≤ 1 мин', fmt.pct(M.sla_pct),
+    `Не соблюдён: ${fmt.pct(M.sla_not_met)} · только чаты`,
+    M.sla_pct >= 80 ? 'sage' : M.sla_pct >= 70 ? 'amber' : 'red',
+    '', [], [`Замер: ${fmt.num(4185)} чатов`],
+    'FRT ≤ 1 мин / замеренных чатов × 100 · звонки: SLA >90% по АТС'),
+
+  kpi('Нежелательные', fmt.pct(undPct), `${fmt.num(totalUndesired)} из ${fmt.num(M.tickets)}`,
+    undPct > 55 ? 'red' : 'amber', '▲', [],
+    [`Желательных: ${fmt.num(totalDesired)}`],
+    'Нежелательные тикеты / все тикеты × 100'),
+
+  kpi('Затраты (CPT)', fmt.mlnS(M.cost), `${fmt.num(CPT)} сум × ${fmt.num(M.tickets)}`,
+    'amber', '', [], [`${M.tpc} тик/магаз.`, `${M.tpu} тик/польз.`],
+    'Затраты = кол-во тикетов × CPT · Тик/магаз = тикеты / 4 165'),
+
+  kpi('Доля чатов', fmt.pct(M.chats/M.tickets*100), 'Тренд: снижение с нед 12',
+    'purple', '', [], [`Звонки: ${fmt.pct(M.calls/M.tickets*100)}`, 'Мин нед 17: 39.9%'],
+    'Чаты / все тикеты × 100 · нед 12 (16.03) пик: 51.3%'),
+
+  kpi('Повторные', fmt.pct(M.repeat_pct), 'Повторные обращения',
+    M.repeat_pct > 10 ? 'red' : 'amber', '⚠', [], [],
+    'Повторные тикеты / все тикеты × 100'),
+
+  kpi('Операторов', '11', '7–8 в смене · цель 13–14',
+    'cyan', '', [], ['Дефицит', 'HR заявка ✓'],
+    '3 выбыли в апреле · 11 остались · допчасы для покрытия пиков'),
+
+  kpi('Обучений (CC→CS)', fmt.num(M.training_tickets || 401),
+    `${fmt.mln((M.training_tickets||401)*CPT)}`,
+    'rose', '!', [], ['Работа CS-команды'],
+    'Тикеты с меткой «Обучение*» × CPT 9 865 сум = нагрузка CC'),
+].join('');
+
+/* Alerts */
+document.getElementById('alertGrid').innerHTML = `
+  <div class="alert ${undPct>55?'rose':'gold'}">
+    <div class="alert-num">01</div>
+    <div>
+      <div class="al-label">Нежелательные ${fmt.pct(undPct)}</div>
+      <div class="al-txt">${fmt.num(totalUndesired)} нжл. vs ${fmt.num(totalDesired)} жел. Рост LCR связан с дефицитом команды в вечерние часы.</div>
+      <div class="al-formula">📐 Нжл.% = ${totalUndesired} / ${M.tickets} × 100 = ${undPct.toFixed(1)}%</div>
+    </div>
+  </div>
+  <div class="alert gold">
+    <div class="alert-num">02</div>
+    <div>
+      <div class="al-label">SLA ${M.sla_pct}% · AFRT ${M.afrt}</div>
+      <div class="al-txt">SLA замеряется по чатам (FRT≤1мин). По звонкам SLA >90% (данные АТС). AFRT среднее = ${M.afrt}.</div>
+      <div class="al-formula">📐 SLA чаты = FRT≤1мин / замеренных × 100 · AFRT = сумма FRT / кол-во чатов</div>
+    </div>
+  </div>
+  <div class="alert ${M.lcr>7?'rose':'gold'}">
+    <div class="alert-num">03</div>
+    <div>
+      <div class="al-label">LCR ${M.lcr}% — ${M.lcr>7?'Высокий':'Умеренный'}</div>
+      <div class="al-txt">Пик LCR в 17:00–22:00. Причина: уволены Шохинабону и Нурлан — они перекрывали вечернюю смену.</div>
+      <div class="al-formula">📐 LCR = пропущ. >5сек / входящие × 100 · источник: онлайн-АТС</div>
+    </div>
+  </div>
+  <div class="alert gold">
+    <div class="alert-num">04</div>
+    <div>
+      <div class="al-label">Затраты ${fmt.mln(M.cost)}</div>
+      <div class="al-txt">${fmt.num(M.tickets)} тикетов × ${fmt.num(CPT)} сум CPT. Из них обучений через CC: ${M.training_tickets||401} тик = ${fmt.mln((M.training_tickets||401)*CPT)}.</div>
+      <div class="al-formula">📐 Затраты = тикеты × CPT · CPT апрель = 9 865 сум</div>
+    </div>
+  </div>
 `;
 
-function setMode(m) {
-  mode = m;
-  document.getElementById('btnWith').classList.toggle('active', m==='with');
-  document.getElementById('btnWithout').classList.toggle('active', m==='without');
-  render();
-}
+/* Operators table */
+const ops = M.operators || [];
+const maxT = Math.max(...ops.map(o=>o.tickets));
+document.getElementById('opTable').innerHTML = ops.slice(0,14).map(op => opRow(op, maxT)).join('');
 
-function getData() {
-  return mode === 'with' ? M : {...M, ...M.no_massoviy};
-}
+/* Channel doughnut */
+charts.chan = new Chart(document.getElementById('chanChart'), {
+  type: 'doughnut',
+  data: { labels: ['Звонки', 'Чаты'],
+    datasets: [{ data: [M.calls, M.chats],
+      backgroundColor: ['rgba(59,130,246,0.85)', 'rgba(139,92,246,0.85)'],
+      borderWidth: 2, borderColor: '#111318', hoverOffset: 6 }]},
+  options: { ...chartBase, cutout: '62%',
+    plugins: { ...chartBase.plugins,
+      legend: { display: true, position: 'bottom',
+        labels: { color: '#9CA3AF', font: { size: 11 }, padding: 14, usePointStyle: true } } } }
+});
+document.getElementById('chanNote').textContent =
+  `Звонки: ${fmt.pct(M.calls/M.tickets*100)} · Чаты: ${fmt.pct(M.chats/M.tickets*100)}`;
 
-function render() {
-  const D = getData();
-  const isClean = mode === 'without';
+/* Labels */
+const lbls = (M.top_labels || []).slice(0, 12);
+const maxL = lbls.length ? Math.max(...lbls.map(l=>l.tickets)) : 1;
+document.getElementById('lblTable').innerHTML = lbls.map(l => labelRow(l, maxL)).join('');
 
-  // KPIs
-  
-  // Team context alert (if available)
-  const ts = BILLZ_DATA.team_status;
-  if(ts) {
-    const ta = document.getElementById('teamAlert');
-    if(ta) ta.style.display = 'flex';
-  }
+const t8 = lbls.slice(0, 8);
+charts.labels = buildHorizBar('labelsChart',
+  t8.map(l => l.name.length > 38 ? l.name.slice(0,38)+'…' : l.name),
+  t8.map(l => l.tickets),
+  (v, i) => `rgba(96,165,250,${1 - i*0.1})`
+);
 
-  document.getElementById('kpiGrid').innerHTML = [
-    kpi('Всего тикетов',     fmt.num(M.tickets),           `≈${Math.round(M.tickets/30)} тик/день`,    'blue',  '',  [], [`Звонки: ${fmt.num(M.calls)}`,`Чаты: ${fmt.num(M.chats)}`]),
-    kpi('LCR (> 5 сек)',     fmt.pct(M.lcr),               'Цель: < 5%',                               M.lcr>5?'red':'sage', M.lcr>5?'▲':'✓', [], ['Пик 17:00–22:00']),
-    kpi('CSAT «Отлично»',    fmt.pct(M.rating_pct||M.csat_pct||0), 'Стабильно >94%',                  'green', '✓', [], [`FRT: ${M.afrt}`]),
-    kpi('SLA ≤ 1 мин',       fmt.pct(M.sla_pct),           `Не соблюдён: ${fmt.pct(M.sla_not_met)}`,  M.sla_pct>=75?'sage':'amber', ''),
-    kpi('Нежелательные',     fmt.pct(M.undesired/M.tickets*100), `${fmt.num(M.undesired)} тикетов`,   'red',   '▲', []),
-    kpi('Затраты (млн)',      fmt.mln(M.cost),              `CPT: ${fmt.num(M.cpt||9865)} сўм`,         'amber', '',  [], [`${fmt.num(M.tickets)} × ${fmt.num(M.cpt||9865)}`]),
-    kpi('Повторные',         fmt.pct(M.repeat_pct),        'Повторные обращения',                      M.repeat_pct>9?'red':'amber', '⚠'),
-    kpi('Доля чатов',        fmt.pct(M.chats/M.tickets*100), `Звонки: ${fmt.pct(M.calls/M.tickets*100)}`, 'purple', ''),
-    kpi('Тикетов / магазин', (M.tpc||0).toFixed(2),        `${fmt.num(M.clients||4165)} магазинов`,    'blue'),
-    kpi('Тикетов / польз.',  (M.tpu||0).toFixed(4),        `${fmt.num(M.users||37260)} пользователей`, 'blue'),
-  ].join('');
+/* Companies */
+const comps = M.top_companies || [];
+document.getElementById('companiesBlock').innerHTML = comps.length
+  ? comps.map((c,i) => companyBlock(c,i)).join('')
+  : '<div style="padding:20px;text-align:center;color:var(--t3)">Нет данных</div>';
 
-  // SLA not met big number
-  document.getElementById('slaNotMet').textContent = fmt.pct(D.sla_not_met);
-
-  // Alerts
-  document.getElementById('alertGrid').innerHTML = `
-    <div class="alert ${D.undesired/D.tickets>0.5?'rose':'gold'}"><div class="alert-num">01</div><div><div class="al-label">${D.undesired/D.tickets>0.5?'Critical':'High'} · Нежелательные ${fmt.pct(D.undesired/D.tickets*100)}</div><div class="al-txt">${fmt.num(D.undesired)} нежелательных vs ${fmt.num(D.desired)} желательных.${isClean?' (Без Массового сбоя)':''}</div></div></div>
-    <div class="alert gold"><div class="alert-num">02</div><div><div class="al-label">Info · SLA и скорость ответа</div><div class="al-txt">SLA соблюдён: ${fmt.pct(D.sla_pct)} · не соблюдён: ${fmt.pct(D.sla_not_met)}. AFRT: ${D.afrt}.</div></div></div>
-    <div class="alert gold"><div class="alert-num">03</div><div><div class="al-label">Info · Затраты</div><div class="al-txt">Оценочные затраты: ${fmt.mln(D.cost)}. CPT: ${fmt.num(M.cpt)} сум. Тикетов/клиент: ${M.tpc} · /польз.: ${M.tpu}.</div></div></div>
-    <div class="alert ${D.repeat_pct>15?'rose':'gold'}"><div class="alert-num">04</div><div><div class="al-label">Info · Повторные ${fmt.pct(D.repeat_pct)}</div><div class="al-txt">Рейтинг «Отлично»: ${fmt.pct((M.rating_pct||M.csat_pct||0))}. Открытых: ${fmt.num(D.open)} тикетов на момент выгрузки.</div></div></div>
-  `;
-
-  // Charts — destroy and rebuild
-  Object.values(charts).forEach(c => c.destroy());
-  charts = {};
-
-  // Weekly
-  const wKeys = Object.keys(W).sort();
-  charts.weekly = buildStackedBar('weeklyChart',
-    wKeys.map(k=>W[k].label),
-    wKeys.map(k=>W[k].desired),
-    wKeys.map(k=>W[k].undesired)
-  );
-
-  // Channel
-  charts.channel = buildDoughnut('channelChart',
-    ['Звонки','ТГ учётка','ТГ бот','Веб-чат','Прочее'],
-    [3081,1987,461,335,29],
-    ['#2563EB','#34D399','#1D4ED8','#94A3B8','#334155']
-  );
-
-  // SLA donut
-  charts.sla = buildDoughnut('slaChart',
-    [`Соблюдён ${fmt.pct(D.sla_pct)}`, `Не соблюдён ${fmt.pct(D.sla_not_met)}`],
-    [D.sla_pct, D.sla_not_met],
-    ['#34D399','#DC2626']
-  );
-
-  // Type donut
-  charts.type = buildDoughnut('typeChart',
-    ['Желательные','Нежелательные'],
-    [D.desired, D.undesired],
-    ['#059669','#F87171']
-  );
-
-  // Priority
-  charts.priority = buildDoughnut('priorityChart',
-    ['Средний','Низкий','Высокий','Критич.'],
-    [2867,2483,536,7],
-    ['#2563EB','#334155','#DC2626','#7F1D1D']
-  );
-
-  // Operators table
-  const ops = D.operators || M.operators;
-  const maxT = Math.max(...ops.map(o=>o.tickets));
-  document.getElementById('opTable').innerHTML = ops.map(op => {
-    const bw = Math.round(op.tickets/maxT*100);
-    const rc = op.close_rate>=99.5?'ok':op.close_rate>=97?'warn':'bad';
-    const tc = op.avg_close<=15?'f':op.avg_close<=30?'m':'s';
-    const sc = (op.sla_pct||0)>=98?'ok':(op.sla_pct||0)>=95?'warn':'bad';
-    return `<tr>
-      <td class="n-name">${op.name}</td>
-      <td class="n-num">${fmt.num(op.tickets)}</td>
-      <td><div class="bw"><div class="bb"><div class="bf" style="width:${bw}%"></div></div><span class="bp">${bw}%</span></div></td>
-      <td><span class="tv ${tc}">${op.avg_close} ч</span></td>
-      <td><span class="b ${rc}">${op.close_rate}%</span></td>
-      <td><span class="b ${sc}">${op.sla_pct||0}%</span></td>
-      <td class="cost-cell">${fmt.mln(op.cost)}</td>
-    </tr>`;
-  }).join('');
-
-  // Rating
-  document.getElementById('ratingRows').innerHTML = [...ops]
-    .filter(o=>o.rating_pct>0).sort((a,b)=>b.rating_pct-a.rating_pct)
-    .map(o=>`<div class="rr"><div class="rn">${o.name}</div><div class="rb"><div class="rf" style="width:${o.rating_pct}%"></div></div><div class="rp">${o.rating_pct}%</div><div class="rc">${o.rated} отзывов</div></div>`)
-    .join('');
-
-  // Labels table
-  const lbls = D.top_labels || M.top_labels;
-  const maxL = Math.max(...lbls.slice(0,15).map(l=>l.tickets));
-  document.getElementById('lblTable').innerHTML = lbls.slice(0,15).map(l=>labelRow(l,maxL)).join('');
-
-  // Labels chart
-  const t10 = lbls.slice(0,10);
-  charts.labels = buildHorizBar('labelsChart',
-    t10.map(l=>l.name.length>32?l.name.slice(0,32)+'…':l.name),
-    t10.map(l=>l.tickets),
-    (_,i)=>`rgba(232,184,109,${1-i*0.08})`
-  );
-
-  // Companies
-  const comps = D.top_companies || M.top_companies;
-  document.getElementById('companiesBlock').innerHTML = comps.map((c,i)=>companyBlock(c,i)).join('');
-
-  // Channel share charts
-  if(charts.channelMonth) { charts.channelMonth.destroy(); }
-  charts.channelMonth = new Chart(document.getElementById('channelMonthChart'), {
-    type: 'doughnut',
-    data: { labels: ['Звонки', 'Чаты'],
-      datasets: [{ data: [M.calls, M.chats],
-        backgroundColor: ['rgba(59,130,246,0.8)', 'rgba(139,92,246,0.8)'],
-        borderWidth: 0, hoverOffset: 4 }]
-    },
-    options: { ...chartBase, cutout: '60%',
-      plugins: { ...chartBase.plugins,
-        legend: { display: true, position: 'right', labels: { color: '#64748B', font: { size: 11 }, padding: 12 } }
-      }
-    }
+/* Chat trend */
+const hist = (BILLZ_DATA.cs || {}).chat_share_history || [];
+if (hist.length) {
+  charts.chatTrend = new Chart(document.getElementById('chatTrendChart'), {
+    type: 'line',
+    data: { labels: hist.map(h=>h.week), datasets: [{
+      data: hist.map(h=>h.chats_pct),
+      borderColor: '#8B5CF6',
+      backgroundColor: 'rgba(139,92,246,0.08)',
+      borderWidth: 2, pointRadius: 3.5,
+      pointBackgroundColor: hist.map(h=>h.chats_pct<42?'#EF4444':h.chats_pct>50?'#10B981':'#8B5CF6'),
+      fill: true, tension: 0.35,
+    }]},
+    options: { ...chartBase, scales: {
+      x: { grid: { display: false }, ticks: { font: { size: 9 } } },
+      y: { grid: { color: CHART_GRID }, min: 35, max: 55,
+        ticks: { font: { size: 9 }, callback: v => v+'%' } },
+    }}
   });
-  document.getElementById('channelNote').textContent =
-    `Звонки: ${fmt.pct(M.calls/M.tickets*100)} · Чаты: ${fmt.pct(M.chats/M.tickets*100)}`;
-
-  // Chat trend from history
-  const hist = (BILLZ_DATA.cs||{}).chat_share_history||[];
-  if(hist.length && document.getElementById('chatTrendChart')) {
-    if(charts.chatTrend) charts.chatTrend.destroy();
-    charts.chatTrend = new Chart(document.getElementById('chatTrendChart'), {
-      type: 'line',
-      data: { labels: hist.map(h=>h.week),
-        datasets: [{
-          label: 'Чаты %', data: hist.map(h=>h.chats_pct),
-          borderColor: '#8B5CF6', backgroundColor: 'rgba(139,92,246,0.08)',
-          borderWidth: 2, pointRadius: 3, fill: true, tension: 0.35,
-        }]
-      },
-      options: { ...chartBase, scales: {
-        x: { grid: { display: false }, ticks: { font: { size: 9 }, color: '#334155' } },
-        y: { grid: { color: CHART_GRID }, min: 35, max: 55, ticks: { font: { size: 9 }, callback: v => v + '%' } }
-      }, plugins: { ...chartBase.plugins, legend: { display: false } } }
-    });
-  }
 }
 
-render();
-</script>
-<!-- ═══════════════════════════════════════════════════ MONTHLY REPORT MODAL -->
-<div id="monthlyModal" class="mr-overlay" onclick="if(event.target===this)closeMonthlyReport()">
-  <div class="mr-panel">
-    <div class="mr-header">
-      <div class="mr-header-left">
-        <div class="mr-eyebrow">BILLZ · CONTACT CENTER · ЕЖЕМЕСЯЧНЫЙ ОТЧЁТ</div>
-        <div class="mr-title" id="mr-h-title">Апрель <span>2026</span></div>
-        <div class="mr-sub" id="mr-h-sub"></div>
-      </div>
-      <div class="mr-header-right">
-        <div class="mr-cost-label">Итого затрат</div>
-        <div class="mr-cost-val" id="mr-h-cost"></div>
-        <div class="mr-cost-sub" id="mr-h-cost-sub"></div>
-      </div>
-      <button class="mr-close" onclick="closeMonthlyReport()">✕</button>
+/* Chat causes */
+const causes = M.chat_causes || [];
+document.getElementById('chatCauses').innerHTML = causes.map((c,i) => `
+  <div style="display:flex;gap:10px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.05);${i===causes.length-1?'border-bottom:none':''}">
+    <div style="width:20px;height:20px;border-radius:5px;background:rgba(59,130,246,0.15);
+      color:var(--blue2);font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0">${c.rank}</div>
+    <div>
+      <div style="font-size:12px;font-weight:600;color:var(--t1);margin-bottom:3px">${c.cause}</div>
+      <div style="font-size:11px;color:var(--t3);line-height:1.5">${c.detail}</div>
     </div>
-    <div class="mr-tabs">
-      <button class="mr-tab active" onclick="mrTab(this,'mr-overview')">Обзор</button>
-      <button class="mr-tab" onclick="mrTab(this,'mr-daily')">По дням</button>
-      <button class="mr-tab" onclick="mrTab(this,'mr-lcr')">LCR & Причины</button>
-      <button class="mr-tab" onclick="mrTab(this,'mr-ops')">Операторы</button>
-      <button class="mr-tab" onclick="mrTab(this,'mr-cost')">Затраты</button>
-      <button class="mr-tab" onclick="mrTab(this,'mr-recs')">Рекомендации</button>
-    </div>
-    <div class="mr-body">
-
-      <!-- OVERVIEW -->
-      <div id="mr-overview" class="mr-section active">
-        <div class="mr-block-title">Что произошло в период</div>
-        <table class="mr-tbl">
-          <thead><tr><th>Параметр</th><th>Норма</th><th>Факт апрель</th></tr></thead>
-          <tbody>
-            <tr><td>Плановый объём</td><td>~200 входящих/день</td><td>Пиковые дни: 239–273 звонка</td></tr>
-            <tr><td>Команда (план)</td><td>13 операторов</td><td class="mr-red">Фактически: 10 (–3 форс-мажор)</td></tr>
-            <tr><td>Больничные</td><td>0 человек</td><td class="mr-red">Алишерова Робия + Шохинабону: 06–19.04</td></tr>
-            <tr><td>Отпуск</td><td>По графику</td><td class="mr-amber">Иззатбек: 04–19.04 (пересечение с пиком)</td></tr>
-            <tr><td>Технический инцидент</td><td>Нет</td><td class="mr-red">12.04: сбой Rahmat → +149 аномальных звонков за 4 ч</td></tr>
-            <tr><td>LCR среднее</td><td class="mr-green">&lt; 5% (цель)</td><td class="mr-red" id="mr-sit-lcr"></td></tr>
-          </tbody>
-        </table>
-        <div class="mr-block-title" style="margin-top:20px">Ключевые показатели</div>
-        <div class="mr-kpi-grid" id="mr-kpi-grid"></div>
-        <div class="mr-block-title" style="margin-top:20px">SLA — статус показателей</div>
-        <table class="mr-tbl" id="mr-sla-table">
-          <thead><tr><th>Показатель</th><th>Факт</th><th>Цель</th><th>Статус</th></tr></thead>
-          <tbody id="mr-sla-tbody"></tbody>
-        </table>
-        <div class="mr-block-title" style="margin-top:20px">Главные выводы</div>
-        <div class="mr-conclusions">
-          <div class="mr-concl red"><div class="mr-concl-icon">🔴</div><div><div class="mr-concl-title">Системный дефицит операторов</div><div class="mr-concl-text">Одновременное отсутствие 3 человек (2 больничных + отпуск) при объёме 180–273 входящих/день создало неустранимый дефицит мощности. LCR превысил 10% в 4 из 11 дней.</div></div></div>
-          <div class="mr-concl red"><div class="mr-concl-icon">🔴</div><div><div class="mr-concl-title">Инцидент 12.04 — урок для процессов</div><div class="mr-concl-text">Технический сбой Rahmat удвоил нагрузку на CC за 4 часа (+149 звонков). Без оперативного информирования клиентов (SMS/Push) такие инциденты будут повторяться.</div></div></div>
-          <div class="mr-concl amber"><div class="mr-concl-icon">🟠</div><div><div class="mr-concl-title">Утренняя смена — главный уязвимый час</div><div class="mr-concl-text">08:00–10:00: критически мало операторов. 14.04 — 21 пропущенный при 1 операторе в 09:00. Смена должна начинаться не позже 08:00 с минимум 3 операторами.</div></div></div>
-          <div class="mr-concl green"><div class="mr-concl-icon">🟡</div><div><div class="mr-concl-title">CSAT и скорость ответа — сильная сторона</div><div class="mr-concl-text" id="mr-concl-csat"></div></div></div>
-          <div class="mr-concl green"><div class="mr-concl-icon">🟡</div><div><div class="mr-concl-title">Cost per Ticket — рычаг оптимизации</div><div class="mr-concl-text" id="mr-concl-cost"></div></div></div>
-          <div class="mr-concl green"><div class="mr-concl-icon">⚪</div><div><div class="mr-concl-title">Смотреть детали</div><div class="mr-concl-text">→ Ежедневная динамика: вкладка «По дням» · Причины LCR: «LCR & Причины» · Операторы: «Операторы» · Затраты: «Затраты»</div></div></div>
-        </div>
-      </div>
-
-      <!-- BY DAYS -->
-      <div id="mr-daily" class="mr-section">
-        <div class="mr-block-title">Ежедневная динамика</div>
-        <div style="background:rgba(255,243,205,0.08);border:1px solid rgba(245,158,11,0.3);border-radius:8px;padding:10px 14px;margin-bottom:14px;font-size:12px;color:#FCD34D">
-          ⚠ 12.04: Инцидент Rahmat — 149 аномальных обращений исключены. Очищенный LCR = 7.1%
-        </div>
-        <table class="mr-tbl mr-tbl-daily">
-          <thead><tr><th>Дата</th><th>Вход.</th><th>Исход.</th><th>Пропущ.</th><th>LCR %</th><th>Чаты</th><th>FRT</th><th>Операт.</th></tr></thead>
-          <tbody id="mr-daily-tbody"></tbody>
-        </table>
-      </div>
-
-      <!-- LCR -->
-      <div id="mr-lcr" class="mr-section">
-        <div class="mr-block-title">Динамика LCR по дням</div>
-        <table class="mr-tbl">
-          <thead><tr><th>Дата</th><th>Входящие</th><th>Пропущено</th><th>LCR %</th><th>Комментарий</th></tr></thead>
-          <tbody>
-            <tr><td>06.04</td><td>194</td><td>7</td><td><span class="mr-badge ok">3.6%</span></td><td>Вечерний пик 22:00, нехватка операторов</td></tr>
-            <tr><td>07.04</td><td>211</td><td>9</td><td><span class="mr-badge ok">4.2%</span></td><td>Пик 15:00 при 8 операторах</td></tr>
-            <tr><td>08.04</td><td>196</td><td>12</td><td><span class="mr-badge warn">6.2%</span></td><td>Вечер 21-23:00: 1-3 оператора</td></tr>
-            <tr><td>09.04</td><td>179</td><td>17</td><td><span class="mr-badge warn">9.4%</span></td><td>Утренний пик 11:00: 10 пропущ. при 3 операторах</td></tr>
-            <tr><td>10.04</td><td>237</td><td>23</td><td><span class="mr-badge warn">9.7%</span></td><td>08:00 — 1 оператор на смене</td></tr>
-            <tr><td>11.04</td><td>239</td><td>25</td><td><span class="mr-badge bad">10.0%</span></td><td>Системный дефицит: больничные + отпуск</td></tr>
-            <tr><td>12.04</td><td>183</td><td>13</td><td><span class="mr-badge warn">7.1%</span></td><td>ИНЦИДЕНТ Rahmat 09-13ч. Очищено: 7.1%</td></tr>
-            <tr><td>13.04</td><td>271</td><td>19</td><td><span class="mr-badge warn">7.0%</span></td><td>9 операторов (доп. смены) — лучший день</td></tr>
-            <tr><td>14.04</td><td>273</td><td>49</td><td><span class="mr-badge bad">17.9%</span></td><td>09-11ч: 21+10+8 пропущ. при 1-3 операторах</td></tr>
-            <tr><td>15.04</td><td>191</td><td>9</td><td><span class="mr-badge ok">4.7%</span></td><td>Нормализация, 7 операторов</td></tr>
-            <tr><td>16.04</td><td>224</td><td>23</td><td><span class="mr-badge bad">10.2%</span></td><td>Пик 11-12ч при 4-5 операторах</td></tr>
-            <tr><td>17.04</td><td>214</td><td>4</td><td><span class="mr-badge ok">1.8%</span></td><td>Лучший LCR недели — стабильный день</td></tr>
-            <tr><td>18.04</td><td>266</td><td>26</td><td><span class="mr-badge bad">9.7%</span></td><td>Утро 09-10ч: 17 пропущ. при 1-3 операторах</td></tr>
-          </tbody>
-        </table>
-        <div class="mr-block-title" style="margin-top:24px">Root Cause Analysis</div>
-        <div class="mr-causes">
-          <div class="mr-cause red"><div class="mr-cause-sev">🔴 Высокое</div><div class="mr-cause-body"><div class="mr-cause-title">Больничный: Алишерова Робия (06–19.04)</div><div class="mr-cause-desc">–1 оператор, 10 рабочих дней · <em>Резервный пул 2-3 операторов</em></div></div></div>
-          <div class="mr-cause red"><div class="mr-cause-sev">🔴 Высокое</div><div class="mr-cause-body"><div class="mr-cause-title">Больничный: Шохинабону (06–19.04)</div><div class="mr-cause-desc">–1 оператор, 10 рабочих дней · <em>Кросс-тренинг операторов 2-й линии</em></div></div></div>
-          <div class="mr-cause red"><div class="mr-cause-sev">🔴 Критично</div><div class="mr-cause-body"><div class="mr-cause-title">Инцидент Rahmat 12.04 (09:00–13:00)</div><div class="mr-cause-desc">+149 аномальных звонков за 4 ч · <em>SMS/Push клиентам при инцидентах</em></div></div></div>
-          <div class="mr-cause amber"><div class="mr-cause-sev">🟠 Среднее</div><div class="mr-cause-body"><div class="mr-cause-title">Отпуск: Иззатбек (04–19.04)</div><div class="mr-cause-desc">–1 оператор + ранние смены не закрыты · <em>Не более 1 в отпуске одновременно</em></div></div></div>
-          <div class="mr-cause amber"><div class="mr-cause-sev">🟠 Среднее</div><div class="mr-cause-body"><div class="mr-cause-title">Дефицит утренней смены (08:00–10:00)</div><div class="mr-cause-desc">1-3 оператора в пиковые часы · <em>Начало смены с 08:00, минимум 3 оператора</em></div></div></div>
-          <div class="mr-cause yellow"><div class="mr-cause-sev">🟡 Низкое</div><div class="mr-cause-body"><div class="mr-cause-title">Длинные звонки &gt; 20 мин + исходящие в пик</div><div class="mr-cause-desc">Снижение пропускной способности · <em>FAQ, исходящие после 17:00</em></div></div></div>
-        </div>
-      </div>
-
-      <!-- OPERATORS -->
-      <div id="mr-ops" class="mr-section">
-        <div style="background:rgba(255,243,205,0.08);border:1px solid rgba(245,158,11,0.3);border-radius:8px;padding:10px 14px;margin-bottom:14px;font-size:12px;color:#FCD34D">
-          ⚕ Больничный 06–19.04: Алишерова Робия + Шохинабону &nbsp;|&nbsp; Отпуск 04–19.04: Иззатбек
-        </div>
-        <table class="mr-tbl">
-          <thead><tr><th>Оператор</th><th>Тикеты</th><th>CSAT %</th><th>Рейтинг</th><th>Затраты</th></tr></thead>
-          <tbody id="mr-ops-tbody"></tbody>
-        </table>
-      </div>
-
-      <!-- COST -->
-      <div id="mr-cost" class="mr-section">
-        <div class="mr-kpi-grid" style="grid-template-columns:repeat(4,1fr);margin-bottom:20px" id="mr-cost-kpis"></div>
-        <div class="mr-block-title">Стоимость по категориям</div>
-        <table class="mr-tbl">
-          <thead><tr><th>Категория</th><th>Тикеты</th><th>Доля</th><th>Затраты (сўм)</th></tr></thead>
-          <tbody id="mr-cost-tbody"></tbody>
-        </table>
-      </div>
-
-      <!-- RECOMMENDATIONS -->
-      <div id="mr-recs" class="mr-section">
-        <div class="mr-block-title">Приоритетный план действий</div>
-        <div class="mr-recs-list">
-          <div class="mr-rec red"><div class="mr-rec-num">01</div><div class="mr-rec-body"><div class="mr-rec-prio">🔴 Критично · Немедленно</div><div class="mr-rec-title">Создать резервный пул операторов</div><div class="mr-rec-text">2-3 обученных оператора для экстренного выхода при больничных. <strong>Эффект: LCR ↓ 3–5% в кризисные дни.</strong></div></div></div>
-          <div class="mr-rec red"><div class="mr-rec-num">02</div><div class="mr-rec-body"><div class="mr-rec-prio">🔴 Критично · 1 неделя</div><div class="mr-rec-title">Исходящие только после 16:00</div><div class="mr-rec-text">11.04: 95 исходящих при LCR 10%. <strong>Эффект: LCR ↓ 1–2% в пиковые часы.</strong></div></div></div>
-          <div class="mr-rec red"><div class="mr-rec-num">03</div><div class="mr-rec-body"><div class="mr-rec-prio">🔴 Критично · 2–4 недели</div><div class="mr-rec-title">SMS/Push при инцидентах</div><div class="mr-rec-text">12.04 — 149 лишних звонков за 4 часа без информирования. <strong>Эффект: аномальные обращения ↓ 50%+.</strong></div></div></div>
-          <div class="mr-rec amber"><div class="mr-rec-num">04</div><div class="mr-rec-body"><div class="mr-rec-prio">🟠 Высокое · 1 неделя</div><div class="mr-rec-title">Утренняя смена с 08:00, минимум 3 оператора</div><div class="mr-rec-text">14.04 в 09:00 — 21 пропущенный при 1 операторе. <strong>Эффект: устранение утренних пиков.</strong></div></div></div>
-          <div class="mr-rec amber"><div class="mr-rec-num">05</div><div class="mr-rec-body"><div class="mr-rec-prio">🟠 Высокое · 3–4 недели</div><div class="mr-rec-title">FAQ для топ-5 категорий</div><div class="mr-rec-text">Оплата тарифа + вход в аккаунт + блокировки + принтеры = крупнейшие статьи затрат. <strong>Эффект: AHT ↓ 20–30%.</strong></div></div></div>
-          <div class="mr-rec gray"><div class="mr-rec-num">06</div><div class="mr-rec-body"><div class="mr-rec-prio">🟡 Среднее · Следующий квартал</div><div class="mr-rec-title">График отпусков: не более 1 одновременно</div><div class="mr-rec-text">Апрель — 3 отсутствия одновременно. <strong>Эффект: стабильный LCR &lt; 5%.</strong></div></div></div>
-        </div>
-      </div>
-
-    </div><!-- /mr-body -->
-  </div><!-- /mr-panel -->
-</div><!-- /monthlyModal -->
-
-<style>
-.nav-report-btn {
-  margin-left: 16px;
-  font-family: var(--sans); font-size: 12px; font-weight: 600;
-  padding: 6px 14px; border-radius: 7px;
-  border: 1px solid rgba(59,130,246,0.4);
-  background: rgba(59,130,246,0.12);
-  color: var(--blue2); cursor: pointer; transition: all .15s;
-}
-.nav-report-btn:hover { background: rgba(59,130,246,0.25); border-color: var(--blue2); }
-.mr-overlay {
-  display: none; position: fixed; inset: 0; z-index: 1000;
-  background: rgba(5,10,20,0.85); backdrop-filter: blur(6px);
-  overflow-y: auto; padding: 24px 16px;
-}
-.mr-overlay.open { display: flex; align-items: flex-start; justify-content: center; }
-.mr-panel {
-  background: #0E1A30; border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 16px; width: 100%; max-width: 940px;
-  box-shadow: 0 24px 80px rgba(0,0,0,0.6); overflow: hidden; position: relative;
-}
-.mr-header {
-  background: linear-gradient(135deg,#0D1F3C 0%,#111D35 100%);
-  border-bottom: 1px solid rgba(255,255,255,0.1);
-  padding: 24px 28px 20px;
-  display: grid; grid-template-columns: 1fr auto; gap: 20px; align-items: start; position: relative;
-}
-.mr-header::before { content:''; position:absolute; top:0; left:0; right:0; height:2px; background:linear-gradient(90deg,#3B82F6,#60A5FA,transparent); }
-.mr-eyebrow { font-family:var(--mono); font-size:9px; letter-spacing:.2em; color:var(--text4); text-transform:uppercase; margin-bottom:8px; }
-.mr-title { font-size:30px; font-weight:800; color:#fff; line-height:1; margin-bottom:4px; }
-.mr-title span { color:var(--blue2); }
-.mr-sub { font-size:12px; color:var(--text3); }
-.mr-header-right { text-align:right; }
-.mr-cost-label { font-family:var(--mono); font-size:9px; letter-spacing:.15em; color:var(--text4); text-transform:uppercase; margin-bottom:4px; }
-.mr-cost-val { font-size:26px; font-weight:800; color:#fff; line-height:1; }
-.mr-cost-sub { font-size:11px; color:var(--text4); margin-top:3px; }
-.mr-close { position:absolute; top:16px; right:16px; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); color:var(--text3); border-radius:6px; padding:4px 10px; font-size:14px; cursor:pointer; transition:all .15s; }
-.mr-close:hover { background:rgba(255,255,255,0.12); color:#fff; }
-.mr-tabs { display:flex; gap:0; background:#0A1526; border-bottom:1px solid rgba(255,255,255,0.08); padding:0 20px; overflow-x:auto; }
-.mr-tab { font-family:var(--sans); font-size:12px; font-weight:600; padding:12px 18px; border:none; background:transparent; color:var(--text3); cursor:pointer; white-space:nowrap; border-bottom:2px solid transparent; transition:all .15s; }
-.mr-tab:hover { color:var(--text2); }
-.mr-tab.active { color:#fff; border-bottom-color:var(--blue); }
-.mr-body { padding:24px 28px; max-height:70vh; overflow-y:auto; }
-.mr-section { display:none; }
-.mr-section.active { display:block; }
-.mr-block-title { font-family:var(--sans); font-size:11px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--blue2); margin-bottom:12px; display:flex; align-items:center; gap:8px; }
-.mr-block-title::before { content:''; width:3px; height:12px; border-radius:2px; background:var(--blue); flex-shrink:0; }
-.mr-tbl { width:100%; border-collapse:collapse; font-size:12px; }
-.mr-tbl th { font-family:var(--sans); font-size:10px; font-weight:600; letter-spacing:.06em; text-transform:uppercase; color:var(--text4); padding:0 10px 10px; text-align:left; border-bottom:1px solid rgba(255,255,255,0.08); }
-.mr-tbl td { padding:9px 10px; border-bottom:1px solid rgba(255,255,255,0.04); color:var(--text2); }
-.mr-tbl tr:hover td { background:rgba(255,255,255,0.03); }
-.mr-tbl-daily { font-size:11px; }
-.mr-blue { color:var(--blue2)!important; font-weight:700; }
-.mr-red  { color:var(--red2)!important; }
-.mr-green{ color:var(--green2)!important; }
-.mr-amber{ color:var(--amber2)!important; }
-.mr-op-name { font-weight:700; color:#fff!important; }
-.mr-cost-num { font-family:var(--mono); font-size:11px; color:var(--text3); }
-.mr-badge { display:inline-block; font-size:10px; font-weight:600; padding:2px 8px; border-radius:4px; background:rgba(100,116,139,.12); color:var(--text3); border:1px solid rgba(100,116,139,.2); }
-.mr-badge.ok   { background:rgba(16,185,129,.12); color:var(--green2); border-color:rgba(52,211,153,.2); }
-.mr-badge.warn { background:rgba(245,158,11,.12); color:var(--amber2); border-color:rgba(252,211,77,.2); }
-.mr-badge.bad  { background:rgba(239,68,68,.12);  color:var(--red2);   border-color:rgba(248,113,113,.2); }
-.mr-badge.info { background:rgba(59,130,246,.12); color:var(--blue2);  border-color:rgba(96,165,250,.2); }
-.mr-kpi-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-bottom:16px; }
-.mr-kpi { background:#152038; border:1px solid rgba(255,255,255,0.07); border-radius:10px; padding:14px 16px; }
-.mr-kpi-label { font-size:10px; font-weight:500; color:var(--text3); margin-bottom:6px; }
-.mr-kpi-val   { font-size:22px; font-weight:800; line-height:1; margin-bottom:4px; }
-.mr-kpi-sub   { font-size:10px; color:var(--text4); }
-.mr-conclusions { display:flex; flex-direction:column; gap:8px; }
-.mr-concl { display:flex; gap:12px; padding:12px 14px; border-radius:8px; border:1px solid; }
-.mr-concl.red    { background:rgba(239,68,68,.07);   border-color:rgba(239,68,68,.2); }
-.mr-concl.amber  { background:rgba(245,158,11,.07);  border-color:rgba(245,158,11,.2); }
-.mr-concl.green  { background:rgba(252,211,77,.05);  border-color:rgba(252,211,77,.15); }
-.mr-concl-icon   { font-size:18px; flex-shrink:0; margin-top:1px; }
-.mr-concl-title  { font-size:13px; font-weight:700; color:#fff; margin-bottom:4px; }
-.mr-concl-text   { font-size:12px; color:var(--text2); line-height:1.6; }
-.mr-causes { display:flex; flex-direction:column; gap:8px; }
-.mr-cause { display:flex; gap:12px; padding:10px 14px; border-radius:8px; border:1px solid; align-items:flex-start; }
-.mr-cause.red    { background:rgba(239,68,68,.07);   border-color:rgba(239,68,68,.2); }
-.mr-cause.amber  { background:rgba(245,158,11,.07);  border-color:rgba(245,158,11,.2); }
-.mr-cause.yellow { background:rgba(252,211,77,.05);  border-color:rgba(252,211,77,.15); }
-.mr-cause-sev    { font-size:10px; font-weight:700; white-space:nowrap; min-width:90px; padding-top:2px; }
-.mr-cause-title  { font-size:12px; font-weight:700; color:#fff; margin-bottom:3px; }
-.mr-cause-desc   { font-size:11px; color:var(--text2); line-height:1.6; }
-.mr-cause-desc em { color:var(--blue2); font-style:normal; }
-.mr-recs-list { display:flex; flex-direction:column; gap:8px; }
-.mr-rec { display:flex; gap:14px; padding:14px 16px; border-radius:10px; border:1px solid; align-items:flex-start; }
-.mr-rec.red    { background:rgba(239,68,68,.07);   border-color:rgba(239,68,68,.2); }
-.mr-rec.amber  { background:rgba(245,158,11,.07);  border-color:rgba(245,158,11,.2); }
-.mr-rec.gray   { background:rgba(100,116,139,.07); border-color:rgba(100,116,139,.2); }
-.mr-rec-num    { font-family:var(--mono); font-size:20px; font-weight:800; color:rgba(255,255,255,0.15); flex-shrink:0; line-height:1; margin-top:2px; }
-.mr-rec-prio   { font-size:10px; font-weight:700; letter-spacing:.05em; text-transform:uppercase; color:var(--text3); margin-bottom:4px; }
-.mr-rec.red   .mr-rec-prio { color:var(--red2); }
-.mr-rec.amber .mr-rec-prio { color:var(--amber2); }
-.mr-rec-title  { font-size:13px; font-weight:700; color:#fff; margin-bottom:5px; }
-.mr-rec-text   { font-size:12px; color:var(--text2); line-height:1.6; }
-.mr-rec-text strong { color:#fff; }
-@media(max-width:700px){.mr-panel{border-radius:12px}.mr-header{grid-template-columns:1fr;padding:16px}.mr-body{padding:16px}.mr-kpi-grid{grid-template-columns:repeat(2,1fr)}}
-</style>
-
-<script>
-// ── Monthly report — fully dynamic from BILLZ_DATA ─────────────────────────
-function mrRender() {
-  const M  = BILLZ_DATA.monthly;
-  const D  = BILLZ_DATA.daily;
-  const cpt = M.cpt || 9865;
-
-  // Header
-  document.getElementById('mr-h-sub').textContent  = M.label || 'Апрель 2026' + ' · Источник: Omnidesk CRM';
-  document.getElementById('mr-h-cost').textContent  = fmt.mln(M.cost);
-  document.getElementById('mr-h-cost-sub').textContent = fmt.num(M.tickets) + ' тикетов × ' + fmt.num(cpt) + ' сўм';
-
-  // Situation LCR row
-  const lcrEl = document.getElementById('mr-sit-lcr');
-  if(lcrEl) lcrEl.textContent = M.lcr + '% (факт) — превышение в 4 из 11 дней';
-
-  // KPI grid
-  const kpiData = [
-    ['Всего тикетов',      fmt.num(M.tickets),                '#60A5FA', 'вход. + чаты + исход.'],
-    ['Входящие звонки',    fmt.num(M.calls),                  '#60A5FA', 'за период'],
-    ['Пропущено',          fmt.num(M.tickets - M.closed),     '#F87171', 'LCR среднее: ' + M.lcr + '%'],
-    ['FRT (первый ответ)', M.afrt,                            '#34D399', 'среднее по чатам'],
-    ['CSAT Отлично',       fmt.pct((M.rating_pct||M.csat_pct||0)),             '#34D399', fmt.num(M.operators ? M.operators.reduce((s,o)=>s+o.rated,0) : 0) + ' оценок'],
-    ['Cost per Ticket',    fmt.num(cpt) + ' сўм',             '#FCD34D', 'Итого: ' + fmt.mln(M.cost)],
-    ['Тикетов / магазин',  M.tpc.toFixed(2),                  '#60A5FA', 'Магазинов: ' + fmt.num(M.clients)],
-    ['Тикетов / польз.',   M.tpu.toFixed(4),                  '#60A5FA', 'Пользователей: ' + fmt.num(M.users)],
-    ['Закрыто',            fmt.pct(M.closed/M.tickets*100),   '#34D399', fmt.num(M.closed) + ' тикетов'],
-  ];
-  document.getElementById('mr-kpi-grid').innerHTML = kpiData.map(([lbl,val,col,sub]) =>
-    `<div class="mr-kpi"><div class="mr-kpi-label">${lbl}</div><div class="mr-kpi-val" style="color:${col}">${val}</div><div class="mr-kpi-sub">${sub}</div></div>`
-  ).join('');
-
-  // Conclusions dynamic
-  const csatEl = document.getElementById('mr-concl-csat');
-  if(csatEl) csatEl.textContent = `Несмотря на нагрузку, CSAT «Отлично» = ${fmt.pct((M.rating_pct||M.csat_pct||0))}, FRT = ${M.afrt}. Команда сохраняет качество даже в стрессовых условиях.`;
-  const costEl = document.getElementById('mr-concl-cost');
-  if(costEl) {
-    const topLbl = M.top_labels && M.top_labels[0];
-    const topCost = topLbl ? fmt.num(topLbl.cost) : '—';
-    costEl.textContent = `Итого за период: ${fmt.mln(M.cost)}. Топ категория: «${topLbl ? topLbl.name : '—'}» — ${topLbl ? topLbl.tickets : 0} тикетов = ${topCost} сўм. FAQ снизит на 30–40%.`;
-  }
-
-  // SLA table
-  const slaItems = [
-    ['LCR средний',          M.lcr + '%',                   '< 5%',     M.lcr > 5 ? 'warn' : 'ok',  M.lcr > 5 ? '⚠ Выше нормы' : '✅ Норма'],
-    ['FRT среднее',          M.afrt,                         '< 60 сек', 'ok',                        '✅ Норма'],
-    ['CSAT Отлично',         fmt.pct((M.rating_pct||M.csat_pct||0)),         '> 90%',    (M.rating_pct||M.csat_pct||0)>90?'ok':'warn', (M.rating_pct||M.csat_pct||0)>90?'✅ Норма':'⚠ Внимание'],
-    ['SLA соблюдён',         fmt.pct(M.sla_pct),            '> 85%',    M.sla_pct>85?'ok':'warn',   M.sla_pct>85?'✅ Норма':'⚠ Внимание'],
-    ['Cost per Ticket',      fmt.num(cpt) + ' сўм',          '< 12 000', 'ok',                        '✅ В норме'],
-    ['Тикетов / магазин',    M.tpc.toFixed(2),              '—',        'info',                      'Мониторинг'],
-    ['Тикетов / польз.',     M.tpu.toFixed(4),              '—',        'info',                      'Мониторинг'],
-  ];
-  document.getElementById('mr-sla-tbody').innerHTML = slaItems.map(([m,f,t,cls,s],i) =>
-    `<tr><td>${m}</td><td class="${cls==='warn'?'mr-amber':cls==='ok'?'mr-green':''}">${f}</td><td>${t}</td><td><span class="mr-badge ${cls}">${s}</span></td></tr>`
-  ).join('');
-
-  // Daily table — from BILLZ_DATA.daily for April days
-  const aprilDays = [
-    ['2026-04-06','06.04',194,118,7,  '3.6%',234],
-    ['2026-04-07','07.04',211,97, 9,  '4.2%',208],
-    ['2026-04-08','08.04',196,74, 12, '6.2%',194],
-    ['2026-04-09','09.04',179,74, 17, '9.4%',199],
-    ['2026-04-10','10.04',237,50, 23, '9.7%',244],
-    ['2026-04-11','11.04',239,95, 25, '10.0%',244],
-    ['2026-04-12','12.04',183,44, 13, '7.1%',316],
-    ['2026-04-13','13.04',271,41, 19, '7.0%',293],
-    ['2026-04-14','14.04',273,73, 49, '17.9%',222],
-    ['2026-04-15','15.04',191,79, 9,  '4.7%',201],
-    ['2026-04-16','16.04',224,136,23, '10.2%',199],
-    ['2026-04-17','17.04',214,117,4,  '1.8%',196],
-    ['2026-04-18','18.04',266,48, 26, '9.7%',203],
-  ];
-  document.getElementById('mr-daily-tbody').innerHTML = aprilDays.map(([key,lbl,inc,out,mis,lcrStr,chat]) => {
-    const dayData = D[key] || {};
-    const frt = dayData.afrt || '—';
-    const ops = dayData.max_operators || '—';
-    const lcr = parseFloat(lcrStr);
-    const lcrCls = lcr > 10 ? 'bad' : lcr >= 7 ? 'warn' : 'ok';
-    const rowBg = lcr > 10 ? 'background:rgba(239,68,68,.05)' : '';
-    return `<tr style="${rowBg}">
-      <td style="font-weight:600;color:#fff">${lbl}</td>
-      <td>${inc}</td><td>${out}</td>
-      <td style="color:${lcr>10?'#F87171':''}">${mis}</td>
-      <td><span class="mr-badge ${lcrCls}">${lcrStr}</span></td>
-      <td>${chat}</td><td>${frt}</td><td>${ops}</td>
-    </tr>`;
-  }).join('');
-
-  // Operators
-  if(M.operators && M.operators.length) {
-    document.getElementById('mr-ops-tbody').innerHTML = M.operators.map(op => {
-      const csCls = op.rating_pct >= 95 ? 'mr-green' : op.rating_pct >= 90 ? 'mr-amber' : 'mr-red';
-      return `<tr>
-        <td class="mr-op-name">${op.name}</td>
-        <td class="mr-blue">${fmt.num(op.tickets)}</td>
-        <td class="${csCls}">${op.rating_pct}%</td>
-        <td>${op.rated} отзывов</td>
-        <td class="mr-cost-num">${fmt.mln(op.cost)}</td>
-      </tr>`;
-    }).join('');
-  }
-
-  // Cost KPIs
-  document.getElementById('mr-cost-kpis').innerHTML = [
-    ['CpT', fmt.num(cpt) + ' сўм', '#FCD34D', 'за 1 тикет'],
-    ['Итого за период', fmt.mln(M.cost), '#FCD34D', fmt.num(M.tickets) + ' тикетов'],
-    ['Затраты / магазин', fmt.num(Math.round(M.cost/M.clients)) + ' сўм', '#60A5FA', fmt.num(M.clients) + ' магаз.'],
-    ['Тикетов / польз.', M.tpu.toFixed(4), '#60A5FA', fmt.num(M.users) + ' польз.'],
-  ].map(([l,v,c,s]) =>
-    `<div class="mr-kpi"><div class="mr-kpi-label">${l}</div><div class="mr-kpi-val" style="color:${c}">${v}</div><div class="mr-kpi-sub">${s}</div></div>`
-  ).join('');
-
-  // Cost by label
-  if(M.top_labels && M.top_labels.length) {
-    const totalLbl = M.top_labels.reduce((s,l)=>s+l.tickets,0);
-    document.getElementById('mr-cost-tbody').innerHTML = M.top_labels.slice(0,15).map(l =>
-      `<tr><td>${l.name}</td><td class="mr-blue">${fmt.num(l.tickets)}</td><td>${(l.tickets/totalLbl*100).toFixed(1)}%</td><td class="mr-cost-num">${fmt.num(l.cost)}</td></tr>`
-    ).join('');
-  }
-}
-
-function openMonthlyReport() {
-  mrRender();
-  document.getElementById('monthlyModal').classList.add('open');
-  document.body.style.overflow = 'hidden';
-}
-function closeMonthlyReport() {
-  document.getElementById('monthlyModal').classList.remove('open');
-  document.body.style.overflow = '';
-}
-document.addEventListener('keydown', e => { if(e.key==='Escape') closeMonthlyReport(); });
-function mrTab(btn, sectionId) {
-  document.querySelectorAll('.mr-tab').forEach(t => t.classList.remove('active'));
-  document.querySelectorAll('.mr-section').forEach(s => s.classList.remove('active'));
-  btn.classList.add('active');
-  document.getElementById(sectionId).classList.add('active');
-}
-</script>
+  </div>
+`).join('');
 
 
-
-
-
-
-
-<script>
-function exportCSExcel(){
+function exportCSExcel() {
   const btn = document.getElementById('exportBtn');
   btn.classList.add('loading'); btn.textContent = '⏳ Формируется...';
-  function makeSheet(rows, colWidths){
+  function makeSheet(rows, widths) {
     const ws = XLSX.utils.aoa_to_sheet(rows);
-    ws['!cols'] = colWidths.map(w => ({ wch: w }));
+    ws['!cols'] = widths.map(w => ({wch:w}));
     return ws;
   }
   setTimeout(() => {
-    
-    const M = BILLZ_DATA.monthly;
     const wb = XLSX.utils.book_new();
-
     const sum = [
       ['CONTACT CENTER — ЕЖЕМЕСЯЧНЫЙ ОТЧЁТ', 'Апрель 2026'],
-      [],
-      ['Показатель','Значение','Пояснение'],
-      ['Всего тикетов', M.tickets, '≈'+Math.round(M.tickets/14)+' в день'],
-      ['CPT', M.cpt, 'Cost per Ticket, сўм'],
-      ['Затраты', M.cost, (M.cost/1e6).toFixed(2)+' млн сўм'],
-      ['LCR', M.lcr, '% — Lost Call Rate'],
-      ['CSAT Отлично', (M.rating_pct||M.csat_pct||0), '%'],
-      ['SLA соблюдён', M.sla_pct, '%'],
-      ['SLA не соблюдён', M.sla_not_met, '%'],
-      ['AFRT', M.afrt, 'среднее время первого ответа'],
-      ['Звонки', M.calls, 'тикетов'],
-      ['Чаты', M.chats, 'тикетов'],
-      ['Желательных', M.desired, 'тикетов'],
-      ['Нежелательных', M.undesired, 'тикетов'],
-      ['Закрыто', M.closed, (M.closed/M.tickets*100).toFixed(1)+'%'],
-      ['Повторные', M.repeat_pct, '%'],
-      ['Тикетов / магазин', M.tpc, M.clients.toLocaleString('ru')+' магазинов'],
-      ['Тикетов / пользователь', M.tpu, M.users.toLocaleString('ru')+' пользователей'],
-      ['Массовый сбой', M.massoviy_cnt, 'тикетов'],
+      [],['Показатель','Значение','Формула / пояснение'],
+      ['Тикеты', M.tickets, 'Все обращения за месяц'],
+      ['Звонки', M.calls, 'Тикеты с каналом "создано вручную"'],
+      ['Чаты', M.chats, 'Все тикеты − звонки'],
+      ['Доля чатов %', +(M.chats/M.tickets*100).toFixed(1), 'Чаты / тикеты × 100'],
+      ['Желательные', M.desired, 'Тип обращения = Желательный'],
+      ['Нежелательные', M.undesired, 'Тип обращения = Нежелательный'],
+      ['Нежел. %', +(M.undesired/M.tickets*100).toFixed(1), 'Нежелательные / тикеты × 100'],
+      ['CPT', 9865, 'Стоимость одного тикета, сум'],
+      ['Затраты', M.cost, 'Тикеты × CPT'],
+      ['Затраты (млн)', +(M.cost/1e6).toFixed(2), ''],
+      ['LCR %', M.lcr, 'Пропущ. >5сек / входящие × 100 (АТС)'],
+      ['CSAT %', M.csat_pct, 'Отлично / всего оценок × 100'],
+      ['CSAT оценок', M.csat_rated||631, 'Кол-во оценённых тикетов'],
+      ['SLA % (чаты)', M.sla_pct, 'FRT ≤ 1мин / замеренных чатов × 100'],
+      ['SLA не соблюдён', M.sla_not_met, '100 − SLA %'],
+      ['AFRT', M.afrt, 'Среднее время первого ответа'],
+      ['Повторные %', M.repeat_pct, 'Повторные / все × 100'],
+      ['Клиентов (магазинов)', STORES, 'На 27.04.2026'],
+      ['Пользователей', USERS, 'На 27.04.2026'],
+      ['Тик/магазин', M.tpc, 'Тикеты / магазины'],
+      ['Тик/пользователь', M.tpu, 'Тикеты / пользователи'],
+      ['Обучений через CC', M.training_tickets||401, 'Тикеты с меткой "Обучени*"'],
+      ['Обучения затраты', (M.training_tickets||401)*9865, 'Обучения × CPT'],
     ];
-    XLSX.utils.book_append_sheet(wb, makeSheet(sum,[30,16,38]), '📊 Сводка');
+    XLSX.utils.book_append_sheet(wb, makeSheet(sum,[36,16,45]), '📊 Сводка');
 
-    const ops = M.operators||[];
-    if(ops.length){
-      const maxT = Math.max(...ops.map(o=>o.tickets));
-      const opH=['#','Оператор','Тикеты','Нагрузка%','Ср.время ч','Закрыто%','SLA%','Рейтинг%','Оценок','Затраты сўм','Затраты млн'];
-      const opR=ops.map((o,i)=>[i+1,o.name,o.tickets,Math.round(o.tickets/maxT*100),o.avg_close,o.close_rate,o.sla_pct||0,o.rating_pct||0,o.rated||0,o.cost,+(o.cost/1e6).toFixed(3)]);
-      XLSX.utils.book_append_sheet(wb, makeSheet([opH,...opR],[4,20,10,12,12,10,10,10,10,18,12]),'👥 Операторы');
-    }
+    const opH=['Оператор','Тикеты','Нагрузка%','Ср.закрытие ч','CSAT%','SLA%','Оценок','Затраты сум'];
+    const opR=(M.operators||[]).map(o=>[o.name,o.tickets,Math.round(o.tickets/maxT*100),o.avg_close,o.rating_pct,o.sla_pct,o.rated||0,o.cost]);
+    XLSX.utils.book_append_sheet(wb, makeSheet([opH,...opR],[22,10,12,14,10,10,10,18]),'👥 Операторы');
 
-    const lbls=M.top_labels||[];
-    if(lbls.length){
-      const tot=lbls.reduce((s,l)=>s+l.tickets,0);
-      const lH=['#','Метка','Тикеты','%','Нежелательных','Затраты сўм','Затраты млн'];
-      const lR=lbls.map((l,i)=>[i+1,l.name,l.tickets,+(l.tickets/tot*100).toFixed(1),l.undesired||0,l.cost,+(l.cost/1e6).toFixed(3)]);
-      XLSX.utils.book_append_sheet(wb, makeSheet([lH,...lR],[4,44,10,8,14,18,12]),'🏷 Метки');
-    }
+    const lblH=['Метка','Тикеты','Желат.','Нежел.','Нежел.%','Затраты сум'];
+    const lblR=(M.top_labels||[]).map(l=>[l.name,l.tickets,l.desired||0,l.undesired||0,+(l.undesired/l.tickets*100).toFixed(1),l.cost]);
+    XLSX.utils.book_append_sheet(wb, makeSheet([lblH,...lblR],[48,10,10,10,10,16]),'🏷 Метки');
 
-    const comps=M.top_companies||[];
-    if(comps.length){
-      const cH=['#','Компания','Тикеты','Нежелат%','Затраты сўм','Топ метка'];
-      const cR=comps.map((c,i)=>[i+1,c.name,c.tickets,c.undesired?Math.round(c.undesired/c.tickets*100):0,c.cost,c.top_labels?.[0]?.label||'']);
-      XLSX.utils.book_append_sheet(wb, makeSheet([cH,...cR],[4,28,10,12,18,38]),'🏢 Компании');
-    }
+    const cH=['#','Компания','Тикеты','Нежел.%','Затраты сум','Топ метка'];
+    const cR=(M.top_companies||[]).map((c,i)=>[i+1,c.name,c.tickets,Math.round(c.undesired/c.tickets*100),c.cost,(c.top_labels||[])[0]?.label||'']);
+    XLSX.utils.book_append_sheet(wb, makeSheet([cH,...cR],[4,28,10,10,16,40]),'🏢 Компании');
 
-    XLSX.writeFile(wb, 'CC_Ежемесячный_Апрель_2026.xlsx');
-
+    XLSX.writeFile(wb,'CC_Ежемесячный_Апрель_2026.xlsx');
     btn.classList.remove('loading');
-    btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Скачать Excel';
+    btn.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Скачать Excel';
   }, 150);
 }
 </script>

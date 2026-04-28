@@ -151,3 +151,20 @@ function checkAndExport(){
   if(pwd==='khbillz2023'){exportCSExcel();}
   else alert('❌ Неверный пароль.');
 }
+// ===== PREMIUM CHART GLOW =====
+
+Chart.defaults.elements.line = {
+  borderWidth: 2,
+  tension: 0.4
+};
+
+Chart.register({
+  id: 'glow',
+  beforeDraw: (chart) => {
+    const ctx = chart.ctx;
+    ctx.save();
+    ctx.shadowColor = 'rgba(59,130,246,0.5)';
+    ctx.shadowBlur = 12;
+    ctx.restore();
+  }
+});

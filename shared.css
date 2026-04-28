@@ -518,3 +518,8 @@ body.light::before { opacity: 0.3; }
   transition:.3s;
   pointer-events: none; /* ВОТ ЭТО КЛЮЧ */
 }
+/* FIX ДЛЯ ГРАФИКОВ */
+
+.card::before {
+  pointer-events: none !important;
+}

@@ -462,7 +462,7 @@ body.light::before { opacity: 0.3; }
   border: 1px solid rgba(255,255,255,0.06);
   transition: all .25s ease;
   position: relative;
-  overflow: hidden;
+  overflow: visible !important;
 }
 
 .card:hover {
@@ -507,4 +507,14 @@ body.light::before { opacity: 0.3; }
 /* таблицы приятнее */
 .tbl tr:hover td {
   background: rgba(255,255,255,0.03);
+}
+.card::before {
+  content:"";
+  position:absolute;
+  inset:-1px;
+  border-radius:inherit;
+  background:linear-gradient(120deg,transparent,rgba(59,130,246,0.2),transparent);
+  opacity:0;
+  transition:.3s;
+  pointer-events: none; /* ВОТ ЭТО КЛЮЧ */
 }

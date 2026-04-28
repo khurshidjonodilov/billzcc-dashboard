@@ -283,13 +283,10 @@ function render() {
   // All weeks comparison
   const allW = Object.entries(W).sort();
   if(charts.wAllWeeks) charts.wAllWeeks.destroy();
-  charts.wAllWeeks = buildNeonBar('wAllWeeksChart',
+  charts.wAllWeeks = buildChannelChart('wAllWeeksChart',
     allW.map(([k,v])=>v.label),
-    [
-      {label:'Звонки %',data:allW.map(([k,v])=>+(v.calls/v.tickets*100).toFixed(1)),color:'#3B82F6',stack:'a'},
-      {label:'Чаты %',  data:allW.map(([k,v])=>+(v.chats/v.tickets*100).toFixed(1)),color:'#8B5CF6',stack:'a'},
-    ],
-    {stacked:true, yFmt:v=>v+'%', yMax:100, radius:4}
+    allW.map(([k,v])=>+(v.calls/v.tickets*100).toFixed(1)),
+    allW.map(([k,v])=>+(v.chats/v.tickets*100).toFixed(1))
   );
 }
 

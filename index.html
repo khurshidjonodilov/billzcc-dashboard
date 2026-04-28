@@ -277,12 +277,17 @@ const maxT = Math.max(...ops.map(o=>o.tickets));
 document.getElementById('opTable').innerHTML = ops.slice(0,14).map(op => opRow(op, maxT)).join('');
 
 /* Channel doughnut */
-charts.chan = buildNeonDoughnut('chanChart',
-  ['Звонки', 'Чаты'],
-  [M.calls, M.chats],
-  ['#3B82F6','#8B5CF6'],
-  { cutout: '62%', legendPos: 'bottom' }
-);
+charts.chan = new Chart(document.getElementById('chanChart'), {
+  type: 'doughnut',
+  data: { labels: ['Звонки', 'Чаты'],
+    datasets: [{ data: [M.calls, M.chats],
+      backgroundColor: ['rgba(59,130,246,0.85)', 'rgba(139,92,246,0.85)'],
+      borderWidth: 2, borderColor: '#111318', hoverOffset: 6 }]},
+  options: { ...chartBase, cutout: '62%',
+    plugins: { ...chartBase.plugins,
+      legend: { display: true, position: 'bottom',
+        labels: { color: '#9CA3AF', font: { size: 11 }, padding: 14, usePointStyle: true } } } }
+});
 document.getElementById('chanNote').textContent =
   `Звонки: ${fmt.pct(M.calls/M.tickets*100)} · Чаты: ${fmt.pct(M.chats/M.tickets*100)}`;
 
@@ -292,12 +297,10 @@ const maxL = lbls.length ? Math.max(...lbls.map(l=>l.tickets)) : 1;
 document.getElementById('lblTable').innerHTML = lbls.map(l => labelRow(l, maxL)).join('');
 
 const t8 = lbls.slice(0, 8);
-charts.labels = buildNeonHorizBar('labelsChart',
-  t8.map(l => l.name.length > 35 ? l.name.slice(0,35)+'…' : l.name),
+charts.labels = buildHorizBar('labelsChart',
+  t8.map(l => l.name.length > 38 ? l.name.slice(0,38)+'…' : l.name),
   t8.map(l => l.tickets),
-  (v,i) => NEON_COLORS[i % NEON_COLORS.length] + 'CC',
-  { yFmt: v => v.toLocaleString('ru'),
-    tooltipFmt: ctx => ` ${ctx.raw.toLocaleString('ru')} тикетов` }
+  (v, i) => `rgba(96,165,250,${1 - i*0.1})`
 );
 
 /* Companies */
@@ -309,27 +312,22 @@ document.getElementById('companiesBlock').innerHTML = comps.length
 /* Chat trend */
 const hist = (BILLZ_DATA.cs || {}).chat_share_history || [];
 if (hist.length) {
-  charts.chatTrend = buildNeonLine('chatTrendChart',
-    hist.map(h=>h.week),
-    [{
-      label: 'Доля чатов %',
+  charts.chatTrend = new Chart(document.getElementById('chatTrendChart'), {
+    type: 'line',
+    data: { labels: hist.map(h=>h.week), datasets: [{
       data: hist.map(h=>h.chats_pct),
-      color: '#8B5CF6',
-      width: 2.5,
-      tension: 0.4,
-    },{
-      label: 'LCR >5сек %',
-      data: hist.map(h=>h.lcr_5sec),
-      color: '#EF4444',
-      width: 1.5,
-      fill: false,
-      dash: [5,3],
-      points: false,
-      tension: 0.3,
-    }],
-    { yMin:0, yMax:55, yFmt: v=>v+'%',
-      tooltipFmt: ctx=>`${ctx.dataset.label}: ${ctx.raw.toFixed(1)}%` }
-  );
+      borderColor: '#8B5CF6',
+      backgroundColor: 'rgba(139,92,246,0.08)',
+      borderWidth: 2, pointRadius: 3.5,
+      pointBackgroundColor: hist.map(h=>h.chats_pct<42?'#EF4444':h.chats_pct>50?'#10B981':'#8B5CF6'),
+      fill: true, tension: 0.35,
+    }]},
+    options: { ...chartBase, scales: {
+      x: { grid: { display: false }, ticks: { font: { size: 9 } } },
+      y: { grid: { color: CHART_GRID }, min: 35, max: 55,
+        ticks: { font: { size: 9 }, callback: v => v+'%' } },
+    }}
+  });
 }
 
 /* Chat causes */

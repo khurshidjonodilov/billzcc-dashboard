@@ -2,119 +2,140 @@
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BILLZ CC · Ежедневный</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>BILLZ CC · Ежедневно</title>
 <link rel="stylesheet" href="shared.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 <script src="data.js"></script>
 <script src="shared.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
-<style>
-.export-bar{margin-top:32px;padding:20px 24px;background:var(--surface);border:1px solid var(--br2);border-radius:12px;display:flex;align-items:center;justify-content:space-between;gap:16px}
-.export-bar-left{display:flex;flex-direction:column;gap:4px}
-.export-bar-title{font-size:13px;font-weight:700;color:var(--text)}
-.export-bar-sub{font-size:11px;color:var(--text3)}
-.export-btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--sans);font-size:13px;font-weight:600;padding:10px 22px;border-radius:8px;cursor:pointer;border:none;transition:all .18s;background:linear-gradient(135deg,#1A7A4A,#10B981);color:#fff;box-shadow:0 2px 12px rgba(16,185,129,0.25)}
-.export-btn:hover{transform:translateY(-1px);box-shadow:0 4px 20px rgba(16,185,129,0.4)}
-.export-btn:active{transform:translateY(0)}
-.export-btn svg{width:16px;height:16px;flex-shrink:0}
-.export-btn.loading{opacity:.7;pointer-events:none}
-</style>
 </head>
 <body>
 <nav class="top-nav">
-  <div class="nav-brand">BILLZ · CC</div>
-  <a href="index.html" class="nav-link">Ежемесячно</a>
-  <a href="weekly.html" class="nav-link">Еженедельно</a>
+  <div class="nav-brand"><div class="nav-brand-dot"></div>BILLZ · CC</div>
+  <a href="index.html"     class="nav-link">Ежемесячно</a>
+  <a href="weekly.html"    class="nav-link">Еженедельно</a>
   <a href="quarterly.html" class="nav-link">Квартал</a>
-  <a href="cs.html" class="nav-link">CS Анализ</a>
-  <a href="daily.html" class="nav-link active">Ежедневно</a>
-  <button class="theme-toggle" onclick="toggleTheme()" id="themeBtn"><span class="toggle-icon">☀️</span><span id="themeLabel">Светлая</span></button>
-  <div class="nav-right" id="navPeriod"></div>
+  <a href="cs.html"        class="nav-link">CS Анализ</a>
+  <a href="daily.html"     class="nav-link active">Ежедневно</a>
+  <div class="nav-right">
+    <button class="theme-toggle" onclick="toggleTheme()" id="themeBtn">
+      <span class="toggle-icon">☀️</span><span id="themeLabel">Светлая</span>
+    </button>
+  </div>
 </nav>
+
 <div class="wrap">
+
+  <!-- PAGE HEADER -->
   <div class="phdr">
     <div>
-      <div class="phdr-eyebrow">BILLZ · Колл-центр · Ежедневный отчёт</div>
-      <div class="phdr-title"><em id="dTitle">День</em></div>
+      <div class="phdr-eyebrow">BILLZ · КОЛЛ-ЦЕНТР · ЕЖЕДНЕВНЫЙ ОТЧЁТ</div>
+      <div class="phdr-title" id="dTitle">День</div>
       <div class="phdr-sub" id="dSub"></div>
-      <div class="period-bar" id="daySwitcher" style="max-width:900px;flex-wrap:wrap"></div>
-      <div style="margin-top:8px">
-        <button class="period-btn active" id="btnWith" onclick="setMode('with')">Полная статистика</button>
-        <button class="period-btn" id="btnWithout" onclick="setMode('without')">Без «Массового сбоя»</button>
+      <div class="period-bar" id="daySwitcher" style="max-width:960px;flex-wrap:wrap"></div>
+      <div style="margin-top:8px;display:flex;gap:6px">
+        <button class="period-btn active" id="btnWith"    onclick="setMode('with')">Полная статистика</button>
+        <button class="period-btn"        id="btnWithout" onclick="setMode('without')">Без «Массового сбоя»</button>
       </div>
     </div>
     <div class="phdr-right">
-      <div class="cost-ey">Затраты за день</div>
+      <div class="cost-ey">ЗАТРАТЫ ЗА ДЕНЬ</div>
       <div class="cost-n" id="costVal">—</div>
       <div class="cost-d">сум</div>
       <div class="live"><span class="live-dot"></span>данные актуальны</div>
     </div>
   </div>
 
-  
-  <!-- Team status alert -->
-  <div id="teamAlert" style="background:linear-gradient(135deg,rgba(239,68,68,0.12),rgba(245,158,11,0.08));
-    border:1px solid rgba(239,68,68,0.3);border-radius:12px;padding:14px 20px;margin-bottom:16px;
-    display:flex;gap:14px;align-items:flex-start">
-    <div style="font-size:24px;flex-shrink:0">⚠️</div>
-    <div style="flex:1">
-      <div style="font-size:12px;font-weight:700;color:#F87171;letter-spacing:.05em;text-transform:uppercase;margin-bottom:6px">
-        Дефицит команды — контекст для данных
-      </div>
-      <div style="font-size:12px;color:var(--text2);line-height:1.7">
-        Уволены: <strong style="color:#fff">Шохинабону</strong> (учёба) и <strong style="color:#fff">Нурлан</strong>.
+  <!-- TEAM ALERT -->
+  <div class="team-alert" id="teamAlert">
+    <div class="team-alert-icon">⚠</div>
+    <div>
+      <div class="team-alert-title">Дефицит команды — контекст для данных</div>
+      <div class="team-alert-text">
+        Уволены: <strong>Шохинабону</strong> (учёба) и <strong>Нурлан</strong>.
         Алишерова Робия переведена в КС. Итого: <strong style="color:#FCD34D">11 операторов, 7–8 в смене</strong>.
         Именно эти сотрудники перекрывали пиковые часы <strong style="color:#F87171">17:00–22:00</strong>.
-        Команда держится на допчасах — риск выгорания.
-        Заявка в HR подана. Митинг с КС в среду.
+        Команда держится на допчасах — риск выгорания. Заявка в HR подана. Митинг с КС в среду.
       </div>
     </div>
-    <button onclick="this.parentElement.style.display='none'"
-      style="background:none;border:none;color:var(--text4);cursor:pointer;font-size:16px;flex-shrink:0;padding:0 4px">✕</button>
+    <button onclick="this.parentElement.style.display='none'" style="background:none;border:none;color:#4A5568;cursor:pointer;font-size:15px;flex-shrink:0;padding:0 4px;margin-left:auto">✕</button>
   </div>
 
+  <!-- KPI -->
   <div class="kpi-grid" id="kpiGrid"></div>
   <div class="alert-grid" id="alertGrid"></div>
 
-  <div class="sec"><div class="sec-num">01</div><div class="sec-title">Нагрузка по часам</div><div class="sec-line"></div></div>
+  <!-- 01 HOURLY -->
+  <div class="sec"><div class="sec-num">01</div><div class="sec-title">Нагрузка по часам суток</div><div class="sec-line"></div></div>
   <div class="row one">
     <div class="card">
-      <div class="card-hd"><div class="card-title">Тикеты по часам суток</div><div class="card-note">красный = пиковая нагрузка</div></div>
+      <div class="card-hd">
+        <div class="card-title">Тикеты по часам суток</div>
+        <div class="card-note" style="color:var(--red2)">красный = пиковая нагрузка</div>
+      </div>
       <div style="position:relative;height:170px"><canvas id="hourlyChart"></canvas></div>
     </div>
   </div>
 
+  <!-- 02 OPERATORS -->
   <div class="sec"><div class="sec-num">02</div><div class="sec-title">Нагрузка на операторов</div><div class="sec-line"></div></div>
   <div class="row two">
     <div class="card">
       <div class="card-hd"><div class="card-title">Производительность</div><div class="card-note">SLA = % ответов ≤ 1 мин</div></div>
-      <table class="tbl"><thead><tr><th>Оператор</th><th>Тикеты</th><th>Нагрузка</th><th>Ср. время</th><th>SLA</th><th>Затраты</th></tr></thead><tbody id="opTable"></tbody></table>
+      <table class="tbl">
+        <thead><tr><th>Оператор</th><th>Тикеты</th><th>Нагрузка</th><th>Ср. время</th><th>Закрыто</th><th>SLA</th><th>Затраты</th></tr></thead>
+        <tbody id="opTable"></tbody>
+      </table>
     </div>
     <div class="card">
-      <div class="card-hd"><div class="card-title">Распределение типов</div></div>
-      <div class="leg"><div class="li"><span class="ld" style="background:#34D399"></span>SLA соблюдён</div><div class="li"><span class="ld" style="background:#DC2626"></span>Не соблюдён</div></div>
-      <div style="position:relative;height:150px"><canvas id="slaChart"></canvas></div>
-      <div style="margin-top:14px">
-        <div class="leg"><div class="li"><span class="ld" style="background:#059669"></span>Желательные</div><div class="li"><span class="ld" style="background:#F87171"></span>Нежелательные</div></div>
-        <div style="position:relative;height:130px"><canvas id="typeChart"></canvas></div>
+      <div class="card-hd"><div class="card-title">SLA и типы обращений</div></div>
+      <div class="leg" style="display:flex;gap:12px;margin-bottom:8px;flex-wrap:wrap">
+        <div style="display:flex;align-items:center;gap:5px;font-size:11px;color:var(--text3)"><span style="width:8px;height:8px;border-radius:2px;background:#34D399;flex-shrink:0;display:inline-block"></span>Соблюдён</div>
+        <div style="display:flex;align-items:center;gap:5px;font-size:11px;color:var(--text3)"><span style="width:8px;height:8px;border-radius:2px;background:#DC2626;flex-shrink:0;display:inline-block"></span>Не соблюдён</div>
+      </div>
+      <div style="position:relative;height:140px"><canvas id="slaChart"></canvas></div>
+      <div style="margin-top:12px">
+        <div class="leg" style="display:flex;gap:12px;margin-bottom:6px;flex-wrap:wrap">
+          <div style="display:flex;align-items:center;gap:5px;font-size:11px;color:var(--text3)"><span style="width:8px;height:8px;border-radius:2px;background:#059669;flex-shrink:0;display:inline-block"></span>Желательные</div>
+          <div style="display:flex;align-items:center;gap:5px;font-size:11px;color:var(--text3)"><span style="width:8px;height:8px;border-radius:2px;background:#F87171;flex-shrink:0;display:inline-block"></span>Нежелательные</div>
+        </div>
+        <div style="position:relative;height:120px"><canvas id="typeChart"></canvas></div>
       </div>
     </div>
   </div>
 
+  <!-- 03 LABELS -->
   <div class="sec"><div class="sec-num">03</div><div class="sec-title">Метки — затраты по CPT</div><div class="sec-line"></div></div>
   <div class="row two">
     <div class="card">
       <div class="card-hd"><div class="card-title">Метки за день</div></div>
-      <table class="tbl"><thead><tr><th>Метка</th><th>Тикеты</th><th>Объём</th><th>Тип</th><th>Затраты</th></tr></thead><tbody id="lblTable"></tbody></table>
+      <table class="tbl">
+        <thead><tr><th>Метка</th><th>Тикеты</th><th>Объём</th><th>Тип</th><th>Затраты</th></tr></thead>
+        <tbody id="lblTable"></tbody>
+      </table>
     </div>
     <div class="card">
       <div class="card-hd"><div class="card-title">Топ меток — объём</div></div>
-      <div style="position:relative;height:280px"><canvas id="labelsChart"></canvas></div>
+      <div style="position:relative;height:260px"><canvas id="labelsChart"></canvas></div>
     </div>
   </div>
 
-  <div class="sec"><div class="sec-num">04</div><div class="sec-title">Топ компаний · разбивка по меткам</div><div class="sec-line"></div></div>
+  <!-- 04 CHANNEL SHARE -->
+  <div class="sec"><div class="sec-num">04</div><div class="sec-title">Доля звонков и чатов</div><div class="sec-line"></div></div>
+  <div class="row two">
+    <div class="card">
+      <div class="card-hd"><div class="card-title">Звонки vs Чаты за день</div><div class="card-note" id="dChannelNote"></div></div>
+      <div style="position:relative;height:180px"><canvas id="dChannelChart"></canvas></div>
+    </div>
+    <div class="card">
+      <div class="card-hd"><div class="card-title">Последние 14 дней — доля чатов</div></div>
+      <div style="position:relative;height:180px"><canvas id="d14Chart"></canvas></div>
+    </div>
+  </div>
+
+  <!-- 05 COMPANIES -->
+  <div class="sec"><div class="sec-num">05</div><div class="sec-title">Топ компаний · разбивка по меткам</div><div class="sec-line"></div></div>
   <div class="row one">
     <div class="card">
       <div class="card-hd"><div class="card-title">Компания · тикеты · затраты · топ метки</div></div>
@@ -122,69 +143,53 @@
     </div>
   </div>
 
-
-      <!-- INSIGHTS -->
-      <div class="sec"><div class="sec-num">05</div><div class="sec-title">Инсайты и выводы дня</div><div class="sec-line"></div></div>
-      <div class="row one" id="insightsBlock" style="display:none">
-        <div class="card" id="insightsCard"></div>
-      </div>
-
-  
-<!-- ── Export Bar ─────────────────────────────────────────────────────────── -->
-
-  <div class="sec"><div class="sec-num">06</div><div class="sec-title">Доля звонков и чатов</div><div class="sec-line"></div></div>
-  <div class="row two">
-    <div class="card">
-      <div class="card-hd"><div class="card-title">Звонки vs Чаты за день</div><div class="card-note" id="dChannelNote"></div></div>
-      <div style="position:relative;height:160px"><canvas id="dChannelChart"></canvas></div>
-    </div>
-    <div class="card">
-      <div class="card-hd"><div class="card-title">Последние 14 дней — доля чатов</div></div>
-      <div style="position:relative;height:160px"><canvas id="d14DaysChart"></canvas></div>
-    </div>
+  <!-- 06 INSIGHTS -->
+  <div id="insightsSection" style="display:none">
+    <div class="sec"><div class="sec-num">06</div><div class="sec-title">Инсайты и выводы дня</div><div class="sec-line"></div></div>
+    <div class="row one"><div class="card" id="insightsCard"></div></div>
   </div>
 
+  <!-- EXPORT -->
   <div class="export-bar">
-  <div class="export-bar-left">
-    <div class="export-bar-title">📥 Скачать данные — Ежедневный отчёт</div>
-    <div class="export-bar-sub">Все данные текущего раздела будут выгружены в Excel файл · несколько листов</div>
+    <div class="export-bar-left">
+      <div class="export-bar-title">📥 Скачать данные — Ежедневный отчёт</div>
+      <div class="export-bar-sub">Excel файл · несколько листов · пароль для скачивания</div>
+    </div>
+    <button class="export-btn" id="exportBtn" onclick="checkAndExport()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
+        <polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
+      </svg>
+      Скачать Excel
+    </button>
   </div>
-  <button class="export-btn" id="exportBtn" onclick="checkAndExport()">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-      <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/>
-      <polyline points="7 10 12 15 17 10"/>
-      <line x1="12" y1="15" x2="12" y2="3"/>
-    </svg>
-    Скачать Excel
-  </button>
-</div>
 
   <div class="ftr">
-    <div class="fl">BILLZ · CC Intelligence · Omnidesk CRM · без тикетов Дильшода</div>
-    <div class="fr">Ежедневный отчёт · <span id="ftrPeriod"></span></div>
+    <div class="fl">BILLZ · CC Intelligence · Omnidesk CRM</div>
+    <div class="fr">
+      <span>📅 Обновлено: <strong style="color:var(--text3)">27.04.2026</strong></span>
+      <span id="ftrPeriod">Ежедневно</span>
+    </div>
   </div>
 </div>
 
 <script>
 const D_ALL = BILLZ_DATA.daily;
-const keys = Object.keys(D_ALL).sort();
-let currentDay = keys[keys.length-1];
+const keys  = Object.keys(D_ALL).sort();
+let currentDay = keys[keys.length - 1];
 let mode = 'with';
 let charts = {};
 
-// Hourly data per day (approximate from total hourly distribution)
-// Hourly data now comes from DK.hourly per day
-
-// Build day switcher
+/* Build day switcher */
 const switcher = document.getElementById('daySwitcher');
 keys.forEach(k => {
   const d = D_ALL[k];
   const btn = document.createElement('button');
-  btn.className = 'period-btn' + (k===currentDay?' active':'');
-  btn.textContent = d.label;
+  btn.className = 'period-btn' + (k === currentDay ? ' active' : '');
+  btn.textContent = d.label || k.slice(5);
   btn.onclick = () => {
     currentDay = k;
-    switcher.querySelectorAll('.period-btn').forEach(b=>b.classList.remove('active'));
+    switcher.querySelectorAll('.period-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
     render();
   };
@@ -193,308 +198,237 @@ keys.forEach(k => {
 
 function setMode(m) {
   mode = m;
-  document.getElementById('btnWith').classList.toggle('active', m==='with');
-  document.getElementById('btnWithout').classList.toggle('active', m==='without');
+  document.getElementById('btnWith').classList.toggle('active', m === 'with');
+  document.getElementById('btnWithout').classList.toggle('active', m !== 'with');
   render();
 }
 
 function render() {
   const DK = D_ALL[currentDay];
-  const D = mode==='with' ? DK : {...DK, ...DK.no_massoviy};
+  if (!DK) return;
+  const D = (mode === 'with' || !DK.no_massoviy) ? DK : { ...DK, ...DK.no_massoviy };
 
-  document.getElementById('dTitle').textContent = DK.label;
-  document.getElementById('dSub').textContent = `${D.tickets} тикетов · ${D.calls} звонков · ${D.chats} чатов`;
-  document.getElementById('navPeriod').textContent = DK.label;
-  document.getElementById('ftrPeriod').textContent = DK.label;
+  /* Header */
+  document.getElementById('dTitle').textContent = DK.label || currentDay;
+  document.getElementById('dSub').textContent =
+    `${D.tickets} тикетов · ${D.calls} звонков · ${D.chats} чатов`;
   document.getElementById('costVal').textContent = fmt.mln(D.cost);
+  document.getElementById('ftrPeriod').textContent = DK.label || currentDay;
 
+  /* KPIs */
   document.getElementById('kpiGrid').innerHTML = [
-    kpi('Тикеты за день',   fmt.num(D.tickets),             `${D.label||currentDay}`,               'blue',  '', [], [`Звонки: ${fmt.num(D.calls)}`,`Чаты: ${fmt.num(D.chats)}`]),
-    kpi('LCR (> 5 сек)',    fmt.pct(D.lcr||0),              `из входящих звонков`,                  (D.lcr||0)>8?'red':(D.lcr||0)>5?'amber':'sage', (D.lcr||0)>8?'▲':''),
-    kpi('SLA ≤ 1 мин',      fmt.pct(D.sla_pct),             `Не соблюдён: ${fmt.pct(D.sla_not_met)}`,(D.sla_pct>=80)?'sage':'amber'),
-    kpi('AFRT',             D.afrt,                         `ср. первый ответ`,                     'blue'),
-    kpi('Нежелательные',    fmt.pct(D.undesired/D.tickets*100), `${fmt.num(D.undesired)} тикетов`,  'red',   '▲'),
-    kpi('Доля чатов',       fmt.pct(D.chats/D.tickets*100),  `Звонки: ${fmt.pct(D.calls/D.tickets*100)}`, 'purple'),
-    kpi('Затраты дня',      fmt.mln(D.cost),                 `${fmt.num(D.tickets)} × 9 865 сўм`,   'amber'),
-    kpi('Пропущено',        fmt.num(D.missed_calls||0),      `из ${fmt.num(D.incoming_calls||D.calls)} входящих`, (D.missed_calls||0)>15?'red':'dark'),
+    kpi('Тикеты', fmt.num(D.tickets), DK.label || currentDay, 'blue', '', [],
+      [`Звонки: ${fmt.num(D.calls)}`, `Чаты: ${fmt.num(D.chats)}`]),
+    kpi('LCR > 5 сек', fmt.pct(D.lcr || 0), 'из входящих звонков',
+      (D.lcr || 0) > 8 ? 'red' : (D.lcr || 0) > 5 ? 'amber' : 'sage',
+      (D.lcr || 0) > 8 ? '▲' : '', [], [(D.lcr || 0) > 8 ? 'Высокий' : (D.lcr || 0) > 5 ? 'Умеренный' : 'Хороший']),
+    kpi('SLA ≤ 1 мин', fmt.pct(D.sla_pct), `Не соблюдён: ${fmt.pct(D.sla_not_met)}`,
+      D.sla_pct >= 80 ? 'sage' : 'amber'),
+    kpi('AFRT', D.afrt, 'среднее время первого ответа', 'blue'),
+    kpi('Нежелательные', fmt.pct((D.undesired || 0) / D.tickets * 100),
+      `${fmt.num(D.undesired || 0)} тикетов`, 'red', '▲'),
+    kpi('Доля чатов', fmt.pct(D.chats / D.tickets * 100),
+      `Звонки: ${fmt.pct(D.calls / D.tickets * 100)}`, 'purple'),
+    kpi('Затраты', fmt.mln(D.cost), `${fmt.num(D.tickets)} × 9 865 сум`, 'amber'),
+    kpi('Пропущено', fmt.num(D.missed_calls || 0),
+      `из ${fmt.num(D.incoming_calls || D.calls)} входящих`,
+      (D.missed_calls || 0) > 15 ? 'red' : 'dark'),
   ].join('');
 
+  /* Alerts */
+  const undPct = (D.undesired || 0) / D.tickets * 100;
   document.getElementById('alertGrid').innerHTML = `
-    <div class="alert ${D.undesired/D.tickets>0.5?'rose':'gold'}"><div class="alert-num">01</div><div><div class="al-label">Нежелательные ${fmt.pct(D.undesired/D.tickets*100)}</div><div class="al-txt">${fmt.num(D.undesired)} нежелательных vs ${fmt.num(D.desired)} желательных за ${DK.label}.</div></div></div>
-    <div class="alert gold"><div class="alert-num">02</div><div><div class="al-label">SLA · AFRT</div><div class="al-txt">SLA соблюдён: ${fmt.pct(D.sla_pct)}. Не соблюдён: ${fmt.pct(D.sla_not_met)}. AFRT: ${D.afrt}.</div></div></div>
-    <div class="alert gold"><div class="alert-num">03</div><div><div class="al-label">Затраты дня</div><div class="al-txt">${fmt.mln(D.cost)} · ${fmt.num(D.tickets)} тикетов × 9 865 сум. Открытых: ${D.open}.</div></div></div>
-    <div class="alert ${D.sla_not_met>2?'rose':'gold'}"><div class="alert-num">04</div><div><div class="al-label">${D.sla_not_met>2?'Внимание':'Info'} · SLA не соблюдён ${fmt.pct(D.sla_not_met)}</div><div class="al-txt">Норма: ≤ 2%. Повторные обращения: ${fmt.pct(D.repeat_pct)}.</div></div></div>
+    <div class="alert ${undPct > 50 ? 'rose' : 'gold'}">
+      <div class="alert-num">01</div>
+      <div><div class="al-label">Нежелательные ${fmt.pct(undPct)}</div>
+      <div class="al-txt">${fmt.num(D.undesired || 0)} нежелательных · ${fmt.num(D.desired || 0)} желательных · повторные: ${fmt.pct(D.repeat_pct)}.</div></div>
+    </div>
+    <div class="alert ${D.sla_not_met > 25 ? 'rose' : 'gold'}">
+      <div class="alert-num">02</div>
+      <div><div class="al-label">SLA · FRT</div>
+      <div class="al-txt">SLA соблюдён: ${fmt.pct(D.sla_pct)} · не соблюдён: ${fmt.pct(D.sla_not_met)}. AFRT: ${D.afrt}.</div></div>
+    </div>
+    <div class="alert gold">
+      <div class="alert-num">03</div>
+      <div><div class="al-label">Затраты дня</div>
+      <div class="al-txt">${fmt.mln(D.cost)} · ${fmt.num(D.tickets)} тикетов × 9 865 сум. Закрыто: ${D.closed}, открыто: ${D.open}.</div></div>
+    </div>
+    <div class="alert ${(D.lcr || 0) > 8 ? 'rose' : 'gold'}">
+      <div class="alert-num">04</div>
+      <div><div class="al-label">LCR ${fmt.pct(D.lcr || 0)} ${(D.lcr || 0) > 8 ? '— Высокий' : (D.lcr || 0) > 5 ? '— Умеренный' : '— Хороший'}</div>
+      <div class="al-txt">Пропущено: ${fmt.num(D.missed_calls || 0)} из ${fmt.num(D.incoming_calls || D.calls)} входящих. Исходящих: ${fmt.num(D.outgoing_calls || 0)}.</div></div>
+    </div>
   `;
 
-  Object.values(charts).forEach(c=>c.destroy()); charts={};
+  /* Destroy old charts */
+  Object.values(charts).forEach(c => { try { c.destroy(); } catch(e) {} });
+  charts = {};
 
-  // Hourly — per-day data from DK.hourly
-  const hourlyCanvas = document.getElementById('hourlyChart');
-  if (DK.hourly && Object.keys(DK.hourly).length > 0) {
-    const hKeys = Object.keys(DK.hourly).sort();
-    const hVals = hKeys.map(h => DK.hourly[h] || 0);
+  /* Hourly chart */
+  const hourly = DK.hourly || {};
+  const hKeys = Object.keys(hourly).sort();
+  if (hKeys.length > 0) {
+    const hVals = hKeys.map(h => hourly[h] || 0);
     const mxH = Math.max(...hVals) || 1;
-    charts.hourly = new Chart(hourlyCanvas, {
-      type:'bar',
-      data:{labels:hKeys.map(h=>h+':00'),datasets:[{
-        data:hVals,
-        backgroundColor:hVals.map(v=>{
-          const r=v/mxH;
-          return r>.85?'rgba(239,68,68,0.85)':r>.55?'rgba(245,158,11,0.8)':r>.25?'rgba(59,130,246,0.75)':'rgba(59,130,246,0.3)';
+    charts.hourly = new Chart(document.getElementById('hourlyChart'), {
+      type: 'bar',
+      data: { labels: hKeys.map(h => h + ':00'), datasets: [{
+        data: hVals,
+        backgroundColor: hVals.map(v => {
+          const r = v / mxH;
+          return r > .8 ? 'rgba(239,68,68,0.85)' : r > .55 ? 'rgba(245,158,11,0.8)' : r > .28 ? 'rgba(59,130,246,0.75)' : 'rgba(59,130,246,0.35)';
         }),
-        borderRadius:4,
-        borderSkipped:false,
+        borderRadius: 4, borderSkipped: false,
       }]},
-      options:{...chartBase,
-        scales:{
-          x:{grid:{display:false},ticks:{font:{size:10},color:'#4A5E8A'}},
-          y:{grid:{color:'rgba(255,255,255,0.06)'},ticks:{font:{size:10},color:'#4A5E8A'}},
+      options: { ...chartBase,
+        scales: {
+          x: { grid: { display: false }, ticks: { font: { size: 10 } } },
+          y: { grid: { color: CHART_GRID }, ticks: { font: { size: 10 } } },
         },
-        plugins:{...chartBase.plugins,
-          tooltip:{...CHART_TT, callbacks:{
-            label: ctx => ` ${ctx.raw} тикетов`
-          }}
-        }
+        plugins: { ...chartBase.plugins, tooltip: { ...CHART_TT, callbacks: { label: ctx => ` ${ctx.raw} тикетов` } } }
       }
     });
   } else {
-    // No hourly data - show placeholder
-    const ctx = hourlyCanvas.getContext('2d');
-    ctx.fillStyle = 'rgba(255,255,255,0.05)';
-    ctx.fillRect(0,0,hourlyCanvas.width,hourlyCanvas.height);
-    ctx.fillStyle = '#4A5E8A';
-    ctx.font = '13px Arial';
-    ctx.textAlign = 'center';
-    ctx.fillText('Почасовые данные не доступны', hourlyCanvas.width/2, hourlyCanvas.height/2);
+    /* no hourly data — clear canvas gracefully */
+    const cv = document.getElementById('hourlyChart');
+    const ctx = cv.getContext('2d');
+    ctx.clearRect(0, 0, cv.width, cv.height);
+    ctx.fillStyle = 'rgba(255,255,255,0.04)';
+    ctx.fillRect(0, 0, cv.width, cv.height);
+    ctx.fillStyle = '#4A5568'; ctx.font = '12px Inter'; ctx.textAlign = 'center';
+    ctx.fillText('Почасовые данные недоступны для этого дня', cv.width / 2, cv.height / 2);
   }
 
+  /* SLA & Type doughnuts */
   charts.sla = buildDoughnut('slaChart',
-    ['Соблюдён','Не соблюдён'],[D.sla_pct,D.sla_not_met],['#34D399','#DC2626']
-  );
+    ['Соблюдён', 'Не соблюдён'], [D.sla_pct, D.sla_not_met], ['#34D399', '#DC2626']);
   charts.type = buildDoughnut('typeChart',
-    ['Желательные','Нежелательные'],[D.desired,D.undesired],['#059669','#F87171']
-  );
+    ['Желательные', 'Нежелательные'], [D.desired || 0, D.undesired || 0], ['#059669', '#F87171']);
 
-  const ops = D.operators||DK.operators;
-  const maxT = ops.length ? Math.max(...ops.map(o=>o.tickets)) : 1;
-  document.getElementById('opTable').innerHTML = ops.map(op=>{
-    const bw=Math.round(op.tickets/maxT*100);
-    const tc=op.avg_close<=15?'f':op.avg_close<=30?'m':'s';
-    const sc=(op.sla_pct||0)>=98?'ok':(op.sla_pct||0)>=95?'warn':'bad';
-    return `<tr><td class="n-name">${op.name}</td><td class="n-num">${fmt.num(op.tickets)}</td><td><div class="bw"><div class="bb"><div class="bf" style="width:${bw}%"></div></div><span class="bp">${bw}%</span></div></td><td><span class="tv ${tc}">${op.avg_close} ч</span></td><td><span class="b ${sc}">${op.sla_pct||0}%</span></td><td class="cost-cell">${fmt.mln(op.cost)}</td></tr>`;
-  }).join('');
+  /* Operators */
+  const ops = D.operators || DK.operators || [];
+  const maxT = ops.length ? Math.max(...ops.map(o => o.tickets)) : 1;
+  document.getElementById('opTable').innerHTML = ops.length
+    ? ops.map(op => opRow(op, maxT)).join('')
+    : '<tr><td colspan="7" style="text-align:center;color:var(--text4);padding:16px">Нет данных</td></tr>';
 
-  const lbls = D.top_labels||DK.top_labels;
-  if(lbls.length) {
-    const maxL = Math.max(...lbls.slice(0,10).map(l=>l.tickets));
-    document.getElementById('lblTable').innerHTML = lbls.slice(0,10).map(l=>labelRow(l,maxL)).join('');
-    const t8 = lbls.slice(0,8);
+  /* Labels */
+  const lbls = D.top_labels || DK.top_labels || [];
+  if (lbls.length) {
+    const maxL = Math.max(...lbls.slice(0, 10).map(l => l.tickets));
+    document.getElementById('lblTable').innerHTML = lbls.slice(0, 10).map(l => labelRow(l, maxL)).join('');
+    const t8 = lbls.slice(0, 8);
     charts.labels = buildHorizBar('labelsChart',
-      t8.map(l=>l.name.length>30?l.name.slice(0,30)+'…':l.name),
-      t8.map(l=>l.tickets),
-      (_,i)=>`rgba(232,184,109,${1-i*0.1})`
+      t8.map(l => l.name.length > 32 ? l.name.slice(0, 32) + '…' : l.name),
+      t8.map(l => l.tickets),
+      (_, i) => `rgba(96,165,250,${1 - i * 0.1})`
     );
+  } else {
+    document.getElementById('lblTable').innerHTML =
+      '<tr><td colspan="5" style="text-align:center;color:var(--text4);padding:16px">Нет данных по меткам</td></tr>';
   }
 
-  const comps = D.top_companies||DK.top_companies||[];
-  document.getElementById('companiesBlock').innerHTML = comps.length
-
-  // Channel share
-  if(charts.dChannel) charts.dChannel.destroy();
-  charts.dChannel = new Chart(document.getElementById('dChannelChart'), {
-    type:'doughnut',
-    data:{labels:['Звонки','Чаты'],datasets:[{data:[D.calls,D.chats],
-      backgroundColor:['rgba(59,130,246,0.8)','rgba(139,92,246,0.8)'],borderWidth:0}]},
-    options:{...chartBase,cutout:'60%',plugins:{...chartBase.plugins,
-      legend:{display:true,position:'right',labels:{color:'#64748B',font:{size:11},padding:12}}}}
+  /* Channel doughnut */
+  charts.chan = new Chart(document.getElementById('dChannelChart'), {
+    type: 'doughnut',
+    data: { labels: ['Звонки', 'Чаты'], datasets: [{
+      data: [D.calls, D.chats],
+      backgroundColor: ['rgba(59,130,246,0.8)', 'rgba(139,92,246,0.8)'],
+      borderWidth: 0, hoverOffset: 4,
+    }]},
+    options: { ...chartBase, cutout: '62%', plugins: { ...chartBase.plugins,
+      legend: { display: true, position: 'bottom', labels: { color: '#64748B', font: { size: 11 }, padding: 14, usePointStyle: true } }
+    }}
   });
-  document.getElementById('dChannelNote').textContent=
-    `Звонки: ${fmt.pct(D.calls/D.tickets*100)} · Чаты: ${fmt.pct(D.chats/D.tickets*100)}`;
+  document.getElementById('dChannelNote').textContent =
+    `Звонки: ${fmt.pct(D.calls / D.tickets * 100)} · Чаты: ${fmt.pct(D.chats / D.tickets * 100)}`;
 
-  // Last 14 days trend
+  /* Last 14 days channel trend */
   const last14 = keys.slice(-14);
-  if(charts.d14Days) charts.d14Days.destroy();
-  charts.d14Days = buildChannelChart('d14DaysChart',
-    last14.map(k=>D_ALL[k].label||k.slice(8)),
-    last14.map(k=>+(D_ALL[k].calls/D_ALL[k].tickets*100).toFixed(1)),
-    last14.map(k=>+(D_ALL[k].chats/D_ALL[k].tickets*100).toFixed(1))
+  charts.trend14 = buildChannelChart('d14Chart',
+    last14.map(k => (D_ALL[k].label || k.slice(8)).replace(' апреля','').replace(' апр','')),
+    last14.map(k => +((D_ALL[k].calls / D_ALL[k].tickets) * 100).toFixed(1)),
+    last14.map(k => +((D_ALL[k].chats / D_ALL[k].tickets) * 100).toFixed(1))
   );
-    ? comps.map((c,i)=>companyBlock(c,i)).join('')
-    : '<div style="padding:20px;text-align:center;color:var(--text4);font-size:12px">Данные по компаниям не доступны</div>';
 
-  // Team context banner
-  const teamCtx = DK.team_context;
-  let teamBanner = document.getElementById('teamContextBanner');
-  if (!teamBanner) {
-    teamBanner = document.createElement('div');
-    teamBanner.id = 'teamContextBanner';
-    teamBanner.style.cssText = 'background:rgba(245,158,11,0.08);border:1px solid rgba(245,158,11,0.2);border-radius:8px;padding:10px 16px;margin-bottom:16px;font-size:12px;color:#FCD34D;display:flex;align-items:center;gap:8px';
-    const kpiGrid = document.getElementById('kpiGrid');
-    if(kpiGrid) kpiGrid.parentNode.insertBefore(teamBanner, kpiGrid);
-  }
-  teamBanner.innerHTML = teamCtx ? `<span style="font-size:16px">⚠️</span> ${teamCtx}` : '';
-  teamBanner.style.display = teamCtx ? 'flex' : 'none';
+  /* Companies */
+  const comps = D.top_companies || DK.top_companies || [];
+  document.getElementById('companiesBlock').innerHTML = comps.length
+    ? comps.map((c, i) => companyBlock(c, i)).join('')
+    : '<div style="padding:20px;text-align:center;color:var(--text4);font-size:12px">Нет данных по компаниям</div>';
 
-  // Insights block
-  const insBlock = document.getElementById('insightsBlock');
-  const insCard = document.getElementById('insightsCard');
-  if (DK.insights) {
-    insBlock.style.display = 'block';
-    const ins = DK.insights;
-    const peaksHtml = (DK.peaks||[]).map(p =>
-      `<div style="display:flex;align-items:center;gap:12px;padding:8px 0;border-bottom:1px solid var(--br)">
-        <div style="font-family:var(--mono);font-size:13px;font-weight:600;color:var(--text);min-width:52px">${p.hour}</div>
-        <div style="flex:1;font-size:12px;color:var(--text2)">${p.missed} пропущенных · ${p.operators} оператор(ов) в линии</div>
-        <span class="b bad">${p.missed} пропущ.</span>
-      </div>`
-    ).join('');
-
-    const highlightsHtml = (ins.highlights||[]).map(h =>
-      `<div style="display:flex;align-items:flex-start;gap:8px;padding:6px 0;font-size:13px;color:var(--text2)">${h}</div>`
-    ).join('');
-
-    const issuesHtml = (ins.top_issues||[]).map(i =>
-      `<div style="display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px solid var(--br);font-size:12px">
-        <span style="color:var(--text2)">${i.label}</span>
-        <span style="font-family:var(--mono);font-weight:700;color:var(--blue2)">${i.count}</span>
-      </div>`
-    ).join('');
-
-    insCard.innerHTML = `
-      <div class="card-hd"><div class="card-title">Инсайты · ${DK.label}</div><div class="card-note">LCR: ${DK.lcr}% · Макс. операторов: ${DK.max_operators||'—'}</div></div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+  /* Insights */
+  const ins = DK.insights;
+  const insSection = document.getElementById('insightsSection');
+  if (ins && ins.summary) {
+    insSection.style.display = '';
+    document.getElementById('insightsCard').innerHTML = `
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
         <div>
-          <div style="font-size:11px;font-weight:700;color:var(--text3);text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px">Сводка</div>
-          <div style="font-size:13px;color:var(--text2);line-height:1.7;margin-bottom:14px">${ins.summary||''}</div>
-          <div style="font-size:11px;font-weight:700;color:var(--text3);text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px">Вывод и рекомендация</div>
-          <div style="font-size:13px;color:var(--text2);line-height:1.7;padding:12px;background:var(--blue-lt);border-radius:8px;border-left:3px solid var(--blue)">${ins.conclusion||''}</div>
-          ${peaksHtml ? `<div style="font-size:11px;font-weight:700;color:var(--text3);text-transform:uppercase;letter-spacing:.06em;margin:14px 0 8px">Пики пропущенных</div>${peaksHtml}` : ''}
+          <div style="font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--text4);margin-bottom:6px">Итог дня</div>
+          <div style="font-size:13px;color:var(--text2);line-height:1.7">${ins.summary}</div>
         </div>
         <div>
-          <div style="font-size:11px;font-weight:700;color:var(--text3);text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px">Ключевые факты</div>
-          ${highlightsHtml}
-          ${issuesHtml ? `<div style="font-size:11px;font-weight:700;color:var(--text3);text-transform:uppercase;letter-spacing:.06em;margin:14px 0 8px">Топ обращений (из ОнлайнПБХ)</div>${issuesHtml}` : ''}
+          <div style="font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--text4);margin-bottom:6px">Вывод</div>
+          <div style="font-size:13px;color:var(--text2);line-height:1.7">${ins.conclusion}</div>
         </div>
       </div>
+      ${(ins.highlights || []).length ? `<div style="margin-top:12px;display:flex;flex-wrap:wrap;gap:6px">${ins.highlights.map(h=>`<span class="b info" style="font-size:11px;padding:4px 10px">${h}</span>`).join('')}</div>` : ''}
     `;
   } else {
-    insBlock.style.display = 'none';
-  }
-
-}
-
-render();
-</script>
-
-
-
-<script>
-/* ── Theme system ─────────────────────────────────────────────────────────── */
-(function(){
-  if(localStorage.getItem('billz_theme')==='light'){
-    document.documentElement.classList.add('light-mode');
-    document.body.classList.add('light');
-  }
-})();
-
-function toggleTheme(){
-  const isLight = document.body.classList.toggle('light');
-  document.documentElement.classList.toggle('light-mode', isLight);
-  localStorage.setItem('billz_theme', isLight ? 'light' : 'dark');
-  const btn = document.getElementById('themeBtn');
-  if(btn){
-    btn.querySelector('.toggle-icon').textContent = isLight ? '🌙' : '☀️';
-    btn.querySelector('#themeLabel').textContent  = isLight ? 'Тёмная' : 'Светлая';
-  }
-  // Rebuild charts if render() exists (re-applies correct colors)
-  if(typeof render === 'function'){ try{ render(); }catch(e){} }
-}
-
-document.addEventListener('DOMContentLoaded', function(){
-  const isLight = document.body.classList.contains('light');
-  const btn = document.getElementById('themeBtn');
-  if(btn){
-    btn.querySelector('.toggle-icon').textContent = isLight ? '🌙' : '☀️';
-    btn.querySelector('#themeLabel').textContent  = isLight ? 'Тёмная' : 'Светлая';
-  }
-});
-
-/* ── Password-protected download ─────────────────────────────────────────── */
-function checkAndExport(){
-  const pwd = prompt('🔒 Введите пароль для скачивания:');
-  if(pwd === null) return;
-  if(pwd === 'khbillz2023'){
-    exportCSExcel();
-  } else {
-    alert('❌ Неверный пароль. Доступ запрещён.');
+    insSection.style.display = 'none';
   }
 }
-</script>
-<script>
-function exportCSExcel(){
+
+/* Excel export */
+function exportCSExcel() {
   const btn = document.getElementById('exportBtn');
   btn.classList.add('loading'); btn.textContent = '⏳ Формируется...';
-  function makeSheet(rows, colWidths){
+  function makeSheet(rows, colWidths) {
     const ws = XLSX.utils.aoa_to_sheet(rows);
     ws['!cols'] = colWidths.map(w => ({ wch: w }));
     return ws;
   }
   setTimeout(() => {
-    
-    const D_ALL = BILLZ_DATA.daily;
-    const keys  = Object.keys(D_ALL).sort();
-    const curKey = keys[keys.length-1];
-    const DK = D_ALL[curKey];
+    const DK = D_ALL[currentDay];
+    const D  = (mode === 'with' || !DK.no_massoviy) ? DK : { ...DK, ...DK.no_massoviy };
     const wb = XLSX.utils.book_new();
 
-    const sum=[
-      ['CONTACT CENTER — ЕЖЕДНЕВНЫЙ ОТЧЁТ', DK.label||curKey],
-      [],
-      ['Показатель','Значение','Пояснение'],
-      ['Тикеты',DK.tickets,''],
-      ['Звонки',DK.calls,''],
-      ['Чаты',DK.chats,''],
-      ['Желательных',DK.desired,''],
-      ['Нежелательных',DK.undesired,''],
-      ['Закрыто',DK.closed,''],
-      ['LCR',DK.lcr,'%'],
-      ['SLA соблюдён',DK.sla_pct,'%'],
-      ['AFRT',DK.afrt,''],
-      ['Повторные',DK.repeat_pct,'%'],
-      ['Затраты',DK.cost,'сўм · '+(DK.cost/1e6).toFixed(3)+' млн'],
-      ['Входящих',DK.incoming_calls||0,'звонков'],
-      ['Исходящих',DK.outgoing_calls||0,'звонков'],
-      ['Пропущенных',DK.missed_calls||0,'звонков'],
-      ['Звонков 20+ мин',DK.long_calls||0,''],
-      ['Макс. операторов',DK.max_operators||0,'человек'],
+    const sum = [
+      ['CONTACT CENTER — ЕЖЕДНЕВНЫЙ ОТЧЁТ', D.label || currentDay],
+      [],['Показатель','Значение','Пояснение'],
+      ['Тикеты',D.tickets,''],['Звонки',D.calls,''],['Чаты',D.chats,''],
+      ['Желательных',D.desired||0,''],['Нежелательных',D.undesired||0,''],
+      ['LCR %',D.lcr||0,'> 5 сек метод'],['SLA %',D.sla_pct,'ответы ≤ 1 мин'],
+      ['AFRT',D.afrt,''],['Повторные %',D.repeat_pct,''],
+      ['Затраты',D.cost,'сум'],['Закрыто',D.closed,''],['Открыто',D.open,''],
+      ['Входящих',D.incoming_calls||0,''],['Исходящих',D.outgoing_calls||0,''],['Пропущено',D.missed_calls||0,''],
     ];
-    XLSX.utils.book_append_sheet(wb, makeSheet(sum,[30,14,30]),'📊 '+( DK.label||curKey));
+    XLSX.utils.book_append_sheet(wb, makeSheet(sum, [28,14,30]), '📊 День');
 
-    const ops=DK.operators||[];
-    if(ops.length){
-      const maxT=Math.max(...ops.map(o=>o.tickets));
-      const opH=['#','Оператор','Тикеты','Нагрузка%','Ср.время ч','Закрыто%','SLA%','Затраты'];
-      const opR=ops.map((o,i)=>[i+1,o.name,o.tickets,Math.round(o.tickets/maxT*100),o.avg_close,o.close_rate,o.sla_pct||0,o.cost]);
-      XLSX.utils.book_append_sheet(wb, makeSheet([opH,...opR],[4,20,10,12,12,10,10,18]),'👥 Операторы');
+    const ops = D.operators || DK.operators || [];
+    if (ops.length) {
+      const opH = ['Оператор','Тикеты','Ср.время ч','Закрыто %','SLA %','Затраты'];
+      const opR = ops.map(o => [o.name, o.tickets, o.avg_close, o.close_rate, o.sla_pct||0, o.cost]);
+      XLSX.utils.book_append_sheet(wb, makeSheet([opH,...opR],[20,10,12,12,10,16]),'👥 Операторы');
     }
-
-    const lbls=DK.top_labels||[];
-    if(lbls.length){
-      const lH=['#','Метка','Тикеты','Нежелательных','Затраты'];
-      const lR=lbls.map((l,i)=>[i+1,l.name,l.tickets,l.undesired||0,l.cost]);
-      XLSX.utils.book_append_sheet(wb, makeSheet([lH,...lR],[4,44,10,16,18]),'🏷 Метки');
+    const lbls = D.top_labels || DK.top_labels || [];
+    if (lbls.length) {
+      const lH=['Метка','Тикеты','Нежелат.','Затраты'];
+      const lR=lbls.map(l=>[l.name,l.tickets,l.undesired||0,l.cost]);
+      XLSX.utils.book_append_sheet(wb, makeSheet([lH,...lR],[44,10,12,16]),'🏷 Метки');
     }
+    const allH=['Дата','Тикеты','Звонки','Чаты','LCR%','SLA%','Нежел.','Затраты'];
+    const allR=keys.map(k=>{const d=D_ALL[k];return[k,d.tickets,d.calls,d.chats,d.lcr||0,d.sla_pct,d.undesired||0,d.cost];});
+    XLSX.utils.book_append_sheet(wb, makeSheet([allH,...allR],[14,10,10,10,8,8,10,16]),'📅 Все дни');
 
-    const allH=['Дата','Метка','Тикеты','Звонки','Чаты','LCR%','SLA%','Нежел.','Повт%','Пропущ.','Затраты'];
-    const allR=keys.map(k=>{const d=D_ALL[k];return[k,d.label||k,d.tickets,d.calls,d.chats,d.lcr,d.sla_pct,d.undesired,d.repeat_pct,d.missed_calls||0,d.cost];});
-    XLSX.utils.book_append_sheet(wb, makeSheet([allH,...allR],[14,16,10,10,10,8,8,10,8,10,16]),'📅 Все дни');
-
-    XLSX.writeFile(wb,'CC_Ежедневный_'+curKey+'.xlsx');
-
+    XLSX.writeFile(wb, 'CC_Ежедневный_' + currentDay + '.xlsx');
     btn.classList.remove('loading');
     btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Скачать Excel';
   }, 150);
 }
+
+render();
 </script>
 </body>
 </html>

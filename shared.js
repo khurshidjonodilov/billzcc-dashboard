@@ -6,24 +6,30 @@ const fmt = {
   sec:  v => v < 60 ? Math.round(v) + 'с' : Math.floor(v/60) + 'м ' + Math.round(v%60) + 'с',
 };
 
-/* Chart defaults */
-const CHART_GRID = 'rgba(255,255,255,0.05)';
+/* ── Chart engine — neon/glow style ────────────────────────────────────── */
+const CHART_GRID = document.body.classList.contains('light')
+  ? 'rgba(0,0,0,0.06)' : 'rgba(255,255,255,0.05)';
+
 const CHART_TT = {
-  backgroundColor: '#151820',
-  borderColor: 'rgba(255,255,255,0.1)',
+  backgroundColor: '#0D1117',
+  borderColor: 'rgba(59,130,246,0.3)',
   borderWidth: 1,
   titleColor: '#F9FAFB',
-  bodyColor: '#9CA3AF',
-  padding: 10, cornerRadius: 8,
+  bodyColor: '#94A3B8',
+  padding: 12, cornerRadius: 10,
+  displayColors: true,
+  boxPadding: 4,
 };
 const chartBase = {
   responsive: true, maintainAspectRatio: false,
+  animation: { duration: 800, easing: 'easeInOutQuart' },
   plugins: { legend: { display: false }, tooltip: CHART_TT },
 };
 Chart.defaults.color = '#4B5563';
 Chart.defaults.font.family = "'Inter', system-ui, sans-serif";
 Chart.defaults.font.size = 10;
 
+/* Neon color palette */
 const C = {
   blue:   '#3B82F6', blue2:  '#60A5FA', blueDk: '#1D4ED8',
   green:  '#10B981', green2: '#34D399',
@@ -33,6 +39,248 @@ const C = {
   cyan:   '#06B6D4', cyan2:  '#67E8F9',
   pink:   '#EC4899', pink2:  '#F9A8D4',
 };
+
+/* Neon colors list for multi-series */
+const NEON_COLORS = [
+  '#3B82F6','#10B981','#8B5CF6','#F59E0B',
+  '#EF4444','#06B6D4','#EC4899','#34D399',
+  '#60A5FA','#FCD34D','#F87171','#C4B5FD',
+];
+
+/* Create canvas gradient fill for area charts */
+function neonGradient(ctx, color, alpha1=0.3, alpha2=0.02) {
+  const h = ctx.canvas.height;
+  const g = ctx.createLinearGradient(0, 0, 0, h);
+  const hex = color.replace('#','');
+  const r = parseInt(hex.slice(0,2),16);
+  const gr = parseInt(hex.slice(2,4),16);
+  const b2 = parseInt(hex.slice(4,6),16);
+  g.addColorStop(0, `rgba(${r},${gr},${b2},${alpha1})`);
+  g.addColorStop(0.5, `rgba(${r},${gr},${b2},${alpha1*0.4})`);
+  g.addColorStop(1, `rgba(${r},${gr},${b2},${alpha2})`);
+  return g;
+}
+
+/* ── NEON LINE CHART ────────────────────────────────────────────────────── */
+function buildNeonLine(id, labels, datasets, opts={}) {
+  const canvas = document.getElementById(id);
+  if(!canvas) return null;
+  const ctx = canvas.getContext('2d');
+
+  const ds = datasets.map((d, i) => {
+    const color = d.color || NEON_COLORS[i % NEON_COLORS.length];
+    return {
+      label: d.label || '',
+      data: d.data,
+      borderColor: color,
+      borderWidth: d.width || 2.5,
+      pointRadius: d.points !== false ? 3 : 0,
+      pointHoverRadius: 6,
+      pointBackgroundColor: color,
+      pointBorderColor: '#0A0C10',
+      pointBorderWidth: 1.5,
+      fill: d.fill !== false,
+      backgroundColor: (ctx2) => d.fill !== false ? neonGradient(ctx2, color) : 'transparent',
+      tension: d.tension !== undefined ? d.tension : 0.4,
+      borderDash: d.dash || [],
+    };
+  });
+
+  const isDark = !document.body.classList.contains('light');
+  const gridColor = isDark ? 'rgba(255,255,255,0.06)' : 'rgba(0,0,0,0.06)';
+  const tickColor = isDark ? '#374151' : '#9CA3AF';
+
+  return new Chart(canvas, {
+    type: 'line',
+    data: { labels, datasets: ds },
+    options: {
+      ...chartBase,
+      scales: {
+        x: {
+          grid: { display: false },
+          ticks: { color: tickColor, font: { size: 10 },
+            maxTicksLimit: opts.maxTicks || 8,
+            maxRotation: 0 },
+        },
+        y: {
+          grid: { color: gridColor, lineWidth: 1 },
+          ticks: { color: tickColor, font: { size: 10 },
+            callback: opts.yFmt || (v => v) },
+          min: opts.yMin,
+          max: opts.yMax,
+          ...(opts.y2 ? {} : {}),
+        },
+        ...(opts.y2 ? {
+          y2: {
+            position: 'right',
+            grid: { display: false },
+            ticks: { color: tickColor, font: { size: 10 }, callback: opts.y2Fmt || (v=>v) },
+          }
+        } : {}),
+      },
+      plugins: {
+        ...chartBase.plugins,
+        legend: {
+          display: datasets.length > 1,
+          position: 'top',
+          align: 'end',
+          labels: { color: isDark ? '#9CA3AF' : '#6B7280', font: { size: 10 }, padding: 12,
+            usePointStyle: true, pointStyleWidth: 8 },
+        },
+        tooltip: {
+          ...CHART_TT,
+          callbacks: {
+            label: opts.tooltipFmt || (ctx => {
+              const v = ctx.raw;
+              if(opts.yFmt) return ` ${ctx.dataset.label}: ${opts.yFmt(v)}`;
+              return ` ${ctx.dataset.label}: ${typeof v === 'number' ? v.toLocaleString('ru') : v}`;
+            })
+          }
+        },
+      },
+    },
+  });
+}
+
+/* ── NEON BAR CHART ─────────────────────────────────────────────────────── */
+function buildNeonBar(id, labels, datasets, opts={}) {
+  const canvas = document.getElementById(id);
+  if(!canvas) return null;
+  const isDark = !document.body.classList.contains('light');
+  const gridColor = isDark ? 'rgba(255,255,255,0.06)' : 'rgba(0,0,0,0.06)';
+  const tickColor = isDark ? '#374151' : '#9CA3AF';
+
+  const ds = datasets.map((d, i) => {
+    const color = d.color || NEON_COLORS[i % NEON_COLORS.length];
+    const hex = color.replace('#','');
+    const r = parseInt(hex.slice(0,2),16);
+    const gr = parseInt(hex.slice(2,4),16);
+    const b2 = parseInt(hex.slice(4,6),16);
+    return {
+      label: d.label || '',
+      data: d.data,
+      backgroundColor: d.data.map ? d.data.map((v,j) => {
+        if(d.colorFn) return d.colorFn(v, j);
+        return `rgba(${r},${gr},${b2},0.82)`;
+      }) : `rgba(${r},${gr},${b2},0.82)`,
+      borderColor: color,
+      borderWidth: 1,
+      borderRadius: opts.radius !== undefined ? opts.radius : 5,
+      borderSkipped: false,
+      stack: d.stack,
+    };
+  });
+
+  return new Chart(canvas, {
+    type: 'bar',
+    data: { labels, datasets: ds },
+    options: {
+      ...chartBase,
+      indexAxis: opts.horizontal ? 'y' : 'x',
+      scales: {
+        x: {
+          grid: { display: opts.horizontal ? true : false, color: gridColor },
+          ticks: { color: tickColor, font: { size: 10 },
+            maxTicksLimit: opts.maxTicks || 10, maxRotation: 0 },
+          stacked: !!opts.stacked,
+        },
+        y: {
+          grid: { color: gridColor },
+          ticks: { color: tickColor, font: { size: 10 },
+            callback: opts.yFmt || (v => v) },
+          stacked: !!opts.stacked,
+          min: opts.yMin, max: opts.yMax,
+        },
+      },
+      plugins: {
+        ...chartBase.plugins,
+        legend: {
+          display: datasets.length > 1,
+          position: 'top', align: 'end',
+          labels: { color: isDark ? '#9CA3AF' : '#6B7280', font: { size: 10 },
+            padding: 12, usePointStyle: true, pointStyleWidth: 8 },
+        },
+        tooltip: {
+          ...CHART_TT,
+          callbacks: {
+            label: opts.tooltipFmt || (ctx => {
+              const v = ctx.raw;
+              if(opts.yFmt) return ` ${ctx.dataset.label}: ${opts.yFmt(v)}`;
+              return ` ${ctx.dataset.label}: ${typeof v === 'number' ? v.toLocaleString('ru') : v}`;
+            })
+          }
+        },
+      },
+    },
+  });
+}
+
+/* ── NEON DOUGHNUT ──────────────────────────────────────────────────────── */
+function buildNeonDoughnut(id, labels, values, colors, opts={}) {
+  const canvas = document.getElementById(id);
+  if(!canvas) return null;
+  const isDark = !document.body.classList.contains('light');
+  return new Chart(canvas, {
+    type: 'doughnut',
+    data: {
+      labels,
+      datasets: [{
+        data: values,
+        backgroundColor: colors.map(c => c+'CC'),
+        borderColor: colors,
+        borderWidth: 2,
+        hoverOffset: 10,
+        hoverBorderWidth: 3,
+      }],
+    },
+    options: {
+      ...chartBase,
+      cutout: opts.cutout || '65%',
+      plugins: {
+        ...chartBase.plugins,
+        legend: {
+          display: true,
+          position: opts.legendPos || 'bottom',
+          labels: { color: isDark ? '#9CA3AF' : '#6B7280',
+            font: { size: 11 }, padding: 14, usePointStyle: true },
+        },
+        tooltip: { ...CHART_TT },
+      },
+    },
+  });
+}
+
+/* ── NEON HORIZONTAL BAR ────────────────────────────────────────────────── */
+function buildNeonHorizBar(id, labels, values, colorFn, opts={}) {
+  return buildNeonBar(id, labels, [{
+    data: values,
+    colorFn: colorFn,
+  }], { ...opts, horizontal: true });
+}
+
+/* Backward compat wrappers */
+function buildStackedBar(id,labels,desired,undesired) {
+  return buildNeonBar(id,labels,[
+    {label:'Желательные',data:desired,color:'#10B981',stack:'a'},
+    {label:'Нежелательные',data:undesired,color:'#EF4444',stack:'a'},
+  ],{stacked:true});
+}
+function buildHorizBar(id,labels,values,colorFn) {
+  return buildNeonHorizBar(id,labels,values,colorFn);
+}
+function buildDoughnut(id,labels,values,colors) {
+  return buildNeonDoughnut(id,labels,values,colors);
+}
+function buildChannelChart(id,labels,callsData,chatsData) {
+  return buildNeonBar(id,labels,[
+    {label:'Звонки %',data:callsData,color:'#3B82F6',stack:'a'},
+    {label:'Чаты %',data:chatsData,color:'#8B5CF6',stack:'a'},
+  ],{stacked:true,yFmt:v=>v+'%',yMax:100});
+}
+function buildLine(id,labels,datasets) {
+  return buildNeonLine(id,labels,datasets);
+}
+
 
 /* ── KPI config по цвету ────────────────────────────────────────────────── */
 const kpiColors = {
@@ -298,7 +546,7 @@ async function exportPagePNG(selector, filename) {
     }
     const el = selector ? document.querySelector(selector) : document.querySelector('.wrap');
     const canvas = await html2canvas(el, {
-      backgroundColor: getComputedStyle(document.body).background || '#0A0C10',
+      backgroundColor: document.body.classList.contains('light') ? '#F0F4FF' : '#0A0C10',
       scale: 2,
       useCORS: true,
       logging: false,

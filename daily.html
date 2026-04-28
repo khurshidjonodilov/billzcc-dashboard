@@ -334,10 +334,13 @@ function render() {
 
   /* Last 14 days channel trend */
   const last14 = keys.slice(-14);
-  charts.trend14 = buildChannelChart('d14Chart',
-    last14.map(k => (D_ALL[k].label || k.slice(8)).replace(' апреля','').replace(' апр','')),
-    last14.map(k => +((D_ALL[k].calls / D_ALL[k].tickets) * 100).toFixed(1)),
-    last14.map(k => +((D_ALL[k].chats / D_ALL[k].tickets) * 100).toFixed(1))
+  charts.trend14 = buildNeonLine('d14Chart',
+    last14.map(k => (D_ALL[k].label||k.slice(8)).replace(' апреля','').replace(' апр','')),
+    [
+      {label:'Звонки %',data:last14.map(k=>+((D_ALL[k].calls/D_ALL[k].tickets)*100).toFixed(1)),color:'#3B82F6',fill:false},
+      {label:'Чаты %',  data:last14.map(k=>+((D_ALL[k].chats/D_ALL[k].tickets)*100).toFixed(1)),color:'#8B5CF6',fill:true},
+    ],
+    {yFmt:v=>v+'%', tooltipFmt:ctx=>`${ctx.dataset.label}: ${ctx.raw.toFixed(1)}%`}
   );
 
   /* Companies */

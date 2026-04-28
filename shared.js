@@ -280,3 +280,43 @@ function checkAndExport() {
   if (pwd === 'khbillz2023') { exportCSExcel(); }
   else { alert('❌ Неверный пароль.'); }
 }
+
+/* ── PNG Export (html2canvas) ─────────────────────────────────────────── */
+async function exportPagePNG(selector, filename) {
+  const btn = document.getElementById('pngExportBtn');
+  if(btn) { btn.textContent = '⏳ Формируется...'; btn.disabled = true; }
+
+  try {
+    // Load html2canvas if not loaded
+    if(typeof html2canvas === 'undefined') {
+      await new Promise((res,rej) => {
+        const s = document.createElement('script');
+        s.src = 'https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js';
+        s.onload = res; s.onerror = rej;
+        document.head.appendChild(s);
+      });
+    }
+    const el = selector ? document.querySelector(selector) : document.querySelector('.wrap');
+    const canvas = await html2canvas(el, {
+      backgroundColor: getComputedStyle(document.body).background || '#0A0C10',
+      scale: 2,
+      useCORS: true,
+      logging: false,
+      windowWidth: el.scrollWidth,
+      windowHeight: el.scrollHeight,
+    });
+    const link = document.createElement('a');
+    link.download = (filename || 'billz-cc-export') + '-' + new Date().toISOString().slice(0,10) + '.png';
+    link.href = canvas.toDataURL('image/png');
+    link.click();
+  } catch(e) {
+    alert('Ошибка экспорта: ' + e.message);
+  }
+  if(btn) { btn.textContent = '📷 Скачать PNG'; btn.disabled = false; }
+}
+
+async function exportSectionPNG(sectionId, filename) {
+  const el = document.getElementById(sectionId);
+  if(!el) { alert('Раздел не найден'); return; }
+  await exportPagePNG('#'+sectionId, filename);
+}

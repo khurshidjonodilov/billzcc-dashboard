@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>BILLZ CC · Операторы</title>
+<link rel="stylesheet" href="shared.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<script src="data.js"></script>
+<script src="shared.js"></script>
+</head>
+<body>
+<nav class="top-nav">
+  <div class="nav-brand"><div class="nav-brand-dot">B</div>BILLZ · CC</div>
+  <a href="index.html"     class="nav-link">Ежемесячно</a>
+  <a href="weekly.html"    class="nav-link">Еженедельно</a>
+  <a href="quarterly.html" class="nav-link">Квартал</a>
+  <a href="cs.html"        class="nav-link">CS Анализ</a>
+  <a href="daily.html"     class="nav-link">Ежедневно</a>
+  <a href="operators.html" class="nav-link active">Операторы</a>
+  <div class="nav-right">
+    <button class="png-btn" onclick="exportPagePNG('.wrap','billz-operators')" id="pngExportBtn">📷 Скачать PNG</button>
+    <button class="theme-toggle" onclick="toggleTheme()" id="themeBtn">
+      <span class="toggle-icon">☀️</span><span id="themeLabel">Светлая</span>
+    </button>
+  </div>
+</nav>
+
+<div class="wrap">
+  <div class="phdr">
+    <div>
+      <div class="phdr-eyebrow">BILLZ · CC · ПЕРФОРМАНС КОМАНДЫ</div>
+      <div class="phdr-title">Операторы <em>· Апрель 2026</em></div>
+      <div class="phdr-sub">Индивидуальная аналитика · SLA · CSAT · нагрузка · затраты</div>
+      <div class="phdr-pills" id="teamPills"></div>
+    </div>
+    <div class="phdr-right">
+      <div class="cost-ey">ФОТ ОЦЕНКА (АПРЕЛЬ)</div>
+      <div class="cost-n" id="totalCost">—</div>
+      <div class="cost-d">сум · тикеты × CPT 9 865</div>
+      <div class="live"><span class="live-dot"></span>данные актуальны · 27.04.2026</div>
+    </div>
+  </div>
+
+  <!-- Team status alert -->
+  <div class="team-alert">
+    <div class="team-alert-icon">⚠️</div>
+    <div>
+      <div class="team-alert-title">Изменения в команде — апрель 2026</div>
+      <div class="team-alert-text">
+        Уволены: <strong style="color:#fff">Шохинабону</strong> (учёба) и <strong style="color:#fff">Нурлан</strong>.
+        Алишерова Робия переведена в КС. Итого активных: <strong style="color:#FCD34D">11 операторов, 7–8 в смене</strong>.
+        Команда держится на допчасах — риск выгорания. HR заявка подана.
+      </div>
+    </div>
+  </div>
+
+  <!-- Period selector -->
+  <div class="period-bar" id="periodBar"></div>
+
+  <!-- KPIs summary -->
+  <div class="kpi-grid" id="kpiGrid"></div>
+
+  <!-- 01 PERFORMANCE TABLE -->
+  <div class="sec"><div class="sec-num">01</div><div class="sec-title">Перформанс операторов — детальная таблица</div><div class="sec-line"></div></div>
+  <div class="row one">
+    <div class="card">
+      <div class="card-hd">
+        <div class="card-title">Все операторы · показатели за период</div>
+        <div style="display:flex;gap:8px;align-items:center">
+          <button class="png-btn" style="padding:4px 10px;font-size:10px" onclick="exportSectionPNG('opTableWrap','operators-table')">📷 PNG</button>
+          <div class="card-note">SLA = % чатов FRT≤1мин · CSAT = Отлично / оценённых</div>
+        </div>
+      </div>
+      <div id="opTableWrap">
+        <table class="tbl" id="opTable">
+          <thead><tr>
+            <th>Оператор</th>
+            <th>Тикеты</th>
+            <th>Нагрузка %</th>
+            <th>Ср. закрытие</th>
+            <th>Закрыто %</th>
+            <th>SLA %</th>
+            <th>CSAT %</th>
+            <th>Оценок</th>
+            <th>Затраты</th>
+            <th>Статус</th>
+          </tr></thead>
+          <tbody id="opTableBody"></tbody>
+        </table>
+      </div>
+      <div class="formula-bar">
+        <span class="f-key">📐 Нагрузка</span> = тикеты оператора / макс. тикеты в команде × 100 &nbsp;·&nbsp;
+        <span class="f-key">SLA</span> = чаты с FRT≤1мин / все замеренные чаты оператора × 100 &nbsp;·&nbsp;
+        <span class="f-key">CSAT</span> = оценок «Отлично» / всего оценок оператора × 100 &nbsp;·&nbsp;
+        <span class="f-key">Затраты</span> = тикеты × CPT <span class="f-val">9 865 сум</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 02 CHARTS -->
+  <div class="sec"><div class="sec-num">02</div><div class="sec-title">Нагрузка и распределение тикетов</div><div class="sec-line"></div>
+    <button class="png-btn" style="padding:4px 10px;font-size:10px" onclick="exportSectionPNG('chartsRow1','operators-load')">📷 PNG</button>
+  </div>
+  <div class="row two" id="chartsRow1">
+    <div class="card">
+      <div class="card-hd"><div class="card-title">Тикеты по операторам</div><div class="card-note">горизонтальный бар · нагрузка</div></div>
+      <div style="position:relative;height:280px"><canvas id="ticketsChart"></canvas></div>
+      <div class="formula-bar"><span class="f-key">📐 Нагрузка</span> = тикеты / сумма всех тикетов × 100% &nbsp;·&nbsp; <span class="f-key">Затраты</span> = тикеты × <span class="f-val">9 865</span> сум</div>
+    </div>
+    <div class="card">
+      <div class="card-hd"><div class="card-title">Доля тикетов команды</div><div class="card-note">% от общего объёма</div></div>
+      <div style="position:relative;height:280px"><canvas id="shareChart"></canvas></div>
+      <div class="formula-bar"><span class="f-key">📐 Доля</span> = тикеты оператора / все тикеты месяца × 100%</div>
+    </div>
+  </div>
+
+  <!-- 03 QUALITY -->
+  <div class="sec"><div class="sec-num">03</div><div class="sec-title">Качество обслуживания · SLA и CSAT</div><div class="sec-line"></div>
+    <button class="png-btn" style="padding:4px 10px;font-size:10px" onclick="exportSectionPNG('chartsRow2','operators-quality')">📷 PNG</button>
+  </div>
+  <div class="row two" id="chartsRow2">
+    <div class="card">
+      <div class="card-hd"><div class="card-title">SLA % по операторам</div><div class="card-note">цель ≥ 80% · только чаты</div></div>
+      <div style="position:relative;height:260px"><canvas id="slaChart"></canvas></div>
+      <div class="formula-bar"><span class="f-key">📐 SLA</span> = кол-во чатов с FRT ≤ 1мин / все замеренные чаты × 100% &nbsp;·&nbsp; <span class="f-key">Цель</span>: <span class="f-val">≥ 80%</span></div>
+    </div>
+    <div class="card">
+      <div class="card-hd"><div class="card-title">CSAT % по операторам</div><div class="card-note">цель ≥ 95% · оценки «Отлично»</div></div>
+      <div style="position:relative;height:260px"><canvas id="csatChart"></canvas></div>
+      <div class="formula-bar"><span class="f-key">📐 CSAT</span> = оценок «Отлично» / всего оценок оператора × 100% &nbsp;·&nbsp; <span class="f-key">Цель</span>: <span class="f-val">≥ 95%</span></div>
+    </div>
+  </div>
+
+  <!-- 04 COSTS -->
+  <div class="sec"><div class="sec-num">04</div><div class="sec-title">Затраты по операторам (CPT)</div><div class="sec-line"></div>
+    <button class="png-btn" style="padding:4px 10px;font-size:10px" onclick="exportSectionPNG('chartsRow3','operators-costs')">📷 PNG</button>
+  </div>
+  <div class="row two" id="chartsRow3">
+    <div class="card">
+      <div class="card-hd"><div class="card-title">Затраты по операторам (млн сум)</div></div>
+      <div style="position:relative;height:260px"><canvas id="costChart"></canvas></div>
+      <div class="formula-bar"><span class="f-key">📐 Затраты</span> = тикеты × CPT <span class="f-val">9 865 сум</span> &nbsp;·&nbsp; <span class="f-key">CPT</span> = ФОТ команды / все тикеты</div>
+    </div>
+    <div class="card">
+      <div class="card-hd"><div class="card-title">Среднее время закрытия (часы)</div></div>
+      <div style="position:relative;height:260px"><canvas id="closeChart"></canvas></div>
+      <div class="formula-bar"><span class="f-key">📐 Ср. закрытие</span> = AVERAGE(Скорость закрытия тикета) в часах &nbsp;·&nbsp; <span class="f-key">Цель</span>: <span class="f-val">≤ 24ч</span></div>
+    </div>
+  </div>
+
+  <!-- 05 WEEKLY DYNAMICS -->
+  <div class="sec"><div class="sec-num">05</div><div class="sec-title">Динамика нагрузки по неделям</div><div class="sec-line"></div>
+    <button class="png-btn" style="padding:4px 10px;font-size:10px" onclick="exportSectionPNG('chartsRow4','operators-weekly')">📷 PNG</button>
+  </div>
+  <div class="row one" id="chartsRow4">
+    <div class="card">
+      <div class="card-hd"><div class="card-title">Тикеты по операторам · недели 14–17</div><div class="card-note">все активные операторы апреля</div></div>
+      <div style="position:relative;height:300px"><canvas id="weeklyChart"></canvas></div>
+      <div class="formula-bar"><span class="f-key">📐 Нагрузка нед N</span> = тикеты оператора за неделю / рабочих дней × ставка &nbsp;·&nbsp; <span class="f-key">Риск выгорания</span>: если нагрузка стабильно выше среднего 3+ недели</div>
+    </div>
+  </div>
+
+  <!-- 06 BURNOUT RISK -->
+  <div class="sec"><div class="sec-num">06</div><div class="sec-title">Оценка риска выгорания</div><div class="sec-line"></div></div>
+  <div class="row one">
+    <div class="card">
+      <div class="card-hd"><div class="card-title">Burnout Risk Score по операторам</div><div class="card-note">формула: нагрузка × частота допчасов</div></div>
+      <div id="burnoutGrid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:4px"></div>
+      <div class="formula-bar">
+        <span class="f-key">📐 Burnout Risk</span> = (тикеты / ср. тикеты команды) × (нагрузка выше ср. × 1.3) &nbsp;·&nbsp;
+        <span class="f-key">🔴 Высокий</span>: нагрузка &gt;110% × 3 нед &nbsp;·&nbsp;
+        <span class="f-key">🟡 Средний</span>: нагрузка &gt;100% &nbsp;·&nbsp;
+        <span class="f-key">🟢 Норма</span>: ≤100%
+      </div>
+    </div>
+  </div>
+
+  <div class="export-bar">
+    <div class="export-bar-left">
+      <div class="export-bar-title">📥 Скачать отчёт по операторам</div>
+      <div class="export-bar-sub">Excel · перформанс · все метрики · апрель 2026</div>
+    </div>
+    <div style="display:flex;gap:8px">
+      <button class="png-btn" onclick="exportPagePNG('.wrap','billz-operators-full')">📷 Страница PNG</button>
+      <button class="export-btn" onclick="checkAndExport()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Скачать Excel
+      </button>
+    </div>
+  </div>
+
+  <div class="ftr">
+    <div class="fl">BILLZ · CC Intelligence · Omnidesk CRM</div>
+    <div class="fr">
+      <span>📅 Обновлено: <strong style="color:var(--t2)">27.04.2026</strong></span>
+      <span>Операторы · Апрель 2026</span>
+    </div>
+  </div>
+</div>
+
+<script>
+const M = BILLZ_DATA.monthly;
+const W = BILLZ_DATA.weekly;
+const CPT = 9865;
+let currentPeriod = 'monthly';
+let charts = {};
+
+const PERIODS = {
+  monthly: { label: 'Апрель 2026 (полный)', ops: M.operators },
+  week_17: { label: 'Нед 17 · 20–26 апр',  ops: W.week_17?.operators || [] },
+  week_16: { label: 'Нед 16 · 13–19 апр',  ops: W.week_16?.operators || [] },
+  week_15: { label: 'Нед 15 · 6–12 апр',   ops: W.week_15?.operators || [] },
+  week_14: { label: 'Нед 14 · 1–5 апр',    ops: W.week_14?.operators || [] },
+};
+
+// Build period switcher
+const periodBar = document.getElementById('periodBar');
+Object.entries(PERIODS).forEach(([k,p]) => {
+  const btn = document.createElement('button');
+  btn.className = 'period-btn' + (k === currentPeriod ? ' active' : '');
+  btn.textContent = p.label;
+  btn.onclick = () => {
+    currentPeriod = k;
+    periodBar.querySelectorAll('.period-btn').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    render();
+  };
+  periodBar.appendChild(btn);
+});
+
+const NEON = {
+  blue:   'rgba(59,130,246,',
+  green:  'rgba(16,185,129,',
+  red:    'rgba(239,68,68,',
+  amber:  'rgba(245,158,11,',
+  purple: 'rgba(139,92,246,',
+  cyan:   'rgba(6,182,212,',
+  pink:   'rgba(236,72,153,',
+};
+const OP_COLORS = ['#3B82F6','#10B981','#8B5CF6','#F59E0B','#EF4444','#06B6D4','#EC4899',
+                   '#34D399','#60A5FA','#FCD34D','#F87171','#C4B5FD'];
+
+function getColor(val, low, high) {
+  if(val >= high) return '#10B981';
+  if(val >= (low+high)/2) return '#F59E0B';
+  return '#EF4444';
+}
+
+function render() {
+  const ops = PERIODS[currentPeriod].ops.filter(o => o.tickets > 0);
+  if(!ops.length) return;
+
+  const maxT = Math.max(...ops.map(o=>o.tickets));
+  const totalT = ops.reduce((s,o)=>s+o.tickets,0);
+  const avgT = Math.round(totalT/ops.length);
+
+  // Header KPIs
+  const totalCost = ops.reduce((s,o)=>s+(o.cost||o.tickets*CPT),0);
+  document.getElementById('totalCost').textContent = fmt.mln(totalCost);
+  document.getElementById('teamPills').innerHTML = [
+    `<span class="pill a">${ops.length} операторов</span>`,
+    `<span class="pill">${fmt.num(totalT)} тикетов</span>`,
+    `<span class="pill">CPT: ${fmt.num(CPT)} сум</span>`,
+    `<span class="pill ${ops.filter(o=>(o.sla_pct||0)>=80).length/ops.length>=0.7?'g':''}">SLA ≥80%: ${ops.filter(o=>(o.sla_pct||0)>=80).length}/${ops.length}</span>`,
+    `<span class="pill ${ops.filter(o=>(o.rating_pct||0)>=95).length/ops.length>=0.7?'g':''}">CSAT ≥95%: ${ops.filter(o=>(o.rating_pct||0)>=95).length}/${ops.length}</span>`,
+  ].join('');
+
+  // KPI cards
+  const avgSLA = ops.filter(o=>o.sla_pct>0).reduce((s,o)=>s+o.sla_pct,0)/ops.filter(o=>o.sla_pct>0).length;
+  const avgCSAT = ops.filter(o=>o.rating_pct>0&&o.rated>0).reduce((s,o)=>s+o.rating_pct,0)/ops.filter(o=>o.rating_pct>0&&o.rated>0).length;
+  document.getElementById('kpiGrid').innerHTML = [
+    kpi('Операторов',      String(ops.length),          '7–8 в смене ежедневно', 'cyan',   '', [], [], 'Активных операторов за период'),
+    kpi('Всего тикетов',   fmt.num(totalT),              `≈${fmt.num(Math.round(totalT/ops.length))} на опер.`, 'blue', '', [], [], 'Тикеты / кол-во операторов = нагрузка'),
+    kpi('SLA среднее',     fmt.pct(avgSLA||0),           'FRT ≤ 1 мин · чаты',   avgSLA>=80?'green':'amber', '', [], [`Цель: ≥ 80%`], 'AVERAGE(SLA%) по операторам с замерами'),
+    kpi('CSAT среднее',    fmt.pct(avgCSAT||0),          'Отлично / оценённых',  avgCSAT>=95?'green':'amber','', [], [`Цель: ≥ 95%`], 'AVERAGE(CSAT%) по операторам с оценками'),
+    kpi('Топ оператор',    ops[0]?.name||'—',            `${fmt.num(ops[0]?.tickets||0)} тикетов`, 'green', '🏆', [], [], 'Наибольший объём тикетов за период'),
+    kpi('Лучший SLA',      (() => { const best=ops.filter(o=>o.sla_pct>0).sort((a,b)=>b.sla_pct-a.sla_pct)[0]; return best?`${best.name.split(' ')[0]} ${fmt.pct(best.sla_pct)}`:'—'; })(), 'наилучший SLA', 'sage', '✓'),
+    kpi('Лучший CSAT',     (() => { const b=ops.filter(o=>o.rated>3).sort((a,b)=>b.rating_pct-a.rating_pct)[0]; return b?`${b.name.split(' ')[0]} ${fmt.pct(b.rating_pct)}`:'—'; })(), '≥ 4 оценок', 'green', '✓'),
+    kpi('Затраты итого',   fmt.mln(totalCost),           `${ops.length} опер × CPT`, 'amber', '', [], [`${fmt.num(CPT)} сум/тик`], 'SUM(тикеты × CPT) по всем операторам'),
+  ].join('');
+
+  // Operator table
+  document.getElementById('opTableBody').innerHTML = ops.map((op,i) => {
+    const bw = Math.round(op.tickets/maxT*100);
+    const slaC = (op.sla_pct||0)>=80?'ok':(op.sla_pct||0)>=65?'warn':'bad';
+    const csatC = (op.rating_pct||0)>=95?'ok':(op.rating_pct||0)>=90?'warn':(op.rated||0)>0?'bad':'';
+    const closeC = op.avg_close<=15?'f':op.avg_close<=35?'m':'s';
+    const isLeft = ['Шохина','Нурлан','Азизбек'].some(n=>op.name.includes(n));
+    const isCs = op.name.includes('Алишерова') || op.name.includes('Робия А');
+    const status = isLeft ? '<span class="b bad">Выбыл</span>' : isCs ? '<span class="b warn">→ КС</span>' : '<span class="b ok">Активен</span>';
+    return `<tr>
+      <td class="n-name" style="color:${OP_COLORS[i%OP_COLORS.length]}">${op.name}</td>
+      <td class="n-num">${fmt.num(op.tickets)}</td>
+      <td><div class="bw"><div class="bb"><div class="bf" style="width:${bw}%;background:${OP_COLORS[i%OP_COLORS.length]}"></div></div><span class="bp">${bw}%</span></div></td>
+      <td><span class="tv ${closeC}">${op.avg_close}ч</span></td>
+      <td><span class="b ok">${op.close_rate||99.5}%</span></td>
+      <td><span class="b ${slaC}">${op.sla_pct||0}%</span></td>
+      <td>${(op.rated||0)>0?`<span class="b ${csatC}">${op.rating_pct||0}%</span>`:'<span style="color:var(--t4);font-size:10px">нет оценок</span>'}</td>
+      <td style="font-size:10px;color:var(--t3)">${op.rated||0}</td>
+      <td class="cost-cell">${fmt.mln(op.cost||op.tickets*CPT)}</td>
+      <td>${status}</td>
+    </tr>`;
+  }).join('');
+
+  // Destroy old charts
+  Object.values(charts).forEach(c=>{try{c.destroy()}catch(e){}});
+  charts={};
+
+  const names = ops.map(o=>o.name.split(' ')[0]);
+  const tix   = ops.map(o=>o.tickets);
+  const costs = ops.map(o=>(o.cost||o.tickets*CPT)/1e6);
+  const slas  = ops.map(o=>o.sla_pct||0);
+  const csats = ops.map(o=>o.rating_pct||0);
+  const closes= ops.map(o=>o.avg_close||0);
+  const shares= ops.map(o=>+(o.tickets/totalT*100).toFixed(1));
+
+  // Tickets horizontal bar (NEON style)
+  charts.tickets = new Chart(document.getElementById('ticketsChart'),{
+    type:'bar', data:{
+      labels:names,
+      datasets:[{
+        data:tix,
+        backgroundColor: ops.map((_,i)=>`${Object.values(NEON)[i%6]}0.8)`),
+        borderColor:      ops.map((_,i)=>`${Object.values(NEON)[i%6]}1)`),
+        borderWidth:1, borderRadius:5,
+      }]
+    },
+    options:{...chartBase, indexAxis:'y',
+      scales:{
+        x:{grid:{color:'rgba(255,255,255,0.05)'},ticks:{font:{size:10}},title:{display:true,text:'Тикеты',color:'#9CA3AF',font:{size:10}}},
+        y:{grid:{display:false},ticks:{font:{size:11},color:'#E2E8F0'}}
+      },
+      plugins:{...chartBase.plugins,
+        tooltip:{...CHART_TT,callbacks:{label:ctx=>`${ctx.raw} тик · ${fmt.mln(ctx.raw*CPT)}`}}
+      }
+    }
+  });
+
+  // Share doughnut (NEON)
+  charts.share = new Chart(document.getElementById('shareChart'),{
+    type:'doughnut',
+    data:{labels:names, datasets:[{
+      data:shares,
+      backgroundColor: ops.map((_,i)=>`${Object.values(NEON)[i%6]}0.85)`),
+      borderColor:     ops.map((_,i)=>`${Object.values(NEON)[i%6]}1)`),
+      borderWidth:2, hoverOffset:8,
+    }]},
+    options:{...chartBase, cutout:'55%',
+      plugins:{...chartBase.plugins,
+        legend:{display:true,position:'right',labels:{color:'#9CA3AF',font:{size:10},padding:8,usePointStyle:true}},
+        tooltip:{...CHART_TT,callbacks:{label:ctx=>`${ctx.raw}% · ${fmt.num(ops[ctx.dataIndex].tickets)} тик`}}
+      }
+    }
+  });
+
+  // SLA bar with target line
+  charts.sla = new Chart(document.getElementById('slaChart'),{
+    type:'bar',
+    data:{labels:names, datasets:[{
+      label:'SLA %',
+      data:slas,
+      backgroundColor: slas.map(v=>v>=80?'rgba(16,185,129,0.8)':v>=65?'rgba(245,158,11,0.8)':'rgba(239,68,68,0.8)'),
+      borderColor:     slas.map(v=>v>=80?'#10B981':v>=65?'#F59E0B':'#EF4444'),
+      borderWidth:1, borderRadius:4,
+    },{
+      label:'Цель 80%',
+      data:Array(ops.length).fill(80),
+      type:'line', borderColor:'rgba(96,165,250,0.6)',
+      borderDash:[6,3], borderWidth:1.5, pointRadius:0, fill:false,
+    }]},
+    options:{...chartBase,
+      scales:{
+        x:{grid:{display:false},ticks:{font:{size:10},color:'#E2E8F0'}},
+        y:{grid:{color:'rgba(255,255,255,0.05)'},min:0,max:100,
+          ticks:{font:{size:10},callback:v=>v+'%'}}
+      },
+      plugins:{...chartBase.plugins,
+        legend:{display:true,labels:{color:'#9CA3AF',font:{size:10}}},
+        tooltip:{...CHART_TT,callbacks:{label:ctx=>` ${ctx.dataset.label}: ${ctx.raw}%`}}
+      }
+    }
+  });
+
+  // CSAT bar with target
+  charts.csat = new Chart(document.getElementById('csatChart'),{
+    type:'bar',
+    data:{labels:names, datasets:[{
+      label:'CSAT %',
+      data:csats.map(v=>v||0),
+      backgroundColor: csats.map(v=>v===0?'rgba(71,85,105,0.4)':v>=95?'rgba(52,211,153,0.8)':v>=90?'rgba(252,211,77,0.8)':'rgba(248,113,113,0.8)'),
+      borderColor:     csats.map(v=>v===0?'#475569':v>=95?'#34D399':v>=90?'#FCD34D':'#F87171'),
+      borderWidth:1, borderRadius:4,
+    },{
+      label:'Цель 95%',
+      data:Array(ops.length).fill(95),
+      type:'line', borderColor:'rgba(96,165,250,0.6)',
+      borderDash:[6,3], borderWidth:1.5, pointRadius:0, fill:false,
+    }]},
+    options:{...chartBase,
+      scales:{
+        x:{grid:{display:false},ticks:{font:{size:10},color:'#E2E8F0'}},
+        y:{grid:{color:'rgba(255,255,255,0.05)'},min:0,max:105,
+          ticks:{font:{size:10},callback:v=>v+'%'}}
+      },
+      plugins:{...chartBase.plugins,
+        legend:{display:true,labels:{color:'#9CA3AF',font:{size:10}}},
+        tooltip:{...CHART_TT,callbacks:{label:ctx=>` ${ctx.dataset.label}: ${ctx.raw}%`}}
+      }
+    }
+  });
+
+  // Costs bar
+  charts.cost = new Chart(document.getElementById('costChart'),{
+    type:'bar',
+    data:{labels:names, datasets:[{
+      data:costs,
+      backgroundColor: ops.map((_,i)=>`${Object.values(NEON)[i%6]}0.75)`),
+      borderColor:     ops.map((_,i)=>`${Object.values(NEON)[i%6]}1)`),
+      borderWidth:1, borderRadius:4,
+    }]},
+    options:{...chartBase,
+      scales:{
+        x:{grid:{display:false},ticks:{font:{size:10},color:'#E2E8F0'}},
+        y:{grid:{color:'rgba(255,255,255,0.05)'},
+          ticks:{font:{size:10},callback:v=>v.toFixed(1)+'млн'}}
+      },
+      plugins:{...chartBase.plugins,
+        tooltip:{...CHART_TT,callbacks:{label:ctx=>` ${ctx.raw.toFixed(2)} млн сум`}}
+      }
+    }
+  });
+
+  // Close time bar
+  charts.close = new Chart(document.getElementById('closeChart'),{
+    type:'bar',
+    data:{labels:names, datasets:[{
+      label:'Ср. закрытие (часы)',
+      data:closes,
+      backgroundColor: closes.map(v=>v<=15?'rgba(16,185,129,0.75)':v<=35?'rgba(245,158,11,0.75)':'rgba(239,68,68,0.75)'),
+      borderColor:     closes.map(v=>v<=15?'#10B981':v<=35?'#F59E0B':'#EF4444'),
+      borderWidth:1, borderRadius:4,
+    },{
+      label:'Цель 24ч',
+      data:Array(ops.length).fill(24),
+      type:'line', borderColor:'rgba(96,165,250,0.5)',
+      borderDash:[6,3], borderWidth:1.5, pointRadius:0, fill:false,
+    }]},
+    options:{...chartBase,
+      scales:{
+        x:{grid:{display:false},ticks:{font:{size:10},color:'#E2E8F0'}},
+        y:{grid:{color:'rgba(255,255,255,0.05)'},
+          ticks:{font:{size:10},callback:v=>v+'ч'}}
+      },
+      plugins:{...chartBase.plugins,
+        legend:{display:true,labels:{color:'#9CA3AF',font:{size:10}}},
+        tooltip:{...CHART_TT,callbacks:{label:ctx=>` ${ctx.raw} часов`}}
+      }
+    }
+  });
+
+  // Weekly dynamics stacked bar
+  const weeks = Object.keys(W).sort();
+  const allOps = [...new Set(weeks.flatMap(wk=>(W[wk].operators||[]).map(o=>o.name.split(' ')[0])))];
+  const weekLabels = weeks.map(wk=>W[wk].label);
+  const wDatasets = allOps.slice(0,10).map((opName,i)=>({
+    label: opName,
+    data: weeks.map(wk=>{
+      const found = (W[wk].operators||[]).find(o=>o.name.split(' ')[0]===opName);
+      return found?found.tickets:0;
+    }),
+    backgroundColor: `${Object.values(NEON)[i%6]}0.8)`,
+    borderColor:     `${Object.values(NEON)[i%6]}1)`,
+    borderWidth:1, borderRadius:2, stack:'a',
+  }));
+
+  charts.weekly = new Chart(document.getElementById('weeklyChart'),{
+    type:'bar',
+    data:{labels:weekLabels, datasets:wDatasets},
+    options:{...chartBase,
+      scales:{
+        x:{grid:{display:false},stacked:true,ticks:{font:{size:11}}},
+        y:{grid:{color:'rgba(255,255,255,0.05)'},stacked:true,
+          ticks:{font:{size:10}}}
+      },
+      plugins:{...chartBase.plugins,
+        legend:{display:true,position:'bottom',
+          labels:{color:'#9CA3AF',font:{size:10},padding:10,usePointStyle:true}},
+        tooltip:{...CHART_TT}
+      }
+    }
+  });
+
+  // Burnout risk grid
+  const weeklyOps = {};
+  ops.forEach(op=>{
+    const wTix = weeks.map(wk=>{
+      const found=(W[wk].operators||[]).find(o=>o.name===op.name);
+      return found?found.tickets:0;
+    });
+    const avgWeekTix = wTix.filter(v=>v>0).reduce((s,v)=>s+v,0)/wTix.filter(v=>v>0).length||0;
+    const teamAvgWeek = totalT/4;
+    const ratio = avgWeekTix/(teamAvgWeek/ops.length);
+    weeklyOps[op.name] = {ratio, wTix, aboveAvg: wTix.filter(v=>v>avgT).length};
+  });
+
+  document.getElementById('burnoutGrid').innerHTML = ops.slice(0,12).map(op=>{
+    const d = weeklyOps[op.name];
+    const risk = d.ratio > 1.2 ? 'high' : d.ratio > 1.0 ? 'med' : 'low';
+    const riskColor = {'high':'#EF4444','med':'#F59E0B','low':'#10B981'}[risk];
+    const riskLabel = {'high':'🔴 Высокий','med':'🟡 Средний','low':'🟢 Норма'}[risk];
+    const riskBg = {'high':'rgba(239,68,68,0.08)','med':'rgba(245,158,11,0.08)','low':'rgba(16,185,129,0.06)'}[risk];
+    return `<div style="background:${riskBg};border:1px solid ${riskColor}30;border-radius:10px;padding:12px 14px">
+      <div style="font-size:12px;font-weight:700;color:var(--t1);margin-bottom:4px">${op.name.split(' ')[0]}</div>
+      <div style="font-size:11px;font-weight:700;color:${riskColor};margin-bottom:4px">${riskLabel}</div>
+      <div style="font-size:10px;color:var(--t3)">Нагрузка: ${(d.ratio*100).toFixed(0)}% от нормы</div>
+      <div style="font-size:10px;color:var(--t3)">${fmt.num(op.tickets)} тик · ${op.sla_pct||0}% SLA</div>
+    </div>`;
+  }).join('');
+}
+
+function exportCSExcel() {
+  const ops = PERIODS[currentPeriod].ops;
+  const wb = XLSX.utils.book_new();
+  const h=['Оператор','Тикеты','Нагрузка%','Ср.закрытие ч','SLA%','CSAT%','Оценок','Затраты сум'];
+  const maxT=Math.max(...ops.map(o=>o.tickets));
+  const rows=ops.map(o=>[o.name,o.tickets,Math.round(o.tickets/maxT*100),o.avg_close,o.sla_pct||0,o.rating_pct||0,o.rated||0,o.cost||o.tickets*CPT]);
+  const ws=XLSX.utils.aoa_to_sheet([h,...rows]);
+  ws['!cols']=[{wch:20},{wch:10},{wch:12},{wch:14},{wch:10},{wch:10},{wch:10},{wch:16}];
+  XLSX.utils.book_append_sheet(wb,ws,'Операторы');
+  XLSX.writeFile(wb,'CC_Операторы_Апрель_2026.xlsx');
+}
+
+render();
+</script>
+</body>
+</html>

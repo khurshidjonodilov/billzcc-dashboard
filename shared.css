@@ -495,38 +495,7 @@ body::after {
 .fl { font-family: var(--mono); font-size: 10px; color: var(--t4); }
 .fr { font-family: var(--mono); font-size: 10px; color: var(--t4); display: flex; align-items: center; gap: 10px; }
 
-/* ── LIGHT THEME ─────────────────────────────────────────────────────────── */
-body.light {
-  --bg: #F4F6FA;  --bg2: #EEF0F6; --nav: #FFFFFF;
-  --card: #FFFFFF; --card-hover: #F8FAFF;
-  --card-border: rgba(0,0,0,0.07); --card-border-hover: rgba(0,0,0,0.13);
-  --blue: #2563EB; --blue2: #1D4ED8; --blue-glow: rgba(37,99,235,0.1);
-  --green: #059669; --green2: #047857; --green-glow: rgba(5,150,105,0.1);
-  --red: #DC2626; --red2: #B91C1C; --red-glow: rgba(220,38,38,0.08);
-  --amber: #D97706; --amber2: #B45309; --amber-glow: rgba(217,119,6,0.1);
-  --purple: #7C3AED; --purple2: #6D28D9; --purple-glow: rgba(124,58,237,0.1);
-  --t1: #0F172A; --t2: #374151; --t3: #6B7280; --t4: #9CA3AF;
-}
-body.light { background: var(--bg); }
-body.light::after { opacity: 0.15; }
-body.light .top-nav { background: rgba(255,255,255,0.98); box-shadow: 0 1px 0 rgba(0,0,0,0.08); }
-body.light .nav-link { color: var(--t3); }
-body.light .nav-link.active { color: var(--blue); border-bottom-color: var(--blue); }
-body.light .kpi { background: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
-body.light .card { background: #fff; box-shadow: 0 1px 6px rgba(0,0,0,0.05); }
-body.light .phdr { background: linear-gradient(135deg, #fff, #EEF4FF); border-color: rgba(37,99,235,0.12); }
-body.light .tbl th { color: var(--t3); }
-body.light .tbl td { color: var(--t2); border-bottom-color: rgba(0,0,0,0.04); }
-body.light .tbl tr:hover td { background: #F8FAFF; }
-body.light .n-name { color: var(--t1) !important; }
-body.light .export-bar { background: #fff; }
-body.light .team-alert { background: rgba(254,243,199,0.5); border-color: rgba(217,119,6,0.3); }
-body.light .alert.rose { background: rgba(254,226,226,0.5); }
-body.light .alert.gold { background: rgba(254,243,199,0.5); }
-body.light .comp-label { background: rgba(0,0,0,0.04); border-color: rgba(0,0,0,0.07); }
-body.light .bb { background: rgba(0,0,0,0.07); }
-body.light .sec-line { background: rgba(0,0,0,0.07); }
-body.light .kpi-formula, body.light .card-formula, body.light .al-formula { color: #9CA3AF; border-color: rgba(0,0,0,0.06); }
+
 
 /* ── PAGE TRANSITIONS ────────────────────────────────────────────────────── */
 @keyframes pageOut { to { opacity: 0; transform: translateY(-5px); } }
@@ -539,3 +508,158 @@ body.light .kpi-formula, body.light .card-formula, body.light .al-formula { colo
 .rf { height: 3px; border-radius: 2px; background: linear-gradient(90deg, #1D4ED8, #60A5FA); }
 .rp { width: 40px; text-align: right; font-size: 11px; font-weight: 700; color: var(--blue2); }
 .rc { width: 48px; text-align: right; font-size: 10px; color: var(--t3); }
+
+/* ── BILLZ LIGHT THEME (brand colors) ────────────────────────────────── */
+body.light {
+  --bg:         #F0F4FF;   /* subtle blue-white like BILLZ UI */
+  --bg2:        #E8EFFE;
+  --nav:        #FFFFFF;
+  --card:       #FFFFFF;
+  --card-hover: #F5F8FF;
+  --card-border: rgba(26,86,219,0.10);
+  --card-border-hover: rgba(26,86,219,0.22);
+
+  /* BILLZ brand blue */
+  --blue:    #1A56DB;
+  --blue2:   #1D4ED8;
+  --blue-dk: #1E3A8A;
+  --blue-glow: rgba(26,86,219,0.12);
+
+  --green:   #059669;
+  --green2:  #047857;
+  --green-glow: rgba(5,150,105,0.10);
+
+  --red:     #DC2626;
+  --red2:    #B91C1C;
+  --red-glow: rgba(220,38,38,0.08);
+
+  --amber:   #D97706;
+  --amber2:  #B45309;
+  --amber-glow: rgba(217,119,6,0.10);
+
+  --purple:  #6D28D9;
+  --purple2: #5B21B6;
+  --purple-glow: rgba(109,40,217,0.10);
+
+  --cyan:    #0284C7;
+  --cyan2:   #0369A1;
+
+  --t1: #0F172A;
+  --t2: #1E293B;
+  --t3: #475569;
+  --t4: #94A3B8;
+}
+body.light { background: var(--bg); }
+body.light::after { opacity: 0.08; }
+
+body.light .top-nav {
+  background: rgba(255,255,255,0.98);
+  border-bottom: 1px solid rgba(26,86,219,0.12);
+  box-shadow: 0 1px 0 rgba(26,86,219,0.06);
+}
+body.light .nav-brand { color: #1A56DB; }
+body.light .nav-brand-dot { background: linear-gradient(135deg,#1A56DB,#3B82F6); }
+body.light .nav-link { color: var(--t3); }
+body.light .nav-link:hover { color: #1A56DB; }
+body.light .nav-link.active { color: #1A56DB; border-bottom-color: #1A56DB; }
+
+body.light .phdr {
+  background: linear-gradient(135deg, #FFFFFF, #EEF3FF);
+  border-color: rgba(26,86,219,0.14);
+  box-shadow: 0 2px 20px rgba(26,86,219,0.08);
+}
+body.light .phdr::before { background: linear-gradient(90deg,#1A56DB,#3B82F6,transparent); }
+
+body.light .kpi {
+  background: #FFFFFF;
+  border-color: rgba(26,86,219,0.09);
+  box-shadow: 0 2px 8px rgba(26,86,219,0.06);
+}
+body.light .kpi:hover {
+  border-color: rgba(26,86,219,0.22);
+  box-shadow: 0 6px 20px rgba(26,86,219,0.12);
+}
+body.light .card {
+  background: #FFFFFF;
+  border-color: rgba(26,86,219,0.09);
+  box-shadow: 0 1px 6px rgba(26,86,219,0.05);
+}
+body.light .card:hover { border-color: rgba(26,86,219,0.2); }
+
+body.light .tbl th { color: #6B7280; border-bottom-color: rgba(26,86,219,0.12); }
+body.light .tbl td { color: #1E293B; border-bottom-color: rgba(0,0,0,0.04); }
+body.light .tbl tr:hover td { background: rgba(26,86,219,0.03); }
+body.light .n-name  { color: #0F172A !important; }
+body.light .n-num   { color: #1A56DB !important; }
+body.light .cost-cell{ color: #475569 !important; }
+
+body.light .sec-num { background: rgba(26,86,219,0.10); color: #1A56DB; border-color: rgba(26,86,219,0.22); }
+body.light .sec-line { background: rgba(26,86,219,0.10); }
+body.light .card-title::before { background: #1A56DB; }
+
+body.light .export-bar { background: #fff; border-color: rgba(26,86,219,0.12); }
+body.light .export-btn { background: linear-gradient(135deg,#065F46,#059669); }
+
+body.light .team-alert {
+  background: rgba(254,243,199,0.6);
+  border-color: rgba(217,119,6,0.3);
+}
+body.light .alert.rose { background: rgba(254,226,226,0.6); border-color: rgba(220,38,38,0.2); }
+body.light .alert.gold { background: rgba(254,243,199,0.6); border-color: rgba(217,119,6,0.2); }
+
+body.light .comp-label { background: rgba(26,86,219,0.05); border-color: rgba(26,86,219,0.1); }
+body.light .bb { background: rgba(26,86,219,0.08); }
+body.light .bf { background: linear-gradient(90deg,#1A56DB,#3B82F6); }
+body.light .kpi-formula, body.light .card-formula, body.light .al-formula {
+  color: #94A3B8; border-color: rgba(26,86,219,0.1);
+}
+body.light .period-btn { border-color: rgba(26,86,219,0.15); background: rgba(26,86,219,0.04); color: #475569; }
+body.light .period-btn:hover { background: rgba(26,86,219,0.08); color: #1A56DB; }
+body.light .period-btn.active { background: #1A56DB; border-color: #1A56DB; color: #fff; }
+
+/* ── NEON GLOW ELEMENTS ──────────────────────────────────────────────── */
+.formula-tag {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 10px;
+  color: #60A5FA;
+  background: rgba(59,130,246,0.08);
+  border: 1px solid rgba(59,130,246,0.2);
+  border-radius: 4px;
+  padding: 3px 8px;
+  margin-top: 8px;
+  line-height: 1.5;
+}
+.formula-bar {
+  margin-top: 10px;
+  padding: 8px 12px;
+  background: rgba(30,41,59,0.8);
+  border-left: 2px solid var(--blue);
+  border-radius: 0 6px 6px 0;
+  font-family: var(--mono);
+  font-size: 10px;
+  color: #94A3B8;
+  line-height: 1.6;
+}
+.formula-bar .f-key { color: #60A5FA; font-weight: 600; }
+.formula-bar .f-val { color: #34D399; }
+
+/* PNG export button */
+.png-btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: rgba(139,92,246,0.15);
+  border: 1px solid rgba(139,92,246,0.3);
+  border-radius: 8px; padding: 6px 14px;
+  font-size: 11px; font-weight: 600; color: var(--purple2);
+  cursor: pointer; font-family: var(--sans);
+  transition: all .2s;
+}
+.png-btn:hover {
+  background: rgba(139,92,246,0.25);
+  box-shadow: 0 0 14px rgba(139,92,246,0.3);
+  transform: translateY(-1px);
+}
+body.light .formula-bar { background: rgba(241,245,255,0.9); color: #475569; }
+body.light .formula-bar .f-key { color: #1A56DB; }
+body.light .formula-bar .f-val { color: #059669; }
+body.light .png-btn { color: #6D28D9; border-color: rgba(109,40,217,0.3); background: rgba(109,40,217,0.08); }

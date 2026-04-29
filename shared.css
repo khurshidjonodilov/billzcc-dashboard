@@ -309,13 +309,14 @@ body::after {
 .kpi-formula {
   font-family: var(--mono);
   font-size: 9px;
-  color: #60A5FA;
-  background: rgba(59,130,246,0.08);
-  border-left: 2px solid rgba(59,130,246,0.4);
-  border-radius: 0 4px 4px 0;
-  padding: 5px 9px;
-  margin-top: 7px;
-  line-height: 1.55;
+  color: #7DD3FC;
+  background: rgba(15,23,42,0.5);
+  border: 1px solid rgba(59,130,246,0.18);
+  border-left: 2px solid #3B82F6;
+  border-radius: 0 5px 5px 0;
+  padding: 5px 10px;
+  margin-top: 8px;
+  line-height: 1.6;
 }
 /* Chips row */
 .kpi-chips { display: flex; gap: 4px; flex-wrap: wrap; margin-top: 4px; }
@@ -418,12 +419,15 @@ body::after {
 .card-note { font-family: var(--mono); font-size: 9px; color: var(--t3); }
 .card-formula {
   font-family: var(--mono);
-  font-size: 9px;
+  font-size: 10px;
   color: #7DD3FC;
-  border-top: 1px solid rgba(59,130,246,0.15);
-  padding-top: 9px;
-  margin-top: 11px;
-  line-height: 1.6;
+  background: rgba(15,23,42,0.5);
+  border: 1px solid rgba(59,130,246,0.15);
+  border-left: 3px solid #3B82F6;
+  border-radius: 0 6px 6px 0;
+  padding: 8px 12px;
+  margin-top: 10px;
+  line-height: 1.7;
 }
 
 /* ── TABLE ───────────────────────────────────────────────────────────────── */
@@ -717,10 +721,20 @@ body.light .period-btn.active, body.light .pb.act {
 
 /* Formulas */
 body.light .formula-bar {
-  background: #EFF6FF;
-  border-left: 2px solid #1A56DB;
-  color: #1E3A8A;
+  margin-top: 12px;
+  padding: 9px 14px;
+  background: rgba(15,23,42,0.7);
+  border: 1px solid rgba(59,130,246,0.2);
+  border-left: 3px solid #3B82F6;
+  border-radius: 0 8px 8px 0;
+  font-family: var(--mono);
+  font-size: 10px;
+  color: #7DD3FC;
+  line-height: 1.7;
+  letter-spacing: 0.01em;
 }
+.formula-bar .f-key { color: #60A5FA; font-weight: 700; }
+.formula-bar .f-val { color: #34D399; font-weight: 600; }
 body.light .formula-bar .f-key { color: #1A56DB; font-weight: 700; }
 body.light .formula-bar .f-val { color: #047857; font-weight: 600; }
 body.light .kpi-formula {

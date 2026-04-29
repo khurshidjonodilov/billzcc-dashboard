@@ -87,8 +87,8 @@ function buildNeonLine(id, labels, datasets, opts={}) {
       label: d.label || '',
       data: d.data,
       borderColor: color,
-      borderWidth: d.width || 2.5,
-      pointRadius: d.points !== false ? 3.5 : 0,
+      borderWidth: d.width || 3.0,
+      pointRadius: d.points !== false ? (d.pointSizes || 4) : 0,
       pointHoverRadius: 7,
       pointBackgroundColor: color,
       pointBorderColor: isDark ? '#0A0C10' : '#FFFFFF',
@@ -122,7 +122,7 @@ function buildNeonLine(id, labels, datasets, opts={}) {
     data: { labels, datasets: ds },
     options: {
       responsive: true, maintainAspectRatio: false,
-      animation: { duration: 900, easing: 'easeInOutQuart' },
+      animation: { duration: 1000, easing: 'easeInOutCubic' },
       scales: {
         x: {
           grid: { display: false },

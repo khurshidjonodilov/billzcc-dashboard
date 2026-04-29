@@ -248,13 +248,67 @@ let charts = {};
 
   if(Q.operator_ranking && Q.operator_ranking.length) {
     const opR = Q.operator_ranking.slice(0,8);
-    charts.rank = buildNeonHorizBar('rankChart',
-      opR.map(o=>o.name.split(' ')[0]), opR.map(o=>o.tickets),
-      (v,i)=>NEON_COLORS[i%NEON_COLORS.length]+'CC',
-      {tooltipFmt:ctx=>` ${ctx.raw.toLocaleString('ru')} тикетов`});
+
+    // Fill ranking table
+    const tBody = document.getElementById('rankingTable');
+    if(tBody) {
+      const maxScore = Math.max(...opR.map(o=>o.score||0));
+      tBody.innerHTML = opR.map((o,i)=>{
+        const sc = o.score||0;
+        const medal = i===0?'🥇':i===1?'🥈':i===2?'🥉':'';
+        const scoreColor = sc>=85?'#34D399':sc>=70?'#FCD34D':'#F87171';
+        const scoreBg = sc>=85?'rgba(52,211,153,0.12)':sc>=70?'rgba(252,211,77,0.12)':'rgba(248,113,113,0.12)';
+        return `<tr>
+          <td style="font-weight:700;color:var(--amber2);font-size:12px">${medal||o.rank}</td>
+          <td class="n-name">${o.name}</td>
+          <td><span style="background:${scoreBg};color:${scoreColor};border:1px solid ${scoreColor}40;
+            padding:2px 8px;border-radius:5px;font-size:11px;font-weight:700">${sc}</span></td>
+          <td><span class="b ${(o.csat_pct||0)>=95?'ok':(o.csat_pct||0)>=90?'warn':'bad'}">${o.csat_pct||0}%</span></td>
+          <td><span class="b ${(o.sla_pct||0)>=80?'ok':(o.sla_pct||0)>=65?'warn':'bad'}">${o.sla_pct||0}%</span></td>
+          <td style="font-family:var(--mono);font-size:11px;color:var(--t2)">${o.frt_med_sec||0}с</td>
+          <td style="font-size:11px;color:var(--t2)">${o.kk||'—'}</td>
+          <td style="font-size:11px;color:var(--t2)">${o.test||'—'}</td>
+          <td class="cost-cell">${(o.cost_mln||0).toFixed(2)} млн</td>
+        </tr>`;
+      }).join('');
+    }
+
+    // Score chart - horizontal bar with neon colors
+    const scoreCtx = document.getElementById('rankChart');
+    if(scoreCtx) {
+      charts.rank = new Chart(scoreCtx, {
+        type: 'bar',
+        data: {
+          labels: opR.map(o=>o.name.split(' ')[0]),
+          datasets: [{
+            data: opR.map(o=>o.score||0),
+            backgroundColor: opR.map(o=>{
+              const sc=o.score||0;
+              return sc>=85?'rgba(52,211,153,0.82)':sc>=70?'rgba(252,211,77,0.82)':'rgba(248,113,113,0.82)';
+            }),
+            borderColor: opR.map(o=>{
+              const sc=o.score||0;
+              return sc>=85?'#34D399':sc>=70?'#FCD34D':'#F87171';
+            }),
+            borderWidth:1, borderRadius:5,
+          }]
+        },
+        options:{...chartBase,indexAxis:'y',
+          scales:{
+            x:{grid:{color:'rgba(255,255,255,0.055)'},min:0,max:100,
+              ticks:{color:'#4B5563',callback:v=>v}},
+            y:{grid:{display:false},ticks:{color:'#E2E8F0',font:{size:11,weight:'600'}}},
+          },
+          plugins:{...chartBase.plugins,
+            tooltip:{...CHART_TT,callbacks:{label:ctx=>` Score: ${ctx.raw}`}}
+          }
+        }
+      });
+    }
   }
 
-  if(Q.top_labels_q && Q.top_labels_q.length) {
+  const topLabels = Q.top_labels_q || Q.by_month.flatMap(m=>m.top_labels_q||[]);
+  if(topLabels && topLabels.length) { Q.top_labels_q = topLabels;
     const tL = Q.top_labels_q.slice(0,8);
     charts.costByLabel = buildNeonBar('costByLabelChart',
       tL.map(l=>l.name.length>22?l.name.slice(0,22)+'…':l.name),

@@ -307,10 +307,15 @@ body::after {
 .kpi-spark { width: 100%; height: 38px; display: block; margin: 8px 0 7px; }
 /* Formula tag */
 .kpi-formula {
-  font-family: var(--mono); font-size: 9px; color: var(--t4);
-  border-top: 1px solid rgba(255,255,255,0.05);
-  padding-top: 7px; margin-top: 4px;
-  line-height: 1.5;
+  font-family: var(--mono);
+  font-size: 9px;
+  color: #60A5FA;
+  background: rgba(59,130,246,0.08);
+  border-left: 2px solid rgba(59,130,246,0.4);
+  border-radius: 0 4px 4px 0;
+  padding: 5px 9px;
+  margin-top: 7px;
+  line-height: 1.55;
 }
 /* Chips row */
 .kpi-chips { display: flex; gap: 4px; flex-wrap: wrap; margin-top: 4px; }
@@ -359,7 +364,13 @@ body::after {
 .alert.rose .al-label { color: var(--red2); }
 .alert.gold .al-label { color: var(--amber2); }
 .al-txt { font-size: 11px; color: var(--t2); line-height: 1.55; }
-.al-formula { font-family: var(--mono); font-size: 9px; color: var(--t4); margin-top: 4px; }
+.al-formula {
+  font-family: var(--mono);
+  font-size: 9px;
+  color: #7DD3FC;
+  margin-top: 5px;
+  line-height: 1.5;
+}
 
 /* ── SECTION ─────────────────────────────────────────────────────────────── */
 .sec { display: flex; align-items: center; gap: 10px; margin: 22px 0 12px; }
@@ -406,9 +417,13 @@ body::after {
 }
 .card-note { font-family: var(--mono); font-size: 9px; color: var(--t3); }
 .card-formula {
-  font-family: var(--mono); font-size: 9px; color: var(--t4);
-  border-top: 1px solid rgba(255,255,255,0.05);
-  padding-top: 8px; margin-top: 10px; line-height: 1.5;
+  font-family: var(--mono);
+  font-size: 9px;
+  color: #7DD3FC;
+  border-top: 1px solid rgba(59,130,246,0.15);
+  padding-top: 9px;
+  margin-top: 11px;
+  line-height: 1.6;
 }
 
 /* ── TABLE ───────────────────────────────────────────────────────────────── */
@@ -610,9 +625,7 @@ body.light .alert.gold { background: rgba(254,243,199,0.6); border-color: rgba(2
 body.light .comp-label { background: rgba(26,86,219,0.05); border-color: rgba(26,86,219,0.1); }
 body.light .bb { background: rgba(26,86,219,0.08); }
 body.light .bf { background: linear-gradient(90deg,#1A56DB,#3B82F6); }
-body.light .kpi-formula, body.light .card-formula, body.light .al-formula {
-  color: #94A3B8; border-color: rgba(26,86,219,0.1);
-}
+body.light .kpi-formula, body.light .card-formula, 
 body.light .period-btn { border-color: rgba(26,86,219,0.15); background: rgba(26,86,219,0.04); color: #475569; }
 body.light .period-btn:hover { background: rgba(26,86,219,0.08); color: #1A56DB; }
 body.light .period-btn.active { background: #1A56DB; border-color: #1A56DB; color: #fff; }
@@ -632,8 +645,8 @@ body.light .period-btn.active { background: #1A56DB; border-color: #1A56DB; colo
 }
 .formula-bar {
   margin-top: 10px;
-  padding: 8px 12px;
-  background: rgba(30,41,59,0.8);
+  padding: 8px 13px;
+  background: rgba(30,41,59,0.6);
   border-left: 2px solid var(--blue);
   border-radius: 0 6px 6px 0;
   font-family: var(--mono);
@@ -659,7 +672,7 @@ body.light .period-btn.active { background: #1A56DB; border-color: #1A56DB; colo
   box-shadow: 0 0 14px rgba(139,92,246,0.3);
   transform: translateY(-1px);
 }
-body.light .formula-bar { background: rgba(241,245,255,0.9); color: #475569; }
+
 body.light .formula-bar .f-key { color: #1A56DB; }
 body.light .formula-bar .f-val { color: #059669; }
 body.light .png-btn { color: #6D28D9; border-color: rgba(109,40,217,0.3); background: rgba(109,40,217,0.08); }
@@ -693,7 +706,7 @@ body.light .card-note { color: #94A3B8; }
 body.light .alert-num { }
 body.light .al-label { }
 body.light .al-txt { color: #374151; }
-body.light .al-formula { color: #9CA3AF; }
+
 
 body.light .comp-rank { color: #94A3B8; }
 body.light .comp-name { color: #0F172A; }
@@ -720,7 +733,7 @@ body.light .export-bar-sub { color: #6B7280; }
 body.light .fl { color: #94A3B8; }
 body.light .fr { color: #94A3B8; }
 
-body.light .formula-bar { background:rgba(26,86,219,0.05); border-left-color: #1A56DB; color:#374151; }
+
 body.light .formula-bar .f-key { color:#1A56DB; }
 body.light .formula-bar .f-val { color:#059669; }
 
@@ -738,3 +751,38 @@ body.light .png-btn:hover { background:rgba(109,40,217,0.15); box-shadow:0 0 14p
 
 body.light .period-btn { color:#374151; }
 body.light .period-btn.active { color:#fff; background:#1A56DB; }
+
+/* Light theme formula visibility */
+body.light .formula-bar { background: rgba(37,99,235,0.07); border-left-color: #1A56DB; color: #1E3A8A; }
+body.light .formula-bar .f-key { color: #1D4ED8; }
+body.light .formula-bar .f-val { color: #065F46; }
+body.light .kpi-formula { background: rgba(37,99,235,0.08); border-left-color: #1A56DB; color: #1E3A8A; }
+body.light .formula { background: rgba(37,99,235,0.08); border-left-color: #1A56DB; color: #1E3A8A; }
+body.light .card-formula { color: #1E3A8A; border-top-color: rgba(37,99,235,0.15); }
+body.light .al-formula { color: #1E3A8A; }
+
+/* ── Additional light theme text fixes ────────────────────────────── */
+body.light .kpi-tag { color: #374151; }
+body.light .kpi-sub { color: #6B7280; }
+body.light .ks { color: #6B7280; }
+body.light .kpi-n { /* color set by kpiCfg */ }
+body.light .card-note { color: #6B7280; }
+body.light .eye { color: #6B7280; }
+body.light .psub { color: #374151; }
+body.light .ce { color: #6B7280; }
+body.light .cost-d { color: #6B7280; }
+body.light .chip.b { background:rgba(29,78,216,0.1); color:#1D4ED8; border-color:rgba(29,78,216,0.25); }
+body.light .chip.g { background:rgba(4,120,87,0.1); color:#047857; border-color:rgba(4,120,87,0.25); }
+body.light .chip.r { background:rgba(185,28,28,0.1); color:#B91C1C; border-color:rgba(185,28,28,0.25); }
+body.light .chip.a { background:rgba(180,83,9,0.1); color:#B45309; border-color:rgba(180,83,9,0.25); }
+body.light .chip.p { background:rgba(109,40,217,0.1); color:#6D28D9; border-color:rgba(109,40,217,0.25); }
+body.light .live { color: #047857; }
+body.light .live-dot { background:#047857; box-shadow:0 0 6px #047857; }
+body.light .tbl td { color: #1F2937; }
+body.light .n-name { color: #0F172A !important; }
+body.light .n-num { color: #1D4ED8 !important; }
+body.light .lbl-name { color: #1F2937 !important; }
+body.light .cost-cell { color: #374151 !important; }
+body.light .comp-rank { color: #9CA3AF; }
+body.light .at-b { color: #374151; }
+body.light .at2 { color: #374151; }

@@ -78,8 +78,8 @@ function buildNeonLine(id, labels, datasets, opts={}) {
   if(!canvas) return null;
 
   const isDark = !document.body.classList.contains('light');
-  const gridColor = isDark ? 'rgba(255,255,255,0.055)' : 'rgba(0,0,0,0.06)';
-  const tickColor = isDark ? '#4B5563' : '#9CA3AF';
+  const gridColor = isDark ? 'rgba(255,255,255,0.055)' : 'rgba(26,86,219,0.08)';
+  const tickColor = isDark ? '#4B5563' : '#6B7280';
 
   const ds = datasets.map((d, i) => {
     const color = d.color || NEON_COLORS[i % NEON_COLORS.length];
@@ -163,8 +163,8 @@ function buildNeonBar(id, labels, datasets, opts={}) {
   const canvas = document.getElementById(id);
   if(!canvas) return null;
   const isDark = !document.body.classList.contains('light');
-  const gridColor = isDark ? 'rgba(255,255,255,0.055)' : 'rgba(0,0,0,0.06)';
-  const tickColor = isDark ? '#4B5563' : '#9CA3AF';
+  const gridColor = isDark ? 'rgba(255,255,255,0.055)' : 'rgba(26,86,219,0.08)';
+  const tickColor = isDark ? '#4B5563' : '#6B7280';
 
   const ds = datasets.map((d, i) => {
     const color = d.color || NEON_COLORS[i % NEON_COLORS.length];

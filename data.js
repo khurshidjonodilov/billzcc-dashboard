@@ -1,20 +1,20 @@
 const BILLZ_DATA = {
   "monthly": {
     "tickets": 10872,
-    "calls": 5611,
-    "chats": 4620,
-    "desired": 4632,
-    "undesired": 5060,
-    "closed": 10230,
-    "open": 1,
-    "afrt": "52с",
-    "afrt_raw": 0.868,
+    "calls": 5951,
+    "chats": 4921,
+    "desired": 4963,
+    "undesired": 5360,
+    "closed": 10872,
+    "open": 0,
+    "afrt": "51с",
+    "afrt_raw": 0.864,
     "art": "25 ч 43 м",
     "art_raw": 25.7,
-    "sla_pct": 78.7,
-    "sla_not_met": 21.3,
+    "sla_pct": 78.5,
+    "sla_not_met": 21.5,
     "lcr": 7.8,
-    "repeat_pct": 9.6,
+    "repeat_pct": 9.4,
     "cost": 107252280,
     "massoviy_cnt": 154,
     "no_massoviy": {
@@ -603,108 +603,108 @@ const BILLZ_DATA = {
     "operators": [
       {
         "name": "Анасхон",
-        "tickets": 1342,
-        "avg_close": 20.3,
+        "tickets": 1427,
+        "avg_close": 0.05,
         "close_rate": 99.5,
-        "rating_pct": 96.6,
-        "rated": 89,
-        "sla_pct": 92.3,
-        "cost": 13238830
+        "rating_pct": 95.9,
+        "rated": 98,
+        "sla_pct": 92.7,
+        "cost": 14077355
       },
       {
         "name": "Атабек",
-        "tickets": 1070,
-        "avg_close": 30.0,
+        "tickets": 1103,
+        "avg_close": 0.04,
         "close_rate": 99.5,
-        "rating_pct": 96.2,
-        "rated": 52,
-        "sla_pct": 77.7,
-        "cost": 10555550
-      },
-      {
-        "name": "Нурилло",
-        "tickets": 1030,
-        "avg_close": 24.6,
-        "close_rate": 99.5,
-        "rating_pct": 93.1,
-        "rated": 58,
-        "sla_pct": 82.4,
-        "cost": 10160950
+        "rating_pct": 96.7,
+        "rated": 60,
+        "sla_pct": 77.1,
+        "cost": 10881095
       },
       {
         "name": "Алиёр",
-        "tickets": 1014,
-        "avg_close": 21.1,
+        "tickets": 1067,
+        "avg_close": 0.07,
         "close_rate": 99.5,
-        "rating_pct": 98.1,
-        "rated": 53,
-        "sla_pct": 76.1,
-        "cost": 10003110
+        "rating_pct": 96.4,
+        "rated": 55,
+        "sla_pct": 74.8,
+        "cost": 10525955
       },
       {
         "name": "Робия Р.",
-        "tickets": 978,
-        "avg_close": 40.2,
+        "tickets": 1067,
+        "avg_close": 0.12,
         "close_rate": 99.5,
-        "rating_pct": 94.1,
-        "rated": 102,
-        "sla_pct": 76.7,
-        "cost": 9647970
+        "rating_pct": 93.5,
+        "rated": 108,
+        "sla_pct": 75.3,
+        "cost": 10525955
+      },
+      {
+        "name": "Нурилло",
+        "tickets": 1055,
+        "avg_close": 0.05,
+        "close_rate": 99.5,
+        "rating_pct": 93.5,
+        "rated": 62,
+        "sla_pct": 82.0,
+        "cost": 10407575
       },
       {
         "name": "Сардор Б.",
-        "tickets": 895,
-        "avg_close": 25.2,
+        "tickets": 966,
+        "avg_close": 0.05,
         "close_rate": 99.5,
         "rating_pct": 100.0,
-        "rated": 36,
-        "sla_pct": 72.9,
-        "cost": 8829175
-      },
-      {
-        "name": "Тожмухаммад",
-        "tickets": 884,
-        "avg_close": 21.9,
-        "close_rate": 99.5,
-        "rating_pct": 87.8,
-        "rated": 49,
-        "sla_pct": 69.9,
-        "cost": 8720660
+        "rated": 37,
+        "sla_pct": 73.0,
+        "cost": 9529590
       },
       {
         "name": "Авазбек",
-        "tickets": 858,
-        "avg_close": 19.3,
+        "tickets": 952,
+        "avg_close": 0.08,
         "close_rate": 99.5,
-        "rating_pct": 92.7,
-        "rated": 82,
-        "sla_pct": 80.4,
-        "cost": 8464170
+        "rating_pct": 91.0,
+        "rated": 89,
+        "sla_pct": 81.8,
+        "cost": 9391480
+      },
+      {
+        "name": "Тожмухаммад",
+        "tickets": 918,
+        "avg_close": 0.1,
+        "close_rate": 99.5,
+        "rating_pct": 87.8,
+        "rated": 49,
+        "sla_pct": 70.6,
+        "cost": 9056070
       },
       {
         "name": "Ардак",
-        "tickets": 814,
-        "avg_close": 35.0,
+        "tickets": 881,
+        "avg_close": 0.06,
         "close_rate": 99.5,
         "rating_pct": 100.0,
-        "rated": 38,
+        "rated": 41,
         "sla_pct": 74.2,
-        "cost": 8030110
+        "cost": 8691065
       },
       {
         "name": "Иззатбек",
-        "tickets": 509,
-        "avg_close": 5.0,
+        "tickets": 587,
+        "avg_close": 0.03,
         "close_rate": 99.5,
-        "rating_pct": 90.9,
-        "rated": 11,
-        "sla_pct": 75.2,
-        "cost": 5021285
+        "rating_pct": 92.9,
+        "rated": 14,
+        "sla_pct": 74.2,
+        "cost": 5790755
       },
       {
         "name": "Робия А.",
         "tickets": 343,
-        "avg_close": 36.6,
+        "avg_close": 0.02,
         "close_rate": 99.5,
         "rating_pct": 100.0,
         "rated": 15,
@@ -714,7 +714,7 @@ const BILLZ_DATA = {
       {
         "name": "Шохина",
         "tickets": 200,
-        "avg_close": 14.2,
+        "avg_close": 0.05,
         "close_rate": 99.5,
         "rating_pct": 95.8,
         "rated": 24,
@@ -724,7 +724,7 @@ const BILLZ_DATA = {
       {
         "name": "Дильшод",
         "tickets": 155,
-        "avg_close": 84.9,
+        "avg_close": 0.19,
         "close_rate": 99.5,
         "rating_pct": 100.0,
         "rated": 9,
@@ -733,18 +733,18 @@ const BILLZ_DATA = {
       },
       {
         "name": "Камолиддин",
-        "tickets": 109,
-        "avg_close": 17.2,
+        "tickets": 119,
+        "avg_close": 0.03,
         "close_rate": 99.5,
         "rating_pct": 100.0,
         "rated": 11,
-        "sla_pct": 76.2,
-        "cost": 1075285
+        "sla_pct": 75.7,
+        "cost": 1173935
       },
       {
         "name": "Нурлан",
         "tickets": 28,
-        "avg_close": 6.4,
+        "avg_close": 0.05,
         "close_rate": 99.5,
         "rating_pct": 100.0,
         "rated": 2,
@@ -753,210 +753,185 @@ const BILLZ_DATA = {
       },
       {
         "name": "Азизбек",
-        "tickets": 2,
-        "avg_close": 258.1,
+        "tickets": 3,
+        "avg_close": 1.79,
         "close_rate": 99.5,
         "rating_pct": 0.0,
         "rated": 0,
         "sla_pct": 0.0,
-        "cost": 19730
+        "cost": 29595
+      },
+      {
+        "name": "Хуршид",
+        "tickets": 1,
+        "avg_close": 0.11,
+        "close_rate": 99.5,
+        "rating_pct": 0.0,
+        "rated": 0,
+        "sla_pct": 0.0,
+        "cost": 9865
       }
     ],
     "top_labels": [
       {
         "name": "Документооборот - Оплата за тариф",
-        "tickets": 848,
-        "desired": 351,
-        "undesired": 497,
-        "cost": 8365520
+        "tickets": 860,
+        "desired": 293,
+        "undesired": 499,
+        "cost": 8483900
       },
       {
         "name": "Учётная запись - Помощь со входом в аккаунт",
-        "tickets": 449,
-        "desired": 150,
-        "undesired": 299,
-        "cost": 4429385
+        "tickets": 473,
+        "desired": 145,
+        "undesired": 309,
+        "cost": 4666145
       },
       {
         "name": "Оборудование - Установка/Настройка/Удаление принтера",
-        "tickets": 377,
-        "desired": 272,
-        "undesired": 105,
-        "cost": 3719105
+        "tickets": 396,
+        "desired": 281,
+        "undesired": 109,
+        "cost": 3906540
       },
       {
         "name": "Документооборот - Создание ссылки для оплаты",
-        "tickets": 362,
-        "desired": 91,
-        "undesired": 271,
-        "cost": 3571130
+        "tickets": 374,
+        "desired": 90,
+        "undesired": 281,
+        "cost": 3689510
       },
       {
         "name": "Учётная запись - Блокировка/Разблокировка аккаунта",
-        "tickets": 246,
+        "tickets": 268,
         "desired": 106,
-        "undesired": 140,
-        "cost": 2426790
+        "undesired": 149,
+        "cost": 2643820
       },
       {
         "name": "Вопрос не по программе",
-        "tickets": 211,
-        "desired": 77,
-        "undesired": 134,
-        "cost": 2081515
+        "tickets": 226,
+        "desired": 76,
+        "undesired": 140,
+        "cost": 2229490
       },
       {
         "name": "Каталог — изменение свойств товара",
-        "tickets": 204,
-        "desired": 104,
-        "undesired": 100,
-        "cost": 2012460
+        "tickets": 216,
+        "desired": 95,
+        "undesired": 108,
+        "cost": 2130840
       },
       {
         "name": "Кассовые смены — Открытие/Закрытие смен",
-        "tickets": 187,
-        "desired": 59,
-        "undesired": 128,
-        "cost": 1844755
+        "tickets": 199,
+        "desired": 62,
+        "undesired": 137,
+        "cost": 1963135
       },
       {
         "name": "Каталог — настройка печати ценника",
-        "tickets": 166,
-        "desired": 94,
-        "undesired": 72,
-        "cost": 1637590
+        "tickets": 174,
+        "desired": 97,
+        "undesired": 76,
+        "cost": 1716510
       },
       {
         "name": "Управление - Создание/Редактирвоание/Удаление роли",
-        "tickets": 149,
-        "desired": 87,
-        "undesired": 62,
-        "cost": 1469885
+        "tickets": 161,
+        "desired": 96,
+        "undesired": 65,
+        "cost": 1588265
       },
       {
         "name": "Учётная запись - Создание магазина",
-        "tickets": 133,
-        "desired": 85,
-        "undesired": 48,
-        "cost": 1312045
-      },
-      {
-        "name": "Импорт — импорт товаров через Excel",
-        "tickets": 110,
-        "desired": 69,
-        "undesired": 41,
-        "cost": 1085150
+        "tickets": 139,
+        "desired": 84,
+        "undesired": 51,
+        "cost": 1371235
       },
       {
         "name": "Управление - Создание/Редактирвоание/Удаление сотрудника",
-        "tickets": 110,
-        "desired": 62,
-        "undesired": 48,
-        "cost": 1085150
+        "tickets": 120,
+        "desired": 69,
+        "undesired": 51,
+        "cost": 1183800
       },
       {
-        "name": "Каталог — запрос на добавление товара",
-        "tickets": 105,
-        "desired": 63,
-        "undesired": 42,
-        "cost": 1035825
-      },
-      {
-        "name": "Оборудование - Установка Anydesk/BILLZ Desktop/Программы компьютера и тд.",
-        "tickets": 104,
-        "desired": 63,
-        "undesired": 41,
-        "cost": 1025960
+        "name": "Импорт — импорт товаров через Excel",
+        "tickets": 119,
+        "desired": 74,
+        "undesired": 45,
+        "cost": 1173935
       },
       {
         "name": "Новая продажа - Не удаётся сделать продажу",
-        "tickets": 104,
-        "desired": 46,
-        "undesired": 58,
-        "cost": 1025960
-      },
-      {
-        "name": "Документооборот - Консультация по сумме долга",
-        "tickets": 102,
-        "desired": 44,
-        "undesired": 58,
-        "cost": 1006230
-      },
-      {
-        "name": "Настройка - Установка BILLZ PAY/Payme/Epos/PAX",
-        "tickets": 94,
-        "desired": 65,
-        "undesired": 29,
-        "cost": 927310
-      },
-      {
-        "name": "Новая продажа - Возврат/Обмен",
-        "tickets": 87,
-        "desired": 39,
-        "undesired": 48,
-        "cost": 858255
+        "tickets": 119,
+        "desired": 59,
+        "undesired": 60,
+        "cost": 1173935
       },
       {
         "name": "Массовый сбой BILLZ",
-        "tickets": 82,
-        "desired": 24,
-        "undesired": 58,
-        "cost": 808930
+        "tickets": 117,
+        "desired": 25,
+        "undesired": 92,
+        "cost": 1154205
       }
     ],
     "top_companies": [
       {
         "name": "BILLZ",
-        "tickets": 1700,
-        "desired": 636,
-        "undesired": 915,
-        "cost": 16770500,
+        "tickets": 1819,
+        "desired": 694,
+        "undesired": 968,
+        "cost": 17944435,
         "top_labels": [
           {
             "label": "Документооборот - Создание ссылки для оплаты",
-            "count": 222
+            "count": 234
           },
           {
             "label": "Учётная запись - Блокировка/Разблокировка аккаунта",
-            "count": 160
+            "count": 173
           },
           {
             "label": "Документооборот - Оплата за тариф",
-            "count": 101
+            "count": 108
           }
         ]
       },
       {
         "name": "Bloom",
-        "tickets": 130,
-        "desired": 60,
-        "undesired": 67,
-        "cost": 1282450,
+        "tickets": 142,
+        "desired": 66,
+        "undesired": 73,
+        "cost": 1400830,
         "top_labels": [
           {
             "label": "Маркетинг - Работа с Сертификатом/Ваучером",
-            "count": 20
+            "count": 21
           },
           {
             "label": "Кассовые смены — Открытие/Закрытие смен",
-            "count": 11
+            "count": 13
           },
           {
-            "label": "Вопрос не по программе",
+            "label": "Новая продажа - Не удаётся сделать продажу",
             "count": 7
           }
         ]
       },
       {
         "name": "INBAZAR",
-        "tickets": 103,
-        "desired": 24,
-        "undesired": 78,
-        "cost": 1016095,
+        "tickets": 112,
+        "desired": 25,
+        "undesired": 86,
+        "cost": 1104880,
         "top_labels": [
           {
             "label": "Кассовые смены — Открытие/Закрытие смен",
-            "count": 68
+            "count": 75
           },
           {
             "label": "Новая продажа - Не удаётся сделать продажу",
@@ -1012,14 +987,14 @@ const BILLZ_DATA = {
       },
       {
         "name": "Я родился",
-        "tickets": 57,
-        "desired": 10,
-        "undesired": 47,
-        "cost": 562305,
+        "tickets": 62,
+        "desired": 12,
+        "undesired": 50,
+        "cost": 611630,
         "top_labels": [
           {
             "label": "Все продажи - Удаление/Редактирование продажи",
-            "count": 45
+            "count": 49
           },
           {
             "label": "Кассовые смены — Открытие/Закрытие смен",
@@ -1033,10 +1008,10 @@ const BILLZ_DATA = {
       },
       {
         "name": "seoul-market1",
-        "tickets": 48,
-        "desired": 30,
-        "undesired": 17,
-        "cost": 473520,
+        "tickets": 51,
+        "desired": 32,
+        "undesired": 18,
+        "cost": 503115,
         "top_labels": [
           {
             "label": "Desktop - Ошибка синхронизации",
@@ -1044,7 +1019,7 @@ const BILLZ_DATA = {
           },
           {
             "label": "Оборудование - Установка Anydesk/BILLZ Desktop/Программы компьютера и тд.",
-            "count": 6
+            "count": 7
           },
           {
             "label": "Каталог - Скачивание товаров",
@@ -1054,10 +1029,10 @@ const BILLZ_DATA = {
       },
       {
         "name": "baraka-oyinchoqlar",
-        "tickets": 45,
-        "desired": 15,
-        "undesired": 28,
-        "cost": 443925,
+        "tickets": 48,
+        "desired": 16,
+        "undesired": 30,
+        "cost": 473520,
         "top_labels": [
           {
             "label": "Учётная запись - Помощь со входом в аккаунт",
@@ -1075,10 +1050,10 @@ const BILLZ_DATA = {
       },
       {
         "name": "Skechers",
-        "tickets": 38,
-        "desired": 14,
+        "tickets": 39,
+        "desired": 15,
         "undesired": 24,
-        "cost": 374870,
+        "cost": 384735,
         "top_labels": [
           {
             "label": "Массовый сбой BILLZ",
@@ -1117,18 +1092,18 @@ const BILLZ_DATA = {
       }
     ],
     "label": "Апрель 2026",
-    "rating_pct": 95.2,
+    "rating_pct": 94.8,
     "clients": 4165,
     "users": 37260,
-    "tpc": 2.46,
-    "tpu": 0.2746,
+    "tpc": 2.61,
+    "tpu": 0.2918,
     "cpt": 9865,
     "newcomers": "Уволены: Шохинабону, Нурлан. Алишерова переведена в КС. Итого: 11 операторов.",
-    "csat_pct": 95.2,
+    "csat_pct": 94.8,
     "team_context": "Критический дефицит: 11 операторов, 7-8 в смене. Пиковый час 17:00-22:00 не перекрыт.",
     "sla_note": "SLA измеряется по чатам (FRT≤1мин). По звонкам SLA >90% (данные из онлайн-АТС)",
-    "csat_rated": 631,
-    "training_tickets": 401,
+    "csat_rated": 674,
+    "training_tickets": 432,
     "team_changes": [
       {
         "name": "Шохинабону",
@@ -1179,689 +1154,160 @@ const BILLZ_DATA = {
   },
   "weekly": {
     "week_14": {
-      "tickets": 2417,
+      "label": "Нед 14 · 1–5 апр",
+      "week_num": 14,
+      "tickets": 2422,
       "calls": 1306,
-      "chats": 1111,
-      "desired": 1051,
-      "undesired": 1263,
-      "closed": 2417,
+      "chats": 1116,
+      "desired": 1054,
+      "undesired": 1264,
+      "closed": 2422,
       "open": 0,
-      "afrt": "46 с",
-      "afrt_raw": 0.766,
-      "art": "28 ч 52 м",
-      "art_raw": 28.9,
-      "sla_pct": 98.1,
-      "sla_not_met": 1.9,
+      "sla_pct": 78.4,
       "lcr": 0,
-      "repeat_pct": 9.7,
-      "cost": 23843705,
-      "massoviy_cnt": 92,
-      "no_massoviy": {
-        "tickets": 2325,
-        "desired": 1026,
-        "undesired": 1196,
-        "afrt": "46 с",
-        "afrt_raw": 0.771,
-        "sla_pct": 98.0,
-        "sla_not_met": 2.0,
-        "cost": 22936125,
-        "top_labels": [
-          {
-            "name": "Документооборот - Оплата за тариф",
-            "tickets": 206,
-            "desired": 78,
-            "undesired": 125,
-            "cost": 2032190
-          },
-          {
-            "name": "Учётная запись - Помощь со входом в аккаунт",
-            "tickets": 127,
-            "desired": 34,
-            "undesired": 92,
-            "cost": 1252855
-          },
-          {
-            "name": "Документооборот - Создание ссылки для оплаты",
-            "tickets": 91,
-            "desired": 29,
-            "undesired": 60,
-            "cost": 897715
-          },
-          {
-            "name": "Оборудование - Установка/Настройка/Удаление принтера",
-            "tickets": 59,
-            "desired": 42,
-            "undesired": 17,
-            "cost": 582035
-          },
-          {
-            "name": "Вопрос не по программе",
-            "tickets": 51,
-            "desired": 18,
-            "undesired": 33,
-            "cost": 503115
-          },
-          {
-            "name": "Кассовые смены — Открытие/Закрытие смен",
-            "tickets": 49,
-            "desired": 7,
-            "undesired": 42,
-            "cost": 483385
-          },
-          {
-            "name": "Каталог — изменение свойств товара",
-            "tickets": 41,
-            "desired": 17,
-            "undesired": 22,
-            "cost": 404465
-          },
-          {
-            "name": "Учётная запись - Блокировка/Разблокировка аккаунта",
-            "tickets": 36,
-            "desired": 12,
-            "undesired": 20,
-            "cost": 355140
-          },
-          {
-            "name": "Импорт — импорт товаров через Excel",
-            "tickets": 35,
-            "desired": 21,
-            "undesired": 14,
-            "cost": 345275
-          },
-          {
-            "name": "Управление - Создание/Редактирвоание/Удаление роли",
-            "tickets": 35,
-            "desired": 17,
-            "undesired": 18,
-            "cost": 345275
-          },
-          {
-            "name": "Управление - Создание/Редактирвоание/Удаление сотрудника",
-            "tickets": 30,
-            "desired": 17,
-            "undesired": 13,
-            "cost": 295950
-          },
-          {
-            "name": "Документооборот - Консультация по сумме долга",
-            "tickets": 29,
-            "desired": 16,
-            "undesired": 13,
-            "cost": 286085
-          },
-          {
-            "name": "Оборудование - Установка Anydesk/BILLZ Desktop/Программы компьютера и тд.",
-            "tickets": 28,
-            "desired": 14,
-            "undesired": 14,
-            "cost": 276220
-          },
-          {
-            "name": "Отчёты - Разбор отчётов",
-            "tickets": 27,
-            "desired": 21,
-            "undesired": 6,
-            "cost": 266355
-          },
-          {
-            "name": "Учётная запись - Очистка магазина",
-            "tickets": 25,
-            "desired": 16,
-            "undesired": 9,
-            "cost": 246625
-          },
-          {
-            "name": "Учётная запись - Создание магазина",
-            "tickets": 25,
-            "desired": 16,
-            "undesired": 9,
-            "cost": 246625
-          },
-          {
-            "name": "Новая продажа - Не удаётся сделать продажу",
-            "tickets": 24,
-            "desired": 10,
-            "undesired": 14,
-            "cost": 236760
-          },
-          {
-            "name": "Каталог — запрос на добавление товара",
-            "tickets": 21,
-            "desired": 12,
-            "undesired": 9,
-            "cost": 207165
-          },
-          {
-            "name": "Каталог — настройка печати ценника",
-            "tickets": 21,
-            "desired": 7,
-            "undesired": 14,
-            "cost": 207165
-          },
-          {
-            "name": "Документооборот - Помощь в оплате долга",
-            "tickets": 20,
-            "desired": 8,
-            "undesired": 8,
-            "cost": 197300
-          }
-        ],
-        "top_companies": [
-          {
-            "name": "BILLZ",
-            "tickets": 354,
-            "desired": 142,
-            "undesired": 186,
-            "cost": 3492210,
-            "top_labels": [
-              {
-                "label": "Документооборот - Создание ссылки для оплаты",
-                "count": 52
-              },
-              {
-                "label": "Учётная запись - Блокировка/Разблокировка аккаунта",
-                "count": 20
-              },
-              {
-                "label": "Вопрос не по программе",
-                "count": 16
-              },
-              {
-                "label": "Учётная запись - Создание магазина",
-                "count": 12
-              },
-              {
-                "label": "Управление - Создание/Редактирвоание/Удаление сотрудника",
-                "count": 10
-              }
-            ]
-          },
-          {
-            "name": "Bloom",
-            "tickets": 34,
-            "desired": 14,
-            "undesired": 19,
-            "cost": 335410,
-            "top_labels": [
-              {
-                "label": "Маркетинг - Работа с Сертификатом/Ваучером",
-                "count": 7
-              },
-              {
-                "label": "Новая продажа - Не удаётся сделать продажу",
-                "count": 3
-              },
-              {
-                "label": "Вопрос не по программе",
-                "count": 2
-              },
-              {
-                "label": "Баг (реквест), Новая продажа - Не удаётся сделать продажу",
-                "count": 1
-              },
-              {
-                "label": "Баг (реквест)",
-                "count": 1
-              }
-            ]
-          },
-          {
-            "name": "Kolbasachi",
-            "tickets": 28,
-            "desired": 14,
-            "undesired": 12,
-            "cost": 276220,
-            "top_labels": [
-              {
-                "label": "Оборудование - Установка Anydesk/BILLZ Desktop/Программы компьютера и тд.",
-                "count": 4
-              },
-              {
-                "label": "Desktop - Ошибка синхронизации, Оборудование - Установка Anydesk/BILLZ Desktop/Программы компьютера и тд.",
-                "count": 2
-              },
-              {
-                "label": "Каталог - Расхождения количества товаров",
-                "count": 2
-              },
-              {
-                "label": "Баг (реквест), Каталог - Расхождения количества товаров",
-                "count": 1
-              },
-              {
-                "label": "Все продажи - Частичное обучение",
-                "count": 1
-              }
-            ]
-          },
-          {
-            "name": "INBAZAR",
-            "tickets": 27,
-            "desired": 3,
-            "undesired": 24,
-            "cost": 266355,
-            "top_labels": [
-              {
-                "label": "Кассовые смены — Открытие/Закрытие смен",
-                "count": 23
-              },
-              {
-                "label": "Новая продажа - Не удаётся сделать продажу",
-                "count": 3
-              },
-              {
-                "label": "Вопрос не по программе",
-                "count": 1
-              }
-            ]
-          },
-          {
-            "name": "gross-market",
-            "tickets": 18,
-            "desired": 11,
-            "undesired": 7,
-            "cost": 177570,
-            "top_labels": [
-              {
-                "label": "Кассовые смены — Открытие/Закрытие смен",
-                "count": 3
-              },
-              {
-                "label": "Документооборот - Оплата за тариф",
-                "count": 2
-              },
-              {
-                "label": "Desktop - Ошибка синхронизации",
-                "count": 2
-              },
-              {
-                "label": "Оборудование - Установка Anydesk/BILLZ Desktop/Программы компьютера и тд.",
-                "count": 2
-              },
-              {
-                "label": "Desktop - Ошибка синхронизации, Кассовые смены — Открытие/Закрытие смен, Баг (реквест)",
-                "count": 1
-              }
-            ]
-          },
-          {
-            "name": "fresh-food",
-            "tickets": 15,
-            "desired": 3,
-            "undesired": 10,
-            "cost": 147975,
-            "top_labels": [
-              {
-                "label": "Документооборот - Консультация по сумме долга",
-                "count": 1
-              },
-              {
-                "label": "Кассовые операции - Создание дохода/расхода/инкассации",
-                "count": 1
-              },
-              {
-                "label": "Кассовые смены — Открытие/Закрытие смен, Оборудование - Загрузка базу товаров в весы, Бэклог",
-                "count": 1
-              },
-              {
-                "label": "Каталог - Просмотр статистики",
-                "count": 1
-              },
-              {
-                "label": "Каталог — изменение свойств товара, Настройка - Установка/Редактирование/Удаление интеграций (приложения), Документооборот - Консультация по тарифу",
-                "count": 1
-              }
-            ]
-          },
-          {
-            "name": "CENTER",
-            "tickets": 14,
-            "desired": 6,
-            "undesired": 8,
-            "cost": 138110,
-            "top_labels": [
-              {
-                "label": "Новая продажа - Возврат/Обмен",
-                "count": 2
-              },
-              {
-                "label": "Каталог — изменение свойств товара",
-                "count": 2
-              },
-              {
-                "label": "Инвентаризация — создание инвентаризации",
-                "count": 1
-              },
-              {
-                "label": "Импорт — импорт товаров через Excel",
-                "count": 1
-              },
-              {
-                "label": "Каталог - Архивация товаров",
-                "count": 1
-              }
-            ]
-          },
-          {
-            "name": "E-pos",
-            "tickets": 13,
-            "desired": 2,
-            "undesired": 10,
-            "cost": 128245,
-            "top_labels": [
-              {
-                "label": "Кассовые смены — Открытие/Закрытие смен",
-                "count": 4
-              },
-              {
-                "label": "Вопрос не по программе",
-                "count": 3
-              },
-              {
-                "label": "Баг (реквест)",
-                "count": 1
-              }
-            ]
-          },
-          {
-            "name": "krasniy-sad",
-            "tickets": 11,
-            "desired": 5,
-            "undesired": 6,
-            "cost": 108515,
-            "top_labels": [
-              {
-                "label": "Документооборот - Оплата за тариф",
-                "count": 3
-              },
-              {
-                "label": "Все клиенты - Массовое прикрепление/удаление группы и тега",
-                "count": 1
-              },
-              {
-                "label": "Все продажи - Не удается найти продажу",
-                "count": 1
-              },
-              {
-                "label": "Документооборот - Оплата за тариф, Реквест (внутренний запрос, выгрузка данных)",
-                "count": 1
-              },
-              {
-                "label": "Каталог — изменение свойств товара",
-                "count": 1
-              }
-            ]
-          },
-          {
-            "name": "Я родился",
-            "tickets": 11,
-            "desired": 3,
-            "undesired": 8,
-            "cost": 108515,
-            "top_labels": [
-              {
-                "label": "Все продажи - Удаление/Редактирование продажи",
-                "count": 8
-              },
-              {
-                "label": "Все клиенты - Редактирование баланса клиента",
-                "count": 1
-              },
-              {
-                "label": "Все клиенты - Создание/удаление/редактирование ",
-                "count": 1
-              },
-              {
-                "label": "Кассовые смены — Открытие/Закрытие смен, Все продажи - Удаление/Редактирование продажи",
-                "count": 1
-              }
-            ]
-          }
-        ],
-        "operators": [
-          {
-            "name": "Робия А.",
-            "tickets": 249,
-            "close_rate": 100.0,
-            "avg_close": 36.4,
-            "rating_pct": 100.0,
-            "rated": 11,
-            "sla_pct": 79.3,
-            "cost": 2456385
-          },
-          {
-            "name": "Атабек",
-            "tickets": 243,
-            "close_rate": 100.0,
-            "avg_close": 33.8,
-            "rating_pct": 86.7,
-            "rated": 15,
-            "sla_pct": 98.8,
-            "cost": 2397195
-          },
-          {
-            "name": "Нурилло",
-            "tickets": 226,
-            "close_rate": 100.0,
-            "avg_close": 31.9,
-            "rating_pct": 91.7,
-            "rated": 12,
-            "sla_pct": 100.0,
-            "cost": 2229490
-          },
-          {
-            "name": "Анасхон",
-            "tickets": 223,
-            "close_rate": 100.0,
-            "avg_close": 22.7,
-            "rating_pct": 91.7,
-            "rated": 12,
-            "sla_pct": 100.0,
-            "cost": 2199895
-          },
-          {
-            "name": "Алиёр",
-            "tickets": 209,
-            "close_rate": 100.0,
-            "avg_close": 18.7,
-            "rating_pct": 100.0,
-            "rated": 13,
-            "sla_pct": 90.6,
-            "cost": 2061785
-          },
-          {
-            "name": "Сардор Б.",
-            "tickets": 194,
-            "close_rate": 100.0,
-            "avg_close": 53.7,
-            "rating_pct": 100.0,
-            "rated": 6,
-            "sla_pct": 90.9,
-            "cost": 1913810
-          },
-          {
-            "name": "Тожмухаммад",
-            "tickets": 190,
-            "close_rate": 100.0,
-            "avg_close": 19.1,
-            "rating_pct": 100.0,
-            "rated": 11,
-            "sla_pct": 92.2,
-            "cost": 1874350
-          },
-          {
-            "name": "Иззатбек",
-            "tickets": 189,
-            "close_rate": 100.0,
-            "avg_close": 5.8,
-            "rating_pct": 100.0,
-            "rated": 6,
-            "sla_pct": 94.5,
-            "cost": 1864485
-          },
-          {
-            "name": "Робия Р.",
-            "tickets": 178,
-            "close_rate": 100.0,
-            "avg_close": 49.4,
-            "rating_pct": 92.6,
-            "rated": 27,
-            "sla_pct": 97.3,
-            "cost": 1755970
-          },
-          {
-            "name": "Ардак",
-            "tickets": 163,
-            "close_rate": 100.0,
-            "avg_close": 34.5,
-            "rating_pct": 100.0,
-            "rated": 6,
-            "sla_pct": 100.0,
-            "cost": 1607995
-          },
-          {
-            "name": "Шохина",
-            "tickets": 151,
-            "close_rate": 100.0,
-            "avg_close": 14.9,
-            "rating_pct": 95.2,
-            "rated": 21,
-            "sla_pct": 100.0,
-            "cost": 1489615
-          },
-          {
-            "name": "Авазбек",
-            "tickets": 109,
-            "close_rate": 100.0,
-            "avg_close": 32.3,
-            "rating_pct": 100.0,
-            "rated": 13,
-            "sla_pct": 94.1,
-            "cost": 1075285
-          }
-        ]
-      },
+      "csat_pct": 95.7,
+      "csat_rated": 163,
+      "cost": 23893030,
       "operators": [
         {
           "name": "Атабек",
           "tickets": 251,
-          "close_rate": 100.0,
-          "avg_close": 33.3,
+          "avg_close": 0.05,
+          "close_rate": 99.5,
           "rating_pct": 86.7,
           "rated": 15,
-          "sla_pct": 98.8,
+          "sla_pct": 78.0,
           "cost": 2476115
         },
         {
           "name": "Робия А.",
           "tickets": 251,
-          "close_rate": 100.0,
-          "avg_close": 36.1,
+          "avg_close": 0.02,
+          "close_rate": 99.5,
           "rating_pct": 100.0,
           "rated": 11,
-          "sla_pct": 78.5,
+          "sla_pct": 58.9,
           "cost": 2476115
         },
         {
           "name": "Анасхон",
           "tickets": 245,
-          "close_rate": 100.0,
-          "avg_close": 21.1,
+          "avg_close": 0.06,
+          "close_rate": 99.5,
           "rating_pct": 92.9,
           "rated": 14,
-          "sla_pct": 100.0,
+          "sla_pct": 94.5,
           "cost": 2416925
         },
         {
           "name": "Нурилло",
           "tickets": 241,
-          "close_rate": 100.0,
-          "avg_close": 29.9,
+          "avg_close": 0.05,
+          "close_rate": 99.5,
           "rating_pct": 92.9,
           "rated": 14,
-          "sla_pct": 100.0,
+          "sla_pct": 90.4,
           "cost": 2377465
         },
         {
           "name": "Алиёр",
           "tickets": 209,
-          "close_rate": 100.0,
-          "avg_close": 18.7,
+          "avg_close": 0.06,
+          "close_rate": 99.5,
           "rating_pct": 100.0,
           "rated": 13,
-          "sla_pct": 90.6,
+          "sla_pct": 84.6,
           "cost": 2061785
         },
         {
           "name": "Иззатбек",
           "tickets": 200,
-          "close_rate": 100.0,
-          "avg_close": 5.5,
+          "avg_close": 0.04,
+          "close_rate": 99.5,
           "rating_pct": 100.0,
           "rated": 6,
-          "sla_pct": 94.8,
+          "sla_pct": 68.3,
           "cost": 1973000
         },
         {
           "name": "Тожмухаммад",
           "tickets": 196,
-          "close_rate": 100.0,
-          "avg_close": 18.6,
+          "avg_close": 0.11,
+          "close_rate": 99.5,
           "rating_pct": 100.0,
           "rated": 11,
-          "sla_pct": 92.3,
+          "sla_pct": 57.7,
           "cost": 1933540
         },
         {
           "name": "Сардор Б.",
           "tickets": 194,
-          "close_rate": 100.0,
-          "avg_close": 53.7,
+          "avg_close": 0.1,
+          "close_rate": 99.5,
           "rating_pct": 100.0,
-          "rated": 6,
-          "sla_pct": 90.9,
+          "rated": 7,
+          "sla_pct": 61.4,
           "cost": 1913810
         },
         {
           "name": "Робия Р.",
           "tickets": 180,
-          "close_rate": 100.0,
-          "avg_close": 49.5,
-          "rating_pct": 92.9,
-          "rated": 28,
-          "sla_pct": 97.3,
+          "avg_close": 0.14,
+          "close_rate": 99.5,
+          "rating_pct": 93.1,
+          "rated": 29,
+          "sla_pct": 75.0,
           "cost": 1775700
         },
         {
           "name": "Ардак",
           "tickets": 173,
-          "close_rate": 100.0,
-          "avg_close": 32.9,
+          "avg_close": 0.07,
+          "close_rate": 99.5,
           "rating_pct": 100.0,
           "rated": 8,
-          "sla_pct": 100.0,
+          "sla_pct": 72.9,
           "cost": 1706645
         },
         {
           "name": "Шохина",
           "tickets": 167,
-          "close_rate": 100.0,
-          "avg_close": 14.6,
+          "avg_close": 0.05,
+          "close_rate": 99.5,
           "rating_pct": 95.2,
           "rated": 21,
-          "sla_pct": 100.0,
+          "sla_pct": 92.0,
           "cost": 1647455
         },
         {
           "name": "Авазбек",
           "tickets": 109,
-          "close_rate": 100.0,
-          "avg_close": 32.3,
+          "avg_close": 0.08,
+          "close_rate": 99.5,
           "rating_pct": 100.0,
           "rated": 13,
-          "sla_pct": 94.1,
+          "sla_pct": 78.6,
           "cost": 1075285
+        },
+        {
+          "name": "Дильшод",
+          "tickets": 5,
+          "avg_close": 0.23,
+          "close_rate": 99.5,
+          "rating_pct": 100.0,
+          "rated": 1,
+          "sla_pct": 80.0,
+          "cost": 49325
+        },
+        {
+          "name": "Азизбек",
+          "tickets": 1,
+          "avg_close": 6.81,
+          "close_rate": 99.5,
+          "rating_pct": 0.0,
+          "rated": 0,
+          "sla_pct": 0.0,
+          "cost": 9865
         }
       ],
       "top_labels": [
@@ -1902,10 +1348,10 @@ const BILLZ_DATA = {
         },
         {
           "name": "Вопрос не по программе",
-          "tickets": 51,
+          "tickets": 50,
           "desired": 18,
-          "undesired": 33,
-          "cost": 503115
+          "undesired": 32,
+          "cost": 493250
         },
         {
           "name": "Кассовые смены — Открытие/Закрытие смен",
@@ -1929,17 +1375,17 @@ const BILLZ_DATA = {
           "cost": 355140
         },
         {
-          "name": "Импорт — импорт товаров через Excel",
-          "tickets": 35,
-          "desired": 21,
-          "undesired": 14,
-          "cost": 345275
-        },
-        {
           "name": "Управление - Создание/Редактирвоание/Удаление роли",
           "tickets": 35,
           "desired": 17,
           "undesired": 18,
+          "cost": 345275
+        },
+        {
+          "name": "Импорт — импорт товаров через Excel",
+          "tickets": 35,
+          "desired": 21,
+          "undesired": 14,
           "cost": 345275
         },
         {
@@ -1969,1065 +1415,188 @@ const BILLZ_DATA = {
           "desired": 21,
           "undesired": 6,
           "cost": 266355
-        },
-        {
-          "name": "Учётная запись - Создание магазина",
-          "tickets": 25,
-          "desired": 16,
-          "undesired": 9,
-          "cost": 246625
-        },
-        {
-          "name": "Учётная запись - Очистка магазина",
-          "tickets": 25,
-          "desired": 16,
-          "undesired": 9,
-          "cost": 246625
-        },
-        {
-          "name": "Новая продажа - Не удаётся сделать продажу",
-          "tickets": 24,
-          "desired": 10,
-          "undesired": 14,
-          "cost": 236760
-        },
-        {
-          "name": "Каталог — настройка печати ценника",
-          "tickets": 21,
-          "desired": 7,
-          "undesired": 14,
-          "cost": 207165
-        },
-        {
-          "name": "Каталог — запрос на добавление товара",
-          "tickets": 21,
-          "desired": 12,
-          "undesired": 9,
-          "cost": 207165
         }
       ],
-      "top_companies": [
-        {
-          "name": "BILLZ",
-          "tickets": 354,
-          "desired": 142,
-          "undesired": 186,
-          "cost": 3492210,
-          "top_labels": [
-            {
-              "label": "Документооборот - Создание ссылки для оплаты",
-              "count": 52
-            },
-            {
-              "label": "Учётная запись - Блокировка/Разблокировка аккаунта",
-              "count": 20
-            },
-            {
-              "label": "Вопрос не по программе",
-              "count": 16
-            },
-            {
-              "label": "Учётная запись - Создание магазина",
-              "count": 12
-            },
-            {
-              "label": "Управление - Создание/Редактирвоание/Удаление сотрудника",
-              "count": 10
-            }
-          ]
-        },
-        {
-          "name": "Bloom",
-          "tickets": 35,
-          "desired": 14,
-          "undesired": 20,
-          "cost": 345275,
-          "top_labels": [
-            {
-              "label": "Маркетинг - Работа с Сертификатом/Ваучером",
-              "count": 7
-            },
-            {
-              "label": "Новая продажа - Не удаётся сделать продажу",
-              "count": 3
-            },
-            {
-              "label": "Вопрос не по программе",
-              "count": 2
-            },
-            {
-              "label": "Баг (реквест)",
-              "count": 1
-            },
-            {
-              "label": "Кассовые смены — Открытие/Закрытие смен",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "name": "INBAZAR",
-          "tickets": 29,
-          "desired": 3,
-          "undesired": 26,
-          "cost": 286085,
-          "top_labels": [
-            {
-              "label": "Кассовые смены — Открытие/Закрытие смен",
-              "count": 23
-            },
-            {
-              "label": "Новая продажа - Не удаётся сделать продажу",
-              "count": 3
-            },
-            {
-              "label": "Массовый сбой BILLZ",
-              "count": 2
-            },
-            {
-              "label": "Вопрос не по программе",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "name": "Kolbasachi",
-          "tickets": 28,
-          "desired": 14,
-          "undesired": 12,
-          "cost": 276220,
-          "top_labels": [
-            {
-              "label": "Оборудование - Установка Anydesk/BILLZ Desktop/Программы компьютера и тд.",
-              "count": 4
-            },
-            {
-              "label": "Desktop - Ошибка синхронизации, Оборудование - Установка Anydesk/BILLZ Desktop/Программы компьютера и тд.",
-              "count": 2
-            },
-            {
-              "label": "Каталог - Расхождения количества товаров",
-              "count": 2
-            },
-            {
-              "label": "Баг (реквест), Каталог - Расхождения количества товаров",
-              "count": 1
-            },
-            {
-              "label": "Все продажи - Частичное обучение",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "name": "gross-market",
-          "tickets": 18,
-          "desired": 11,
-          "undesired": 7,
-          "cost": 177570,
-          "top_labels": [
-            {
-              "label": "Кассовые смены — Открытие/Закрытие смен",
-              "count": 3
-            },
-            {
-              "label": "Документооборот - Оплата за тариф",
-              "count": 2
-            },
-            {
-              "label": "Desktop - Ошибка синхронизации",
-              "count": 2
-            },
-            {
-              "label": "Оборудование - Установка Anydesk/BILLZ Desktop/Программы компьютера и тд.",
-              "count": 2
-            },
-            {
-              "label": "Desktop - Ошибка синхронизации, Кассовые смены — Открытие/Закрытие смен, Баг (реквест)",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "name": "fresh-food",
-          "tickets": 15,
-          "desired": 3,
-          "undesired": 10,
-          "cost": 147975,
-          "top_labels": [
-            {
-              "label": "Документооборот - Консультация по сумме долга",
-              "count": 1
-            },
-            {
-              "label": "Кассовые операции - Создание дохода/расхода/инкассации",
-              "count": 1
-            },
-            {
-              "label": "Кассовые смены — Открытие/Закрытие смен, Оборудование - Загрузка базу товаров в весы, Бэклог",
-              "count": 1
-            },
-            {
-              "label": "Каталог - Просмотр статистики",
-              "count": 1
-            },
-            {
-              "label": "Каталог — изменение свойств товара, Настройка - Установка/Редактирование/Удаление интеграций (приложения), Документооборот - Консультация по тарифу",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "name": "CENTER",
-          "tickets": 14,
-          "desired": 6,
-          "undesired": 8,
-          "cost": 138110,
-          "top_labels": [
-            {
-              "label": "Новая продажа - Возврат/Обмен",
-              "count": 2
-            },
-            {
-              "label": "Каталог — изменение свойств товара",
-              "count": 2
-            },
-            {
-              "label": "Инвентаризация — создание инвентаризации",
-              "count": 1
-            },
-            {
-              "label": "Импорт — импорт товаров через Excel",
-              "count": 1
-            },
-            {
-              "label": "Каталог - Архивация товаров",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "name": "E-pos",
-          "tickets": 13,
-          "desired": 2,
-          "undesired": 10,
-          "cost": 128245,
-          "top_labels": [
-            {
-              "label": "Кассовые смены — Открытие/Закрытие смен",
-              "count": 4
-            },
-            {
-              "label": "Вопрос не по программе",
-              "count": 3
-            },
-            {
-              "label": "Баг (реквест)",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "name": "krasniy-sad",
-          "tickets": 11,
-          "desired": 5,
-          "undesired": 6,
-          "cost": 108515,
-          "top_labels": [
-            {
-              "label": "Документооборот - Оплата за тариф",
-              "count": 3
-            },
-            {
-              "label": "Все клиенты - Массовое прикрепление/удаление группы и тега",
-              "count": 1
-            },
-            {
-              "label": "Все продажи - Не удается найти продажу",
-              "count": 1
-            },
-            {
-              "label": "Документооборот - Оплата за тариф, Реквест (внутренний запрос, выгрузка данных)",
-              "count": 1
-            },
-            {
-              "label": "Каталог — изменение свойств товара",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "name": "mediawall",
-          "tickets": 11,
-          "desired": 8,
-          "undesired": 3,
-          "cost": 108515,
-          "top_labels": [
-            {
-              "label": "Финансы - Частичное обучение",
-              "count": 2
-            },
-            {
-              "label": "Документооборот - Создание ссылки для оплаты",
-              "count": 1
-            },
-            {
-              "label": "Заказы — консультация по модулю (частичное обучение)",
-              "count": 1
-            },
-            {
-              "label": "Долги клиентов - Частичное обучение",
-              "count": 1
-            },
-            {
-              "label": "Заказы — отмена/возврат заказа, Бэклог",
-              "count": 1
-            }
-          ]
-        }
-      ],
-      "label": "1 Apr – 5 Apr 2026",
-      "week_num": 14
+      "top_companies": []
     },
     "week_15": {
-      "tickets": 2802,
-      "calls": 1411,
-      "chats": 1391,
-      "desired": 1225,
-      "undesired": 1410,
-      "closed": 2798,
-      "open": 3,
-      "afrt": "49 с",
-      "afrt_raw": 0.817,
-      "art": "24 ч 42 м",
-      "art_raw": 24.7,
-      "sla_pct": 98.4,
-      "sla_not_met": 1.6,
+      "label": "Нед 15 · 6–12 апр",
+      "week_num": 15,
+      "tickets": 2868,
+      "calls": 1459,
+      "chats": 1409,
+      "desired": 1265,
+      "undesired": 1430,
+      "closed": 2868,
+      "open": 0,
+      "sla_pct": 76.7,
       "lcr": 0,
-      "repeat_pct": 14.3,
-      "cost": 27641730,
-      "massoviy_cnt": 19,
-      "no_massoviy": {
-        "tickets": 2783,
-        "desired": 1220,
-        "undesired": 1396,
-        "afrt": "49 с",
-        "afrt_raw": 0.821,
-        "sla_pct": 98.4,
-        "sla_not_met": 1.6,
-        "cost": 27454295,
-        "top_labels": [
-          {
-            "name": "Документооборот - Оплата за тариф",
-            "tickets": 419,
-            "desired": 116,
-            "undesired": 254,
-            "cost": 4133435
-          },
-          {
-            "name": "Документооборот - Создание ссылки для оплаты",
-            "tickets": 148,
-            "desired": 33,
-            "undesired": 115,
-            "cost": 1460020
-          },
-          {
-            "name": "Оборудование - Установка/Настройка/Удаление принтера",
-            "tickets": 108,
-            "desired": 83,
-            "undesired": 22,
-            "cost": 1065420
-          },
-          {
-            "name": "Учётная запись - Блокировка/Разблокировка аккаунта",
-            "tickets": 75,
-            "desired": 24,
-            "undesired": 50,
-            "cost": 739875
-          },
-          {
-            "name": "Учётная запись - Помощь со входом в аккаунт",
-            "tickets": 68,
-            "desired": 17,
-            "undesired": 51,
-            "cost": 670820
-          },
-          {
-            "name": "Каталог — изменение свойств товара",
-            "tickets": 63,
-            "desired": 26,
-            "undesired": 31,
-            "cost": 621495
-          },
-          {
-            "name": "Кассовые смены — Открытие/Закрытие смен",
-            "tickets": 52,
-            "desired": 27,
-            "undesired": 25,
-            "cost": 512980
-          },
-          {
-            "name": "Вопрос не по программе",
-            "tickets": 38,
-            "desired": 9,
-            "undesired": 26,
-            "cost": 374870
-          },
-          {
-            "name": "Каталог — настройка печати ценника",
-            "tickets": 35,
-            "desired": 18,
-            "undesired": 16,
-            "cost": 345275
-          },
-          {
-            "name": "Документооборот - Консультация по сумме долга",
-            "tickets": 34,
-            "desired": 12,
-            "undesired": 20,
-            "cost": 335410
-          },
-          {
-            "name": "Настройка - Установка BILLZ PAY/Payme/Epos/PAX",
-            "tickets": 34,
-            "desired": 21,
-            "undesired": 13,
-            "cost": 335410
-          },
-          {
-            "name": "Новая продажа - Не удаётся сделать продажу",
-            "tickets": 30,
-            "desired": 12,
-            "undesired": 18,
-            "cost": 295950
-          },
-          {
-            "name": "Баг (реквест)",
-            "tickets": 29,
-            "desired": 16,
-            "undesired": 13,
-            "cost": 286085
-          },
-          {
-            "name": "Документооборот - Помощь в оплате долга",
-            "tickets": 29,
-            "desired": 13,
-            "undesired": 16,
-            "cost": 286085
-          },
-          {
-            "name": "Управление - Создание/Редактирвоание/Удаление сотрудника",
-            "tickets": 29,
-            "desired": 18,
-            "undesired": 11,
-            "cost": 286085
-          },
-          {
-            "name": "Управление - Создание/Редактирвоание/Удаление роли",
-            "tickets": 28,
-            "desired": 16,
-            "undesired": 12,
-            "cost": 276220
-          },
-          {
-            "name": "Оборудование - Установка Anydesk/BILLZ Desktop/Программы компьютера и тд.",
-            "tickets": 28,
-            "desired": 15,
-            "undesired": 13,
-            "cost": 276220
-          },
-          {
-            "name": "Учётная запись - Создание магазина",
-            "tickets": 28,
-            "desired": 20,
-            "undesired": 8,
-            "cost": 276220
-          },
-          {
-            "name": "Импорт — импорт товаров через Excel",
-            "tickets": 24,
-            "desired": 14,
-            "undesired": 10,
-            "cost": 236760
-          },
-          {
-            "name": "Новая продажа - Возврат/Обмен",
-            "tickets": 24,
-            "desired": 13,
-            "undesired": 10,
-            "cost": 236760
-          }
-        ],
-        "top_companies": [
-          {
-            "name": "BILLZ",
-            "tickets": 474,
-            "desired": 175,
-            "undesired": 247,
-            "cost": 4676010,
-            "top_labels": [
-              {
-                "label": "Документооборот - Создание ссылки для оплаты",
-                "count": 80
-              },
-              {
-                "label": "Учётная запись - Блокировка/Разблокировка аккаунта",
-                "count": 44
-              },
-              {
-                "label": "Документооборот - Оплата за тариф",
-                "count": 34
-              },
-              {
-                "label": "Учётная запись - Создание магазина",
-                "count": 22
-              },
-              {
-                "label": "Учётная запись - Помощь со входом в аккаунт",
-                "count": 11
-              }
-            ]
-          },
-          {
-            "name": "INBAZAR",
-            "tickets": 30,
-            "desired": 12,
-            "undesired": 18,
-            "cost": 295950,
-            "top_labels": [
-              {
-                "label": "Кассовые смены — Открытие/Закрытие смен",
-                "count": 14
-              },
-              {
-                "label": "Новая продажа - Не удаётся сделать продажу",
-                "count": 4
-              },
-              {
-                "label": "Баг (реквест)",
-                "count": 2
-              },
-              {
-                "label": "Каталог — изменение свойств товара",
-                "count": 2
-              },
-              {
-                "label": "Вопрос не по программе",
-                "count": 1
-              }
-            ]
-          },
-          {
-            "name": "Bloom",
-            "tickets": 28,
-            "desired": 12,
-            "undesired": 15,
-            "cost": 276220,
-            "top_labels": [
-              {
-                "label": "Кассовые смены — Открытие/Закрытие смен",
-                "count": 5
-              },
-              {
-                "label": "Баг (реквест)",
-                "count": 3
-              },
-              {
-                "label": "Маркетинг - Работа с Сертификатом/Ваучером",
-                "count": 3
-              },
-              {
-                "label": "Все продажи - Удаление/Редактирование продажи",
-                "count": 3
-              },
-              {
-                "label": "Вопрос не по программе",
-                "count": 2
-              }
-            ]
-          },
-          {
-            "name": "gross-market",
-            "tickets": 27,
-            "desired": 10,
-            "undesired": 17,
-            "cost": 266355,
-            "top_labels": [
-              {
-                "label": "Desktop - Ошибка синхронизации",
-                "count": 9
-              },
-              {
-                "label": "Оборудование - Установка Anydesk/BILLZ Desktop/Программы компьютера и тд.",
-                "count": 4
-              },
-              {
-                "label": "Desktop - Ошибка синхронизации, Баг (реквест)",
-                "count": 2
-              },
-              {
-                "label": "Desktop - Выгрузка Log файлов",
-                "count": 2
-              },
-              {
-                "label": "Баг (реквест), Desktop - Ошибка синхронизации",
-                "count": 2
-              }
-            ]
-          },
-          {
-            "name": "Kolbasachi",
-            "tickets": 25,
-            "desired": 13,
-            "undesired": 11,
-            "cost": 246625,
-            "top_labels": [
-              {
-                "label": "Баг (реквест), Desktop - Ошибка синхронизации",
-                "count": 6
-              },
-              {
-                "label": "Оборудование - Установка Anydesk/BILLZ Desktop/Программы компьютера и тд.",
-                "count": 3
-              },
-              {
-                "label": "Desktop - Ошибка синхронизации, Оборудование - Загрузка базу товаров в весы, Оборудование - Установка Anydesk/BILLZ Desktop/Программы компьютера и тд.",
-                "count": 1
-              },
-              {
-                "label": "Баг (реквест)",
-                "count": 1
-              },
-              {
-                "label": "Баг (реквест), Оборудование - Установка Anydesk/BILLZ Desktop/Программы компьютера и тд.",
-                "count": 1
-              }
-            ]
-          },
-          {
-            "name": "turon999",
-            "tickets": 18,
-            "desired": 8,
-            "undesired": 8,
-            "cost": 177570,
-            "top_labels": [
-              {
-                "label": "Каталог — изменение свойств товара",
-                "count": 4
-              },
-              {
-                "label": "Документооборот - Оплата за тариф",
-                "count": 2
-              },
-              {
-                "label": "Каталог - Просмотр статистики",
-                "count": 2
-              },
-              {
-                "label": "Импорт - Удаление импорта",
-                "count": 1
-              },
-              {
-                "label": "Импорт — импорт товаров через Excel, Импорт — консультация по импорту (частичное обучение)",
-                "count": 1
-              }
-            ]
-          },
-          {
-            "name": "seoul-market1",
-            "tickets": 15,
-            "desired": 10,
-            "undesired": 5,
-            "cost": 147975,
-            "top_labels": [
-              {
-                "label": "Оборудование - Установка Anydesk/BILLZ Desktop/Программы компьютера и тд.",
-                "count": 5
-              },
-              {
-                "label": "Desktop - Ошибка синхронизации",
-                "count": 3
-              },
-              {
-                "label": "Каталог - Скачивание товаров",
-                "count": 2
-              },
-              {
-                "label": "Desktop - Ошибка синхронизации, Оборудование - Установка Anydesk/BILLZ Desktop/Программы компьютера и тд.",
-                "count": 1
-              },
-              {
-                "label": "Desktop - Ошибка синхронизации, Баг (реквест)",
-                "count": 1
-              }
-            ]
-          },
-          {
-            "name": "X-sport",
-            "tickets": 15,
-            "desired": 9,
-            "undesired": 6,
-            "cost": 147975,
-            "top_labels": [
-              {
-                "label": "Акции - Создание/Редактирование/Удаление акции",
-                "count": 1
-              },
-              {
-                "label": "Баг (реквест), Сайт/Бот - Настройка/Удаление/Редактирование функций",
-                "count": 1
-              },
-              {
-                "label": "Импорт — консультация по импорту (частичное обучение)",
-                "count": 1
-              },
-              {
-                "label": "Каталог - Управление характеристики товаров, Каталог — изменение свойств товара, Каталог - Просмотр статистики",
-                "count": 1
-              },
-              {
-                "label": "Каталог — изменение свойств товара",
-                "count": 1
-              }
-            ]
-          },
-          {
-            "name": "akula-mobile",
-            "tickets": 14,
-            "desired": 7,
-            "undesired": 7,
-            "cost": 138110,
-            "top_labels": [
-              {
-                "label": "Инвентаризация — консультация по модулю (частичное обучение)",
-                "count": 2
-              },
-              {
-                "label": "Все продажи - Удаление/Редактирование продажи",
-                "count": 1
-              },
-              {
-                "label": "Документооборот - Помощь в оплате долга",
-                "count": 1
-              },
-              {
-                "label": "Группы и теги - Создание/Удаление/Редактирование",
-                "count": 1
-              },
-              {
-                "label": "Документооборот - Помощь в оплате долга, Каталог — изменение свойств товара",
-                "count": 1
-              }
-            ]
-          },
-          {
-            "name": "Я родился",
-            "tickets": 12,
-            "desired": 0,
-            "undesired": 12,
-            "cost": 118380,
-            "top_labels": [
-              {
-                "label": "Все продажи - Удаление/Редактирование продажи",
-                "count": 10
-              },
-              {
-                "label": "Каталог — изменение свойств товара, Все продажи - Удаление/Редактирование продажи",
-                "count": 1
-              },
-              {
-                "label": "Учётная запись - Блокировка/Разблокировка аккаунта",
-                "count": 1
-              }
-            ]
-          }
-        ],
-        "operators": [
-          {
-            "name": "Анасхон",
-            "tickets": 442,
-            "close_rate": 100.0,
-            "avg_close": 30.5,
-            "rating_pct": 97.3,
-            "rated": 37,
-            "sla_pct": 100.0,
-            "cost": 4360330
-          },
-          {
-            "name": "Робия Р.",
-            "tickets": 397,
-            "close_rate": 99.5,
-            "avg_close": 31.5,
-            "rating_pct": 91.7,
-            "rated": 36,
-            "sla_pct": 98.6,
-            "cost": 3916405
-          },
-          {
-            "name": "Нурилло",
-            "tickets": 314,
-            "close_rate": 99.7,
-            "avg_close": 17.4,
-            "rating_pct": 93.8,
-            "rated": 16,
-            "sla_pct": 98.5,
-            "cost": 3097610
-          },
-          {
-            "name": "Алиёр",
-            "tickets": 309,
-            "close_rate": 100.0,
-            "avg_close": 25.7,
-            "rating_pct": 100.0,
-            "rated": 14,
-            "sla_pct": 91.2,
-            "cost": 3048285
-          },
-          {
-            "name": "Ардак",
-            "tickets": 254,
-            "close_rate": 100.0,
-            "avg_close": 30.8,
-            "rating_pct": 100.0,
-            "rated": 10,
-            "sla_pct": 98.8,
-            "cost": 2505710
-          },
-          {
-            "name": "Тожмухаммад",
-            "tickets": 242,
-            "close_rate": 100.0,
-            "avg_close": 27.1,
-            "rating_pct": 90.0,
-            "rated": 10,
-            "sla_pct": 100.0,
-            "cost": 2387330
-          },
-          {
-            "name": "Атабек",
-            "tickets": 242,
-            "close_rate": 100.0,
-            "avg_close": 19.0,
-            "rating_pct": 100.0,
-            "rated": 10,
-            "sla_pct": 98.7,
-            "cost": 2387330
-          },
-          {
-            "name": "Авазбек",
-            "tickets": 220,
-            "close_rate": 100.0,
-            "avg_close": 17.2,
-            "rating_pct": 90.9,
-            "rated": 33,
-            "sla_pct": 95.6,
-            "cost": 2170300
-          },
-          {
-            "name": "Сардор Б.",
-            "tickets": 216,
-            "close_rate": 100.0,
-            "avg_close": 22.9,
-            "rating_pct": 100.0,
-            "rated": 7,
-            "sla_pct": 93.9,
-            "cost": 2130840
-          },
-          {
-            "name": "Робия А.",
-            "tickets": 92,
-            "close_rate": 98.9,
-            "avg_close": 6.6,
-            "rating_pct": 100.0,
-            "rated": 4,
-            "sla_pct": 51.9,
-            "cost": 907580
-          },
-          {
-            "name": "Шохина",
-            "tickets": 33,
-            "close_rate": 100.0,
-            "avg_close": 12.2,
-            "rating_pct": 100.0,
-            "rated": 3,
-            "sla_pct": 97.0,
-            "cost": 325545
-          },
-          {
-            "name": "Нурлан",
-            "tickets": 15,
-            "close_rate": 100.0,
-            "avg_close": 6.2,
-            "rating_pct": 100.0,
-            "rated": 2,
-            "sla_pct": 93.3,
-            "cost": 147975
-          },
-          {
-            "name": "Камолиддин",
-            "tickets": 7,
-            "close_rate": 100.0,
-            "avg_close": 61.4,
-            "rating_pct": 100.0,
-            "rated": 1,
-            "sla_pct": 66.7,
-            "cost": 69055
-          }
-        ]
-      },
+      "csat_pct": 95.2,
+      "csat_rated": 189,
+      "cost": 28292820,
       "operators": [
         {
           "name": "Анасхон",
           "tickets": 442,
-          "close_rate": 100.0,
-          "avg_close": 30.5,
+          "avg_close": 0.05,
+          "close_rate": 99.5,
           "rating_pct": 97.3,
           "rated": 37,
-          "sla_pct": 100.0,
+          "sla_pct": 93.2,
           "cost": 4360330
         },
         {
           "name": "Робия Р.",
-          "tickets": 408,
+          "tickets": 407,
+          "avg_close": 0.11,
           "close_rate": 99.5,
-          "avg_close": 31.5,
           "rating_pct": 91.7,
           "rated": 36,
-          "sla_pct": 98.7,
-          "cost": 4024920
+          "sla_pct": 77.1,
+          "cost": 4015055
         },
         {
           "name": "Нурилло",
           "tickets": 316,
-          "close_rate": 99.7,
-          "avg_close": 17.3,
-          "rating_pct": 93.8,
-          "rated": 16,
-          "sla_pct": 98.5,
+          "avg_close": 0.05,
+          "close_rate": 99.5,
+          "rating_pct": 94.4,
+          "rated": 18,
+          "sla_pct": 75.4,
           "cost": 3117340
         },
         {
           "name": "Алиёр",
           "tickets": 309,
-          "close_rate": 100.0,
-          "avg_close": 25.7,
+          "avg_close": 0.11,
+          "close_rate": 99.5,
           "rating_pct": 100.0,
           "rated": 14,
-          "sla_pct": 91.2,
+          "sla_pct": 66.7,
           "cost": 3048285
         },
         {
           "name": "Ардак",
           "tickets": 255,
-          "close_rate": 100.0,
-          "avg_close": 30.8,
+          "avg_close": 0.06,
+          "close_rate": 99.5,
           "rating_pct": 100.0,
           "rated": 10,
-          "sla_pct": 98.8,
+          "sla_pct": 73.0,
           "cost": 2515575
         },
         {
-          "name": "Тожмухаммад",
-          "tickets": 243,
-          "close_rate": 100.0,
-          "avg_close": 27.0,
-          "rating_pct": 90.0,
-          "rated": 10,
-          "sla_pct": 100.0,
-          "cost": 2397195
-        },
-        {
           "name": "Атабек",
-          "tickets": 243,
-          "close_rate": 100.0,
-          "avg_close": 19.2,
+          "tickets": 244,
+          "avg_close": 0.02,
+          "close_rate": 99.5,
           "rating_pct": 100.0,
           "rated": 10,
-          "sla_pct": 98.7,
-          "cost": 2397195
+          "sla_pct": 72.8,
+          "cost": 2407060
+        },
+        {
+          "name": "Тожмухаммад",
+          "tickets": 242,
+          "avg_close": 0.12,
+          "close_rate": 99.5,
+          "rating_pct": 90.9,
+          "rated": 11,
+          "sla_pct": 64.0,
+          "cost": 2387330
         },
         {
           "name": "Авазбек",
           "tickets": 223,
-          "close_rate": 100.0,
-          "avg_close": 17.1,
-          "rating_pct": 90.9,
-          "rated": 33,
-          "sla_pct": 95.7,
+          "avg_close": 0.09,
+          "close_rate": 99.5,
+          "rating_pct": 91.2,
+          "rated": 34,
+          "sla_pct": 74.6,
           "cost": 2199895
         },
         {
           "name": "Сардор Б.",
           "tickets": 216,
-          "close_rate": 100.0,
-          "avg_close": 22.9,
+          "avg_close": 0.05,
+          "close_rate": 99.5,
           "rating_pct": 100.0,
           "rated": 7,
-          "sla_pct": 93.9,
+          "sla_pct": 74.6,
           "cost": 2130840
         },
         {
           "name": "Робия А.",
           "tickets": 92,
-          "close_rate": 98.9,
-          "avg_close": 6.6,
+          "avg_close": 0.02,
+          "close_rate": 99.5,
           "rating_pct": 100.0,
           "rated": 4,
-          "sla_pct": 51.9,
+          "sla_pct": 83.3,
           "cost": 907580
+        },
+        {
+          "name": "Дильшод",
+          "tickets": 67,
+          "avg_close": 0.2,
+          "close_rate": 99.5,
+          "rating_pct": 100.0,
+          "rated": 2,
+          "sla_pct": 46.7,
+          "cost": 660955
         },
         {
           "name": "Шохина",
           "tickets": 33,
-          "close_rate": 100.0,
-          "avg_close": 12.2,
+          "avg_close": 0.05,
+          "close_rate": 99.5,
           "rating_pct": 100.0,
           "rated": 3,
-          "sla_pct": 97.0,
+          "sla_pct": 93.9,
           "cost": 325545
         },
         {
           "name": "Нурлан",
           "tickets": 15,
-          "close_rate": 100.0,
-          "avg_close": 6.2,
+          "avg_close": 0.09,
+          "close_rate": 99.5,
           "rating_pct": 100.0,
           "rated": 2,
-          "sla_pct": 93.3,
+          "sla_pct": 86.7,
           "cost": 147975
         },
         {
           "name": "Камолиддин",
           "tickets": 7,
-          "close_rate": 100.0,
-          "avg_close": 61.4,
+          "avg_close": 0.16,
+          "close_rate": 99.5,
           "rating_pct": 100.0,
           "rated": 1,
-          "sla_pct": 66.7,
+          "sla_pct": 50.0,
           "cost": 69055
         }
       ],
       "top_labels": [
         {
           "name": "Документооборот - Оплата за тариф",
-          "tickets": 419,
-          "desired": 116,
+          "tickets": 422,
+          "desired": 119,
           "undesired": 254,
-          "cost": 4133435
+          "cost": 4163030
         },
         {
           "name": "Документооборот - Создание ссылки для оплаты",
-          "tickets": 148,
-          "desired": 33,
+          "tickets": 150,
+          "desired": 35,
           "undesired": 115,
-          "cost": 1460020
+          "cost": 1479750
         },
         {
           "name": "Оборудование - Установка/Настройка/Удаление принтера",
-          "tickets": 108,
-          "desired": 83,
+          "tickets": 109,
+          "desired": 84,
           "undesired": 22,
-          "cost": 1065420
+          "cost": 1075285
         },
         {
           "name": "Учётная запись - Блокировка/Разблокировка аккаунта",
@@ -3038,31 +1607,38 @@ const BILLZ_DATA = {
         },
         {
           "name": "Учётная запись - Помощь со входом в аккаунт",
-          "tickets": 68,
+          "tickets": 71,
           "desired": 17,
-          "undesired": 51,
-          "cost": 670820
+          "undesired": 54,
+          "cost": 700415
         },
         {
           "name": "Каталог — изменение свойств товара",
-          "tickets": 63,
+          "tickets": 65,
           "desired": 26,
-          "undesired": 31,
-          "cost": 621495
+          "undesired": 33,
+          "cost": 641225
         },
         {
           "name": "Кассовые смены — Открытие/Закрытие смен",
-          "tickets": 52,
+          "tickets": 53,
           "desired": 27,
-          "undesired": 25,
-          "cost": 512980
+          "undesired": 26,
+          "cost": 522845
         },
         {
           "name": "Вопрос не по программе",
-          "tickets": 38,
+          "tickets": 41,
           "desired": 9,
-          "undesired": 26,
-          "cost": 374870
+          "undesired": 28,
+          "cost": 404465
+        },
+        {
+          "name": "Документооборот - Консультация по сумме долга",
+          "tickets": 36,
+          "desired": 13,
+          "undesired": 20,
+          "cost": 355140
         },
         {
           "name": "Каталог — настройка печати ценника",
@@ -3070,13 +1646,6 @@ const BILLZ_DATA = {
           "desired": 18,
           "undesired": 16,
           "cost": 345275
-        },
-        {
-          "name": "Документооборот - Консультация по сумме долга",
-          "tickets": 34,
-          "desired": 12,
-          "undesired": 20,
-          "cost": 335410
         },
         {
           "name": "Настройка - Установка BILLZ PAY/Payme/Epos/PAX",
@@ -3086,1416 +1655,793 @@ const BILLZ_DATA = {
           "cost": 335410
         },
         {
-          "name": "Новая продажа - Не удаётся сделать продажу",
-          "tickets": 30,
-          "desired": 12,
-          "undesired": 18,
-          "cost": 295950
+          "name": "Документооборот - Помощь в оплате долга",
+          "tickets": 32,
+          "desired": 15,
+          "undesired": 17,
+          "cost": 315680
         },
         {
           "name": "Баг (реквест)",
-          "tickets": 29,
-          "desired": 16,
+          "tickets": 31,
+          "desired": 17,
           "undesired": 13,
-          "cost": 286085
+          "cost": 305815
         },
         {
-          "name": "Управление - Создание/Редактирвоание/Удаление сотрудника",
+          "name": "Новая продажа - Не удаётся сделать продажу",
+          "tickets": 31,
+          "desired": 12,
+          "undesired": 19,
+          "cost": 305815
+        },
+        {
+          "name": "Управление - Создание/Редактирвоание/Удаление роли",
+          "tickets": 30,
+          "desired": 18,
+          "undesired": 12,
+          "cost": 295950
+        }
+      ],
+      "top_companies": []
+    },
+    "week_16": {
+      "label": "Нед 16 · 13–19 апр",
+      "week_num": 16,
+      "tickets": 2675,
+      "calls": 1484,
+      "chats": 1191,
+      "desired": 1166,
+      "undesired": 1299,
+      "closed": 2675,
+      "open": 0,
+      "sla_pct": 76.7,
+      "lcr": 7.8,
+      "csat_pct": 95.1,
+      "csat_rated": 164,
+      "cost": 26388875,
+      "operators": [
+        {
+          "name": "Анасхон",
+          "tickets": 373,
+          "avg_close": 0.04,
+          "close_rate": 99.5,
+          "rating_pct": 95.5,
+          "rated": 22,
+          "sla_pct": 89.9,
+          "cost": 3679645
+        },
+        {
+          "name": "Атабек",
+          "tickets": 316,
+          "avg_close": 0.04,
+          "close_rate": 99.5,
+          "rating_pct": 100.0,
+          "rated": 16,
+          "sla_pct": 79.2,
+          "cost": 3117340
+        },
+        {
+          "name": "Алиёр",
+          "tickets": 303,
+          "avg_close": 0.06,
+          "close_rate": 99.5,
+          "rating_pct": 95.2,
+          "rated": 21,
+          "sla_pct": 76.4,
+          "cost": 2989095
+        },
+        {
+          "name": "Нурилло",
+          "tickets": 295,
+          "avg_close": 0.06,
+          "close_rate": 99.5,
+          "rating_pct": 88.2,
+          "rated": 17,
+          "sla_pct": 84.3,
+          "cost": 2910175
+        },
+        {
+          "name": "Авазбек",
+          "tickets": 280,
+          "avg_close": 0.08,
+          "close_rate": 99.5,
+          "rating_pct": 94.1,
+          "rated": 17,
+          "sla_pct": 79.2,
+          "cost": 2762200
+        },
+        {
+          "name": "Сардор Б.",
+          "tickets": 264,
+          "avg_close": 0.06,
+          "close_rate": 99.5,
+          "rating_pct": 100.0,
+          "rated": 12,
+          "sla_pct": 69.5,
+          "cost": 2604360
+        },
+        {
+          "name": "Тожмухаммад",
+          "tickets": 256,
+          "avg_close": 0.1,
+          "close_rate": 99.5,
+          "rating_pct": 88.2,
+          "rated": 17,
+          "sla_pct": 74.4,
+          "cost": 2525440
+        },
+        {
+          "name": "Робия Р.",
+          "tickets": 233,
+          "avg_close": 0.17,
+          "close_rate": 99.5,
+          "rating_pct": 95.7,
+          "rated": 23,
+          "sla_pct": 76.0,
+          "cost": 2298545
+        },
+        {
+          "name": "Ардак",
+          "tickets": 224,
+          "avg_close": 0.06,
+          "close_rate": 99.5,
+          "rating_pct": 100.0,
+          "rated": 10,
+          "sla_pct": 68.9,
+          "cost": 2209760
+        },
+        {
+          "name": "Камолиддин",
+          "tickets": 63,
+          "avg_close": 0.04,
+          "close_rate": 99.5,
+          "rating_pct": 100.0,
+          "rated": 6,
+          "sla_pct": 66.1,
+          "cost": 621495
+        },
+        {
+          "name": "Дильшод",
+          "tickets": 55,
+          "avg_close": 0.18,
+          "close_rate": 99.5,
+          "rating_pct": 100.0,
+          "rated": 3,
+          "sla_pct": 19.0,
+          "cost": 542575
+        },
+        {
+          "name": "Нурлан",
+          "tickets": 13,
+          "avg_close": 0.03,
+          "close_rate": 99.5,
+          "rating_pct": 0.0,
+          "rated": 0,
+          "sla_pct": 61.5,
+          "cost": 128245
+        }
+      ],
+      "top_labels": [
+        {
+          "name": "Документооборот - Оплата за тариф",
+          "tickets": 178,
+          "desired": 64,
+          "undesired": 98,
+          "cost": 1755970
+        },
+        {
+          "name": "Учётная запись - Помощь со входом в аккаунт",
+          "tickets": 168,
+          "desired": 41,
+          "undesired": 109,
+          "cost": 1657320
+        },
+        {
+          "name": "Оборудование - Установка/Настройка/Удаление принтера",
+          "tickets": 114,
+          "desired": 70,
+          "undesired": 41,
+          "cost": 1124610
+        },
+        {
+          "name": "Учётная запись - Блокировка/Разблокировка аккаунта",
+          "tickets": 90,
+          "desired": 34,
+          "undesired": 50,
+          "cost": 887850
+        },
+        {
+          "name": "Документооборот - Создание ссылки для оплаты",
+          "tickets": 84,
+          "desired": 9,
+          "undesired": 74,
+          "cost": 828660
+        },
+        {
+          "name": "Вопрос не по программе",
+          "tickets": 51,
+          "desired": 7,
+          "undesired": 38,
+          "cost": 503115
+        },
+        {
+          "name": "Управление - Создание/Редактирвоание/Удаление роли",
+          "tickets": 50,
+          "desired": 33,
+          "undesired": 17,
+          "cost": 493250
+        },
+        {
+          "name": "Каталог — изменение свойств товара",
+          "tickets": 49,
+          "desired": 23,
+          "undesired": 22,
+          "cost": 483385
+        },
+        {
+          "name": "Каталог — настройка печати ценника",
+          "tickets": 47,
+          "desired": 27,
+          "undesired": 20,
+          "cost": 463655
+        },
+        {
+          "name": "Учётная запись - Создание магазина",
+          "tickets": 45,
+          "desired": 22,
+          "undesired": 20,
+          "cost": 443925
+        },
+        {
+          "name": "Кассовые смены — Открытие/Закрытие смен",
+          "tickets": 32,
+          "desired": 14,
+          "undesired": 18,
+          "cost": 315680
+        },
+        {
+          "name": "Новая продажа - Не удаётся сделать продажу",
           "tickets": 29,
           "desired": 18,
           "undesired": 11,
           "cost": 286085
         },
         {
-          "name": "Документооборот - Помощь в оплате долга",
-          "tickets": 29,
-          "desired": 13,
-          "undesired": 16,
-          "cost": 286085
-        },
-        {
-          "name": "Учётная запись - Создание магазина",
-          "tickets": 28,
-          "desired": 20,
-          "undesired": 8,
-          "cost": 276220
-        },
-        {
-          "name": "Оборудование - Установка Anydesk/BILLZ Desktop/Программы компьютера и тд.",
+          "name": "Каталог — запрос на добавление товара",
           "tickets": 28,
           "desired": 15,
           "undesired": 13,
           "cost": 276220
         },
         {
-          "name": "Управление - Создание/Редактирвоание/Удаление роли",
+          "name": "Документооборот - Консультация по сумме долга",
           "tickets": 28,
-          "desired": 16,
-          "undesired": 12,
+          "desired": 8,
+          "undesired": 20,
           "cost": 276220
         },
         {
-          "name": "Новая продажа - Возврат/Обмен",
-          "tickets": 24,
-          "desired": 13,
-          "undesired": 10,
-          "cost": 236760
-        },
-        {
           "name": "Импорт — импорт товаров через Excel",
-          "tickets": 24,
-          "desired": 14,
-          "undesired": 10,
-          "cost": 236760
-        }
-      ],
-      "top_companies": [
-        {
-          "name": "BILLZ",
-          "tickets": 474,
-          "desired": 175,
-          "undesired": 247,
-          "cost": 4676010,
-          "top_labels": [
-            {
-              "label": "Документооборот - Создание ссылки для оплаты",
-              "count": 80
-            },
-            {
-              "label": "Учётная запись - Блокировка/Разблокировка аккаунта",
-              "count": 44
-            },
-            {
-              "label": "Документооборот - Оплата за тариф",
-              "count": 34
-            },
-            {
-              "label": "Учётная запись - Создание магазина",
-              "count": 22
-            },
-            {
-              "label": "Учётная запись - Помощь со входом в аккаунт",
-              "count": 11
-            }
-          ]
-        },
-        {
-          "name": "INBAZAR",
-          "tickets": 30,
-          "desired": 12,
-          "undesired": 18,
-          "cost": 295950,
-          "top_labels": [
-            {
-              "label": "Кассовые смены — Открытие/Закрытие смен",
-              "count": 14
-            },
-            {
-              "label": "Новая продажа - Не удаётся сделать продажу",
-              "count": 4
-            },
-            {
-              "label": "Баг (реквест)",
-              "count": 2
-            },
-            {
-              "label": "Каталог — изменение свойств товара",
-              "count": 2
-            },
-            {
-              "label": "Вопрос не по программе",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "name": "Bloom",
-          "tickets": 28,
-          "desired": 12,
-          "undesired": 15,
-          "cost": 276220,
-          "top_labels": [
-            {
-              "label": "Кассовые смены — Открытие/Закрытие смен",
-              "count": 5
-            },
-            {
-              "label": "Баг (реквест)",
-              "count": 3
-            },
-            {
-              "label": "Маркетинг - Работа с Сертификатом/Ваучером",
-              "count": 3
-            },
-            {
-              "label": "Все продажи - Удаление/Редактирование продажи",
-              "count": 3
-            },
-            {
-              "label": "Вопрос не по программе",
-              "count": 2
-            }
-          ]
-        },
-        {
-          "name": "gross-market",
           "tickets": 27,
-          "desired": 10,
-          "undesired": 17,
-          "cost": 266355,
-          "top_labels": [
-            {
-              "label": "Desktop - Ошибка синхронизации",
-              "count": 9
-            },
-            {
-              "label": "Оборудование - Установка Anydesk/BILLZ Desktop/Программы компьютера и тд.",
-              "count": 4
-            },
-            {
-              "label": "Desktop - Ошибка синхронизации, Баг (реквест)",
-              "count": 2
-            },
-            {
-              "label": "Desktop - Выгрузка Log файлов",
-              "count": 2
-            },
-            {
-              "label": "Баг (реквест), Desktop - Ошибка синхронизации",
-              "count": 2
-            }
-          ]
-        },
-        {
-          "name": "Kolbasachi",
-          "tickets": 25,
-          "desired": 13,
-          "undesired": 11,
-          "cost": 246625,
-          "top_labels": [
-            {
-              "label": "Баг (реквест), Desktop - Ошибка синхронизации",
-              "count": 6
-            },
-            {
-              "label": "Оборудование - Установка Anydesk/BILLZ Desktop/Программы компьютера и тд.",
-              "count": 3
-            },
-            {
-              "label": "Desktop - Ошибка синхронизации, Оборудование - Загрузка базу товаров в весы, Оборудование - Установка Anydesk/BILLZ Desktop/Программы компьютера и тд.",
-              "count": 1
-            },
-            {
-              "label": "Баг (реквест)",
-              "count": 1
-            },
-            {
-              "label": "Баг (реквест), Оборудование - Установка Anydesk/BILLZ Desktop/Программы компьютера и тд.",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "name": "turon999",
-          "tickets": 18,
-          "desired": 8,
-          "undesired": 8,
-          "cost": 177570,
-          "top_labels": [
-            {
-              "label": "Каталог — изменение свойств товара",
-              "count": 4
-            },
-            {
-              "label": "Документооборот - Оплата за тариф",
-              "count": 2
-            },
-            {
-              "label": "Каталог - Просмотр статистики",
-              "count": 2
-            },
-            {
-              "label": "Импорт - Удаление импорта",
-              "count": 1
-            },
-            {
-              "label": "Импорт — импорт товаров через Excel, Импорт — консультация по импорту (частичное обучение)",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "name": "seoul-market1",
-          "tickets": 17,
-          "desired": 11,
-          "undesired": 6,
-          "cost": 167705,
-          "top_labels": [
-            {
-              "label": "Оборудование - Установка Anydesk/BILLZ Desktop/Программы компьютера и тд.",
-              "count": 5
-            },
-            {
-              "label": "Desktop - Ошибка синхронизации",
-              "count": 3
-            },
-            {
-              "label": "Каталог - Скачивание товаров",
-              "count": 2
-            },
-            {
-              "label": "Desktop - Ошибка синхронизации, Оборудование - Установка Anydesk/BILLZ Desktop/Программы компьютера и тд.",
-              "count": 1
-            },
-            {
-              "label": "Desktop - Ошибка синхронизации, Баг (реквест)",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "name": "X-sport",
-          "tickets": 15,
-          "desired": 9,
-          "undesired": 6,
-          "cost": 147975,
-          "top_labels": [
-            {
-              "label": "Акции - Создание/Редактирование/Удаление акции",
-              "count": 1
-            },
-            {
-              "label": "Баг (реквест), Сайт/Бот - Настройка/Удаление/Редактирование функций",
-              "count": 1
-            },
-            {
-              "label": "Импорт — консультация по импорту (частичное обучение)",
-              "count": 1
-            },
-            {
-              "label": "Каталог - Управление характеристики товаров, Каталог — изменение свойств товара, Каталог - Просмотр статистики",
-              "count": 1
-            },
-            {
-              "label": "Каталог — изменение свойств товара",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "name": "akula-mobile",
-          "tickets": 15,
-          "desired": 8,
-          "undesired": 7,
-          "cost": 147975,
-          "top_labels": [
-            {
-              "label": "Инвентаризация — консультация по модулю (частичное обучение)",
-              "count": 2
-            },
-            {
-              "label": "Все продажи - Удаление/Редактирование продажи",
-              "count": 1
-            },
-            {
-              "label": "Группы и теги - Создание/Удаление/Редактирование",
-              "count": 1
-            },
-            {
-              "label": "Документооборот - Помощь в оплате долга",
-              "count": 1
-            },
-            {
-              "label": "Документооборот - Помощь в оплате долга, Каталог — изменение свойств товара",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "name": "modlife",
-          "tickets": 12,
-          "desired": 8,
-          "undesired": 4,
-          "cost": 118380,
-          "top_labels": [
-            {
-              "label": "Оборудование - Установка/Настройка/Удаление принтера",
-              "count": 3
-            },
-            {
-              "label": "Новая продажа - Возврат/Обмен",
-              "count": 2
-            },
-            {
-              "label": "Каталог — настройка печати ценника",
-              "count": 2
-            },
-            {
-              "label": "Каталог — изменение свойств товара",
-              "count": 1
-            },
-            {
-              "label": "Инвентаризация — консультация по модулю (частичное обучение)",
-              "count": 1
-            }
-          ]
+          "desired": 18,
+          "undesired": 9,
+          "cost": 266355
         }
       ],
-      "label": "6 Apr – 12 Apr 2026",
-      "week_num": 15
-    },
-    "week_16": {
-      "label": "13–19 апр",
-      "week_num": 16,
-      "tickets": 2675,
-      "calls": 1484,
-      "chats": 1191,
-      "desired": 1164,
-      "undesired": 1299,
-      "closed": 2663,
-      "open": 12,
-      "afrt": "53 с",
-      "afrt_raw": 0.876,
-      "art": "24 ч 5 м",
-      "art_raw": 24.09,
-      "sla_pct": 76.7,
-      "sla_not_met": 23.3,
-      "lcr": 7.8,
-      "repeat_pct": 9.3,
-      "cost": 26388875,
-      "massoviy_cnt": 0,
-      "no_massoviy": {
-        "tickets": 2675,
-        "desired": 1164,
-        "undesired": 1299,
-        "afrt": "53 с",
-        "afrt_raw": 0.876,
-        "sla_pct": 76.7,
-        "sla_not_met": 23.3,
-        "cost": 26388875,
-        "top_labels": [
-          {
-            "name": "Документооборот - Оплата за тариф",
-            "tickets": 178,
-            "desired": 60,
-            "undesired": 110,
-            "cost": 1756070
-          },
-          {
-            "name": "Учётная запись - Помощь со входом в аккаунт",
-            "tickets": 168,
-            "desired": 55,
-            "undesired": 100,
-            "cost": 1657320
-          },
-          {
-            "name": "Оборудование - Установка/Настройка/Удаление принтера",
-            "tickets": 113,
-            "desired": 80,
-            "undesired": 30,
-            "cost": 1114745
-          },
-          {
-            "name": "Учётная запись - Блокировка/Разблокировка аккаунта",
-            "tickets": 90,
-            "desired": 30,
-            "undesired": 55,
-            "cost": 887850
-          },
-          {
-            "name": "Документооборот - Создание ссылки для оплаты",
-            "tickets": 84,
-            "desired": 20,
-            "undesired": 60,
-            "cost": 828660
-          },
-          {
-            "name": "Вопрос не по программе",
-            "tickets": 52,
-            "desired": 25,
-            "undesired": 25,
-            "cost": 512980
-          },
-          {
-            "name": "Управление - Создание/Редактирование/Удаление роли",
-            "tickets": 50,
-            "desired": 35,
-            "undesired": 15,
-            "cost": 493250
-          },
-          {
-            "name": "Каталог — изменение свойств товара",
-            "tickets": 49,
-            "desired": 30,
-            "undesired": 18,
-            "cost": 483385
-          },
-          {
-            "name": "Каталог — настройка печати ценника",
-            "tickets": 47,
-            "desired": 28,
-            "undesired": 18,
-            "cost": 463655
-          },
-          {
-            "name": "Учётная запись - Создание магазина",
-            "tickets": 45,
-            "desired": 30,
-            "undesired": 14,
-            "cost": 443925
-          }
-        ],
-        "top_companies": [
-          {
-            "name": "viera",
-            "tickets": 3,
-            "desired": 2,
-            "undesired": 1,
-            "cost": 29595,
-            "top_labels": [
-              {
-                "label": "Управление — Роли",
-                "count": 3
-              }
-            ]
-          },
-          {
-            "name": "gremu",
-            "tickets": 3,
-            "desired": 2,
-            "undesired": 1,
-            "cost": 29595,
-            "top_labels": [
-              {
-                "label": "Учётная запись — Создание магазина",
-                "count": 2
-              }
-            ]
-          },
-          {
-            "name": "zdz",
-            "tickets": 3,
-            "desired": 2,
-            "undesired": 1,
-            "cost": 29595,
-            "top_labels": [
-              {
-                "label": "SMS рассылка",
-                "count": 2
-              }
-            ]
-          },
-          {
-            "name": "alset",
-            "tickets": 2,
-            "desired": 1,
-            "undesired": 1,
-            "cost": 19730,
-            "top_labels": [
-              {
-                "label": "SMS рассылка",
-                "count": 2
-              }
-            ]
-          },
-          {
-            "name": "bydtuning",
-            "tickets": 2,
-            "desired": 1,
-            "undesired": 1,
-            "cost": 19730,
-            "top_labels": [
-              {
-                "label": "Оплата за тариф",
-                "count": 1
-              }
-            ]
-          },
-          {
-            "name": "dokon-105",
-            "tickets": 2,
-            "desired": 1,
-            "undesired": 1,
-            "cost": 19730,
-            "top_labels": [
-              {
-                "label": "Создание ссылки для оплаты",
-                "count": 1
-              }
-            ]
-          },
-          {
-            "name": "LUXURYBABY",
-            "tickets": 2,
-            "desired": 1,
-            "undesired": 1,
-            "cost": 19730,
-            "top_labels": [
-              {
-                "label": "Создание ссылки для оплаты",
-                "count": 1
-              }
-            ]
-          },
-          {
-            "name": "exclusiveboutiqueurgut",
-            "tickets": 2,
-            "desired": 1,
-            "undesired": 1,
-            "cost": 19730,
-            "top_labels": [
-              {
-                "label": "Создание ссылки для оплаты",
-                "count": 2
-              }
-            ]
-          },
-          {
-            "name": "gremu",
-            "tickets": 2,
-            "desired": 1,
-            "undesired": 1,
-            "cost": 19730,
-            "top_labels": [
-              {
-                "label": "Учётная запись — Создание магазина",
-                "count": 2
-              }
-            ]
-          },
-          {
-            "name": "kottabola",
-            "tickets": 2,
-            "desired": 1,
-            "undesired": 1,
-            "cost": 19730,
-            "top_labels": [
-              {
-                "label": "Создание ссылки для оплаты",
-                "count": 1
-              }
-            ]
-          }
-        ],
-        "operators": [
-          {
-            "name": "Анасхон",
-            "tickets": 372,
-            "avg_close": 12.0,
-            "close_rate": 99.5,
-            "sla_pct": 82,
-            "cost": 3669780,
-            "rating_pct": 95.5,
-            "rated": 22
-          },
-          {
-            "name": "Атабек",
-            "tickets": 315,
-            "avg_close": 34.5,
-            "close_rate": 99.7,
-            "sla_pct": 75,
-            "cost": 3107475,
-            "rating_pct": 100,
-            "rated": 16
-          },
-          {
-            "name": "Алиёр",
-            "tickets": 303,
-            "avg_close": 19.2,
-            "close_rate": 99.3,
-            "sla_pct": 78,
-            "cost": 2989995,
-            "rating_pct": 95.2,
-            "rated": 21
-          },
-          {
-            "name": "Нурилло",
-            "tickets": 296,
-            "avg_close": 15.6,
-            "close_rate": 99.3,
-            "sla_pct": 79,
-            "cost": 2920040,
-            "rating_pct": 88.2,
-            "rated": 17
-          },
-          {
-            "name": "Авазбек",
-            "tickets": 279,
-            "avg_close": 23.3,
-            "close_rate": 99.3,
-            "sla_pct": 82,
-            "cost": 2752335,
-            "rating_pct": 93.3,
-            "rated": 15
-          },
-          {
-            "name": "Сардор Б.",
-            "tickets": 264,
-            "avg_close": 15.6,
-            "close_rate": 100,
-            "sla_pct": 74,
-            "cost": 2604360,
-            "rating_pct": 100,
-            "rated": 12
-          },
-          {
-            "name": "Тожмухаммад",
-            "tickets": 257,
-            "avg_close": 21.2,
-            "close_rate": 99.6,
-            "sla_pct": 77,
-            "cost": 2535305,
-            "rating_pct": 87.5,
-            "rated": 16
-          },
-          {
-            "name": "Робия Р.",
-            "tickets": 233,
-            "avg_close": 41.7,
-            "close_rate": 99.6,
-            "sla_pct": 73,
-            "cost": 2298545,
-            "rating_pct": 95.7,
-            "rated": 23
-          },
-          {
-            "name": "Ардак",
-            "tickets": 225,
-            "avg_close": 46.0,
-            "close_rate": 100,
-            "sla_pct": 72,
-            "cost": 2219625,
-            "rating_pct": 100,
-            "rated": 8
-          },
-          {
-            "name": "Камолиддин",
-            "tickets": 63,
-            "avg_close": 8.9,
-            "close_rate": 100,
-            "sla_pct": 70,
-            "cost": 621495,
-            "rating_pct": 100,
-            "rated": 6
-          },
-          {
-            "name": "Дильшод",
-            "tickets": 55,
-            "avg_close": 41.1,
-            "close_rate": 100,
-            "sla_pct": 45,
-            "cost": 542575,
-            "rating_pct": 100,
-            "rated": 3
-          },
-          {
-            "name": "Нурлан",
-            "tickets": 13,
-            "avg_close": 6.7,
-            "close_rate": 100,
-            "sla_pct": 69,
-            "cost": 128245,
-            "rating_pct": 0,
-            "rated": 0
-          }
-        ]
-      },
-      "operators": [
-        {
-          "name": "Анасхон",
-          "tickets": 372,
-          "avg_close": 12.0,
-          "close_rate": 99.5,
-          "sla_pct": 82,
-          "cost": 3669780,
-          "rating_pct": 95.5,
-          "rated": 22
-        },
-        {
-          "name": "Атабек",
-          "tickets": 315,
-          "avg_close": 34.5,
-          "close_rate": 99.7,
-          "sla_pct": 75,
-          "cost": 3107475,
-          "rating_pct": 100,
-          "rated": 16
-        },
-        {
-          "name": "Алиёр",
-          "tickets": 303,
-          "avg_close": 19.2,
-          "close_rate": 99.3,
-          "sla_pct": 78,
-          "cost": 2989995,
-          "rating_pct": 95.2,
-          "rated": 21
-        },
-        {
-          "name": "Нурилло",
-          "tickets": 296,
-          "avg_close": 15.6,
-          "close_rate": 99.3,
-          "sla_pct": 79,
-          "cost": 2920040,
-          "rating_pct": 88.2,
-          "rated": 17
-        },
-        {
-          "name": "Авазбек",
-          "tickets": 279,
-          "avg_close": 23.3,
-          "close_rate": 99.3,
-          "sla_pct": 82,
-          "cost": 2752335,
-          "rating_pct": 93.3,
-          "rated": 15
-        },
-        {
-          "name": "Сардор Б.",
-          "tickets": 264,
-          "avg_close": 15.6,
-          "close_rate": 100,
-          "sla_pct": 74,
-          "cost": 2604360,
-          "rating_pct": 100,
-          "rated": 12
-        },
-        {
-          "name": "Тожмухаммад",
-          "tickets": 257,
-          "avg_close": 21.2,
-          "close_rate": 99.6,
-          "sla_pct": 77,
-          "cost": 2535305,
-          "rating_pct": 87.5,
-          "rated": 16
-        },
-        {
-          "name": "Робия Р.",
-          "tickets": 233,
-          "avg_close": 41.7,
-          "close_rate": 99.6,
-          "sla_pct": 73,
-          "cost": 2298545,
-          "rating_pct": 95.7,
-          "rated": 23
-        },
-        {
-          "name": "Ардак",
-          "tickets": 225,
-          "avg_close": 46.0,
-          "close_rate": 100,
-          "sla_pct": 72,
-          "cost": 2219625,
-          "rating_pct": 100,
-          "rated": 8
-        },
-        {
-          "name": "Камолиддин",
-          "tickets": 63,
-          "avg_close": 8.9,
-          "close_rate": 100,
-          "sla_pct": 70,
-          "cost": 621495,
-          "rating_pct": 100,
-          "rated": 6
-        },
-        {
-          "name": "Дильшод",
-          "tickets": 55,
-          "avg_close": 41.1,
-          "close_rate": 100,
-          "sla_pct": 45,
-          "cost": 542575,
-          "rating_pct": 100,
-          "rated": 3
-        },
-        {
-          "name": "Нурлан",
-          "tickets": 13,
-          "avg_close": 6.7,
-          "close_rate": 100,
-          "sla_pct": 69,
-          "cost": 128245,
-          "rating_pct": 0,
-          "rated": 0
-        }
-      ],
-      "top_labels": [
-        {
-          "name": "Документооборот - Оплата за тариф",
-          "tickets": 178,
-          "undesired": 110,
-          "cost": 1756070
-        },
-        {
-          "name": "Учётная запись - Помощь со входом в аккаунт",
-          "tickets": 168,
-          "undesired": 100,
-          "cost": 1657320
-        },
-        {
-          "name": "Оборудование - Установка/Настройка/Удаление принтера",
-          "tickets": 113,
-          "undesired": 30,
-          "cost": 1114745
-        },
-        {
-          "name": "Учётная запись - Блокировка/Разблокировка аккаунта",
-          "tickets": 90,
-          "undesired": 55,
-          "cost": 887850
-        },
-        {
-          "name": "Документооборот - Создание ссылки для оплаты",
-          "tickets": 84,
-          "undesired": 60,
-          "cost": 828660
-        },
-        {
-          "name": "Вопрос не по программе",
-          "tickets": 52,
-          "undesired": 25,
-          "cost": 512980
-        },
-        {
-          "name": "Управление - Создание/Редактирование/Удаление роли",
-          "tickets": 50,
-          "undesired": 15,
-          "cost": 493250
-        },
-        {
-          "name": "Каталог — изменение свойств товара",
-          "tickets": 49,
-          "undesired": 18,
-          "cost": 483385
-        },
-        {
-          "name": "Каталог — настройка печати ценника",
-          "tickets": 47,
-          "undesired": 18,
-          "cost": 463655
-        },
-        {
-          "name": "Учётная запись - Создание магазина",
-          "tickets": 45,
-          "undesired": 14,
-          "cost": 443925
-        },
-        {
-          "name": "Кассовые смены — Открытие/Закрытие смен",
-          "tickets": 32,
-          "undesired": 20,
-          "cost": 315680
-        },
-        {
-          "name": "Новая продажа - Не удаётся сделать продажу",
-          "tickets": 29,
-          "undesired": 15,
-          "cost": 286085
-        }
-      ],
-      "top_companies": [
-        {
-          "name": "viera",
-          "tickets": 3,
-          "desired": 2,
-          "undesired": 1,
-          "cost": 29595,
-          "top_labels": [
-            {
-              "label": "Управление — Роли",
-              "count": 3
-            }
-          ]
-        },
-        {
-          "name": "gremu",
-          "tickets": 3,
-          "desired": 2,
-          "undesired": 1,
-          "cost": 29595,
-          "top_labels": [
-            {
-              "label": "Учётная запись — Создание магазина",
-              "count": 2
-            }
-          ]
-        },
-        {
-          "name": "zdz",
-          "tickets": 3,
-          "desired": 2,
-          "undesired": 1,
-          "cost": 29595,
-          "top_labels": [
-            {
-              "label": "SMS рассылка",
-              "count": 2
-            }
-          ]
-        },
-        {
-          "name": "alset",
-          "tickets": 2,
-          "desired": 1,
-          "undesired": 1,
-          "cost": 19730,
-          "top_labels": [
-            {
-              "label": "SMS рассылка",
-              "count": 2
-            }
-          ]
-        },
-        {
-          "name": "bydtuning",
-          "tickets": 2,
-          "desired": 1,
-          "undesired": 1,
-          "cost": 19730,
-          "top_labels": [
-            {
-              "label": "Оплата за тариф",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "name": "dokon-105",
-          "tickets": 2,
-          "desired": 1,
-          "undesired": 1,
-          "cost": 19730,
-          "top_labels": [
-            {
-              "label": "Создание ссылки для оплаты",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "name": "LUXURYBABY",
-          "tickets": 2,
-          "desired": 1,
-          "undesired": 1,
-          "cost": 19730,
-          "top_labels": [
-            {
-              "label": "Создание ссылки для оплаты",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "name": "exclusiveboutiqueurgut",
-          "tickets": 2,
-          "desired": 1,
-          "undesired": 1,
-          "cost": 19730,
-          "top_labels": [
-            {
-              "label": "Создание ссылки для оплаты",
-              "count": 2
-            }
-          ]
-        },
-        {
-          "name": "kottabola",
-          "tickets": 2,
-          "desired": 1,
-          "undesired": 1,
-          "cost": 19730,
-          "top_labels": [
-            {
-              "label": "Создание ссылки для оплаты",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "name": "ziyo",
-          "tickets": 2,
-          "desired": 1,
-          "undesired": 1,
-          "cost": 19730,
-          "top_labels": [
-            {
-              "label": "Оплата за тариф",
-              "count": 1
-            }
-          ]
-        }
-      ],
-      "team_context": "✅ Команда в полном составе с 20.04. Апрель: больничные и отпуска завершены."
+      "top_companies": []
     },
     "week_17": {
-      "label": "20-26 апр",
+      "label": "Нед 17 · 20–26 апр",
       "week_num": 17,
       "tickets": 2266,
       "calls": 1362,
       "chats": 904,
       "desired": 1147,
       "undesired": 1067,
-      "closed": 2259,
-      "open": 6,
-      "afrt": "50 с",
-      "afrt_raw": 0.833,
-      "art": "N/A",
-      "art_raw": 0,
+      "closed": 2266,
+      "open": 0,
       "sla_pct": 84.9,
-      "sla_not_met": 15.1,
       "lcr": 6.0,
-      "repeat_pct": 9.7,
+      "csat_pct": 94.8,
+      "csat_rated": 115,
       "cost": 22354090,
-      "massoviy_cnt": 0,
-      "no_massoviy": {},
       "operators": [
         {
           "name": "Иззатбек",
           "tickets": 309,
-          "avg_close": 2.0,
+          "avg_close": 0.03,
           "close_rate": 99.5,
-          "sla_pct": 80.2,
-          "cost": 3048285,
           "rating_pct": 80.0,
-          "rated": 5
+          "rated": 5,
+          "sla_pct": 80.2,
+          "cost": 3048285
         },
         {
           "name": "Анасхон",
           "tickets": 282,
-          "avg_close": 2.7,
+          "avg_close": 0.04,
           "close_rate": 99.5,
-          "sla_pct": 92.6,
-          "cost": 2781930,
           "rating_pct": 100.0,
-          "rated": 16
+          "rated": 16,
+          "sla_pct": 92.6,
+          "cost": 2781930
         },
         {
           "name": "Атабек",
           "tickets": 259,
-          "avg_close": 1.6,
+          "avg_close": 0.03,
           "close_rate": 99.5,
-          "sla_pct": 80.0,
-          "cost": 2555035,
           "rating_pct": 100.0,
-          "rated": 11
+          "rated": 11,
+          "sla_pct": 80.0,
+          "cost": 2555035
         },
         {
           "name": "Авазбек",
           "tickets": 246,
-          "avg_close": 3.8,
+          "avg_close": 0.06,
           "close_rate": 99.5,
-          "sla_pct": 91.2,
-          "cost": 2426790,
           "rating_pct": 88.9,
-          "rated": 18
+          "rated": 18,
+          "sla_pct": 91.2,
+          "cost": 2426790
         },
         {
           "name": "Сардор Б.",
           "tickets": 221,
-          "avg_close": 2.1,
+          "avg_close": 0.04,
           "close_rate": 99.5,
-          "sla_pct": 83.6,
-          "cost": 2180165,
           "rating_pct": 100.0,
-          "rated": 10
+          "rated": 10,
+          "sla_pct": 83.6,
+          "cost": 2180165
         },
         {
           "name": "Алиёр",
           "tickets": 193,
-          "avg_close": 4.0,
+          "avg_close": 0.07,
           "close_rate": 99.5,
-          "sla_pct": 84.1,
-          "cost": 1903945,
           "rating_pct": 100.0,
-          "rated": 5
+          "rated": 5,
+          "sla_pct": 84.1,
+          "cost": 1903945
         },
         {
           "name": "Тожмухаммад",
           "tickets": 190,
-          "avg_close": 5.5,
+          "avg_close": 0.09,
           "close_rate": 99.5,
-          "sla_pct": 83.3,
-          "cost": 1874350,
           "rating_pct": 70.0,
-          "rated": 10
+          "rated": 10,
+          "sla_pct": 83.3,
+          "cost": 1874350
         },
         {
           "name": "Нурилло",
           "tickets": 178,
-          "avg_close": 3.1,
+          "avg_close": 0.05,
           "close_rate": 99.5,
-          "sla_pct": 86.0,
-          "cost": 1755970,
           "rating_pct": 100.0,
-          "rated": 9
+          "rated": 9,
+          "sla_pct": 86.0,
+          "cost": 1755970
         },
         {
           "name": "Ардак",
           "tickets": 162,
-          "avg_close": 2.7,
+          "avg_close": 0.05,
           "close_rate": 99.5,
-          "sla_pct": 83.6,
-          "cost": 1598130,
           "rating_pct": 100.0,
-          "rated": 10
+          "rated": 10,
+          "sla_pct": 83.6,
+          "cost": 1598130
         },
         {
           "name": "Робия Р.",
           "tickets": 158,
-          "avg_close": 5.1,
+          "avg_close": 0.08,
           "close_rate": 99.5,
-          "sla_pct": 78.8,
-          "cost": 1558670,
           "rating_pct": 100.0,
-          "rated": 14
+          "rated": 14,
+          "sla_pct": 78.8,
+          "cost": 1558670
         },
         {
           "name": "Камолиддин",
           "tickets": 39,
-          "avg_close": 1.5,
+          "avg_close": 0.02,
           "close_rate": 99.5,
-          "sla_pct": 97.3,
-          "cost": 384735,
           "rating_pct": 100.0,
-          "rated": 4
+          "rated": 4,
+          "sla_pct": 97.3,
+          "cost": 384735
         },
         {
           "name": "Дильшод",
           "tickets": 28,
-          "avg_close": 9.3,
+          "avg_close": 0.16,
           "close_rate": 99.5,
-          "sla_pct": 70.0,
-          "cost": 276220,
           "rating_pct": 100.0,
-          "rated": 3
+          "rated": 3,
+          "sla_pct": 70.0,
+          "cost": 276220
         },
         {
           "name": "Азизбек",
           "tickets": 1,
-          "avg_close": 107.5,
+          "avg_close": 1.79,
           "close_rate": 99.5,
-          "sla_pct": 0.0,
-          "cost": 9865,
           "rating_pct": 0.0,
-          "rated": 0
+          "rated": 0,
+          "sla_pct": 0.0,
+          "cost": 9865
         }
       ],
       "top_labels": [
         {
           "name": "Оборудование - Установка/Настройка/Удаление принтера",
           "tickets": 95,
+          "desired": 70,
           "undesired": 25,
           "cost": 937175
         },
         {
           "name": "Учётная запись - Помощь со входом в аккаунт",
           "tickets": 83,
+          "desired": 39,
           "undesired": 44,
           "cost": 818795
         },
         {
           "name": "Вопрос не по программе",
           "tickets": 69,
+          "desired": 33,
           "undesired": 36,
           "cost": 680685
         },
         {
           "name": "Каталог — настройка печати ценника",
           "tickets": 63,
+          "desired": 41,
           "undesired": 22,
           "cost": 621495
         },
         {
           "name": "Кассовые смены — Открытие/Закрытие смен",
           "tickets": 53,
+          "desired": 11,
           "undesired": 42,
           "cost": 522845
         },
         {
           "name": "Каталог — изменение свойств товара",
           "tickets": 49,
+          "desired": 25,
           "undesired": 23,
           "cost": 483385
         },
         {
           "name": "Учётная запись - Блокировка/Разблокировка аккаунта",
           "tickets": 45,
+          "desired": 24,
           "undesired": 20,
           "cost": 443925
         },
         {
           "name": "Документооборот - Оплата за тариф",
           "tickets": 42,
+          "desired": 22,
           "undesired": 20,
           "cost": 414330
         },
         {
           "name": "Документооборот - Создание ссылки для оплаты",
           "tickets": 37,
+          "desired": 15,
           "undesired": 22,
           "cost": 365005
         },
         {
           "name": "Учётная запись - Создание магазина",
           "tickets": 35,
+          "desired": 23,
           "undesired": 11,
           "cost": 345275
         },
         {
           "name": "Управление - Создание/Редактирвоание/Удаление роли",
           "tickets": 34,
+          "desired": 19,
           "undesired": 15,
           "cost": 335410
         },
         {
           "name": "Каталог — запрос на добавление товара",
           "tickets": 34,
+          "desired": 20,
           "undesired": 14,
           "cost": 335410
-        }
-      ],
-      "top_companies": [
-        {
-          "name": "BILLZ",
-          "tickets": 385,
-          "desired": 169,
-          "undesired": 196,
-          "cost": 3798025,
-          "top_labels": [
-            {
-              "label": "Учётная запись - Блокировка/Разблокировка аккаунта",
-              "count": 38
-            },
-            {
-              "label": "Документооборот - Создание ссылки для оплаты",
-              "count": 33
-            }
-          ]
         },
         {
-          "name": "INBAZAR",
-          "tickets": 29,
-          "desired": 5,
-          "undesired": 24,
-          "cost": 286085,
-          "top_labels": [
-            {
-              "label": "Кассовые смены — Открытие/Закрытие смен",
-              "count": 25
-            },
-            {
-              "label": "Оборудование - Установка/Настройка/Удаление принтера",
-              "count": 2
-            }
-          ]
+          "name": "Настройка - Установка BILLZ PAY/Payme/Epos/PAX",
+          "tickets": 30,
+          "desired": 23,
+          "undesired": 7,
+          "cost": 295950
         },
         {
-          "name": "Bloom",
+          "name": "Учётная запись - Очистка магазина",
           "tickets": 28,
-          "desired": 13,
-          "undesired": 15,
-          "cost": 276220,
-          "top_labels": [
-            {
-              "label": "Маркетинг - Работа с Сертификатом/Ваучером",
-              "count": 7
-            },
-            {
-              "label": "Новая продажа - Возврат/Обмен",
-              "count": 4
-            }
-          ]
+          "desired": 23,
+          "undesired": 5,
+          "cost": 276220
         },
         {
-          "name": "Я родился",
-          "tickets": 23,
-          "desired": 5,
-          "undesired": 18,
-          "cost": 226895,
-          "top_labels": [
-            {
-              "label": "Все продажи - Удаление/Редактирование продажи",
-              "count": 19
-            },
-            {
-              "label": "Кассовые смены — Открытие/Закрытие смен",
-              "count": 2
-            }
-          ]
-        },
-        {
-          "name": "Lattliv",
-          "tickets": 16,
-          "desired": 5,
-          "undesired": 11,
-          "cost": 157840,
-          "top_labels": [
-            {
-              "label": "Учётная запись - Помощь со входом в аккаунт",
-              "count": 6
-            },
-            {
-              "label": "Учётная запись - Не удаётся войти в аккаунт",
-              "count": 4
-            }
-          ]
-        },
-        {
-          "name": "baraka-oyinchoqlar",
-          "tickets": 16,
-          "desired": 7,
-          "undesired": 9,
-          "cost": 157840,
-          "top_labels": [
-            {
-              "label": "Долги клиентов - Просмотр статистики по долгам",
-              "count": 5
-            },
-            {
-              "label": "Настройка - Создание/Редактирование/Удаление чека",
-              "count": 1
-            }
-          ]
-        },
-        {
-          "name": "noyob",
-          "tickets": 14,
-          "desired": 10,
-          "undesired": 4,
-          "cost": 138110,
-          "top_labels": [
-            {
-              "label": "Трансфер - консультация по модулю (частичное обучение)",
-              "count": 2
-            },
-            {
-              "label": "Финансы - Создание/Удаление/Редактирование транзакций",
-              "count": 2
-            }
-          ]
-        },
-        {
-          "name": "571market",
-          "tickets": 14,
+          "name": "Все продажи - Удаление/Редактирование продажи",
+          "tickets": 27,
           "desired": 11,
-          "undesired": 3,
-          "cost": 138110,
-          "top_labels": [
-            {
-              "label": "Инвентаризация — загрузка результатов",
-              "count": 3
-            },
-            {
-              "label": "Каталог — изменение свойств товара",
-              "count": 1
-            }
-          ]
+          "undesired": 16,
+          "cost": 266355
         }
       ],
-      "team_context": "Команда в полном составе с 20.04. Иззатбек вернулся из отпуска."
+      "top_companies": []
+    },
+    "week_18": {
+      "label": "Нед 18 · 27–28 апр",
+      "week_num": 18,
+      "tickets": 641,
+      "calls": 340,
+      "chats": 301,
+      "desired": 331,
+      "undesired": 300,
+      "closed": 641,
+      "open": 0,
+      "sla_pct": 75.8,
+      "lcr": 4.7,
+      "csat_pct": 88.4,
+      "csat_rated": 43,
+      "cost": 6323465,
+      "operators": [
+        {
+          "name": "Авазбек",
+          "tickets": 94,
+          "avg_close": 0.05,
+          "close_rate": 99.5,
+          "rating_pct": 71.4,
+          "rated": 7,
+          "sla_pct": 94.1,
+          "cost": 927310
+        },
+        {
+          "name": "Робия Р.",
+          "tickets": 89,
+          "avg_close": 0.16,
+          "close_rate": 99.5,
+          "rating_pct": 83.3,
+          "rated": 6,
+          "sla_pct": 55.3,
+          "cost": 877985
+        },
+        {
+          "name": "Анасхон",
+          "tickets": 85,
+          "avg_close": 0.02,
+          "close_rate": 99.5,
+          "rating_pct": 88.9,
+          "rated": 9,
+          "sla_pct": 97.7,
+          "cost": 838525
+        },
+        {
+          "name": "Иззатбек",
+          "tickets": 78,
+          "avg_close": 0.04,
+          "close_rate": 99.5,
+          "rating_pct": 100.0,
+          "rated": 3,
+          "sla_pct": 66.7,
+          "cost": 769470
+        },
+        {
+          "name": "Сардор Б.",
+          "tickets": 71,
+          "avg_close": 0.04,
+          "close_rate": 99.5,
+          "rating_pct": 100.0,
+          "rated": 1,
+          "sla_pct": 75.0,
+          "cost": 700415
+        },
+        {
+          "name": "Ардак",
+          "tickets": 67,
+          "avg_close": 0.06,
+          "close_rate": 99.5,
+          "rating_pct": 100.0,
+          "rated": 3,
+          "sla_pct": 73.7,
+          "cost": 660955
+        },
+        {
+          "name": "Алиёр",
+          "tickets": 53,
+          "avg_close": 0.07,
+          "close_rate": 99.5,
+          "rating_pct": 50.0,
+          "rated": 2,
+          "sla_pct": 42.9,
+          "cost": 522845
+        },
+        {
+          "name": "Тожмухаммад",
+          "tickets": 34,
+          "avg_close": 0.09,
+          "close_rate": 99.5,
+          "rating_pct": 0.0,
+          "rated": 0,
+          "sla_pct": 90.0,
+          "cost": 335410
+        },
+        {
+          "name": "Атабек",
+          "tickets": 33,
+          "avg_close": 0.05,
+          "close_rate": 99.5,
+          "rating_pct": 100.0,
+          "rated": 8,
+          "sla_pct": 64.7,
+          "cost": 325545
+        },
+        {
+          "name": "Нурилло",
+          "tickets": 25,
+          "avg_close": 0.05,
+          "close_rate": 99.5,
+          "rating_pct": 100.0,
+          "rated": 4,
+          "sla_pct": 70.0,
+          "cost": 246625
+        },
+        {
+          "name": "Камолиддин",
+          "tickets": 10,
+          "avg_close": 0.03,
+          "close_rate": 99.5,
+          "rating_pct": 0.0,
+          "rated": 0,
+          "sla_pct": 70.0,
+          "cost": 98650
+        },
+        {
+          "name": "Азизбек",
+          "tickets": 1,
+          "avg_close": 0.05,
+          "close_rate": 99.5,
+          "rating_pct": 0.0,
+          "rated": 0,
+          "sla_pct": 0.0,
+          "cost": 9865
+        },
+        {
+          "name": "Хуршид",
+          "tickets": 1,
+          "avg_close": 0.11,
+          "close_rate": 99.5,
+          "rating_pct": 0.0,
+          "rated": 0,
+          "sla_pct": 0.0,
+          "cost": 9865
+        }
+      ],
+      "top_labels": [
+        {
+          "name": "Массовый сбой BILLZ",
+          "tickets": 35,
+          "desired": 1,
+          "undesired": 34,
+          "cost": 345275
+        },
+        {
+          "name": "Учётная запись - Помощь со входом в аккаунт",
+          "tickets": 24,
+          "desired": 14,
+          "undesired": 10,
+          "cost": 236760
+        },
+        {
+          "name": "Учётная запись - Блокировка/Разблокировка аккаунта",
+          "tickets": 22,
+          "desired": 12,
+          "undesired": 9,
+          "cost": 217030
+        },
+        {
+          "name": "Оборудование - Установка/Настройка/Удаление принтера",
+          "tickets": 19,
+          "desired": 15,
+          "undesired": 4,
+          "cost": 187435
+        },
+        {
+          "name": "Вопрос не по программе",
+          "tickets": 15,
+          "desired": 9,
+          "undesired": 6,
+          "cost": 147975
+        },
+        {
+          "name": "Новая продажа - Не удаётся сделать продажу",
+          "tickets": 15,
+          "desired": 13,
+          "undesired": 2,
+          "cost": 147975
+        },
+        {
+          "name": "Кассовые смены — Открытие/Закрытие смен",
+          "tickets": 12,
+          "desired": 3,
+          "undesired": 9,
+          "cost": 118380
+        },
+        {
+          "name": "Управление - Создание/Редактирвоание/Удаление роли",
+          "tickets": 12,
+          "desired": 9,
+          "undesired": 3,
+          "cost": 118380
+        },
+        {
+          "name": "Документооборот - Создание ссылки для оплаты",
+          "tickets": 12,
+          "desired": 2,
+          "undesired": 10,
+          "cost": 118380
+        },
+        {
+          "name": "Настройка - Создание/Редактирование/Удаление доп. точки",
+          "tickets": 12,
+          "desired": 11,
+          "undesired": 1,
+          "cost": 118380
+        },
+        {
+          "name": "Каталог — изменение свойств товара",
+          "tickets": 12,
+          "desired": 4,
+          "undesired": 8,
+          "cost": 118380
+        },
+        {
+          "name": "Документооборот - Оплата за тариф",
+          "tickets": 12,
+          "desired": 10,
+          "undesired": 2,
+          "cost": 118380
+        },
+        {
+          "name": "Все продажи - Удаление/Редактирование продажи",
+          "tickets": 10,
+          "desired": 6,
+          "undesired": 4,
+          "cost": 98650
+        },
+        {
+          "name": "Управление - Создание/Редактирвоание/Удаление сотрудника",
+          "tickets": 10,
+          "desired": 7,
+          "undesired": 3,
+          "cost": 98650
+        },
+        {
+          "name": "Импорт — импорт товаров через Excel",
+          "tickets": 9,
+          "desired": 5,
+          "undesired": 4,
+          "cost": 88785
+        }
+      ],
+      "top_companies": []
     }
   },
   "daily": {
@@ -19646,11 +17592,11 @@ const BILLZ_DATA = {
       "Апрель"
     ],
     "summary": {
-      "total_tickets": 45623,
-      "total_cost_mln": 449.65,
+      "total_tickets": 46264,
+      "total_cost_mln": 455.97,
       "avg_cpt": 9856.0,
       "lcr_avg": 4.73,
-      "csat_pct": 95.6,
+      "csat_pct": 95.4,
       "sla_pct": 75.2,
       "frt_avg_sec": 62.2,
       "frt_med_sec": 24.0,
@@ -19658,13 +17604,14 @@ const BILLZ_DATA = {
       "undesired_pct_avg": 51.4,
       "massoviy_tickets": 1965,
       "massoviy_cost_mln": 19.4,
-      "training_tickets": 2273,
+      "training_tickets": 2305,
       "training_cost_mln": 22.42,
       "stores_count": 4165,
       "users_count": 37260
     },
     "by_month": [
       {
+        "name": "Январь",
         "tickets": 10492,
         "calls": 5383,
         "chats": 5109,
@@ -19673,17 +17620,16 @@ const BILLZ_DATA = {
         "csat_pct": 97.0,
         "sla_pct": 76.9,
         "lcr": 3.5,
-        "frt_avg_sec": 60.0,
-        "frt_med_sec": 24.0,
-        "cost_mln": 103.5,
-        "cost_per_ticket": 9865,
+        "frt_avg_sec": 60,
+        "cost_mln": 105.53,
+        "cost_per_ticket": 10058,
         "repeat_pct": 6.2,
         "undesired_pct": 47.4,
         "training_tickets": 709,
-        "name": "Январь",
         "cpt": 10058
       },
       {
+        "name": "Февраль",
         "tickets": 12557,
         "calls": 6497,
         "chats": 6060,
@@ -19692,17 +17638,16 @@ const BILLZ_DATA = {
         "csat_pct": 95.2,
         "sla_pct": 68.6,
         "lcr": 3.85,
-        "frt_avg_sec": 70.0,
-        "frt_med_sec": 36.0,
-        "cost_mln": 123.87,
-        "cost_per_ticket": 9865,
+        "frt_avg_sec": 69,
+        "cost_mln": 121.43,
+        "cost_per_ticket": 9670,
         "repeat_pct": 6.3,
         "undesired_pct": 52.3,
         "training_tickets": 592,
-        "name": "Февраль",
         "cpt": 9670
       },
       {
+        "name": "Март",
         "tickets": 12343,
         "calls": 6299,
         "chats": 6044,
@@ -19711,205 +17656,339 @@ const BILLZ_DATA = {
         "csat_pct": 94.8,
         "sla_pct": 76.6,
         "lcr": 3.78,
-        "frt_avg_sec": 63.0,
-        "frt_med_sec": 30.0,
+        "frt_avg_sec": 62,
         "cost_mln": 121.76,
         "cost_per_ticket": 9865,
         "repeat_pct": 9.1,
         "undesired_pct": 56.6,
         "training_tickets": 571,
-        "name": "Март",
         "cpt": 9865
       },
       {
-        "tickets": 10231,
-        "calls": 5611,
-        "chats": 4620,
-        "desired": 4632,
-        "undesired": 5060,
-        "csat_pct": 95.2,
-        "sla_pct": 78.7,
-        "lcr": 7.8,
-        "frt_avg_sec": 52,
-        "frt_med_sec": 24,
-        "cost_mln": 100.93,
-        "cost_per_ticket": 9865,
-        "repeat_pct": 9.6,
-        "undesired_pct": 49.5,
-        "training_tickets": 401,
         "name": "Апрель",
+        "tickets": 10872,
+        "calls": 5951,
+        "chats": 4921,
+        "desired": 4963,
+        "undesired": 5360,
+        "csat_pct": 94.8,
+        "sla_pct": 78.5,
+        "lcr": 7.8,
+        "frt_avg_sec": 51,
+        "cost_mln": 107.25,
+        "cost_per_ticket": 9865,
+        "repeat_pct": 9.4,
+        "undesired_pct": 49.3,
+        "training_tickets": 432,
         "cpt": 9865
       }
     ],
     "operator_ranking": [
       {
-        "rank": 1,
         "name": "Анасхон",
-        "score": 88.7,
-        "total": 3849,
-        "csat_pct": 97.5,
+        "tickets": 1427,
+        "avg_close": 0.05,
+        "close_rate": 99.5,
+        "rating_pct": 95.9,
+        "rated": 98,
         "sla_pct": 92.7,
-        "frt_med_sec": 12,
-        "kk": 100,
-        "test": 94.0,
-        "undes_pct": 67.8,
-        "cost_mln": 37.68
+        "cost": 14077355,
+        "rank": 1,
+        "total": 1427,
+        "score": 82.9,
+        "frt_med_sec": 3,
+        "kk": 85,
+        "test": 85,
+        "undes_pct": 49.3,
+        "cost_mln": 14.08
       },
       {
-        "rank": 2,
-        "name": "Нурилло",
-        "score": 86.5,
-        "total": 2916,
-        "csat_pct": 94.6,
-        "sla_pct": 83.9,
-        "frt_med_sec": 24,
-        "kk": 100,
-        "test": 91.5,
-        "undes_pct": 46.8,
-        "cost_mln": 28.56
-      },
-      {
-        "rank": 3,
-        "name": "Ардак",
-        "score": 86.2,
-        "total": 2641,
-        "csat_pct": 97.8,
-        "sla_pct": 69.6,
-        "frt_med_sec": 36,
-        "kk": 100,
-        "test": 91.0,
-        "undes_pct": 9.7,
-        "cost_mln": 25.87
-      },
-      {
-        "rank": 4,
-        "name": "Авазбек",
-        "score": 85.3,
-        "total": 993,
-        "csat_pct": 94.6,
-        "sla_pct": 71.7,
-        "frt_med_sec": 24,
-        "kk": 95,
-        "test": 85.0,
-        "undes_pct": 17.0,
-        "cost_mln": 9.74
-      },
-      {
-        "rank": 5,
         "name": "Атабек",
-        "score": 85.1,
-        "total": 2344,
-        "csat_pct": 95.8,
-        "sla_pct": 79.7,
-        "frt_med_sec": 30,
-        "kk": 100,
-        "test": 95.0,
-        "undes_pct": 52.9,
-        "cost_mln": 23.04
+        "tickets": 1103,
+        "avg_close": 0.04,
+        "close_rate": 99.5,
+        "rating_pct": 96.7,
+        "rated": 60,
+        "sla_pct": 77.1,
+        "cost": 10881095,
+        "rank": 2,
+        "total": 1103,
+        "score": 82.3,
+        "frt_med_sec": 2,
+        "kk": 85,
+        "test": 85,
+        "undes_pct": 49.3,
+        "cost_mln": 10.88
       },
       {
-        "rank": 6,
-        "name": "Робия Р.",
-        "score": 82.0,
-        "total": 2977,
-        "csat_pct": 94.7,
-        "sla_pct": 74.5,
-        "frt_med_sec": 30,
-        "kk": 100,
-        "test": 91.5,
-        "undes_pct": 65.3,
-        "cost_mln": 29.15
-      },
-      {
-        "rank": 7,
         "name": "Алиёр",
-        "score": 81.6,
-        "total": 2918,
-        "csat_pct": 96.1,
-        "sla_pct": 69.8,
-        "frt_med_sec": 42,
-        "kk": 100,
-        "test": 90.0,
-        "undes_pct": 46.4,
-        "cost_mln": 28.56
+        "tickets": 1067,
+        "avg_close": 0.07,
+        "close_rate": 99.5,
+        "rating_pct": 96.4,
+        "rated": 55,
+        "sla_pct": 74.8,
+        "cost": 10525955,
+        "rank": 3,
+        "total": 1067,
+        "score": 82.0,
+        "frt_med_sec": 4,
+        "kk": 85,
+        "test": 85,
+        "undes_pct": 49.3,
+        "cost_mln": 10.53
       },
       {
-        "rank": 8,
+        "name": "Робия Р.",
+        "tickets": 1067,
+        "avg_close": 0.12,
+        "close_rate": 99.5,
+        "rating_pct": 93.5,
+        "rated": 108,
+        "sla_pct": 75.3,
+        "cost": 10525955,
+        "rank": 4,
+        "total": 1067,
+        "score": 81.3,
+        "frt_med_sec": 7,
+        "kk": 85,
+        "test": 85,
+        "undes_pct": 49.3,
+        "cost_mln": 10.53
+      },
+      {
+        "name": "Нурилло",
+        "tickets": 1055,
+        "avg_close": 0.05,
+        "close_rate": 99.5,
+        "rating_pct": 93.5,
+        "rated": 62,
+        "sla_pct": 82.0,
+        "cost": 10407575,
+        "rank": 5,
+        "total": 1055,
+        "score": 82.8,
+        "frt_med_sec": 3,
+        "kk": 85,
+        "test": 85,
+        "undes_pct": 49.3,
+        "cost_mln": 10.41
+      },
+      {
         "name": "Сардор Б.",
-        "score": 80.2,
-        "total": 2609,
-        "csat_pct": 96.4,
-        "sla_pct": 59.4,
-        "frt_med_sec": 48,
-        "kk": 100,
-        "test": 91.5,
-        "undes_pct": 35.0,
-        "cost_mln": 25.57
+        "tickets": 966,
+        "avg_close": 0.05,
+        "close_rate": 99.5,
+        "rating_pct": 100.0,
+        "rated": 37,
+        "sla_pct": 73.0,
+        "cost": 9529590,
+        "rank": 6,
+        "total": 966,
+        "score": 83.3,
+        "frt_med_sec": 3,
+        "kk": 85,
+        "test": 85,
+        "undes_pct": 49.3,
+        "cost_mln": 9.53
       },
       {
-        "rank": 9,
-        "name": "Иззатбек",
-        "score": 78.8,
-        "total": 2905,
-        "csat_pct": 90.5,
-        "sla_pct": 66.2,
-        "frt_med_sec": 42,
-        "kk": 100,
-        "test": 92.5,
-        "undes_pct": 56.5,
-        "cost_mln": 28.39
+        "name": "Авазбек",
+        "tickets": 952,
+        "avg_close": 0.08,
+        "close_rate": 99.5,
+        "rating_pct": 91.0,
+        "rated": 89,
+        "sla_pct": 81.8,
+        "cost": 9391480,
+        "rank": 7,
+        "total": 952,
+        "score": 82.8,
+        "frt_med_sec": 4,
+        "kk": 85,
+        "test": 85,
+        "undes_pct": 49.3,
+        "cost_mln": 9.39
       },
       {
-        "rank": 10,
-        "name": "Шохина",
-        "score": 78.8,
-        "total": 1551,
-        "csat_pct": 92.9,
-        "sla_pct": 74.9,
-        "frt_med_sec": 30,
-        "kk": 100,
-        "test": 66.0,
-        "undes_pct": 55.7,
-        "cost_mln": 15.18
-      },
-      {
-        "rank": 11,
-        "name": "Робия А.",
-        "score": 77.9,
-        "total": 2780,
-        "csat_pct": 95.1,
-        "sla_pct": 66.8,
-        "frt_med_sec": 36,
-        "kk": 100,
-        "test": 93.5,
-        "undes_pct": 87.7,
-        "cost_mln": 27.17
-      },
-      {
-        "rank": 12,
         "name": "Тожмухаммад",
-        "score": 76.0,
-        "total": 2804,
-        "csat_pct": 93.7,
-        "sla_pct": 68.5,
-        "frt_med_sec": 42,
-        "kk": 96,
-        "test": 78.5,
-        "undes_pct": 70.1,
-        "cost_mln": 27.44
+        "tickets": 918,
+        "avg_close": 0.1,
+        "close_rate": 99.5,
+        "rating_pct": 87.8,
+        "rated": 49,
+        "sla_pct": 70.6,
+        "cost": 9056070,
+        "rank": 8,
+        "total": 918,
+        "score": 80.0,
+        "frt_med_sec": 6,
+        "kk": 85,
+        "test": 85,
+        "undes_pct": 49.3,
+        "cost_mln": 9.06
       },
       {
+        "name": "Ардак",
+        "tickets": 881,
+        "avg_close": 0.06,
+        "close_rate": 99.5,
+        "rating_pct": 100.0,
+        "rated": 41,
+        "sla_pct": 74.2,
+        "cost": 8691065,
+        "rank": 9,
+        "total": 881,
+        "score": 84.1,
+        "frt_med_sec": 3,
+        "kk": 85,
+        "test": 85,
+        "undes_pct": 49.3,
+        "cost_mln": 8.69
+      },
+      {
+        "name": "Иззатбек",
+        "tickets": 587,
+        "avg_close": 0.03,
+        "close_rate": 99.5,
+        "rating_pct": 92.9,
+        "rated": 14,
+        "sla_pct": 74.2,
+        "cost": 5790755,
+        "rank": 10,
+        "total": 587,
+        "score": 84.4,
+        "frt_med_sec": 1,
+        "kk": 85,
+        "test": 85,
+        "undes_pct": 49.3,
+        "cost_mln": 5.79
+      },
+      {
+        "name": "Робия А.",
+        "tickets": 343,
+        "avg_close": 0.02,
+        "close_rate": 99.5,
+        "rating_pct": 100.0,
+        "rated": 15,
+        "sla_pct": 65.0,
+        "cost": 3383695,
+        "rank": 11,
+        "total": 343,
+        "score": 86.1,
+        "frt_med_sec": 1,
+        "kk": 85,
+        "test": 85,
+        "undes_pct": 49.3,
+        "cost_mln": 3.38
+      },
+      {
+        "name": "Шохина",
+        "tickets": 200,
+        "avg_close": 0.05,
+        "close_rate": 99.5,
+        "rating_pct": 95.8,
+        "rated": 24,
+        "sla_pct": 92.3,
+        "cost": 1973000,
+        "rank": 12,
+        "total": 200,
+        "score": 91.4,
+        "frt_med_sec": 3,
+        "kk": 85,
+        "test": 85,
+        "undes_pct": 49.3,
+        "cost_mln": 1.97
+      },
+      {
+        "name": "Дильшод",
+        "tickets": 155,
+        "avg_close": 0.19,
+        "close_rate": 99.5,
+        "rating_pct": 100.0,
+        "rated": 9,
+        "sla_pct": 43.1,
+        "cost": 1529075,
         "rank": 13,
+        "total": 155,
+        "score": 82.7,
+        "frt_med_sec": 11,
+        "kk": 85,
+        "test": 85,
+        "undes_pct": 49.3,
+        "cost_mln": 1.53
+      },
+      {
+        "name": "Камолиддин",
+        "tickets": 119,
+        "avg_close": 0.03,
+        "close_rate": 99.5,
+        "rating_pct": 100.0,
+        "rated": 11,
+        "sla_pct": 75.7,
+        "cost": 1173935,
+        "rank": 14,
+        "total": 119,
+        "score": 89.8,
+        "frt_med_sec": 1,
+        "kk": 85,
+        "test": 85,
+        "undes_pct": 49.3,
+        "cost_mln": 1.17
+      },
+      {
+        "name": "Нурлан",
+        "tickets": 28,
+        "avg_close": 0.05,
+        "close_rate": 99.5,
+        "rating_pct": 100.0,
+        "rated": 2,
+        "sla_pct": 75.0,
+        "cost": 276220,
+        "rank": 15,
+        "total": 28,
+        "score": 90.2,
+        "frt_med_sec": 3,
+        "kk": 85,
+        "test": 85,
+        "undes_pct": 49.3,
+        "cost_mln": 0.28
+      },
+      {
         "name": "Азизбек",
-        "score": 66.3,
-        "total": 1175,
-        "csat_pct": 93.9,
-        "sla_pct": 39.6,
-        "frt_med_sec": 90,
-        "kk": 95,
-        "test": 80.0,
-        "undes_pct": 51.3,
-        "cost_mln": 11.46
+        "tickets": 3,
+        "avg_close": 1.79,
+        "close_rate": 99.5,
+        "rating_pct": 0.0,
+        "rated": 0,
+        "sla_pct": 0.0,
+        "cost": 29595,
+        "rank": 16,
+        "total": 3,
+        "score": 47.8,
+        "frt_med_sec": 107,
+        "kk": 85,
+        "test": 85,
+        "undes_pct": 49.3,
+        "cost_mln": 0.03
+      },
+      {
+        "name": "Хуршид",
+        "tickets": 1,
+        "avg_close": 0.11,
+        "close_rate": 99.5,
+        "rating_pct": 0.0,
+        "rated": 0,
+        "sla_pct": 0.0,
+        "cost": 9865,
+        "rank": 17,
+        "total": 1,
+        "score": 50.3,
+        "frt_med_sec": 6,
+        "kk": 85,
+        "test": 85,
+        "undes_pct": 49.3,
+        "cost_mln": 0.01
       }
     ],
     "label_categories": {
@@ -20100,8 +18179,8 @@ const BILLZ_DATA = {
   },
   "cs": {
     "period": "Январь–Апрель 2026",
-    "total_train_tickets": 2304,
-    "total_train_cost": 22728960,
+    "total_train_tickets": 432,
+    "total_train_cost": 4261680,
     "partial_tickets": 2055,
     "full_tickets": 153,
     "avg_med_close_min": 5.2,
@@ -21439,10 +19518,10 @@ const BILLZ_DATA = {
     "cs_meeting": "Митинг с КС в среду — онбординг и нежелательные кейсы"
   },
   "last_updated": {
-    "monthly": "29.04.2026",
-    "weekly": "29.04.2026",
-    "daily": "29.04.2026",
-    "quarterly": "29.04.2026",
-    "cs": "29.04.2026"
+    "monthly": "28.04.2026",
+    "weekly": "28.04.2026",
+    "daily": "28.04.2026",
+    "quarterly": "28.04.2026",
+    "cs": "28.04.2026"
   }
 };

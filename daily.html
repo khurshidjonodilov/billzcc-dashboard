@@ -12,15 +12,14 @@
 </head>
 <body>
 <nav class="top-nav">
-  <div class="nav-brand"><div class="nav-brand-dot"></div>BILLZ · CC</div>
-  <a href="index.html"     class="nav-link">Ежемесячно</a>
-  <a href="weekly.html"    class="nav-link">Еженедельно</a>
+  <div class="nav-brand"><div class="nav-brand-dot">B</div>BILLZ · CC</div>
+  <a href="index.html" class="nav-link">Ежемесячно</a>
+  <a href="weekly.html" class="nav-link">Еженедельно</a>
   <a href="quarterly.html" class="nav-link">Квартал</a>
-  <a href="cs.html"        class="nav-link">CS Анализ</a>
-  <a href="daily.html"     class="nav-link active">Ежедневно</a>
+  <a href="cs.html" class="nav-link">CS Анализ</a>
+  <a href="daily.html" class="nav-link active">Ежедневно</a>
   <a href="operators.html" class="nav-link">Операторы</a>
   <div class="nav-right">
-    <button class="png-btn" onclick="exportPagePNG('.wrap','billz-daily')" id="pngExportBtn">📷 PNG</button>
     <button class="theme-toggle" onclick="toggleTheme()" id="themeBtn">
       <span class="toggle-icon">☀️</span><span id="themeLabel">Светлая</span>
     </button>
@@ -28,6 +27,17 @@
 </nav>
 
 <div class="wrap">
+  <!-- Floating action panel -->
+  <div style="position:fixed;top:62px;right:16px;z-index:150;display:flex;flex-direction:column;gap:6px">
+    <button class="png-btn" id="pngExportBtn" onclick="exportPagePNG('.wrap','billz-daily')"
+      style="padding:6px 12px;font-size:11px;border-radius:8px;white-space:nowrap">
+      📷 PNG
+    </button>
+    <button class="theme-toggle" onclick="toggleTheme()" id="themeBtn"
+      style="padding:6px 12px;font-size:11px;border-radius:8px;white-space:nowrap">
+      <span class="toggle-icon">☀️</span><span id="themeLabel">Светлая</span>
+    </button>
+  </div>
 
   <!-- PAGE HEADER -->
   <div class="phdr">

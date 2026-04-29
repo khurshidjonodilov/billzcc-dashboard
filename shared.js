@@ -6,24 +6,33 @@ const fmt = {
   sec:  v => v < 60 ? Math.round(v) + 'с' : Math.floor(v/60) + 'м ' + Math.round(v%60) + 'с',
 };
 
-/* Chart defaults */
-const CHART_GRID = 'rgba(255,255,255,0.05)';
+/* ── Chart engine — neon/glow style ────────────────────────────────────── */
+/* CHART_GRID computed dynamically */
+function getChartGrid() {
+  return document.body.classList.contains('light') ? 'rgba(0,0,0,0.07)' : 'rgba(255,255,255,0.06)';
+}
+const CHART_GRID = 'rgba(255,255,255,0.06)'; // default, updated per-chart
+
 const CHART_TT = {
-  backgroundColor: '#151820',
-  borderColor: 'rgba(255,255,255,0.1)',
+  backgroundColor: '#0D1117',
+  borderColor: 'rgba(59,130,246,0.3)',
   borderWidth: 1,
   titleColor: '#F9FAFB',
-  bodyColor: '#9CA3AF',
-  padding: 10, cornerRadius: 8,
+  bodyColor: '#94A3B8',
+  padding: 12, cornerRadius: 10,
+  displayColors: true,
+  boxPadding: 4,
 };
 const chartBase = {
   responsive: true, maintainAspectRatio: false,
+  animation: { duration: 800, easing: 'easeInOutQuart' },
   plugins: { legend: { display: false }, tooltip: CHART_TT },
 };
 Chart.defaults.color = '#4B5563';
 Chart.defaults.font.family = "'Inter', system-ui, sans-serif";
 Chart.defaults.font.size = 10;
 
+/* Neon color palette */
 const C = {
   blue:   '#3B82F6', blue2:  '#60A5FA', blueDk: '#1D4ED8',
   green:  '#10B981', green2: '#34D399',
@@ -33,6 +42,260 @@ const C = {
   cyan:   '#06B6D4', cyan2:  '#67E8F9',
   pink:   '#EC4899', pink2:  '#F9A8D4',
 };
+
+/* Neon colors list for multi-series */
+const NEON_COLORS = [
+  '#3B82F6','#10B981','#8B5CF6','#F59E0B',
+  '#EF4444','#06B6D4','#EC4899','#34D399',
+  '#60A5FA','#FCD34D','#F87171','#C4B5FD',
+];
+
+/* Create canvas gradient fill for area charts */
+function neonGradient(ctx, color, alpha1=0.28, alpha2=0.01) {
+  try {
+    // Chart.js 4.x passes ScriptableContext; extract real canvas context
+    const realCtx = ctx && ctx.chart ? ctx.chart.ctx : ctx;
+    const h = (ctx && ctx.chart) ? ctx.chart.height : (ctx.canvas?.offsetHeight || ctx.canvas?.height || 300);
+    const g = realCtx.createLinearGradient(0, 0, 0, h);
+    const hex = color.replace('#','');
+    const r = parseInt(hex.slice(0,2),16);
+    const gr = parseInt(hex.slice(2,4),16);
+    const b2 = parseInt(hex.slice(4,6),16);
+    g.addColorStop(0,   `rgba(${r},${gr},${b2},${alpha1})`);
+    g.addColorStop(0.6, `rgba(${r},${gr},${b2},${alpha1*0.3})`);
+    g.addColorStop(1,   `rgba(${r},${gr},${b2},${alpha2})`);
+    return g;
+  } catch(e) {
+    const hex = color.replace('#','');
+    const r=parseInt(hex.slice(0,2),16),gr=parseInt(hex.slice(2,4),16),b2=parseInt(hex.slice(4,6),16);
+    return `rgba(${r},${gr},${b2},${alpha1})`;
+  }
+}
+
+/* ── NEON LINE CHART ────────────────────────────────────────────────────── */
+function buildNeonLine(id, labels, datasets, opts={}) {
+  const canvas = document.getElementById(id);
+  if(!canvas) return null;
+
+  const isDark = !document.body.classList.contains('light');
+  const gridColor = isDark ? 'rgba(255,255,255,0.055)' : 'rgba(0,0,0,0.06)';
+  const tickColor = isDark ? '#4B5563' : '#9CA3AF';
+
+  const ds = datasets.map((d, i) => {
+    const color = d.color || NEON_COLORS[i % NEON_COLORS.length];
+    return {
+      label: d.label || '',
+      data: d.data,
+      borderColor: color,
+      borderWidth: d.width || 2.5,
+      pointRadius: d.points !== false ? 3.5 : 0,
+      pointHoverRadius: 7,
+      pointBackgroundColor: color,
+      pointBorderColor: isDark ? '#0A0C10' : '#FFFFFF',
+      pointBorderWidth: 1.5,
+      fill: d.fill !== false,
+      backgroundColor: d.fill !== false
+        ? (ctx2) => {
+            try {
+              const realCtx = ctx2 && ctx2.chart ? ctx2.chart.ctx : ctx2;
+              const h = ctx2 && ctx2.chart ? ctx2.chart.height : 300;
+              const gr = realCtx.createLinearGradient(0, 0, 0, h);
+              const hex = color.replace('#','');
+              const r = parseInt(hex.slice(0,2),16);
+              const g = parseInt(hex.slice(2,4),16);
+              const b = parseInt(hex.slice(4,6),16);
+              gr.addColorStop(0, `rgba(${r},${g},${b},0.28)`);
+              gr.addColorStop(0.5, `rgba(${r},${g},${b},0.10)`);
+              gr.addColorStop(1, `rgba(${r},${g},${b},0.01)`);
+              return gr;
+            } catch(e) { return color + '22'; }
+          }
+        : 'transparent',
+      tension: d.tension !== undefined ? d.tension : 0.4,
+      borderDash: d.dash || [],
+      yAxisID: d.y2 ? 'y2' : 'y',
+    };
+  });
+
+  return new Chart(canvas, {
+    type: 'line',
+    data: { labels, datasets: ds },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      animation: { duration: 900, easing: 'easeInOutQuart' },
+      scales: {
+        x: {
+          grid: { display: false },
+          ticks: { color: tickColor, maxRotation: 0, maxTicksLimit: opts.maxTicks || 9, font: { size: 10 } },
+        },
+        y: {
+          grid: { color: gridColor },
+          ticks: { color: tickColor, callback: opts.yFmt || (v => v), font: { size: 10 } },
+          min: opts.yMin, max: opts.yMax,
+        },
+        ...(opts.y2 ? { y2: { position: 'right', grid: { display: false },
+          ticks: { color: tickColor, callback: opts.y2Fmt || (v => v), font: { size: 10 } } } } : {}),
+      },
+      plugins: {
+        legend: {
+          display: datasets.length > 1,
+          position: 'top', align: 'end',
+          labels: { color: isDark ? '#9CA3AF' : '#6B7280', font: { size: 10 },
+            padding: 12, usePointStyle: true, pointStyleWidth: 8 },
+        },
+        tooltip: {
+          ...CHART_TT,
+          callbacks: {
+            label: opts.tooltipFmt || (ctx => {
+              const v = ctx.raw;
+              const fmt = opts.yFmt;
+              return ` ${ctx.dataset.label || ''}: ${fmt ? fmt(v) : typeof v === 'number' ? v.toLocaleString('ru') : v}`;
+            })
+          }
+        },
+      },
+    },
+  });
+}
+
+/* ── NEON BAR CHART ─────────────────────────────────────────────────────── */
+function buildNeonBar(id, labels, datasets, opts={}) {
+  const canvas = document.getElementById(id);
+  if(!canvas) return null;
+  const isDark = !document.body.classList.contains('light');
+  const gridColor = isDark ? 'rgba(255,255,255,0.055)' : 'rgba(0,0,0,0.06)';
+  const tickColor = isDark ? '#4B5563' : '#9CA3AF';
+
+  const ds = datasets.map((d, i) => {
+    const color = d.color || NEON_COLORS[i % NEON_COLORS.length];
+    const hex = color.replace('#','');
+    const r = parseInt(hex.slice(0,2),16);
+    const g = parseInt(hex.slice(2,4),16);
+    const b = parseInt(hex.slice(4,6),16);
+    return {
+      label: d.label || '',
+      data: d.data,
+      backgroundColor: Array.isArray(d.data) && d.colorFn
+        ? d.data.map((v, j) => d.colorFn(v, j, color))
+        : `rgba(${r},${g},${b},0.82)`,
+      borderColor: color,
+      borderWidth: 1,
+      borderRadius: opts.radius !== undefined ? opts.radius : 6,
+      borderSkipped: false,
+      stack: d.stack,
+      yAxisID: d.y2 ? 'y2' : 'y',
+    };
+  });
+
+  return new Chart(canvas, {
+    type: 'bar',
+    data: { labels, datasets: ds },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      animation: { duration: 900, easing: 'easeInOutQuart' },
+      indexAxis: opts.horizontal ? 'y' : 'x',
+      scales: {
+        x: {
+          grid: opts.horizontal ? { color: gridColor } : { display: false },
+          ticks: { color: tickColor, maxRotation: 0, maxTicksLimit: 10, font: { size: 10 } },
+          stacked: !!opts.stacked,
+        },
+        y: {
+          grid: opts.horizontal ? { display: false } : { color: gridColor },
+          ticks: { color: tickColor, callback: opts.yFmt || (v => v), font: { size: 10 } },
+          stacked: !!opts.stacked,
+          min: opts.yMin, max: opts.yMax,
+        },
+        ...(opts.y2 ? { y2: { position: 'right', grid: { display: false },
+          ticks: { color: tickColor, callback: opts.y2Fmt || (v=>v), font:{size:10} } } } : {}),
+      },
+      plugins: {
+        legend: {
+          display: datasets.length > 1,
+          position: 'top', align: 'end',
+          labels: { color: isDark ? '#9CA3AF' : '#6B7280', font: { size: 10 },
+            padding: 12, usePointStyle: true, pointStyleWidth: 8 },
+        },
+        tooltip: {
+          ...CHART_TT,
+          callbacks: {
+            label: opts.tooltipFmt || (ctx => {
+              const v = ctx.raw;
+              const fmt = opts.yFmt;
+              return ` ${ctx.dataset.label || ''}: ${fmt ? fmt(v) : typeof v === 'number' ? v.toLocaleString('ru') : v}`;
+            })
+          }
+        },
+      },
+    },
+  });
+}
+
+function buildNeonDoughnut(id, labels, values, colors, opts={}) {
+  const canvas = document.getElementById(id);
+  if(!canvas) return null;
+  const isDark = !document.body.classList.contains('light');
+  return new Chart(canvas, {
+    type: 'doughnut',
+    data: {
+      labels,
+      datasets: [{
+        data: values,
+        backgroundColor: colors.map(c => c+'CC'),
+        borderColor: colors,
+        borderWidth: 2,
+        hoverOffset: 10,
+        hoverBorderWidth: 3,
+      }],
+    },
+    options: {
+      ...chartBase,
+      cutout: opts.cutout || '65%',
+      plugins: {
+        ...chartBase.plugins,
+        legend: {
+          display: true,
+          position: opts.legendPos || 'bottom',
+          labels: { color: isDark ? '#9CA3AF' : '#6B7280',
+            font: { size: 11 }, padding: 14, usePointStyle: true },
+        },
+        tooltip: { ...CHART_TT },
+      },
+    },
+  });
+}
+
+/* ── NEON HORIZONTAL BAR ────────────────────────────────────────────────── */
+function buildNeonHorizBar(id, labels, values, colorFn, opts={}) {
+  return buildNeonBar(id, labels, [{
+    data: values,
+    colorFn: colorFn,
+  }], { ...opts, horizontal: true });
+}
+
+/* Backward compat wrappers */
+function buildStackedBar(id,labels,desired,undesired) {
+  return buildNeonBar(id,labels,[
+    {label:'Желательные',data:desired,color:'#10B981',stack:'a'},
+    {label:'Нежелательные',data:undesired,color:'#EF4444',stack:'a'},
+  ],{stacked:true});
+}
+function buildHorizBar(id,labels,values,colorFn) {
+  return buildNeonHorizBar(id,labels,values,colorFn);
+}
+function buildDoughnut(id,labels,values,colors) {
+  return buildNeonDoughnut(id,labels,values,colors);
+}
+function buildChannelChart(id,labels,callsData,chatsData) {
+  return buildNeonBar(id,labels,[
+    {label:'Звонки %',data:callsData,color:'#3B82F6',stack:'a'},
+    {label:'Чаты %',data:chatsData,color:'#8B5CF6',stack:'a'},
+  ],{stacked:true,yFmt:v=>v+'%',yMax:100});
+}
+function buildLine(id,labels,datasets) {
+  return buildNeonLine(id,labels,datasets);
+}
+
 
 /* ── KPI config по цвету ────────────────────────────────────────────────── */
 const kpiColors = {
@@ -165,69 +428,6 @@ function companyBlock(comp, idx) {
   </div>`;
 }
 
-/* ── Chart helpers ───────────────────────────────────────────────────────── */
-function buildStackedBar(id, labels, desired, undesired) {
-  return new Chart(document.getElementById(id), {
-    type: 'bar',
-    data: { labels, datasets: [
-      { label: 'Желательные',   data: desired,   backgroundColor: 'rgba(16,185,129,0.75)',  borderRadius: 3, stack: 'a' },
-      { label: 'Нежелательные', data: undesired, backgroundColor: 'rgba(239,68,68,0.75)',   borderRadius: 3, stack: 'a' },
-    ]},
-    options: { ...chartBase, scales: {
-      x: { grid: { display: false }, ticks: { font: { size: 10 } }, stacked: true },
-      y: { grid: { color: CHART_GRID }, stacked: true, ticks: { font: { size: 10 } } },
-    }},
-  });
-}
-
-function buildHorizBar(id, labels, values, colorFn) {
-  return new Chart(document.getElementById(id), {
-    type: 'bar',
-    data: { labels, datasets: [{
-      data: values,
-      backgroundColor: colorFn ? values.map((v, i) => colorFn(v, i)) : C.blue,
-      borderRadius: 4,
-    }]},
-    options: { ...chartBase, indexAxis: 'y', scales: {
-      x: { grid: { color: CHART_GRID }, ticks: { font: { size: 10 } } },
-      y: { grid: { display: false }, ticks: { font: { size: 10 } } },
-    }},
-  });
-}
-
-function buildDoughnut(id, labels, values, colors) {
-  return new Chart(document.getElementById(id), {
-    type: 'doughnut',
-    data: { labels, datasets: [{ data: values, backgroundColor: colors, borderWidth: 2, borderColor: '#111318' }] },
-    options: { ...chartBase, cutout: '65%' },
-  });
-}
-
-function buildChannelChart(id, labels, callsData, chatsData) {
-  return new Chart(document.getElementById(id), {
-    type: 'bar',
-    data: { labels, datasets: [
-      { label: 'Звонки %', data: callsData, backgroundColor: 'rgba(59,130,246,0.75)', borderRadius: 3, stack: 'a' },
-      { label: 'Чаты %',  data: chatsData, backgroundColor: 'rgba(139,92,246,0.75)', borderRadius: 3, stack: 'a' },
-    ]},
-    options: { ...chartBase, scales: {
-      x: { grid: { display: false }, ticks: { font: { size: 10 } }, stacked: true },
-      y: { grid: { color: CHART_GRID }, stacked: true, max: 100, ticks: { font: { size: 10 }, callback: v => v + '%' } },
-    }, plugins: { ...chartBase.plugins, legend: { display: true, labels: { color: '#6B7280', font: { size: 10 } } } } },
-  });
-}
-
-function buildLine(id, labels, datasets) {
-  return new Chart(document.getElementById(id), {
-    type: 'line',
-    data: { labels, datasets },
-    options: { ...chartBase, scales: {
-      x: { grid: { display: false }, ticks: { font: { size: 10 } } },
-      y: { grid: { color: CHART_GRID }, ticks: { font: { size: 10 } } },
-    }},
-  });
-}
-
 /* ── Shared init ─────────────────────────────────────────────────────────── */
 document.addEventListener('DOMContentLoaded', function () {
   // Apply saved theme immediately
@@ -281,42 +481,89 @@ function checkAndExport() {
   else { alert('❌ Неверный пароль.'); }
 }
 
-/* ── PNG Export (html2canvas) ─────────────────────────────────────────── */
+/* ── PNG Export ────────────────────────────────────────────────────────── */
 async function exportPagePNG(selector, filename) {
   const btn = document.getElementById('pngExportBtn');
-  if(btn) { btn.textContent = '⏳ Формируется...'; btn.disabled = true; }
+  const origHTML = btn ? btn.innerHTML : '';
+  if (btn) { btn.innerHTML = '⏳ Формируется...'; btn.disabled = true; }
 
   try {
-    // Load html2canvas if not loaded
-    if(typeof html2canvas === 'undefined') {
-      await new Promise((res,rej) => {
+    if (typeof html2canvas === 'undefined') {
+      await new Promise((res, rej) => {
         const s = document.createElement('script');
         s.src = 'https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js';
         s.onload = res; s.onerror = rej;
         document.head.appendChild(s);
       });
     }
-    const el = selector ? document.querySelector(selector) : document.querySelector('.wrap');
+
+    const isLight = document.body.classList.contains('light');
+    const bgHex   = isLight ? '#F0F4FF' : '#0A0C10';
+
+    const el = selector
+      ? (typeof selector === 'string' ? document.querySelector(selector) : selector)
+      : document.querySelector('.wrap');
+    if (!el) throw new Error('Элемент не найден');
+
+    await new Promise(r => setTimeout(r, 150));
+
     const canvas = await html2canvas(el, {
-      backgroundColor: getComputedStyle(document.body).background || '#0A0C10',
+      backgroundColor: bgHex,
       scale: 2,
       useCORS: true,
+      allowTaint: false,
       logging: false,
-      windowWidth: el.scrollWidth,
-      windowHeight: el.scrollHeight,
+      imageTimeout: 0,
+      onclone: (cloneDoc) => {
+        // 1. Kill ::after glow gradient that confuses html2canvas CSS parser
+        const fix = cloneDoc.createElement('style');
+        fix.textContent = [
+          'body::before, body::after { display:none !important; }',
+          'body { background-color:' + bgHex + ' !important; background-image:none !important; }',
+          '.top-nav { backdrop-filter:none !important; -webkit-backdrop-filter:none !important; }',
+          '.card, .kpi { box-shadow:none !important; }',
+        ].join('\n');
+        cloneDoc.head.appendChild(fix);
+
+        // 2. Flatten all CSS custom properties so html2canvas sees plain values
+        const cs = getComputedStyle(document.documentElement);
+        const varList = [
+          '--bg','--nav','--card','--card-hover','--card-border','--card-border-hover',
+          '--br','--br2','--br3',
+          '--blue','--blue2','--blue-dk','--blue-glow',
+          '--green','--green2','--green-glow',
+          '--red','--red2','--red-glow',
+          '--amber','--amber2','--amber-glow',
+          '--purple','--purple2','--purple-glow',
+          '--cyan','--cyan2','--pink','--pink2',
+          '--t1','--t2','--t3','--t4',
+        ];
+        const resolved = varList
+          .map(v => { const val = cs.getPropertyValue(v).trim(); return val ? v + ':' + val : ''; })
+          .filter(Boolean).join(';');
+        if (resolved) {
+          const varStyle = cloneDoc.createElement('style');
+          varStyle.textContent = ':root{' + resolved + '}';
+          cloneDoc.head.insertBefore(varStyle, cloneDoc.head.firstChild);
+        }
+      }
     });
+
     const link = document.createElement('a');
-    link.download = (filename || 'billz-cc-export') + '-' + new Date().toISOString().slice(0,10) + '.png';
-    link.href = canvas.toDataURL('image/png');
+    link.download = (filename || 'billz-cc') + '-' + new Date().toISOString().slice(0, 10) + '.png';
+    link.href = canvas.toDataURL('image/png', 0.95);
     link.click();
-  } catch(e) {
-    alert('Ошибка экспорта: ' + e.message);
+
+  } catch (e) {
+    console.error('PNG error:', e);
+    alert('Ошибка PNG:\n' + e.message);
+  } finally {
+    if (btn) { btn.innerHTML = origHTML; btn.disabled = false; }
   }
-  if(btn) { btn.textContent = '📷 Скачать PNG'; btn.disabled = false; }
 }
 
 async function exportSectionPNG(sectionId, filename) {
   const el = document.getElementById(sectionId);
-  if(!el) { alert('Раздел не найден'); return; }
-  await exportPagePNG('#'+sectionId, filename);
+  if(!el) { alert('Раздел не найден: ' + sectionId); return; }
+  await exportPagePNG(el, filename || sectionId);
 }

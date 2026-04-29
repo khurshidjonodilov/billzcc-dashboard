@@ -224,254 +224,44 @@ document.getElementById('insightsGrid').innerHTML = insHtml;
 let charts = {};
 
 // Tickets bar
-charts.tickets = new Chart(document.getElementById('ticketsChart'), {
-  type:'bar',
-  data:{labels:mnNames,datasets:[
-    {label:'Тикеты', data:months.map(m=>m.tickets), backgroundColor:'#3B82F6', borderRadius:4, yAxisID:'y'},
-    {label:'Затраты млн', data:months.map(m=>m.cost_mln), backgroundColor:'#F59E0B', borderRadius:4, yAxisID:'y1'},
-  ]},
-  options:{...chartBase, scales:{
-    x:{grid:{display:false}},
-    y:{grid:{color:CHART_GRID}, title:{display:true,text:'Тикеты',color:'#7E92BC',font:{size:10}}},
-    y1:{position:'right', grid:{display:false}, title:{display:true,text:'млн сум',color:'#7E92BC',font:{size:10}}},
-  }, plugins:{...chartBase.plugins, legend:{display:true,labels:{color:'#7E92BC',font:{size:10}}}}},
-});
+// Charts - rebuilt with neon style
+  const monthNames = Q.by_month.map(m=>m.name);
+  
+  charts.tickets = buildNeonBar('ticketsChart', monthNames,
+    [{label:'Тикеты',data:Q.by_month.map(m=>m.tickets),color:'#3B82F6'}],
+    {yFmt:v=>v.toLocaleString('ru'),radius:6,tooltipFmt:ctx=>` ${ctx.raw.toLocaleString('ru')} тик`});
 
-// LCR & Repeat line
-charts.lcr = new Chart(document.getElementById('lcrChart'), {
-  type:'line',
-  data:{labels:mnNames,datasets:[
-    {label:'LCR %', data:months.map(m=>m.lcr),
-     borderColor:'#EF4444', backgroundColor:'rgba(239,68,68,0.1)',
-     borderWidth:2.5, pointRadius:6, fill:true, tension:0.3},
-    {label:'Повторные %', data:months.map(m=>m.repeat_pct),
-     borderColor:'#F59E0B', borderWidth:2, pointRadius:5, fill:false, tension:0.3},
-  ]},
-  options:{...chartBase, scales:{
-    x:{grid:{display:false}},
-    y:{grid:{color:CHART_GRID}},
-  }, plugins:{...chartBase.plugins, legend:{display:true,labels:{color:'#7E92BC',font:{size:10}}}}},
-});
+  charts.lcr = buildNeonLine('lcrChart', monthNames,
+    [{label:'LCR %',data:Q.by_month.map(m=>m.lcr),color:'#EF4444',width:3}],
+    {yFmt:v=>v+'%',tooltipFmt:ctx=>` LCR: ${ctx.raw}%`});
 
-// CSAT & SLA
-charts.csat = new Chart(document.getElementById('csatChart'), {
-  type:'line',
-  data:{labels:mnNames,datasets:[
-    {label:'CSAT %', data:months.map(m=>m.csat_pct),
-     borderColor:'#34D399', borderWidth:2.5, pointRadius:5, fill:false},
-    {label:'SLA %', data:months.map(m=>m.sla_pct),
-     borderColor:'#60A5FA', borderWidth:2, pointRadius:5, fill:false},
-  ]},
-  options:{...chartBase, scales:{
-    x:{grid:{display:false}},
-    y:{grid:{color:CHART_GRID}, min:60, max:100},
-  }, plugins:{...chartBase.plugins, legend:{display:true,labels:{color:'#7E92BC',font:{size:10}}}}},
-});
+  charts.csat = buildNeonLine('csatChart', monthNames,
+    [
+      {label:'CSAT %',data:Q.by_month.map(m=>m.csat_pct),color:'#10B981',width:3},
+      {label:'SLA %', data:Q.by_month.map(m=>m.sla_pct), color:'#3B82F6',width:2,fill:false,dash:[5,3]},
+    ],
+    {yFmt:v=>v.toFixed(1)+'%',yMin:60,tooltipFmt:ctx=>` ${ctx.dataset.label}: ${ctx.raw.toFixed(1)}%`});
 
-// FRT bar
-charts.frt = new Chart(document.getElementById('frtChart'), {
-  type:'bar',
-  data:{labels:mnNames,datasets:[
-    {label:'FRT среднее (сек)', data:months.map(m=>m.frt_avg_sec),
-     backgroundColor:['rgba(96,165,250,0.8)','rgba(96,165,250,0.8)','rgba(96,165,250,0.8)'],
-     borderRadius:4},
-  ]},
-  options:{...chartBase, scales:{
-    x:{grid:{display:false}},
-    y:{grid:{color:CHART_GRID}},
-  }},
-});
+  charts.frt = buildNeonBar('frtChart', monthNames,
+    [{label:'AFRT сек',data:Q.by_month.map(m=>m.frt_avg_sec||0),color:'#F59E0B'}],
+    {yFmt:v=>v+'с',radius:6,tooltipFmt:ctx=>` AFRT: ${ctx.raw}с`});
 
-// Operator ranking horizontal bar
-const ranking = Q.operator_ranking;
-charts.rank = new Chart(document.getElementById('rankChart'), {
-  type:'bar',
-  data:{
-    labels:ranking.map(r=>r.name),
-    datasets:[{
-      label:'Score',
-      data:ranking.map(r=>r.score),
-      backgroundColor: ranking.map((r,i)=>
-        i===0?'#F59E0B': i<=2?'#3B82F6' : i>=ranking.length-2?'#EF4444':'#1D4ED8'
-      ),
-      borderRadius:3,
-    }],
-  },
-  options:{...chartBase, indexAxis:'y',
-    scales:{
-      x:{grid:{color:CHART_GRID}, min:55, max:95},
-      y:{grid:{display:false}, ticks:{font:{size:10}}},
-    },
-  },
-});
+  if(Q.operator_ranking && Q.operator_ranking.length) {
+    const opR = Q.operator_ranking.slice(0,8);
+    charts.rank = buildNeonHorizBar('rankChart',
+      opR.map(o=>o.name.split(' ')[0]), opR.map(o=>o.tickets),
+      (v,i)=>NEON_COLORS[i%NEON_COLORS.length]+'CC',
+      {tooltipFmt:ctx=>` ${ctx.raw.toLocaleString('ru')} тикетов`});
+  }
 
-// ── Monthly comparison table ───────────────────────────────────────────────────
-const [m2, m3, m4] = months;
-const tableRows = [
-  ['CPT (сум)',        fmt.num(m2.cpt),              fmt.num(m3.cpt),              fmt.num(m4.cpt),        '—'],
-  ['Тикеты',          fmt.num(m2.tickets),           fmt.num(m3.tickets),          fmt.num(m4.tickets),    delta(m2.tickets,m4.tickets,'num')],
-  ['Нежелательные %', fmt.pct(m2.undesired_pct),     fmt.pct(m3.undesired_pct),    fmt.pct(m4.undesired_pct), delta(m2.undesired_pct,m4.undesired_pct,'pct',true)],
-  ['CSAT Отлично',    fmt.pct(m2.csat_pct),          fmt.pct(m3.csat_pct),         fmt.pct(m4.csat_pct),  delta(m2.csat_pct,m4.csat_pct,'pct')],
-  ['SLA ≤ 1 мин',     fmt.pct(m2.sla_pct),           fmt.pct(m3.sla_pct),          fmt.pct(m4.sla_pct),   delta(m2.sla_pct,m4.sla_pct,'pct')],
-  ['FRT среднее',     m2.frt_avg_sec+'с',            m3.frt_avg_sec+'с',           m4.frt_avg_sec+'с',    delta(m2.frt_avg_sec,m4.frt_avg_sec,'sec',true)],
-  ['FRT медиана',     m2.frt_med_sec+'с',            m3.frt_med_sec+'с',           m4.frt_med_sec+'с',    '='],
-  ['Повторные %',     fmt.pct(m2.repeat_pct),        fmt.pct(m3.repeat_pct),       fmt.pct(m4.repeat_pct),delta(m2.repeat_pct,m4.repeat_pct,'pct',true)],
-  ['LCR %',           fmt.pct(m2.lcr),               fmt.pct(m3.lcr),              fmt.pct(m4.lcr),       delta(m2.lcr,m4.lcr,'pct',true)],
-  ['Затраты млн',     m2.cost_mln.toFixed(2)+' млн', m3.cost_mln.toFixed(2)+' млн',m4.cost_mln.toFixed(2)+' млн','—'],
-  ['Массовый сбой',   fmt.num(m2.massoviy_cnt),      fmt.num(m3.massoviy_cnt),     fmt.num(m4.massoviy_cnt),'—'],
-];
+  if(Q.top_labels_q && Q.top_labels_q.length) {
+    const tL = Q.top_labels_q.slice(0,8);
+    charts.costByLabel = buildNeonBar('costByLabelChart',
+      tL.map(l=>l.name.length>22?l.name.slice(0,22)+'…':l.name),
+      [{data:tL.map(l=>Math.round(l.cost/1e6)),colorFn:(v,i)=>NEON_COLORS[i%NEON_COLORS.length]+'CC'}],
+      {yFmt:v=>v+'млн',tooltipFmt:ctx=>` ${ctx.raw} млн сум`});
+  }
 
-function delta(a,b,type,inv=false) {
-  const diff = b-a;
-  if(Math.abs(diff)<0.05) return '<span style="color:#7E92BC">≈</span>';
-  const good = inv ? diff<0 : diff>0;
-  const col = good?'#34D399':'#F87171';
-  const sign = diff>0?'+':'';
-  if(type==='pct')  return `<span style="color:${col}">${sign}${diff.toFixed(1)}пп</span>`;
-  if(type==='sec')  return `<span style="color:${col}">${sign}${diff.toFixed(0)}с</span>`;
-  return `<span style="color:${col}">${sign}${Math.round(diff)}</span>`;
-}
-
-document.getElementById('monthlyTable').innerHTML = tableRows.map((r,i)=>`
-  <tr>
-    <td style="font-weight:600;color:var(--text)">${r[0]}</td>
-    <td>${r[1]}</td><td>${r[2]}</td><td>${r[3]}</td>
-    <td>${r[4]}</td>
-  </tr>`).join('');
-
-// ── Operator Ranking Table ────────────────────────────────────────────────────
-const medals = ['🥇','🥈','🥉'];
-document.getElementById('rankingTable').innerHTML = ranking.map((r,i)=>{
-  const sc = r.score>=85?'ok':r.score>=78?'warn':'bad';
-  const sl = r.sla_pct>=80?'ok':r.sla_pct>=65?'warn':'bad';
-  return `<tr>
-    <td style="font-weight:700;color:var(--amber2)">${medals[i]||r.rank}</td>
-    <td class="n-name">${r.name}</td>
-    <td><span class="b ${sc}">${r.score.toFixed(1)}</span></td>
-    <td><span class="b ok">${r.csat_pct.toFixed(1)}%</span></td>
-    <td><span class="b ${sl}">${r.sla_pct.toFixed(1)}%</span></td>
-    <td style="font-family:var(--mono);font-size:11px">${r.frt_med_sec}с</td>
-    <td>${r.kk}</td>
-    <td>${r.test.toFixed(0)}</td>
-    <td class="cost-cell">${r.cost_mln.toFixed(1)} млн</td>
-  </tr>`;
-}).join('');
-
-// ── Label Categorization ──────────────────────────────────────────────────────
-const lc = Q.label_categories;
-const levelCfg = {
-  senior: {icon:'🔴', color:'var(--red2)',  border:'rgba(239,68,68,0.3)',  bg:'rgba(239,68,68,0.07)'},
-  middle: {icon:'🟠', color:'var(--amber2)', border:'rgba(245,158,11,0.3)', bg:'rgba(245,158,11,0.07)'},
-  junior: {icon:'🟢', color:'var(--green2)', border:'rgba(52,211,153,0.3)', bg:'rgba(52,211,153,0.07)'},
-};
-const levelNames = {senior:'SENIOR',middle:'MIDDLE',junior:'JUNIOR'};
-
-document.getElementById('labelGrid').innerHTML = Object.entries(lc).map(([lvl, data])=>{
-  const cfg = levelCfg[lvl];
-  const rows = data.labels.slice(0,8).map(l=>
-    `<div style="display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid var(--br);font-size:11px">
-       <span style="color:var(--text2);flex:1">${l.name}</span>
-       <span style="color:${cfg.color};font-weight:700;margin-left:8px">${fmt.num(l.tickets)}</span>
-       <span style="color:var(--text4);font-family:var(--mono);margin-left:8px;font-size:10px">${l.med_close_min.toFixed(1)}м</span>
-     </div>`
-  ).join('');
-  return `<div class="card" style="border-color:${cfg.border};background:${cfg.bg}">
-    <div class="card-hd">
-      <div class="card-title">${cfg.icon} ${levelNames[lvl]}</div>
-      <div class="card-note">${data.description}</div>
-    </div>
-    <div style="display:flex;gap:16px;margin-bottom:12px">
-      <div><div style="font-size:9px;color:var(--text4);text-transform:uppercase;letter-spacing:.1em">Тикеты</div>
-           <div style="font-size:20px;font-weight:700;color:${cfg.color}">${fmt.num(data.tickets)}</div></div>
-      <div><div style="font-size:9px;color:var(--text4);text-transform:uppercase;letter-spacing:.1em">Затраты</div>
-           <div style="font-size:20px;font-weight:700;color:${cfg.color}">${data.cost_mln} млн</div></div>
-    </div>
-    ${rows}
-  </div>`;
-}).join('');
-
-// ── Cost by label chart ───────────────────────────────────────────────────────
-const allLabels = [
-  ...lc.senior.labels,...lc.middle.labels,...lc.junior.labels
-].sort((a,b)=>b.tickets-a.tickets).slice(0,10);
-
-const levelOf = name => {
-  if(lc.senior.labels.find(l=>l.name===name)) return '#EF4444';
-  if(lc.middle.labels.find(l=>l.name===name)) return '#F59E0B';
-  return '#10B981';
-};
-
-charts.costByLabel = new Chart(document.getElementById('costByLabelChart'), {
-  type:'bar',
-  data:{
-    labels:allLabels.map(l=>l.name.length>28?l.name.slice(0,28)+'…':l.name),
-    datasets:[{
-      label:'Тикеты',
-      data:allLabels.map(l=>l.tickets),
-      backgroundColor:allLabels.map(l=>levelOf(l.name)),
-      borderRadius:3,
-    }],
-  },
-  options:{...chartBase, indexAxis:'y',
-    scales:{
-      x:{grid:{color:CHART_GRID}},
-      y:{grid:{display:false},ticks:{font:{size:9}}},
-    },
-  },
-});
-
-// Pie chart by level
-charts.levelPie = buildDoughnut('levelPieChart',
-  ['JUNIOR','MIDDLE','SENIOR'],
-  [lc.junior.tickets, lc.middle.tickets, lc.senior.tickets],
-  ['#10B981','#F59E0B','#EF4444']
-);
-
-document.getElementById('levelStats').innerHTML = [
-  ['🟢 JUNIOR', lc.junior.tickets, lc.junior.cost_mln, '#34D399'],
-  ['🟠 MIDDLE',  lc.middle.tickets,  lc.middle.cost_mln,  '#FCD34D'],
-  ['🔴 SENIOR', lc.senior.tickets, lc.senior.cost_mln, '#F87171'],
-].map(([l,t,c,col])=>
-  `<div style="display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid var(--br)">
-    <span style="font-size:12px;color:var(--text2)">${l}</span>
-    <span style="font-size:12px;font-weight:700;color:${col}">${fmt.num(t)} тик · ${c} млн</span>
-  </div>`
-).join('');
-
-// ── Recommendations ───────────────────────────────────────────────────────────
-const recs = [
-  {num:'01',prio:'🔴',type:'red',title:'Расследовать нежелательные >50%',
-   text:'Выборка 50 тикетов — классификация или реальное качество? Без ответа метрика неуправляема.',
-   time:'1 неделя', roi:'Ясность по ключевой метрике'},
-  {num:'02',prio:'🔴',type:'red',title:'Резервный пул операторов',
-   text:'2-3 человека для форс-мажоров. Апрель: 3 форс-мажора одновременно = LCR 3.8%→7.8%.',
-   time:'Немедленно', roi:'LCR ↓ 3–4% в кризисные дни'},
-  {num:'03',prio:'🔴',type:'red',title:'SMS/Push при инцидентах',
-   text:'Массовый сбой BILLZ: 1758 тик = 17 млн сум. Авто-информирование снизит звонки на 50%+.',
-   time:'2–4 недели', roi:'Экономия 8–9 млн сум/инцидент'},
-  {num:'04',prio:'🟠',type:'amber',title:'FAQ для топ-5 категорий',
-   text:'Оплата тарифа + Кассы + Ссылки + Вход + Блокировки = 7306 тикетов = 72 млн сум.',
-   time:'1–2 месяца', roi:'Экономия 13–18 млн сум/квартал'},
-  {num:'05',prio:'🟠',type:'amber',title:'Маршрутизация SENIOR/MIDDLE/JUNIOR',
-   text:'Автоматически направлять Баг/Реквест/API → Иззатбек/Атабек. Стандартные → любой оператор.',
-   time:'3–4 недели', roi:'AHT ↓ 15–20%'},
-  {num:'06',prio:'🟠',type:'amber',title:'Азизбек: SLA 39.6% — план развития',
-   text:'Индивидуальный план: 1-1 разбор, цель SLA ≥ 70% за 1 месяц, еженедельный контроль.',
-   time:'1 неделя', roi:'SLA команды ↑ на 2–3пп'},
-];
-
-document.getElementById('recsGrid').innerHTML = `<div style="display:flex;flex-direction:column;gap:8px">
-${recs.map(r=>`
-  <div class="alert ${r.type}" style="border-radius:10px;padding:14px 16px">
-    <div class="alert-num" style="font-size:11px;font-weight:800;min-width:32px">${r.num}</div>
-    <div style="flex:1">
-      <div class="al-label">${r.prio} ${r.title}</div>
-      <div class="al-txt">${r.text} <span style="color:var(--text4)">· Срок: ${r.time} · Эффект: ${r.roi}</span></div>
-    </div>
-  </div>`).join('')}
-</div>`;
-
-document.getElementById('ftrPeriod').textContent = Q.period;
 </script>
 
 
@@ -546,24 +336,51 @@ function exportCSExcel(){
 (function(){
   const Q = BILLZ_DATA.quarterly;
   if(!Q) return;
-  buildChannelChart('qChannelChart',
-    Q.by_month.map(m=>m.name),
-    Q.by_month.map(m=>+(m.calls/m.tickets*100).toFixed(1)),
-    Q.by_month.map(m=>+(m.chats/m.tickets*100).toFixed(1))
-  );
+  new Chart(document.getElementById('qChannelChart'),{
+    type:'bar',
+    data:{labels:Q.by_month.map(m=>m.name), datasets:[
+      {label:'Звонки %',data:Q.by_month.map(m=>+(m.calls/m.tickets*100).toFixed(1)),
+        backgroundColor:'rgba(59,130,246,0.82)',borderColor:'#3B82F6',borderWidth:1,borderRadius:6,stack:'a'},
+      {label:'Чаты %',data:Q.by_month.map(m=>+(m.chats/m.tickets*100).toFixed(1)),
+        backgroundColor:'rgba(139,92,246,0.82)',borderColor:'#8B5CF6',borderWidth:1,borderRadius:6,stack:'a'},
+    ]},
+    options:{...chartBase,scales:{
+      x:{grid:{display:false},stacked:true,ticks:{color:'#4B5563'}},
+      y:{grid:{color:'rgba(255,255,255,0.055)'},stacked:true,max:100,
+        ticks:{color:'#4B5563',callback:v=>v+'%'}},
+    },plugins:{...chartBase.plugins,
+      legend:{display:true,position:'top',align:'end',
+        labels:{color:'#9CA3AF',font:{size:10},padding:12,usePointStyle:true,pointStyleWidth:8}},
+      tooltip:{...CHART_TT,callbacks:{label:ctx=>` ${ctx.dataset.label}: ${ctx.raw}%`}}
+    }}
+  });
   const hist = (BILLZ_DATA.cs||{}).chat_share_history||[];
   if(hist.length) {
-    new Chart(document.getElementById('qChat17Chart'), {
-      type:'line',
-      data:{labels:hist.map(h=>h.week),datasets:[
-        {label:'Чаты %',data:hist.map(h=>h.chats_pct),borderColor:'#8B5CF6',backgroundColor:'rgba(139,92,246,0.07)',borderWidth:2,pointRadius:3,fill:true,tension:0.35},
-        {label:'LCR >5сек %',data:hist.map(h=>h.lcr_5sec),borderColor:'#EF4444',borderWidth:1.5,pointRadius:2,fill:false,tension:0.35},
-      ]},
-      options:{...chartBase,scales:{
-        x:{grid:{display:false},ticks:{font:{size:9},color:'#334155'}},
-        y:{grid:{color:CHART_GRID},ticks:{font:{size:9},callback:v=>v+'%'}},
-      },plugins:{...chartBase.plugins,legend:{display:true,labels:{color:'#64748B',font:{size:10}}}}},
-    });
+    (function(){
+    const ctx17 = document.getElementById('qChat17Chart').getContext('2d');
+    const g17 = ctx17.createLinearGradient(0,0,0,ctx17.canvas.clientHeight||200);
+    g17.addColorStop(0,'rgba(139,92,246,0.30)');
+    g17.addColorStop(1,'rgba(139,92,246,0.01)');
+    new Chart(ctx17,{type:'line',data:{labels:hist.map(h=>h.week),datasets:[
+      {label:'Чаты %',data:hist.map(h=>h.chats_pct),
+        borderColor:'#8B5CF6',backgroundColor:g17,borderWidth:2.5,fill:true,tension:0.4,
+        pointRadius:hist.map(h=>h.chats_pct<42?5:h.chats_pct>50?5:3),
+        pointBackgroundColor:hist.map(h=>h.chats_pct<42?'#EF4444':h.chats_pct>50?'#10B981':'#8B5CF6'),
+        pointBorderColor:'#0A0C10',pointBorderWidth:1.5,pointHoverRadius:7},
+      {label:'LCR %',data:hist.map(h=>h.lcr_5sec),
+        borderColor:'#EF4444',backgroundColor:'transparent',
+        borderWidth:1.8,borderDash:[6,3],fill:false,tension:0.3,
+        pointRadius:0,pointHoverRadius:5},
+    ]},options:{...chartBase,scales:{
+      x:{grid:{display:false},ticks:{color:'#4B5563',maxTicksLimit:9,maxRotation:0}},
+      y:{grid:{color:'rgba(255,255,255,0.055)'},min:0,max:58,
+        ticks:{color:'#4B5563',callback:v=>v+'%'}},
+    },plugins:{...chartBase.plugins,
+      legend:{display:true,position:'top',align:'end',
+        labels:{color:'#9CA3AF',font:{size:10},padding:12,usePointStyle:true,pointStyleWidth:8}},
+      tooltip:{...CHART_TT,callbacks:{label:ctx=>`${ctx.dataset.label}: ${ctx.raw.toFixed(1)}%`}}
+    }}});
+  })();
   }
 })();
 

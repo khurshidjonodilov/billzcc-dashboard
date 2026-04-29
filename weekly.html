@@ -271,23 +271,35 @@ function render() {
 
   // Channel share
   if(charts.wChannel) charts.wChannel.destroy();
-  charts.wChannel = new Chart(document.getElementById('wChannelChart'), {
-    type:'doughnut',
-    data:{labels:['Звонки','Чаты'],datasets:[{data:[D.calls,D.chats],
-      backgroundColor:['rgba(59,130,246,0.8)','rgba(139,92,246,0.8)'],borderWidth:0}]},
-    options:{...chartBase,cutout:'60%',plugins:{...chartBase.plugins,
-      legend:{display:true,position:'right',labels:{color:'#64748B',font:{size:11},padding:12}}}}
-  });
+  charts.wChannel = buildNeonDoughnut('wChannelChart',
+    ['Звонки','Чаты'],[D.calls,D.chats],['#3B82F6','#8B5CF6'],
+    {cutout:'60%',legendPos:'right'});
   document.getElementById('wChannelNote').textContent=`Звонки: ${fmt.pct(D.calls/D.tickets*100)} · Чаты: ${fmt.pct(D.chats/D.tickets*100)}`;
 
   // All weeks comparison
   const allW = Object.entries(W).sort();
   if(charts.wAllWeeks) charts.wAllWeeks.destroy();
-  charts.wAllWeeks = buildChannelChart('wAllWeeksChart',
-    allW.map(([k,v])=>v.label),
-    allW.map(([k,v])=>+(v.calls/v.tickets*100).toFixed(1)),
-    allW.map(([k,v])=>+(v.chats/v.tickets*100).toFixed(1))
-  );
+  const allWLabels = allW.map(([k,v])=>v.label);
+  const callsPct   = allW.map(([k,v])=>+(v.calls/v.tickets*100).toFixed(1));
+  const chatsPct   = allW.map(([k,v])=>+(v.chats/v.tickets*100).toFixed(1));
+  charts.wAllWeeks = new Chart(document.getElementById('wAllWeeksChart'),{
+    type:'bar',
+    data:{labels:allWLabels, datasets:[
+      {label:'Звонки %',data:callsPct,backgroundColor:'rgba(59,130,246,0.78)',
+        borderColor:'#3B82F6',borderWidth:1,borderRadius:5,stack:'a'},
+      {label:'Чаты %',data:chatsPct,backgroundColor:'rgba(139,92,246,0.78)',
+        borderColor:'#8B5CF6',borderWidth:1,borderRadius:5,stack:'a'},
+    ]},
+    options:{...chartBase,scales:{
+      x:{grid:{display:false},stacked:true,ticks:{color:'#4B5563',maxRotation:0}},
+      y:{grid:{color:'rgba(255,255,255,0.055)'},stacked:true,max:100,
+        ticks:{color:'#4B5563',callback:v=>v+'%'}},
+    },plugins:{...chartBase.plugins,
+      legend:{display:true,position:'top',align:'end',
+        labels:{color:'#9CA3AF',font:{size:10},padding:12,usePointStyle:true,pointStyleWidth:8}},
+      tooltip:{...CHART_TT,callbacks:{label:ctx=>` ${ctx.dataset.label}: ${ctx.raw}%`}}
+    }}
+  });
 }
 
 function getISOWeek(date) {

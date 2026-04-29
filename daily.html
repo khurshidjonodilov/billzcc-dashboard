@@ -259,24 +259,21 @@ function render() {
   if (hKeys.length > 0) {
     const hVals = hKeys.map(h => hourly[h] || 0);
     const mxH = Math.max(...hVals) || 1;
-    charts.hourly = new Chart(document.getElementById('hourlyChart'), {
-      type: 'bar',
-      data: { labels: hKeys.map(h => h + ':00'), datasets: [{
+    charts.hourly = buildNeonBar('hourlyChart',
+      hKeys.map(h => h+':00'),
+      [{
         data: hVals,
-        backgroundColor: hVals.map(v => {
-          const r = v / mxH;
-          return r > .8 ? 'rgba(239,68,68,0.85)' : r > .55 ? 'rgba(245,158,11,0.8)' : r > .28 ? 'rgba(59,130,246,0.75)' : 'rgba(59,130,246,0.35)';
-        }),
-        borderRadius: 4, borderSkipped: false,
-      }]},
-      options: { ...chartBase,
-        scales: {
-          x: { grid: { display: false }, ticks: { font: { size: 10 } } },
-          y: { grid: { color: CHART_GRID }, ticks: { font: { size: 10 } } },
+        colorFn: (v,i) => {
+          const r = v/mxH;
+          return r>.8 ? '#EF4444' : r>.55 ? '#F59E0B' : r>.28 ? '#3B82F6' : '#1D4ED8';
         },
-        plugins: { ...chartBase.plugins, tooltip: { ...CHART_TT, callbacks: { label: ctx => ` ${ctx.raw} тикетов` } } }
+      }],
+      {
+        radius: 4,
+        tooltipFmt: ctx => ` ${ctx.raw} тикетов`,
+        yFmt: v => v
       }
-    });
+    );
   } else {
     /* no hourly data — clear canvas gracefully */
     const cv = document.getElementById('hourlyChart');
@@ -289,10 +286,8 @@ function render() {
   }
 
   /* SLA & Type doughnuts */
-  charts.sla = buildDoughnut('slaChart',
-    ['Соблюдён', 'Не соблюдён'], [D.sla_pct, D.sla_not_met], ['#34D399', '#DC2626']);
-  charts.type = buildDoughnut('typeChart',
-    ['Желательные', 'Нежелательные'], [D.desired || 0, D.undesired || 0], ['#059669', '#F87171']);
+  charts.sla = buildNeonDoughnut('slaChart',['Соблюдён','Не соблюдён'],[D.sla_pct,D.sla_not_met],['#10B981','#DC2626'],{cutout:'65%'});
+  charts.type = buildNeonDoughnut('typeChart',['Желательные','Нежелательные'],[D.desired||0,D.undesired||0],['#059669','#F87171'],{cutout:'65%'});
 
   /* Operators */
   const ops = D.operators || DK.operators || [];
@@ -307,10 +302,11 @@ function render() {
     const maxL = Math.max(...lbls.slice(0, 10).map(l => l.tickets));
     document.getElementById('lblTable').innerHTML = lbls.slice(0, 10).map(l => labelRow(l, maxL)).join('');
     const t8 = lbls.slice(0, 8);
-    charts.labels = buildHorizBar('labelsChart',
-      t8.map(l => l.name.length > 32 ? l.name.slice(0, 32) + '…' : l.name),
-      t8.map(l => l.tickets),
-      (_, i) => `rgba(96,165,250,${1 - i * 0.1})`
+    charts.labels = buildNeonHorizBar('labelsChart',
+      t8.map(l=>l.name.length>35?l.name.slice(0,35)+'…':l.name),
+      t8.map(l=>l.tickets),
+      (v,i)=>NEON_COLORS[i%NEON_COLORS.length]+'CC',
+      {tooltipFmt:ctx=>` ${ctx.raw.toLocaleString('ru')} тикетов`}
     );
   } else {
     document.getElementById('lblTable').innerHTML =
@@ -334,11 +330,42 @@ function render() {
 
   /* Last 14 days channel trend */
   const last14 = keys.slice(-14);
-  charts.trend14 = buildChannelChart('d14Chart',
-    last14.map(k => (D_ALL[k].label || k.slice(8)).replace(' апреля','').replace(' апр','')),
-    last14.map(k => +((D_ALL[k].calls / D_ALL[k].tickets) * 100).toFixed(1)),
-    last14.map(k => +((D_ALL[k].chats / D_ALL[k].tickets) * 100).toFixed(1))
-  );
+  // Rich 14-day trend with area
+  (function(){
+    const labs14 = last14.map(k=>(D_ALL[k].label||k.slice(8)).replace(' апреля','').replace(' апр',''));
+    const tix14  = last14.map(k=>D_ALL[k].tickets);
+    const lcr14  = last14.map(k=>D_ALL[k].lcr||0);
+    const ctx14  = document.getElementById('d14Chart').getContext('2d');
+    const g14    = ctx14.createLinearGradient(0,0,0,ctx14.canvas.clientHeight||180);
+    g14.addColorStop(0,'rgba(59,130,246,0.30)');
+    g14.addColorStop(1,'rgba(59,130,246,0.01)');
+    charts.trend14 = new Chart(ctx14,{type:'bar',
+      data:{labels:labs14, datasets:[
+        {label:'Тикеты',data:tix14,backgroundColor:tix14.map(v=>{
+          const mx=Math.max(...tix14);
+          const r=v/mx;
+          return r>.85?'rgba(239,68,68,0.82)':r>.6?'rgba(245,158,11,0.82)':'rgba(59,130,246,0.82)';
+        }),borderColor:tix14.map(v=>{const mx=Math.max(...tix14);const r=v/mx;return r>.85?'#EF4444':r>.6?'#F59E0B':'#3B82F6';}),
+        borderWidth:1,borderRadius:5,yAxisID:'y'},
+        {label:'LCR %',type:'line',data:lcr14,
+          borderColor:'#F87171',backgroundColor:'transparent',
+          borderWidth:2,borderDash:[5,3],pointRadius:3,pointBackgroundColor:'#F87171',
+          pointBorderColor:'#0A0C10',tension:0.3,yAxisID:'y2'},
+      ]},
+      options:{...chartBase,scales:{
+        x:{grid:{display:false},ticks:{color:'#4B5563',maxRotation:0}},
+        y:{grid:{color:'rgba(255,255,255,0.055)'},ticks:{color:'#4B5563',callback:v=>v.toLocaleString('ru')}},
+        y2:{position:'right',grid:{display:false},ticks:{color:'#4B5563',callback:v=>v+'%'}},
+      },plugins:{...chartBase.plugins,
+        legend:{display:true,position:'top',align:'end',
+          labels:{color:'#9CA3AF',font:{size:10},padding:12,usePointStyle:true,pointStyleWidth:8}},
+        tooltip:{...CHART_TT,callbacks:{label:ctx=>{
+          if(ctx.dataset.yAxisID==='y2') return ` LCR: ${ctx.raw}%`;
+          return ` Тикеты: ${ctx.raw.toLocaleString('ru')}`;
+        }}}
+      }}
+    });
+  })();
 
   /* Companies */
   const comps = D.top_companies || DK.top_companies || [];

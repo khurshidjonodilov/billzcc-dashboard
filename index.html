@@ -154,6 +154,7 @@
 
 <script>
 const charts = {};
+function hexRGB(h){h=h.replace("#","");return{r:parseInt(h.slice(0,2),16),g:parseInt(h.slice(2,4),16),b:parseInt(h.slice(4,6),16)};}
 const M = BILLZ_DATA.monthly;
 const CPT = 9865;
 const STORES = M.clients || 4165;
@@ -277,16 +278,35 @@ const maxT = Math.max(...ops.map(o=>o.tickets));
 document.getElementById('opTable').innerHTML = ops.slice(0,14).map(op => opRow(op, maxT)).join('');
 
 /* Channel doughnut */
+// Pie chart with outer ring effect
 charts.chan = new Chart(document.getElementById('chanChart'), {
   type: 'doughnut',
-  data: { labels: ['Звонки', 'Чаты'],
-    datasets: [{ data: [M.calls, M.chats],
-      backgroundColor: ['rgba(59,130,246,0.85)', 'rgba(139,92,246,0.85)'],
-      borderWidth: 2, borderColor: '#111318', hoverOffset: 6 }]},
-  options: { ...chartBase, cutout: '62%',
-    plugins: { ...chartBase.plugins,
+  data: {
+    labels: ['Звонки ' + fmt.pct(M.calls/M.tickets*100), 'Чаты ' + fmt.pct(M.chats/M.tickets*100)],
+    datasets: [{
+      data: [M.calls, M.chats],
+      backgroundColor: [
+        'rgba(59,130,246,0.85)',
+        'rgba(139,92,246,0.85)',
+      ],
+      borderColor: ['#3B82F6','#8B5CF6'],
+      borderWidth: 2,
+      hoverOffset: 14,
+      hoverBorderWidth: 3,
+    }]
+  },
+  options: {
+    ...chartBase, cutout: '58%',
+    plugins: {
+      ...chartBase.plugins,
       legend: { display: true, position: 'bottom',
-        labels: { color: '#9CA3AF', font: { size: 11 }, padding: 14, usePointStyle: true } } } }
+        labels: { color: '#9CA3AF', font: { size: 12, weight: '600' },
+          padding: 18, usePointStyle: true, pointStyleWidth: 10 } },
+      tooltip: { ...CHART_TT, callbacks: {
+        label: ctx => ` ${ctx.label}: ${fmt.num(ctx.raw)} тикетов`
+      }}
+    }
+  }
 });
 document.getElementById('chanNote').textContent =
   `Звонки: ${fmt.pct(M.calls/M.tickets*100)} · Чаты: ${fmt.pct(M.chats/M.tickets*100)}`;
@@ -297,10 +317,15 @@ const maxL = lbls.length ? Math.max(...lbls.map(l=>l.tickets)) : 1;
 document.getElementById('lblTable').innerHTML = lbls.map(l => labelRow(l, maxL)).join('');
 
 const t8 = lbls.slice(0, 8);
-charts.labels = buildHorizBar('labelsChart',
-  t8.map(l => l.name.length > 38 ? l.name.slice(0,38)+'…' : l.name),
-  t8.map(l => l.tickets),
-  (v, i) => `rgba(96,165,250,${1 - i*0.1})`
+// Vertical bars with neon gradient effect
+charts.labels = buildNeonBar('labelsChart',
+  t8.map(l => l.name.length > 22 ? l.name.slice(0,22)+'…' : l.name),
+  [{
+    data: t8.map(l => l.tickets),
+    colorFn: (v,i) => { const c=NEON_COLORS[i%NEON_COLORS.length]; const {r,g,b}=hexRGB(c); return `rgba(${r},${g},${b},0.85)`; },
+  }],
+  { radius: 8, yFmt: v => v.toLocaleString('ru'),
+    tooltipFmt: ctx => ` ${ctx.raw.toLocaleString('ru')} тикетов · ${fmt.mln(ctx.raw*9865)}` }
 );
 
 /* Companies */
@@ -312,22 +337,59 @@ document.getElementById('companiesBlock').innerHTML = comps.length
 /* Chat trend */
 const hist = (BILLZ_DATA.cs || {}).chat_share_history || [];
 if (hist.length) {
-  charts.chatTrend = new Chart(document.getElementById('chatTrendChart'), {
-    type: 'line',
-    data: { labels: hist.map(h=>h.week), datasets: [{
-      data: hist.map(h=>h.chats_pct),
-      borderColor: '#8B5CF6',
-      backgroundColor: 'rgba(139,92,246,0.08)',
-      borderWidth: 2, pointRadius: 3.5,
-      pointBackgroundColor: hist.map(h=>h.chats_pct<42?'#EF4444':h.chats_pct>50?'#10B981':'#8B5CF6'),
-      fill: true, tension: 0.35,
+  // Rich area chart with colored points by value
+(function(){
+  const labels = hist.map(h=>h.week);
+  const chatPcts = hist.map(h=>h.chats_pct);
+  const lcrPcts  = hist.map(h=>h.lcr_5sec||0);
+  const ctx = document.getElementById('chatTrendChart').getContext('2d');
+
+  const chatGrad = ctx.createLinearGradient(0,0,0,ctx.canvas.clientHeight||220);
+  chatGrad.addColorStop(0,'rgba(139,92,246,0.32)');
+  chatGrad.addColorStop(0.6,'rgba(139,92,246,0.08)');
+  chatGrad.addColorStop(1,'rgba(139,92,246,0.01)');
+
+  charts.chatTrend = new Chart(ctx, {
+    type:'line',
+    data:{labels, datasets:[{
+      label:'Доля чатов %',
+      data: chatPcts,
+      borderColor:'#8B5CF6',
+      backgroundColor: chatGrad,
+      borderWidth:2.5,
+      fill:true,
+      tension:0.4,
+      pointRadius: chatPcts.map(v=>v<42?5:v>50?5:3.5),
+      pointBackgroundColor: chatPcts.map(v=>v<42?'#EF4444':v>50?'#10B981':'#8B5CF6'),
+      pointBorderColor:'#0A0C10',
+      pointBorderWidth:1.5,
+      pointHoverRadius:7,
+    },{
+      label:'LCR >5сек %',
+      data: lcrPcts,
+      borderColor:'#EF4444',
+      backgroundColor:'transparent',
+      borderWidth:1.8,
+      borderDash:[6,3],
+      fill:false,
+      tension:0.3,
+      pointRadius:0,
+      pointHoverRadius:5,
     }]},
-    options: { ...chartBase, scales: {
-      x: { grid: { display: false }, ticks: { font: { size: 9 } } },
-      y: { grid: { color: CHART_GRID }, min: 35, max: 55,
-        ticks: { font: { size: 9 }, callback: v => v+'%' } },
-    }}
+    options:{...chartBase,
+      scales:{
+        x:{grid:{display:false},ticks:{color:'#4B5563',maxTicksLimit:9,maxRotation:0}},
+        y:{grid:{color:'rgba(255,255,255,0.055)'},min:0,max:56,
+           ticks:{color:'#4B5563',callback:v=>v+'%'}},
+      },
+      plugins:{...chartBase.plugins,
+        legend:{display:true,position:'top',align:'end',
+          labels:{color:'#9CA3AF',font:{size:10},padding:12,usePointStyle:true,pointStyleWidth:8}},
+        tooltip:{...CHART_TT,callbacks:{label:ctx=>`${ctx.dataset.label}: ${ctx.raw.toFixed(1)}%`}}
+      }
+    }
   });
+})();
 }
 
 /* Chat causes */

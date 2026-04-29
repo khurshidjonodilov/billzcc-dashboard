@@ -430,18 +430,22 @@ function companyBlock(comp, idx) {
 
 /* ── Shared init ─────────────────────────────────────────────────────────── */
 document.addEventListener('DOMContentLoaded', function () {
-  // Apply saved theme immediately
-  if (localStorage.getItem('billz_theme') === 'light') {
+  // Apply saved theme
+  const savedTheme = localStorage.getItem('billz_theme');
+  if (savedTheme === 'light') {
     document.body.classList.add('light');
   }
-  // Sync toggle button
-  const btn = document.getElementById('themeBtn');
-  if (btn) {
-    const isLight = document.body.classList.contains('light');
-    const icon = btn.querySelector('.toggle-icon');
-    const lbl  = btn.querySelector('#themeLabel');
-    if (icon) icon.textContent  = isLight ? '🌙' : '☀️';
-    if (lbl)  lbl.textContent   = isLight ? 'Тёмная' : 'Светлая';
+  // Sync floating panel
+  const isLight = document.body.classList.contains('light');
+  const icon = document.getElementById('themeIcon');
+  const lbl  = document.getElementById('themeLabel');
+  if (icon) icon.textContent = isLight ? '🌙' : '☀️';
+  if (lbl)  lbl.textContent  = isLight ? 'Тёмная' : 'Светлая';
+  
+  const panel = document.getElementById('actionPanel');
+  if (panel && isLight) {
+    panel.style.background = 'rgba(255,255,255,0.96)';
+    panel.style.borderColor = 'rgba(26,86,219,0.15)';
   }
   // Smooth nav transitions
   document.querySelectorAll('.nav-link').forEach(link => {
@@ -465,12 +469,30 @@ document.addEventListener('DOMContentLoaded', function () {
 function toggleTheme() {
   const isLight = document.body.classList.toggle('light');
   localStorage.setItem('billz_theme', isLight ? 'light' : 'dark');
-  const btn = document.getElementById('themeBtn');
-  if (btn) {
-    btn.querySelector('.toggle-icon').textContent = isLight ? '🌙' : '☀️';
-    const lbl = btn.querySelector('#themeLabel');
-    if (lbl) lbl.textContent = isLight ? 'Тёмная' : 'Светлая';
+  
+  // Update floating panel button
+  const icon = document.getElementById('themeIcon');
+  const lbl  = document.getElementById('themeLabel');
+  const btn  = document.getElementById('themeBtn');
+  if (icon) icon.textContent = isLight ? '🌙' : '☀️';
+  if (lbl)  lbl.textContent  = isLight ? 'Тёмная' : 'Светлая';
+  
+  // Update panel bg for light theme
+  const panel = document.getElementById('actionPanel');
+  if (panel) {
+    panel.style.background = isLight
+      ? 'rgba(255,255,255,0.96)' 
+      : 'rgba(8,9,13,0.92)';
+    panel.style.borderColor = isLight
+      ? 'rgba(26,86,219,0.15)'
+      : 'rgba(255,255,255,0.08)';
+    if (btn) {
+      btn.style.background = isLight ? 'rgba(26,86,219,0.08)' : 'rgba(255,255,255,0.07)';
+      btn.style.borderColor = isLight ? 'rgba(26,86,219,0.2)' : 'rgba(255,255,255,0.12)';
+      btn.style.color = isLight ? '#1A56DB' : '#9CA3AF';
+    }
   }
+  
   if (typeof render === 'function') { try { render(); } catch(e) {} }
 }
 
@@ -507,9 +529,12 @@ async function exportPagePNG(selector, filename) {
 
     await new Promise(r => setTimeout(r, 150));
 
+    // Wait for all charts to render
+    await new Promise(r => setTimeout(r, 500));
+    
     const canvas = await html2canvas(el, {
       backgroundColor: bgHex,
-      scale: 2.5,
+      scale: 2,
       useCORS: true,
       allowTaint: false,
       logging: false,
@@ -530,6 +555,13 @@ async function exportPagePNG(selector, filename) {
         ].join('\n');
         cloneDoc.head.appendChild(fix);
 
+        // Fix canvas elements - html2canvas needs them drawn
+        cloneDoc.querySelectorAll('canvas').forEach(cv => {
+          if (cv.width === 0 || cv.height === 0) {
+            cv.style.display = 'none';
+          }
+        });
+        
         // 2. Flatten all CSS custom properties so html2canvas sees plain values
         const cs = getComputedStyle(document.documentElement);
         const varList = [

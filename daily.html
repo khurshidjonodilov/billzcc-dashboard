@@ -19,23 +19,29 @@
   <a href="cs.html" class="nav-link">CS Анализ</a>
   <a href="daily.html" class="nav-link active">Ежедневно</a>
   <a href="operators.html" class="nav-link">Операторы</a>
-  <div class="nav-right">
-    <button class="theme-toggle" onclick="toggleTheme()" id="themeBtn">
-      <span class="toggle-icon">☀️</span><span id="themeLabel">Светлая</span>
-    </button>
-  </div>
+  <div class="nav-right"></div>
 </nav>
 
 <div class="wrap">
-  <!-- Floating action panel -->
-  <div style="position:fixed;top:62px;right:16px;z-index:150;display:flex;flex-direction:column;gap:6px">
-    <button class="png-btn" id="pngExportBtn" onclick="exportPagePNG('.wrap','billz-daily')"
-      style="padding:6px 12px;font-size:11px;border-radius:8px;white-space:nowrap">
+  <!-- Action Panel -->
+  <div id="actionPanel" style="position:fixed;top:60px;right:0;z-index:300;
+    display:flex;flex-direction:column;gap:4px;padding:8px;
+    background:rgba(8,9,13,0.92);backdrop-filter:blur(16px);
+    border-left:1px solid rgba(255,255,255,0.08);border-bottom:1px solid rgba(255,255,255,0.08);
+    border-radius:0 0 0 12px;">
+    <button onclick="exportPagePNG('.wrap','billz-daily')" id="pngBtn"
+      style="display:flex;align-items:center;gap:6px;background:rgba(139,92,246,0.18);
+        border:1px solid rgba(139,92,246,0.35);border-radius:8px;padding:6px 14px;
+        font-size:11px;font-weight:600;color:#C4B5FD;cursor:pointer;font-family:inherit;
+        white-space:nowrap;transition:all .2s">
       📷 PNG
     </button>
-    <button class="theme-toggle" onclick="toggleTheme()" id="themeBtn"
-      style="padding:6px 12px;font-size:11px;border-radius:8px;white-space:nowrap">
-      <span class="toggle-icon">☀️</span><span id="themeLabel">Светлая</span>
+    <button onclick="toggleTheme()" id="themeBtn"
+      style="display:flex;align-items:center;gap:6px;background:rgba(255,255,255,0.07);
+        border:1px solid rgba(255,255,255,0.12);border-radius:8px;padding:6px 14px;
+        font-size:11px;font-weight:500;color:#9CA3AF;cursor:pointer;font-family:inherit;
+        white-space:nowrap;transition:all .2s">
+      <span id="themeIcon">☀️</span><span id="themeLabel">Светлая</span>
     </button>
   </div>
 
@@ -166,7 +172,7 @@
   <div class="ftr">
     <div class="fl">BILLZ · CC Intelligence · Omnidesk CRM</div>
     <div class="fr">
-      <span>📅 Обновлено: <strong style="color:var(--text3)">27.04.2026</strong></span>
+      <span>📅 Обновлено: <strong style="color:var(--text3)">28.04.2026</strong></span>
       <span id="ftrPeriod">Ежедневно</span>
     </div>
   </div>

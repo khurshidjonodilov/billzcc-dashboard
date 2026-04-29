@@ -310,14 +310,72 @@ let charts = {};
     }
   }
 
-  const topLabels = Q.top_labels_q || Q.by_month.flatMap(m=>m.top_labels_q||[]);
-  if(topLabels && topLabels.length) { Q.top_labels_q = topLabels;
-    const tL = Q.top_labels_q.slice(0,8);
+  // ── Section 05: Затраты по топ категориям ──────────────────────────────
+  const lc = Q.label_categories || {};
+  const lcKeys = ['senior','middle','junior'];
+
+  // Build top labels from label_categories
+  const allLabels = lcKeys.flatMap(lvl =>
+    (lc[lvl]?.labels || []).map(l => ({
+      name: l.name,
+      tickets: l.tickets,
+      cost: Math.round(l.tickets * 9865),
+      level: lvl
+    }))
+  ).sort((a,b) => b.tickets - a.tickets).slice(0, 10);
+
+  if (allLabels.length) {
+    const levelColors = { senior:'#EF4444', middle:'#F59E0B', junior:'#3B82F6' };
     charts.costByLabel = buildNeonBar('costByLabelChart',
-      tL.map(l=>l.name.length>22?l.name.slice(0,22)+'…':l.name),
-      [{data:tL.map(l=>Math.round(l.cost/1e6)),colorFn:(v,i)=>NEON_COLORS[i%NEON_COLORS.length]+'CC'}],
-      {yFmt:v=>v+'млн',tooltipFmt:ctx=>` ${ctx.raw} млн сум`});
+      allLabels.map(l => l.name.length > 28 ? l.name.slice(0,28)+'…' : l.name),
+      [{
+        data: allLabels.map(l => l.tickets),
+        colorFn: (v,i) => {
+          const lvl = allLabels[i]?.level || 'junior';
+          const c = lvl==='senior'?'239,68,68':lvl==='middle'?'245,158,11':'59,130,246';
+          return `rgba(${c},0.82)`;
+        },
+      }],
+      { horizontal: true,
+        yFmt: v => v.toLocaleString('ru'),
+        tooltipFmt: ctx => ` ${ctx.raw.toLocaleString('ru')} тикетов · ${(ctx.raw*9865/1e6).toFixed(2)} млн сум`
+      }
+    );
   }
+
+  // Level pie chart
+  const levelPieEl = document.getElementById('levelPieChart');
+  if (levelPieEl && Object.keys(lc).length) {
+    const lvlData = lcKeys.filter(k => lc[k]).map(k => ({
+      name: k.charAt(0).toUpperCase() + k.slice(1),
+      tickets: lc[k].tickets || 0,
+      cost: lc[k].cost_mln || 0,
+    }));
+    charts.levelPie = new Chart(levelPieEl, {
+      type: 'doughnut',
+      data: {
+        labels: lvlData.map(l => `${l.name} (${l.tickets.toLocaleString('ru')} тик)`),
+        datasets: [{
+          data: lvlData.map(l => l.tickets),
+          backgroundColor: ['rgba(239,68,68,0.82)','rgba(245,158,11,0.82)','rgba(59,130,246,0.82)'],
+          borderColor: ['#EF4444','#F59E0B','#3B82F6'],
+          borderWidth: 2, hoverOffset: 10,
+        }]
+      },
+      options: { ...chartBase, cutout: '58%',
+        plugins: { ...chartBase.plugins,
+          legend: { display: true, position: 'bottom',
+            labels: { color: '#9CA3AF', font: { size: 11, weight: '600' },
+              padding: 14, usePointStyle: true, pointStyleWidth: 10 }
+          },
+          tooltip: { ...CHART_TT, callbacks: {
+            label: ctx => ` ${ctx.label}: ${ctx.raw.toLocaleString('ru')} тик · ${lvlData[ctx.dataIndex].cost.toFixed(1)} млн`
+          }}
+        }
+      }
+    });
+  }
+
 })(); // end initQuarterly
 </script>
 

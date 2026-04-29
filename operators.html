@@ -192,7 +192,7 @@
       <div class="export-bar-sub">Excel · перформанс · все метрики · апрель 2026</div>
     </div>
     <div style="display:flex;gap:8px">
-      <button class="png-btn" onclick="exportPagePNG('.wrap','billz-operators-full')">📷 Страница PNG</button>
+      <button class="png-btn" onclick="exportPagePNG('.wrap','billz-operators-full')">📷 📷 Страница PNG</button>
       <button class="export-btn" onclick="checkAndExport()">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
         Скачать Excel
@@ -258,7 +258,7 @@ function getColor(val, low, high) {
 }
 
 function render() {
-  const ops = PERIODS[currentPeriod].ops.filter(o => o.tickets > 0);
+  const ops = PERIODS[currentPeriod].ops.filter(o => o.tickets > 0 && !['Хуршид'].includes(o.name));
   if(!ops.length) return;
 
   const maxT = Math.max(...ops.map(o=>o.tickets));
@@ -471,7 +471,7 @@ function render() {
 
   // Weekly dynamics stacked bar
   const weeks = Object.keys(W).sort();
-  const allOps = [...new Set(weeks.flatMap(wk=>(W[wk].operators||[]).map(o=>o.name.split(' ')[0])))];
+  const allOps = [...new Set(weeks.flatMap(wk=>(W[wk].operators||[]).map(o=>o.name.split(' ')[0])))].filter(n=>!['Хуршид'].includes(n));
   const weekLabels = weeks.map(wk=>W[wk].label);
   const wDatasets = allOps.slice(0,10).map((opName,i)=>({
     label: opName,

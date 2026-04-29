@@ -17371,7 +17371,93 @@ const BILLZ_DATA = {
           "cost": 9865
         }
       ],
-      "top_companies": [],
+      "top_companies": [
+        {
+          "name": "BILLZ",
+          "tickets": 59,
+          "desired": 33,
+          "undesired": 23,
+          "cost": 582035,
+          "top_labels": [
+            {
+              "label": "Документооборот - Создание ссылки для оплаты",
+              "count": 10
+            },
+            {
+              "label": "Учётная запись - Блокировка/Разблокировка аккаунта",
+              "count": 7
+            }
+          ]
+        },
+        {
+          "name": "571market",
+          "tickets": 6,
+          "desired": 6,
+          "undesired": 0,
+          "cost": 59190,
+          "top_labels": [
+            {
+              "label": "Каталог - Скачивание товаров, Общались по звонку",
+              "count": 1
+            },
+            {
+              "label": "Каталог - Скачивание товаров",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "name": "Bloom",
+          "tickets": 6,
+          "desired": 3,
+          "undesired": 3,
+          "cost": 59190,
+          "top_labels": [
+            {
+              "label": "Все продажи - Удаление/Редактирование продажи",
+              "count": 2
+            },
+            {
+              "label": "Кассовые смены — Открытие/Закрытие смен",
+              "count": 2
+            }
+          ]
+        },
+        {
+          "name": "antiqa-market",
+          "tickets": 6,
+          "desired": 3,
+          "undesired": 3,
+          "cost": 59190,
+          "top_labels": [
+            {
+              "label": "Баг (реквест), Новая продажа - Возврат/Обмен",
+              "count": 1
+            },
+            {
+              "label": "Новая продажа - Возврат/Обмен, Общались по звонку",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "name": "tumaris",
+          "tickets": 6,
+          "desired": 2,
+          "undesired": 4,
+          "cost": 59190,
+          "top_labels": [
+            {
+              "label": "Оборудование - Установка/Настройка/Удаление принтера",
+              "count": 2
+            },
+            {
+              "label": "Вопрос не по программе",
+              "count": 2
+            }
+          ]
+        }
+      ],
       "peaks": [
         "Нет выраженного пика"
       ],
@@ -17571,7 +17657,89 @@ const BILLZ_DATA = {
           "cost": 9865
         }
       ],
-      "top_companies": [],
+      "top_companies": [
+        {
+          "name": "BILLZ",
+          "tickets": 60,
+          "desired": 25,
+          "undesired": 30,
+          "cost": 591900,
+          "top_labels": [
+            {
+              "label": "Учётная запись - Блокировка/Разблокировка аккаунта",
+              "count": 6
+            },
+            {
+              "label": "Документооборот - Оплата за тариф",
+              "count": 5
+            }
+          ]
+        },
+        {
+          "name": "Bunker Elektronics",
+          "tickets": 8,
+          "desired": 6,
+          "undesired": 2,
+          "cost": 78920,
+          "top_labels": [
+            {
+              "label": "Управление - Создание/Редактирвоание/Удаление сотрудника",
+              "count": 3
+            },
+            {
+              "label": "Настройка - Создание/Редактирование/Удаление доп. точки",
+              "count": 3
+            }
+          ]
+        },
+        {
+          "name": "Bloom",
+          "tickets": 6,
+          "desired": 3,
+          "undesired": 3,
+          "cost": 59190,
+          "top_labels": [
+            {
+              "label": "Все продажи - Удаление/Редактирование продажи",
+              "count": 1
+            },
+            {
+              "label": "Баг (реквест), Все продажи - Удаление/Редактирование продажи",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "name": "INBAZAR",
+          "tickets": 4,
+          "desired": 0,
+          "undesired": 4,
+          "cost": 39460,
+          "top_labels": [
+            {
+              "label": "Кассовые смены — Открытие/Закрытие смен",
+              "count": 3
+            }
+          ]
+        },
+        {
+          "name": "kym mens wear",
+          "tickets": 4,
+          "desired": 3,
+          "undesired": 1,
+          "cost": 39460,
+          "top_labels": [
+            {
+              "label": "Каталог — запрос на добавление товара",
+              "count": 1
+            },
+            {
+              "label": "Настройка - Создание/Редактирование/Удаление доп. точки",
+              "count": 1
+            }
+          ]
+        }
+      ],
       "peaks": [
         "Нет конкретного пика"
       ],

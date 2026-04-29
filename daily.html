@@ -380,7 +380,7 @@ function render() {
   /* Companies */
   const comps = D.top_companies || DK.top_companies || [];
   document.getElementById('companiesBlock').innerHTML = comps.length
-    ? comps.map((c, i) => companyBlock(c, i)).join('')
+    ? comps.map((comp3, idx3) => companyBlock(comp3, idx3)).join('')
     : '<div style="padding:20px;text-align:center;color:var(--text4);font-size:12px">Нет данных по компаниям</div>';
 
   /* Insights */

@@ -400,7 +400,26 @@ if (hist.length) {
       plugins:{...chartBase.plugins,
         legend:{display:true,position:'top',align:'end',
           labels:{color:'#9CA3AF',font:{size:10},padding:12,usePointStyle:true,pointStyleWidth:8}},
-        tooltip:{...CHART_TT,callbacks:{label:ctx=>`${ctx.dataset.label}: ${ctx.raw.toFixed(1)}%`}}
+        tooltip:{
+          ...CHART_TT,
+          mode:'index',
+          intersect:false,
+          callbacks:{
+            title: items => `${items[0].label}`,
+            label: ctx => {
+              const v = ctx.raw;
+              const ds = ctx.dataset.label;
+              if(ds.includes('Чаты')) return ` Доля чатов: ${v.toFixed(1)}% ${v<42?'🔴 ниже нормы':v>50?'🟢 норма':'🟡'}`;
+              if(ds.includes('LCR'))  return ` LCR >5сек: ${v.toFixed(1)}% ${v>7?'🔴 высокий':v>5?'🟡':'🟢'}`;
+              return ` ${ds}: ${v.toFixed(1)}%`;
+            },
+            afterBody: items => {
+              const chatItem = items.find(i=>i.dataset.label?.includes('Чаты'));
+              if(chatItem && chatItem.raw < 42) return ['', '⚠ Ниже целевого уровня (42%)'];
+              return [];
+            }
+          }
+        }
       }
     }
   });

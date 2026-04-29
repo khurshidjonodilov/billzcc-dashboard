@@ -249,44 +249,24 @@ document.getElementById('insightsBlock').innerHTML = CS.insights.map(ins => {
 }).join('');
 
 const monthNames = CS.by_month.map(m=>m.month);
-new Chart(document.getElementById('monthlyChart'), {
-  type:'bar',
-  data:{labels:monthNames, datasets:[
-    {label:'Тикеты', data:CS.by_month.map(m=>m.tickets), backgroundColor:'rgba(196,148,255,0.8)', borderRadius:4, yAxisID:'y'},
-    {label:'Затраты тыс.', data:CS.by_month.map(m=>Math.round(m.cost/1000)), backgroundColor:'rgba(239,68,68,0.55)', borderRadius:4, yAxisID:'y1'},
-  ]},
-  options:{...chartBase, scales:{
-    x:{grid:{display:false}},
-    y:{grid:{color:CHART_GRID},title:{display:true,text:'Тикеты',color:'#7E92BC',font:{size:10}}},
-    y1:{position:'right',grid:{display:false},title:{display:true,text:'тыс. сўм',color:'#7E92BC',font:{size:10}}},
-  }, plugins:{...chartBase.plugins, legend:{display:true,labels:{color:'#7E92BC',font:{size:10}}}}},
-});
+  buildNeonLine('monthlyChart',
+    trainData.months||[], 
+    [{label:'Обучений',data:trainData.counts||[],color:'#8B5CF6',width:2.5}],
+    {yFmt:v=>v,tooltipFmt:ctx=>` ${ctx.raw} обучений`});
 
-new Chart(document.getElementById('typeChart'), {
-  type:'bar',
-  data:{labels:monthNames, datasets:[
-    {label:'Частичное', data:CS.by_month.map(m=>m.partial), backgroundColor:'rgba(196,148,255,0.85)', borderRadius:3, stack:'a'},
-    {label:'Полное',    data:CS.by_month.map(m=>m.full),    backgroundColor:'rgba(239,68,68,0.75)',   borderRadius:3, stack:'a'},
-  ]},
-  options:{...chartBase, scales:{x:{grid:{display:false},stacked:true},y:{grid:{color:CHART_GRID},stacked:true}},
-    plugins:{...chartBase.plugins, legend:{display:true,labels:{color:'#7E92BC',font:{size:10}}}}},
-});
+  buildNeonDoughnut('typeChart',
+    ['Частичные','Полные'],
+    [CS.partial_tickets||2055, CS.full_tickets||153],
+    ['#3B82F6','#10B981'],{cutout:'60%'});
 
 const ks = CS.by_ks_manager;
-new Chart(document.getElementById('ksChart'), {
-  type:'bar',
-  data:{
-    labels:ks.map(k=>k.name.length>18?k.name.slice(0,18)+'…':k.name),
-    datasets:[{
-      data:ks.map(k=>k.tickets),
-      backgroundColor:ks.map(k=>k.big_base ? '#FCD34D' : 'rgba(124,58,237,0.75)'),
-      borderRadius:3,
-    }],
-  },
-  options:{...chartBase, indexAxis:'y',
-    scales:{x:{grid:{color:CHART_GRID}},y:{grid:{display:false},ticks:{font:{size:9}}}},
-  },
-});
+  if(ksData && ksData.length){
+    buildNeonHorizBar('ksChart',
+      ksData.slice(0,10).map(k=>k.name.split(' ')[0]),
+      ksData.slice(0,10).map(k=>k.total),
+      (v,i)=>NEON_COLORS[i%NEON_COLORS.length]+'CC',
+      {tooltipFmt:ctx=>` ${ctx.raw} обучений`});
+  }
 
 document.getElementById('ksTable').innerHTML = ks.map((k,i)=>{
   const costCol = k.cost>1_500_000?'#F87171':k.cost>700_000?'#FCD34D':'#7E92BC';
@@ -329,20 +309,13 @@ document.getElementById('storeKsTable').innerHTML = CS.by_store_ks.map((r,i)=>{
 }).join('');
 
 const lblData = CS.top_labels.slice(0,10);
-new Chart(document.getElementById('labelsChart'), {
-  type:'bar',
-  data:{
-    labels:lblData.map(l=>l.name.length>32?l.name.slice(0,32)+'…':l.name),
-    datasets:[{
-      data:lblData.map(l=>l.tickets),
-      backgroundColor:lblData.map(l=>l.type==='Полное'?'rgba(239,68,68,0.8)':'rgba(196,148,255,0.75)'),
-      borderRadius:3,
-    }],
-  },
-  options:{...chartBase, indexAxis:'y',
-    scales:{x:{grid:{color:CHART_GRID}},y:{grid:{display:false},ticks:{font:{size:9}}}},
-  },
-});
+  if(storeData && storeData.length){
+    buildNeonHorizBar('labelsChart',
+      storeData.slice(0,10).map(s=>s.name&&s.name.length>20?s.name.slice(0,20)+'…':s.name||'—'),
+      storeData.slice(0,10).map(s=>s.total),
+      (v,i)=>NEON_COLORS[i%NEON_COLORS.length]+'CC',
+      {tooltipFmt:ctx=>` ${ctx.raw} обучений`});
+  }
 
 document.getElementById('labelsTbody').innerHTML = CS.top_labels.map(l=>`<tr>
   <td class="lbl-name">${l.name}</td>

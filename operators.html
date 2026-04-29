@@ -122,9 +122,9 @@
   </div>
   <div class="row two" id="chartsRow2">
     <div class="card">
-      <div class="card-hd"><div class="card-title">SLA % по операторам</div><div class="card-note">цель ≥ 80% · только чаты</div></div>
+      <div class="card-hd"><div class="card-title">SLA % по операторам</div><div class="card-note">цель ≥ 90% · только чаты</div></div>
       <div style="position:relative;height:260px"><canvas id="slaChart"></canvas></div>
-      <div class="formula-bar"><span class="f-key">📐 SLA</span> = кол-во чатов с FRT ≤ 1мин / все замеренные чаты × 100% &nbsp;·&nbsp; <span class="f-key">Цель</span>: <span class="f-val">≥ 80%</span></div>
+      <div class="formula-bar"><span class="f-key">📐 SLA</span> = кол-во чатов с FRT ≤ 1мин / все замеренные чаты × 100% &nbsp;·&nbsp; <span class="f-key">Цель</span>: <span class="f-val">≥ 90%</span></div>
     </div>
     <div class="card">
       <div class="card-hd"><div class="card-title">CSAT % по операторам</div><div class="card-note">цель ≥ 95% · оценки «Отлично»</div></div>
@@ -263,7 +263,7 @@ function render() {
     `<span class="pill a">${ops.length} операторов</span>`,
     `<span class="pill">${fmt.num(totalT)} тикетов</span>`,
     `<span class="pill">CPT: ${fmt.num(CPT)} сум</span>`,
-    `<span class="pill ${ops.filter(o=>(o.sla_pct||0)>=80).length/ops.length>=0.7?'g':''}">SLA ≥80%: ${ops.filter(o=>(o.sla_pct||0)>=80).length}/${ops.length}</span>`,
+    `<span class="pill ${ops.filter(o=>(o.sla_pct||0)>=90).length/ops.length>=0.7?'g':''}">SLA ≥90%: ${ops.filter(o=>(o.sla_pct||0)>=90).length}/${ops.length}</span>`,
     `<span class="pill ${ops.filter(o=>(o.rating_pct||0)>=95).length/ops.length>=0.7?'g':''}">CSAT ≥95%: ${ops.filter(o=>(o.rating_pct||0)>=95).length}/${ops.length}</span>`,
   ].join('');
 
@@ -273,7 +273,7 @@ function render() {
   document.getElementById('kpiGrid').innerHTML = [
     kpi('Операторов',      String(ops.length),          '7–8 в смене ежедневно', 'cyan',   '', [], [], 'Активных операторов за период'),
     kpi('Всего тикетов',   fmt.num(totalT),              `≈${fmt.num(Math.round(totalT/ops.length))} на опер.`, 'blue', '', [], [], 'Тикеты / кол-во операторов = нагрузка'),
-    kpi('SLA среднее',     fmt.pct(avgSLA||0),           'FRT ≤ 1 мин · чаты',   avgSLA>=80?'green':'amber', '', [], [`Цель: ≥ 80%`], 'AVERAGE(SLA%) по операторам с замерами'),
+    kpi('SLA среднее',     fmt.pct(avgSLA||0),           'FRT ≤ 1 мин · чаты',   avgSLA>=90?'green':'amber', '', [], [`Цель: ≥ 90%`], 'AVERAGE(SLA%) по операторам с замерами'),
     kpi('CSAT среднее',    fmt.pct(avgCSAT||0),          'Отлично / оценённых',  avgCSAT>=95?'green':'amber','', [], [`Цель: ≥ 95%`], 'AVERAGE(CSAT%) по операторам с оценками'),
     kpi('Топ оператор',    ops[0]?.name||'—',            `${fmt.num(ops[0]?.tickets||0)} тикетов`, 'green', '🏆', [], [], 'Наибольший объём тикетов за период'),
     kpi('Лучший SLA',      (() => { const best=ops.filter(o=>o.sla_pct>0).sort((a,b)=>b.sla_pct-a.sla_pct)[0]; return best?`${best.name.split(' ')[0]} ${fmt.pct(best.sla_pct)}`:'—'; })(), 'наилучший SLA', 'sage', '✓'),
@@ -284,9 +284,9 @@ function render() {
   // Operator table
   document.getElementById('opTableBody').innerHTML = ops.map((op,i) => {
     const bw = Math.round(op.tickets/maxT*100);
-    const slaC = (op.sla_pct||0)>=80?'ok':(op.sla_pct||0)>=65?'warn':'bad';
+    const slaC = (op.sla_pct||0)>=90?'ok':(op.sla_pct||0)>=75?'warn':'bad';
     const csatC = (op.rating_pct||0)>=95?'ok':(op.rating_pct||0)>=90?'warn':(op.rated||0)>0?'bad':'';
-    const closeC = op.avg_close<=15?'f':op.avg_close<=35?'m':'s';
+    const closeC = op.avg_close<=4?'f':op.avg_close<=24?'m':'s';
     const isLeft = ['Шохина','Нурлан','Азизбек'].some(n=>op.name.includes(n));
     const isCs = op.name.includes('Алишерова') || op.name.includes('Робия А');
     const status = isLeft ? '<span class="b bad">Выбыл</span>' : isCs ? '<span class="b warn">→ КС</span>' : '<span class="b ok">Активен</span>';
@@ -361,12 +361,12 @@ function render() {
     data:{labels:names, datasets:[{
       label:'SLA %',
       data:slas,
-      backgroundColor: slas.map(v=>v>=80?'rgba(16,185,129,0.8)':v>=65?'rgba(245,158,11,0.8)':'rgba(239,68,68,0.8)'),
-      borderColor:     slas.map(v=>v>=80?'#10B981':v>=65?'#F59E0B':'#EF4444'),
+      backgroundColor: slas.map(v=>v>=90?'rgba(16,185,129,0.8)':v>=65?'rgba(245,158,11,0.8)':'rgba(239,68,68,0.8)'),
+      borderColor:     slas.map(v=>v>=90?'#10B981':v>=65?'#F59E0B':'#EF4444'),
       borderWidth:1, borderRadius:4,
     },{
-      label:'Цель 80%',
-      data:Array(ops.length).fill(80),
+      label:'Цель 90%',
+      data:Array(ops.length).fill(90),
       type:'line', borderColor:'rgba(96,165,250,0.6)',
       borderDash:[6,3], borderWidth:1.5, pointRadius:0, fill:false,
     }]},
@@ -475,19 +475,41 @@ function render() {
     borderWidth:1, borderRadius:2, stack:'a',
   }));
 
+  // Grouped line chart - easier to read trends per operator
+  const lineWeekDatasets = allOps.slice(0,8).map((opName,i)=>({
+    label: opName,
+    data: weeks.map(wk=>{
+      const found=(W[wk].operators||[]).find(o=>o.name.split(' ')[0]===opName);
+      return found?found.tickets:0;
+    }),
+    borderColor: NEON_COLORS[i%NEON_COLORS.length],
+    backgroundColor: 'transparent',
+    borderWidth: 2.5,
+    pointRadius: 5,
+    pointHoverRadius: 7,
+    pointBackgroundColor: NEON_COLORS[i%NEON_COLORS.length],
+    pointBorderColor: '#0A0C10',
+    pointBorderWidth: 1.5,
+    tension: 0.3,
+    fill: false,
+  }));
   charts.weekly = new Chart(document.getElementById('weeklyChart'),{
-    type:'bar',
-    data:{labels:weekLabels, datasets:wDatasets},
+    type:'line',
+    data:{labels:weekLabels, datasets:lineWeekDatasets},
     options:{...chartBase,
       scales:{
-        x:{grid:{display:false},stacked:true,ticks:{font:{size:11}}},
-        y:{grid:{color:'rgba(255,255,255,0.05)'},stacked:true,
-          ticks:{font:{size:10}}}
+        x:{grid:{display:false},ticks:{color:'#4B5563',font:{size:11}}},
+        y:{grid:{color:'rgba(255,255,255,0.055)'},
+          ticks:{color:'#4B5563',font:{size:10},callback:v=>v+' тик'}
+        }
       },
       plugins:{...chartBase.plugins,
         legend:{display:true,position:'bottom',
-          labels:{color:'#9CA3AF',font:{size:10},padding:10,usePointStyle:true}},
-        tooltip:{...CHART_TT}
+          labels:{color:'#9CA3AF',font:{size:10},padding:8,usePointStyle:true,pointStyleWidth:8,
+            boxWidth:8,boxHeight:8}},
+        tooltip:{...CHART_TT,callbacks:{
+          label:ctx=>` ${ctx.dataset.label}: ${ctx.raw} тик`
+        }}
       }
     }
   });

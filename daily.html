@@ -219,9 +219,10 @@ function render() {
     kpi('Доля чатов', fmt.pct(D.chats / D.tickets * 100),
       `Звонки: ${fmt.pct(D.calls / D.tickets * 100)}`, 'purple'),
     kpi('Затраты', fmt.mln(D.cost), `${fmt.num(D.tickets)} × 9 865 сум`, 'amber'),
-    kpi('Пропущено', fmt.num(D.missed_calls || 0),
-      `из ${fmt.num(D.incoming_calls || D.calls)} входящих`,
-      (D.missed_calls || 0) > 15 ? 'red' : 'dark'),
+    kpi('Пропущено (АТС)', fmt.num(D.missed_calls || 0),
+      `из ${fmt.num(D.incoming_calls || D.calls)} входящих · LCR ${D.lcr||0}%`,
+      (D.missed_calls || 0) > 15 ? 'red' : (D.missed_calls||0) > 8 ? 'amber' : 'dark',
+      '','',[], '📐 Пропущ. / Входящие × 100 · данные из АТС'),
   ].join('');
 
   /* Alerts */

@@ -135,15 +135,53 @@
 
   <!-- Cost by label chart -->
   <div class="sec"><div class="sec-num">05</div><div class="sec-title">Затраты по топ категориям</div><div class="sec-line"></div></div>
+  <!-- Row 1: Bar chart + Doughnut -->
   <div class="row two">
     <div class="card">
-      <div class="card-hd"><div class="card-title">Топ-10 категорий по стоимости</div></div>
+      <div class="card-hd">
+        <div class="card-title">Топ-10 меток по тикетам</div>
+        <div class="card-note">
+          <span style="color:#EF4444">■</span> Senior &nbsp;
+          <span style="color:#F59E0B">■</span> Middle &nbsp;
+          <span style="color:#3B82F6">■</span> Junior
+        </div>
+      </div>
       <div style="position:relative;height:300px"><canvas id="costByLabelChart"></canvas></div>
+      <div class="card-formula">📐 Затраты метки = тикеты × CPT 9 865 сум · Уровень = сложность кейса</div>
     </div>
     <div class="card">
       <div class="card-hd"><div class="card-title">Распределение по уровням</div></div>
-      <div style="position:relative;height:200px"><canvas id="levelPieChart"></canvas></div>
-      <div id="levelStats" style="margin-top:12px"></div>
+      <div style="position:relative;height:180px"><canvas id="levelPieChart"></canvas></div>
+      <div id="levelStats" style="margin-top:10px"></div>
+      <div class="card-formula">📐 SENIOR=сложные тех. кейсы · MIDDLE=опыт · JUNIOR=базовые</div>
+    </div>
+  </div>
+
+  <!-- Row 2: Level breakdown cards -->
+  <div class="row three" style="margin-top:10px">
+    <div class="card" id="seniorCard">
+      <div class="card-hd">
+        <div class="card-title" style="color:#F87171">🔴 SENIOR</div>
+        <div class="card-note" id="seniorStats"></div>
+      </div>
+      <div id="seniorLabels"></div>
+      <div class="card-formula">📐 Иззатбек + Атабек · Сложные технические кейсы · AHT &gt; 15 мин</div>
+    </div>
+    <div class="card" id="middleCard">
+      <div class="card-hd">
+        <div class="card-title" style="color:#FCD34D">🟡 MIDDLE</div>
+        <div class="card-note" id="middleStats"></div>
+      </div>
+      <div id="middleLabels"></div>
+      <div class="card-formula">📐 Опытные операторы · Оборудование / Каталог / Управление</div>
+    </div>
+    <div class="card" id="juniorCard">
+      <div class="card-hd">
+        <div class="card-title" style="color:#60A5FA">🔵 JUNIOR</div>
+        <div class="card-note" id="juniorStats"></div>
+      </div>
+      <div id="juniorLabels"></div>
+      <div class="card-formula">📐 Любой оператор · Базовые навыки · AHT &lt; 5 мин</div>
     </div>
   </div>
 
@@ -313,52 +351,53 @@ let charts = {};
   // ── Section 05: Затраты по топ категориям ──────────────────────────────
   const lc = Q.label_categories || {};
   const lcKeys = ['senior','middle','junior'];
+  const lvlColors = { senior:'#EF4444', middle:'#F59E0B', junior:'#3B82F6' };
+  const lvlRgb    = { senior:'239,68,68', middle:'245,158,11', junior:'59,130,246' };
 
-  // Build top labels from label_categories
+  // All labels merged and sorted
   const allLabels = lcKeys.flatMap(lvl =>
     (lc[lvl]?.labels || []).map(l => ({
-      name: l.name,
-      tickets: l.tickets,
-      cost: Math.round(l.tickets * 9865),
-      level: lvl
+      name: l.name, tickets: l.tickets,
+      med_close: l.med_close_min || 0,
+      cost: Math.round(l.tickets * 9865), level: lvl
     }))
   ).sort((a,b) => b.tickets - a.tickets).slice(0, 10);
 
+  // Top-10 horizontal bar
   if (allLabels.length) {
-    const levelColors = { senior:'#EF4444', middle:'#F59E0B', junior:'#3B82F6' };
     charts.costByLabel = buildNeonBar('costByLabelChart',
-      allLabels.map(l => l.name.length > 28 ? l.name.slice(0,28)+'…' : l.name),
+      allLabels.map(l => l.name.length > 32 ? l.name.slice(0,32)+'…' : l.name),
       [{
         data: allLabels.map(l => l.tickets),
-        colorFn: (v,i) => {
-          const lvl = allLabels[i]?.level || 'junior';
-          const c = lvl==='senior'?'239,68,68':lvl==='middle'?'245,158,11':'59,130,246';
-          return `rgba(${c},0.82)`;
-        },
+        colorFn: (v,i) => `rgba(${lvlRgb[allLabels[i]?.level]||'59,130,246'},0.85)`,
       }],
       { horizontal: true,
         yFmt: v => v.toLocaleString('ru'),
-        tooltipFmt: ctx => ` ${ctx.raw.toLocaleString('ru')} тикетов · ${(ctx.raw*9865/1e6).toFixed(2)} млн сум`
+        tooltipFmt: ctx => {
+          const l = allLabels[ctx.dataIndex];
+          return ` ${l.name.slice(0,40)}: ${ctx.raw.toLocaleString('ru')} тик · ${(ctx.raw*9865/1e6).toFixed(2)} млн · ${l.level.toUpperCase()} · ${l.med_close}мин`;
+        }
       }
     );
   }
 
-  // Level pie chart
+  // Level doughnut
   const levelPieEl = document.getElementById('levelPieChart');
   if (levelPieEl && Object.keys(lc).length) {
     const lvlData = lcKeys.filter(k => lc[k]).map(k => ({
-      name: k.charAt(0).toUpperCase() + k.slice(1),
-      tickets: lc[k].tickets || 0,
-      cost: lc[k].cost_mln || 0,
+      key: k, name: k.charAt(0).toUpperCase()+k.slice(1),
+      tickets: lc[k].tickets||0, cost: lc[k].cost_mln||0,
+      desc: lc[k].description||''
     }));
+    const total = lvlData.reduce((s,l)=>s+l.tickets,0);
     charts.levelPie = new Chart(levelPieEl, {
       type: 'doughnut',
       data: {
         labels: lvlData.map(l => `${l.name} (${l.tickets.toLocaleString('ru')} тик)`),
         datasets: [{
           data: lvlData.map(l => l.tickets),
-          backgroundColor: ['rgba(239,68,68,0.82)','rgba(245,158,11,0.82)','rgba(59,130,246,0.82)'],
-          borderColor: ['#EF4444','#F59E0B','#3B82F6'],
+          backgroundColor: lvlData.map(l=>`rgba(${lvlRgb[l.key]},0.85)`),
+          borderColor: lvlData.map(l=>lvlColors[l.key]),
           borderWidth: 2, hoverOffset: 10,
         }]
       },
@@ -366,15 +405,63 @@ let charts = {};
         plugins: { ...chartBase.plugins,
           legend: { display: true, position: 'bottom',
             labels: { color: '#9CA3AF', font: { size: 11, weight: '600' },
-              padding: 14, usePointStyle: true, pointStyleWidth: 10 }
+              padding: 12, usePointStyle: true, pointStyleWidth: 10 }
           },
           tooltip: { ...CHART_TT, callbacks: {
-            label: ctx => ` ${ctx.label}: ${ctx.raw.toLocaleString('ru')} тик · ${lvlData[ctx.dataIndex].cost.toFixed(1)} млн`
+            label: ctx => ` ${ctx.label}: ${ctx.raw.toLocaleString('ru')} тик · ${lvlData[ctx.dataIndex].cost.toFixed(1)} млн сум`
           }}
         }
       }
     });
+
+    // Level stats under pie
+    const statsEl = document.getElementById('levelStats');
+    if (statsEl) {
+      statsEl.innerHTML = lvlData.map(l => `
+        <div style="display:flex;align-items:center;gap:8px;padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.05)">
+          <span style="width:8px;height:8px;border-radius:2px;background:${lvlColors[l.key]};flex-shrink:0;display:inline-block"></span>
+          <span style="font-size:11px;font-weight:700;color:${lvlColors[l.key]};width:50px">${l.name}</span>
+          <span style="font-size:11px;color:var(--t1);flex:1">${l.tickets.toLocaleString('ru')} тик</span>
+          <span style="font-family:monospace;font-size:10px;color:var(--t3)">${l.cost.toFixed(1)} млн</span>
+          <span style="font-size:10px;color:var(--t4)">${(l.tickets/total*100).toFixed(0)}%</span>
+        </div>`).join('');
+    }
   }
+
+  // ── Per-level breakdown cards ─────────────────────────────────────────────
+  lcKeys.forEach(lvl => {
+    const d = lc[lvl]; if (!d) return;
+    const statsEl2 = document.getElementById(lvl+'Stats');
+    const labelsEl = document.getElementById(lvl+'Labels');
+    const col = lvlColors[lvl];
+    const rgb = lvlRgb[lvl];
+    const total_lvl = d.tickets || 0;
+
+    if (statsEl2) {
+      statsEl2.innerHTML = `${total_lvl.toLocaleString('ru')} тик · ${(d.cost_mln||0).toFixed(1)} млн`;
+    }
+    if (labelsEl) {
+      const maxT = Math.max(...(d.labels||[]).map(l=>l.tickets));
+      labelsEl.innerHTML = (d.labels||[]).map(l => {
+        const bw = Math.round(l.tickets/maxT*100);
+        const pct = (l.tickets/total_lvl*100).toFixed(0);
+        const name = l.name.length>40 ? l.name.slice(0,40)+'…' : l.name;
+        return `<div style="padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.04)">
+          <div style="display:flex;justify-content:space-between;margin-bottom:4px">
+            <span style="font-size:11px;color:var(--t1);font-weight:500">${name}</span>
+            <div style="display:flex;gap:8px;flex-shrink:0;margin-left:8px">
+              <span style="font-size:10px;font-weight:700;color:${col}">${l.tickets.toLocaleString('ru')}</span>
+              <span style="font-size:9px;color:var(--t3);font-family:monospace">${pct}%</span>
+              <span style="font-size:9px;color:var(--t4);font-family:monospace">${l.med_close_min||0}мин</span>
+            </div>
+          </div>
+          <div style="height:3px;background:rgba(255,255,255,0.06);border-radius:2px">
+            <div style="height:3px;width:${bw}%;background:rgba(${rgb},0.75);border-radius:2px"></div>
+          </div>
+        </div>`;
+      }).join('');
+    }
+  });
 
 })(); // end initQuarterly
 </script>

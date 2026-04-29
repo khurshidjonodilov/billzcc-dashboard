@@ -250,7 +250,7 @@ document.getElementById('insightsBlock').innerHTML = CS.insights.map(ins => {
 
 const monthNames = CS.by_month.map(m=>m.month);
   const trainMonths = CS.by_month.map(m=>m.month);
-  const trainCounts = CS.by_month.map(m=>m.train_tickets||0);
+  const trainCounts = CS.by_month.map(m=>m.tickets||m.train_tickets||0);
   buildNeonLine('monthlyChart',
     trainMonths,
     [{label:'Обучений',data:trainCounts,color:'#8B5CF6',width:2.5}],

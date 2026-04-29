@@ -509,19 +509,24 @@ async function exportPagePNG(selector, filename) {
 
     const canvas = await html2canvas(el, {
       backgroundColor: bgHex,
-      scale: 2,
+      scale: 2.5,
       useCORS: true,
       allowTaint: false,
       logging: false,
-      imageTimeout: 0,
+      imageTimeout: 15000,
       onclone: (cloneDoc) => {
+        // Force document background to be exactly the target color
+        cloneDoc.documentElement.style.background = bgHex;
         // 1. Kill ::after glow gradient that confuses html2canvas CSS parser
         const fix = cloneDoc.createElement('style');
         fix.textContent = [
-          'body::before, body::after { display:none !important; }',
-          'body { background-color:' + bgHex + ' !important; background-image:none !important; }',
-          '.top-nav { backdrop-filter:none !important; -webkit-backdrop-filter:none !important; }',
-          '.card, .kpi { box-shadow:none !important; }',
+          '*, *::before, *::after { animation: none !important; transition: none !important; }',
+          'body::before, body::after { display:none !important; background:none !important; }',
+          'body { background:' + bgHex + ' !important; }',
+          '.top-nav { backdrop-filter:none !important; -webkit-backdrop-filter:none !important; background:' + bgHex + ' !important; }',
+          '.wrap { animation: none !important; }',
+          '.kpi, .card { box-shadow: none !important; animation: none !important; }',
+          '.live-dot { animation: none !important; }',
         ].join('\n');
         cloneDoc.head.appendChild(fix);
 

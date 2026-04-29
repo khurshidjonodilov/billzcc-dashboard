@@ -189,7 +189,10 @@
 </div>
 
 <script>
+// Wrap in requestAnimationFrame to ensure full DOM+Chart.js initialization
+(function initQuarterly() {
 const Q = BILLZ_DATA.quarterly;
+if(!Q || !Q.by_month) { console.error('No quarterly data'); return; }
 const months = Q.by_month;
 const mnNames = months.map(m=>m.name);
 
@@ -315,7 +318,7 @@ let charts = {};
       [{data:tL.map(l=>Math.round(l.cost/1e6)),colorFn:(v,i)=>NEON_COLORS[i%NEON_COLORS.length]+'CC'}],
       {yFmt:v=>v+'млн',tooltipFmt:ctx=>` ${ctx.raw} млн сум`});
   }
-
+})(); // end initQuarterly
 </script>
 
 

@@ -78,7 +78,7 @@
       <div class="card-hd">
         <div class="card-title">Все операторы · показатели за период</div>
         <div style="display:flex;gap:8px;align-items:center">
-          <button class="png-btn" style="padding:4px 10px;font-size:10px" onclick="exportSectionPNG('opTableWrap','operators-table')">📷 PNG</button>
+          <button onclick="exportSectionPNG(this.closest('.row').id||'chartsRow1','billz-section')" style="background:rgba(139,92,246,0.15);border:1px solid rgba(139,92,246,0.3);border-radius:6px;padding:4px 12px;font-size:10px;font-weight:600;color:#C4B5FD;cursor:pointer;font-family:inherit">📷 PNG</button>
           <div class="card-note">SLA = % чатов FRT≤1мин · CSAT = Отлично / оценённых</div>
         </div>
       </div>
@@ -110,7 +110,7 @@
 
   <!-- 02 CHARTS -->
   <div class="sec"><div class="sec-num">02</div><div class="sec-title">Нагрузка и распределение тикетов</div><div class="sec-line"></div>
-    <button class="png-btn" style="padding:4px 10px;font-size:10px" onclick="exportSectionPNG('chartsRow1','operators-load')">📷 PNG</button>
+    <button onclick="exportSectionPNG(this.closest('.row').id||'chartsRow1','billz-section')" style="background:rgba(139,92,246,0.15);border:1px solid rgba(139,92,246,0.3);border-radius:6px;padding:4px 12px;font-size:10px;font-weight:600;color:#C4B5FD;cursor:pointer;font-family:inherit">📷 PNG</button>
   </div>
   <div class="row two" id="chartsRow1">
     <div class="card">
@@ -127,7 +127,7 @@
 
   <!-- 03 QUALITY -->
   <div class="sec"><div class="sec-num">03</div><div class="sec-title">Качество обслуживания · SLA и CSAT</div><div class="sec-line"></div>
-    <button class="png-btn" style="padding:4px 10px;font-size:10px" onclick="exportSectionPNG('chartsRow2','operators-quality')">📷 PNG</button>
+    <button onclick="exportSectionPNG(this.closest('.row').id||'chartsRow1','billz-section')" style="background:rgba(139,92,246,0.15);border:1px solid rgba(139,92,246,0.3);border-radius:6px;padding:4px 12px;font-size:10px;font-weight:600;color:#C4B5FD;cursor:pointer;font-family:inherit">📷 PNG</button>
   </div>
   <div class="row two" id="chartsRow2">
     <div class="card">
@@ -144,7 +144,7 @@
 
   <!-- 04 COSTS -->
   <div class="sec"><div class="sec-num">04</div><div class="sec-title">Затраты по операторам (CPT)</div><div class="sec-line"></div>
-    <button class="png-btn" style="padding:4px 10px;font-size:10px" onclick="exportSectionPNG('chartsRow3','operators-costs')">📷 PNG</button>
+    <button onclick="exportSectionPNG(this.closest('.row').id||'chartsRow1','billz-section')" style="background:rgba(139,92,246,0.15);border:1px solid rgba(139,92,246,0.3);border-radius:6px;padding:4px 12px;font-size:10px;font-weight:600;color:#C4B5FD;cursor:pointer;font-family:inherit">📷 PNG</button>
   </div>
   <div class="row two" id="chartsRow3">
     <div class="card">
@@ -161,7 +161,7 @@
 
   <!-- 05 WEEKLY DYNAMICS -->
   <div class="sec"><div class="sec-num">05</div><div class="sec-title">Динамика нагрузки по неделям</div><div class="sec-line"></div>
-    <button class="png-btn" style="padding:4px 10px;font-size:10px" onclick="exportSectionPNG('chartsRow4','operators-weekly')">📷 PNG</button>
+    <button onclick="exportSectionPNG(this.closest('.row').id||'chartsRow1','billz-section')" style="background:rgba(139,92,246,0.15);border:1px solid rgba(139,92,246,0.3);border-radius:6px;padding:4px 12px;font-size:10px;font-weight:600;color:#C4B5FD;cursor:pointer;font-family:inherit">📷 PNG</button>
   </div>
   <div class="row one" id="chartsRow4">
     <div class="card">
@@ -192,7 +192,7 @@
       <div class="export-bar-sub">Excel · перформанс · все метрики · апрель 2026</div>
     </div>
     <div style="display:flex;gap:8px">
-      <button class="png-btn" onclick="exportPagePNG('.wrap','billz-operators-full')">📷 📷 Страница PNG</button>
+      <button onclick="exportPagePNG('.wrap','billz-operators-full')" style="display:inline-flex;align-items:center;gap:6px;background:linear-gradient(135deg,#4C1D95,#7C3AED);border:none;border-radius:9px;padding:9px 18px;font-size:12px;font-weight:600;color:#fff;cursor:pointer;font-family:inherit;box-shadow:0 2px 16px rgba(124,58,237,0.3)">📷 Страница PNG</button>
       <button class="export-btn" onclick="checkAndExport()">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
         Скачать Excel

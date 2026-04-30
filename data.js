@@ -2441,7 +2441,11 @@ const BILLZ_DATA = {
           "cost": 88785
         }
       ],
-      "top_companies": []
+      "top_companies": [],
+      "afrt": "47с",
+      "afrt_raw": 0.799,
+      "repeat_pct": 5.3,
+      "sla_not_met": 24.2
     }
   },
   "daily": {

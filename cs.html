@@ -290,9 +290,9 @@ document.getElementById('ksTable').innerHTML = ks.map((k,i)=>{
     <td style="font-weight:700;color:var(--amber2);font-size:11px">${i+1}</td>
     <td class="n-name" style="font-size:12px">${k.name}${badge}</td>
     <td class="n-num">${fmt.num(k.tickets)}</td>
-    <td style="color:var(--text3)">${fmt.num(k.partial)}</td>
-    <td style="color:var(--red2)">${fmt.num(k.full)}</td>
-    <td style="font-family:var(--mono);font-size:11px;color:var(--text3)">${k.med_close} мин</td>
+    <td style="color:var(--t2)">${k.partial!=null?fmt.num(k.partial):"—"}</td>
+    <td style="color:var(--red2)">${k.full!=null?fmt.num(k.full):"—"}</td>
+    <td style="font-family:var(--mono);font-size:11px;color:var(--t3)">${k.med_close!=null?k.med_close+" мин":"—"}</td>
     <td style="color:${costCol};font-weight:700;font-family:var(--mono);font-size:11px">${fmt.mln(k.cost)}</td>
   </tr>${note}`;
 }).join('');

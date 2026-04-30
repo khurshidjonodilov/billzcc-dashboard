@@ -1417,7 +1417,93 @@ const BILLZ_DATA = {
           "cost": 266355
         }
       ],
-      "top_companies": []
+      "top_companies": [
+        {
+          "name": "BILLZ",
+          "tickets": 354,
+          "desired": 142,
+          "undesired": 186,
+          "cost": 3492210,
+          "top_labels": [
+            {
+              "label": "Документооборот - Создание ссылки для оплаты",
+              "count": 52
+            },
+            {
+              "label": "Учётная запись - Блокировка/Разблокировка аккаунта",
+              "count": 20
+            }
+          ]
+        },
+        {
+          "name": "Bloom",
+          "tickets": 35,
+          "desired": 14,
+          "undesired": 20,
+          "cost": 345275,
+          "top_labels": [
+            {
+              "label": "Маркетинг - Работа с Сертификатом/Ваучером",
+              "count": 7
+            },
+            {
+              "label": "Новая продажа - Не удаётся сделать продажу",
+              "count": 3
+            }
+          ]
+        },
+        {
+          "name": "INBAZAR",
+          "tickets": 29,
+          "desired": 3,
+          "undesired": 26,
+          "cost": 286085,
+          "top_labels": [
+            {
+              "label": "Кассовые смены — Открытие/Закрытие смен",
+              "count": 23
+            },
+            {
+              "label": "Новая продажа - Не удаётся сделать продажу",
+              "count": 3
+            }
+          ]
+        },
+        {
+          "name": "Kolbasachi",
+          "tickets": 28,
+          "desired": 14,
+          "undesired": 12,
+          "cost": 276220,
+          "top_labels": [
+            {
+              "label": "Оборудование - Установка Anydesk/BILLZ Desktop/Программы компьютера и тд.",
+              "count": 4
+            },
+            {
+              "label": "Каталог - Расхождения количества товаров",
+              "count": 2
+            }
+          ]
+        },
+        {
+          "name": "gross-market",
+          "tickets": 18,
+          "desired": 11,
+          "undesired": 7,
+          "cost": 177570,
+          "top_labels": [
+            {
+              "label": "Кассовые смены — Открытие/Закрытие смен",
+              "count": 3
+            },
+            {
+              "label": "Desktop - Ошибка синхронизации",
+              "count": 2
+            }
+          ]
+        }
+      ]
     },
     "week_15": {
       "label": "Нед 15 · 6–12 апр",
@@ -1683,7 +1769,93 @@ const BILLZ_DATA = {
           "cost": 295950
         }
       ],
-      "top_companies": []
+      "top_companies": [
+        {
+          "name": "BILLZ",
+          "tickets": 479,
+          "desired": 177,
+          "undesired": 249,
+          "cost": 4725335,
+          "top_labels": [
+            {
+              "label": "Документооборот - Создание ссылки для оплаты",
+              "count": 81
+            },
+            {
+              "label": "Учётная запись - Блокировка/Разблокировка аккаунта",
+              "count": 44
+            }
+          ]
+        },
+        {
+          "name": "INBAZAR",
+          "tickets": 31,
+          "desired": 12,
+          "undesired": 19,
+          "cost": 305815,
+          "top_labels": [
+            {
+              "label": "Кассовые смены — Открытие/Закрытие смен",
+              "count": 14
+            },
+            {
+              "label": "Новая продажа - Не удаётся сделать продажу",
+              "count": 4
+            }
+          ]
+        },
+        {
+          "name": "Bloom",
+          "tickets": 29,
+          "desired": 12,
+          "undesired": 16,
+          "cost": 286085,
+          "top_labels": [
+            {
+              "label": "Кассовые смены — Открытие/Закрытие смен",
+              "count": 5
+            },
+            {
+              "label": "Баг (реквест)",
+              "count": 3
+            }
+          ]
+        },
+        {
+          "name": "gross-market",
+          "tickets": 27,
+          "desired": 10,
+          "undesired": 17,
+          "cost": 266355,
+          "top_labels": [
+            {
+              "label": "Desktop - Ошибка синхронизации",
+              "count": 9
+            },
+            {
+              "label": "Оборудование - Установка Anydesk/BILLZ Desktop/Программы компьютера и тд.",
+              "count": 4
+            }
+          ]
+        },
+        {
+          "name": "Kolbasachi",
+          "tickets": 26,
+          "desired": 14,
+          "undesired": 11,
+          "cost": 256490,
+          "top_labels": [
+            {
+              "label": "Баг (реквест), Desktop - Ошибка синхронизации",
+              "count": 6
+            },
+            {
+              "label": "Оборудование - Установка Anydesk/BILLZ Desktop/Программы компьютера и тд.",
+              "count": 3
+            }
+          ]
+        }
+      ]
     },
     "week_16": {
       "label": "Нед 16 · 13–19 апр",
@@ -1929,7 +2101,93 @@ const BILLZ_DATA = {
           "cost": 266355
         }
       ],
-      "top_companies": []
+      "top_companies": [
+        {
+          "name": "BILLZ",
+          "tickets": 482,
+          "desired": 148,
+          "undesired": 284,
+          "cost": 4754930,
+          "top_labels": [
+            {
+              "label": "Учётная запись - Блокировка/Разблокировка аккаунта",
+              "count": 58
+            },
+            {
+              "label": "Документооборот - Создание ссылки для оплаты",
+              "count": 56
+            }
+          ]
+        },
+        {
+          "name": "Bloom",
+          "tickets": 38,
+          "desired": 21,
+          "undesired": 16,
+          "cost": 374870,
+          "top_labels": [
+            {
+              "label": "Маркетинг - Работа с Сертификатом/Ваучером",
+              "count": 3
+            },
+            {
+              "label": "Баг (реквест), Кассовые смены — Расхождение суммы",
+              "count": 2
+            }
+          ]
+        },
+        {
+          "name": "unmarkaz",
+          "tickets": 17,
+          "desired": 6,
+          "undesired": 4,
+          "cost": 167705,
+          "top_labels": [
+            {
+              "label": "Оборудование - Установка/Настройка/Удаление принтера",
+              "count": 2
+            },
+            {
+              "label": "Каталог — запрос на добавление товара",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "name": "gross-market",
+          "tickets": 14,
+          "desired": 8,
+          "undesired": 6,
+          "cost": 138110,
+          "top_labels": [
+            {
+              "label": "Кассовые смены — Открытие/Закрытие смен",
+              "count": 5
+            },
+            {
+              "label": "Desktop - Ошибка синхронизации",
+              "count": 4
+            }
+          ]
+        },
+        {
+          "name": "seoul-market1",
+          "tickets": 14,
+          "desired": 8,
+          "undesired": 5,
+          "cost": 138110,
+          "top_labels": [
+            {
+              "label": "Desktop - Ошибка синхронизации",
+              "count": 4
+            },
+            {
+              "label": "Инвентаризация — консультация по модулю (частичное обучение)",
+              "count": 3
+            }
+          ]
+        }
+      ]
     },
     "week_17": {
       "label": "Нед 17 · 20–26 апр",
@@ -2185,7 +2443,93 @@ const BILLZ_DATA = {
           "cost": 266355
         }
       ],
-      "top_companies": []
+      "top_companies": [
+        {
+          "name": "BILLZ",
+          "tickets": 385,
+          "desired": 169,
+          "undesired": 196,
+          "cost": 3798025,
+          "top_labels": [
+            {
+              "label": "Учётная запись - Блокировка/Разблокировка аккаунта",
+              "count": 38
+            },
+            {
+              "label": "Документооборот - Создание ссылки для оплаты",
+              "count": 33
+            }
+          ]
+        },
+        {
+          "name": "INBAZAR",
+          "tickets": 29,
+          "desired": 5,
+          "undesired": 24,
+          "cost": 286085,
+          "top_labels": [
+            {
+              "label": "Кассовые смены — Открытие/Закрытие смен",
+              "count": 25
+            },
+            {
+              "label": "Оборудование - Установка/Настройка/Удаление принтера",
+              "count": 2
+            }
+          ]
+        },
+        {
+          "name": "Bloom",
+          "tickets": 28,
+          "desired": 13,
+          "undesired": 15,
+          "cost": 276220,
+          "top_labels": [
+            {
+              "label": "Маркетинг - Работа с Сертификатом/Ваучером",
+              "count": 7
+            },
+            {
+              "label": "Новая продажа - Возврат/Обмен",
+              "count": 4
+            }
+          ]
+        },
+        {
+          "name": "Я родился",
+          "tickets": 23,
+          "desired": 5,
+          "undesired": 18,
+          "cost": 226895,
+          "top_labels": [
+            {
+              "label": "Все продажи - Удаление/Редактирование продажи",
+              "count": 19
+            },
+            {
+              "label": "Кассовые смены — Открытие/Закрытие смен",
+              "count": 2
+            }
+          ]
+        },
+        {
+          "name": "Lattliv",
+          "tickets": 16,
+          "desired": 5,
+          "undesired": 11,
+          "cost": 157840,
+          "top_labels": [
+            {
+              "label": "Учётная запись - Помощь со входом в аккаунт",
+              "count": 6
+            },
+            {
+              "label": "Учётная запись - Не удаётся войти в аккаунт",
+              "count": 4
+            }
+          ]
+        }
+      ]
     },
     "week_18": {
       "label": "Нед 18 · 27–28 апр",
@@ -2441,7 +2785,89 @@ const BILLZ_DATA = {
           "cost": 88785
         }
       ],
-      "top_companies": [],
+      "top_companies": [
+        {
+          "name": "BILLZ",
+          "tickets": 119,
+          "desired": 58,
+          "undesired": 53,
+          "cost": 1173935,
+          "top_labels": [
+            {
+              "label": "Учётная запись - Блокировка/Разблокировка аккаунта",
+              "count": 13
+            },
+            {
+              "label": "Документооборот - Создание ссылки для оплаты",
+              "count": 12
+            }
+          ]
+        },
+        {
+          "name": "Bloom",
+          "tickets": 12,
+          "desired": 6,
+          "undesired": 6,
+          "cost": 118380,
+          "top_labels": [
+            {
+              "label": "Все продажи - Удаление/Редактирование продажи",
+              "count": 3
+            },
+            {
+              "label": "Кассовые смены — Открытие/Закрытие смен",
+              "count": 2
+            }
+          ]
+        },
+        {
+          "name": "INBAZAR",
+          "tickets": 9,
+          "desired": 1,
+          "undesired": 8,
+          "cost": 88785,
+          "top_labels": [
+            {
+              "label": "Кассовые смены — Открытие/Закрытие смен",
+              "count": 7
+            }
+          ]
+        },
+        {
+          "name": "BORN",
+          "tickets": 8,
+          "desired": 8,
+          "undesired": 0,
+          "cost": 78920,
+          "top_labels": [
+            {
+              "label": "Инвентаризация — создание инвентаризации",
+              "count": 2
+            },
+            {
+              "label": "Инвентаризация — консультация по модулю (частичное обучение)",
+              "count": 2
+            }
+          ]
+        },
+        {
+          "name": "antiqa-market",
+          "tickets": 8,
+          "desired": 4,
+          "undesired": 4,
+          "cost": 78920,
+          "top_labels": [
+            {
+              "label": "Новая продажа - Возврат/Обмен",
+              "count": 1
+            },
+            {
+              "label": "Баг (реквест), Новая продажа - Возврат/Обмен",
+              "count": 1
+            }
+          ]
+        }
+      ],
       "afrt": "47с",
       "afrt_raw": 0.799,
       "repeat_pct": 5.3,

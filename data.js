@@ -1371,8 +1371,9 @@ const BILLZ_DATA = {
           "close_rate": 99.5,
           "rating_pct": 87.5,
           "rated": 16,
-          "sla_pct": 78.0,
-          "cost": 2476115
+          "sla_pct": 92.5,
+          "cost": 2476115,
+          "frt_sec": 46
         },
         {
           "name": "Робия А.",
@@ -1381,8 +1382,9 @@ const BILLZ_DATA = {
           "close_rate": 99.5,
           "rating_pct": 100.0,
           "rated": 11,
-          "sla_pct": 58.9,
-          "cost": 2476115
+          "sla_pct": 90.6,
+          "cost": 2476115,
+          "frt_sec": 55
         },
         {
           "name": "Анасхон",
@@ -1391,8 +1393,9 @@ const BILLZ_DATA = {
           "close_rate": 99.5,
           "rating_pct": 92.9,
           "rated": 14,
-          "sla_pct": 94.5,
-          "cost": 2416925
+          "sla_pct": 97.1,
+          "cost": 2416925,
+          "frt_sec": 26
         },
         {
           "name": "Нурилло",
@@ -1401,8 +1404,9 @@ const BILLZ_DATA = {
           "close_rate": 99.5,
           "rating_pct": 92.9,
           "rated": 14,
-          "sla_pct": 90.4,
-          "cost": 2377465
+          "sla_pct": 95.5,
+          "cost": 2377465,
+          "frt_sec": 39
         },
         {
           "name": "Алиёр",
@@ -1411,8 +1415,9 @@ const BILLZ_DATA = {
           "close_rate": 99.5,
           "rating_pct": 100.0,
           "rated": 13,
-          "sla_pct": 84.6,
-          "cost": 2061785
+          "sla_pct": 93.0,
+          "cost": 2061785,
+          "frt_sec": 50
         },
         {
           "name": "Иззатбек",
@@ -1421,8 +1426,9 @@ const BILLZ_DATA = {
           "close_rate": 99.5,
           "rating_pct": 100.0,
           "rated": 6,
-          "sla_pct": 68.3,
-          "cost": 1973000
+          "sla_pct": 93.6,
+          "cost": 1973000,
+          "frt_sec": 45
         },
         {
           "name": "Тожмухаммад",
@@ -1431,8 +1437,9 @@ const BILLZ_DATA = {
           "close_rate": 99.5,
           "rating_pct": 100.0,
           "rated": 11,
-          "sla_pct": 57.7,
-          "cost": 1933540
+          "sla_pct": 90.6,
+          "cost": 1933540,
+          "frt_sec": 52
         },
         {
           "name": "Сардор Б.",
@@ -1441,8 +1448,9 @@ const BILLZ_DATA = {
           "close_rate": 99.5,
           "rating_pct": 100.0,
           "rated": 7,
-          "sla_pct": 61.4,
-          "cost": 1913810
+          "sla_pct": 85.9,
+          "cost": 1913810,
+          "frt_sec": 57
         },
         {
           "name": "Робия Р.",
@@ -1451,8 +1459,9 @@ const BILLZ_DATA = {
           "close_rate": 99.5,
           "rating_pct": 93.1,
           "rated": 29,
-          "sla_pct": 75.0,
-          "cost": 1775700
+          "sla_pct": 91.4,
+          "cost": 1775700,
+          "frt_sec": 51
         },
         {
           "name": "Ардак",
@@ -1461,8 +1470,9 @@ const BILLZ_DATA = {
           "close_rate": 99.5,
           "rating_pct": 100.0,
           "rated": 8,
-          "sla_pct": 72.9,
-          "cost": 1706645
+          "sla_pct": 91.0,
+          "cost": 1706645,
+          "frt_sec": 48
         },
         {
           "name": "Шохина",
@@ -1471,8 +1481,9 @@ const BILLZ_DATA = {
           "close_rate": 99.5,
           "rating_pct": 95.2,
           "rated": 21,
-          "sla_pct": 92.0,
-          "cost": 1647455
+          "sla_pct": 97.8,
+          "cost": 1647455,
+          "frt_sec": 26
         },
         {
           "name": "Авазбек",
@@ -1481,8 +1492,9 @@ const BILLZ_DATA = {
           "close_rate": 99.5,
           "rating_pct": 100.0,
           "rated": 13,
-          "sla_pct": 78.6,
-          "cost": 1075285
+          "sla_pct": 93.3,
+          "cost": 1075285,
+          "frt_sec": 39
         },
         {
           "name": "Дильшод",
@@ -1698,8 +1710,9 @@ const BILLZ_DATA = {
           "close_rate": 99.5,
           "rating_pct": 97.3,
           "rated": 37,
-          "sla_pct": 93.2,
-          "cost": 4360330
+          "sla_pct": 97.1,
+          "cost": 4360330,
+          "frt_sec": 26
         },
         {
           "name": "Робия Р.",
@@ -1708,8 +1721,9 @@ const BILLZ_DATA = {
           "close_rate": 99.5,
           "rating_pct": 91.7,
           "rated": 36,
-          "sla_pct": 77.1,
-          "cost": 4015055
+          "sla_pct": 91.4,
+          "cost": 4015055,
+          "frt_sec": 51
         },
         {
           "name": "Нурилло",
@@ -1718,8 +1732,9 @@ const BILLZ_DATA = {
           "close_rate": 99.5,
           "rating_pct": 94.4,
           "rated": 18,
-          "sla_pct": 75.4,
-          "cost": 3117340
+          "sla_pct": 95.5,
+          "cost": 3117340,
+          "frt_sec": 39
         },
         {
           "name": "Алиёр",
@@ -1728,8 +1743,9 @@ const BILLZ_DATA = {
           "close_rate": 99.5,
           "rating_pct": 100.0,
           "rated": 14,
-          "sla_pct": 66.7,
-          "cost": 3048285
+          "sla_pct": 93.0,
+          "cost": 3048285,
+          "frt_sec": 50
         },
         {
           "name": "Ардак",
@@ -1738,8 +1754,9 @@ const BILLZ_DATA = {
           "close_rate": 99.5,
           "rating_pct": 100.0,
           "rated": 10,
-          "sla_pct": 73.0,
-          "cost": 2515575
+          "sla_pct": 91.0,
+          "cost": 2515575,
+          "frt_sec": 48
         },
         {
           "name": "Атабек",
@@ -1748,8 +1765,9 @@ const BILLZ_DATA = {
           "close_rate": 99.5,
           "rating_pct": 100.0,
           "rated": 10,
-          "sla_pct": 72.8,
-          "cost": 2407060
+          "sla_pct": 92.5,
+          "cost": 2407060,
+          "frt_sec": 46
         },
         {
           "name": "Тожмухаммад",
@@ -1758,8 +1776,9 @@ const BILLZ_DATA = {
           "close_rate": 99.5,
           "rating_pct": 90.9,
           "rated": 11,
-          "sla_pct": 64.0,
-          "cost": 2387330
+          "sla_pct": 90.6,
+          "cost": 2387330,
+          "frt_sec": 52
         },
         {
           "name": "Авазбек",
@@ -1768,8 +1787,9 @@ const BILLZ_DATA = {
           "close_rate": 99.5,
           "rating_pct": 91.2,
           "rated": 34,
-          "sla_pct": 74.6,
-          "cost": 2199895
+          "sla_pct": 93.3,
+          "cost": 2199895,
+          "frt_sec": 39
         },
         {
           "name": "Сардор Б.",
@@ -1778,8 +1798,9 @@ const BILLZ_DATA = {
           "close_rate": 99.5,
           "rating_pct": 100.0,
           "rated": 7,
-          "sla_pct": 74.6,
-          "cost": 2130840
+          "sla_pct": 85.9,
+          "cost": 2130840,
+          "frt_sec": 57
         },
         {
           "name": "Робия А.",
@@ -1788,8 +1809,9 @@ const BILLZ_DATA = {
           "close_rate": 99.5,
           "rating_pct": 100.0,
           "rated": 4,
-          "sla_pct": 83.3,
-          "cost": 907580
+          "sla_pct": 90.6,
+          "cost": 907580,
+          "frt_sec": 55
         },
         {
           "name": "Дильшод",
@@ -1808,8 +1830,9 @@ const BILLZ_DATA = {
           "close_rate": 99.5,
           "rating_pct": 100.0,
           "rated": 3,
-          "sla_pct": 93.9,
-          "cost": 325545
+          "sla_pct": 97.8,
+          "cost": 325545,
+          "frt_sec": 26
         },
         {
           "name": "Нурлан",
@@ -1818,8 +1841,9 @@ const BILLZ_DATA = {
           "close_rate": 99.5,
           "rating_pct": 100.0,
           "rated": 2,
-          "sla_pct": 86.7,
-          "cost": 147975
+          "sla_pct": 85.7,
+          "cost": 147975,
+          "frt_sec": 67
         },
         {
           "name": "Камолиддин",
@@ -1828,8 +1852,9 @@ const BILLZ_DATA = {
           "close_rate": 99.5,
           "rating_pct": 100.0,
           "rated": 1,
-          "sla_pct": 50.0,
-          "cost": 69055
+          "sla_pct": 91.8,
+          "cost": 69055,
+          "frt_sec": 53
         }
       ],
       "top_labels": [
@@ -2025,8 +2050,9 @@ const BILLZ_DATA = {
           "close_rate": 99.5,
           "rating_pct": 95.5,
           "rated": 22,
-          "sla_pct": 89.8,
-          "cost": 3669780
+          "sla_pct": 97.1,
+          "cost": 3669780,
+          "frt_sec": 26
         },
         {
           "name": "Атабек",
@@ -2035,8 +2061,9 @@ const BILLZ_DATA = {
           "close_rate": 99.5,
           "rating_pct": 100.0,
           "rated": 16,
-          "sla_pct": 79.2,
-          "cost": 3117340
+          "sla_pct": 92.5,
+          "cost": 3117340,
+          "frt_sec": 46
         },
         {
           "name": "Алиёр",
@@ -2045,8 +2072,9 @@ const BILLZ_DATA = {
           "close_rate": 99.5,
           "rating_pct": 95.2,
           "rated": 21,
-          "sla_pct": 76.4,
-          "cost": 2989095
+          "sla_pct": 93.0,
+          "cost": 2989095,
+          "frt_sec": 50
         },
         {
           "name": "Нурилло",
@@ -2055,8 +2083,9 @@ const BILLZ_DATA = {
           "close_rate": 99.5,
           "rating_pct": 88.2,
           "rated": 17,
-          "sla_pct": 84.3,
-          "cost": 2910175
+          "sla_pct": 95.5,
+          "cost": 2910175,
+          "frt_sec": 39
         },
         {
           "name": "Авазбек",
@@ -2065,8 +2094,9 @@ const BILLZ_DATA = {
           "close_rate": 99.5,
           "rating_pct": 94.1,
           "rated": 17,
-          "sla_pct": 79.2,
-          "cost": 2762200
+          "sla_pct": 93.3,
+          "cost": 2762200,
+          "frt_sec": 39
         },
         {
           "name": "Сардор Б.",
@@ -2075,8 +2105,9 @@ const BILLZ_DATA = {
           "close_rate": 99.5,
           "rating_pct": 100.0,
           "rated": 12,
-          "sla_pct": 69.5,
-          "cost": 2604360
+          "sla_pct": 85.9,
+          "cost": 2604360,
+          "frt_sec": 57
         },
         {
           "name": "Тожмухаммад",
@@ -2085,8 +2116,9 @@ const BILLZ_DATA = {
           "close_rate": 99.5,
           "rating_pct": 88.2,
           "rated": 17,
-          "sla_pct": 74.4,
-          "cost": 2525440
+          "sla_pct": 90.6,
+          "cost": 2525440,
+          "frt_sec": 52
         },
         {
           "name": "Робия Р.",
@@ -2095,8 +2127,9 @@ const BILLZ_DATA = {
           "close_rate": 99.5,
           "rating_pct": 95.7,
           "rated": 23,
-          "sla_pct": 76.0,
-          "cost": 2298545
+          "sla_pct": 91.4,
+          "cost": 2298545,
+          "frt_sec": 51
         },
         {
           "name": "Ардак",
@@ -2105,8 +2138,9 @@ const BILLZ_DATA = {
           "close_rate": 99.5,
           "rating_pct": 100.0,
           "rated": 10,
-          "sla_pct": 68.9,
-          "cost": 2209760
+          "sla_pct": 91.0,
+          "cost": 2209760,
+          "frt_sec": 48
         },
         {
           "name": "Камолиддин",
@@ -2115,8 +2149,9 @@ const BILLZ_DATA = {
           "close_rate": 99.5,
           "rating_pct": 100.0,
           "rated": 6,
-          "sla_pct": 66.1,
-          "cost": 621495
+          "sla_pct": 91.8,
+          "cost": 621495,
+          "frt_sec": 53
         },
         {
           "name": "Дильшод",
@@ -2135,8 +2170,9 @@ const BILLZ_DATA = {
           "close_rate": 99.5,
           "rating_pct": 0.0,
           "rated": 0,
-          "sla_pct": 61.5,
-          "cost": 128245
+          "sla_pct": 85.7,
+          "cost": 128245,
+          "frt_sec": 67
         }
       ],
       "top_labels": [
@@ -2332,8 +2368,9 @@ const BILLZ_DATA = {
           "close_rate": 99.5,
           "rating_pct": 83.3,
           "rated": 6,
-          "sla_pct": 80.2,
-          "cost": 3048285
+          "sla_pct": 93.6,
+          "cost": 3048285,
+          "frt_sec": 45
         },
         {
           "name": "Анасхон",
@@ -2342,8 +2379,9 @@ const BILLZ_DATA = {
           "close_rate": 99.5,
           "rating_pct": 100.0,
           "rated": 16,
-          "sla_pct": 92.6,
-          "cost": 2781930
+          "sla_pct": 97.1,
+          "cost": 2781930,
+          "frt_sec": 26
         },
         {
           "name": "Атабек",
@@ -2352,8 +2390,9 @@ const BILLZ_DATA = {
           "close_rate": 99.5,
           "rating_pct": 100.0,
           "rated": 12,
-          "sla_pct": 80.0,
-          "cost": 2545170
+          "sla_pct": 92.5,
+          "cost": 2545170,
+          "frt_sec": 46
         },
         {
           "name": "Авазбек",
@@ -2362,8 +2401,9 @@ const BILLZ_DATA = {
           "close_rate": 99.5,
           "rating_pct": 88.9,
           "rated": 18,
-          "sla_pct": 91.3,
-          "cost": 2436655
+          "sla_pct": 93.3,
+          "cost": 2436655,
+          "frt_sec": 39
         },
         {
           "name": "Сардор Б.",
@@ -2372,8 +2412,9 @@ const BILLZ_DATA = {
           "close_rate": 99.5,
           "rating_pct": 100.0,
           "rated": 10,
-          "sla_pct": 83.6,
-          "cost": 2180165
+          "sla_pct": 85.9,
+          "cost": 2180165,
+          "frt_sec": 57
         },
         {
           "name": "Алиёр",
@@ -2382,8 +2423,9 @@ const BILLZ_DATA = {
           "close_rate": 99.5,
           "rating_pct": 100.0,
           "rated": 5,
-          "sla_pct": 84.1,
-          "cost": 1903945
+          "sla_pct": 93.0,
+          "cost": 1903945,
+          "frt_sec": 50
         },
         {
           "name": "Тожмухаммад",
@@ -2392,8 +2434,9 @@ const BILLZ_DATA = {
           "close_rate": 99.5,
           "rating_pct": 70.0,
           "rated": 10,
-          "sla_pct": 83.3,
-          "cost": 1874350
+          "sla_pct": 90.6,
+          "cost": 1874350,
+          "frt_sec": 52
         },
         {
           "name": "Нурилло",
@@ -2402,8 +2445,9 @@ const BILLZ_DATA = {
           "close_rate": 99.5,
           "rating_pct": 100.0,
           "rated": 9,
-          "sla_pct": 85.7,
-          "cost": 1746105
+          "sla_pct": 95.5,
+          "cost": 1746105,
+          "frt_sec": 39
         },
         {
           "name": "Ардак",
@@ -2412,8 +2456,9 @@ const BILLZ_DATA = {
           "close_rate": 99.5,
           "rating_pct": 100.0,
           "rated": 10,
-          "sla_pct": 83.6,
-          "cost": 1598130
+          "sla_pct": 91.0,
+          "cost": 1598130,
+          "frt_sec": 48
         },
         {
           "name": "Робия Р.",
@@ -2422,8 +2467,9 @@ const BILLZ_DATA = {
           "close_rate": 99.5,
           "rating_pct": 100.0,
           "rated": 14,
-          "sla_pct": 78.8,
-          "cost": 1558670
+          "sla_pct": 91.4,
+          "cost": 1558670,
+          "frt_sec": 51
         },
         {
           "name": "Камолиддин",
@@ -2432,8 +2478,9 @@ const BILLZ_DATA = {
           "close_rate": 99.5,
           "rating_pct": 100.0,
           "rated": 4,
-          "sla_pct": 97.3,
-          "cost": 384735
+          "sla_pct": 91.8,
+          "cost": 384735,
+          "frt_sec": 53
         },
         {
           "name": "Дильшод",
@@ -2653,8 +2700,9 @@ const BILLZ_DATA = {
           "close_rate": 99.5,
           "rating_pct": 100.0,
           "rated": 6,
-          "sla_pct": 77.8,
-          "cost": 1765835
+          "sla_pct": 85.9,
+          "cost": 1765835,
+          "frt_sec": 57
         },
         {
           "name": "Атабек",
@@ -2663,8 +2711,9 @@ const BILLZ_DATA = {
           "close_rate": 99.5,
           "rating_pct": 88.2,
           "rated": 17,
-          "sla_pct": 81.5,
-          "cost": 1716510
+          "sla_pct": 92.5,
+          "cost": 1716510,
+          "frt_sec": 46
         },
         {
           "name": "Авазбек",
@@ -2673,8 +2722,9 @@ const BILLZ_DATA = {
           "close_rate": 99.5,
           "rating_pct": 86.7,
           "rated": 15,
-          "sla_pct": 92.2,
-          "cost": 1519210
+          "sla_pct": 93.3,
+          "cost": 1519210,
+          "frt_sec": 39
         },
         {
           "name": "Анасхон",
@@ -2683,8 +2733,9 @@ const BILLZ_DATA = {
           "close_rate": 99.5,
           "rating_pct": 92.3,
           "rated": 13,
-          "sla_pct": 91.4,
-          "cost": 1499480
+          "sla_pct": 97.1,
+          "cost": 1499480,
+          "frt_sec": 26
         },
         {
           "name": "Иззатбек",
@@ -2693,8 +2744,9 @@ const BILLZ_DATA = {
           "close_rate": 99.5,
           "rating_pct": 85.7,
           "rated": 7,
-          "sla_pct": 67.6,
-          "cost": 1331775
+          "sla_pct": 93.6,
+          "cost": 1331775,
+          "frt_sec": 45
         },
         {
           "name": "Тожмухаммад",
@@ -2703,8 +2755,9 @@ const BILLZ_DATA = {
           "close_rate": 99.5,
           "rating_pct": 50.0,
           "rated": 2,
-          "sla_pct": 78.1,
-          "cost": 1223260
+          "sla_pct": 90.6,
+          "cost": 1223260,
+          "frt_sec": 52
         },
         {
           "name": "Робия Р.",
@@ -2713,8 +2766,9 @@ const BILLZ_DATA = {
           "close_rate": 99.5,
           "rating_pct": 90.0,
           "rated": 10,
-          "sla_pct": 62.3,
-          "cost": 1154205
+          "sla_pct": 91.4,
+          "cost": 1154205,
+          "frt_sec": 51
         },
         {
           "name": "Ардак",
@@ -2723,8 +2777,9 @@ const BILLZ_DATA = {
           "close_rate": 99.5,
           "rating_pct": 100.0,
           "rated": 6,
-          "sla_pct": 85.4,
-          "cost": 1144340
+          "sla_pct": 91.0,
+          "cost": 1144340,
+          "frt_sec": 48
         },
         {
           "name": "Алиёр",
@@ -2733,8 +2788,9 @@ const BILLZ_DATA = {
           "close_rate": 99.5,
           "rating_pct": 75.0,
           "rated": 4,
-          "sla_pct": 63.6,
-          "cost": 1095015
+          "sla_pct": 93.0,
+          "cost": 1095015,
+          "frt_sec": 50
         },
         {
           "name": "Нурилло",
@@ -2743,8 +2799,9 @@ const BILLZ_DATA = {
           "close_rate": 99.5,
           "rating_pct": 100.0,
           "rated": 6,
-          "sla_pct": 84.6,
-          "cost": 680685
+          "sla_pct": 95.5,
+          "cost": 680685,
+          "frt_sec": 39
         },
         {
           "name": "Камолиддин",
@@ -2753,8 +2810,9 @@ const BILLZ_DATA = {
           "close_rate": 99.5,
           "rating_pct": 100.0,
           "rated": 4,
-          "sla_pct": 83.3,
-          "cost": 414330
+          "sla_pct": 91.8,
+          "cost": 414330,
+          "frt_sec": 53
         },
         {
           "name": "Азизбек",
@@ -9117,7 +9175,7 @@ const BILLZ_DATA = {
         "close_rate": 99.5,
         "rank": 1,
         "total": 1470,
-        "score": 89.9,
+        "score": 88.2,
         "frt_med_sec": 26,
         "kk": 85,
         "test": 85,
@@ -9140,7 +9198,7 @@ const BILLZ_DATA = {
         "close_rate": 99.5,
         "rank": 2,
         "total": 1231,
-        "score": 85.0,
+        "score": 80.3,
         "frt_med_sec": 46,
         "kk": 85,
         "test": 85,
@@ -9163,7 +9221,7 @@ const BILLZ_DATA = {
         "close_rate": 99.5,
         "rank": 3,
         "total": 1122,
-        "score": 89.7,
+        "score": 88.3,
         "frt_med_sec": 50,
         "kk": 85,
         "test": 85,
@@ -9186,7 +9244,7 @@ const BILLZ_DATA = {
         "close_rate": 99.5,
         "rank": 4,
         "total": 1074,
-        "score": 86.9,
+        "score": 84.2,
         "frt_med_sec": 39,
         "kk": 85,
         "test": 85,
@@ -9209,7 +9267,7 @@ const BILLZ_DATA = {
         "close_rate": 99.5,
         "rank": 5,
         "total": 1073,
-        "score": 88.6,
+        "score": 86.8,
         "frt_med_sec": 57,
         "kk": 85,
         "test": 85,
@@ -9232,7 +9290,7 @@ const BILLZ_DATA = {
         "close_rate": 99.5,
         "rank": 6,
         "total": 1050,
-        "score": 84.8,
+        "score": 80.3,
         "frt_med_sec": 51,
         "kk": 85,
         "test": 85,
@@ -9255,7 +9313,7 @@ const BILLZ_DATA = {
         "close_rate": 99.5,
         "rank": 7,
         "total": 999,
-        "score": 86.6,
+        "score": 83.7,
         "frt_med_sec": 39,
         "kk": 85,
         "test": 85,
@@ -9278,7 +9336,7 @@ const BILLZ_DATA = {
         "close_rate": 99.5,
         "rank": 8,
         "total": 997,
-        "score": 84.3,
+        "score": 81.9,
         "frt_med_sec": 52,
         "kk": 85,
         "test": 85,
@@ -9301,7 +9359,7 @@ const BILLZ_DATA = {
         "close_rate": 99.5,
         "rank": 9,
         "total": 913,
-        "score": 85.8,
+        "score": 81.2,
         "frt_med_sec": 48,
         "kk": 85,
         "test": 85,
@@ -9324,7 +9382,7 @@ const BILLZ_DATA = {
         "close_rate": 99.5,
         "rank": 10,
         "total": 623,
-        "score": 87.5,
+        "score": 85.2,
         "frt_med_sec": 45,
         "kk": 85,
         "test": 85,
@@ -9370,7 +9428,7 @@ const BILLZ_DATA = {
         "close_rate": 99.5,
         "rank": 12,
         "total": 184,
-        "score": 88.4,
+        "score": 84.3,
         "frt_med_sec": 26,
         "kk": 85,
         "test": 85,
@@ -9393,7 +9451,7 @@ const BILLZ_DATA = {
         "close_rate": 99.5,
         "rank": 13,
         "total": 151,
-        "score": 90.5,
+        "score": 89.1,
         "frt_med_sec": 53,
         "kk": 85,
         "test": 85,
@@ -9416,7 +9474,7 @@ const BILLZ_DATA = {
         "close_rate": 99.5,
         "rank": 14,
         "total": 28,
-        "score": 89.8,
+        "score": 89.1,
         "frt_med_sec": 67,
         "kk": 85,
         "test": 85,

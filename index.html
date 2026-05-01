@@ -677,88 +677,69 @@ function exportCSExcel() {
   const atsCardEl = document.getElementById('atsCard');
   if (atsCardEl && M.ats_data) {
     const ats = M.ats_data;
-    atsCardEl.innerHTML = `
-      <div class="card" style="display:grid;grid-template-columns:1fr 1fr;gap:0">
-        <div style="padding:18px 20px;border-right:1px solid rgba(255,255,255,0.06)">
-          <div class="ch" style="margin-bottom:14px">
-            <div class="ct">Статистика звонков АТС · Апрель 2026</div>
-            <div class="cn2">Официальный отчёт АТС</div>
-          </div>
-          <table style="width:100%;border-collapse:collapse;font-size:11px">
-            <tr style="border-bottom:1px solid rgba(255,255,255,0.08)">
-              <td style="padding:6px 0;color:var(--t3)">Вход (всего)</td>
-              <td style="padding:6px 0;text-align:right;font-weight:700;color:var(--t1);font-family:monospace">${ats.incoming_total.toLocaleString('ru')}</td>
-            </tr>
-            <tr style="border-bottom:1px solid rgba(255,255,255,0.05)">
-              <td style="padding:6px 0;color:var(--t3)">Вход (за вычетом пропуск от ПД)</td>
-              <td style="padding:6px 0;text-align:right;font-family:monospace;color:var(--t2)">${ats.incoming_no_missed_pd.toLocaleString('ru')}</td>
-            </tr>
-            <tr style="border-bottom:1px solid rgba(255,255,255,0.08);background:rgba(59,130,246,0.04)">
-              <td style="padding:6px 0;color:var(--blue2);font-weight:600">Вход (за вычетом даунтайм) <span style="color:var(--t4);font-size:9px">→ база LCR</span></td>
-              <td style="padding:6px 0;text-align:right;font-weight:700;color:var(--blue2);font-family:monospace">${ats.incoming_no_downtime.toLocaleString('ru')}</td>
-            </tr>
-            <tr style="border-bottom:1px solid rgba(255,255,255,0.05)">
-              <td style="padding:6px 0;color:var(--t3)">Пропущ. все</td>
-              <td style="padding:6px 0;text-align:right;font-family:monospace;color:var(--t2)">${ats.missed_all.toLocaleString('ru')}</td>
-            </tr>
-            <tr style="border-bottom:1px solid rgba(255,255,255,0.05)">
-              <td style="padding:6px 0;color:var(--t4);padding-left:12px">· от 7 сек</td>
-              <td style="padding:6px 0;text-align:right;font-family:monospace;color:var(--t3)">${ats.missed_from_7.toLocaleString('ru')}</td>
-            </tr>
-            <tr style="border-bottom:1px solid rgba(255,255,255,0.05)">
-              <td style="padding:6px 0;color:var(--t4);padding-left:12px">· ПД от 6 до 15</td>
-              <td style="padding:6px 0;text-align:right;font-family:monospace;color:var(--t3)">${ats.missed_pd_6_15.toLocaleString('ru')}</td>
-            </tr>
-            <tr style="border-bottom:1px solid rgba(255,255,255,0.05)">
-              <td style="padding:6px 0;color:var(--t4);padding-left:12px">· нерабочее время</td>
-              <td style="padding:6px 0;text-align:right;font-family:monospace;color:var(--t3)">${ats.missed_unworktime.toLocaleString('ru')}</td>
-            </tr>
-            <tr style="border-bottom:1px solid rgba(255,255,255,0.08)">
-              <td style="padding:6px 0;color:var(--t4)">Даунтайм</td>
-              <td style="padding:6px 0;text-align:right;font-family:monospace;color:var(--t3)">${ats.downtime.toLocaleString('ru')}</td>
-            </tr>
-            <tr style="background:rgba(239,68,68,0.06);border-bottom:1px solid rgba(239,68,68,0.15)">
-              <td style="padding:7px 0;color:var(--red2);font-weight:600">Всего пропущ. (для LCR)</td>
-              <td style="padding:7px 0;text-align:right;font-weight:700;color:var(--red2);font-family:monospace">${ats.missed_total.toLocaleString('ru')}</td>
-            </tr>
-            <tr style="background:rgba(239,68,68,0.08)">
-              <td style="padding:8px 0;color:var(--t1);font-weight:700;font-size:13px">Итог LCR</td>
-              <td style="padding:8px 0;text-align:right;font-weight:800;color:var(--red2);font-size:16px">${ats.lcr_final}%</td>
-            </tr>
-          </table>
+    const rows = [
+      {label:'Вход (всего)', val:ats.incoming_total.toLocaleString('ru'), color:'var(--t2)'},
+      {label:'Вход (за вычетом пропуск от ПД)', val:ats.incoming_no_missed_pd.toLocaleString('ru'), color:'var(--t3)'},
+      {label:'Вход (за вычетом даунтайм)', val:ats.incoming_no_downtime.toLocaleString('ru'), color:'#60A5FA', bold:true, note:'← база LCR', hl:'rgba(59,130,246,0.08)'},
+      {label:'Пропущ. все', val:ats.missed_all.toLocaleString('ru'), color:'var(--t2)'},
+      {label:'  · от 7 сек', val:ats.missed_from_7.toLocaleString('ru'), color:'var(--t4)'},
+      {label:'  · ПД от 6 до 15', val:ats.missed_pd_6_15.toLocaleString('ru'), color:'var(--t4)'},
+      {label:'  · нерабочее время', val:ats.missed_unworktime.toLocaleString('ru'), color:'var(--t4)'},
+      {label:'Даунтайм', val:ats.downtime.toLocaleString('ru'), color:'var(--t4)'},
+      {label:'Всего пропущ. (для LCR)', val:ats.missed_total.toLocaleString('ru'), color:'#F87171', bold:true, hl:'rgba(239,68,68,0.07)'},
+      {label:'Итог LCR', val:ats.lcr_final+'%', color:'#F87171', bold:true, big:true, hl:'rgba(239,68,68,0.10)'},
+    ];
+    atsCardEl.innerHTML = `<div class="card" style="display:grid;grid-template-columns:1fr 1fr;gap:0;overflow:hidden">
+      <div style="padding:18px 20px;border-right:1px solid rgba(255,255,255,0.07)">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px">
+          <div class="ct">Статистика звонков АТС · Апрель 2026</div>
+          <div class="cn2">Официальный отчёт АТС</div>
         </div>
-        <div style="padding:18px 20px;display:flex;flex-direction:column;justify-content:space-between">
-          <div>
-            <div style="font-size:11px;font-weight:700;color:var(--t2);margin-bottom:12px">📐 Формула расчёта LCR</div>
-            <div class="formula-bar" style="margin-top:0">
-              <span class="f-key">LCR</span> = Всего пропущ. / Вход (без даунтайм) × 100<br>
-              <span class="f-key">LCR</span> = <span class="f-val">${ats.missed_total}</span> / <span class="f-val">${ats.incoming_no_downtime.toLocaleString('ru')}</span> × 100 = <span class="f-val">${ats.lcr_final}%</span>
-            </div>
-          </div>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:16px">
-            <div style="background:rgba(255,255,255,0.04);border-radius:9px;padding:12px;text-align:center">
-              <div style="font-size:9px;color:var(--t4);text-transform:uppercase;letter-spacing:.1em;margin-bottom:5px">Пропущ. в рабочее время</div>
-              <div style="font-size:20px;font-weight:800;color:var(--red2)">${ats.missed_from_7.toLocaleString('ru')}</div>
-              <div style="font-size:9px;color:var(--t4);margin-top:3px">>7 сек</div>
-            </div>
-            <div style="background:rgba(255,255,255,0.04);border-radius:9px;padding:12px;text-align:center">
-              <div style="font-size:9px;color:var(--t4);text-transform:uppercase;letter-spacing:.1em;margin-bottom:5px">Нерабочее время</div>
-              <div style="font-size:20px;font-weight:800;color:var(--amber2)">${ats.missed_unworktime.toLocaleString('ru')}</div>
-              <div style="font-size:9px;color:var(--t4);margin-top:3px">не считается</div>
-            </div>
-            <div style="background:rgba(255,255,255,0.04);border-radius:9px;padding:12px;text-align:center">
-              <div style="font-size:9px;color:var(--t4);text-transform:uppercase;letter-spacing:.1em;margin-bottom:5px">Даунтайм</div>
-              <div style="font-size:20px;font-weight:800;color:var(--amber2)">${ats.downtime.toLocaleString('ru')}</div>
-              <div style="font-size:9px;color:var(--t4);margin-top:3px">вычтен из базы</div>
-            </div>
-            <div style="background:rgba(59,130,246,0.08);border:1px solid rgba(59,130,246,0.2);border-radius:9px;padding:12px;text-align:center">
-              <div style="font-size:9px;color:var(--t4);text-transform:uppercase;letter-spacing:.1em;margin-bottom:5px">Итог LCR апрель</div>
-              <div style="font-size:24px;font-weight:800;color:var(--red2)">${ats.lcr_final}%</div>
-              <div style="font-size:9px;color:var(--t4);margin-top:3px">цель &lt; 3%</div>
-            </div>
+        <table style="width:100%;border-collapse:collapse">
+          ${rows.map(r=>`<tr style="${r.hl?'background:'+r.hl:''}">
+            <td style="padding:${r.big?'9px':'6px'} 4px;font-size:${r.big?'13px':'11px'};
+              font-weight:${r.bold?'700':'400'};color:${r.color};border-bottom:1px solid rgba(255,255,255,0.05)">
+              ${r.label}${r.note?`<span style="font-size:9px;color:var(--t4);margin-left:8px">${r.note}</span>`:''}
+            </td>
+            <td style="padding:${r.big?'9px':'6px'} 4px;text-align:right;font-family:monospace;
+              font-size:${r.big?'18px':'12px'};font-weight:${r.bold?'800':'400'};
+              color:${r.color};border-bottom:1px solid rgba(255,255,255,0.05)">
+              ${r.val}
+            </td>
+          </tr>`).join('')}
+        </table>
+      </div>
+      <div style="padding:18px 20px;display:flex;flex-direction:column;gap:12px">
+        <div>
+          <div class="ct" style="margin-bottom:10px">Формула расчёта LCR</div>
+          <div style="background:rgba(59,130,246,0.10);border:1px solid rgba(59,130,246,0.25);
+            border-left:3px solid #3B82F6;border-radius:8px;padding:14px 16px;
+            font-family:monospace;font-size:11px;line-height:2">
+            <span style="color:#60A5FA;font-weight:700">LCR</span>
+            <span style="color:#94A3B8"> = Всего пропущ. / Вход (без даунтайм) × 100</span><br>
+            <span style="color:#60A5FA;font-weight:700">LCR</span>
+            <span style="color:#94A3B8"> = </span>
+            <span style="color:#34D399;font-weight:700">${ats.missed_total}</span>
+            <span style="color:#94A3B8"> / </span>
+            <span style="color:#34D399;font-weight:700">${ats.incoming_no_downtime.toLocaleString('ru')}</span>
+            <span style="color:#94A3B8"> × 100 = </span>
+            <span style="color:#F87171;font-weight:800;font-size:15px">${ats.lcr_final}%</span>
           </div>
         </div>
-      </div>`;
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;flex:1">
+          ${[
+            {label:'Пропущ. >7сек',val:ats.missed_from_7,sub:'рабочее время',bg:'rgba(239,68,68,0.08)',bc:'rgba(239,68,68,0.2)',lc:'#FCA5A5',vc:'#F87171'},
+            {label:'Нерабочее время',val:ats.missed_unworktime,sub:'не считается в LCR',bg:'rgba(245,158,11,0.07)',bc:'rgba(245,158,11,0.2)',lc:'#FDE68A',vc:'#FCD34D'},
+            {label:'Даунтайм',val:ats.downtime,sub:'вычтен из базы',bg:'rgba(100,116,139,0.07)',bc:'rgba(100,116,139,0.18)',lc:'#94A3B8',vc:'#CBD5E1'},
+            {label:'Итог LCR апрель',val:ats.lcr_final+'%',sub:'цель &lt; 3%',bg:'rgba(239,68,68,0.12)',bc:'rgba(239,68,68,0.35)',lc:'#FCA5A5',vc:'#F87171',big:true},
+          ].map(c=>`<div style="background:${c.bg};border:1px solid ${c.bc};border-radius:10px;padding:14px;text-align:center">
+            <div style="font-size:9px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:${c.lc};margin-bottom:8px">${c.label}</div>
+            <div style="font-size:${c.big?'26px':'24px'};font-weight:${c.big?'900':'800'};color:${c.vc}">${c.val}</div>
+            <div style="font-size:9px;color:${c.lc};margin-top:5px">${c.sub}</div>
+          </div>`).join('')}
+        </div>
+      </div>
+    </div>`;
   }
 </script>
 </body>

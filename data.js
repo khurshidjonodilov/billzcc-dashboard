@@ -11,8 +11,8 @@ const BILLZ_DATA = {
     "afrt_raw": 0.847,
     "art": "25 ч 43 м",
     "art_raw": 25.7,
-    "sla_pct": 78.8,
-    "sla_not_met": 21.2,
+    "sla_pct": 92.5,
+    "sla_not_met": 7.5,
     "lcr": 4.59,
     "repeat_pct": 9.2,
     "cost": 114473460,
@@ -1345,7 +1345,8 @@ const BILLZ_DATA = {
     "csat_chat_fact": 91.8,
     "churn_pct_plan": 2.5,
     "churn_pct_fact": null,
-    "tickets_per_day_avg": 533
+    "tickets_per_day_avg": 533,
+    "sla_source": "omnidesk"
   },
   "weekly": {
     "week_14": {
@@ -9704,8 +9705,8 @@ const BILLZ_DATA = {
   },
   "cs": {
     "period": "Январь–Апрель 2026",
-    "total_train_tickets": 432,
-    "total_train_cost": 4261680,
+    "total_train_tickets": 2343,
+    "total_train_cost": 23113695,
     "partial_tickets": 2055,
     "full_tickets": 153,
     "avg_med_close_min": 5.2,
@@ -9736,11 +9737,11 @@ const BILLZ_DATA = {
       },
       {
         "month": "Апрель",
-        "tickets": 345,
+        "tickets": 471,
         "partial": 312,
         "full": 28,
         "med_close": 4.6,
-        "cost": 3403425
+        "cost": 4646415
       }
     ],
     "by_ks_manager": [

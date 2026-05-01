@@ -265,7 +265,7 @@ document.getElementById('metricBand').innerHTML = [
 
 document.getElementById('kpiGrid').innerHTML = [
   kpi('Тикетов-обучений',  fmt.num(CS.total_train_tickets), '5.0% от объёма CC', 'rose','❗'),
-  kpi('Затраты CC на CS',  (CS.total_train_cost/1_000_000).toFixed(1)+' млн', '2 217 × 9 865 сўм', 'rose','💰'),
+  kpi('Затраты CC на CS',  (CS.total_train_cost/1_000_000).toFixed(1)+' млн', `${CS.total_train_tickets.toLocaleString('ru')} × 9 865 сум`, 'rose','💰'),
   kpi('Время/звонок',      CS.avg_call_min+' мин',          'медиана · не тикета', 'amber','⏱'),
   kpi('Shoxruh Maxmud',    '249 тик',                       '🟡 Большая база · 9 магаз.', 'amber'),
   kpi('Baxtiyor Kasimov',  '202 тик',                       '🟡 Большая база · 7 магаз.', 'amber'),

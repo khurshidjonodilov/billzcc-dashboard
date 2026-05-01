@@ -266,7 +266,7 @@ document.getElementById('kpiGrid').innerHTML = [
 
   kpi('Доля чатов', fmt.pct(M.chats/M.tickets*100), 'Тренд: снижение с нед 12',
     'purple', '', [], [`Звонки: ${fmt.pct(M.calls/M.tickets*100)}`, 'Мин нед 17: 39.9%'],
-    'Чаты / все тикеты × 100 · нед 12 (16.03) пик: 51.3%'),
+    'Чаты / все тикеты × 100 · нед 12 пик: 51.3% · апр среднее: 45.1%'),
 
   kpi('Повторные', fmt.pct(M.repeat_pct), 'Повторные обращения',
     M.repeat_pct > 10 ? 'red' : 'amber', '⚠', [], [],

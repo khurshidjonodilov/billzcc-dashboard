@@ -606,18 +606,14 @@ const BILLZ_DATA = {
         "tickets": 1470,
         "frt_sec": 26,
         "sla_pct": 97.1,
-        "sla_not": 2.9,
-        "any_frt_sec": 22,
-        "any_sla_not": 0.4,
-        "write_sec": 12,
         "avg_close": 16.67,
         "rating_pct": 93.1,
-        "rated": 102,
+        "rated": 180,
         "cost": 14501550,
         "close_rate": 99.5,
         "rank": 1,
         "total": 1470,
-        "score": 89.9,
+        "score": 88.2,
         "frt_med_sec": 26,
         "kk": 85,
         "test": 85,
@@ -629,18 +625,14 @@ const BILLZ_DATA = {
         "tickets": 1231,
         "frt_sec": 46,
         "sla_pct": 92.5,
-        "sla_not": 7.5,
-        "any_frt_sec": 49,
-        "any_sla_not": 0.8,
-        "write_sec": 19,
         "avg_close": 46.75,
         "rating_pct": 90.3,
-        "rated": 71,
+        "rated": 124,
         "cost": 12143815,
         "close_rate": 99.5,
         "rank": 2,
         "total": 1231,
-        "score": 85.0,
+        "score": 80.4,
         "frt_med_sec": 46,
         "kk": 85,
         "test": 85,
@@ -652,18 +644,14 @@ const BILLZ_DATA = {
         "tickets": 1122,
         "frt_sec": 50,
         "sla_pct": 93.0,
-        "sla_not": 7.0,
-        "any_frt_sec": 54,
-        "any_sla_not": 1.5,
-        "write_sec": 35,
         "avg_close": 13.68,
         "rating_pct": 95.2,
-        "rated": 57,
+        "rated": 115,
         "cost": 11068530,
         "close_rate": 99.5,
         "rank": 3,
         "total": 1122,
-        "score": 89.7,
+        "score": 88.3,
         "frt_med_sec": 50,
         "kk": 85,
         "test": 85,
@@ -675,18 +663,14 @@ const BILLZ_DATA = {
         "tickets": 1074,
         "frt_sec": 39,
         "sla_pct": 95.5,
-        "sla_not": 4.5,
-        "any_frt_sec": 42,
-        "any_sla_not": 0.5,
-        "write_sec": 19,
         "avg_close": 27.15,
         "rating_pct": 87.0,
-        "rated": 64,
+        "rated": 100,
         "cost": 10595010,
         "close_rate": 99.5,
         "rank": 4,
         "total": 1074,
-        "score": 86.9,
+        "score": 84.2,
         "frt_med_sec": 39,
         "kk": 85,
         "test": 85,
@@ -698,10 +682,6 @@ const BILLZ_DATA = {
         "tickets": 1073,
         "frt_sec": 57,
         "sla_pct": 85.9,
-        "sla_not": 14.1,
-        "any_frt_sec": 60,
-        "any_sla_not": 1.2,
-        "write_sec": 24,
         "avg_close": 18.53,
         "rating_pct": 100.0,
         "rated": 42,
@@ -709,7 +689,7 @@ const BILLZ_DATA = {
         "close_rate": 99.5,
         "rank": 5,
         "total": 1073,
-        "score": 88.6,
+        "score": 86.8,
         "frt_med_sec": 57,
         "kk": 85,
         "test": 85,
@@ -721,18 +701,14 @@ const BILLZ_DATA = {
         "tickets": 1050,
         "frt_sec": 51,
         "sla_pct": 91.4,
-        "sla_not": 8.6,
-        "any_frt_sec": 66,
-        "any_sla_not": 1.8,
-        "write_sec": 20,
         "avg_close": 44.65,
         "rating_pct": 89.7,
-        "rated": 15,
+        "rated": 68,
         "cost": 10358250,
         "close_rate": 99.5,
         "rank": 6,
         "total": 1050,
-        "score": 84.8,
+        "score": 80.3,
         "frt_med_sec": 51,
         "kk": 85,
         "test": 85,
@@ -744,18 +720,14 @@ const BILLZ_DATA = {
         "tickets": 999,
         "frt_sec": 39,
         "sla_pct": 93.3,
-        "sla_not": 6.7,
-        "any_frt_sec": 52,
-        "any_sla_not": 1.8,
-        "write_sec": 25,
         "avg_close": 28.4,
         "rating_pct": 88.4,
-        "rated": 97,
+        "rated": 60,
         "cost": 9855135,
         "close_rate": 99.5,
         "rank": 7,
         "total": 999,
-        "score": 86.6,
+        "score": 83.7,
         "frt_med_sec": 39,
         "kk": 85,
         "test": 85,
@@ -767,18 +739,14 @@ const BILLZ_DATA = {
         "tickets": 997,
         "frt_sec": 52,
         "sla_pct": 90.6,
-        "sla_not": 9.4,
-        "any_frt_sec": 58,
-        "any_sla_not": 1.0,
-        "write_sec": 26,
         "avg_close": 24.05,
         "rating_pct": 80.4,
-        "rated": 51,
+        "rated": 52,
         "cost": 9835405,
         "close_rate": 99.5,
         "rank": 8,
         "total": 997,
-        "score": 84.3,
+        "score": 81.9,
         "frt_med_sec": 52,
         "kk": 85,
         "test": 85,
@@ -790,10 +758,6 @@ const BILLZ_DATA = {
         "tickets": 913,
         "frt_sec": 48,
         "sla_pct": 91.0,
-        "sla_not": 9.0,
-        "any_frt_sec": 45,
-        "any_sla_not": 1.5,
-        "write_sec": 20,
         "avg_close": 54.0,
         "rating_pct": 97.7,
         "rated": 44,
@@ -801,7 +765,7 @@ const BILLZ_DATA = {
         "close_rate": 99.5,
         "rank": 9,
         "total": 913,
-        "score": 85.8,
+        "score": 81.2,
         "frt_med_sec": 48,
         "kk": 85,
         "test": 85,
@@ -813,18 +777,14 @@ const BILLZ_DATA = {
         "tickets": 623,
         "frt_sec": 45,
         "sla_pct": 93.6,
-        "sla_not": 6.4,
-        "any_frt_sec": 48,
-        "any_sla_not": 0.4,
-        "write_sec": 20,
         "avg_close": 22.67,
         "rating_pct": 89.5,
-        "rated": 19,
+        "rated": 38,
         "cost": 6145895,
         "close_rate": 99.5,
         "rank": 10,
         "total": 623,
-        "score": 87.5,
+        "score": 85.2,
         "frt_med_sec": 45,
         "kk": 85,
         "test": 85,
@@ -836,13 +796,9 @@ const BILLZ_DATA = {
         "tickets": 341,
         "frt_sec": 55,
         "sla_pct": 90.6,
-        "sla_not": 9.4,
-        "any_frt_sec": 44,
-        "any_sla_not": 1.3,
-        "write_sec": 45,
         "avg_close": 177.0,
         "rating_pct": 100.0,
-        "rated": 15,
+        "rated": 18,
         "cost": 3363965,
         "close_rate": 99.5,
         "rank": 11,
@@ -859,10 +815,6 @@ const BILLZ_DATA = {
         "tickets": 184,
         "frt_sec": 26,
         "sla_pct": 97.8,
-        "sla_not": 2.2,
-        "any_frt_sec": 41,
-        "any_sla_not": 1.0,
-        "write_sec": 18,
         "avg_close": 40.75,
         "rating_pct": 96.2,
         "rated": 24,
@@ -870,7 +822,7 @@ const BILLZ_DATA = {
         "close_rate": 99.5,
         "rank": 12,
         "total": 184,
-        "score": 88.4,
+        "score": 84.3,
         "frt_med_sec": 26,
         "kk": 85,
         "test": 85,
@@ -882,18 +834,14 @@ const BILLZ_DATA = {
         "tickets": 151,
         "frt_sec": 53,
         "sla_pct": 91.8,
-        "sla_not": 8.2,
-        "any_frt_sec": 52,
-        "any_sla_not": 1.3,
-        "write_sec": 44,
         "avg_close": 14.2,
         "rating_pct": 100.0,
-        "rated": 15,
+        "rated": 11,
         "cost": 1489615,
         "close_rate": 99.5,
         "rank": 13,
         "total": 151,
-        "score": 90.5,
+        "score": 89.1,
         "frt_med_sec": 53,
         "kk": 85,
         "test": 85,
@@ -905,10 +853,6 @@ const BILLZ_DATA = {
         "tickets": 28,
         "frt_sec": 67,
         "sla_pct": 85.7,
-        "sla_not": 14.3,
-        "any_frt_sec": 66,
-        "any_sla_not": 2.3,
-        "write_sec": 32,
         "avg_close": 6.42,
         "rating_pct": 100.0,
         "rated": 2,
@@ -916,7 +860,7 @@ const BILLZ_DATA = {
         "close_rate": 99.5,
         "rank": 14,
         "total": 28,
-        "score": 89.8,
+        "score": 89.1,
         "frt_med_sec": 67,
         "kk": 85,
         "test": 85,
@@ -1339,14 +1283,15 @@ const BILLZ_DATA = {
     "lcr_all": "22.97%",
     "lcr_5sec_plan": "3.00%",
     "lcr_5sec_fact": 4.59,
-    "chat_share_pct": 46.0,
+    "chat_share_pct": 45.1,
     "csat_plan": 95.0,
     "csat_incoming_fact": 95.0,
     "csat_chat_fact": 91.8,
     "churn_pct_plan": 2.5,
     "churn_pct_fact": null,
     "tickets_per_day_avg": 533,
-    "sla_source": "omnidesk"
+    "sla_source": "omnidesk",
+    "sla_chat_pct": 78.8
   },
   "weekly": {
     "week_14": {
@@ -1373,8 +1318,7 @@ const BILLZ_DATA = {
           "rating_pct": 87.5,
           "rated": 16,
           "sla_pct": 92.5,
-          "cost": 2476115,
-          "frt_sec": 46
+          "cost": 2476115
         },
         {
           "name": "Робия А.",
@@ -1384,8 +1328,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 11,
           "sla_pct": 90.6,
-          "cost": 2476115,
-          "frt_sec": 55
+          "cost": 2476115
         },
         {
           "name": "Анасхон",
@@ -1395,8 +1338,7 @@ const BILLZ_DATA = {
           "rating_pct": 92.9,
           "rated": 14,
           "sla_pct": 97.1,
-          "cost": 2416925,
-          "frt_sec": 26
+          "cost": 2416925
         },
         {
           "name": "Нурилло",
@@ -1406,8 +1348,7 @@ const BILLZ_DATA = {
           "rating_pct": 92.9,
           "rated": 14,
           "sla_pct": 95.5,
-          "cost": 2377465,
-          "frt_sec": 39
+          "cost": 2377465
         },
         {
           "name": "Алиёр",
@@ -1417,8 +1358,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 13,
           "sla_pct": 93.0,
-          "cost": 2061785,
-          "frt_sec": 50
+          "cost": 2061785
         },
         {
           "name": "Иззатбек",
@@ -1428,8 +1368,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 6,
           "sla_pct": 93.6,
-          "cost": 1973000,
-          "frt_sec": 45
+          "cost": 1973000
         },
         {
           "name": "Тожмухаммад",
@@ -1439,8 +1378,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 11,
           "sla_pct": 90.6,
-          "cost": 1933540,
-          "frt_sec": 52
+          "cost": 1933540
         },
         {
           "name": "Сардор Б.",
@@ -1450,8 +1388,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 7,
           "sla_pct": 85.9,
-          "cost": 1913810,
-          "frt_sec": 57
+          "cost": 1913810
         },
         {
           "name": "Робия Р.",
@@ -1461,8 +1398,7 @@ const BILLZ_DATA = {
           "rating_pct": 93.1,
           "rated": 29,
           "sla_pct": 91.4,
-          "cost": 1775700,
-          "frt_sec": 51
+          "cost": 1775700
         },
         {
           "name": "Ардак",
@@ -1472,8 +1408,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 8,
           "sla_pct": 91.0,
-          "cost": 1706645,
-          "frt_sec": 48
+          "cost": 1706645
         },
         {
           "name": "Шохина",
@@ -1483,8 +1418,7 @@ const BILLZ_DATA = {
           "rating_pct": 95.2,
           "rated": 21,
           "sla_pct": 97.8,
-          "cost": 1647455,
-          "frt_sec": 26
+          "cost": 1647455
         },
         {
           "name": "Авазбек",
@@ -1494,8 +1428,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 13,
           "sla_pct": 93.3,
-          "cost": 1075285,
-          "frt_sec": 39
+          "cost": 1075285
         },
         {
           "name": "Дильшод",
@@ -1712,8 +1645,7 @@ const BILLZ_DATA = {
           "rating_pct": 97.3,
           "rated": 37,
           "sla_pct": 97.1,
-          "cost": 4360330,
-          "frt_sec": 26
+          "cost": 4360330
         },
         {
           "name": "Робия Р.",
@@ -1723,8 +1655,7 @@ const BILLZ_DATA = {
           "rating_pct": 91.7,
           "rated": 36,
           "sla_pct": 91.4,
-          "cost": 4015055,
-          "frt_sec": 51
+          "cost": 4015055
         },
         {
           "name": "Нурилло",
@@ -1734,8 +1665,7 @@ const BILLZ_DATA = {
           "rating_pct": 94.4,
           "rated": 18,
           "sla_pct": 95.5,
-          "cost": 3117340,
-          "frt_sec": 39
+          "cost": 3117340
         },
         {
           "name": "Алиёр",
@@ -1745,8 +1675,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 14,
           "sla_pct": 93.0,
-          "cost": 3048285,
-          "frt_sec": 50
+          "cost": 3048285
         },
         {
           "name": "Ардак",
@@ -1756,8 +1685,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 10,
           "sla_pct": 91.0,
-          "cost": 2515575,
-          "frt_sec": 48
+          "cost": 2515575
         },
         {
           "name": "Атабек",
@@ -1767,8 +1695,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 10,
           "sla_pct": 92.5,
-          "cost": 2407060,
-          "frt_sec": 46
+          "cost": 2407060
         },
         {
           "name": "Тожмухаммад",
@@ -1778,8 +1705,7 @@ const BILLZ_DATA = {
           "rating_pct": 90.9,
           "rated": 11,
           "sla_pct": 90.6,
-          "cost": 2387330,
-          "frt_sec": 52
+          "cost": 2387330
         },
         {
           "name": "Авазбек",
@@ -1789,8 +1715,7 @@ const BILLZ_DATA = {
           "rating_pct": 91.2,
           "rated": 34,
           "sla_pct": 93.3,
-          "cost": 2199895,
-          "frt_sec": 39
+          "cost": 2199895
         },
         {
           "name": "Сардор Б.",
@@ -1800,8 +1725,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 7,
           "sla_pct": 85.9,
-          "cost": 2130840,
-          "frt_sec": 57
+          "cost": 2130840
         },
         {
           "name": "Робия А.",
@@ -1811,8 +1735,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 4,
           "sla_pct": 90.6,
-          "cost": 907580,
-          "frt_sec": 55
+          "cost": 907580
         },
         {
           "name": "Дильшод",
@@ -1832,8 +1755,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 3,
           "sla_pct": 97.8,
-          "cost": 325545,
-          "frt_sec": 26
+          "cost": 325545
         },
         {
           "name": "Нурлан",
@@ -1843,8 +1765,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 2,
           "sla_pct": 85.7,
-          "cost": 147975,
-          "frt_sec": 67
+          "cost": 147975
         },
         {
           "name": "Камолиддин",
@@ -1854,8 +1775,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 1,
           "sla_pct": 91.8,
-          "cost": 69055,
-          "frt_sec": 53
+          "cost": 69055
         }
       ],
       "top_labels": [
@@ -2052,8 +1972,7 @@ const BILLZ_DATA = {
           "rating_pct": 95.5,
           "rated": 22,
           "sla_pct": 97.1,
-          "cost": 3669780,
-          "frt_sec": 26
+          "cost": 3669780
         },
         {
           "name": "Атабек",
@@ -2063,8 +1982,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 16,
           "sla_pct": 92.5,
-          "cost": 3117340,
-          "frt_sec": 46
+          "cost": 3117340
         },
         {
           "name": "Алиёр",
@@ -2074,8 +1992,7 @@ const BILLZ_DATA = {
           "rating_pct": 95.2,
           "rated": 21,
           "sla_pct": 93.0,
-          "cost": 2989095,
-          "frt_sec": 50
+          "cost": 2989095
         },
         {
           "name": "Нурилло",
@@ -2085,8 +2002,7 @@ const BILLZ_DATA = {
           "rating_pct": 88.2,
           "rated": 17,
           "sla_pct": 95.5,
-          "cost": 2910175,
-          "frt_sec": 39
+          "cost": 2910175
         },
         {
           "name": "Авазбек",
@@ -2096,8 +2012,7 @@ const BILLZ_DATA = {
           "rating_pct": 94.1,
           "rated": 17,
           "sla_pct": 93.3,
-          "cost": 2762200,
-          "frt_sec": 39
+          "cost": 2762200
         },
         {
           "name": "Сардор Б.",
@@ -2107,8 +2022,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 12,
           "sla_pct": 85.9,
-          "cost": 2604360,
-          "frt_sec": 57
+          "cost": 2604360
         },
         {
           "name": "Тожмухаммад",
@@ -2118,8 +2032,7 @@ const BILLZ_DATA = {
           "rating_pct": 88.2,
           "rated": 17,
           "sla_pct": 90.6,
-          "cost": 2525440,
-          "frt_sec": 52
+          "cost": 2525440
         },
         {
           "name": "Робия Р.",
@@ -2129,8 +2042,7 @@ const BILLZ_DATA = {
           "rating_pct": 95.7,
           "rated": 23,
           "sla_pct": 91.4,
-          "cost": 2298545,
-          "frt_sec": 51
+          "cost": 2298545
         },
         {
           "name": "Ардак",
@@ -2140,8 +2052,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 10,
           "sla_pct": 91.0,
-          "cost": 2209760,
-          "frt_sec": 48
+          "cost": 2209760
         },
         {
           "name": "Камолиддин",
@@ -2151,8 +2062,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 6,
           "sla_pct": 91.8,
-          "cost": 621495,
-          "frt_sec": 53
+          "cost": 621495
         },
         {
           "name": "Дильшод",
@@ -2172,8 +2082,7 @@ const BILLZ_DATA = {
           "rating_pct": 0.0,
           "rated": 0,
           "sla_pct": 85.7,
-          "cost": 128245,
-          "frt_sec": 67
+          "cost": 128245
         }
       ],
       "top_labels": [
@@ -2370,8 +2279,7 @@ const BILLZ_DATA = {
           "rating_pct": 83.3,
           "rated": 6,
           "sla_pct": 93.6,
-          "cost": 3048285,
-          "frt_sec": 45
+          "cost": 3048285
         },
         {
           "name": "Анасхон",
@@ -2381,8 +2289,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 16,
           "sla_pct": 97.1,
-          "cost": 2781930,
-          "frt_sec": 26
+          "cost": 2781930
         },
         {
           "name": "Атабек",
@@ -2392,8 +2299,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 12,
           "sla_pct": 92.5,
-          "cost": 2545170,
-          "frt_sec": 46
+          "cost": 2545170
         },
         {
           "name": "Авазбек",
@@ -2403,8 +2309,7 @@ const BILLZ_DATA = {
           "rating_pct": 88.9,
           "rated": 18,
           "sla_pct": 93.3,
-          "cost": 2436655,
-          "frt_sec": 39
+          "cost": 2436655
         },
         {
           "name": "Сардор Б.",
@@ -2414,8 +2319,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 10,
           "sla_pct": 85.9,
-          "cost": 2180165,
-          "frt_sec": 57
+          "cost": 2180165
         },
         {
           "name": "Алиёр",
@@ -2425,8 +2329,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 5,
           "sla_pct": 93.0,
-          "cost": 1903945,
-          "frt_sec": 50
+          "cost": 1903945
         },
         {
           "name": "Тожмухаммад",
@@ -2436,8 +2339,7 @@ const BILLZ_DATA = {
           "rating_pct": 70.0,
           "rated": 10,
           "sla_pct": 90.6,
-          "cost": 1874350,
-          "frt_sec": 52
+          "cost": 1874350
         },
         {
           "name": "Нурилло",
@@ -2447,8 +2349,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 9,
           "sla_pct": 95.5,
-          "cost": 1746105,
-          "frt_sec": 39
+          "cost": 1746105
         },
         {
           "name": "Ардак",
@@ -2458,8 +2359,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 10,
           "sla_pct": 91.0,
-          "cost": 1598130,
-          "frt_sec": 48
+          "cost": 1598130
         },
         {
           "name": "Робия Р.",
@@ -2469,8 +2369,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 14,
           "sla_pct": 91.4,
-          "cost": 1558670,
-          "frt_sec": 51
+          "cost": 1558670
         },
         {
           "name": "Камолиддин",
@@ -2480,8 +2379,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 4,
           "sla_pct": 91.8,
-          "cost": 384735,
-          "frt_sec": 53
+          "cost": 384735
         },
         {
           "name": "Дильшод",
@@ -2702,8 +2600,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 6,
           "sla_pct": 85.9,
-          "cost": 1765835,
-          "frt_sec": 57
+          "cost": 1765835
         },
         {
           "name": "Атабек",
@@ -2713,8 +2610,7 @@ const BILLZ_DATA = {
           "rating_pct": 88.2,
           "rated": 17,
           "sla_pct": 92.5,
-          "cost": 1716510,
-          "frt_sec": 46
+          "cost": 1716510
         },
         {
           "name": "Авазбек",
@@ -2724,8 +2620,7 @@ const BILLZ_DATA = {
           "rating_pct": 86.7,
           "rated": 15,
           "sla_pct": 93.3,
-          "cost": 1519210,
-          "frt_sec": 39
+          "cost": 1519210
         },
         {
           "name": "Анасхон",
@@ -2735,8 +2630,7 @@ const BILLZ_DATA = {
           "rating_pct": 92.3,
           "rated": 13,
           "sla_pct": 97.1,
-          "cost": 1499480,
-          "frt_sec": 26
+          "cost": 1499480
         },
         {
           "name": "Иззатбек",
@@ -2746,8 +2640,7 @@ const BILLZ_DATA = {
           "rating_pct": 85.7,
           "rated": 7,
           "sla_pct": 93.6,
-          "cost": 1331775,
-          "frt_sec": 45
+          "cost": 1331775
         },
         {
           "name": "Тожмухаммад",
@@ -2757,8 +2650,7 @@ const BILLZ_DATA = {
           "rating_pct": 50.0,
           "rated": 2,
           "sla_pct": 90.6,
-          "cost": 1223260,
-          "frt_sec": 52
+          "cost": 1223260
         },
         {
           "name": "Робия Р.",
@@ -2768,8 +2660,7 @@ const BILLZ_DATA = {
           "rating_pct": 90.0,
           "rated": 10,
           "sla_pct": 91.4,
-          "cost": 1154205,
-          "frt_sec": 51
+          "cost": 1154205
         },
         {
           "name": "Ардак",
@@ -2779,8 +2670,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 6,
           "sla_pct": 91.0,
-          "cost": 1144340,
-          "frt_sec": 48
+          "cost": 1144340
         },
         {
           "name": "Алиёр",
@@ -2790,8 +2680,7 @@ const BILLZ_DATA = {
           "rating_pct": 75.0,
           "rated": 4,
           "sla_pct": 93.0,
-          "cost": 1095015,
-          "frt_sec": 50
+          "cost": 1095015
         },
         {
           "name": "Нурилло",
@@ -2801,8 +2690,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 6,
           "sla_pct": 95.5,
-          "cost": 680685,
-          "frt_sec": 39
+          "cost": 680685
         },
         {
           "name": "Камолиддин",
@@ -2812,8 +2700,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 4,
           "sla_pct": 91.8,
-          "cost": 414330,
-          "frt_sec": 53
+          "cost": 414330
         },
         {
           "name": "Азизбек",
@@ -9056,6 +8943,212 @@ const BILLZ_DATA = {
       "peaks": [],
       "insights": [],
       "no_massoviy": {}
+    },
+    "2026-05-01": {
+      "label": "01 май",
+      "tickets": 455,
+      "calls": 154,
+      "chats": 301,
+      "desired": 250,
+      "undesired": 205,
+      "sla_pct": 82.0,
+      "sla_not_met": 18.0,
+      "csat_pct": 91.5,
+      "csat_rated": 28,
+      "repeat_pct": 8.5,
+      "cost": 4488575,
+      "incoming_calls": 310,
+      "outgoing_calls": 84,
+      "missed_calls": 30,
+      "lcr": 9.7,
+      "max_operators": 7,
+      "afrt": "47с",
+      "afrt_raw": 0.78,
+      "avg_close_h": 0.07,
+      "hourly": {},
+      "operators": [],
+      "no_massoviy": {},
+      "top_labels": [
+        {
+          "name": "Документооборот - Оплата за тариф",
+          "tickets": 60,
+          "undesired": 40,
+          "cost": 591900
+        },
+        {
+          "name": "Учётная запись - Помощь со входом в аккаунт",
+          "tickets": 43,
+          "undesired": 30,
+          "cost": 424195
+        },
+        {
+          "name": "Документооборот - Создание ссылки для оплаты",
+          "tickets": 19,
+          "undesired": 14,
+          "cost": 187435
+        },
+        {
+          "name": "Кассовые смены — Открытие/Закрытие смен",
+          "tickets": 18,
+          "undesired": 13,
+          "cost": 177570
+        },
+        {
+          "name": "Оборудование - Установка/Настройка/Удаление принтера",
+          "tickets": 16,
+          "undesired": 5,
+          "cost": 157840
+        }
+      ],
+      "top_companies": [],
+      "massoviy_cnt": 0,
+      "closed": 455,
+      "open": 0,
+      "peaks": [
+        "15:00–16:00: 8 пропущенных из 36 входящих при 7 операторах"
+      ],
+      "insights": [
+        "Команда тушила входящий поток (310 вх. vs 84 исх.)",
+        "Системная история по оплатам и входу в аккаунт",
+        "LCR 9.7% — перегруз в 15-16ч"
+      ]
+    },
+    "2026-05-02": {
+      "label": "02 май",
+      "tickets": 368,
+      "calls": 140,
+      "chats": 228,
+      "desired": 220,
+      "undesired": 148,
+      "sla_pct": 85.0,
+      "sla_not_met": 15.0,
+      "csat_pct": 92.0,
+      "csat_rated": 24,
+      "repeat_pct": 9.0,
+      "cost": 3630320,
+      "incoming_calls": 256,
+      "outgoing_calls": 66,
+      "missed_calls": 17,
+      "lcr": 6.6,
+      "max_operators": 7,
+      "afrt": "44с",
+      "afrt_raw": 0.73,
+      "avg_close_h": 0.06,
+      "hourly": {},
+      "operators": [],
+      "no_massoviy": {},
+      "top_labels": [
+        {
+          "name": "Документооборот - Оплата за тариф",
+          "tickets": 54,
+          "undesired": 36,
+          "cost": 532710
+        },
+        {
+          "name": "Документооборот - Создание ссылки для оплаты",
+          "tickets": 18,
+          "undesired": 13,
+          "cost": 177570
+        },
+        {
+          "name": "Учётная запись - Помощь со входом в аккаунт",
+          "tickets": 17,
+          "undesired": 12,
+          "cost": 167705
+        },
+        {
+          "name": "Каталог — настройка печати ценника",
+          "tickets": 17,
+          "undesired": 7,
+          "cost": 167705
+        },
+        {
+          "name": "Оборудование - Установка/Настройка/Удаление принтера",
+          "tickets": 17,
+          "undesired": 5,
+          "cost": 167705
+        }
+      ],
+      "top_companies": [],
+      "massoviy_cnt": 0,
+      "closed": 368,
+      "open": 0,
+      "peaks": [
+        "13:00–14:00: 6 пропущенных из 23 входящих при 7 операторах"
+      ],
+      "insights": [
+        "Нагрузка снизилась — пропущенных вдвое меньше (17 vs 30)",
+        "Тематика стабильная: оплаты и аккаунты"
+      ]
+    },
+    "2026-05-03": {
+      "label": "03 май",
+      "tickets": 332,
+      "calls": 156,
+      "chats": 176,
+      "desired": 200,
+      "undesired": 132,
+      "sla_pct": 78.0,
+      "sla_not_met": 22.0,
+      "csat_pct": 93.0,
+      "csat_rated": 20,
+      "repeat_pct": 7.5,
+      "cost": 3275180,
+      "incoming_calls": 198,
+      "outgoing_calls": 30,
+      "missed_calls": 27,
+      "lcr": 13.6,
+      "max_operators": 6,
+      "afrt": "52с",
+      "afrt_raw": 0.87,
+      "avg_close_h": 0.08,
+      "hourly": {},
+      "operators": [],
+      "no_massoviy": {},
+      "top_labels": [
+        {
+          "name": "Документооборот - Оплата за тариф",
+          "tickets": 35,
+          "undesired": 22,
+          "cost": 345275
+        },
+        {
+          "name": "Оборудование - Установка/Настройка/Удаление принтера",
+          "tickets": 24,
+          "undesired": 7,
+          "cost": 236760
+        },
+        {
+          "name": "Документооборот - Создание ссылки для оплаты",
+          "tickets": 21,
+          "undesired": 16,
+          "cost": 207165
+        },
+        {
+          "name": "Учётная запись - Помощь со входом в аккаунт",
+          "tickets": 19,
+          "undesired": 14,
+          "cost": 187435
+        },
+        {
+          "name": "Кассовые смены — Открытие/Закрытие смен",
+          "tickets": 12,
+          "undesired": 9,
+          "cost": 118380
+        }
+      ],
+      "top_companies": [],
+      "massoviy_cnt": 0,
+      "closed": 332,
+      "open": 0,
+      "peaks": [
+        "11:00–13:00: 16 пропущенных из 43 — каждый 3й звонок!"
+      ],
+      "insights": [
+        "Меньше объём — больше пропущенных (оператор на отгуле)",
+        "LCR 13.6% — критический уровень!",
+        "Наняли 2 новых, выходят в понедельник"
+      ]
     }
   },
   "quarterly": {
@@ -9147,7 +9240,7 @@ const BILLZ_DATA = {
         "desired": 4963,
         "undesired": 5360,
         "csat_pct": 94.6,
-        "sla_pct": 78.8,
+        "sla_pct": 92.5,
         "lcr": 4.59,
         "frt_avg_sec": 51,
         "cost_mln": 114.47,
@@ -9165,13 +9258,9 @@ const BILLZ_DATA = {
         "tickets": 1470,
         "frt_sec": 26,
         "sla_pct": 97.1,
-        "sla_not": 2.9,
-        "any_frt_sec": 22,
-        "any_sla_not": 0.4,
-        "write_sec": 12,
         "avg_close": 16.67,
         "rating_pct": 93.1,
-        "rated": 102,
+        "rated": 180,
         "cost": 14501550,
         "close_rate": 99.5,
         "rank": 1,
@@ -9188,18 +9277,14 @@ const BILLZ_DATA = {
         "tickets": 1231,
         "frt_sec": 46,
         "sla_pct": 92.5,
-        "sla_not": 7.5,
-        "any_frt_sec": 49,
-        "any_sla_not": 0.8,
-        "write_sec": 19,
         "avg_close": 46.75,
         "rating_pct": 90.3,
-        "rated": 71,
+        "rated": 124,
         "cost": 12143815,
         "close_rate": 99.5,
         "rank": 2,
         "total": 1231,
-        "score": 80.3,
+        "score": 80.4,
         "frt_med_sec": 46,
         "kk": 85,
         "test": 85,
@@ -9211,13 +9296,9 @@ const BILLZ_DATA = {
         "tickets": 1122,
         "frt_sec": 50,
         "sla_pct": 93.0,
-        "sla_not": 7.0,
-        "any_frt_sec": 54,
-        "any_sla_not": 1.5,
-        "write_sec": 35,
         "avg_close": 13.68,
         "rating_pct": 95.2,
-        "rated": 57,
+        "rated": 115,
         "cost": 11068530,
         "close_rate": 99.5,
         "rank": 3,
@@ -9234,13 +9315,9 @@ const BILLZ_DATA = {
         "tickets": 1074,
         "frt_sec": 39,
         "sla_pct": 95.5,
-        "sla_not": 4.5,
-        "any_frt_sec": 42,
-        "any_sla_not": 0.5,
-        "write_sec": 19,
         "avg_close": 27.15,
         "rating_pct": 87.0,
-        "rated": 64,
+        "rated": 100,
         "cost": 10595010,
         "close_rate": 99.5,
         "rank": 4,
@@ -9257,10 +9334,6 @@ const BILLZ_DATA = {
         "tickets": 1073,
         "frt_sec": 57,
         "sla_pct": 85.9,
-        "sla_not": 14.1,
-        "any_frt_sec": 60,
-        "any_sla_not": 1.2,
-        "write_sec": 24,
         "avg_close": 18.53,
         "rating_pct": 100.0,
         "rated": 42,
@@ -9280,13 +9353,9 @@ const BILLZ_DATA = {
         "tickets": 1050,
         "frt_sec": 51,
         "sla_pct": 91.4,
-        "sla_not": 8.6,
-        "any_frt_sec": 66,
-        "any_sla_not": 1.8,
-        "write_sec": 20,
         "avg_close": 44.65,
         "rating_pct": 89.7,
-        "rated": 15,
+        "rated": 68,
         "cost": 10358250,
         "close_rate": 99.5,
         "rank": 6,
@@ -9303,13 +9372,9 @@ const BILLZ_DATA = {
         "tickets": 999,
         "frt_sec": 39,
         "sla_pct": 93.3,
-        "sla_not": 6.7,
-        "any_frt_sec": 52,
-        "any_sla_not": 1.8,
-        "write_sec": 25,
         "avg_close": 28.4,
         "rating_pct": 88.4,
-        "rated": 97,
+        "rated": 60,
         "cost": 9855135,
         "close_rate": 99.5,
         "rank": 7,
@@ -9326,13 +9391,9 @@ const BILLZ_DATA = {
         "tickets": 997,
         "frt_sec": 52,
         "sla_pct": 90.6,
-        "sla_not": 9.4,
-        "any_frt_sec": 58,
-        "any_sla_not": 1.0,
-        "write_sec": 26,
         "avg_close": 24.05,
         "rating_pct": 80.4,
-        "rated": 51,
+        "rated": 52,
         "cost": 9835405,
         "close_rate": 99.5,
         "rank": 8,
@@ -9349,10 +9410,6 @@ const BILLZ_DATA = {
         "tickets": 913,
         "frt_sec": 48,
         "sla_pct": 91.0,
-        "sla_not": 9.0,
-        "any_frt_sec": 45,
-        "any_sla_not": 1.5,
-        "write_sec": 20,
         "avg_close": 54.0,
         "rating_pct": 97.7,
         "rated": 44,
@@ -9372,13 +9429,9 @@ const BILLZ_DATA = {
         "tickets": 623,
         "frt_sec": 45,
         "sla_pct": 93.6,
-        "sla_not": 6.4,
-        "any_frt_sec": 48,
-        "any_sla_not": 0.4,
-        "write_sec": 20,
         "avg_close": 22.67,
         "rating_pct": 89.5,
-        "rated": 19,
+        "rated": 38,
         "cost": 6145895,
         "close_rate": 99.5,
         "rank": 10,
@@ -9395,13 +9448,9 @@ const BILLZ_DATA = {
         "tickets": 341,
         "frt_sec": 55,
         "sla_pct": 90.6,
-        "sla_not": 9.4,
-        "any_frt_sec": 44,
-        "any_sla_not": 1.3,
-        "write_sec": 45,
         "avg_close": 177.0,
         "rating_pct": 100.0,
-        "rated": 15,
+        "rated": 18,
         "cost": 3363965,
         "close_rate": 99.5,
         "rank": 11,
@@ -9418,10 +9467,6 @@ const BILLZ_DATA = {
         "tickets": 184,
         "frt_sec": 26,
         "sla_pct": 97.8,
-        "sla_not": 2.2,
-        "any_frt_sec": 41,
-        "any_sla_not": 1.0,
-        "write_sec": 18,
         "avg_close": 40.75,
         "rating_pct": 96.2,
         "rated": 24,
@@ -9441,13 +9486,9 @@ const BILLZ_DATA = {
         "tickets": 151,
         "frt_sec": 53,
         "sla_pct": 91.8,
-        "sla_not": 8.2,
-        "any_frt_sec": 52,
-        "any_sla_not": 1.3,
-        "write_sec": 44,
         "avg_close": 14.2,
         "rating_pct": 100.0,
-        "rated": 15,
+        "rated": 11,
         "cost": 1489615,
         "close_rate": 99.5,
         "rank": 13,
@@ -9464,10 +9505,6 @@ const BILLZ_DATA = {
         "tickets": 28,
         "frt_sec": 67,
         "sla_pct": 85.7,
-        "sla_not": 14.3,
-        "any_frt_sec": 66,
-        "any_sla_not": 2.3,
-        "write_sec": 32,
         "avg_close": 6.42,
         "rating_pct": 100.0,
         "rated": 2,
@@ -9484,164 +9521,224 @@ const BILLZ_DATA = {
       }
     ],
     "label_categories": {
-      "senior": {
-        "description": "Требует Иззатбека или Атабека",
-        "tickets": 3048,
-        "cost_mln": 30.1,
+      "junior": {
+        "tickets": 3398,
+        "cost_mln": 33.52,
+        "description": "Базовые навыки · Документооборот, Принтеры, Кассы, Аккаунты",
         "labels": [
           {
-            "name": "Баг (реквест)",
-            "tickets": 385,
-            "med_close_min": 29.3
+            "name": "Документооборот - Оплата за тариф",
+            "tickets": 889,
+            "undesired_pct": 57.9
           },
           {
-            "name": "Реквест (внутренний запрос)",
-            "tickets": 104,
-            "med_close_min": 22.9
+            "name": "Учётная запись - Помощь со входом в аккаунт",
+            "tickets": 494,
+            "undesired_pct": 64.8
           },
           {
-            "name": "Бэклог",
-            "tickets": 58,
-            "med_close_min": 38.0
+            "name": "Оборудование - Установка/Настройка/Удаление принтера",
+            "tickets": 427,
+            "undesired_pct": 27.9
           },
           {
-            "name": "Импорт — импорт товаров через Excel",
-            "tickets": 375,
-            "med_close_min": 5.0
+            "name": "Документооборот - Создание ссылки для оплаты",
+            "tickets": 395,
+            "undesired_pct": 74.7
           },
           {
-            "name": "Оборудование — Установка Anydesk/Desktop",
-            "tickets": 280,
-            "med_close_min": 5.0
+            "name": "Учётная запись - Блокировка/Разблокировка аккаунта",
+            "tickets": 294,
+            "undesired_pct": 55.8
           },
           {
-            "name": "Отчёты — Разбор отчётов",
-            "tickets": 272,
-            "med_close_min": 4.3
+            "name": "Кассовые смены — Открытие/Закрытие смен",
+            "tickets": 214,
+            "undesired_pct": 68.7
           },
           {
-            "name": "Настройка — Установка BILLZ PAY/Epos/PAX",
-            "tickets": 196,
-            "med_close_min": 6.3
+            "name": "Каталог — настройка печати ценника",
+            "tickets": 181,
+            "undesired_pct": 43.1
           },
           {
-            "name": "Desktop — Ошибка синхронизации",
-            "tickets": 47,
-            "med_close_min": 9.5
+            "name": "Учётная запись - Создание магазина",
+            "tickets": 147,
+            "undesired_pct": 36.7
           },
           {
-            "name": "SMS рассылка — Создание/Шаблонирование",
+            "name": "Документооборот - Консультация по сумме долга",
             "tickets": 114,
-            "med_close_min": 3.2
+            "undesired_pct": 58.8
           },
           {
-            "name": "API — Консультация по API",
-            "tickets": 71,
-            "med_close_min": 3.2
+            "name": "Документооборот - Помощь в оплате долга",
+            "tickets": 72,
+            "undesired_pct": 48.6
+          },
+          {
+            "name": "Документооборот - Консультация по тарифу",
+            "tickets": 70,
+            "undesired_pct": 44.3
+          },
+          {
+            "name": "Документооборот - Смена тарифа (upsell/downsell)",
+            "tickets": 54,
+            "undesired_pct": 31.5
+          },
+          {
+            "name": "Документооборот - Реактивация клиента",
+            "tickets": 47,
+            "undesired_pct": 36.2
           }
         ]
       },
       "middle": {
-        "description": "Опытный оператор (Middle+)",
-        "tickets": 4820,
-        "cost_mln": 47.5,
+        "tickets": 2335,
+        "cost_mln": 23.03,
+        "description": "Опыт 3+ мес · Каталог, Управление, Новая продажа, Импорт",
         "labels": [
           {
-            "name": "Оборудование — Установка/Настройка принтера",
-            "tickets": 1115,
-            "med_close_min": 5.3
+            "name": "Вопрос не по программе",
+            "tickets": 236,
+            "undesired_pct": 62.7
           },
           {
             "name": "Каталог — изменение свойств товара",
-            "tickets": 754,
-            "med_close_min": 6.3
+            "tickets": 227,
+            "undesired_pct": 51.5
           },
           {
-            "name": "Каталог — настройка печати ценника",
-            "tickets": 666,
-            "med_close_min": 4.3
+            "name": "Управление - Создание/Редактирвоание/Удаление роли",
+            "tickets": 175,
+            "undesired_pct": 40.0
           },
           {
-            "name": "Управление — Создание/Редактирование роли",
-            "tickets": 491,
-            "med_close_min": 4.2
+            "name": "Новая продажа - Не удаётся сделать продажу",
+            "tickets": 127,
+            "undesired_pct": 48.8
           },
           {
-            "name": "Новая продажа — Не удаётся сделать продажу",
-            "tickets": 462,
-            "med_close_min": 4.3
+            "name": "Управление - Создание/Редактирвоание/Удаление сотрудника",
+            "tickets": 125,
+            "undesired_pct": 40.8
           },
           {
-            "name": "Оборудование — Установка/Настройка весов",
-            "tickets": 98,
-            "med_close_min": 6.9
-          },
-          {
-            "name": "Маркетинг — Сертификат/Ваучер",
-            "tickets": 96,
-            "med_close_min": 4.1
-          },
-          {
-            "name": "Учётная запись — Не удаётся войти",
-            "tickets": 69,
-            "med_close_min": 6.1
-          }
-        ]
-      },
-      "junior": {
-        "description": "Любой оператор",
-        "tickets": 11652,
-        "cost_mln": 114.9,
-        "labels": [
-          {
-            "name": "Документооборот — Оплата за тариф",
-            "tickets": 1924,
-            "med_close_min": 2.6
-          },
-          {
-            "name": "Массовый сбой BILLZ",
-            "tickets": 1758,
-            "med_close_min": 2.2
-          },
-          {
-            "name": "Документооборот — Создание ссылки для оплаты",
-            "tickets": 1292,
-            "med_close_min": 1.2
-          },
-          {
-            "name": "Кассовые смены — Открытие/Закрытие",
-            "tickets": 1270,
-            "med_close_min": 1.0
-          },
-          {
-            "name": "Учётная запись — Помощь со входом",
-            "tickets": 1028,
-            "med_close_min": 3.7
-          },
-          {
-            "name": "Учётная запись — Блокировка/Разблокировка",
-            "tickets": 834,
-            "med_close_min": 2.0
-          },
-          {
-            "name": "Вопрос не по программе",
-            "tickets": 495,
-            "med_close_min": 2.7
-          },
-          {
-            "name": "Учётная запись — Создание магазина",
-            "tickets": 382,
-            "med_close_min": 2.3
-          },
-          {
-            "name": "Новая продажа — Возврат/Обмен",
-            "tickets": 313,
-            "med_close_min": 3.6
+            "name": "Импорт — импорт товаров через Excel",
+            "tickets": 119,
+            "undesired_pct": 37.8
           },
           {
             "name": "Каталог — запрос на добавление товара",
-            "tickets": 304,
-            "med_close_min": 3.4
+            "tickets": 117,
+            "undesired_pct": 39.3
+          },
+          {
+            "name": "Настройка - Установка BILLZ PAY/Payme/Epos/PAX",
+            "tickets": 105,
+            "undesired_pct": 27.6
+          },
+          {
+            "name": "Новая продажа - Возврат/Обмен",
+            "tickets": 101,
+            "undesired_pct": 51.5
+          },
+          {
+            "name": "Настройка - Создание/Редактирование/Удаление доп. точки",
+            "tickets": 97,
+            "undesired_pct": 18.6
+          },
+          {
+            "name": "Отчёты - Разбор отчётов",
+            "tickets": 95,
+            "undesired_pct": 20.0
+          },
+          {
+            "name": "Все продажи - Удаление/Редактирование продажи",
+            "tickets": 86,
+            "undesired_pct": 57.0
+          },
+          {
+            "name": "Настройка - Создание/Редактирование/Удаление чека",
+            "tickets": 85,
+            "undesired_pct": 29.4
+          },
+          {
+            "name": "Учётная запись - Очистка магазина",
+            "tickets": 82,
+            "undesired_pct": 23.2
+          },
+          {
+            "name": "Desktop - Ошибка синхронизации",
+            "tickets": 71,
+            "undesired_pct": 45.1
+          },
+          {
+            "name": "Отчёты - Выгрузка отчёта",
+            "tickets": 65,
+            "undesired_pct": 20.0
+          },
+          {
+            "name": "Инвентаризация — консультация по модулю (частичное обучение)",
+            "tickets": 63,
+            "undesired_pct": 36.5
+          },
+          {
+            "name": "Каталог - Архивация товаров",
+            "tickets": 61,
+            "undesired_pct": 39.3
+          },
+          {
+            "name": "Каталог - Просмотр статистики",
+            "tickets": 60,
+            "undesired_pct": 40.0
+          },
+          {
+            "name": "Долги клиентов - Погашение/Удаление/Редактирование долга",
+            "tickets": 51,
+            "undesired_pct": 23.5
+          },
+          {
+            "name": "Каталог - Скачивание товаров",
+            "tickets": 50,
+            "undesired_pct": 22.0
+          },
+          {
+            "name": "SMS рассылка - Создание SMS рассылки",
+            "tickets": 49,
+            "undesired_pct": 22.4
+          },
+          {
+            "name": "Новая продажа - Консультация",
+            "tickets": 45,
+            "undesired_pct": 44.4
+          },
+          {
+            "name": "Оборудование - Загрузка базу товаров в весы",
+            "tickets": 43,
+            "undesired_pct": 20.9
+          }
+        ]
+      },
+      "senior": {
+        "tickets": 317,
+        "cost_mln": 3.13,
+        "description": "Сложные технические · Anydesk, API, Баги, Массовый сбой",
+        "labels": [
+          {
+            "name": "Оборудование - Установка Anydesk/BILLZ Desktop/Программы компьютера и тд.",
+            "tickets": 117,
+            "undesired_pct": 39.3
+          },
+          {
+            "name": "Массовый сбой BILLZ",
+            "tickets": 117,
+            "undesired_pct": 78.6
+          },
+          {
+            "name": "Баг (реквест)",
+            "tickets": 83,
+            "undesired_pct": 48.2
           }
         ]
       }
@@ -9738,8 +9835,8 @@ const BILLZ_DATA = {
       {
         "month": "Апрель",
         "tickets": 471,
-        "partial": 312,
-        "full": 28,
+        "partial": 434,
+        "full": 31,
         "med_close": 4.6,
         "cost": 4646415
       }
@@ -9747,627 +9844,739 @@ const BILLZ_DATA = {
     "by_ks_manager": [
       {
         "name": "Baxtiyor Kasimov",
-        "tickets": 275,
-        "partial": 188,
-        "full": 14,
-        "med_close": 5.1,
-        "stores": 7,
-        "cost": 2712875,
-        "big_base": true,
-        "note": "Большая клиентская база с высокой активностью. Объём обращений объясняется широким охватом, однако это сигнал к пересмотру стандарта онбординга и частоты follow-up сессий.",
-        "total": 73
+        "tickets": 1195,
+        "partial": 39,
+        "full": 3,
+        "med_close": 0.1,
+        "cost": 11788675
       },
       {
         "name": "Shoxruh Maxmud",
-        "tickets": 284,
-        "partial": 228,
-        "full": 21,
-        "med_close": 4.6,
-        "stores": 8,
-        "cost": 2801660,
-        "big_base": true,
-        "note": "Один из самых крупных портфелей клиентов в команде CS. Высокий объём обращений — следствие большой активной базы, которую сложно полностью охватить в рамках стандартного онбординга.",
-        "total": 35
+        "tickets": 845,
+        "partial": 43,
+        "full": 1,
+        "med_close": 0.1,
+        "cost": 8335925
       },
       {
         "name": "Husan Artikov",
-        "tickets": 208,
-        "partial": 163,
-        "full": 14,
-        "med_close": 5.8,
-        "stores": 6,
-        "cost": 2051920,
-        "big_base": false,
-        "note": "",
-        "total": 31
+        "tickets": 697,
+        "partial": 27,
+        "full": 1,
+        "med_close": 0.1,
+        "cost": 6875905
       },
       {
         "name": "Sunnattilla Abdurazzoqov",
-        "tickets": 183,
-        "partial": 147,
-        "full": 11,
-        "med_close": 4.9,
-        "stores": 5,
-        "cost": 1805295,
-        "big_base": false,
-        "note": "",
-        "total": 25
-      },
-      {
-        "name": "Jasur Mukhamedjanov",
-        "tickets": 139,
-        "partial": 102,
-        "full": 8,
-        "med_close": 4.3,
-        "stores": 4,
-        "cost": 1371235,
-        "big_base": false,
-        "note": "",
-        "total": 29
+        "tickets": 602,
+        "partial": 17,
+        "full": 2,
+        "med_close": 0.1,
+        "cost": 5938730
       },
       {
         "name": "Alina Hanieva",
-        "tickets": 132,
-        "partial": 96,
-        "full": 10,
-        "med_close": 5.2,
-        "stores": 4,
-        "cost": 1302180,
-        "big_base": false,
-        "note": "",
-        "total": 26
+        "tickets": 430,
+        "partial": 15,
+        "full": 2,
+        "med_close": 0.1,
+        "cost": 4241950
       },
       {
-        "name": "Akbarali Kidiraliev",
-        "tickets": 96,
-        "partial": 68,
-        "full": 6,
-        "med_close": 5.0,
-        "stores": 3,
-        "cost": 947040,
-        "big_base": false,
-        "note": "",
-        "total": 22
-      },
-      {
-        "name": "Xasanali Ummatov",
-        "tickets": 97,
-        "partial": 80,
-        "full": 6,
-        "med_close": 4.7,
-        "stores": 3,
-        "cost": 956905,
-        "big_base": false,
-        "note": "",
-        "total": 11
-      },
-      {
-        "name": "Marfiya Shadiyeva",
-        "tickets": 82,
-        "partial": 58,
-        "full": 5,
-        "med_close": 4.8,
-        "stores": 3,
-        "cost": 808930,
-        "big_base": false,
-        "note": "",
-        "total": 19
-      },
-      {
-        "name": "Azizjon Ibrohimov",
-        "tickets": 70,
-        "partial": 41,
+        "name": "Jasur Mukhamedjanov",
+        "tickets": 430,
+        "partial": 14,
         "full": 3,
-        "med_close": 4.6,
-        "stores": 2,
-        "cost": 690550,
-        "big_base": false,
-        "note": "",
-        "total": 26
+        "med_close": 0.1,
+        "cost": 4241950
       },
       {
         "name": "Maftuna Shernazarova",
-        "tickets": 75,
-        "partial": 59,
-        "full": 4,
-        "med_close": 5.1,
-        "stores": 3,
-        "cost": 739875,
-        "big_base": false,
-        "note": "",
-        "total": 12
-      },
-      {
-        "name": "Mukhammadaziz Koshakbayev",
-        "tickets": 68,
-        "partial": 50,
-        "full": 4,
-        "med_close": 5.3,
-        "stores": 2,
-        "cost": 670820,
-        "big_base": false,
-        "note": "",
-        "total": 14
-      },
-      {
-        "name": "Shoxrux Mahmud",
-        "total": 12,
-        "tickets": 12,
-        "cost": 118380
-      },
-      {
-        "name": "Наш чел",
-        "total": 12,
-        "tickets": 12,
-        "cost": 118380
+        "tickets": 365,
+        "partial": 18,
+        "full": null,
+        "med_close": 0.0,
+        "cost": 3600725
       },
       {
         "name": "Self-onboarding",
-        "total": 11,
-        "tickets": 11,
-        "cost": 108515
+        "tickets": 350,
+        "partial": 9,
+        "full": 2,
+        "med_close": 0.1,
+        "cost": 3452750
       },
       {
-        "name": "Xikmatillo Baxtiyorov Partner",
-        "total": 10,
-        "tickets": 10,
-        "cost": 98650
+        "name": "Xasanali Ummatov",
+        "tickets": 299,
+        "partial": 8,
+        "full": null,
+        "med_close": 0.0,
+        "cost": 2949635
       },
       {
-        "name": "Ismoil Shorahimov",
-        "total": 10,
-        "tickets": 10,
-        "cost": 98650
+        "name": "Marfiya Shadiyeva",
+        "tickets": 297,
+        "partial": 19,
+        "full": 3,
+        "med_close": 0.1,
+        "cost": 2929905
+      },
+      {
+        "name": "Akbarali Kidiraliev",
+        "tickets": 274,
+        "partial": 25,
+        "full": null,
+        "med_close": 0.1,
+        "cost": 2703010
+      },
+      {
+        "name": "Mukhammadaziz Koshakbayev",
+        "tickets": 258,
+        "partial": 16,
+        "full": 2,
+        "med_close": 0.1,
+        "cost": 2545170
+      },
+      {
+        "name": "Azizjon Ibrohimov",
+        "tickets": 225,
+        "partial": 9,
+        "full": null,
+        "med_close": 0.1,
+        "cost": 2219625
+      },
+      {
+        "name": "Наш чел",
+        "tickets": 191,
+        "partial": 1,
+        "full": null,
+        "med_close": 0.0,
+        "cost": 1884215
       },
       {
         "name": "ПАРТНЁР",
-        "total": 9,
-        "tickets": 9,
-        "cost": 88785
-      },
-      {
-        "name": "Sardor Ibrohimov Partner",
-        "total": 8,
-        "tickets": 8,
-        "cost": 78920
-      },
-      {
-        "name": "Нет КСника в админке",
-        "total": 8,
-        "tickets": 8,
-        "cost": 78920
-      },
-      {
-        "name": "наш чел",
-        "total": 7,
-        "tickets": 7,
-        "cost": 69055
-      },
-      {
-        "name": "Sanat Toshpulatov",
-        "total": 7,
-        "tickets": 7,
-        "cost": 69055
-      },
-      {
-        "name": "Saidorif Muzaffarov Partner",
-        "total": 6,
-        "tickets": 6,
-        "cost": 59190
-      },
-      {
-        "name": "Marat Mustafaev",
-        "total": 6,
-        "tickets": 6,
-        "cost": 59190
-      },
-      {
-        "name": "Parviz Khafizov Partner",
-        "total": 5,
-        "tickets": 5,
-        "cost": 49325
-      },
-      {
-        "name": "Robiya Alisherova",
-        "total": 4,
-        "tickets": 4,
-        "cost": 39460
-      },
-      {
-        "name": "Abdulaziz Abduganiev",
-        "total": 4,
-        "tickets": 4,
-        "cost": 39460
-      },
-      {
-        "name": "Еще не выбрали",
-        "total": 4,
-        "tickets": 4,
-        "cost": 39460
-      },
-      {
-        "name": "Санат",
-        "total": 4,
-        "tickets": 4,
-        "cost": 39460
-      },
-      {
-        "name": "Karim Serikov",
-        "total": 3,
-        "tickets": 3,
-        "cost": 29595
-      },
-      {
-        "name": "Saidamir Argumbaev",
-        "total": 3,
-        "tickets": 3,
-        "cost": 29595
+        "tickets": 181,
+        "partial": 5,
+        "full": null,
+        "med_close": 0.1,
+        "cost": 1785565
       },
       {
         "name": "Texnopos Partner",
-        "total": 3,
-        "tickets": 3,
-        "cost": 29595
+        "tickets": 151,
+        "partial": 11,
+        "full": null,
+        "med_close": 0.1,
+        "cost": 1489615
       },
       {
-        "name": "Партнер",
-        "total": 3,
-        "tickets": 3,
-        "cost": 29595
+        "name": "Abdulaziz Abduganiev",
+        "tickets": 131,
+        "partial": 11,
+        "full": 1,
+        "med_close": 0.1,
+        "cost": 1292315
       },
       {
-        "name": "Ещё нет в ЧБ",
-        "total": 3,
-        "tickets": 3,
-        "cost": 29595
+        "name": "Parviz Khafizov Partner",
+        "tickets": 129,
+        "partial": 8,
+        "full": null,
+        "med_close": 0.1,
+        "cost": 1272585
       },
       {
-        "name": "КСник",
-        "total": 3,
-        "tickets": 3,
-        "cost": 29595
+        "name": "Saidamir Argumbaev",
+        "tickets": 125,
+        "partial": 12,
+        "full": null,
+        "med_close": 0.1,
+        "cost": 1233125
       },
       {
-        "name": "КС",
-        "total": 3,
-        "tickets": 3,
-        "cost": 29595
+        "name": "Shoxrux Mahmud",
+        "tickets": 122,
+        "partial": 3,
+        "full": null,
+        "med_close": 0.0,
+        "cost": 1203530
       },
       {
-        "name": "Self-Onboarding",
-        "total": 2,
-        "tickets": 2,
-        "cost": 19730
+        "name": "Ismoil Shorahimov",
+        "tickets": 120,
+        "partial": 4,
+        "full": null,
+        "med_close": 0.1,
+        "cost": 1183800
       },
       {
-        "name": "Наш человек",
-        "total": 2,
-        "tickets": 2,
-        "cost": 19730
-      },
-      {
-        "name": "Наш партнер",
-        "total": 2,
-        "tickets": 2,
-        "cost": 19730
-      },
-      {
-        "name": "Vadim Zakharyan",
-        "total": 2,
-        "tickets": 2,
-        "cost": 19730
-      },
-      {
-        "name": "PARTNER Aziz Shakirov",
-        "total": 2,
-        "tickets": 2,
-        "cost": 19730
-      },
-      {
-        "name": "Boburjon Karabayev Partner",
-        "total": 2,
-        "tickets": 2,
-        "cost": 19730
-      },
-      {
-        "name": "Marufhon Bahodirhonov Partner",
-        "total": 2,
-        "tickets": 2,
-        "cost": 19730
-      },
-      {
-        "name": "Mukhammadaziz Koshakbaev",
-        "total": 2,
-        "tickets": 2,
-        "cost": 19730
+        "name": "Xikmatillo Baxtiyorov Partner",
+        "tickets": 110,
+        "partial": 2,
+        "full": null,
+        "med_close": 0.1,
+        "cost": 1085150
       },
       {
         "name": "Не указан в админке",
-        "total": 2,
-        "tickets": 2,
-        "cost": 19730
+        "tickets": 101,
+        "partial": 8,
+        "full": null,
+        "med_close": 0.1,
+        "cost": 996365
       },
       {
-        "name": "Yusupov Mansur Partner (\"MBOS UNION\" XK)",
-        "total": 2,
-        "tickets": 2,
-        "cost": 19730
+        "name": "Sanat Toshpulatov",
+        "tickets": 99,
+        "partial": 3,
+        "full": null,
+        "med_close": 0.1,
+        "cost": 976635
+      },
+      {
+        "name": "наш чел",
+        "tickets": 98,
+        "partial": 2,
+        "full": 1,
+        "med_close": 0.0,
+        "cost": 966770
+      },
+      {
+        "name": "Наш партнер",
+        "tickets": 91,
+        "partial": 2,
+        "full": null,
+        "med_close": 0.1,
+        "cost": 897715
+      },
+      {
+        "name": "Marat Mustafaev",
+        "tickets": 81,
+        "partial": 7,
+        "full": null,
+        "med_close": 0.1,
+        "cost": 799065
+      },
+      {
+        "name": "Sardor Ibrohimov Partner",
+        "tickets": 81,
+        "partial": 3,
+        "full": null,
+        "med_close": 0.1,
+        "cost": 799065
+      },
+      {
+        "name": "Karim Serikov",
+        "tickets": 73,
+        "partial": 6,
+        "full": null,
+        "med_close": 0.1,
+        "cost": 720145
+      },
+      {
+        "name": "Saidorif Muzaffarov Partner",
+        "tickets": 72,
+        "partial": 3,
+        "full": 1,
+        "med_close": 0.1,
+        "cost": 710280
       },
       {
         "name": "Other Partner",
-        "total": 2,
-        "tickets": 2,
-        "cost": 19730
-      },
-      {
-        "name": "Nursulton Javliyev Partner \"INVEST BEST TRADE PRODUCT\"",
-        "total": 2,
-        "tickets": 2,
-        "cost": 19730
-      },
-      {
-        "name": "Muzaffar Abduvoxidov Partner",
-        "total": 2,
-        "tickets": 2,
-        "cost": 19730
-      },
-      {
-        "name": "Head CX depeartment",
-        "total": 1,
-        "tickets": 1,
-        "cost": 9865
-      },
-      {
-        "name": "LITE",
-        "total": 1,
-        "tickets": 1,
-        "cost": 9865
-      },
-      {
-        "name": "Kurman Saparbekov",
-        "total": 1,
-        "tickets": 1,
-        "cost": 9865
-      },
-      {
-        "name": "Baxtiyor Kasimov/ Marfiya Shadiyeva",
-        "total": 1,
-        "tickets": 1,
-        "cost": 9865
-      },
-      {
-        "name": "AE",
-        "total": 1,
-        "tickets": 1,
-        "cost": 9865
-      },
-      {
-        "name": "Alisher Azimov Partner (YTT TILYABAYEVA SITORAXON G'ULOMQODIR QI)",
-        "total": 1,
-        "tickets": 1,
-        "cost": 9865
-      },
-      {
-        "name": "BILLZ Lite",
-        "total": 1,
-        "tickets": 1,
-        "cost": 9865
-      },
-      {
-        "name": "Baxtiyorov Xikmatillo Partner",
-        "total": 1,
-        "tickets": 1,
-        "cost": 9865
-      },
-      {
-        "name": "Burhan Ergashev Partner",
-        "total": 1,
-        "tickets": 1,
-        "cost": 9865
-      },
-      {
-        "name": "Bobur Abdukakhkharov Kyrgyzstan",
-        "total": 1,
-        "tickets": 1,
-        "cost": 9865
-      },
-      {
-        "name": "Bobur Abdukakhkharov Partner",
-        "total": 1,
-        "tickets": 1,
-        "cost": 9865
-      },
-      {
-        "name": "Marat Mustafayev",
-        "total": 1,
-        "tickets": 1,
-        "cost": 9865
-      },
-      {
-        "name": "Maftuna Shernazarova / Sunnattilla Abdurazzoqov",
-        "total": 1,
-        "tickets": 1,
-        "cost": 9865
-      },
-      {
-        "name": "Support manager Sunnattilla Abdurazzoqov",
-        "total": 1,
-        "tickets": 1,
-        "cost": 9865
-      },
-      {
-        "name": "Ulugbek Salimov Bukhara",
-        "total": 1,
-        "tickets": 1,
-        "cost": 9865
-      },
-      {
-        "name": "Shoxruh Pirmukhametov",
-        "total": 1,
-        "tickets": 1,
-        "cost": 9865
-      },
-      {
-        "name": "Sarvar Alimov",
-        "total": 1,
-        "tickets": 1,
-        "cost": 9865
-      },
-      {
-        "name": "Shoxruh Mahmud",
-        "total": 1,
-        "tickets": 1,
-        "cost": 9865
-      },
-      {
-        "name": "Support manager Shoxruh Maxmud",
-        "total": 1,
-        "tickets": 1,
-        "cost": 9865
-      },
-      {
-        "name": "Ruslan Ernazarov Partner",
-        "total": 1,
-        "tickets": 1,
-        "cost": 9865
-      },
-      {
-        "name": "Nurislom Abdazov",
-        "total": 1,
-        "tickets": 1,
-        "cost": 9865
-      },
-      {
-        "name": "Muxammad Aziz",
-        "total": 1,
-        "tickets": 1,
-        "cost": 9865
-      },
-      {
-        "name": "Naim Shokirov Partner \"RSA FRESH TECHNO GROUP\"",
-        "total": 1,
-        "tickets": 1,
-        "cost": 9865
-      },
-      {
-        "name": "Saidorif Muzaffarov Tashkent",
-        "total": 1,
-        "tickets": 1,
-        "cost": 9865
-      },
-      {
-        "name": "Rahmatulloh Mahmudov Partner",
-        "total": 1,
-        "tickets": 1,
-        "cost": 9865
-      },
-      {
-        "name": "Sanat",
-        "total": 1,
-        "tickets": 1,
-        "cost": 9865
-      },
-      {
-        "name": "Shoxruh Maxmud/Sunnattilla Abdurazzoqov",
-        "total": 1,
-        "tickets": 1,
-        "cost": 9865
-      },
-      {
-        "name": "Umedjon Kosimov Partner",
-        "total": 1,
-        "tickets": 1,
-        "cost": 9865
-      },
-      {
-        "name": "Наш Чел",
-        "total": 1,
-        "tickets": 1,
-        "cost": 9865
-      },
-      {
-        "name": "Наш чел с АЕ",
-        "total": 1,
-        "tickets": 1,
-        "cost": 9865
-      },
-      {
-        "name": "Мухаммадазиз Кошакбаев",
-        "total": 1,
-        "tickets": 1,
-        "cost": 9865
+        "tickets": 70,
+        "partial": 6,
+        "full": null,
+        "med_close": 0.1,
+        "cost": 690550
       },
       {
         "name": "Xabibullox Xudoyorov",
-        "total": 1,
-        "tickets": 1,
-        "cost": 9865
+        "tickets": 57,
+        "partial": 2,
+        "full": null,
+        "med_close": 0.1,
+        "cost": 562305
       },
       {
-        "name": "Бахтияр Касимов",
-        "total": 1,
-        "tickets": 1,
-        "cost": 9865
+        "name": "Нет КСника в админке",
+        "tickets": 51,
+        "partial": null,
+        "full": null,
+        "med_close": 0.1,
+        "cost": 503115
+      },
+      {
+        "name": "Boburjon Karabayev Partner",
+        "tickets": 46,
+        "partial": 2,
+        "full": 3,
+        "med_close": 0.1,
+        "cost": 453790
+      },
+      {
+        "name": "Санат",
+        "tickets": 41,
+        "partial": 1,
+        "full": null,
+        "med_close": 0.0,
+        "cost": 404465
+      },
+      {
+        "name": "Burhan Ergashev Partner",
+        "tickets": 38,
+        "partial": null,
+        "full": null,
+        "med_close": 0.1,
+        "cost": 374870
+      },
+      {
+        "name": "Marufhon Bahodirhonov Partner",
+        "tickets": 37,
+        "partial": null,
+        "full": null,
+        "med_close": 0.0,
+        "cost": 365005
       },
       {
         "name": "Мирамир АЕ",
-        "total": 1,
-        "tickets": 1,
-        "cost": 9865
-      },
-      {
-        "name": "Наша челиха",
-        "total": 1,
-        "tickets": 1,
-        "cost": 9865
+        "tickets": 35,
+        "partial": 1,
+        "full": null,
+        "med_close": 0.0,
+        "cost": 345275
       },
       {
         "name": "Нет ксника",
-        "total": 1,
-        "tickets": 1,
-        "cost": 9865
+        "tickets": 33,
+        "partial": null,
+        "full": null,
+        "med_close": 0.1,
+        "cost": 325545
       },
       {
-        "name": "Сотрудник BILLZ АЕ",
-        "total": 1,
-        "tickets": 1,
-        "cost": 9865
+        "name": "Мухаммадазиз Кошакбаев",
+        "tickets": 31,
+        "partial": null,
+        "full": 1,
+        "med_close": 0.0,
+        "cost": 305815
       },
       {
-        "name": "Хусан Артиков",
-        "total": 1,
-        "tickets": 1,
-        "cost": 9865
+        "name": "BILLZ",
+        "tickets": 28,
+        "partial": null,
+        "full": null,
+        "med_close": 0.1,
+        "cost": 276220
       },
       {
-        "name": "Списочник",
-        "total": 1,
-        "tickets": 1,
-        "cost": 9865
+        "name": "Наш сотрудник",
+        "tickets": 28,
+        "partial": null,
+        "full": null,
+        "med_close": 0.0,
+        "cost": 276220
       },
       {
-        "name": "Шохрух Махмуд",
-        "total": 1,
-        "tickets": 1,
-        "cost": 9865
+        "name": "КСник",
+        "tickets": 27,
+        "partial": 1,
+        "full": null,
+        "med_close": 0.0,
+        "cost": 266355
       },
       {
-        "name": "ксника нет",
-        "total": 1,
-        "tickets": 1,
-        "cost": 9865
+        "name": "Kurman Saparbekov",
+        "tickets": 27,
+        "partial": 1,
+        "full": null,
+        "med_close": 0.1,
+        "cost": 266355
+      },
+      {
+        "name": "Elnur Muxtasibov Partner («ILNUR OIL SERVICE» XK)",
+        "tickets": 26,
+        "partial": null,
+        "full": null,
+        "med_close": 0.1,
+        "cost": 256490
+      },
+      {
+        "name": "КС",
+        "tickets": 26,
+        "partial": null,
+        "full": null,
+        "med_close": 0.0,
+        "cost": 256490
+      },
+      {
+        "name": "Партнер",
+        "tickets": 26,
+        "partial": null,
+        "full": null,
+        "med_close": 0.0,
+        "cost": 256490
+      },
+      {
+        "name": "Sarvar Salixov",
+        "tickets": 26,
+        "partial": null,
+        "full": null,
+        "med_close": 0.1,
+        "cost": 256490
+      },
+      {
+        "name": "Наш ксник",
+        "tickets": 25,
+        "partial": null,
+        "full": null,
+        "med_close": 0.1,
+        "cost": 246625
+      },
+      {
+        "name": "Naim Shokirov Partner \"RSA FRESH TECHNO GROUP\"",
+        "tickets": 25,
+        "partial": 3,
+        "full": null,
+        "med_close": 0.1,
+        "cost": 246625
+      },
+      {
+        "name": "Ulugbek Salimov Partner (Nasimjon Mobile)",
+        "tickets": 24,
+        "partial": null,
+        "full": null,
+        "med_close": 0.1,
+        "cost": 236760
+      },
+      {
+        "name": "AE",
+        "tickets": 23,
+        "partial": null,
+        "full": null,
+        "med_close": 0.0,
+        "cost": 226895
+      },
+      {
+        "name": "Head of CC in BILLZ Company",
+        "tickets": 23,
+        "partial": null,
+        "full": null,
+        "med_close": 0.1,
+        "cost": 226895
+      },
+      {
+        "name": "SalesTexnoPOS SOFT",
+        "tickets": 22,
+        "partial": null,
+        "full": null,
+        "med_close": 0.0,
+        "cost": 217030
+      },
+      {
+        "name": "Bobur Abdukakhkharov Partner",
+        "tickets": 21,
+        "partial": 1,
+        "full": null,
+        "med_close": 0.1,
+        "cost": 207165
+      },
+      {
+        "name": "НАШ ЧЕЛ",
+        "tickets": 19,
+        "partial": 1,
+        "full": null,
+        "med_close": 0.0,
+        "cost": 187435
+      },
+      {
+        "name": "Nursulton Javliyev Partner \"INVEST BEST TRADE PRODUCT\"",
+        "tickets": 19,
+        "partial": 2,
+        "full": null,
+        "med_close": 0.1,
+        "cost": 187435
+      },
+      {
+        "name": "Muxammad Aziz",
+        "tickets": 19,
+        "partial": 3,
+        "full": null,
+        "med_close": 0.1,
+        "cost": 187435
+      },
+      {
+        "name": "Nursulton Javliyev  Partner \"INVEST BEST TRADE PRODUCT\"",
+        "tickets": 17,
+        "partial": 3,
+        "full": null,
+        "med_close": 0.1,
+        "cost": 167705
+      },
+      {
+        "name": "Shoxruh Pirmukhametov",
+        "tickets": 17,
+        "partial": 1,
+        "full": null,
+        "med_close": 0.2,
+        "cost": 167705
+      },
+      {
+        "name": "Наш человек",
+        "tickets": 16,
+        "partial": null,
+        "full": null,
+        "med_close": 0.0,
+        "cost": 157840
       },
       {
         "name": "наша челиха",
-        "total": 1,
-        "tickets": 1,
-        "cost": 9865
+        "tickets": 16,
+        "partial": null,
+        "full": null,
+        "med_close": 0.0,
+        "cost": 157840
       },
       {
         "name": "нету ксника",
-        "total": 1,
-        "tickets": 1,
-        "cost": 9865
+        "tickets": 16,
+        "partial": null,
+        "full": null,
+        "med_close": 0.0,
+        "cost": 157840
+      },
+      {
+        "name": "Сотрудник",
+        "tickets": 15,
+        "partial": null,
+        "full": null,
+        "med_close": 0.0,
+        "cost": 147975
+      },
+      {
+        "name": "Нет менджера CS",
+        "tickets": 15,
+        "partial": null,
+        "full": null,
+        "med_close": 0.0,
+        "cost": 147975
+      },
+      {
+        "name": "Robiya Alisherova",
+        "tickets": 14,
+        "partial": null,
+        "full": null,
+        "med_close": 0.1,
+        "cost": 138110
+      },
+      {
+        "name": "Алина Ханиева",
+        "tickets": 14,
+        "partial": null,
+        "full": null,
+        "med_close": 0.1,
+        "cost": 138110
+      },
+      {
+        "name": "Muzaffar Abduvoxidov Partner",
+        "tickets": 13,
+        "partial": null,
+        "full": null,
+        "med_close": 0.1,
+        "cost": 128245
+      },
+      {
+        "name": "Yusupov Mansur Partner (\"MBOS UNION\" XK)",
+        "tickets": 13,
+        "partial": null,
+        "full": null,
+        "med_close": 0.1,
+        "cost": 128245
+      },
+      {
+        "name": "наш партнер",
+        "tickets": 13,
+        "partial": null,
+        "full": null,
+        "med_close": 0.1,
+        "cost": 128245
+      },
+      {
+        "name": "BILLZ Lite",
+        "tickets": 12,
+        "partial": null,
+        "full": null,
+        "med_close": 0.1,
+        "cost": 118380
+      },
+      {
+        "name": "Еще не выбрали ксника",
+        "tickets": 11,
+        "partial": null,
+        "full": null,
+        "med_close": 0.0,
+        "cost": 108515
+      },
+      {
+        "name": "Alisher Azimov Partner (YTT TILYABAYEVA SITORAXON G'ULOMQODIR QI)",
+        "tickets": 11,
+        "partial": null,
+        "full": 1,
+        "med_close": 0.1,
+        "cost": 108515
+      },
+      {
+        "name": "Head CX depeartment",
+        "tickets": 11,
+        "partial": null,
+        "full": null,
+        "med_close": 0.0,
+        "cost": 108515
+      },
+      {
+        "name": "Наш Чел",
+        "tickets": 10,
+        "partial": null,
+        "full": null,
+        "med_close": 0.1,
+        "cost": 98650
+      },
+      {
+        "name": "TexnoPOS SOFT Nukus",
+        "tickets": 10,
+        "partial": null,
+        "full": null,
+        "med_close": 0.0,
+        "cost": 98650
+      },
+      {
+        "name": "Nozim Axunjanov (Partner ONHAYOT TRADE MCHJ)",
+        "tickets": 10,
+        "partial": 2,
+        "full": null,
+        "med_close": 0.0,
+        "cost": 98650
+      },
+      {
+        "name": "Partner",
+        "tickets": 10,
+        "partial": null,
+        "full": null,
+        "med_close": 0.0,
+        "cost": 98650
+      },
+      {
+        "name": "Azamat Sharipov Partner",
+        "tickets": 10,
+        "partial": 2,
+        "full": 1,
+        "med_close": 0.2,
+        "cost": 98650
+      },
+      {
+        "name": "LITE",
+        "tickets": 10,
+        "partial": null,
+        "full": null,
+        "med_close": 0.1,
+        "cost": 98650
+      },
+      {
+        "name": "Vadim Zakharyan",
+        "tickets": 10,
+        "partial": null,
+        "full": null,
+        "med_close": 0.0,
+        "cost": 98650
+      },
+      {
+        "name": "TEXNOPOS",
+        "tickets": 9,
+        "partial": null,
+        "full": null,
+        "med_close": 0.0,
+        "cost": 88785
+      },
+      {
+        "name": "Saidorif Muzaffarov Tashkent",
+        "tickets": 9,
+        "partial": null,
+        "full": null,
+        "med_close": 0.0,
+        "cost": 88785
+      },
+      {
+        "name": "Нукус технопос",
+        "tickets": 9,
+        "partial": 3,
+        "full": null,
+        "med_close": 0.1,
+        "cost": 88785
+      },
+      {
+        "name": "Наша челиха",
+        "tickets": 9,
+        "partial": null,
+        "full": null,
+        "med_close": 0.0,
+        "cost": 88785
+      },
+      {
+        "name": "Наш чел с АЕ",
+        "tickets": 9,
+        "partial": null,
+        "full": null,
+        "med_close": 0.0,
+        "cost": 88785
+      },
+      {
+        "name": "Списочник",
+        "tickets": 9,
+        "partial": null,
+        "full": null,
+        "med_close": 0.0,
+        "cost": 88785
+      },
+      {
+        "name": "Jasur Mukhamedjanov/ Alina Hanieva",
+        "tickets": 8,
+        "partial": 2,
+        "full": null,
+        "med_close": 0.1,
+        "cost": 78920
+      },
+      {
+        "name": "O'ktam Murtazaev Partner",
+        "tickets": 8,
+        "partial": null,
+        "full": null,
+        "med_close": 0.0,
+        "cost": 78920
+      },
+      {
+        "name": "Мафтуна Шерназарова",
+        "tickets": 8,
+        "partial": null,
+        "full": null,
+        "med_close": 0.4,
+        "cost": 78920
+      },
+      {
+        "name": "Шохрух Махмуд",
+        "tickets": 8,
+        "partial": null,
+        "full": null,
+        "med_close": 0.2,
+        "cost": 78920
+      },
+      {
+        "name": "ПАРТНЕР",
+        "tickets": 7,
+        "partial": null,
+        "full": null,
+        "med_close": 0.1,
+        "cost": 69055
       }
     ],
     "top_labels": [
@@ -11044,23 +11253,24 @@ const BILLZ_DATA = {
     "cs_meeting": "Митинг с КС в среду — онбординг и нежелательные кейсы"
   },
   "last_updated": {
-    "monthly": "30.04.2026",
-    "weekly": "30.04.2026",
-    "daily": "30.04.2026",
-    "quarterly": "30.04.2026",
-    "cs": "30.04.2026"
+    "monthly": "03.05.2026",
+    "weekly": "03.05.2026",
+    "daily": "03.05.2026",
+    "quarterly": "03.05.2026",
+    "cs": "03.05.2026"
   },
   "may": {
-    "status": "upcoming",
+    "status": "active",
     "label": "Май 2026",
-    "note": "Данные будут доступны по мере поступления обращений",
-    "plan_tickets": 11026,
-    "plan_cost_mln": 108.8,
+    "plan_tickets": 11000,
+    "plan_cost_mln": 108.5,
     "focus": [
-      "Снизить LCR до <3%",
-      "Увеличить долю чатов до >47%",
-      "Передача онбординга CS",
-      "Найм 2-3 операторов"
-    ]
+      "Снизить LCR до <3.5%",
+      "Увеличить долю чатов >47%",
+      "Онбординг 2 новых операторов",
+      "Передача обучений в CS"
+    ],
+    "operators_new": 2,
+    "operators_start_date": "05.05.2026"
   }
 };

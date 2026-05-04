@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>BILLZ CC · Ежемесячно</title>
-<link rel="stylesheet" href="shared.css?v=19">
+<link rel="stylesheet" href="shared.css?v=20">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 <script src="data.js"></script>
@@ -174,7 +174,16 @@
   <!-- ── MAY 2026 ──────────────────────────────────────────────────────────── -->
   <div class="sec"><div class="sec-num">06</div><div class="sec-title">Май 2026 · Фокус и план</div><div class="sec-line"></div></div>
   <div id="mayBlock" style="margin-bottom:14px"></div>
-<div class="export-bar">
+
+  <!-- ── MAY 2026 INSIGHTS ─────────────────────────────────────────────── -->
+  <div class="sec"><div class="sec-num">07</div><div class="sec-title">Май 2026 · Инсайты по первым дням</div><div class="sec-line"></div></div>
+  <div id="mayInsights" style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px"></div>
+
+  <!-- ── MAY RECOMMENDATIONS ───────────────────────────────────────────── -->
+  <div class="sec"><div class="sec-num">08</div><div class="sec-title">Май 2026 · Рекомендации и приоритеты</div><div class="sec-line"></div></div>
+  <div id="mayRecs" style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px"></div>
+
+  <div class="export-bar">
     <div class="export-bar-left">
       <div class="export-bar-title">📥 Скачать — Ежемесячный отчёт апрель 2026</div>
       <div class="export-bar-sub">Excel · Сводка · Операторы · Метки · Компании · пароль для скачивания</div>
@@ -740,6 +749,48 @@ function exportCSExcel() {
         </div>
       </div>
     </div>`;
+  }
+  // ── MAY INSIGHTS ─────────────────────────────────────────────────────────
+  const mayInsightsEl = document.getElementById('mayInsights');
+  if (mayInsightsEl && BILLZ_DATA.may_insights) {
+    mayInsightsEl.innerHTML = BILLZ_DATA.may_insights.map(ins => `
+      <div style="background:${ins.bg};border:1px solid ${ins.border};
+        border-left:3px solid ${ins.color};border-radius:12px;padding:16px 18px">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+          <span style="font-size:16px">${ins.icon}</span>
+          <span style="font-size:13px;font-weight:700;color:var(--t1)">${ins.title}</span>
+        </div>
+        <p style="font-size:11px;color:var(--t2);line-height:1.65;margin-bottom:10px">${ins.body}</p>
+        <div style="font-size:10px;font-family:var(--mono);color:${ins.color};
+          background:${ins.bg};border:1px solid ${ins.border};
+          padding:4px 10px;border-radius:5px;margin-bottom:5px">📊 ${ins.metric}</div>
+        <div style="font-size:10px;font-weight:600;color:var(--t3);
+          background:rgba(255,255,255,0.04);padding:4px 10px;border-radius:5px">${ins.action}</div>
+      </div>`).join('');
+  }
+
+  // ── MAY RECOMMENDATIONS ──────────────────────────────────────────────────
+  const mayRecsEl = document.getElementById('mayRecs');
+  if (mayRecsEl && BILLZ_DATA.may_recommendations) {
+    mayRecsEl.innerHTML = BILLZ_DATA.may_recommendations.map(r => `
+      <div style="background:var(--card);border:1px solid ${r.color}30;
+        border-left:3px solid ${r.color};border-radius:12px;padding:16px 18px">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+          <span style="width:24px;height:24px;border-radius:50%;background:${r.color}22;
+            color:${r.color};font-size:12px;font-weight:800;display:flex;align-items:center;
+            justify-content:center;flex-shrink:0">${r.priority}</span>
+          <span style="font-size:13px;font-weight:700;color:var(--t1)">${r.title}</span>
+        </div>
+        <p style="font-size:11px;color:var(--t2);line-height:1.65;margin-bottom:10px">${r.detail}</p>
+        <div style="font-size:10px;font-family:var(--mono);color:${r.color};
+          background:${r.color}12;padding:4px 10px;border-radius:5px;margin-bottom:5px">
+          📊 ${r.metric}
+        </div>
+        <div style="font-size:10px;font-weight:600;color:var(--t2);
+          background:rgba(255,255,255,0.04);padding:4px 10px;border-radius:5px">
+          ✅ ${r.action}
+        </div>
+      </div>`).join('');
   }
 </script>
 </body>

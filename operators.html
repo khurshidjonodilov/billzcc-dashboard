@@ -4,11 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>BILLZ CC · Операторы</title>
-<link rel="stylesheet" href="shared.css?v=23">
+<link rel="stylesheet" href="shared.css?v=24">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 <script src="data.js"></script>
-<script src="shared.js?v=23"></script>
+<script src="shared.js?v=24"></script>
 <style>
 .formula-bar {
   margin-top: 12px !important;
@@ -116,13 +116,13 @@
             <th>Оператор</th>
             <th>Тикеты</th>
             <th>Нагрузка %</th>
-            <th>Ср. закрытие</th>
-            <th>Закрыто %</th>
+            <th>Burnout</th>
             <th>SLA %</th>
             <th>CSAT %</th>
             <th>Оценок</th>
+            <th title="Контроль качества — прослушки/чтение чатов">КК балл</th>
+            <th title="Тестирование — ежемесячное">Тест</th>
             <th>Затраты</th>
-            <th>Статус</th>
           </tr></thead>
           <tbody id="opTableBody"></tbody>
         </table>
@@ -331,13 +331,13 @@ function render() {
       <td class="n-name" style="color:${OP_COLORS[i%OP_COLORS.length]}">${op.name}</td>
       <td class="n-num">${fmt.num(op.tickets)}</td>
       <td><div class="bw"><div class="bb"><div class="bf" style="width:${bw}%;background:${OP_COLORS[i%OP_COLORS.length]}"></div></div><span class="bp">${bw}%</span></div></td>
-      <td><span class="tv ${closeC}">${op.avg_close}ч</span></td>
-      <td><span class="b ok">${op.close_rate||99.5}%</span></td>
+      <td>${(()=>{const lvl=op.burnout_level||(op.tickets>=1000?'high':(op.tickets>=900?'mid':'norm'));const lbl={high:'🔴 Высокий',mid:'🟡 Средний',norm:'🟢 Норма'}[lvl];const col={high:'#EF4444',mid:'#F59E0B',norm:'#10B981'}[lvl];const bg={high:'rgba(239,68,68,0.15)',mid:'rgba(245,158,11,0.15)',norm:'rgba(16,185,129,0.15)'}[lvl];return `<span style="font-size:10px;font-weight:700;padding:3px 8px;border-radius:5px;background:${bg};color:${col}">${lbl}</span>`;})()}</td>
       <td><span class="b ${slaC}">${op.sla_pct||0}%</span></td>
       <td>${(op.rated||0)>0?`<span class="b ${csatC}">${op.rating_pct||0}%</span>`:'<span style="color:var(--t4);font-size:10px">нет оценок</span>'}</td>
       <td style="font-size:10px;color:var(--t3)">${op.rated||0}</td>
+      <td>${op.kk_score!=null?`<span style="font-size:11px;font-weight:700;padding:3px 8px;border-radius:5px;background:${op.kk_score>=90?'rgba(16,185,129,0.15)':(op.kk_score>=75?'rgba(245,158,11,0.15)':'rgba(239,68,68,0.15)')};color:${op.kk_score>=90?'#10B981':(op.kk_score>=75?'#F59E0B':'#EF4444')}">${op.kk_score}</span>`:'<span style="color:var(--t4);font-size:10px">—</span>'}</td>
+      <td>${op.test_score!=null?`<span style="font-size:11px;font-weight:700;padding:3px 8px;border-radius:5px;background:${op.test_score>=90?'rgba(16,185,129,0.15)':(op.test_score>=75?'rgba(245,158,11,0.15)':'rgba(239,68,68,0.15)')};color:${op.test_score>=90?'#10B981':(op.test_score>=75?'#F59E0B':'#EF4444')}">${op.test_score}</span>`:'<span style="color:var(--t4);font-size:10px">—</span>'}</td>
       <td class="cost-cell">${fmt.mln(op.cost||op.tickets*CPT)}</td>
-      <td>${status}</td>
     </tr>`;
   }).join('');
 
@@ -593,5 +593,55 @@ function exportCSExcel() {
 
 render();
 </script>
+
+  <!-- ── KK ERRORS SECTION (placeholder for QA-detected error categories) ─── -->
+  <div class="sec"><div class="sec-num">07</div><div class="sec-title">Контроль качества · Темы ошибок</div><div class="sec-line"></div></div>
+  <div class="card" style="padding:20px;margin-bottom:14px">
+    <div id="kkErrorsBlock">
+      <div style="text-align:center;padding:30px 20px;color:var(--t3);font-size:12px">
+        <div style="font-size:28px;margin-bottom:10px;opacity:0.4">📋</div>
+        <div style="font-weight:600;color:var(--t2);margin-bottom:6px">Темы ошибок ещё не загружены</div>
+        <div style="font-size:11px;color:var(--t4);max-width:480px;margin:0 auto;line-height:1.5">
+          Здесь появится разбивка по причинам снятия баллов: топ категорий ошибок и распределение по операторам после завершения QA-сессий за период.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Render KK errors when data appears
+    if (typeof BILLZ_DATA !== 'undefined' && BILLZ_DATA.kk_errors && BILLZ_DATA.kk_errors.top_error_categories && BILLZ_DATA.kk_errors.top_error_categories.length > 0) {
+      const ke = BILLZ_DATA.kk_errors;
+      const kkBlock = document.getElementById('kkErrorsBlock');
+      if (kkBlock) {
+        kkBlock.innerHTML = `
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+            <div>
+              <div style="font-size:11px;font-weight:700;color:var(--t3);text-transform:uppercase;margin-bottom:10px;letter-spacing:.08em">Топ категорий ошибок</div>
+              ${ke.top_error_categories.map(c => `
+                <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 12px;border-bottom:1px solid rgba(255,255,255,0.05)">
+                  <span style="font-size:12px;color:var(--t2)">${c.name}</span>
+                  <div style="display:flex;gap:10px;align-items:center">
+                    <span style="font-size:11px;color:var(--t4)">${c.count} случ.</span>
+                    <span style="font-size:11px;font-weight:700;color:#EF4444;padding:2px 8px;background:rgba(239,68,68,0.12);border-radius:5px">−${c.points_lost} б.</span>
+                  </div>
+                </div>`).join('')}
+            </div>
+            <div>
+              <div style="font-size:11px;font-weight:700;color:var(--t3);text-transform:uppercase;margin-bottom:10px;letter-spacing:.08em">По операторам</div>
+              ${ke.by_operator.map(o => `
+                <div style="padding:10px 12px;border-bottom:1px solid rgba(255,255,255,0.05)">
+                  <div style="display:flex;justify-content:space-between;margin-bottom:4px">
+                    <span style="font-size:12px;font-weight:700;color:var(--t1)">${o.name}</span>
+                    <span style="font-size:11px;font-weight:700;color:#EF4444">−${o.total_lost} баллов</span>
+                  </div>
+                  <div style="font-size:10px;color:var(--t4)">${o.errors.map(e => `${e.cat} (−${e.points})`).join(' · ')}</div>
+                </div>`).join('')}
+            </div>
+          </div>`;
+      }
+    }
+  </script>
+
 </body>
 </html>

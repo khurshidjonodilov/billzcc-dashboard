@@ -1,3 +1,187 @@
+/* ══════════════════════════════════════════════════════════════════════════
+   BILLZ_MONTH_SWITCHER — выбор месяца сохраняется в localStorage
+   и применяется ко всем страницам сайта
+   ══════════════════════════════════════════════════════════════════════════ */
+(function() {
+  if (typeof BILLZ_DATA === 'undefined' || !BILLZ_DATA.months) return;
+  
+  // Read selected month from localStorage (default = 'apr')
+  const KEY = 'billz_selected_month';
+  let selected = localStorage.getItem(KEY) || 'apr';
+  if (!BILLZ_DATA.months[selected]) selected = 'apr';
+  
+  const monthData = BILLZ_DATA.months[selected];
+  
+  // Override main data structures with selected month's data
+  if (monthData.monthly) BILLZ_DATA.monthly = monthData.monthly;
+  if (monthData.weekly) BILLZ_DATA.weekly = monthData.weekly;
+  if (monthData.daily) BILLZ_DATA.daily = monthData.daily;
+  if (monthData.cs) BILLZ_DATA.cs = monthData.cs;
+  
+  // Make selection available globally
+  BILLZ_DATA._selectedMonth = selected;
+  BILLZ_DATA._monthLabel = monthData.label;
+  BILLZ_DATA._monthHasData = monthData.has_data;
+  
+  // Quarterly: keep all months (no override) — it shows all 3 cumulatively
+})();
+
+/* ── Build month dropdown into navbar ───────────────────────────────────── */
+function buildMonthSwitcher() {
+  if (typeof BILLZ_DATA === 'undefined' || !BILLZ_DATA.months) return;
+  const nav = document.querySelector('.top-nav') || document.querySelector('.nav') || document.querySelector('nav');
+  if (!nav) return;
+  if (document.getElementById('monthSwitcher')) return; // already built
+  
+  const current = BILLZ_DATA._selectedMonth || 'apr';
+  const monthLabels = {
+    'mar': 'Март 2026',
+    'apr': 'Апрель 2026',
+    'may': 'Май 2026'
+  };
+  
+  // Build container
+  const wrap = document.createElement('div');
+  wrap.id = 'monthSwitcher';
+  wrap.style.cssText = 'position:relative;display:inline-block;margin-right:14px';
+  
+  // Trigger button (looks like other nav buttons)
+  const btn = document.createElement('button');
+  btn.id = 'monthSwitcherBtn';
+  btn.type = 'button';
+  btn.style.cssText = `
+    padding:8px 14px;border-radius:9px;
+    border:1px solid rgba(59,130,246,0.35);
+    background:linear-gradient(135deg,rgba(59,130,246,0.18),rgba(99,102,241,0.12));
+    color:#60A5FA;font-family:inherit;font-size:12px;font-weight:700;
+    cursor:pointer;transition:all .2s;
+    display:inline-flex;align-items:center;gap:8px;white-space:nowrap;
+  `;
+  btn.innerHTML = `
+    <span style="font-size:14px">📅</span>
+    <span>${monthLabels[current] || 'Месяц'}</span>
+    <span id="msArrow" style="font-size:10px;transition:transform .2s">▼</span>
+  `;
+  
+  // Dropdown menu
+  const menu = document.createElement('div');
+  menu.id = 'monthSwitcherMenu';
+  menu.style.cssText = `
+    position:absolute;top:calc(100% + 6px);left:0;
+    min-width:180px;display:none;
+    background:#0D1117;
+    border:1px solid rgba(59,130,246,0.25);
+    border-radius:10px;padding:6px;
+    box-shadow:0 12px 40px rgba(0,0,0,0.5);
+    z-index:1000;
+  `;
+  
+  const months = [
+    {key:'mar', label:'Март 2026', has_data: BILLZ_DATA.months.mar?.has_data},
+    {key:'apr', label:'Апрель 2026', has_data: BILLZ_DATA.months.apr?.has_data},
+    {key:'may', label:'Май 2026', has_data: BILLZ_DATA.months.may?.has_data},
+  ];
+  
+  months.forEach(m => {
+    const item = document.createElement('button');
+    item.type = 'button';
+    const isActive = m.key === current;
+    const hasD = m.has_data;
+    item.style.cssText = `
+      display:flex;align-items:center;justify-content:space-between;gap:12px;
+      width:100%;padding:9px 12px;border-radius:7px;
+      border:1px solid ${isActive ? 'rgba(59,130,246,0.4)' : 'transparent'};
+      background:${isActive ? 'rgba(59,130,246,0.15)' : 'transparent'};
+      color:${isActive ? '#60A5FA' : (hasD ? '#E5E7EB' : '#64748B')};
+      font-family:inherit;font-size:12px;font-weight:${isActive ? '700' : '600'};
+      cursor:pointer;text-align:left;transition:all .15s;
+    `;
+    item.onmouseover = () => { if (!isActive) { item.style.background = 'rgba(255,255,255,0.05)'; item.style.color = '#F9FAFB'; }};
+    item.onmouseout = () => { if (!isActive) { item.style.background = 'transparent'; item.style.color = hasD ? '#E5E7EB' : '#64748B'; }};
+    
+    const tag = isActive 
+      ? '<span style="font-size:9px;padding:2px 6px;background:rgba(59,130,246,0.25);color:#60A5FA;border-radius:4px;font-weight:700">текущий</span>'
+      : (hasD ? '' : '<span style="font-size:9px;padding:2px 6px;background:rgba(100,116,139,0.2);color:#94A3B8;border-radius:4px;font-weight:600">нет данных</span>');
+    
+    item.innerHTML = `<span>${m.label}</span>${tag}`;
+    item.onclick = (e) => {
+      e.stopPropagation();
+      localStorage.setItem('billz_selected_month', m.key);
+      window.location.reload();
+    };
+    menu.appendChild(item);
+  });
+  
+  wrap.appendChild(btn);
+  wrap.appendChild(menu);
+  
+  // Insert at the very BEGINNING of nav (before any other links)
+  const brand = nav.querySelector('.nav-brand');
+  if (brand) {
+    brand.insertAdjacentElement('afterend', wrap);
+  } else {
+    nav.insertBefore(wrap, nav.firstChild);
+  }
+  
+  // Toggle menu
+  let menuOpen = false;
+  btn.onclick = (e) => {
+    e.stopPropagation();
+    menuOpen = !menuOpen;
+    menu.style.display = menuOpen ? 'block' : 'none';
+    document.getElementById('msArrow').style.transform = menuOpen ? 'rotate(180deg)' : 'rotate(0deg)';
+  };
+  document.addEventListener('click', (e) => {
+    if (menuOpen && !wrap.contains(e.target)) {
+      menuOpen = false;
+      menu.style.display = 'none';
+      const arr = document.getElementById('msArrow');
+      if (arr) arr.style.transform = 'rotate(0deg)';
+    }
+  });
+  
+  // If selected month has no data — show banner at top of page content
+  if (!BILLZ_DATA._monthHasData) {
+    const wrap2 = document.querySelector('.wrap') || document.querySelector('main') || document.body;
+    if (wrap2 && !document.getElementById('noDataBanner')) {
+      const banner = document.createElement('div');
+      banner.id = 'noDataBanner';
+      banner.style.cssText = `
+        margin:14px 0;padding:14px 18px;
+        background:linear-gradient(90deg,rgba(245,158,11,0.10),rgba(245,158,11,0.04));
+        border:1px solid rgba(245,158,11,0.3);border-left:3px solid #F59E0B;
+        border-radius:10px;color:#FCD34D;font-size:12px;font-weight:600;
+        display:flex;align-items:center;gap:12px;
+      `;
+      banner.innerHTML = `
+        <span style="font-size:20px">⏳</span>
+        <div>
+          <div style="font-size:13px;font-weight:700;color:#FBBF24;margin-bottom:3px">
+            Данные за ${BILLZ_DATA._monthLabel || 'этот месяц'} ещё не загружены
+          </div>
+          <div style="font-size:11px;color:#FCD34D;font-weight:500">
+            Все показатели отображаются как 0. Данные появятся после загрузки CSV-выгрузки за месяц.
+          </div>
+        </div>
+      `;
+      // Insert as first child of wrap (or right after navbar)
+      const navEl = document.querySelector('.top-nav, .nav, nav');
+      if (navEl && navEl.parentElement) {
+        navEl.insertAdjacentElement('afterend', banner);
+      } else if (wrap2.firstChild) {
+        wrap2.insertBefore(banner, wrap2.firstChild);
+      }
+    }
+  }
+}
+
+// Auto-init on DOM ready
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', buildMonthSwitcher);
+} else {
+  buildMonthSwitcher();
+}
+
 const fmt = {
   num:  v => Math.round(v).toLocaleString('ru'),
   pct:  (v, d=1) => Number(v).toFixed(d) + '%',

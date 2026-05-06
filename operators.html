@@ -4,11 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>BILLZ CC · Операторы</title>
-<link rel="stylesheet" href="shared.css?v=28">
+<link rel="stylesheet" href="shared.css?v=29">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 <script src="data.js"></script>
-<script src="shared.js?v=28"></script>
+<script src="shared.js?v=29"></script>
 <style>
 .formula-bar {
   margin-top: 12px !important;
@@ -595,53 +595,128 @@ function exportCSExcel() {
 render();
 </script>
 
-  <!-- ── KK ERRORS SECTION (placeholder for QA-detected error categories) ─── -->
+  <!-- ── KK ERRORS SECTION ───────────────────────────────────────────────── -->
   <div class="sec"><div class="sec-num">07</div><div class="sec-title">Контроль качества · Темы ошибок</div><div class="sec-line"></div></div>
-  <div class="card" style="padding:20px;margin-bottom:14px">
-    <div id="kkErrorsBlock">
-      <div style="text-align:center;padding:30px 20px;color:var(--t3);font-size:12px">
-        <div style="font-size:28px;margin-bottom:10px;opacity:0.4">📋</div>
-        <div style="font-weight:600;color:var(--t2);margin-bottom:6px">Темы ошибок ещё не загружены</div>
-        <div style="font-size:11px;color:var(--t4);max-width:480px;margin:0 auto;line-height:1.5">
-          Здесь появится разбивка по причинам снятия баллов: топ категорий ошибок и распределение по операторам после завершения QA-сессий за период.
-        </div>
-      </div>
-    </div>
-  </div>
+  
+  <!-- Summary cards row -->
+  <div id="kkSummary" style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:14px"></div>
+  
+  <!-- Two-column: top errors + by operator -->
+  <div class="row two" id="kkContent" style="margin-bottom:14px"></div>
 
   <script>
-    // Render KK errors when data appears
-    if (typeof BILLZ_DATA !== 'undefined' && BILLZ_DATA.kk_errors && BILLZ_DATA.kk_errors.top_error_categories && BILLZ_DATA.kk_errors.top_error_categories.length > 0) {
+    (function() {
+      if (typeof BILLZ_DATA === 'undefined') return;
       const ke = BILLZ_DATA.kk_errors;
-      const kkBlock = document.getElementById('kkErrorsBlock');
-      if (kkBlock) {
-        kkBlock.innerHTML = `
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
-            <div>
-              <div style="font-size:11px;font-weight:700;color:var(--t3);text-transform:uppercase;margin-bottom:10px;letter-spacing:.08em">Топ категорий ошибок</div>
-              ${ke.top_error_categories.map(c => `
-                <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 12px;border-bottom:1px solid rgba(255,255,255,0.05)">
-                  <span style="font-size:12px;color:var(--t2)">${c.name}</span>
-                  <div style="display:flex;gap:10px;align-items:center">
-                    <span style="font-size:11px;color:var(--t4)">${c.count} случ.</span>
-                    <span style="font-size:11px;font-weight:700;color:#EF4444;padding:2px 8px;background:rgba(239,68,68,0.12);border-radius:5px">−${c.points_lost} б.</span>
-                  </div>
-                </div>`).join('')}
-            </div>
-            <div>
-              <div style="font-size:11px;font-weight:700;color:var(--t3);text-transform:uppercase;margin-bottom:10px;letter-spacing:.08em">По операторам</div>
-              ${ke.by_operator.map(o => `
-                <div style="padding:10px 12px;border-bottom:1px solid rgba(255,255,255,0.05)">
-                  <div style="display:flex;justify-content:space-between;margin-bottom:4px">
-                    <span style="font-size:12px;font-weight:700;color:var(--t1)">${o.name}</span>
-                    <span style="font-size:11px;font-weight:700;color:#EF4444">−${o.total_lost} баллов</span>
-                  </div>
-                  <div style="font-size:10px;color:var(--t4)">${o.errors.map(e => `${e.cat} (−${e.points})`).join(' · ')}</div>
-                </div>`).join('')}
-            </div>
-          </div>`;
+      const summaryEl = document.getElementById('kkSummary');
+      const contentEl = document.getElementById('kkContent');
+      
+      if (!ke || !ke.top_error_categories || ke.top_error_categories.length === 0) {
+        if (contentEl) {
+          contentEl.innerHTML = `
+            <div class="card" style="grid-column:span 2;padding:30px 20px;text-align:center;color:var(--t3)">
+              <div style="font-size:28px;margin-bottom:10px;opacity:0.4">📋</div>
+              <div style="font-weight:600;color:var(--t2);margin-bottom:6px">Темы ошибок ещё не загружены</div>
+              <div style="font-size:11px;color:var(--t4);max-width:480px;margin:0 auto;line-height:1.5">
+                Здесь появится разбивка по причинам снятия баллов после QA-сессий.
+              </div>
+            </div>`;
+        }
+        return;
       }
-    }
+      
+      const sum = ke.summary || {};
+      
+      // Summary cards
+      if (summaryEl) {
+        const cards = [
+          {label:'ПРОВЕРЕНО ОПЕРАТОРОВ', val:sum.total_operators_evaluated||12, color:'#3B82F6', bg:'rgba(59,130,246,0.10)'},
+          {label:'ИДЕАЛЬНЫЙ БАЛЛ', val:sum.perfect_score_operators||1, color:'#10B981', bg:'rgba(16,185,129,0.10)', sub:'из ' + (sum.total_operators_evaluated||12)},
+          {label:'СРЕДНИЙ БАЛЛ', val:(sum.avg_score||93.7) + '%', color:'#8B5CF6', bg:'rgba(139,92,246,0.10)'},
+          {label:'ВСЕГО СНЯТО', val:'−' + (sum.total_points_lost||1075), color:'#EF4444', bg:'rgba(239,68,68,0.10)', sub:'баллов'},
+        ];
+        summaryEl.innerHTML = cards.map(c => `
+          <div class="card" style="padding:14px 16px;background:${c.bg};border:1px solid ${c.color}30;border-left:3px solid ${c.color}">
+            <div style="font-size:9px;font-weight:700;color:${c.color};letter-spacing:.1em;margin-bottom:6px">${c.label}</div>
+            <div style="font-size:22px;font-weight:800;color:${c.color};line-height:1.1">${c.val}</div>
+            ${c.sub ? `<div style="font-size:10px;color:var(--t3);margin-top:3px">${c.sub}</div>` : ''}
+          </div>`).join('');
+      }
+      
+      // Compute max for bars
+      const maxCat = Math.max(...ke.top_error_categories.map(c => c.points_lost), 1);
+      const maxOp = Math.max(...ke.by_operator.map(o => o.total_lost), 1);
+      
+      // TOP CATEGORIES card
+      const topCatsHTML = `
+        <div class="card">
+          <div class="card-hd">
+            <div class="card-title">🎯 Топ категорий ошибок</div>
+            <div class="card-note">${ke.period||'Апрель 2026'}</div>
+          </div>
+          <div style="padding:6px 4px">
+            ${ke.top_error_categories.map((c, i) => {
+              const widthPct = Math.round(c.points_lost / maxCat * 100);
+              const sev = c.points_lost >= 200 ? 'crit' : c.points_lost >= 100 ? 'high' : c.points_lost >= 50 ? 'mid' : 'low';
+              const sevColor = sev === 'crit' ? '#EF4444' : sev === 'high' ? '#F59E0B' : sev === 'mid' ? '#FBBF24' : '#94A3B8';
+              const sevBg = sev === 'crit' ? 'rgba(239,68,68,0.20)' : sev === 'high' ? 'rgba(245,158,11,0.20)' : sev === 'mid' ? 'rgba(251,191,36,0.15)' : 'rgba(148,163,184,0.12)';
+              return `
+                <div style="padding:10px 12px;border-bottom:1px solid rgba(255,255,255,0.04);${i===0?'border-top:1px solid rgba(255,255,255,0.04)':''}">
+                  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;gap:10px">
+                    <div style="display:flex;align-items:center;gap:8px;flex:1;min-width:0">
+                      <span style="font-size:9px;font-weight:700;color:var(--t4);width:18px;flex-shrink:0">${String(i+1).padStart(2,'0')}</span>
+                      <span style="font-size:12px;font-weight:600;color:var(--t1);line-height:1.35">${c.name}</span>
+                    </div>
+                    <div style="display:flex;align-items:center;gap:8px;flex-shrink:0">
+                      <span style="font-size:10px;color:var(--t4)">${c.count} случ.</span>
+                      <span style="font-size:11px;font-weight:700;padding:3px 8px;border-radius:5px;background:${sevBg};color:${sevColor}">−${c.points_lost} б.</span>
+                    </div>
+                  </div>
+                  <div style="height:4px;background:rgba(255,255,255,0.04);border-radius:2px;overflow:hidden">
+                    <div style="height:100%;width:${widthPct}%;background:linear-gradient(90deg, ${sevColor}80, ${sevColor})"></div>
+                  </div>
+                </div>`;
+            }).join('')}
+          </div>
+          <div class="card-formula">📐 Категории отсортированы по сумме снятых баллов · красные ≥200, оранжевые ≥100, жёлтые ≥50</div>
+        </div>`;
+      
+      // BY OPERATOR card
+      const byOpHTML = `
+        <div class="card">
+          <div class="card-hd">
+            <div class="card-title">👥 По операторам</div>
+            <div class="card-note">балл = 100 − снятые баллы / 3</div>
+          </div>
+          <div style="padding:6px 4px">
+            ${ke.by_operator.map((o, i) => {
+              const widthPct = Math.round(o.total_lost / maxOp * 100);
+              const scoreCol = o.score >= 95 ? '#10B981' : o.score >= 90 ? '#F59E0B' : '#EF4444';
+              const scoreBg = o.score >= 95 ? 'rgba(16,185,129,0.18)' : o.score >= 90 ? 'rgba(245,158,11,0.18)' : 'rgba(239,68,68,0.18)';
+              return `
+                <div style="padding:10px 12px;border-bottom:1px solid rgba(255,255,255,0.04);${i===0?'border-top:1px solid rgba(255,255,255,0.04)':''}">
+                  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;gap:10px">
+                    <div style="display:flex;align-items:center;gap:8px;flex:1;min-width:0">
+                      <span style="font-size:9px;font-weight:700;color:var(--t4);width:18px;flex-shrink:0">${String(i+1).padStart(2,'0')}</span>
+                      <span style="font-size:12px;font-weight:700;color:var(--t1)">${o.name}</span>
+                      <span style="font-size:10px;font-weight:700;padding:2px 7px;border-radius:5px;background:${scoreBg};color:${scoreCol};margin-left:4px">${o.score}</span>
+                    </div>
+                    <span style="font-size:11px;font-weight:700;color:#EF4444">−${o.total_lost} б.</span>
+                  </div>
+                  <div style="height:3px;background:rgba(255,255,255,0.04);border-radius:2px;overflow:hidden;margin-bottom:6px">
+                    <div style="height:100%;width:${widthPct}%;background:linear-gradient(90deg,#EF444480,#EF4444)"></div>
+                  </div>
+                  <div style="font-size:10px;color:var(--t3);line-height:1.5">
+                    ${o.errors.map(e => `<span style="display:inline-block;background:rgba(239,68,68,0.08);color:#FCA5A5;padding:2px 7px;border-radius:4px;margin:0 4px 3px 0;font-size:10px">${e.cat} <span style="color:#EF4444;font-weight:700">−${e.points}</span></span>`).join('')}
+                  </div>
+                </div>`;
+            }).join('')}
+          </div>
+          <div class="card-formula">📐 Операторы отсортированы по сумме снятых баллов (худшие сверху)</div>
+        </div>`;
+      
+      contentEl.innerHTML = topCatsHTML + byOpHTML;
+    })();
   </script>
 
 </body>

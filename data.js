@@ -12096,7 +12096,7 @@ const BILLZ_DATA = {
         "burnout_level": "high",
         "burnout_color": "#EF4444",
         "burnout_bg": "rgba(239,68,68,0.15)",
-        "kk_score": 100,
+        "kk_score": 100.0,
         "test_score": null
       },
       {
@@ -12119,7 +12119,7 @@ const BILLZ_DATA = {
         "burnout_level": "high",
         "burnout_color": "#EF4444",
         "burnout_bg": "rgba(239,68,68,0.15)",
-        "kk_score": 98,
+        "kk_score": 98.3,
         "test_score": null
       },
       {
@@ -12142,7 +12142,7 @@ const BILLZ_DATA = {
         "burnout_level": "high",
         "burnout_color": "#EF4444",
         "burnout_bg": "rgba(239,68,68,0.15)",
-        "kk_score": 93,
+        "kk_score": 93.3,
         "test_score": null
       },
       {
@@ -12165,7 +12165,7 @@ const BILLZ_DATA = {
         "burnout_level": "high",
         "burnout_color": "#EF4444",
         "burnout_bg": "rgba(239,68,68,0.15)",
-        "kk_score": 93,
+        "kk_score": 92.7,
         "test_score": null
       },
       {
@@ -12211,7 +12211,7 @@ const BILLZ_DATA = {
         "burnout_level": "high",
         "burnout_color": "#EF4444",
         "burnout_bg": "rgba(239,68,68,0.15)",
-        "kk_score": 94,
+        "kk_score": 94.0,
         "test_score": null
       },
       {
@@ -12234,7 +12234,7 @@ const BILLZ_DATA = {
         "burnout_level": "high",
         "burnout_color": "#EF4444",
         "burnout_bg": "rgba(239,68,68,0.15)",
-        "kk_score": 95,
+        "kk_score": 95.3,
         "test_score": null
       },
       {
@@ -12257,7 +12257,7 @@ const BILLZ_DATA = {
         "burnout_level": "high",
         "burnout_color": "#EF4444",
         "burnout_bg": "rgba(239,68,68,0.15)",
-        "kk_score": 90,
+        "kk_score": 89.7,
         "test_score": null
       },
       {
@@ -12280,7 +12280,7 @@ const BILLZ_DATA = {
         "burnout_level": "high",
         "burnout_color": "#EF4444",
         "burnout_bg": "rgba(239,68,68,0.15)",
-        "kk_score": 93,
+        "kk_score": 92.7,
         "test_score": null
       },
       {
@@ -12303,7 +12303,7 @@ const BILLZ_DATA = {
         "burnout_level": "high",
         "burnout_color": "#EF4444",
         "burnout_bg": "rgba(239,68,68,0.15)",
-        "kk_score": null,
+        "kk_score": 98.0,
         "test_score": null
       },
       {
@@ -12326,7 +12326,7 @@ const BILLZ_DATA = {
         "burnout_level": "high",
         "burnout_color": "#EF4444",
         "burnout_bg": "rgba(239,68,68,0.15)",
-        "kk_score": 95,
+        "kk_score": 95.3,
         "test_score": null
       },
       {
@@ -12395,7 +12395,7 @@ const BILLZ_DATA = {
         "burnout_level": "norm",
         "burnout_color": "#10B981",
         "burnout_bg": "rgba(16,185,129,0.15)",
-        "kk_score": 89,
+        "kk_score": 89.0,
         "test_score": null
       },
       {
@@ -17427,7 +17427,7 @@ const BILLZ_DATA = {
             "burnout_level": "high",
             "burnout_color": "#EF4444",
             "burnout_bg": "rgba(239,68,68,0.15)",
-            "kk_score": 100,
+            "kk_score": 100.0,
             "test_score": null
           },
           {
@@ -17443,7 +17443,7 @@ const BILLZ_DATA = {
             "burnout_level": "high",
             "burnout_color": "#EF4444",
             "burnout_bg": "rgba(239,68,68,0.15)",
-            "kk_score": 98,
+            "kk_score": 98.3,
             "test_score": null
           },
           {
@@ -17459,7 +17459,7 @@ const BILLZ_DATA = {
             "burnout_level": "high",
             "burnout_color": "#EF4444",
             "burnout_bg": "rgba(239,68,68,0.15)",
-            "kk_score": 94,
+            "kk_score": 94.0,
             "test_score": null
           },
           {
@@ -17491,7 +17491,7 @@ const BILLZ_DATA = {
             "burnout_level": "high",
             "burnout_color": "#EF4444",
             "burnout_bg": "rgba(239,68,68,0.15)",
-            "kk_score": 93,
+            "kk_score": 93.3,
             "test_score": null
           },
           {
@@ -17507,7 +17507,7 @@ const BILLZ_DATA = {
             "burnout_level": "high",
             "burnout_color": "#EF4444",
             "burnout_bg": "rgba(239,68,68,0.15)",
-            "kk_score": 93,
+            "kk_score": 92.7,
             "test_score": null
           },
           {
@@ -17523,7 +17523,7 @@ const BILLZ_DATA = {
             "burnout_level": "mid",
             "burnout_color": "#F59E0B",
             "burnout_bg": "rgba(245,158,11,0.15)",
-            "kk_score": 95,
+            "kk_score": 95.3,
             "test_score": null
           },
           {
@@ -17539,7 +17539,7 @@ const BILLZ_DATA = {
             "burnout_level": "mid",
             "burnout_color": "#F59E0B",
             "burnout_bg": "rgba(245,158,11,0.15)",
-            "kk_score": 90,
+            "kk_score": 89.7,
             "test_score": null
           },
           {
@@ -17555,7 +17555,7 @@ const BILLZ_DATA = {
             "burnout_level": "mid",
             "burnout_color": "#F59E0B",
             "burnout_bg": "rgba(245,158,11,0.15)",
-            "kk_score": 95,
+            "kk_score": 95.3,
             "test_score": null
           },
           {
@@ -17571,7 +17571,7 @@ const BILLZ_DATA = {
             "burnout_level": "norm",
             "burnout_color": "#10B981",
             "burnout_bg": "rgba(16,185,129,0.15)",
-            "kk_score": 93,
+            "kk_score": 92.7,
             "test_score": null
           },
           {
@@ -17587,7 +17587,7 @@ const BILLZ_DATA = {
             "burnout_level": "norm",
             "burnout_color": "#10B981",
             "burnout_bg": "rgba(16,185,129,0.15)",
-            "kk_score": null,
+            "kk_score": 98.0,
             "test_score": null
           },
           {
@@ -17603,7 +17603,7 @@ const BILLZ_DATA = {
             "burnout_level": "norm",
             "burnout_color": "#10B981",
             "burnout_bg": "rgba(16,185,129,0.15)",
-            "kk_score": 89,
+            "kk_score": 89.0,
             "test_score": null
           },
           {
@@ -45223,9 +45223,246 @@ const BILLZ_DATA = {
   },
   "current_month": "apr",
   "kk_errors": {
-    "note": "Темы ошибок и снятые баллы по операторам — будут добавлены после QA-сессий.",
-    "period": "Май 2026",
-    "top_error_categories": [],
-    "by_operator": []
+    "period": "Апрель 2026",
+    "note": "12 операторов прошли прослушку и проверку чатов",
+    "top_error_categories": [
+      {
+        "name": "Не полностью заполнен тикет",
+        "points_lost": 490.0,
+        "count": 14
+      },
+      {
+        "name": "Не ведёт разговор / перебивает",
+        "points_lost": 225.0,
+        "count": 9
+      },
+      {
+        "name": "Проблема не решена до конца",
+        "points_lost": 200.0,
+        "count": 2
+      },
+      {
+        "name": "Не ищет оптимального решения",
+        "points_lost": 60.0,
+        "count": 2
+      },
+      {
+        "name": "Не ответил на возражение клиента",
+        "points_lost": 40.0,
+        "count": 2
+      },
+      {
+        "name": "Грамматические ошибки",
+        "points_lost": 30.0,
+        "count": 3
+      },
+      {
+        "name": "Отсутствует приветствие",
+        "points_lost": 30.0,
+        "count": 1
+      }
+    ],
+    "by_operator": [
+      {
+        "name": "Камолиддин",
+        "total_lost": 165.0,
+        "errors_count": 6,
+        "score": 89.0,
+        "errors": [
+          {
+            "cat": "Не полностью заполнен тикет",
+            "points": 105.0,
+            "count": 3
+          },
+          {
+            "cat": "Не ведёт разговор / перебивает",
+            "points": 50.0,
+            "count": 2
+          },
+          {
+            "cat": "Грамматические ошибки",
+            "points": 10.0,
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "Тожмухаммад",
+        "total_lost": 155.0,
+        "errors_count": 3,
+        "score": 89.7,
+        "errors": [
+          {
+            "cat": "Проблема не решена до конца",
+            "points": 100.0,
+            "count": 1
+          },
+          {
+            "cat": "Не полностью заполнен тикет",
+            "points": 35.0,
+            "count": 1
+          },
+          {
+            "cat": "Не ответил на возражение клиента",
+            "points": 20.0,
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "Нурилло И.",
+        "total_lost": 150.0,
+        "errors_count": 4,
+        "score": 90.0,
+        "errors": [
+          {
+            "cat": "Проблема не решена до конца",
+            "points": 100.0,
+            "count": 1
+          },
+          {
+            "cat": "Отсутствует приветствие",
+            "points": 30.0,
+            "count": 1
+          },
+          {
+            "cat": "Грамматические ошибки",
+            "points": 20.0,
+            "count": 2
+          }
+        ]
+      },
+      {
+        "name": "Иззатбек",
+        "total_lost": 110.0,
+        "errors_count": 4,
+        "score": 92.7,
+        "errors": [
+          {
+            "cat": "Не ведёт разговор / перебивает",
+            "points": 75.0,
+            "count": 3
+          },
+          {
+            "cat": "Не полностью заполнен тикет",
+            "points": 35.0,
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "Робия Р.",
+        "total_lost": 110.0,
+        "errors_count": 4,
+        "score": 92.7,
+        "errors": [
+          {
+            "cat": "Не ведёт разговор / перебивает",
+            "points": 75.0,
+            "count": 3
+          },
+          {
+            "cat": "Не полностью заполнен тикет",
+            "points": 35.0,
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "Сардор Б.",
+        "total_lost": 100.0,
+        "errors_count": 3,
+        "score": 93.3,
+        "errors": [
+          {
+            "cat": "Не полностью заполнен тикет",
+            "points": 70.0,
+            "count": 2
+          },
+          {
+            "cat": "Не ищет оптимального решения",
+            "points": 30.0,
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "Алиёр",
+        "total_lost": 90.0,
+        "errors_count": 3,
+        "score": 94.0,
+        "errors": [
+          {
+            "cat": "Не полностью заполнен тикет",
+            "points": 70.0,
+            "count": 2
+          },
+          {
+            "cat": "Не ответил на возражение клиента",
+            "points": 20.0,
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "Ардак",
+        "total_lost": 70.0,
+        "errors_count": 2,
+        "score": 95.3,
+        "errors": [
+          {
+            "cat": "Не полностью заполнен тикет",
+            "points": 70.0,
+            "count": 2
+          }
+        ]
+      },
+      {
+        "name": "Авазбек",
+        "total_lost": 70.0,
+        "errors_count": 2,
+        "score": 95.3,
+        "errors": [
+          {
+            "cat": "Не полностью заполнен тикет",
+            "points": 70.0,
+            "count": 2
+          }
+        ]
+      },
+      {
+        "name": "Робия А.",
+        "total_lost": 30.0,
+        "errors_count": 1,
+        "score": 98.0,
+        "errors": [
+          {
+            "cat": "Не ищет оптимального решения",
+            "points": 30.0,
+            "count": 1
+          }
+        ]
+      },
+      {
+        "name": "Атабек",
+        "total_lost": 25.0,
+        "errors_count": 1,
+        "score": 98.3,
+        "errors": [
+          {
+            "cat": "Не ведёт разговор / перебивает",
+            "points": 25.0,
+            "count": 1
+          }
+        ]
+      }
+    ],
+    "summary": {
+      "total_operators_evaluated": 12,
+      "operators_with_errors": 11,
+      "perfect_score_operators": 1,
+      "total_points_lost": 1075.0,
+      "avg_score": 94.0
+    }
   }
 };

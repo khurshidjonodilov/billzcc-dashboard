@@ -4,11 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>BILLZ CC · Ежемесячно</title>
-<link rel="stylesheet" href="shared.css?v=27">
+<link rel="stylesheet" href="shared.css?v=28">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 <script src="data.js"></script>
-<script src="shared.js?v=27"></script>
+<script src="shared.js?v=28"></script>
 <style>
 .formula-bar {
   margin-top: 12px !important;
@@ -368,49 +368,7 @@ document.getElementById('chanNote').textContent =
 
 /* Labels */
 
-// Helper: render company block
-function companyBlock(comp, idx) {
-  const tix = comp.tickets || 0;
-  const undPct = tix ? Math.round((comp.undesired || 0) / tix * 100) : 0;
-  const undCol = undPct >= 50 ? '#EF4444' : (undPct >= 30 ? '#F59E0B' : '#10B981');
-  const undBg = undPct >= 50 ? 'rgba(239,68,68,0.15)' : (undPct >= 30 ? 'rgba(245,158,11,0.15)' : 'rgba(16,185,129,0.15)');
-  const tlList = (comp.top_labels || []).slice(0, 3).map(t =>
-    `<span style="display:inline-block;font-size:10px;padding:2px 7px;margin:0 4px 2px 0;background:rgba(59,130,246,0.10);color:#93C5FD;border-radius:4px">${t.label.length>30?t.label.slice(0,30)+'…':t.label} · ${t.count}</span>`
-  ).join('');
-  return `
-    <div style="padding:14px 16px;border-bottom:1px solid rgba(255,255,255,0.05);${idx===0?'border-top:1px solid rgba(255,255,255,0.05)':''}">
-      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
-        <div>
-          <span style="font-size:9px;font-weight:700;color:var(--t4);margin-right:6px">${String(idx+1).padStart(2,'0')}</span>
-          <span style="font-size:13px;font-weight:700;color:var(--t1)">${comp.name || ''}</span>
-          <span style="font-family:var(--mono);font-size:12px;color:var(--blue2);margin-left:10px">${tix.toLocaleString('ru')} тик.</span>
-          <span style="font-size:10px;font-weight:700;padding:2px 7px;margin-left:6px;border-radius:4px;background:${undBg};color:${undCol}">${undPct}% нжл.</span>
-        </div>
-        <span style="font-family:var(--mono);font-size:11px;color:var(--t3)">${((comp.cost || tix*9865)/1e6).toFixed(2)} млн сум</span>
-      </div>
-      <div style="font-size:10px;color:var(--t4);margin-top:4px">${tlList}</div>
-    </div>`;
-}
 
-
-// Helper: render single label row
-function labelRow(l, maxL) {
-  const tix = l.tickets || 0;
-  const undPct = tix ? Math.round((l.undesired || 0) / tix * 100) : 0;
-  const undCol = undPct >= 50 ? '#EF4444' : (undPct >= 30 ? '#F59E0B' : '#10B981');
-  const undBg  = undPct >= 50 ? 'rgba(239,68,68,0.15)' : (undPct >= 30 ? 'rgba(245,158,11,0.15)' : 'rgba(16,185,129,0.15)');
-  const widthPct = maxL ? Math.round(tix / maxL * 100) : 0;
-  return `
-    <tr>
-      <td style="font-size:11px;color:var(--t1);max-width:240px;line-height:1.35">${l.name || ''}</td>
-      <td style="font-family:var(--mono);font-size:12px;font-weight:700;color:var(--blue2);text-align:right">${tix.toLocaleString('ru')}</td>
-      <td style="width:120px"><div style="height:6px;background:rgba(255,255,255,0.05);border-radius:3px;overflow:hidden">
-        <div style="width:${widthPct}%;height:100%;background:linear-gradient(90deg,#3B82F6,#8B5CF6)"></div>
-      </div></td>
-      <td><span style="font-size:10px;font-weight:700;padding:3px 7px;border-radius:5px;background:${undBg};color:${undCol}">${undPct}% нжл.</span></td>
-      <td style="font-family:var(--mono);font-size:11px;color:var(--t3);text-align:right">${((l.cost || tix*9865)/1e6).toFixed(2)} млн сум</td>
-    </tr>`;
-}
 
 
 const lbls = (M.top_labels || []).slice(0, 12);
@@ -733,15 +691,15 @@ function exportCSExcel() {
   if (atsCardEl && M.ats_data) {
     const ats = M.ats_data;
     const rows = [
-      {label:'Вход (всего)', val:ats.incoming_total.toLocaleString('ru'), color:'var(--t2)'},
-      {label:'Вход (за вычетом пропуск от ПД)', val:ats.incoming_no_missed_pd.toLocaleString('ru'), color:'var(--t3)'},
-      {label:'Вход (за вычетом даунтайм)', val:ats.incoming_no_downtime.toLocaleString('ru'), color:'#60A5FA', bold:true, note:'← база LCR', hl:'rgba(59,130,246,0.08)'},
-      {label:'Пропущ. все', val:ats.missed_all.toLocaleString('ru'), color:'var(--t2)'},
-      {label:'  · от 7 сек', val:ats.missed_from_7.toLocaleString('ru'), color:'var(--t4)'},
-      {label:'  · ПД от 6 до 15', val:ats.missed_pd_6_15.toLocaleString('ru'), color:'var(--t4)'},
-      {label:'  · нерабочее время', val:ats.missed_unworktime.toLocaleString('ru'), color:'var(--t4)'},
-      {label:'Даунтайм', val:ats.downtime.toLocaleString('ru'), color:'var(--t4)'},
-      {label:'Всего пропущ. (для LCR)', val:ats.missed_total.toLocaleString('ru'), color:'#F87171', bold:true, hl:'rgba(239,68,68,0.07)'},
+      {label:'Вход (всего)', val:(ats.incoming_total || 0).toLocaleString('ru'), color:'var(--t2)'},
+      {label:'Вход (за вычетом пропуск от ПД)', val:(ats.incoming_no_missed_pd || 0).toLocaleString('ru'), color:'var(--t3)'},
+      {label:'Вход (за вычетом даунтайм)', val:(ats.incoming_no_downtime || 0).toLocaleString('ru'), color:'#60A5FA', bold:true, note:'← база LCR', hl:'rgba(59,130,246,0.08)'},
+      {label:'Пропущ. все', val:(ats.missed_all || 0).toLocaleString('ru'), color:'var(--t2)'},
+      {label:'  · от 7 сек', val:(ats.missed_from_7 || 0).toLocaleString('ru'), color:'var(--t4)'},
+      {label:'  · ПД от 6 до 15', val:(ats.missed_pd_6_15 || 0).toLocaleString('ru'), color:'var(--t4)'},
+      {label:'  · нерабочее время', val:(ats.missed_unworktime || 0).toLocaleString('ru'), color:'var(--t4)'},
+      {label:'Даунтайм', val:(ats.downtime || 0).toLocaleString('ru'), color:'var(--t4)'},
+      {label:'Всего пропущ. (для LCR)', val:(ats.missed_total || 0).toLocaleString('ru'), color:'#F87171', bold:true, hl:'rgba(239,68,68,0.07)'},
       {label:'Итог LCR', val:ats.lcr_final+'%', color:'#F87171', bold:true, big:true, hl:'rgba(239,68,68,0.10)'},
     ];
     atsCardEl.innerHTML = `<div class="card" style="display:grid;grid-template-columns:1fr 1fr;gap:0;overflow:hidden">
@@ -776,7 +734,7 @@ function exportCSExcel() {
             <span style="color:#94A3B8"> = </span>
             <span style="color:#34D399;font-weight:700">${ats.missed_total}</span>
             <span style="color:#94A3B8"> / </span>
-            <span style="color:#34D399;font-weight:700">${ats.incoming_no_downtime.toLocaleString('ru')}</span>
+            <span style="color:#34D399;font-weight:700">${(ats.incoming_no_downtime || 0).toLocaleString('ru')}</span>
             <span style="color:#94A3B8"> × 100 = </span>
             <span style="color:#F87171;font-weight:800;font-size:15px">${ats.lcr_final}%</span>
           </div>

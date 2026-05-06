@@ -362,6 +362,17 @@ const C = {
 };
 
 /* Neon colors list for multi-series */
+
+// Helper: convert #RRGGBB to {r,g,b}
+function hexRGB(hex) {
+  const h = String(hex).replace('#','').padStart(6,'0');
+  return {
+    r: parseInt(h.slice(0,2), 16),
+    g: parseInt(h.slice(2,4), 16),
+    b: parseInt(h.slice(4,6), 16),
+  };
+}
+
 const NEON_COLORS = [
   '#3B82F6','#10B981','#8B5CF6','#F59E0B',
   '#EF4444','#06B6D4','#EC4899','#34D399',

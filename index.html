@@ -4,11 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>BILLZ CC · Ежемесячно</title>
-<link rel="stylesheet" href="shared.css?v=26">
+<link rel="stylesheet" href="shared.css?v=27">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 <script src="data.js"></script>
-<script src="shared.js?v=26"></script>
+<script src="shared.js?v=27"></script>
 <style>
 .formula-bar {
   margin-top: 12px !important;
@@ -367,6 +367,52 @@ document.getElementById('chanNote').textContent =
   `Звонки: ${fmt.pct(M.calls/M.tickets*100)} · Чаты: ${fmt.pct(M.chats/M.tickets*100)}`;
 
 /* Labels */
+
+// Helper: render company block
+function companyBlock(comp, idx) {
+  const tix = comp.tickets || 0;
+  const undPct = tix ? Math.round((comp.undesired || 0) / tix * 100) : 0;
+  const undCol = undPct >= 50 ? '#EF4444' : (undPct >= 30 ? '#F59E0B' : '#10B981');
+  const undBg = undPct >= 50 ? 'rgba(239,68,68,0.15)' : (undPct >= 30 ? 'rgba(245,158,11,0.15)' : 'rgba(16,185,129,0.15)');
+  const tlList = (comp.top_labels || []).slice(0, 3).map(t =>
+    `<span style="display:inline-block;font-size:10px;padding:2px 7px;margin:0 4px 2px 0;background:rgba(59,130,246,0.10);color:#93C5FD;border-radius:4px">${t.label.length>30?t.label.slice(0,30)+'…':t.label} · ${t.count}</span>`
+  ).join('');
+  return `
+    <div style="padding:14px 16px;border-bottom:1px solid rgba(255,255,255,0.05);${idx===0?'border-top:1px solid rgba(255,255,255,0.05)':''}">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+        <div>
+          <span style="font-size:9px;font-weight:700;color:var(--t4);margin-right:6px">${String(idx+1).padStart(2,'0')}</span>
+          <span style="font-size:13px;font-weight:700;color:var(--t1)">${comp.name || ''}</span>
+          <span style="font-family:var(--mono);font-size:12px;color:var(--blue2);margin-left:10px">${tix.toLocaleString('ru')} тик.</span>
+          <span style="font-size:10px;font-weight:700;padding:2px 7px;margin-left:6px;border-radius:4px;background:${undBg};color:${undCol}">${undPct}% нжл.</span>
+        </div>
+        <span style="font-family:var(--mono);font-size:11px;color:var(--t3)">${((comp.cost || tix*9865)/1e6).toFixed(2)} млн сум</span>
+      </div>
+      <div style="font-size:10px;color:var(--t4);margin-top:4px">${tlList}</div>
+    </div>`;
+}
+
+
+// Helper: render single label row
+function labelRow(l, maxL) {
+  const tix = l.tickets || 0;
+  const undPct = tix ? Math.round((l.undesired || 0) / tix * 100) : 0;
+  const undCol = undPct >= 50 ? '#EF4444' : (undPct >= 30 ? '#F59E0B' : '#10B981');
+  const undBg  = undPct >= 50 ? 'rgba(239,68,68,0.15)' : (undPct >= 30 ? 'rgba(245,158,11,0.15)' : 'rgba(16,185,129,0.15)');
+  const widthPct = maxL ? Math.round(tix / maxL * 100) : 0;
+  return `
+    <tr>
+      <td style="font-size:11px;color:var(--t1);max-width:240px;line-height:1.35">${l.name || ''}</td>
+      <td style="font-family:var(--mono);font-size:12px;font-weight:700;color:var(--blue2);text-align:right">${tix.toLocaleString('ru')}</td>
+      <td style="width:120px"><div style="height:6px;background:rgba(255,255,255,0.05);border-radius:3px;overflow:hidden">
+        <div style="width:${widthPct}%;height:100%;background:linear-gradient(90deg,#3B82F6,#8B5CF6)"></div>
+      </div></td>
+      <td><span style="font-size:10px;font-weight:700;padding:3px 7px;border-radius:5px;background:${undBg};color:${undCol}">${undPct}% нжл.</span></td>
+      <td style="font-family:var(--mono);font-size:11px;color:var(--t3);text-align:right">${((l.cost || tix*9865)/1e6).toFixed(2)} млн сум</td>
+    </tr>`;
+}
+
+
 const lbls = (M.top_labels || []).slice(0, 12);
 const maxL = lbls.length ? Math.max(...lbls.map(l=>l.tickets)) : 1;
 document.getElementById('lblTable').innerHTML = lbls.map(l => labelRow(l, maxL)).join('');

@@ -30677,16 +30677,24 @@ const BILLZ_DATA = {
         "tickets_plan": 0,
         "chat_causes": [
           {
-            "label": "Сложные технические кейсы",
-            "desc": "Принтеры, Anydesk, кассы — клиенты чаще звонят"
+            "rank": 1,
+            "cause": "Сложные технические кейсы",
+            "detail": "Принтеры, Anydesk/Desktop, кассы — клиенты чаще звонят чтобы получить пошаговое сопровождение"
           },
           {
-            "label": "Обучения через звонок",
-            "desc": "CS-онбординг проводится голосом"
+            "rank": 2,
+            "cause": "Обучения через звонок",
+            "detail": "CS-онбординг чаще проводится голосом — 571 обучение через CC за месяц"
           },
           {
-            "label": "Финансовые операции",
-            "desc": "Оплата тарифа, ссылки — клиенты звонят для уточнения"
+            "rank": 3,
+            "cause": "Финансовые операции = срочность",
+            "detail": "Оплата тарифа и ссылки — клиенты звонят за уточнениями статуса платежа"
+          },
+          {
+            "rank": 4,
+            "cause": "Массовые сбои → пиковые звонки",
+            "detail": "5 массовых сбоев BILLZ в марте → клиенты сразу звонят, не пишут в чат"
           }
         ],
         "ats_data": {
@@ -43443,16 +43451,24 @@ const BILLZ_DATA = {
         "tickets_plan": 0,
         "chat_causes": [
           {
-            "label": "Дефицит команды",
-            "desc": "11 операторов вместо 13-14 необходимых"
+            "rank": 1,
+            "cause": "Дефицит команды → клиенты звонят повторно",
+            "detail": "11 операторов вместо 13-14 необходимых · LCR 13.6% в пиковые часы"
           },
           {
-            "label": "Долгие звонки 20+ мин",
-            "desc": "12 длинных кейсов за 4 дня блокировали линию"
+            "rank": 2,
+            "cause": "Долгие звонки 20+ мин блокируют линию",
+            "detail": "12 длинных кейсов за 4 дня · в это время чаты тоже простаивают"
           },
           {
-            "label": "Системные темы CS",
-            "desc": "Оплата, входы, ссылки — повторяются ежедневно"
+            "rank": 3,
+            "cause": "Системные темы CS — клиенты привыкли звонить",
+            "detail": "Оплата, входы, ссылки — повторяются ежедневно, обучение через CS не закрывает"
+          },
+          {
+            "rank": 4,
+            "cause": "Срочность = звонок (как в апреле)",
+            "detail": "Кассовые смены, вход в аккаунт — клиент в магазине, нужен быстрый ответ"
           }
         ]
       },
@@ -43475,7 +43491,118 @@ const BILLZ_DATA = {
           "repeat_pct": 8.4,
           "cost": 12508820,
           "lcr": 9.97,
-          "operators": [],
+          "operators": [
+            {
+              "name": "Нурилло",
+              "tickets": 191,
+              "avg_close": 0.04,
+              "close_rate": 99.5,
+              "rating_pct": 93.3,
+              "rated": 15,
+              "sla_pct": 88.0,
+              "cost": 1884215
+            },
+            {
+              "name": "Иззатбек",
+              "tickets": 183,
+              "avg_close": 0.05,
+              "close_rate": 99.5,
+              "rating_pct": 90.9,
+              "rated": 11,
+              "sla_pct": 72.7,
+              "cost": 1805295
+            },
+            {
+              "name": "Робия Р.",
+              "tickets": 176,
+              "avg_close": 0.92,
+              "close_rate": 99.5,
+              "rating_pct": 100.0,
+              "rated": 10,
+              "sla_pct": 68.2,
+              "cost": 1736240
+            },
+            {
+              "name": "Авазбек",
+              "tickets": 136,
+              "avg_close": 0.07,
+              "close_rate": 99.5,
+              "rating_pct": 93.3,
+              "rated": 15,
+              "sla_pct": 85.3,
+              "cost": 1341640
+            },
+            {
+              "name": "Анасхон",
+              "tickets": 129,
+              "avg_close": 0.06,
+              "close_rate": 99.5,
+              "rating_pct": 100.0,
+              "rated": 9,
+              "sla_pct": 96.1,
+              "cost": 1272585
+            },
+            {
+              "name": "Атабек",
+              "tickets": 114,
+              "avg_close": 0.02,
+              "close_rate": 99.5,
+              "rating_pct": 100.0,
+              "rated": 8,
+              "sla_pct": 87.7,
+              "cost": 1124610
+            },
+            {
+              "name": "Тожмухаммад",
+              "tickets": 97,
+              "avg_close": 0.1,
+              "close_rate": 99.5,
+              "rating_pct": 100.0,
+              "rated": 6,
+              "sla_pct": 79.4,
+              "cost": 956905
+            },
+            {
+              "name": "Сардор Б.",
+              "tickets": 69,
+              "avg_close": 0.04,
+              "close_rate": 99.5,
+              "rating_pct": 100.0,
+              "rated": 2,
+              "sla_pct": 69.6,
+              "cost": 680685
+            },
+            {
+              "name": "Ардак",
+              "tickets": 59,
+              "avg_close": 0.07,
+              "close_rate": 99.5,
+              "rating_pct": 100.0,
+              "rated": 7,
+              "sla_pct": 74.6,
+              "cost": 582035
+            },
+            {
+              "name": "Камолиддин",
+              "tickets": 58,
+              "avg_close": 0.05,
+              "close_rate": 99.5,
+              "rating_pct": 100.0,
+              "rated": 7,
+              "sla_pct": 86.2,
+              "cost": 572170
+            },
+            {
+              "name": "Алиёр",
+              "tickets": 55,
+              "avg_close": 0.06,
+              "close_rate": 99.5,
+              "rating_pct": 100.0,
+              "rated": 1,
+              "sla_pct": 70.9,
+              "cost": 542575
+            }
+          ],
           "top_labels": [],
           "top_companies": []
         },
@@ -43497,7 +43624,88 @@ const BILLZ_DATA = {
           "repeat_pct": 10.8,
           "cost": 4311005,
           "lcr": 5.1,
-          "operators": [],
+          "operators": [
+            {
+              "name": "Авазбек",
+              "tickets": 71,
+              "avg_close": 0.06,
+              "close_rate": 99.5,
+              "rating_pct": 100.0,
+              "rated": 7,
+              "sla_pct": 100.0,
+              "cost": 700415
+            },
+            {
+              "name": "Анасхон",
+              "tickets": 70,
+              "avg_close": 0.06,
+              "close_rate": 99.5,
+              "rating_pct": 100.0,
+              "rated": 3,
+              "sla_pct": 95.7,
+              "cost": 690550
+            },
+            {
+              "name": "Ардак",
+              "tickets": 67,
+              "avg_close": 0.06,
+              "close_rate": 99.5,
+              "rating_pct": 100.0,
+              "rated": 4,
+              "sla_pct": 80.6,
+              "cost": 660955
+            },
+            {
+              "name": "Иззатбек",
+              "tickets": 63,
+              "avg_close": 0.06,
+              "close_rate": 99.5,
+              "rating_pct": 100.0,
+              "rated": 3,
+              "sla_pct": 68.3,
+              "cost": 621495
+            },
+            {
+              "name": "Сардор Б.",
+              "tickets": 60,
+              "avg_close": 0.05,
+              "close_rate": 99.5,
+              "rating_pct": 100.0,
+              "rated": 1,
+              "sla_pct": 65.0,
+              "cost": 591900
+            },
+            {
+              "name": "Робия Р.",
+              "tickets": 45,
+              "avg_close": 0.14,
+              "close_rate": 99.5,
+              "rating_pct": 66.7,
+              "rated": 3,
+              "sla_pct": 66.7,
+              "cost": 443925
+            },
+            {
+              "name": "Атабек",
+              "tickets": 44,
+              "avg_close": 0.04,
+              "close_rate": 99.5,
+              "rating_pct": 100.0,
+              "rated": 2,
+              "sla_pct": 88.6,
+              "cost": 434060
+            },
+            {
+              "name": "Камолиддин",
+              "tickets": 17,
+              "avg_close": 0.05,
+              "close_rate": 99.5,
+              "rating_pct": 0.0,
+              "rated": 0,
+              "sla_pct": 82.4,
+              "cost": 167705
+            }
+          ],
           "top_labels": [],
           "top_companies": []
         }

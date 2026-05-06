@@ -12096,7 +12096,7 @@ const BILLZ_DATA = {
         "burnout_level": "high",
         "burnout_color": "#EF4444",
         "burnout_bg": "rgba(239,68,68,0.15)",
-        "kk_score": null,
+        "kk_score": 100,
         "test_score": null
       },
       {
@@ -12119,7 +12119,7 @@ const BILLZ_DATA = {
         "burnout_level": "high",
         "burnout_color": "#EF4444",
         "burnout_bg": "rgba(239,68,68,0.15)",
-        "kk_score": null,
+        "kk_score": 98,
         "test_score": null
       },
       {
@@ -12142,7 +12142,7 @@ const BILLZ_DATA = {
         "burnout_level": "high",
         "burnout_color": "#EF4444",
         "burnout_bg": "rgba(239,68,68,0.15)",
-        "kk_score": null,
+        "kk_score": 93,
         "test_score": null
       },
       {
@@ -12165,7 +12165,7 @@ const BILLZ_DATA = {
         "burnout_level": "high",
         "burnout_color": "#EF4444",
         "burnout_bg": "rgba(239,68,68,0.15)",
-        "kk_score": null,
+        "kk_score": 93,
         "test_score": null
       },
       {
@@ -12188,7 +12188,7 @@ const BILLZ_DATA = {
         "burnout_level": "high",
         "burnout_color": "#EF4444",
         "burnout_bg": "rgba(239,68,68,0.15)",
-        "kk_score": null,
+        "kk_score": 90,
         "test_score": null
       },
       {
@@ -12211,7 +12211,7 @@ const BILLZ_DATA = {
         "burnout_level": "high",
         "burnout_color": "#EF4444",
         "burnout_bg": "rgba(239,68,68,0.15)",
-        "kk_score": null,
+        "kk_score": 94,
         "test_score": null
       },
       {
@@ -12234,7 +12234,7 @@ const BILLZ_DATA = {
         "burnout_level": "high",
         "burnout_color": "#EF4444",
         "burnout_bg": "rgba(239,68,68,0.15)",
-        "kk_score": null,
+        "kk_score": 95,
         "test_score": null
       },
       {
@@ -12257,7 +12257,7 @@ const BILLZ_DATA = {
         "burnout_level": "high",
         "burnout_color": "#EF4444",
         "burnout_bg": "rgba(239,68,68,0.15)",
-        "kk_score": null,
+        "kk_score": 90,
         "test_score": null
       },
       {
@@ -12280,7 +12280,7 @@ const BILLZ_DATA = {
         "burnout_level": "high",
         "burnout_color": "#EF4444",
         "burnout_bg": "rgba(239,68,68,0.15)",
-        "kk_score": null,
+        "kk_score": 93,
         "test_score": null
       },
       {
@@ -12326,7 +12326,7 @@ const BILLZ_DATA = {
         "burnout_level": "high",
         "burnout_color": "#EF4444",
         "burnout_bg": "rgba(239,68,68,0.15)",
-        "kk_score": null,
+        "kk_score": 95,
         "test_score": null
       },
       {
@@ -12395,7 +12395,7 @@ const BILLZ_DATA = {
         "burnout_level": "norm",
         "burnout_color": "#10B981",
         "burnout_bg": "rgba(16,185,129,0.15)",
-        "kk_score": null,
+        "kk_score": 89,
         "test_score": null
       },
       {
@@ -17427,7 +17427,7 @@ const BILLZ_DATA = {
             "burnout_level": "high",
             "burnout_color": "#EF4444",
             "burnout_bg": "rgba(239,68,68,0.15)",
-            "kk_score": null,
+            "kk_score": 100,
             "test_score": null
           },
           {
@@ -17443,7 +17443,7 @@ const BILLZ_DATA = {
             "burnout_level": "high",
             "burnout_color": "#EF4444",
             "burnout_bg": "rgba(239,68,68,0.15)",
-            "kk_score": null,
+            "kk_score": 98,
             "test_score": null
           },
           {
@@ -17459,7 +17459,7 @@ const BILLZ_DATA = {
             "burnout_level": "high",
             "burnout_color": "#EF4444",
             "burnout_bg": "rgba(239,68,68,0.15)",
-            "kk_score": null,
+            "kk_score": 94,
             "test_score": null
           },
           {
@@ -17475,7 +17475,7 @@ const BILLZ_DATA = {
             "burnout_level": "high",
             "burnout_color": "#EF4444",
             "burnout_bg": "rgba(239,68,68,0.15)",
-            "kk_score": null,
+            "kk_score": 90,
             "test_score": null
           },
           {
@@ -17491,7 +17491,7 @@ const BILLZ_DATA = {
             "burnout_level": "high",
             "burnout_color": "#EF4444",
             "burnout_bg": "rgba(239,68,68,0.15)",
-            "kk_score": null,
+            "kk_score": 93,
             "test_score": null
           },
           {
@@ -17507,7 +17507,7 @@ const BILLZ_DATA = {
             "burnout_level": "high",
             "burnout_color": "#EF4444",
             "burnout_bg": "rgba(239,68,68,0.15)",
-            "kk_score": null,
+            "kk_score": 93,
             "test_score": null
           },
           {
@@ -17523,7 +17523,7 @@ const BILLZ_DATA = {
             "burnout_level": "mid",
             "burnout_color": "#F59E0B",
             "burnout_bg": "rgba(245,158,11,0.15)",
-            "kk_score": null,
+            "kk_score": 95,
             "test_score": null
           },
           {
@@ -17539,7 +17539,7 @@ const BILLZ_DATA = {
             "burnout_level": "mid",
             "burnout_color": "#F59E0B",
             "burnout_bg": "rgba(245,158,11,0.15)",
-            "kk_score": null,
+            "kk_score": 90,
             "test_score": null
           },
           {
@@ -17555,7 +17555,7 @@ const BILLZ_DATA = {
             "burnout_level": "mid",
             "burnout_color": "#F59E0B",
             "burnout_bg": "rgba(245,158,11,0.15)",
-            "kk_score": null,
+            "kk_score": 95,
             "test_score": null
           },
           {
@@ -17571,7 +17571,7 @@ const BILLZ_DATA = {
             "burnout_level": "norm",
             "burnout_color": "#10B981",
             "burnout_bg": "rgba(16,185,129,0.15)",
-            "kk_score": null,
+            "kk_score": 93,
             "test_score": null
           },
           {
@@ -17603,7 +17603,7 @@ const BILLZ_DATA = {
             "burnout_level": "norm",
             "burnout_color": "#10B981",
             "burnout_bg": "rgba(16,185,129,0.15)",
-            "kk_score": null,
+            "kk_score": 89,
             "test_score": null
           },
           {
@@ -18043,7 +18043,8 @@ const BILLZ_DATA = {
         "tickets_per_day_avg": 533,
         "sla_source": "omnidesk",
         "sla_chat_pct": 78.8,
-        "undesired_pct": 49.1
+        "undesired_pct": 49.1,
+        "has_data": true
       },
       "weekly": {
         "week_14": {
@@ -30666,11 +30667,28 @@ const BILLZ_DATA = {
         "operators_count": 11,
         "sla_note": "",
         "sla_source": "omnidesk",
-        "team_changes": [],
+        "team_changes": [
+          "Команда: 13 операторов в смене",
+          "Изменения: пополнения и регулярная ротация",
+          "Стабильный состав без увольнений в марте"
+        ],
         "team_context": "",
         "tickets_per_day_avg": 0,
         "tickets_plan": 0,
-        "chat_causes": [],
+        "chat_causes": [
+          {
+            "label": "Сложные технические кейсы",
+            "desc": "Принтеры, Anydesk, кассы — клиенты чаще звонят"
+          },
+          {
+            "label": "Обучения через звонок",
+            "desc": "CS-онбординг проводится голосом"
+          },
+          {
+            "label": "Финансовые операции",
+            "desc": "Оплата тарифа, ссылки — клиенты звонят для уточнения"
+          }
+        ],
         "ats_data": {
           "incoming_total": 6704,
           "incoming_no_missed_pd": null,
@@ -41969,22 +41987,873 @@ const BILLZ_DATA = {
         "total_train_tickets": 571,
         "total_train_cost": 5632915,
         "partial_tickets": 534,
-        "full_tickets": 37,
-        "avg_med_close_min": 14.5,
-        "by_month": [],
-        "by_ks_manager": [],
-        "top_labels": [],
+        "full_tickets": 36,
+        "avg_med_close_min": 0.1,
+        "by_month": [
+          {
+            "month": "Март",
+            "tickets": 571,
+            "cost": 5632915,
+            "partial": 534,
+            "full": 36
+          }
+        ],
+        "by_ks_manager": [
+          {
+            "name": "Shoxruh Maxmud",
+            "tickets": 54,
+            "partial": 52,
+            "full": 2,
+            "med_close": 0.1,
+            "cost": 532710,
+            "tag": "big_base",
+            "big_base": true
+          },
+          {
+            "name": "Baxtiyor Kasimov",
+            "tickets": 45,
+            "partial": 44,
+            "full": 1,
+            "med_close": 0.1,
+            "cost": 443925,
+            "tag": "big_base",
+            "big_base": true
+          },
+          {
+            "name": "Sunnattilla Abdurazzoqov",
+            "tickets": 41,
+            "partial": 37,
+            "full": 4,
+            "med_close": 0.1,
+            "cost": 404465,
+            "tag": "red_flag",
+            "big_base": false
+          },
+          {
+            "name": "Husan Artikov",
+            "tickets": 37,
+            "partial": 34,
+            "full": 2,
+            "med_close": 0.1,
+            "cost": 365005,
+            "tag": "red_flag",
+            "big_base": false
+          },
+          {
+            "name": "Jasur Mukhamedjanov",
+            "tickets": 28,
+            "partial": 26,
+            "full": 3,
+            "med_close": 0.1,
+            "cost": 276220,
+            "tag": "normal",
+            "big_base": false
+          },
+          {
+            "name": "Alina Hanieva",
+            "tickets": 28,
+            "partial": 27,
+            "full": null,
+            "med_close": 0.1,
+            "cost": 276220,
+            "tag": "normal",
+            "big_base": false
+          },
+          {
+            "name": "Xasanali Ummatov",
+            "tickets": 26,
+            "partial": 25,
+            "full": 1,
+            "med_close": 0.1,
+            "cost": 256490,
+            "tag": "normal",
+            "big_base": false
+          },
+          {
+            "name": "Marfiya Shadiyeva",
+            "tickets": 25,
+            "partial": 21,
+            "full": 4,
+            "med_close": 0.1,
+            "cost": 246625,
+            "tag": "normal",
+            "big_base": false
+          },
+          {
+            "name": "Akbarali Kidiraliev",
+            "tickets": 23,
+            "partial": 21,
+            "full": 1,
+            "med_close": 0.1,
+            "cost": 226895,
+            "tag": "normal",
+            "big_base": false
+          },
+          {
+            "name": "Mukhammadaziz Koshakbayev",
+            "tickets": 19,
+            "partial": 18,
+            "full": 1,
+            "med_close": 0.1,
+            "cost": 187435,
+            "tag": "normal",
+            "big_base": false
+          },
+          {
+            "name": "Self-onboarding",
+            "tickets": 18,
+            "partial": 17,
+            "full": 1,
+            "med_close": 0.1,
+            "cost": 177570,
+            "tag": "normal",
+            "big_base": false
+          },
+          {
+            "name": "Azizjon Ibrohimov",
+            "tickets": 15,
+            "partial": 15,
+            "full": null,
+            "med_close": 0.1,
+            "cost": 147975,
+            "tag": "normal",
+            "big_base": false
+          },
+          {
+            "name": "Texnopos Partner",
+            "tickets": 15,
+            "partial": 13,
+            "full": 2,
+            "med_close": 0.1,
+            "cost": 147975,
+            "tag": "normal",
+            "big_base": false
+          },
+          {
+            "name": "Ismoil Shorahimov",
+            "tickets": 14,
+            "partial": 14,
+            "full": null,
+            "med_close": 0.1,
+            "cost": 138110,
+            "tag": "normal",
+            "big_base": false
+          },
+          {
+            "name": "Maftuna Shernazarova",
+            "tickets": 14,
+            "partial": 14,
+            "full": null,
+            "med_close": 0.1,
+            "cost": 138110,
+            "tag": "normal",
+            "big_base": false
+          },
+          {
+            "name": "Karim Serikov",
+            "tickets": 10,
+            "partial": 10,
+            "full": null,
+            "med_close": 0.1,
+            "cost": 98650,
+            "tag": "normal",
+            "big_base": false
+          },
+          {
+            "name": "Xikmatillo Baxtiyorov Partner",
+            "tickets": 10,
+            "partial": 10,
+            "full": null,
+            "med_close": 0.1,
+            "cost": 98650,
+            "tag": "normal",
+            "big_base": false
+          },
+          {
+            "name": "Parviz Khafizov Partner",
+            "tickets": 10,
+            "partial": 10,
+            "full": null,
+            "med_close": 0.2,
+            "cost": 98650,
+            "tag": "normal",
+            "big_base": false
+          },
+          {
+            "name": "Sanat Toshpulatov",
+            "tickets": 8,
+            "partial": 7,
+            "full": 1,
+            "med_close": 0.1,
+            "cost": 78920,
+            "tag": "normal",
+            "big_base": false
+          },
+          {
+            "name": "Other Partner",
+            "tickets": 6,
+            "partial": 6,
+            "full": null,
+            "med_close": 0.1,
+            "cost": 59190,
+            "tag": "normal",
+            "big_base": false
+          },
+          {
+            "name": "Saidamir Argumbaev",
+            "tickets": 5,
+            "partial": 5,
+            "full": null,
+            "med_close": 0.2,
+            "cost": 49325,
+            "tag": "normal",
+            "big_base": false
+          },
+          {
+            "name": "Naim Shokirov Partner \"RSA FRESH TECHNO GROUP\"",
+            "tickets": 4,
+            "partial": 4,
+            "full": null,
+            "med_close": 0.1,
+            "cost": 39460,
+            "tag": "normal",
+            "big_base": false
+          },
+          {
+            "name": "Санат",
+            "tickets": 4,
+            "partial": 4,
+            "full": null,
+            "med_close": 0.0,
+            "cost": 39460,
+            "tag": "normal",
+            "big_base": false
+          },
+          {
+            "name": "Наш партнер",
+            "tickets": 3,
+            "partial": 3,
+            "full": null,
+            "med_close": 0.1,
+            "cost": 29595,
+            "tag": "normal",
+            "big_base": false
+          },
+          {
+            "name": "Shoxruh Maxmud/Sunnattilla Abdurazzoqov",
+            "tickets": 3,
+            "partial": 3,
+            "full": null,
+            "med_close": 0.1,
+            "cost": 29595,
+            "tag": "normal",
+            "big_base": false
+          },
+          {
+            "name": "Списочник",
+            "tickets": 3,
+            "partial": 3,
+            "full": null,
+            "med_close": 0.1,
+            "cost": 29595,
+            "tag": "normal",
+            "big_base": false
+          },
+          {
+            "name": "Marat Mustafaev",
+            "tickets": 3,
+            "partial": 3,
+            "full": null,
+            "med_close": 0.0,
+            "cost": 29595,
+            "tag": "normal",
+            "big_base": false
+          },
+          {
+            "name": "Abdulaziz Abduganiev",
+            "tickets": 3,
+            "partial": 3,
+            "full": null,
+            "med_close": 0.0,
+            "cost": 29595,
+            "tag": "normal",
+            "big_base": false
+          },
+          {
+            "name": "Мухаммадазиз Кошакбаев",
+            "tickets": 2,
+            "partial": 1,
+            "full": 1,
+            "med_close": 0.0,
+            "cost": 19730,
+            "tag": "normal",
+            "big_base": false
+          },
+          {
+            "name": "Nursulton Javliyev  Partner \"INVEST BEST TRADE PRODUCT\"",
+            "tickets": 2,
+            "partial": 2,
+            "full": null,
+            "med_close": 0.2,
+            "cost": 19730,
+            "tag": "normal",
+            "big_base": false
+          },
+          {
+            "name": "Muxammad Aziz",
+            "tickets": 2,
+            "partial": 2,
+            "full": null,
+            "med_close": 0.3,
+            "cost": 19730,
+            "tag": "normal",
+            "big_base": false
+          },
+          {
+            "name": "В амо не указан",
+            "tickets": 2,
+            "partial": 2,
+            "full": null,
+            "med_close": 0.2,
+            "cost": 19730,
+            "tag": "normal",
+            "big_base": false
+          },
+          {
+            "name": "Sunnatilla Abdurazzoqov",
+            "tickets": 2,
+            "partial": 2,
+            "full": null,
+            "med_close": 0.1,
+            "cost": 19730,
+            "tag": "normal",
+            "big_base": false
+          },
+          {
+            "name": "Xabibullox Xudoyorov",
+            "tickets": 2,
+            "partial": 1,
+            "full": 1,
+            "med_close": 0.3,
+            "cost": 19730,
+            "tag": "normal",
+            "big_base": false
+          },
+          {
+            "name": "Bunyod Baxriddinov (Partner\"BAXORA HAYRIYA\" OK)",
+            "tickets": 2,
+            "partial": 1,
+            "full": 1,
+            "med_close": 0.1,
+            "cost": 19730,
+            "tag": "normal",
+            "big_base": false
+          },
+          {
+            "name": "Nursulton Javliyev Partner \"INVEST BEST TRADE PRODUCT\"",
+            "tickets": 2,
+            "partial": 1,
+            "full": 1,
+            "med_close": 0.1,
+            "cost": 19730,
+            "tag": "normal",
+            "big_base": false
+          },
+          {
+            "name": "Наш чел",
+            "tickets": 2,
+            "partial": 2,
+            "full": null,
+            "med_close": 0.1,
+            "cost": 19730,
+            "tag": "normal",
+            "big_base": false
+          },
+          {
+            "name": "Bobur Abdukakhkharov Partner",
+            "tickets": 1,
+            "partial": 1,
+            "full": null,
+            "med_close": 0.0,
+            "cost": 9865,
+            "tag": "normal",
+            "big_base": false
+          },
+          {
+            "name": "Boburjon Karabayev Partner",
+            "tickets": 1,
+            "partial": 1,
+            "full": null,
+            "med_close": 0.1,
+            "cost": 9865,
+            "tag": "normal",
+            "big_base": false
+          },
+          {
+            "name": "Alina Hanieva / Shoxruh Maxmud",
+            "tickets": 1,
+            "partial": 1,
+            "full": null,
+            "med_close": 0.0,
+            "cost": 9865,
+            "tag": "normal",
+            "big_base": false
+          },
+          {
+            "name": "Alisher Azimov Partner (YTT TILYABAYEVA SITORAXON G'ULOMQODIR QI)",
+            "tickets": 1,
+            "partial": 1,
+            "full": null,
+            "med_close": 0.0,
+            "cost": 9865,
+            "tag": "normal",
+            "big_base": false
+          },
+          {
+            "name": "Abdurauf Bobodjonov Partner",
+            "tickets": 1,
+            "partial": 1,
+            "full": null,
+            "med_close": 0.2,
+            "cost": 9865,
+            "tag": "normal",
+            "big_base": false
+          },
+          {
+            "name": "Baxtiyorov Xikmatillo Partner",
+            "tickets": 1,
+            "partial": 1,
+            "full": null,
+            "med_close": 0.1,
+            "cost": 9865,
+            "tag": "normal",
+            "big_base": false
+          },
+          {
+            "name": "Maftuna Shernazarova / Sunnattilla Abdurazzoqov",
+            "tickets": 1,
+            "partial": 1,
+            "full": null,
+            "med_close": 0.0,
+            "cost": 9865,
+            "tag": "normal",
+            "big_base": false
+          },
+          {
+            "name": "Shoxrux Mahmud",
+            "tickets": 1,
+            "partial": 1,
+            "full": null,
+            "med_close": 0.0,
+            "cost": 9865,
+            "tag": "normal",
+            "big_base": false
+          },
+          {
+            "name": "Shoxruh Pirmukhametov",
+            "tickets": 1,
+            "partial": 1,
+            "full": null,
+            "med_close": 0.4,
+            "cost": 9865,
+            "tag": "normal",
+            "big_base": false
+          },
+          {
+            "name": "Saidorif Muzaffarov Partner",
+            "tickets": 1,
+            "partial": null,
+            "full": null,
+            "med_close": 0.0,
+            "cost": 9865,
+            "tag": "normal",
+            "big_base": false
+          },
+          {
+            "name": "Self-onboarding/Alina Hanieva",
+            "tickets": 1,
+            "partial": 1,
+            "full": null,
+            "med_close": 0.1,
+            "cost": 9865,
+            "tag": "normal",
+            "big_base": false
+          },
+          {
+            "name": "Nursultan Javliyev Kashkadarya",
+            "tickets": 1,
+            "partial": 1,
+            "full": null,
+            "med_close": 0.2,
+            "cost": 9865,
+            "tag": "normal",
+            "big_base": false
+          },
+          {
+            "name": "Nozimjon Axunjanov Namangan",
+            "tickets": 1,
+            "partial": 1,
+            "full": null,
+            "med_close": 0.1,
+            "cost": 9865,
+            "tag": "normal",
+            "big_base": false
+          },
+          {
+            "name": "Maftuna Shernazarova / Abdulaziz Abduganiev",
+            "tickets": 1,
+            "partial": 1,
+            "full": null,
+            "med_close": 0.0,
+            "cost": 9865,
+            "tag": "normal",
+            "big_base": false
+          },
+          {
+            "name": "Marufhon Bahodirhonov Partner",
+            "tickets": 1,
+            "partial": 1,
+            "full": null,
+            "med_close": 0.2,
+            "cost": 9865,
+            "tag": "normal",
+            "big_base": false
+          },
+          {
+            "name": "Marfiya Shadieva",
+            "tickets": 1,
+            "partial": 1,
+            "full": null,
+            "med_close": 0.3,
+            "cost": 9865,
+            "tag": "normal",
+            "big_base": false
+          },
+          {
+            "name": "Dilshod Yunusov",
+            "tickets": 1,
+            "partial": 1,
+            "full": null,
+            "med_close": 0.1,
+            "cost": 9865,
+            "tag": "normal",
+            "big_base": false
+          },
+          {
+            "name": "Ibrohim Ismatullaev",
+            "tickets": 1,
+            "partial": 1,
+            "full": null,
+            "med_close": 0.1,
+            "cost": 9865,
+            "tag": "normal",
+            "big_base": false
+          },
+          {
+            "name": "Burhan Ergashev Partner",
+            "tickets": 1,
+            "partial": null,
+            "full": 1,
+            "med_close": 0.0,
+            "cost": 9865,
+            "tag": "normal",
+            "big_base": false
+          },
+          {
+            "name": "КС",
+            "tickets": 1,
+            "partial": null,
+            "full": 1,
+            "med_close": null,
+            "cost": 9865,
+            "tag": "normal",
+            "big_base": false
+          },
+          {
+            "name": "Ulugbek Salimov Partner (Nasimjon Mobile)",
+            "tickets": 1,
+            "partial": 1,
+            "full": null,
+            "med_close": 0.0,
+            "cost": 9865,
+            "tag": "normal",
+            "big_base": false
+          },
+          {
+            "name": "Support manager Sunnattilla Abdurazzoqov",
+            "tickets": 1,
+            "partial": 1,
+            "full": null,
+            "med_close": 1.6,
+            "cost": 9865,
+            "tag": "normal",
+            "big_base": false
+          },
+          {
+            "name": "Support manager Xasanali Ummatov",
+            "tickets": 1,
+            "partial": 1,
+            "full": null,
+            "med_close": 0.1,
+            "cost": 9865,
+            "tag": "normal",
+            "big_base": false
+          },
+          {
+            "name": "Ксника нет",
+            "tickets": 1,
+            "partial": 1,
+            "full": null,
+            "med_close": 0.1,
+            "cost": 9865,
+            "tag": "normal",
+            "big_base": false
+          },
+          {
+            "name": "Мирамир АЕ",
+            "tickets": 1,
+            "partial": 1,
+            "full": null,
+            "med_close": 0.0,
+            "cost": 9865,
+            "tag": "normal",
+            "big_base": false
+          },
+          {
+            "name": "Исмоил",
+            "tickets": 1,
+            "partial": 1,
+            "full": null,
+            "med_close": 0.0,
+            "cost": 9865,
+            "tag": "normal",
+            "big_base": false
+          },
+          {
+            "name": "Наш списочник",
+            "tickets": 1,
+            "partial": 1,
+            "full": null,
+            "med_close": 0.1,
+            "cost": 9865,
+            "tag": "normal",
+            "big_base": false
+          },
+          {
+            "name": "Не указан.",
+            "tickets": 1,
+            "partial": 1,
+            "full": null,
+            "med_close": 0.0,
+            "cost": 9865,
+            "tag": "normal",
+            "big_base": false
+          },
+          {
+            "name": "Нет КСника в админке",
+            "tickets": 1,
+            "partial": 1,
+            "full": null,
+            "med_close": 0.0,
+            "cost": 9865,
+            "tag": "normal",
+            "big_base": false
+          },
+          {
+            "name": "Наша челиха",
+            "tickets": 1,
+            "partial": 1,
+            "full": null,
+            "med_close": 1.9,
+            "cost": 9865,
+            "tag": "normal",
+            "big_base": false
+          },
+          {
+            "name": "Не указан в админке",
+            "tickets": 1,
+            "partial": 1,
+            "full": null,
+            "med_close": 0.0,
+            "cost": 9865,
+            "tag": "normal",
+            "big_base": false
+          },
+          {
+            "name": "Нукус технопос",
+            "tickets": 1,
+            "partial": 1,
+            "full": null,
+            "med_close": 0.0,
+            "cost": 9865,
+            "tag": "normal",
+            "big_base": false
+          },
+          {
+            "name": "Нет указан в Админке",
+            "tickets": 1,
+            "partial": 1,
+            "full": null,
+            "med_close": 0.1,
+            "cost": 9865,
+            "tag": "normal",
+            "big_base": false
+          },
+          {
+            "name": "Партнер",
+            "tickets": 1,
+            "partial": 1,
+            "full": null,
+            "med_close": 0.0,
+            "cost": 9865,
+            "tag": "normal",
+            "big_base": false
+          },
+          {
+            "name": "ПАРТНЁР",
+            "tickets": 1,
+            "partial": 1,
+            "full": null,
+            "med_close": 0.1,
+            "cost": 9865,
+            "tag": "normal",
+            "big_base": false
+          },
+          {
+            "name": "Хасанаали Умматов",
+            "tickets": 1,
+            "partial": 1,
+            "full": 1,
+            "med_close": 0.5,
+            "cost": 9865,
+            "tag": "normal",
+            "big_base": false
+          },
+          {
+            "name": "Хасанали Умматов",
+            "tickets": 1,
+            "partial": null,
+            "full": 1,
+            "med_close": 0.1,
+            "cost": 9865,
+            "tag": "normal",
+            "big_base": false
+          },
+          {
+            "name": "наш партнер",
+            "tickets": 1,
+            "partial": 1,
+            "full": null,
+            "med_close": 0.1,
+            "cost": 9865,
+            "tag": "normal",
+            "big_base": false
+          },
+          {
+            "name": "наш чел",
+            "tickets": 1,
+            "partial": 1,
+            "full": null,
+            "med_close": 0.0,
+            "cost": 9865,
+            "tag": "normal",
+            "big_base": false
+          }
+        ],
+        "top_labels": [
+          {
+            "label": "Инвентаризация — консультация по модулю (частичное обучение)",
+            "tickets": 102,
+            "cost": 1006230
+          },
+          {
+            "label": "Отчёты - Частичное обучение",
+            "tickets": 40,
+            "cost": 394600
+          },
+          {
+            "label": "Финансы - Частичное обучение",
+            "tickets": 40,
+            "cost": 394600
+          },
+          {
+            "label": "Трансфер - консультация по модулю (частичное обучение)",
+            "tickets": 39,
+            "cost": 384735
+          },
+          {
+            "label": "Заказы — консультация по модулю (частичное обучение)",
+            "tickets": 25,
+            "cost": 246625
+          },
+          {
+            "label": "Долги клиентов - Частичное обучение",
+            "tickets": 24,
+            "cost": 236760
+          },
+          {
+            "label": "Импорт — консультация по импорту (частичное обучение)",
+            "tickets": 24,
+            "cost": 236760
+          },
+          {
+            "label": "Все продажи - Частичное обучение",
+            "tickets": 13,
+            "cost": 128245
+          },
+          {
+            "label": "Списание - частичное обучение",
+            "tickets": 13,
+            "cost": 128245
+          },
+          {
+            "label": "Инвентаризация — консультация по модулю (полное обучение)",
+            "tickets": 13,
+            "cost": 128245
+          }
+        ],
         "repeat_connection": [],
         "by_store": [],
         "by_store_ks": [],
         "stores_count": 4165,
         "users_count": 36963,
-        "tpc": 0.137,
-        "tpu": 0.0154,
-        "train_tpc": 0.137,
-        "avg_call_min": 14.5,
+        "tpc": 0.1371,
+        "tpu": 0.01545,
+        "train_tpc": 0.1371,
+        "avg_call_min": 0.1,
         "insights": [],
-        "chat_share_history": []
+        "chat_share_history": [
+          {
+            "week": "Нед 10 2–8 марта",
+            "chats_pct": 48.8,
+            "lcr_5sec": 5.5
+          },
+          {
+            "week": "Нед 11 9–15 марта",
+            "chats_pct": 50.7,
+            "lcr_5sec": 5.5
+          },
+          {
+            "week": "Нед 12 16–22 марта",
+            "chats_pct": 51.0,
+            "lcr_5sec": 5.5
+          },
+          {
+            "week": "Нед 13 23–29 марта",
+            "chats_pct": 46.1,
+            "lcr_5sec": 5.5
+          },
+          {
+            "week": "Нед 14 30–31 марта",
+            "chats_pct": 47.3,
+            "lcr_5sec": 5.5
+          },
+          {
+            "week": "Нед 9 1 марта",
+            "chats_pct": 47.5,
+            "lcr_5sec": 5.5
+          }
+        ]
       }
     },
     "may": {
@@ -42563,52 +43432,70 @@ const BILLZ_DATA = {
         "operators_count": 11,
         "sla_note": "",
         "sla_source": "omnidesk",
-        "team_changes": [],
+        "team_changes": [
+          "Команда: 11 операторов после увольнений в апреле",
+          "Уволенные перекрывали вечерний пик 17:00–22:00",
+          "2 новых оператора выходят 05.05",
+          "Заявка в HR на ещё 1-2 кандидатов"
+        ],
         "team_context": "",
         "tickets_per_day_avg": 0,
         "tickets_plan": 0,
-        "chat_causes": []
+        "chat_causes": [
+          {
+            "label": "Дефицит команды",
+            "desc": "11 операторов вместо 13-14 необходимых"
+          },
+          {
+            "label": "Долгие звонки 20+ мин",
+            "desc": "12 длинных кейсов за 4 дня блокировали линию"
+          },
+          {
+            "label": "Системные темы CS",
+            "desc": "Оплата, входы, ссылки — повторяются ежедневно"
+          }
+        ]
       },
       "weekly": {
         "week_18": {
           "label": "Нед 18 · 1–3 мая (часть)",
-          "tickets": 1395,
-          "calls": 0,
-          "chats": 0,
-          "desired": 0,
-          "undesired": 0,
-          "closed": 0,
+          "tickets": 1268,
+          "calls": 653,
+          "chats": 615,
+          "desired": 598,
+          "undesired": 670,
+          "closed": 1268,
           "open": 0,
-          "sla_pct": 80,
-          "sla_not_met": 20,
+          "sla_pct": 80.7,
+          "sla_not_met": 19.3,
           "afrt": "48с",
           "afrt_raw": 0.79,
-          "csat_pct": 92,
-          "csat_rated": 75,
-          "repeat_pct": 8.3,
-          "cost": 0,
+          "csat_pct": 97.2,
+          "csat_rated": 91,
+          "repeat_pct": 8.4,
+          "cost": 12508820,
           "lcr": 9.97,
           "operators": [],
           "top_labels": [],
           "top_companies": []
         },
         "week_19": {
-          "label": "Нед 19 · 4–10 мая (часть)",
-          "tickets": 472,
-          "calls": 0,
-          "chats": 0,
-          "desired": 0,
-          "undesired": 0,
-          "closed": 0,
+          "label": "Нед 19 · 4 мая (часть)",
+          "tickets": 437,
+          "calls": 260,
+          "chats": 177,
+          "desired": 263,
+          "undesired": 174,
+          "closed": 437,
           "open": 0,
-          "sla_pct": 82,
-          "sla_not_met": 18,
+          "sla_pct": 81.6,
+          "sla_not_met": 18.4,
           "afrt": "48с",
           "afrt_raw": 0.79,
-          "csat_pct": 92,
-          "csat_rated": 25,
-          "repeat_pct": 8.3,
-          "cost": 0,
+          "csat_pct": 95.7,
+          "csat_rated": 23,
+          "repeat_pct": 10.8,
+          "cost": 4311005,
           "lcr": 5.1,
           "operators": [],
           "top_labels": [],
@@ -43792,25 +44679,336 @@ const BILLZ_DATA = {
       },
       "cs": {
         "period": "Май 2026 · 1-4 мая",
-        "total_train_tickets": 62,
-        "total_train_cost": 611630,
-        "partial_tickets": 52,
-        "full_tickets": 10,
-        "avg_med_close_min": 12.0,
-        "by_month": [],
-        "by_ks_manager": [],
-        "top_labels": [],
+        "total_train_tickets": 60,
+        "total_train_cost": 591900,
+        "partial_tickets": 59,
+        "full_tickets": 1,
+        "avg_med_close_min": 0.1,
+        "by_month": [
+          {
+            "month": "Май (1-4)",
+            "tickets": 60,
+            "cost": 591900,
+            "partial": 59,
+            "full": 1
+          }
+        ],
+        "by_ks_manager": [
+          {
+            "name": "Jasur Mukhamedjanov",
+            "tickets": 5,
+            "partial": 5,
+            "full": null,
+            "med_close": 0.8,
+            "cost": 49325,
+            "tag": "normal",
+            "big_base": false
+          },
+          {
+            "name": "Karim Serikov",
+            "tickets": 4,
+            "partial": 4,
+            "full": null,
+            "med_close": 0.1,
+            "cost": 39460,
+            "tag": "normal",
+            "big_base": false
+          },
+          {
+            "name": "Shoxruh Maxmud",
+            "tickets": 4,
+            "partial": 4,
+            "full": null,
+            "med_close": 0.0,
+            "cost": 39460,
+            "tag": "big_base",
+            "big_base": true
+          },
+          {
+            "name": "Marfiya Shadiyeva",
+            "tickets": 4,
+            "partial": 4,
+            "full": null,
+            "med_close": 0.1,
+            "cost": 39460,
+            "tag": "normal",
+            "big_base": false
+          },
+          {
+            "name": "Husan Artikov",
+            "tickets": 3,
+            "partial": 3,
+            "full": null,
+            "med_close": 0.1,
+            "cost": 29595,
+            "tag": "normal",
+            "big_base": false
+          },
+          {
+            "name": "Sunnattilla Abdurazzoqov",
+            "tickets": 3,
+            "partial": 3,
+            "full": null,
+            "med_close": 0.4,
+            "cost": 29595,
+            "tag": "normal",
+            "big_base": false
+          },
+          {
+            "name": "Maftuna Shernazarova",
+            "tickets": 2,
+            "partial": 2,
+            "full": null,
+            "med_close": 0.2,
+            "cost": 19730,
+            "tag": "normal",
+            "big_base": false
+          },
+          {
+            "name": "Baxtiyor Kasimov",
+            "tickets": 2,
+            "partial": 2,
+            "full": null,
+            "med_close": 0.4,
+            "cost": 19730,
+            "tag": "big_base",
+            "big_base": true
+          },
+          {
+            "name": "Xasanali Ummatov",
+            "tickets": 2,
+            "partial": 2,
+            "full": null,
+            "med_close": 0.0,
+            "cost": 19730,
+            "tag": "normal",
+            "big_base": false
+          },
+          {
+            "name": "Не указан в админке",
+            "tickets": 2,
+            "partial": 2,
+            "full": null,
+            "med_close": 0.1,
+            "cost": 19730,
+            "tag": "normal",
+            "big_base": false
+          },
+          {
+            "name": "Parviz Khafizov Partner",
+            "tickets": 2,
+            "partial": 1,
+            "full": 1,
+            "med_close": 0.6,
+            "cost": 19730,
+            "tag": "normal",
+            "big_base": false
+          },
+          {
+            "name": "Other Partner",
+            "tickets": 2,
+            "partial": 2,
+            "full": null,
+            "med_close": 0.1,
+            "cost": 19730,
+            "tag": "normal",
+            "big_base": false
+          },
+          {
+            "name": "Ismoil Shorahimov",
+            "tickets": 1,
+            "partial": 1,
+            "full": null,
+            "med_close": 0.1,
+            "cost": 9865,
+            "tag": "normal",
+            "big_base": false
+          },
+          {
+            "name": "Abdulaziz Abduganiev",
+            "tickets": 1,
+            "partial": 1,
+            "full": null,
+            "med_close": 0.2,
+            "cost": 9865,
+            "tag": "normal",
+            "big_base": false
+          },
+          {
+            "name": "Akbarali Kidiraliev",
+            "tickets": 1,
+            "partial": 1,
+            "full": null,
+            "med_close": 0.2,
+            "cost": 9865,
+            "tag": "normal",
+            "big_base": false
+          },
+          {
+            "name": "Marat Mustafaev",
+            "tickets": 1,
+            "partial": 1,
+            "full": null,
+            "med_close": 0.4,
+            "cost": 9865,
+            "tag": "normal",
+            "big_base": false
+          },
+          {
+            "name": "Sanat Toshpulatov",
+            "tickets": 1,
+            "partial": 1,
+            "full": null,
+            "med_close": 0.0,
+            "cost": 9865,
+            "tag": "normal",
+            "big_base": false
+          },
+          {
+            "name": "Robiya Alisherova",
+            "tickets": 1,
+            "partial": 1,
+            "full": null,
+            "med_close": 1.4,
+            "cost": 9865,
+            "tag": "normal",
+            "big_base": false
+          },
+          {
+            "name": "Marufhon Bahodirhonov Partner",
+            "tickets": 1,
+            "partial": 1,
+            "full": null,
+            "med_close": 0.1,
+            "cost": 9865,
+            "tag": "normal",
+            "big_base": false
+          },
+          {
+            "name": "Mukhammadaziz Koshakbayev",
+            "tickets": 1,
+            "partial": 1,
+            "full": null,
+            "med_close": 0.0,
+            "cost": 9865,
+            "tag": "normal",
+            "big_base": false
+          },
+          {
+            "name": "Sarvar Salixov",
+            "tickets": 1,
+            "partial": 1,
+            "full": null,
+            "med_close": 0.1,
+            "cost": 9865,
+            "tag": "normal",
+            "big_base": false
+          },
+          {
+            "name": "Self-onboarding",
+            "tickets": 1,
+            "partial": 1,
+            "full": null,
+            "med_close": 0.1,
+            "cost": 9865,
+            "tag": "normal",
+            "big_base": false
+          },
+          {
+            "name": "Umedjon Kosimov Partner",
+            "tickets": 1,
+            "partial": 1,
+            "full": null,
+            "med_close": 0.0,
+            "cost": 9865,
+            "tag": "normal",
+            "big_base": false
+          },
+          {
+            "name": "texnopos",
+            "tickets": 1,
+            "partial": 1,
+            "full": null,
+            "med_close": 1.7,
+            "cost": 9865,
+            "tag": "normal",
+            "big_base": false
+          }
+        ],
+        "top_labels": [
+          {
+            "label": "Инвентаризация — консультация по модулю (частичное обучение)",
+            "tickets": 10,
+            "cost": 98650
+          },
+          {
+            "label": "Импорт — консультация по импорту (частичное обучение)",
+            "tickets": 8,
+            "cost": 78920
+          },
+          {
+            "label": "Трансфер - консультация по модулю (частичное обучение)",
+            "tickets": 7,
+            "cost": 69055
+          },
+          {
+            "label": "Отчёты - Частичное обучение",
+            "tickets": 6,
+            "cost": 59190
+          },
+          {
+            "label": "Заказы — консультация по модулю (частичное обучение)",
+            "tickets": 4,
+            "cost": 39460
+          },
+          {
+            "label": "Финансы - Частичное обучение",
+            "tickets": 3,
+            "cost": 29595
+          },
+          {
+            "label": "Долги клиентов - Частичное обучение",
+            "tickets": 2,
+            "cost": 19730
+          },
+          {
+            "label": "Списание - частичное обучение",
+            "tickets": 2,
+            "cost": 19730
+          },
+          {
+            "label": "Списание - частичное обучение, Реквест (внутренний запрос, выгрузка данных)",
+            "tickets": 1,
+            "cost": 9865
+          },
+          {
+            "label": "Настройка - Создание/Редактирование/Удаление доп. точки, Трансфер - консультация по модулю (полное обучение), Реквест (внутренний запрос, выгрузка данных)",
+            "tickets": 1,
+            "cost": 9865
+          }
+        ],
         "repeat_connection": [],
         "by_store": [],
         "by_store_ks": [],
         "stores_count": 4165,
         "users_count": 36963,
-        "tpc": 0.015,
-        "tpu": 0.0017,
-        "train_tpc": 0.015,
-        "avg_call_min": 12.0,
+        "tpc": 0.01441,
+        "tpu": 0.001623,
+        "train_tpc": 0.01441,
+        "avg_call_min": 0.1,
         "insights": [],
-        "chat_share_history": [],
+        "chat_share_history": [
+          {
+            "week": "Нед 18",
+            "chats_pct": 48.5,
+            "lcr_5sec": 9.97
+          },
+          {
+            "week": "Нед 19",
+            "chats_pct": 40.5,
+            "lcr_5sec": 5.1
+          }
+        ],
         "note": "Данные за 1–4 мая. Полная статистика будет по итогам месяца."
       }
     }

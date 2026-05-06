@@ -175,6 +175,140 @@ function buildMonthSwitcher() {
   }
 }
 
+
+/* ── Update page headers/labels based on selected month ─────────────────── */
+function updatePageHeaders() {
+  if (typeof BILLZ_DATA === 'undefined') return;
+  const selected = BILLZ_DATA._selectedMonth || 'apr';
+  const label = BILLZ_DATA._monthLabel || 'Апрель 2026';
+  const hasData = BILLZ_DATA._monthHasData !== false;
+  
+  const monthNames = {
+    'mar': {ru: 'Март', short:'Март 2026', period: '01–31 марта 2026', genitive:'марта'},
+    'apr': {ru: 'Апрель', short:'Апрель 2026', period: '01–30 апреля 2026', genitive:'апреля'},
+    'may': {ru: 'Май', short:'Май 2026', period: '1–4 мая 2026', genitive:'мая'},
+  };
+  const mn = monthNames[selected] || monthNames['apr'];
+  
+  // 1) Main page title (#phTitle) — always update
+  const phTitle = document.getElementById('phTitle');
+  if (phTitle) {
+    // Preserve format like "Апрель <em>2026</em>" or "Операторы <em>· Апрель 2026</em>"
+    phTitle.innerHTML = phTitle.innerHTML
+      .replace(/Апрель/g, mn.ru)
+      .replace(/Март/g, mn.ru)
+      .replace(/Май/g, mn.ru);
+  }
+
+  // 2) All [data-month-label] spans — direct text replacement
+  document.querySelectorAll('[data-month-label]').forEach(el => {
+    el.textContent = mn.short;
+  });
+
+  // 3) [data-cs-period] spans for CS page
+  document.querySelectorAll('[data-cs-period]').forEach(el => {
+    el.textContent = mn.short;
+  });
+
+  // 4) #phSub
+  const phSub = document.getElementById('phSub');
+  if (phSub) phSub.textContent = mn.period;
+
+  // 5) Live indicator at top right
+  const live = document.querySelector('.live');
+  if (live) {
+    live.innerHTML = `<span class="live-dot"></span>период: ${mn.period}`;
+  }
+
+  // 6) Walk through static section titles and update April → current month
+  document.querySelectorAll('.sec-title, .ct, .card-title, .phdr-eyebrow').forEach(el => {
+    if (!el.textContent) return;
+    const orig = el.textContent;
+    let updated = orig
+      .replace(/АПРЕЛЬ 2026/g, `${mn.ru.toUpperCase()} 2026`)
+      .replace(/Апрель 2026/g, mn.short)
+      .replace(/апрель 2026/gi, mn.short)
+      .replace(/АПРЕЛЯ/g, mn.ru.toUpperCase()+'А')  // not perfect but ok
+      .replace(/апреля/g, mn.genitive);
+    if (updated !== orig) el.textContent = updated;
+  });
+
+  // 7) Replace hardcoded "Апрель" in plain text nodes (last resort) for elements we missed
+  document.querySelectorAll('.tabs-list span, .tabs span, button').forEach(el => {
+    if (!el.textContent) return;
+    if (el.textContent.includes('Апрель 2026') || el.textContent.includes('· Апрель')) {
+      el.textContent = el.textContent
+        .replace(/Апрель 2026/g, mn.short)
+        .replace(/· Апрель/g, '· ' + mn.ru);
+    }
+  });
+}
+
+/* ── Show "no data" placeholder for empty pages ─────────────────────────── */
+function showNoDataPlaceholder() {
+  if (typeof BILLZ_DATA === 'undefined') return;
+  const selected = BILLZ_DATA._selectedMonth || 'apr';
+  if (selected === 'apr') return; // April has full data
+  
+  // Check if current page is week/cs and the data is missing/empty
+  const path = window.location.pathname;
+  const monthData = BILLZ_DATA.months[selected];
+  if (!monthData) return;
+  
+  // For weekly page - check if weekly has any data
+  if (path.includes('weekly')) {
+    const wk = monthData.weekly || {};
+    const hasWeeks = Object.keys(wk).some(k => wk[k].tickets > 0);
+    if (!hasWeeks) injectNoDataBanner('еженедельная статистика', selected);
+  }
+  
+  // For cs page - check cs data
+  if (path.includes('cs.html')) {
+    const cs = monthData.cs || {};
+    if (!cs.total_train_tickets || cs.total_train_tickets === 0) {
+      injectNoDataBanner('CS-аналитика', selected);
+    }
+  }
+}
+
+function injectNoDataBanner(sectionName, month) {
+  const monthLabels = {'mar':'Март','apr':'Апрель','may':'Май'};
+  const wrap = document.querySelector('.wrap') || document.querySelector('main') || document.body;
+  if (!wrap || document.getElementById('noDataPageBanner')) return;
+  const banner = document.createElement('div');
+  banner.id = 'noDataPageBanner';
+  banner.style.cssText = `margin:14px 0;padding:18px 22px;
+    background:linear-gradient(90deg,rgba(245,158,11,0.10),rgba(245,158,11,0.04));
+    border:1px solid rgba(245,158,11,0.3);border-left:3px solid #F59E0B;
+    border-radius:10px;color:#FCD34D;font-size:12px;font-weight:600;`;
+  banner.innerHTML = `<div style="display:flex;align-items:center;gap:14px">
+    <span style="font-size:24px">⏳</span>
+    <div>
+      <div style="font-size:14px;font-weight:700;color:#FBBF24;margin-bottom:4px">
+        ${sectionName} за ${monthLabels[month]} 2026 пока недоступна
+      </div>
+      <div style="font-size:11px;color:#FCD34D;font-weight:500;line-height:1.55">
+        ${month==='may' ? 'Данные за май пока за 1–4 мая (частично). Полная еженедельная и CS-аналитика появится по итогам месяца.' : 'Загрузите CSV-выгрузку или CS-отчёт за этот период, и я обновлю эту страницу.'}
+      </div>
+    </div>
+  </div>`;
+  // Insert after first visible header
+  const firstHeader = wrap.querySelector('.phdr, .sec, h1');
+  if (firstHeader && firstHeader.parentElement === wrap) {
+    firstHeader.insertAdjacentElement('afterend', banner);
+  } else {
+    wrap.insertBefore(banner, wrap.firstChild);
+  }
+}
+
+// Run after switcher is built
+const _origBuildSwitcher = buildMonthSwitcher;
+buildMonthSwitcher = function() {
+  _origBuildSwitcher();
+  updatePageHeaders();
+  showNoDataPlaceholder();
+};
+
 // Auto-init on DOM ready
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', buildMonthSwitcher);

@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>BILLZ CC · Customer Success Анализ</title>
-<link rel="stylesheet" href="shared.css?v=24">
+<link rel="stylesheet" href="shared.css?v=26">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 <script src="data.js"></script>
-<script src="shared.js?v=24"></script>
+<script src="shared.js?v=26"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 <style>
 .cs-insight{background:rgba(124,58,237,0.07);border:1px solid rgba(124,58,237,0.22);border-radius:10px;padding:16px 18px;display:flex;gap:14px;align-items:flex-start;margin-bottom:8px;transition:border-color .2s}
@@ -96,6 +96,7 @@
   <a href="cs.html" class="nav-link active">CS Анализ</a>
   <a href="daily.html" class="nav-link">Ежедневно</a>
   <a href="operators.html" class="nav-link">Операторы</a>
+  <a href="trends.html" class="nav-link">Динамика</a>
   <div class="nav-right" style="display:flex;align-items:center;gap:6px;margin-left:auto">
     <span id="navPeriod" style="font-size:12px;font-weight:600;color:var(--t2);padding-right:10px"></span>
     <button onclick="exportPagePNG('.wrap','billz-cs')" id="pngBtn"
@@ -117,7 +118,7 @@
     <div>
       <div class="phdr-eyebrow">BILLZ · CC Intelligence · Customer Success — Анализ обучений</div>
       <div class="phdr-title">CS <em>Обучения</em></div>
-      <div class="phdr-sub">Январь–Апрель 2026 · Обращения по обучению клиентов через CC</div>
+      <div class="phdr-sub"><span class="month-text" data-cs-period>Январь–Апрель 2026</span> · Обращения по обучению клиентов через CC</div>
       <div class="phdr-pills">
         <span class="pill a" id="pill-tickets"></span>
         <span class="pill" style="color:#F87171;border-color:rgba(239,68,68,0.3)" id="pill-cost"></span>
@@ -383,7 +384,7 @@ document.getElementById('repeatBlock').innerHTML = `
     <span><span class="b ${r.cs_related?'ok':''}">${r.cs_related?'🎓 Онбординг CS':'⚙️ CC / Тех.'}</span></span>
   </div>`).join('')}`;
 
-document.getElementById('conclusionsGrid').innerHTML = `
+(document.getElementById('conclusionsGrid')||{}).innerHTML = `
   <div class="alert rose"><div class="alert-num">❌</div><div>
     <div class="al-label">Обучение — не задача CC · 21.9 млн сўм</div>
     <div class="al-txt">2 217 тикетов на обучения — это работа Customer Success. За 4 месяца это около 500 часов работы операторов CC, которые должны заниматься поддержкой. Каждый тикет-обучение в среднем занимает 13.5 минут реального звонка.</div>

@@ -30956,7 +30956,8 @@ const BILLZ_DATA = {
                 }
               ]
             }
-          ]
+          ],
+          "week_num": 9
         },
         "week_10": {
           "label": "Нед 10 · 2–8 марта",
@@ -31262,7 +31263,8 @@ const BILLZ_DATA = {
                 }
               ]
             }
-          ]
+          ],
+          "week_num": 10
         },
         "week_11": {
           "label": "Нед 11 · 9–15 марта",
@@ -31568,7 +31570,8 @@ const BILLZ_DATA = {
                 }
               ]
             }
-          ]
+          ],
+          "week_num": 11
         },
         "week_12": {
           "label": "Нед 12 · 16–22 марта",
@@ -31884,7 +31887,8 @@ const BILLZ_DATA = {
                 }
               ]
             }
-          ]
+          ],
+          "week_num": 12
         },
         "week_13": {
           "label": "Нед 13 · 23–29 марта",
@@ -32200,7 +32204,8 @@ const BILLZ_DATA = {
                 }
               ]
             }
-          ]
+          ],
+          "week_num": 13
         },
         "week_14": {
           "label": "Нед 14 · 30–31 марта",
@@ -32506,7 +32511,8 @@ const BILLZ_DATA = {
                 }
               ]
             }
-          ]
+          ],
+          "week_num": 14
         }
       },
       "daily": {
@@ -43506,7 +43512,8 @@ const BILLZ_DATA = {
             }
           ],
           "top_labels": [],
-          "top_companies": []
+          "top_companies": [],
+          "week_num": 18
         },
         "week_19": {
           "label": "Нед 19 · 4–10 мая",
@@ -43649,7 +43656,8 @@ const BILLZ_DATA = {
             }
           ],
           "top_labels": [],
-          "top_companies": []
+          "top_companies": [],
+          "week_num": 19
         },
         "week_20": {
           "label": "Нед 20 · 11 мая (часть)",
@@ -43772,7 +43780,8 @@ const BILLZ_DATA = {
             }
           ],
           "top_labels": [],
-          "top_companies": []
+          "top_companies": [],
+          "week_num": 20
         }
       },
       "daily": {

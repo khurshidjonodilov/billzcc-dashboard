@@ -4,11 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>BILLZ CC · Ежедневно</title>
-<link rel="stylesheet" href="shared.css?v=31">
+<link rel="stylesheet" href="shared.css?v=32">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 <script src="data.js"></script>
-<script src="shared.js?v=31"></script>
+<script src="shared.js?v=32"></script>
 <style>
 .formula-bar {
   margin-top: 12px !important;
@@ -415,7 +415,31 @@ function render() {
   /* Insights */
   const ins = DK.insights;
   const insSection = document.getElementById('insightsSection');
-  if (ins && ins.summary) {
+  // Handle both legacy object format AND array format (insights/conclusions/peaks)
+  const insArr = Array.isArray(ins) ? ins : null;
+  const conclArr = Array.isArray(DK.conclusions) ? DK.conclusions : null;
+  const peaksArr = Array.isArray(DK.peaks) ? DK.peaks : null;
+  const hasArrayData = (insArr && insArr.length) || (conclArr && conclArr.length) || (peaksArr && peaksArr.length);
+  
+  if (hasArrayData) {
+    insSection.style.display = '';
+    document.getElementById('insightsCard').innerHTML = `
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+        <div>
+          <div style="font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--text4);margin-bottom:8px">💡 Инсайты дня</div>
+          ${insArr && insArr.length ? insArr.map(s => `<div style="font-size:12px;color:var(--text2);line-height:1.55;margin-bottom:6px;padding-left:12px;border-left:2px solid rgba(59,130,246,0.4)">${s}</div>`).join('') : '<div style="font-size:11px;color:var(--text4)">—</div>'}
+        </div>
+        <div>
+          <div style="font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--text4);margin-bottom:8px">✅ Выводы</div>
+          ${conclArr && conclArr.length ? conclArr.map(s => `<div style="font-size:12px;color:var(--text2);line-height:1.55;margin-bottom:6px;padding-left:12px;border-left:2px solid rgba(16,185,129,0.4)">${s}</div>`).join('') : '<div style="font-size:11px;color:var(--text4)">—</div>'}
+        </div>
+      </div>
+      ${peaksArr && peaksArr.length ? `<div style="margin-top:14px;padding-top:12px;border-top:1px solid rgba(255,255,255,0.05)">
+        <div style="font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--text4);margin-bottom:8px">⚡ Пики дня</div>
+        <div style="display:flex;flex-wrap:wrap;gap:6px">${peaksArr.map(h=>`<span style="font-size:11px;padding:4px 10px;background:rgba(245,158,11,0.10);color:#FCD34D;border:1px solid rgba(245,158,11,0.25);border-radius:5px">${h}</span>`).join('')}</div>
+      </div>` : ''}
+    `;
+  } else if (ins && ins.summary) {
     insSection.style.display = '';
     document.getElementById('insightsCard').innerHTML = `
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">

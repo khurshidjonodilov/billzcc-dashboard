@@ -4,11 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>BILLZ CC · Ежедневно</title>
-<link rel="stylesheet" href="shared.css?v=32">
+<link rel="stylesheet" href="shared.css?v=34">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 <script src="data.js"></script>
-<script src="shared.js?v=32"></script>
+<script src="shared.js?v=34"></script>
 <style>
 .formula-bar {
   margin-top: 12px !important;
@@ -256,7 +256,7 @@ function render() {
       `${fmt.num(D.undesired || 0)} тикетов`, 'red', '▲'),
     kpi('Доля чатов', fmt.pct(D.chats / D.tickets * 100),
       `Звонки: ${fmt.pct(D.calls / D.tickets * 100)}`, 'purple'),
-    kpi('Затраты', fmt.mln(D.cost), `${fmt.num(D.tickets)} × 9 865 сум`, 'amber'),
+    kpi('Затраты', fmt.mln(D.cost), `${fmt.num(D.tickets)} × 7 561 сум`, 'amber'),
     kpi('Пропущено (АТС)', fmt.num(D.missed_calls || 0),
       `из ${fmt.num(D.incoming_calls || D.calls)} входящих · LCR ${D.lcr||0}%`,
       (D.missed_calls || 0) > 15 ? 'red' : (D.missed_calls||0) > 8 ? 'amber' : 'dark',
@@ -279,7 +279,7 @@ function render() {
     <div class="alert gold">
       <div class="alert-num">03</div>
       <div><div class="al-label">Затраты дня</div>
-      <div class="al-txt">${fmt.mln(D.cost)} · ${fmt.num(D.tickets)} тикетов × 9 865 сум. Закрыто: ${D.closed}, открыто: ${D.open}.</div></div>
+      <div class="al-txt">${fmt.mln(D.cost)} · ${fmt.num(D.tickets)} тикетов × 7 561 сум. Закрыто: ${D.closed}, открыто: ${D.open}.</div></div>
     </div>
     <div class="alert ${(D.lcr || 0) > 8 ? 'rose' : 'gold'}">
       <div class="alert-num">04</div>
@@ -509,5 +509,29 @@ function exportCSExcel() {
 
 render();
 </script>
+
+<script>
+// Dynamically update CPT references in static text based on selected month
+(function(){
+  if (typeof BILLZ_DATA === 'undefined') return;
+  const M = BILLZ_DATA.monthly || (BILLZ_DATA.months && BILLZ_DATA.months.apr && BILLZ_DATA.months.apr.monthly);
+  if (!M || !M.cpt) return;
+  const cpt = M.cpt;
+  const cptStr = cpt.toLocaleString('ru').replace(/,/g,' ');
+  // Walk all text nodes and replace 7 561 / 9 865 with current cpt
+  const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null);
+  const nodes = [];
+  let n;
+  while (n = walker.nextNode()) {
+    if (n.nodeValue && /\b(7\s?561|9\s?865)\b/.test(n.nodeValue)) {
+      nodes.push(n);
+    }
+  }
+  nodes.forEach(n => {
+    n.nodeValue = n.nodeValue.replace(/\b7\s?561\b/g, cptStr).replace(/\b9\s?865\b/g, cptStr);
+  });
+})();
+</script>
+
 </body>
 </html>

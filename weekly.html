@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>BILLZ CC · Еженедельный</title>
-<link rel="stylesheet" href="shared.css?v=32">
+<link rel="stylesheet" href="shared.css?v=34">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 <script src="data.js"></script>
-<script src="shared.js?v=32"></script>
+<script src="shared.js?v=34"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 <style>
 .export-bar{margin-top:32px;padding:20px 24px;background:var(--surface);border:1px solid var(--br2);border-radius:12px;display:flex;align-items:center;justify-content:space-between;gap:16px}
@@ -252,14 +252,14 @@ function render() {
     kpi('Нежелательные',   fmt.pct(D.undesired/D.tickets*100), `${fmt.num(D.undesired)} тикетов`,  'red',   '▲'),
     kpi('Доля чатов',      fmt.pct(D.chats/D.tickets*100),  `Звонки: ${fmt.pct(D.calls/D.tickets*100)}`, 'purple'),
     kpi('Повторные',       fmt.pct(D.repeat_pct),           `повторные обращения`,                  D.repeat_pct>9?'red':'amber', '⚠'),
-    kpi('Затраты',         fmt.mln(D.cost),                 `${fmt.num(D.tickets)} × 9 865 сўм`,    'amber'),
+    kpi('Затраты',         fmt.mln(D.cost),                 `${fmt.num(D.tickets)} × 7 561 сўм`,    'amber'),
     kpi('Обучений (CC)',   fmt.num(D.massoviy_cnt||0),       `тикетов CS через CC`,                 'dark'),
   ].join('');
 
   document.getElementById('alertGrid').innerHTML = `
     <div class="alert ${D.undesired/D.tickets>0.5?'rose':'gold'}"><div class="alert-num">01</div><div><div class="al-label">Нежелательные ${fmt.pct(D.undesired/D.tickets*100)}</div><div class="al-txt">${fmt.num(D.undesired)} нежелательных vs ${fmt.num(D.desired)} желательных за неделю.</div></div></div>
     <div class="alert gold"><div class="alert-num">02</div><div><div class="al-label">SLA · AFRT</div><div class="al-txt">SLA соблюдён: ${fmt.pct(D.sla_pct)} · не соблюдён: ${fmt.pct(D.sla_not_met)}. AFRT: ${D.afrt}.</div></div></div>
-    <div class="alert gold"><div class="alert-num">03</div><div><div class="al-label">Затраты недели</div><div class="al-txt">${fmt.mln(D.cost)} · ${fmt.num(D.tickets)} тикетов × 9 865 сум.</div></div></div>
+    <div class="alert gold"><div class="alert-num">03</div><div><div class="al-label">Затраты недели</div><div class="al-txt">${fmt.mln(D.cost)} · ${fmt.num(D.tickets)} тикетов × 7 561 сум.</div></div></div>
     <div class="alert gold"><div class="alert-num">04</div><div><div class="al-label">Каналы</div><div class="al-txt">Звонки: ${fmt.num(D.calls)} · Чаты: ${fmt.num(D.chats)}. Повторные: ${fmt.pct(D.repeat_pct)}.</div></div></div>
   `;
 
@@ -430,5 +430,29 @@ function exportCSExcel(){
   }, 150);
 }
 </script>
+
+<script>
+// Dynamically update CPT references in static text based on selected month
+(function(){
+  if (typeof BILLZ_DATA === 'undefined') return;
+  const M = BILLZ_DATA.monthly || (BILLZ_DATA.months && BILLZ_DATA.months.apr && BILLZ_DATA.months.apr.monthly);
+  if (!M || !M.cpt) return;
+  const cpt = M.cpt;
+  const cptStr = cpt.toLocaleString('ru').replace(/,/g,' ');
+  // Walk all text nodes and replace 7 561 / 9 865 with current cpt
+  const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null);
+  const nodes = [];
+  let n;
+  while (n = walker.nextNode()) {
+    if (n.nodeValue && /\b(7\s?561|9\s?865)\b/.test(n.nodeValue)) {
+      nodes.push(n);
+    }
+  }
+  nodes.forEach(n => {
+    n.nodeValue = n.nodeValue.replace(/\b7\s?561\b/g, cptStr).replace(/\b9\s?865\b/g, cptStr);
+  });
+})();
+</script>
+
 </body>
 </html>

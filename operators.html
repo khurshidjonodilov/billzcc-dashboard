@@ -4,11 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>BILLZ CC · Операторы</title>
-<link rel="stylesheet" href="shared.css?v=32">
+<link rel="stylesheet" href="shared.css?v=34">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 <script src="data.js"></script>
-<script src="shared.js?v=32"></script>
+<script src="shared.js?v=34"></script>
 <style>
 .formula-bar {
   margin-top: 12px !important;
@@ -76,7 +76,7 @@
     <div class="phdr-right">
       <div class="cost-ey">ФОТ ОЦЕНКА (АПРЕЛЬ)</div>
       <div class="cost-n" id="totalCost">—</div>
-      <div class="cost-d">сум · тикеты × CPT 9 865</div>
+      <div class="cost-d">сум · тикеты × CPT 7 561</div>
       <div class="live"><span class="live-dot"></span>данные актуальны · 03.05.2026</div>
     </div>
   </div>
@@ -132,7 +132,7 @@
         <span class="f-key">📐 Нагрузка</span> = тикеты оператора / макс. тикеты в команде × 100 &nbsp;·&nbsp;
         <span class="f-key">SLA</span> = чаты с FRT≤1мин / все замеренные чаты оператора × 100 &nbsp;·&nbsp;
         <span class="f-key">CSAT</span> = оценок «Отлично» / всего оценок оператора × 100 &nbsp;·&nbsp;
-        <span class="f-key">Затраты</span> = тикеты × CPT <span class="f-val">9 865 сум</span>
+        <span class="f-key">Затраты</span> = тикеты × CPT <span class="f-val">7 561 сум</span>
       </div>
     </div>
   </div>
@@ -145,7 +145,7 @@
     <div class="card">
       <div class="card-hd"><div class="card-title">Тикеты по операторам</div><div class="card-note">горизонтальный бар · нагрузка</div></div>
       <div style="position:relative;height:280px"><canvas id="ticketsChart"></canvas></div>
-      <div class="formula-bar"><span class="f-key">📐 Нагрузка</span> = тикеты / сумма всех тикетов × 100% &nbsp;·&nbsp; <span class="f-key">Затраты</span> = тикеты × <span class="f-val">9 865</span> сум</div>
+      <div class="formula-bar"><span class="f-key">📐 Нагрузка</span> = тикеты / сумма всех тикетов × 100% &nbsp;·&nbsp; <span class="f-key">Затраты</span> = тикеты × <span class="f-val">7 561</span> сум</div>
     </div>
     <div class="card">
       <div class="card-hd"><div class="card-title">Доля тикетов команды</div><div class="card-note">% от общего объёма</div></div>
@@ -179,7 +179,7 @@
     <div class="card">
       <div class="card-hd"><div class="card-title">Затраты по операторам (млн сум)</div></div>
       <div style="position:relative;height:260px"><canvas id="costChart"></canvas></div>
-      <div class="formula-bar"><span class="f-key">📐 Затраты</span> = тикеты × CPT <span class="f-val">9 865 сум</span> &nbsp;·&nbsp; <span class="f-key">CPT</span> = ФОТ команды / все тикеты</div>
+      <div class="formula-bar"><span class="f-key">📐 Затраты</span> = тикеты × CPT <span class="f-val">7 561 сум</span> &nbsp;·&nbsp; <span class="f-key">CPT</span> = ФОТ команды / все тикеты</div>
     </div>
     <div class="card">
       <div class="card-hd"><div class="card-title">Среднее время закрытия (часы)</div></div>
@@ -241,7 +241,7 @@
 <script>
 const M = BILLZ_DATA.monthly;
 const W = BILLZ_DATA.weekly;
-const CPT = 9865;
+const CPT = (typeof M !== "undefined" && M.cpt) ? M.cpt : 7561;
 let currentPeriod = 'monthly';
 let charts = {};
 
@@ -718,6 +718,30 @@ render();
       contentEl.innerHTML = topCatsHTML + byOpHTML;
     })();
   </script>
+
+
+<script>
+// Dynamically update CPT references in static text based on selected month
+(function(){
+  if (typeof BILLZ_DATA === 'undefined') return;
+  const M = BILLZ_DATA.monthly || (BILLZ_DATA.months && BILLZ_DATA.months.apr && BILLZ_DATA.months.apr.monthly);
+  if (!M || !M.cpt) return;
+  const cpt = M.cpt;
+  const cptStr = cpt.toLocaleString('ru').replace(/,/g,' ');
+  // Walk all text nodes and replace 7 561 / 9 865 with current cpt
+  const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null);
+  const nodes = [];
+  let n;
+  while (n = walker.nextNode()) {
+    if (n.nodeValue && /\b(7\s?561|9\s?865)\b/.test(n.nodeValue)) {
+      nodes.push(n);
+    }
+  }
+  nodes.forEach(n => {
+    n.nodeValue = n.nodeValue.replace(/\b7\s?561\b/g, cptStr).replace(/\b9\s?865\b/g, cptStr);
+  });
+})();
+</script>
 
 </body>
 </html>

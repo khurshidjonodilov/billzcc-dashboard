@@ -4,11 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>BILLZ CC · Ежемесячно</title>
-<link rel="stylesheet" href="shared.css?v=32">
+<link rel="stylesheet" href="shared.css?v=34">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 <script src="data.js"></script>
-<script src="shared.js?v=32"></script>
+<script src="shared.js?v=34"></script>
 <style>
 .formula-bar {
   margin-top: 12px !important;
@@ -111,7 +111,7 @@
         <thead><tr><th>Оператор</th><th>Тикеты</th><th>Нагрузка</th><th>Ср. закрытие</th><th>Закрыто</th><th>SLA</th><th>CSAT</th><th>Затраты</th></tr></thead>
         <tbody id="opTable"></tbody>
       </table>
-      <div class="card-formula">📐 Нагрузка = тикеты оператора / макс. тикеты × 100 · Затраты = тикеты × CPT (9 865 сум)</div>
+      <div class="card-formula">📐 Нагрузка = тикеты оператора / макс. тикеты × 100 · Затраты = тикеты × CPT (7 561 сум)</div>
     </div>
     <div class="card">
       <div class="card-hd"><div class="card-title">Доля звонков vs чатов</div><div class="card-note" id="chanNote"></div></div>
@@ -128,7 +128,7 @@
   <div class="sec"><div class="sec-num">02</div><div class="sec-title">Топ меток и затраты (CPT)</div><div class="sec-line"></div></div>
   <div class="row two">
     <div class="card">
-      <div class="card-hd"><div class="card-title">Топ-12 меток по объёму</div><div class="card-note">каждый тикет = 9 865 сум</div></div>
+      <div class="card-hd"><div class="card-title">Топ-12 меток по объёму</div><div class="card-note">каждый тикет = 7 561 сум</div></div>
       <table class="tbl">
         <thead><tr><th>Метка</th><th>Тикеты</th><th>Объём</th><th>Нежел.</th><th>Затраты</th></tr></thead>
         <tbody id="lblTable"></tbody>
@@ -138,7 +138,7 @@
     <div class="card">
       <div class="card-hd"><div class="card-title">Топ-8 меток — объём</div></div>
       <div style="position:relative;height:280px"><canvas id="labelsChart"></canvas></div>
-      <div class="card-formula">📐 Затраты метки = тикеты по метке × CPT 9 865 сум</div>
+      <div class="card-formula">📐 Затраты метки = тикеты по метке × CPT 7 561 сум</div>
     </div>
   </div>
 
@@ -211,7 +211,7 @@
 
 <script>const M = BILLZ_DATA.monthly;
 const charts = {};
-const CPT = 9865;
+const CPT = (typeof M !== "undefined" && M.cpt) ? M.cpt : 7561;
 const STORES = M.clients || 4165;
 const USERS  = M.users  || 37260;
 
@@ -288,7 +288,7 @@ document.getElementById('kpiGrid').innerHTML = [
   kpi('Обучений (CC→CS)', fmt.num(M.training_tickets || 401),
     `${fmt.mln((M.training_tickets||401)*CPT)}`,
     'rose', '!', [], ['Работа CS-команды'],
-    'Тикеты с меткой «Обучение*» × CPT 9 865 сум = нагрузка CC'),
+    'Тикеты с меткой «Обучение*» × CPT 7 561 сум = нагрузка CC'),
 ].join('');
 
 /* Alerts */
@@ -322,7 +322,7 @@ document.getElementById('alertGrid').innerHTML = `
     <div>
       <div class="al-label">Затраты ${fmt.mln(M.cost)}</div>
       <div class="al-txt">${fmt.num(M.tickets)} тикетов × ${fmt.num(CPT)} сум CPT. Из них обучений через CC: ${M.training_tickets||401} тик = ${fmt.mln((M.training_tickets||401)*CPT)}.</div>
-      <div class="al-formula">📐 Затраты = тикеты × CPT · CPT апрель = 9 865 сум</div>
+      <div class="al-formula">📐 Затраты = тикеты × CPT · CPT апрель = 7 561 сум</div>
     </div>
   </div>
 `;
@@ -384,7 +384,7 @@ charts.labels = buildNeonBar('labelsChart',
     colorFn: (v,i) => { const c=NEON_COLORS[i%NEON_COLORS.length]; const {r,g,b}=hexRGB(c); return `rgba(${r},${g},${b},0.85)`; },
   }],
   { radius: 8, yFmt: v => v.toLocaleString('ru'),
-    tooltipFmt: ctx => ` ${ctx.raw.toLocaleString('ru')} тикетов · ${fmt.mln(ctx.raw*9865)}` }
+    tooltipFmt: ctx => ` ${ctx.raw.toLocaleString('ru')} тикетов · ${fmt.mln(ctx.raw*7561)}` }
 );
 
 /* Companies */
@@ -513,7 +513,7 @@ function exportCSExcel() {
       ['Желательные', M.desired, 'Тип обращения = Желательный'],
       ['Нежелательные', M.undesired, 'Тип обращения = Нежелательный'],
       ['Нежел. %', +(M.undesired/M.tickets*100).toFixed(1), 'Нежелательные / тикеты × 100'],
-      ['CPT', 9865, 'Стоимость одного тикета, сум'],
+      ['CPT', 7561, 'Стоимость одного тикета, сум'],
       ['Затраты', M.cost, 'Тикеты × CPT'],
       ['Затраты (млн)', +(M.cost/1e6).toFixed(2), ''],
       ['LCR %', M.lcr, 'Пропущ. >5сек / входящие × 100 (АТС)'],
@@ -528,7 +528,7 @@ function exportCSExcel() {
       ['Тик/магазин', M.tpc, 'Тикеты / магазины'],
       ['Тик/пользователь', M.tpu, 'Тикеты / пользователи'],
       ['Обучений через CC', M.training_tickets||401, 'Тикеты с меткой "Обучени*"'],
-      ['Обучения затраты', (M.training_tickets||401)*9865, 'Обучения × CPT'],
+      ['Обучения затраты', (M.training_tickets||401)*7561, 'Обучения × CPT'],
     ];
     XLSX.utils.book_append_sheet(wb, makeSheet(sum,[36,16,45]), '📊 Сводка');
 
@@ -658,7 +658,7 @@ function exportCSExcel() {
           </div>
           <div style="font-size:11px;color:var(--t3)">тикетов ожидается</div>
           <div style="font-size:10px;font-family:monospace;color:var(--t4);margin-top:4px">
-            ~${mayData.plan_cost_mln||108} млн сум · CPT 9 865
+            ~${mayData.plan_cost_mln||108} млн сум · CPT 7 561
           </div>
         </div>
         <div style="grid-column:span 2">
@@ -797,5 +797,29 @@ function exportCSExcel() {
       </div>`).join('');
   }
 </script>
+
+<script>
+// Dynamically update CPT references in static text based on selected month
+(function(){
+  if (typeof BILLZ_DATA === 'undefined') return;
+  const M = BILLZ_DATA.monthly || (BILLZ_DATA.months && BILLZ_DATA.months.apr && BILLZ_DATA.months.apr.monthly);
+  if (!M || !M.cpt) return;
+  const cpt = M.cpt;
+  const cptStr = cpt.toLocaleString('ru').replace(/,/g,' ');
+  // Walk all text nodes and replace 7 561 / 9 865 with current cpt
+  const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null);
+  const nodes = [];
+  let n;
+  while (n = walker.nextNode()) {
+    if (n.nodeValue && /\b(7\s?561|9\s?865)\b/.test(n.nodeValue)) {
+      nodes.push(n);
+    }
+  }
+  nodes.forEach(n => {
+    n.nodeValue = n.nodeValue.replace(/\b7\s?561\b/g, cptStr).replace(/\b9\s?865\b/g, cptStr);
+  });
+})();
+</script>
+
 </body>
 </html>

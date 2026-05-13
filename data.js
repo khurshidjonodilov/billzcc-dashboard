@@ -15,7 +15,7 @@ const BILLZ_DATA = {
     "sla_not_met": 7.5,
     "lcr": 4.59,
     "repeat_pct": 9.2,
-    "cost": 114473460,
+    "cost": 87737844,
     "massoviy_cnt": 154,
     "no_massoviy": {
       "tickets": 5700,
@@ -25,147 +25,147 @@ const BILLZ_DATA = {
       "afrt_raw": 0.804,
       "sla_pct": 98.3,
       "sla_not_met": 1.7,
-      "cost": 56230500,
+      "cost": 43097700,
       "top_labels": [
         {
           "name": "Документооборот - Оплата за тариф",
           "tickets": 705,
           "desired": 220,
           "undesired": 425,
-          "cost": 6954825
+          "cost": 5330505
         },
         {
           "name": "Документооборот - Создание ссылки для оплаты",
           "tickets": 266,
           "desired": 66,
           "undesired": 197,
-          "cost": 2624090
+          "cost": 2011226
         },
         {
           "name": "Учётная запись - Помощь со входом в аккаунт",
           "tickets": 209,
           "desired": 56,
           "undesired": 152,
-          "cost": 2061785
+          "cost": 1580249
         },
         {
           "name": "Оборудование - Установка/Настройка/Удаление принтера",
           "tickets": 188,
           "desired": 135,
           "undesired": 49,
-          "cost": 1854620
+          "cost": 1421468
         },
         {
           "name": "Учётная запись - Блокировка/Разблокировка аккаунта",
           "tickets": 132,
           "desired": 42,
           "undesired": 83,
-          "cost": 1302180
+          "cost": 998052
         },
         {
           "name": "Каталог — изменение свойств товара",
           "tickets": 114,
           "desired": 50,
           "undesired": 56,
-          "cost": 1124610
+          "cost": 861954
         },
         {
           "name": "Кассовые смены — Открытие/Закрытие смен",
           "tickets": 108,
           "desired": 34,
           "undesired": 74,
-          "cost": 1065420
+          "cost": 816588
         },
         {
           "name": "Вопрос не по программе",
           "tickets": 99,
           "desired": 30,
           "undesired": 64,
-          "cost": 976635
+          "cost": 748539
         },
         {
           "name": "Документооборот - Консультация по сумме долга",
           "tickets": 72,
           "desired": 28,
           "undesired": 42,
-          "cost": 710280
+          "cost": 544392
         },
         {
           "name": "Каталог — настройка печати ценника",
           "tickets": 71,
           "desired": 31,
           "undesired": 39,
-          "cost": 700415
+          "cost": 536831
         },
         {
           "name": "Управление - Создание/Редактирвоание/Удаление роли",
           "tickets": 69,
           "desired": 36,
           "undesired": 33,
-          "cost": 680685
+          "cost": 521709
         },
         {
           "name": "Учётная запись - Создание магазина",
           "tickets": 67,
           "desired": 41,
           "undesired": 25,
-          "cost": 660955
+          "cost": 506587
         },
         {
           "name": "Управление - Создание/Редактирвоание/Удаление сотрудника",
           "tickets": 64,
           "desired": 38,
           "undesired": 26,
-          "cost": 631360
+          "cost": 483904
         },
         {
           "name": "Оборудование - Установка Anydesk/BILLZ Desktop/Программы компьютера и тд.",
           "tickets": 62,
           "desired": 34,
           "undesired": 28,
-          "cost": 611630
+          "cost": 468782
         },
         {
           "name": "Импорт — импорт товаров через Excel",
           "tickets": 61,
           "desired": 35,
           "undesired": 26,
-          "cost": 601765
+          "cost": 461221
         },
         {
           "name": "Новая продажа - Не удаётся сделать продажу",
           "tickets": 58,
           "desired": 25,
           "undesired": 33,
-          "cost": 572170
+          "cost": 438538
         },
         {
           "name": "Документооборот - Помощь в оплате долга",
           "tickets": 53,
           "desired": 25,
           "undesired": 24,
-          "cost": 522845
+          "cost": 400733
         },
         {
           "name": "Баг (реквест)",
           "tickets": 51,
           "desired": 26,
           "undesired": 25,
-          "cost": 503115
+          "cost": 385611
         },
         {
           "name": "Настройка - Установка BILLZ PAY/Payme/Epos/PAX",
           "tickets": 50,
           "desired": 35,
           "undesired": 15,
-          "cost": 493250
+          "cost": 378050
         },
         {
           "name": "Каталог — запрос на добавление товара",
           "tickets": 46,
           "desired": 29,
           "undesired": 17,
-          "cost": 453790
+          "cost": 347806
         }
       ],
       "top_companies": [
@@ -174,7 +174,7 @@ const BILLZ_DATA = {
           "tickets": 945,
           "desired": 337,
           "undesired": 512,
-          "cost": 9322425,
+          "cost": 7145145,
           "top_labels": [
             {
               "label": "Документооборот - Создание ссылки для оплаты",
@@ -203,7 +203,7 @@ const BILLZ_DATA = {
           "tickets": 72,
           "desired": 30,
           "undesired": 39,
-          "cost": 710280,
+          "cost": 544392,
           "top_labels": [
             {
               "label": "Маркетинг - Работа с Сертификатом/Ваучером",
@@ -232,7 +232,7 @@ const BILLZ_DATA = {
           "tickets": 58,
           "desired": 16,
           "undesired": 42,
-          "cost": 572170,
+          "cost": 438538,
           "top_labels": [
             {
               "label": "Кассовые смены — Открытие/Закрытие смен",
@@ -261,7 +261,7 @@ const BILLZ_DATA = {
           "tickets": 55,
           "desired": 29,
           "undesired": 23,
-          "cost": 542575,
+          "cost": 415855,
           "top_labels": [
             {
               "label": "Оборудование - Установка Anydesk/BILLZ Desktop/Программы компьютера и тд.",
@@ -290,7 +290,7 @@ const BILLZ_DATA = {
           "tickets": 47,
           "desired": 21,
           "undesired": 26,
-          "cost": 463655,
+          "cost": 355367,
           "top_labels": [
             {
               "label": "Desktop - Ошибка синхронизации",
@@ -319,7 +319,7 @@ const BILLZ_DATA = {
           "tickets": 25,
           "desired": 4,
           "undesired": 21,
-          "cost": 246625,
+          "cost": 189025,
           "top_labels": [
             {
               "label": "Все продажи - Удаление/Редактирование продажи",
@@ -348,7 +348,7 @@ const BILLZ_DATA = {
           "tickets": 24,
           "desired": 16,
           "undesired": 7,
-          "cost": 236760,
+          "cost": 181464,
           "top_labels": [
             {
               "label": "Desktop - Ошибка синхронизации",
@@ -377,7 +377,7 @@ const BILLZ_DATA = {
           "tickets": 22,
           "desired": 12,
           "undesired": 10,
-          "cost": 217030,
+          "cost": 166342,
           "top_labels": [
             {
               "label": "Инвентаризация — консультация по модулю (частичное обучение)",
@@ -406,7 +406,7 @@ const BILLZ_DATA = {
           "tickets": 20,
           "desired": 4,
           "undesired": 13,
-          "cost": 197300,
+          "cost": 151220,
           "top_labels": [
             {
               "label": "Кассовые смены — Открытие/Закрытие смен",
@@ -431,7 +431,7 @@ const BILLZ_DATA = {
           "tickets": 19,
           "desired": 10,
           "undesired": 9,
-          "cost": 187435,
+          "cost": 143659,
           "top_labels": [
             {
               "label": "Каталог - Просмотр статистики",
@@ -465,7 +465,7 @@ const BILLZ_DATA = {
           "rating_pct": 96.2,
           "rated": 53,
           "sla_pct": 100.0,
-          "cost": 7576320
+          "cost": 5806848
         },
         {
           "name": "Робия Р.",
@@ -475,7 +475,7 @@ const BILLZ_DATA = {
           "rating_pct": 93.1,
           "rated": 72,
           "sla_pct": 98.2,
-          "cost": 6579955
+          "cost": 5043187
         },
         {
           "name": "Алиёр",
@@ -485,7 +485,7 @@ const BILLZ_DATA = {
           "rating_pct": 97.0,
           "rated": 33,
           "sla_pct": 91.7,
-          "cost": 5682240
+          "cost": 4355136
         },
         {
           "name": "Атабек",
@@ -495,7 +495,7 @@ const BILLZ_DATA = {
           "rating_pct": 92.9,
           "rated": 28,
           "sla_pct": 99.0,
-          "cost": 5544130
+          "cost": 4249282
         },
         {
           "name": "Нурилло",
@@ -505,7 +505,7 @@ const BILLZ_DATA = {
           "rating_pct": 92.9,
           "rated": 28,
           "sla_pct": 99.0,
-          "cost": 5327100
+          "cost": 4082940
         },
         {
           "name": "Тожмухаммад",
@@ -515,7 +515,7 @@ const BILLZ_DATA = {
           "rating_pct": 95.8,
           "rated": 24,
           "sla_pct": 96.5,
-          "cost": 4823985
+          "cost": 3697329
         },
         {
           "name": "Сардор Б.",
@@ -525,7 +525,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 16,
           "sla_pct": 93.9,
-          "cost": 4754930
+          "cost": 3644402
         },
         {
           "name": "Ардак",
@@ -535,7 +535,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 16,
           "sla_pct": 99.3,
-          "cost": 4113705
+          "cost": 3152937
         },
         {
           "name": "Авазбек",
@@ -545,7 +545,7 @@ const BILLZ_DATA = {
           "rating_pct": 93.6,
           "rated": 47,
           "sla_pct": 95.4,
-          "cost": 4074245
+          "cost": 3122693
         },
         {
           "name": "Робия А.",
@@ -555,7 +555,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 15,
           "sla_pct": 73.1,
-          "cost": 3363965
+          "cost": 2578301
         },
         {
           "name": "Иззатбек",
@@ -565,7 +565,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 6,
           "sla_pct": 94.5,
-          "cost": 1864485
+          "cost": 1429029
         },
         {
           "name": "Шохина",
@@ -575,7 +575,7 @@ const BILLZ_DATA = {
           "rating_pct": 95.8,
           "rated": 24,
           "sla_pct": 99.4,
-          "cost": 1815160
+          "cost": 1391224
         },
         {
           "name": "Нурлан",
@@ -585,7 +585,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 2,
           "sla_pct": 96.4,
-          "cost": 276220
+          "cost": 211708
         },
         {
           "name": "Камолиддин",
@@ -595,7 +595,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 3,
           "sla_pct": 78.9,
-          "cost": 197300
+          "cost": 151220
         }
       ],
       "lcr": 7.1
@@ -609,7 +609,7 @@ const BILLZ_DATA = {
         "avg_close": 16.67,
         "rating_pct": 93.1,
         "rated": 180,
-        "cost": 14501550,
+        "cost": 11114670,
         "close_rate": 99.5
       },
       {
@@ -620,7 +620,7 @@ const BILLZ_DATA = {
         "avg_close": 46.75,
         "rating_pct": 90.3,
         "rated": 124,
-        "cost": 12143815,
+        "cost": 9307591,
         "close_rate": 99.5
       },
       {
@@ -631,7 +631,7 @@ const BILLZ_DATA = {
         "avg_close": 13.68,
         "rating_pct": 95.2,
         "rated": 115,
-        "cost": 11068530,
+        "cost": 8483442,
         "close_rate": 99.5
       },
       {
@@ -642,7 +642,7 @@ const BILLZ_DATA = {
         "avg_close": 27.15,
         "rating_pct": 87.0,
         "rated": 100,
-        "cost": 10595010,
+        "cost": 8120514,
         "close_rate": 99.5
       },
       {
@@ -653,7 +653,7 @@ const BILLZ_DATA = {
         "avg_close": 18.53,
         "rating_pct": 100.0,
         "rated": 42,
-        "cost": 10585145,
+        "cost": 8112953,
         "close_rate": 99.5
       },
       {
@@ -664,7 +664,7 @@ const BILLZ_DATA = {
         "avg_close": 44.65,
         "rating_pct": 89.7,
         "rated": 68,
-        "cost": 10358250,
+        "cost": 7939050,
         "close_rate": 99.5
       },
       {
@@ -675,7 +675,7 @@ const BILLZ_DATA = {
         "avg_close": 28.4,
         "rating_pct": 88.4,
         "rated": 60,
-        "cost": 9855135,
+        "cost": 7553439,
         "close_rate": 99.5
       },
       {
@@ -686,7 +686,7 @@ const BILLZ_DATA = {
         "avg_close": 24.05,
         "rating_pct": 80.4,
         "rated": 52,
-        "cost": 9835405,
+        "cost": 7538317,
         "close_rate": 99.5
       },
       {
@@ -697,7 +697,7 @@ const BILLZ_DATA = {
         "avg_close": 54.0,
         "rating_pct": 97.7,
         "rated": 44,
-        "cost": 9006745,
+        "cost": 6903193,
         "close_rate": 99.5
       },
       {
@@ -708,7 +708,7 @@ const BILLZ_DATA = {
         "avg_close": 22.67,
         "rating_pct": 89.5,
         "rated": 38,
-        "cost": 6145895,
+        "cost": 4710503,
         "close_rate": 99.5
       },
       {
@@ -719,7 +719,7 @@ const BILLZ_DATA = {
         "avg_close": 177.0,
         "rating_pct": 100.0,
         "rated": 18,
-        "cost": 3363965,
+        "cost": 2578301,
         "close_rate": 99.5
       },
       {
@@ -730,7 +730,7 @@ const BILLZ_DATA = {
         "avg_close": 14.2,
         "rating_pct": 100.0,
         "rated": 11,
-        "cost": 1489615,
+        "cost": 1141711,
         "close_rate": 99.5
       },
       {
@@ -741,7 +741,7 @@ const BILLZ_DATA = {
         "avg_close": 6.42,
         "rating_pct": 100.0,
         "rated": 2,
-        "cost": 276220,
+        "cost": 211708,
         "close_rate": 99.5
       }
     ],
@@ -751,105 +751,105 @@ const BILLZ_DATA = {
         "tickets": 889,
         "desired": 305,
         "undesired": 515,
-        "cost": 8769985
+        "cost": 6721729
       },
       {
         "name": "Учётная запись - Помощь со входом в аккаунт",
         "tickets": 494,
         "desired": 155,
         "undesired": 320,
-        "cost": 4873310
+        "cost": 3735134
       },
       {
         "name": "Оборудование - Установка/Настройка/Удаление принтера",
         "tickets": 427,
         "desired": 301,
         "undesired": 119,
-        "cost": 4212355
+        "cost": 3228547
       },
       {
         "name": "Документооборот - Создание ссылки для оплаты",
         "tickets": 395,
         "desired": 97,
         "undesired": 295,
-        "cost": 3896675
+        "cost": 2756195
       },
       {
         "name": "Учётная запись - Блокировка/Разблокировка аккаунта",
         "tickets": 294,
         "desired": 117,
         "undesired": 164,
-        "cost": 2900310
+        "cost": 2222934
       },
       {
         "name": "Вопрос не по программе",
         "tickets": 236,
         "desired": 78,
         "undesired": 148,
-        "cost": 2328140
+        "cost": 1784396
       },
       {
         "name": "Каталог — изменение свойств товара",
         "tickets": 227,
         "desired": 97,
         "undesired": 117,
-        "cost": 2239355
+        "cost": 1716347
       },
       {
         "name": "Кассовые смены — Открытие/Закрытие смен",
         "tickets": 214,
         "desired": 67,
         "undesired": 147,
-        "cost": 2111110
+        "cost": 1618054
       },
       {
         "name": "Каталог — настройка печати ценника",
         "tickets": 181,
         "desired": 102,
         "undesired": 78,
-        "cost": 1785565
+        "cost": 1368541
       },
       {
         "name": "Управление - Создание/Редактирвоание/Удаление роли",
         "tickets": 175,
         "desired": 105,
         "undesired": 70,
-        "cost": 1726375
+        "cost": 1323175
       },
       {
         "name": "Учётная запись - Создание магазина",
         "tickets": 147,
         "desired": 89,
         "undesired": 54,
-        "cost": 1450155
+        "cost": 1111467
       },
       {
         "name": "Новая продажа - Не удаётся сделать продажу",
         "tickets": 127,
         "desired": 65,
         "undesired": 62,
-        "cost": 1252855
+        "cost": 960247
       },
       {
         "name": "Управление - Создание/Редактирвоание/Удаление сотрудника",
         "tickets": 125,
         "desired": 74,
         "undesired": 51,
-        "cost": 1233125
+        "cost": 945125
       },
       {
         "name": "Импорт — импорт товаров через Excel",
         "tickets": 119,
         "desired": 74,
         "undesired": 45,
-        "cost": 1173935
+        "cost": 899759
       },
       {
         "name": "Оборудование - Установка Anydesk/BILLZ Desktop/Программы компьютера и тд.",
         "tickets": 117,
         "desired": 70,
         "undesired": 46,
-        "cost": 1154205
+        "cost": 884637
       }
     ],
     "top_companies": [
@@ -858,7 +858,7 @@ const BILLZ_DATA = {
         "tickets": 1965,
         "desired": 763,
         "undesired": 1036,
-        "cost": 19384725,
+        "cost": 14857365,
         "top_labels": [
           {
             "label": "Документооборот - Создание ссылки для оплаты",
@@ -879,7 +879,7 @@ const BILLZ_DATA = {
         "tickets": 147,
         "desired": 69,
         "undesired": 75,
-        "cost": 1450155,
+        "cost": 1111467,
         "top_labels": [
           {
             "label": "Маркетинг - Работа с Сертификатом/Ваучером",
@@ -900,7 +900,7 @@ const BILLZ_DATA = {
         "tickets": 121,
         "desired": 27,
         "undesired": 93,
-        "cost": 1193665,
+        "cost": 914881,
         "top_labels": [
           {
             "label": "Кассовые смены — Открытие/Закрытие смен",
@@ -921,7 +921,7 @@ const BILLZ_DATA = {
         "tickets": 72,
         "desired": 35,
         "undesired": 34,
-        "cost": 710280,
+        "cost": 544392,
         "top_labels": [
           {
             "label": "Оборудование - Установка Anydesk/BILLZ Desktop/Программы компьютера и тд.",
@@ -942,7 +942,7 @@ const BILLZ_DATA = {
         "tickets": 71,
         "desired": 29,
         "undesired": 42,
-        "cost": 700415,
+        "cost": 536831,
         "top_labels": [
           {
             "label": "Desktop - Ошибка синхронизации",
@@ -963,7 +963,7 @@ const BILLZ_DATA = {
         "tickets": 65,
         "desired": 12,
         "undesired": 53,
-        "cost": 641225,
+        "cost": 491465,
         "top_labels": [
           {
             "label": "Все продажи - Удаление/Редактирование продажи",
@@ -984,7 +984,7 @@ const BILLZ_DATA = {
         "tickets": 52,
         "desired": 31,
         "undesired": 20,
-        "cost": 512980,
+        "cost": 393172,
         "top_labels": [
           {
             "label": "Desktop - Ошибка синхронизации",
@@ -1005,7 +1005,7 @@ const BILLZ_DATA = {
         "tickets": 49,
         "desired": 16,
         "undesired": 31,
-        "cost": 483385,
+        "cost": 370489,
         "top_labels": [
           {
             "label": "Учётная запись - Помощь со входом в аккаунт",
@@ -1026,7 +1026,7 @@ const BILLZ_DATA = {
         "tickets": 43,
         "desired": 18,
         "undesired": 25,
-        "cost": 424195,
+        "cost": 325123,
         "top_labels": [
           {
             "label": "Массовый сбой BILLZ",
@@ -1047,7 +1047,7 @@ const BILLZ_DATA = {
         "tickets": 38,
         "desired": 21,
         "undesired": 14,
-        "cost": 374870,
+        "cost": 287318,
         "top_labels": [
           {
             "label": "Сайт/Бот - Настройка/Удаление/Редактирование функций, Баг (реквест)",
@@ -1070,7 +1070,7 @@ const BILLZ_DATA = {
     "users": 36963,
     "tpc": 2.79,
     "tpu": 0.3139,
-    "cpt": 9865,
+    "cpt": 7561,
     "newcomers": "Уволены: Шохинабону, Нурлан. Алишерова переведена в КС. Итого: 11 операторов.",
     "csat_pct": 94.6,
     "team_context": "Критический дефицит: 11 операторов, 7-8 в смене. Пиковый час 17:00-22:00 не перекрыт.",
@@ -1182,7 +1182,7 @@ const BILLZ_DATA = {
       "lcr": 0,
       "csat_pct": 95.7,
       "csat_rated": 164,
-      "cost": 23893030,
+      "cost": 18312742,
       "operators": [
         {
           "name": "Атабек",
@@ -1192,7 +1192,7 @@ const BILLZ_DATA = {
           "rating_pct": 87.5,
           "rated": 16,
           "sla_pct": 92.5,
-          "cost": 2476115
+          "cost": 1897811
         },
         {
           "name": "Робия А.",
@@ -1202,7 +1202,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 11,
           "sla_pct": 90.6,
-          "cost": 2476115
+          "cost": 1897811
         },
         {
           "name": "Анасхон",
@@ -1212,7 +1212,7 @@ const BILLZ_DATA = {
           "rating_pct": 92.9,
           "rated": 14,
           "sla_pct": 97.1,
-          "cost": 2416925
+          "cost": 1852445
         },
         {
           "name": "Нурилло",
@@ -1222,7 +1222,7 @@ const BILLZ_DATA = {
           "rating_pct": 92.9,
           "rated": 14,
           "sla_pct": 95.5,
-          "cost": 2377465
+          "cost": 1822201
         },
         {
           "name": "Алиёр",
@@ -1232,7 +1232,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 13,
           "sla_pct": 93.0,
-          "cost": 2061785
+          "cost": 1580249
         },
         {
           "name": "Иззатбек",
@@ -1242,7 +1242,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 6,
           "sla_pct": 93.6,
-          "cost": 1973000
+          "cost": 1512200
         },
         {
           "name": "Тожмухаммад",
@@ -1252,7 +1252,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 11,
           "sla_pct": 90.6,
-          "cost": 1933540
+          "cost": 1481956
         },
         {
           "name": "Сардор Б.",
@@ -1262,7 +1262,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 7,
           "sla_pct": 85.9,
-          "cost": 1913810
+          "cost": 1466834
         },
         {
           "name": "Робия Р.",
@@ -1272,7 +1272,7 @@ const BILLZ_DATA = {
           "rating_pct": 93.1,
           "rated": 29,
           "sla_pct": 91.4,
-          "cost": 1775700
+          "cost": 1360980
         },
         {
           "name": "Ардак",
@@ -1282,7 +1282,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 8,
           "sla_pct": 91.0,
-          "cost": 1706645
+          "cost": 1308053
         },
         {
           "name": "Шохина",
@@ -1292,7 +1292,7 @@ const BILLZ_DATA = {
           "rating_pct": 95.2,
           "rated": 21,
           "sla_pct": 97.8,
-          "cost": 1647455
+          "cost": 1262687
         },
         {
           "name": "Авазбек",
@@ -1302,7 +1302,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 13,
           "sla_pct": 93.3,
-          "cost": 1075285
+          "cost": 824149
         },
         {
           "name": "Дильшод",
@@ -1312,7 +1312,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 1,
           "sla_pct": 80.0,
-          "cost": 49325
+          "cost": 37805
         },
         {
           "name": "Азизбек",
@@ -1322,7 +1322,7 @@ const BILLZ_DATA = {
           "rating_pct": 0.0,
           "rated": 0,
           "sla_pct": 0.0,
-          "cost": 9865
+          "cost": 7561
         }
       ],
       "top_labels": [
@@ -1331,56 +1331,56 @@ const BILLZ_DATA = {
           "tickets": 206,
           "desired": 78,
           "undesired": 125,
-          "cost": 2032190
+          "cost": 1557566
         },
         {
           "name": "Учётная запись - Помощь со входом в аккаунт",
           "tickets": 127,
           "desired": 34,
           "undesired": 92,
-          "cost": 1252855
+          "cost": 960247
         },
         {
           "name": "Документооборот - Создание ссылки для оплаты",
           "tickets": 91,
           "desired": 29,
           "undesired": 60,
-          "cost": 897715
+          "cost": 688051
         },
         {
           "name": "Оборудование - Установка/Настройка/Удаление принтера",
           "tickets": 59,
           "desired": 42,
           "undesired": 17,
-          "cost": 582035
+          "cost": 446099
         },
         {
           "name": "Массовый сбой BILLZ",
           "tickets": 57,
           "desired": 14,
           "undesired": 43,
-          "cost": 562305
+          "cost": 430977
         },
         {
           "name": "Вопрос не по программе",
           "tickets": 50,
           "desired": 18,
           "undesired": 32,
-          "cost": 493250
+          "cost": 378050
         },
         {
           "name": "Кассовые смены — Открытие/Закрытие смен",
           "tickets": 49,
           "desired": 7,
           "undesired": 42,
-          "cost": 483385
+          "cost": 370489
         },
         {
           "name": "Каталог — изменение свойств товара",
           "tickets": 41,
           "desired": 17,
           "undesired": 22,
-          "cost": 404465
+          "cost": 310001
         }
       ],
       "top_companies": [
@@ -1389,7 +1389,7 @@ const BILLZ_DATA = {
           "tickets": 354,
           "desired": 142,
           "undesired": 186,
-          "cost": 3492210,
+          "cost": 2676594,
           "top_labels": [
             {
               "label": "Документооборот - Создание ссылки для оплаты",
@@ -1410,7 +1410,7 @@ const BILLZ_DATA = {
           "tickets": 35,
           "desired": 14,
           "undesired": 20,
-          "cost": 345275,
+          "cost": 264635,
           "top_labels": [
             {
               "label": "Маркетинг - Работа с Сертификатом/Ваучером",
@@ -1431,7 +1431,7 @@ const BILLZ_DATA = {
           "tickets": 29,
           "desired": 3,
           "undesired": 26,
-          "cost": 286085,
+          "cost": 219269,
           "top_labels": [
             {
               "label": "Кассовые смены — Открытие/Закрытие смен",
@@ -1452,7 +1452,7 @@ const BILLZ_DATA = {
           "tickets": 28,
           "desired": 14,
           "undesired": 12,
-          "cost": 276220,
+          "cost": 211708,
           "top_labels": [
             {
               "label": "Оборудование - Установка Anydesk/BILLZ Desktop/Программы компьютера и тд.",
@@ -1473,7 +1473,7 @@ const BILLZ_DATA = {
           "tickets": 18,
           "desired": 11,
           "undesired": 7,
-          "cost": 177570,
+          "cost": 136098,
           "top_labels": [
             {
               "label": "Кассовые смены — Открытие/Закрытие смен",
@@ -1509,7 +1509,7 @@ const BILLZ_DATA = {
       "lcr": 0,
       "csat_pct": 95.2,
       "csat_rated": 189,
-      "cost": 28292820,
+      "cost": 21684948,
       "operators": [
         {
           "name": "Анасхон",
@@ -1519,7 +1519,7 @@ const BILLZ_DATA = {
           "rating_pct": 97.3,
           "rated": 37,
           "sla_pct": 97.1,
-          "cost": 4360330
+          "cost": 3341962
         },
         {
           "name": "Робия Р.",
@@ -1529,7 +1529,7 @@ const BILLZ_DATA = {
           "rating_pct": 91.7,
           "rated": 36,
           "sla_pct": 91.4,
-          "cost": 4015055
+          "cost": 3077327
         },
         {
           "name": "Нурилло",
@@ -1539,7 +1539,7 @@ const BILLZ_DATA = {
           "rating_pct": 94.4,
           "rated": 18,
           "sla_pct": 95.5,
-          "cost": 3117340
+          "cost": 2389276
         },
         {
           "name": "Алиёр",
@@ -1549,7 +1549,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 14,
           "sla_pct": 93.0,
-          "cost": 3048285
+          "cost": 2336349
         },
         {
           "name": "Ардак",
@@ -1559,7 +1559,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 10,
           "sla_pct": 91.0,
-          "cost": 2515575
+          "cost": 1928055
         },
         {
           "name": "Атабек",
@@ -1569,7 +1569,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 10,
           "sla_pct": 92.5,
-          "cost": 2407060
+          "cost": 1844884
         },
         {
           "name": "Тожмухаммад",
@@ -1579,7 +1579,7 @@ const BILLZ_DATA = {
           "rating_pct": 90.9,
           "rated": 11,
           "sla_pct": 90.6,
-          "cost": 2387330
+          "cost": 1829762
         },
         {
           "name": "Авазбек",
@@ -1589,7 +1589,7 @@ const BILLZ_DATA = {
           "rating_pct": 91.2,
           "rated": 34,
           "sla_pct": 93.3,
-          "cost": 2199895
+          "cost": 1686103
         },
         {
           "name": "Сардор Б.",
@@ -1599,7 +1599,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 7,
           "sla_pct": 85.9,
-          "cost": 2130840
+          "cost": 1633176
         },
         {
           "name": "Робия А.",
@@ -1609,7 +1609,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 4,
           "sla_pct": 90.6,
-          "cost": 907580
+          "cost": 695612
         },
         {
           "name": "Дильшод",
@@ -1619,7 +1619,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 2,
           "sla_pct": 46.7,
-          "cost": 660955
+          "cost": 506587
         },
         {
           "name": "Шохина",
@@ -1629,7 +1629,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 3,
           "sla_pct": 97.8,
-          "cost": 325545
+          "cost": 249513
         },
         {
           "name": "Нурлан",
@@ -1639,7 +1639,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 2,
           "sla_pct": 85.7,
-          "cost": 147975
+          "cost": 113415
         },
         {
           "name": "Камолиддин",
@@ -1649,7 +1649,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 1,
           "sla_pct": 91.8,
-          "cost": 69055
+          "cost": 52927
         }
       ],
       "top_labels": [
@@ -1658,56 +1658,56 @@ const BILLZ_DATA = {
           "tickets": 423,
           "desired": 119,
           "undesired": 255,
-          "cost": 4172895
+          "cost": 3198303
         },
         {
           "name": "Документооборот - Создание ссылки для оплаты",
           "tickets": 150,
           "desired": 35,
           "undesired": 115,
-          "cost": 1479750
+          "cost": 1134150
         },
         {
           "name": "Оборудование - Установка/Настройка/Удаление принтера",
           "tickets": 109,
           "desired": 84,
           "undesired": 22,
-          "cost": 1075285
+          "cost": 824149
         },
         {
           "name": "Учётная запись - Блокировка/Разблокировка аккаунта",
           "tickets": 75,
           "desired": 24,
           "undesired": 50,
-          "cost": 739875
+          "cost": 567075
         },
         {
           "name": "Учётная запись - Помощь со входом в аккаунт",
           "tickets": 71,
           "desired": 17,
           "undesired": 54,
-          "cost": 700415
+          "cost": 536831
         },
         {
           "name": "Каталог — изменение свойств товара",
           "tickets": 65,
           "desired": 26,
           "undesired": 33,
-          "cost": 641225
+          "cost": 491465
         },
         {
           "name": "Кассовые смены — Открытие/Закрытие смен",
           "tickets": 53,
           "desired": 27,
           "undesired": 26,
-          "cost": 522845
+          "cost": 400733
         },
         {
           "name": "Вопрос не по программе",
           "tickets": 41,
           "desired": 9,
           "undesired": 28,
-          "cost": 404465
+          "cost": 310001
         }
       ],
       "top_companies": [
@@ -1716,7 +1716,7 @@ const BILLZ_DATA = {
           "tickets": 479,
           "desired": 177,
           "undesired": 249,
-          "cost": 4725335,
+          "cost": 3621719,
           "top_labels": [
             {
               "label": "Документооборот - Создание ссылки для оплаты",
@@ -1737,7 +1737,7 @@ const BILLZ_DATA = {
           "tickets": 31,
           "desired": 12,
           "undesired": 19,
-          "cost": 305815,
+          "cost": 234391,
           "top_labels": [
             {
               "label": "Кассовые смены — Открытие/Закрытие смен",
@@ -1758,7 +1758,7 @@ const BILLZ_DATA = {
           "tickets": 29,
           "desired": 12,
           "undesired": 16,
-          "cost": 286085,
+          "cost": 219269,
           "top_labels": [
             {
               "label": "Кассовые смены — Открытие/Закрытие смен",
@@ -1779,7 +1779,7 @@ const BILLZ_DATA = {
           "tickets": 27,
           "desired": 10,
           "undesired": 17,
-          "cost": 266355,
+          "cost": 204147,
           "top_labels": [
             {
               "label": "Desktop - Ошибка синхронизации",
@@ -1800,7 +1800,7 @@ const BILLZ_DATA = {
           "tickets": 26,
           "desired": 14,
           "undesired": 11,
-          "cost": 256490,
+          "cost": 196586,
           "top_labels": [
             {
               "label": "Баг (реквест), Desktop - Ошибка синхронизации",
@@ -1836,7 +1836,7 @@ const BILLZ_DATA = {
       "lcr": 7.8,
       "csat_pct": 95.2,
       "csat_rated": 165,
-      "cost": 26379010,
+      "cost": 20218114,
       "operators": [
         {
           "name": "Анасхон",
@@ -1846,7 +1846,7 @@ const BILLZ_DATA = {
           "rating_pct": 95.5,
           "rated": 22,
           "sla_pct": 97.1,
-          "cost": 3669780
+          "cost": 2812692
         },
         {
           "name": "Атабек",
@@ -1856,7 +1856,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 16,
           "sla_pct": 92.5,
-          "cost": 3117340
+          "cost": 2389276
         },
         {
           "name": "Алиёр",
@@ -1866,7 +1866,7 @@ const BILLZ_DATA = {
           "rating_pct": 95.2,
           "rated": 21,
           "sla_pct": 93.0,
-          "cost": 2989095
+          "cost": 2290983
         },
         {
           "name": "Нурилло",
@@ -1876,7 +1876,7 @@ const BILLZ_DATA = {
           "rating_pct": 88.2,
           "rated": 17,
           "sla_pct": 95.5,
-          "cost": 2910175
+          "cost": 2230495
         },
         {
           "name": "Авазбек",
@@ -1886,7 +1886,7 @@ const BILLZ_DATA = {
           "rating_pct": 94.1,
           "rated": 17,
           "sla_pct": 93.3,
-          "cost": 2762200
+          "cost": 2117080
         },
         {
           "name": "Сардор Б.",
@@ -1896,7 +1896,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 12,
           "sla_pct": 85.9,
-          "cost": 2604360
+          "cost": 1996104
         },
         {
           "name": "Тожмухаммад",
@@ -1906,7 +1906,7 @@ const BILLZ_DATA = {
           "rating_pct": 88.2,
           "rated": 17,
           "sla_pct": 90.6,
-          "cost": 2525440
+          "cost": 1935616
         },
         {
           "name": "Робия Р.",
@@ -1916,7 +1916,7 @@ const BILLZ_DATA = {
           "rating_pct": 95.7,
           "rated": 23,
           "sla_pct": 91.4,
-          "cost": 2298545
+          "cost": 1761713
         },
         {
           "name": "Ардак",
@@ -1926,7 +1926,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 10,
           "sla_pct": 91.0,
-          "cost": 2209760
+          "cost": 1693664
         },
         {
           "name": "Камолиддин",
@@ -1936,7 +1936,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 6,
           "sla_pct": 91.8,
-          "cost": 621495
+          "cost": 476343
         },
         {
           "name": "Дильшод",
@@ -1946,7 +1946,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 4,
           "sla_pct": 19.0,
-          "cost": 542575
+          "cost": 415855
         },
         {
           "name": "Нурлан",
@@ -1956,7 +1956,7 @@ const BILLZ_DATA = {
           "rating_pct": 0.0,
           "rated": 0,
           "sla_pct": 85.7,
-          "cost": 128245
+          "cost": 98293
         }
       ],
       "top_labels": [
@@ -1965,56 +1965,56 @@ const BILLZ_DATA = {
           "tickets": 178,
           "desired": 64,
           "undesired": 98,
-          "cost": 1755970
+          "cost": 1345858
         },
         {
           "name": "Учётная запись - Помощь со входом в аккаунт",
           "tickets": 168,
           "desired": 41,
           "undesired": 109,
-          "cost": 1657320
+          "cost": 1270248
         },
         {
           "name": "Оборудование - Установка/Настройка/Удаление принтера",
           "tickets": 114,
           "desired": 70,
           "undesired": 41,
-          "cost": 1124610
+          "cost": 861954
         },
         {
           "name": "Учётная запись - Блокировка/Разблокировка аккаунта",
           "tickets": 90,
           "desired": 34,
           "undesired": 50,
-          "cost": 887850
+          "cost": 680490
         },
         {
           "name": "Документооборот - Создание ссылки для оплаты",
           "tickets": 84,
           "desired": 9,
           "undesired": 74,
-          "cost": 828660
+          "cost": 635124
         },
         {
           "name": "Вопрос не по программе",
           "tickets": 51,
           "desired": 7,
           "undesired": 38,
-          "cost": 503115
+          "cost": 385611
         },
         {
           "name": "Управление - Создание/Редактирвоание/Удаление роли",
           "tickets": 50,
           "desired": 33,
           "undesired": 17,
-          "cost": 493250
+          "cost": 378050
         },
         {
           "name": "Каталог — изменение свойств товара",
           "tickets": 49,
           "desired": 23,
           "undesired": 22,
-          "cost": 483385
+          "cost": 370489
         }
       ],
       "top_companies": [
@@ -2023,7 +2023,7 @@ const BILLZ_DATA = {
           "tickets": 482,
           "desired": 148,
           "undesired": 284,
-          "cost": 4754930,
+          "cost": 3644402,
           "top_labels": [
             {
               "label": "Учётная запись - Блокировка/Разблокировка аккаунта",
@@ -2044,7 +2044,7 @@ const BILLZ_DATA = {
           "tickets": 38,
           "desired": 21,
           "undesired": 16,
-          "cost": 374870,
+          "cost": 287318,
           "top_labels": [
             {
               "label": "Маркетинг - Работа с Сертификатом/Ваучером",
@@ -2065,7 +2065,7 @@ const BILLZ_DATA = {
           "tickets": 17,
           "desired": 6,
           "undesired": 4,
-          "cost": 167705,
+          "cost": 128537,
           "top_labels": [
             {
               "label": "Оборудование - Установка/Настройка/Удаление принтера",
@@ -2086,7 +2086,7 @@ const BILLZ_DATA = {
           "tickets": 14,
           "desired": 8,
           "undesired": 6,
-          "cost": 138110,
+          "cost": 105854,
           "top_labels": [
             {
               "label": "Кассовые смены — Открытие/Закрытие смен",
@@ -2107,7 +2107,7 @@ const BILLZ_DATA = {
           "tickets": 14,
           "desired": 8,
           "undesired": 5,
-          "cost": 138110,
+          "cost": 105854,
           "top_labels": [
             {
               "label": "Desktop - Ошибка синхронизации",
@@ -2143,7 +2143,7 @@ const BILLZ_DATA = {
       "lcr": 6.0,
       "csat_pct": 94.9,
       "csat_rated": 117,
-      "cost": 22344225,
+      "cost": 17125665,
       "operators": [
         {
           "name": "Иззатбек",
@@ -2153,7 +2153,7 @@ const BILLZ_DATA = {
           "rating_pct": 83.3,
           "rated": 6,
           "sla_pct": 93.6,
-          "cost": 3048285
+          "cost": 2336349
         },
         {
           "name": "Анасхон",
@@ -2163,7 +2163,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 16,
           "sla_pct": 97.1,
-          "cost": 2781930
+          "cost": 2132202
         },
         {
           "name": "Атабек",
@@ -2173,7 +2173,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 12,
           "sla_pct": 92.5,
-          "cost": 2545170
+          "cost": 1950738
         },
         {
           "name": "Авазбек",
@@ -2183,7 +2183,7 @@ const BILLZ_DATA = {
           "rating_pct": 88.9,
           "rated": 18,
           "sla_pct": 93.3,
-          "cost": 2436655
+          "cost": 1867567
         },
         {
           "name": "Сардор Б.",
@@ -2193,7 +2193,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 10,
           "sla_pct": 85.9,
-          "cost": 2180165
+          "cost": 1670981
         },
         {
           "name": "Алиёр",
@@ -2203,7 +2203,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 5,
           "sla_pct": 93.0,
-          "cost": 1903945
+          "cost": 1459273
         },
         {
           "name": "Тожмухаммад",
@@ -2213,7 +2213,7 @@ const BILLZ_DATA = {
           "rating_pct": 70.0,
           "rated": 10,
           "sla_pct": 90.6,
-          "cost": 1874350
+          "cost": 1436590
         },
         {
           "name": "Нурилло",
@@ -2223,7 +2223,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 9,
           "sla_pct": 95.5,
-          "cost": 1746105
+          "cost": 1338297
         },
         {
           "name": "Ардак",
@@ -2233,7 +2233,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 10,
           "sla_pct": 91.0,
-          "cost": 1598130
+          "cost": 1224882
         },
         {
           "name": "Робия Р.",
@@ -2243,7 +2243,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 14,
           "sla_pct": 91.4,
-          "cost": 1558670
+          "cost": 1194638
         },
         {
           "name": "Камолиддин",
@@ -2253,7 +2253,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 4,
           "sla_pct": 91.8,
-          "cost": 384735
+          "cost": 294879
         },
         {
           "name": "Дильшод",
@@ -2263,7 +2263,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 3,
           "sla_pct": 70.0,
-          "cost": 276220
+          "cost": 211708
         },
         {
           "name": "Азизбек",
@@ -2273,7 +2273,7 @@ const BILLZ_DATA = {
           "rating_pct": 0.0,
           "rated": 0,
           "sla_pct": 0.0,
-          "cost": 9865
+          "cost": 7561
         }
       ],
       "top_labels": [
@@ -2282,56 +2282,56 @@ const BILLZ_DATA = {
           "tickets": 94,
           "desired": 69,
           "undesired": 25,
-          "cost": 927310
+          "cost": 710734
         },
         {
           "name": "Учётная запись - Помощь со входом в аккаунт",
           "tickets": 83,
           "desired": 39,
           "undesired": 44,
-          "cost": 818795
+          "cost": 627563
         },
         {
           "name": "Вопрос не по программе",
           "tickets": 69,
           "desired": 33,
           "undesired": 36,
-          "cost": 680685
+          "cost": 521709
         },
         {
           "name": "Каталог — настройка печати ценника",
           "tickets": 63,
           "desired": 41,
           "undesired": 22,
-          "cost": 621495
+          "cost": 476343
         },
         {
           "name": "Кассовые смены — Открытие/Закрытие смен",
           "tickets": 53,
           "desired": 11,
           "undesired": 42,
-          "cost": 522845
+          "cost": 400733
         },
         {
           "name": "Каталог — изменение свойств товара",
           "tickets": 49,
           "desired": 25,
           "undesired": 23,
-          "cost": 483385
+          "cost": 370489
         },
         {
           "name": "Учётная запись - Блокировка/Разблокировка аккаунта",
           "tickets": 45,
           "desired": 24,
           "undesired": 20,
-          "cost": 443925
+          "cost": 340245
         },
         {
           "name": "Документооборот - Оплата за тариф",
           "tickets": 42,
           "desired": 22,
           "undesired": 20,
-          "cost": 414330
+          "cost": 317562
         }
       ],
       "top_companies": [
@@ -2340,7 +2340,7 @@ const BILLZ_DATA = {
           "tickets": 385,
           "desired": 169,
           "undesired": 196,
-          "cost": 3798025,
+          "cost": 2910985,
           "top_labels": [
             {
               "label": "Учётная запись - Блокировка/Разблокировка аккаунта",
@@ -2361,7 +2361,7 @@ const BILLZ_DATA = {
           "tickets": 29,
           "desired": 5,
           "undesired": 24,
-          "cost": 286085,
+          "cost": 219269,
           "top_labels": [
             {
               "label": "Кассовые смены — Открытие/Закрытие смен",
@@ -2382,7 +2382,7 @@ const BILLZ_DATA = {
           "tickets": 28,
           "desired": 13,
           "undesired": 15,
-          "cost": 276220,
+          "cost": 211708,
           "top_labels": [
             {
               "label": "Маркетинг - Работа с Сертификатом/Ваучером",
@@ -2403,7 +2403,7 @@ const BILLZ_DATA = {
           "tickets": 23,
           "desired": 5,
           "undesired": 18,
-          "cost": 226895,
+          "cost": 173903,
           "top_labels": [
             {
               "label": "Все продажи - Удаление/Редактирование продажи",
@@ -2424,7 +2424,7 @@ const BILLZ_DATA = {
           "tickets": 16,
           "desired": 7,
           "undesired": 9,
-          "cost": 157840,
+          "cost": 120976,
           "top_labels": [
             {
               "label": "Долги клиентов - Просмотр статистики по долгам",
@@ -2464,7 +2464,7 @@ const BILLZ_DATA = {
       "csat_pct": 90.0,
       "csat_rated": 90,
       "repeat_pct": 5.8,
-      "cost": 13564375,
+      "cost": 10396375,
       "operators": [
         {
           "name": "Сардор Б.",
@@ -2474,7 +2474,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 6,
           "sla_pct": 85.9,
-          "cost": 1765835
+          "cost": 1353419
         },
         {
           "name": "Атабек",
@@ -2484,7 +2484,7 @@ const BILLZ_DATA = {
           "rating_pct": 88.2,
           "rated": 17,
           "sla_pct": 92.5,
-          "cost": 1716510
+          "cost": 1315614
         },
         {
           "name": "Авазбек",
@@ -2494,7 +2494,7 @@ const BILLZ_DATA = {
           "rating_pct": 86.7,
           "rated": 15,
           "sla_pct": 93.3,
-          "cost": 1519210
+          "cost": 1164394
         },
         {
           "name": "Анасхон",
@@ -2504,7 +2504,7 @@ const BILLZ_DATA = {
           "rating_pct": 92.3,
           "rated": 13,
           "sla_pct": 97.1,
-          "cost": 1499480
+          "cost": 1149272
         },
         {
           "name": "Иззатбек",
@@ -2514,7 +2514,7 @@ const BILLZ_DATA = {
           "rating_pct": 85.7,
           "rated": 7,
           "sla_pct": 93.6,
-          "cost": 1331775
+          "cost": 1020735
         },
         {
           "name": "Тожмухаммад",
@@ -2524,7 +2524,7 @@ const BILLZ_DATA = {
           "rating_pct": 50.0,
           "rated": 2,
           "sla_pct": 90.6,
-          "cost": 1223260
+          "cost": 937564
         },
         {
           "name": "Робия Р.",
@@ -2534,7 +2534,7 @@ const BILLZ_DATA = {
           "rating_pct": 90.0,
           "rated": 10,
           "sla_pct": 91.4,
-          "cost": 1154205
+          "cost": 884637
         },
         {
           "name": "Ардак",
@@ -2544,7 +2544,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 6,
           "sla_pct": 91.0,
-          "cost": 1144340
+          "cost": 877076
         },
         {
           "name": "Алиёр",
@@ -2554,7 +2554,7 @@ const BILLZ_DATA = {
           "rating_pct": 75.0,
           "rated": 4,
           "sla_pct": 93.0,
-          "cost": 1095015
+          "cost": 839271
         },
         {
           "name": "Нурилло",
@@ -2564,7 +2564,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 6,
           "sla_pct": 95.5,
-          "cost": 680685
+          "cost": 521709
         },
         {
           "name": "Камолиддин",
@@ -2574,7 +2574,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 4,
           "sla_pct": 91.8,
-          "cost": 414330
+          "cost": 317562
         },
         {
           "name": "Азизбек",
@@ -2584,7 +2584,7 @@ const BILLZ_DATA = {
           "rating_pct": 0.0,
           "rated": 0,
           "sla_pct": 0.0,
-          "cost": 9865
+          "cost": 7561
         },
         {
           "name": "Хуршид",
@@ -2594,7 +2594,7 @@ const BILLZ_DATA = {
           "rating_pct": 0.0,
           "rated": 0,
           "sla_pct": 0.0,
-          "cost": 9865
+          "cost": 7561
         }
       ],
       "top_labels": [
@@ -2603,56 +2603,56 @@ const BILLZ_DATA = {
           "tickets": 51,
           "desired": 36,
           "undesired": 14,
-          "cost": 503115
+          "cost": 385611
         },
         {
           "name": "Учётная запись - Блокировка/Разблокировка аккаунта",
           "tickets": 48,
           "desired": 23,
           "undesired": 24,
-          "cost": 473520
+          "cost": 362928
         },
         {
           "name": "Учётная запись - Помощь со входом в аккаунт",
           "tickets": 45,
           "desired": 24,
           "undesired": 21,
-          "cost": 443925
+          "cost": 340245
         },
         {
           "name": "Документооборот - Оплата за тариф",
           "tickets": 40,
           "desired": 22,
           "undesired": 17,
-          "cost": 394600
+          "cost": 302440
         },
         {
           "name": "Массовый сбой BILLZ",
           "tickets": 35,
           "desired": 1,
           "undesired": 34,
-          "cost": 345275
+          "cost": 264635
         },
         {
           "name": "Документооборот - Создание ссылки для оплаты",
           "tickets": 33,
           "desired": 9,
           "undesired": 24,
-          "cost": 325545
+          "cost": 249513
         },
         {
           "name": "Кассовые смены — Открытие/Закрытие смен",
           "tickets": 27,
           "desired": 8,
           "undesired": 19,
-          "cost": 266355
+          "cost": 204147
         },
         {
           "name": "Настройка - Создание/Редактирование/Удаление доп. точки",
           "tickets": 26,
           "desired": 21,
           "undesired": 5,
-          "cost": 256490
+          "cost": 196586
         }
       ],
       "top_companies": [
@@ -2661,7 +2661,7 @@ const BILLZ_DATA = {
           "tickets": 265,
           "desired": 127,
           "undesired": 121,
-          "cost": 2614225,
+          "cost": 2003665,
           "top_labels": [
             {
               "label": "Документооборот - Создание ссылки для оплаты",
@@ -2682,7 +2682,7 @@ const BILLZ_DATA = {
           "tickets": 18,
           "desired": 3,
           "undesired": 15,
-          "cost": 177570,
+          "cost": 136098,
           "top_labels": [
             {
               "label": "Кассовые смены — Открытие/Закрытие смен",
@@ -2699,7 +2699,7 @@ const BILLZ_DATA = {
           "tickets": 17,
           "desired": 9,
           "undesired": 8,
-          "cost": 167705,
+          "cost": 128537,
           "top_labels": [
             {
               "label": "Все продажи - Удаление/Редактирование продажи",
@@ -2720,7 +2720,7 @@ const BILLZ_DATA = {
           "tickets": 13,
           "desired": 10,
           "undesired": 3,
-          "cost": 128245,
+          "cost": 98293,
           "top_labels": [
             {
               "label": "Настройка - Создание/Редактирование/Удаление доп. точки",
@@ -2741,7 +2741,7 @@ const BILLZ_DATA = {
           "tickets": 10,
           "desired": 10,
           "undesired": 0,
-          "cost": 98650,
+          "cost": 75610,
           "top_labels": [
             {
               "label": "Инвентаризация — консультация по модулю (частичное обучение)",
@@ -2775,7 +2775,7 @@ const BILLZ_DATA = {
       "sla_pct": 83.0,
       "sla_not_met": 17.0,
       "avg_close_h": 0.04,
-      "cost": 5159395,
+      "cost": 3954403,
       "csat_pct": 97.2,
       "csat_rated": 36,
       "repeat_pct": 10.7,
@@ -2811,49 +2811,49 @@ const BILLZ_DATA = {
           "name": "Документооборот - Оплата за тариф",
           "tickets": 39,
           "undesired": 30,
-          "cost": 384735
+          "cost": 294879
         },
         {
           "name": "Массовый сбой BILLZ",
           "tickets": 35,
           "undesired": 26,
-          "cost": 345275
+          "cost": 264635
         },
         {
           "name": "Документооборот - Создание ссылки для оплаты",
           "tickets": 19,
           "undesired": 11,
-          "cost": 187435
+          "cost": 143659
         },
         {
           "name": "Вопрос не по программе",
           "tickets": 19,
           "undesired": 9,
-          "cost": 187435
+          "cost": 143659
         },
         {
           "name": "Каталог — изменение свойств товара",
           "tickets": 13,
           "undesired": 9,
-          "cost": 128245
+          "cost": 98293
         },
         {
           "name": "Оборудование - Установка/Настройка/Удаление принтера",
           "tickets": 12,
           "undesired": 4,
-          "cost": 118380
+          "cost": 90732
         },
         {
           "name": "Учётная запись - Блокировка/Разблокировка аккаунта",
           "tickets": 11,
           "undesired": 10,
-          "cost": 108515
+          "cost": 83171
         },
         {
           "name": "Управление - Создание/Редактирвоание/Удаление роли",
           "tickets": 10,
           "undesired": 7,
-          "cost": 98650
+          "cost": 75610
         }
       ],
       "operators": [
@@ -2865,7 +2865,7 @@ const BILLZ_DATA = {
           "rating_pct": 90.0,
           "rated": 10,
           "sla_pct": 92.5,
-          "cost": 858255
+          "cost": 657807
         },
         {
           "name": "Нурилло",
@@ -2875,7 +2875,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 4,
           "sla_pct": 96.2,
-          "cost": 700415
+          "cost": 536831
         },
         {
           "name": "Иззатбек",
@@ -2885,7 +2885,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 3,
           "sla_pct": 61.1,
-          "cost": 690550
+          "cost": 529270
         },
         {
           "name": "Атабек",
@@ -2895,7 +2895,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 1,
           "sla_pct": 95.0,
-          "cost": 690550
+          "cost": 529270
         },
         {
           "name": "Шохина",
@@ -2905,7 +2905,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 6,
           "sla_pct": 91.2,
-          "cost": 572170
+          "cost": 438538
         },
         {
           "name": "Алиёр",
@@ -2915,7 +2915,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 3,
           "sla_pct": 94.4,
-          "cost": 512980
+          "cost": 393172
         },
         {
           "name": "Робия А.",
@@ -2925,7 +2925,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 4,
           "sla_pct": 57.9,
-          "cost": 493250
+          "cost": 378050
         },
         {
           "name": "Тожмухаммад",
@@ -2935,7 +2935,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 1,
           "sla_pct": 63.6,
-          "cost": 434060
+          "cost": 332684
         },
         {
           "name": "Авазбек",
@@ -2945,7 +2945,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 4,
           "sla_pct": 52.6,
-          "cost": 197300
+          "cost": 151220
         },
         {
           "name": "Ардак",
@@ -2955,7 +2955,7 @@ const BILLZ_DATA = {
           "rating_pct": 0.0,
           "rated": 0,
           "sla_pct": 100.0,
-          "cost": 9865
+          "cost": 7561
         }
       ],
       "top_companies": [
@@ -2964,7 +2964,7 @@ const BILLZ_DATA = {
           "tickets": 80,
           "desired": 19,
           "undesired": 55,
-          "cost": 789200,
+          "cost": 604880,
           "top_labels": [
             {
               "label": "Документооборот - Создание ссылки для оплаты",
@@ -2985,7 +2985,7 @@ const BILLZ_DATA = {
           "tickets": 9,
           "desired": 3,
           "undesired": 5,
-          "cost": 88785,
+          "cost": 68049,
           "top_labels": [
             {
               "label": "Новая продажа - Не удаётся сделать продажу",
@@ -3006,7 +3006,7 @@ const BILLZ_DATA = {
           "tickets": 7,
           "desired": 3,
           "undesired": 4,
-          "cost": 69055,
+          "cost": 52927,
           "top_labels": [
             {
               "label": "Все продажи - Частичное обучение",
@@ -3027,7 +3027,7 @@ const BILLZ_DATA = {
           "tickets": 7,
           "desired": 4,
           "undesired": 3,
-          "cost": 69055,
+          "cost": 52927,
           "top_labels": [
             {
               "label": "Кассовые смены — Открытие/Закрытие смен",
@@ -3048,7 +3048,7 @@ const BILLZ_DATA = {
           "tickets": 6,
           "desired": 1,
           "undesired": 5,
-          "cost": 59190,
+          "cost": 45366,
           "top_labels": [
             {
               "label": "Кассовые смены — Открытие/Закрытие смен",
@@ -3083,7 +3083,7 @@ const BILLZ_DATA = {
       "sla_pct": 85.3,
       "sla_not_met": 14.7,
       "avg_close_h": 0.06,
-      "cost": 5258045,
+      "cost": 4030013,
       "csat_pct": 97.6,
       "csat_rated": 42,
       "repeat_pct": 7.7,
@@ -3121,49 +3121,49 @@ const BILLZ_DATA = {
           "name": "Документооборот - Оплата за тариф",
           "tickets": 72,
           "undesired": 34,
-          "cost": 710280
+          "cost": 544392
         },
         {
           "name": "Документооборот - Создание ссылки для оплаты",
           "tickets": 27,
           "undesired": 16,
-          "cost": 266355
+          "cost": 204147
         },
         {
           "name": "Вопрос не по программе",
           "tickets": 15,
           "undesired": 12,
-          "cost": 147975
+          "cost": 113415
         },
         {
           "name": "Массовый сбой BILLZ",
           "tickets": 14,
           "undesired": 9,
-          "cost": 138110
+          "cost": 105854
         },
         {
           "name": "Каталог — изменение свойств товара",
           "tickets": 13,
           "undesired": 5,
-          "cost": 128245
+          "cost": 98293
         },
         {
           "name": "Оборудование - Установка/Настройка/Удаление принтера",
           "tickets": 13,
           "undesired": 0,
-          "cost": 128245
+          "cost": 98293
         },
         {
           "name": "Документооборот - Консультация по сумме долга",
           "tickets": 12,
           "undesired": 4,
-          "cost": 118380
+          "cost": 90732
         },
         {
           "name": "Новая продажа - Не удаётся сделать продажу",
           "tickets": 10,
           "undesired": 5,
-          "cost": 98650
+          "cost": 75610
         }
       ],
       "operators": [
@@ -3175,7 +3175,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 3,
           "sla_pct": 96.4,
-          "cost": 818795
+          "cost": 627563
         },
         {
           "name": "Иззатбек",
@@ -3185,7 +3185,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 2,
           "sla_pct": 65.2,
-          "cost": 700415
+          "cost": 536831
         },
         {
           "name": "Ардак",
@@ -3195,7 +3195,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 3,
           "sla_pct": 73.9,
-          "cost": 670820
+          "cost": 514148
         },
         {
           "name": "Робия Р.",
@@ -3205,7 +3205,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 7,
           "sla_pct": 81.1,
-          "cost": 670820
+          "cost": 514148
         },
         {
           "name": "Алиёр",
@@ -3215,7 +3215,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 5,
           "sla_pct": 84.2,
-          "cost": 512980
+          "cost": 393172
         },
         {
           "name": "Сардор Б.",
@@ -3225,7 +3225,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 3,
           "sla_pct": 87.5,
-          "cost": 503115
+          "cost": 385611
         },
         {
           "name": "Нурилло",
@@ -3235,7 +3235,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 3,
           "sla_pct": 100.0,
-          "cost": 493250
+          "cost": 378050
         },
         {
           "name": "Авазбек",
@@ -3245,7 +3245,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 5,
           "sla_pct": 88.2,
-          "cost": 434060
+          "cost": 332684
         },
         {
           "name": "Шохина",
@@ -3255,7 +3255,7 @@ const BILLZ_DATA = {
           "rating_pct": 90.0,
           "rated": 10,
           "sla_pct": 92.1,
-          "cost": 414330
+          "cost": 317562
         },
         {
           "name": "Дильшод",
@@ -3265,7 +3265,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 1,
           "sla_pct": 100.0,
-          "cost": 39460
+          "cost": 30244
         }
       ],
       "top_companies": [
@@ -3274,7 +3274,7 @@ const BILLZ_DATA = {
           "tickets": 90,
           "desired": 49,
           "undesired": 32,
-          "cost": 887850,
+          "cost": 680490,
           "top_labels": [
             {
               "label": "Документооборот - Создание ссылки для оплаты",
@@ -3295,7 +3295,7 @@ const BILLZ_DATA = {
           "tickets": 9,
           "desired": 4,
           "undesired": 5,
-          "cost": 88785,
+          "cost": 68049,
           "top_labels": [
             {
               "label": "Новая продажа - Возврат/Обмен, Баг (реквест)",
@@ -3316,7 +3316,7 @@ const BILLZ_DATA = {
           "tickets": 5,
           "desired": 2,
           "undesired": 3,
-          "cost": 49325,
+          "cost": 37805,
           "top_labels": [
             {
               "label": "Отчёты - Разбор отчётов",
@@ -3337,7 +3337,7 @@ const BILLZ_DATA = {
           "tickets": 5,
           "desired": 2,
           "undesired": 3,
-          "cost": 49325,
+          "cost": 37805,
           "top_labels": [
             {
               "label": "Документооборот - Оплата за тариф",
@@ -3358,7 +3358,7 @@ const BILLZ_DATA = {
           "tickets": 5,
           "desired": 1,
           "undesired": 4,
-          "cost": 49325,
+          "cost": 37805,
           "top_labels": [
             {
               "label": "Массовый сбой BILLZ",
@@ -3393,7 +3393,7 @@ const BILLZ_DATA = {
       "sla_pct": 70.7,
       "sla_not_met": 29.3,
       "avg_close_h": 0.07,
-      "cost": 5623050,
+      "cost": 4309770,
       "csat_pct": 90.2,
       "csat_rated": 41,
       "repeat_pct": 4.2,
@@ -3431,49 +3431,49 @@ const BILLZ_DATA = {
           "name": "Учётная запись - Помощь со входом в аккаунт",
           "tickets": 76,
           "undesired": 57,
-          "cost": 749740
+          "cost": 574636
         },
         {
           "name": "Документооборот - Оплата за тариф",
           "tickets": 47,
           "undesired": 21,
-          "cost": 463655
+          "cost": 355367
         },
         {
           "name": "Документооборот - Создание ссылки для оплаты",
           "tickets": 11,
           "undesired": 7,
-          "cost": 108515
+          "cost": 83171
         },
         {
           "name": "Оборудование - Установка/Настройка/Удаление принтера",
           "tickets": 10,
           "undesired": 2,
-          "cost": 98650
+          "cost": 75610
         },
         {
           "name": "Импорт — импорт товаров через Excel",
           "tickets": 10,
           "undesired": 5,
-          "cost": 98650
+          "cost": 75610
         },
         {
           "name": "Массовый сбой BILLZ",
           "tickets": 8,
           "undesired": 8,
-          "cost": 78920
+          "cost": 60488
         },
         {
           "name": "Управление - Создание/Редактирвоание/Удаление сотрудника",
           "tickets": 7,
           "undesired": 3,
-          "cost": 69055
+          "cost": 52927
         },
         {
           "name": "Кассовые смены — Открытие/Закрытие смен",
           "tickets": 7,
           "undesired": 5,
-          "cost": 69055
+          "cost": 52927
         }
       ],
       "operators": [
@@ -3485,7 +3485,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 5,
           "sla_pct": 71.4,
-          "cost": 1025960
+          "cost": 786344
         },
         {
           "name": "Атабек",
@@ -3495,7 +3495,7 @@ const BILLZ_DATA = {
           "rating_pct": 77.8,
           "rated": 9,
           "sla_pct": 71.4,
-          "cost": 956905
+          "cost": 733417
         },
         {
           "name": "Иззатбек",
@@ -3505,7 +3505,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 1,
           "sla_pct": 78.9,
-          "cost": 582035
+          "cost": 446099
         },
         {
           "name": "Сардор Б.",
@@ -3515,7 +3515,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 2,
           "sla_pct": 27.3,
-          "cost": 582035
+          "cost": 446099
         },
         {
           "name": "Робия Р.",
@@ -3525,7 +3525,7 @@ const BILLZ_DATA = {
           "rating_pct": 83.3,
           "rated": 12,
           "sla_pct": 61.5,
-          "cost": 562305
+          "cost": 430977
         },
         {
           "name": "Робия А.",
@@ -3535,7 +3535,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 3,
           "sla_pct": 85.7,
-          "cost": 532710
+          "cost": 408294
         },
         {
           "name": "Алиёр",
@@ -3545,7 +3545,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 4,
           "sla_pct": 83.3,
-          "cost": 483385
+          "cost": 370489
         },
         {
           "name": "Авазбек",
@@ -3555,7 +3555,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 4,
           "sla_pct": 83.9,
-          "cost": 443925
+          "cost": 340245
         },
         {
           "name": "Тожмухаммад",
@@ -3565,7 +3565,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 1,
           "sla_pct": 63.6,
-          "cost": 414330
+          "cost": 317562
         },
         {
           "name": "Анасхон",
@@ -3575,7 +3575,7 @@ const BILLZ_DATA = {
           "rating_pct": 0.0,
           "rated": 0,
           "sla_pct": 0.0,
-          "cost": 9865
+          "cost": 7561
         },
         {
           "name": "Азизбек",
@@ -3585,7 +3585,7 @@ const BILLZ_DATA = {
           "rating_pct": 0.0,
           "rated": 0,
           "sla_pct": 0.0,
-          "cost": 9865
+          "cost": 7561
         },
         {
           "name": "Дильшод",
@@ -3595,7 +3595,7 @@ const BILLZ_DATA = {
           "rating_pct": 0.0,
           "rated": 0,
           "sla_pct": 0.0,
-          "cost": 9865
+          "cost": 7561
         },
         {
           "name": "Шохина",
@@ -3605,7 +3605,7 @@ const BILLZ_DATA = {
           "rating_pct": 0.0,
           "rated": 0,
           "sla_pct": 0.0,
-          "cost": 9865
+          "cost": 7561
         }
       ],
       "top_companies": [
@@ -3614,7 +3614,7 @@ const BILLZ_DATA = {
           "tickets": 69,
           "desired": 27,
           "undesired": 36,
-          "cost": 680685,
+          "cost": 521709,
           "top_labels": [
             {
               "label": "Документооборот - Создание ссылки для оплаты",
@@ -3635,7 +3635,7 @@ const BILLZ_DATA = {
           "tickets": 15,
           "desired": 9,
           "undesired": 4,
-          "cost": 147975,
+          "cost": 113415,
           "top_labels": [
             {
               "label": "Desktop - Ошибка синхронизации, Оборудование - Установка Anydesk/BILLZ Desktop/Программы компьютера и тд.",
@@ -3656,7 +3656,7 @@ const BILLZ_DATA = {
           "tickets": 7,
           "desired": 3,
           "undesired": 4,
-          "cost": 69055,
+          "cost": 52927,
           "top_labels": [
             {
               "label": "Маркетинг - Работа с Сертификатом/Ваучером",
@@ -3677,7 +3677,7 @@ const BILLZ_DATA = {
           "tickets": 6,
           "desired": 2,
           "undesired": 3,
-          "cost": 59190,
+          "cost": 45366,
           "top_labels": [
             {
               "label": "Оборудование - Загрузка базу товаров в весы",
@@ -3694,7 +3694,7 @@ const BILLZ_DATA = {
           "tickets": 6,
           "desired": 5,
           "undesired": 1,
-          "cost": 59190,
+          "cost": 45366,
           "top_labels": [
             {
               "label": "Новая продажа - Не удаётся сделать продажу",
@@ -3729,7 +3729,7 @@ const BILLZ_DATA = {
       "sla_pct": 66.3,
       "sla_not_met": 33.7,
       "avg_close_h": 0.07,
-      "cost": 4261680,
+      "cost": 3266352,
       "csat_pct": 96.4,
       "csat_rated": 28,
       "repeat_pct": 6.0,
@@ -3766,49 +3766,49 @@ const BILLZ_DATA = {
           "name": "Документооборот - Создание ссылки для оплаты",
           "tickets": 25,
           "undesired": 22,
-          "cost": 246625
+          "cost": 189025
         },
         {
           "name": "Учётная запись - Помощь со входом в аккаунт",
           "tickets": 24,
           "undesired": 18,
-          "cost": 236760
+          "cost": 181464
         },
         {
           "name": "Документооборот - Оплата за тариф",
           "tickets": 20,
           "undesired": 17,
-          "cost": 197300
+          "cost": 151220
         },
         {
           "name": "Оборудование - Установка/Настройка/Удаление принтера",
           "tickets": 16,
           "undesired": 6,
-          "cost": 157840
+          "cost": 120976
         },
         {
           "name": "Кассовые смены — Открытие/Закрытие смен",
           "tickets": 15,
           "undesired": 15,
-          "cost": 147975
+          "cost": 113415
         },
         {
           "name": "Управление - Создание/Редактирвоание/Удаление сотрудника",
           "tickets": 11,
           "undesired": 5,
-          "cost": 108515
+          "cost": 83171
         },
         {
           "name": "Вопрос не по программе",
           "tickets": 10,
           "undesired": 7,
-          "cost": 98650
+          "cost": 75610
         },
         {
           "name": "Управление - Создание/Редактирвоание/Удаление роли",
           "tickets": 10,
           "undesired": 5,
-          "cost": 98650
+          "cost": 75610
         }
       ],
       "operators": [
@@ -3820,7 +3820,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 3,
           "sla_pct": 50.0,
-          "cost": 956905
+          "cost": 733417
         },
         {
           "name": "Атабек",
@@ -3830,7 +3830,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 6,
           "sla_pct": 74.1,
-          "cost": 828660
+          "cost": 635124
         },
         {
           "name": "Сардор Б.",
@@ -3840,7 +3840,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 2,
           "sla_pct": 58.8,
-          "cost": 828660
+          "cost": 635124
         },
         {
           "name": "Нурилло",
@@ -3850,7 +3850,7 @@ const BILLZ_DATA = {
           "rating_pct": 83.3,
           "rated": 6,
           "sla_pct": 84.0,
-          "cost": 749740
+          "cost": 574636
         },
         {
           "name": "Тожмухаммад",
@@ -3860,7 +3860,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 8,
           "sla_pct": 43.5,
-          "cost": 582035
+          "cost": 446099
         },
         {
           "name": "Шохина",
@@ -3870,7 +3870,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 3,
           "sla_pct": 90.6,
-          "cost": 315680
+          "cost": 241952
         }
       ],
       "top_companies": [
@@ -3879,7 +3879,7 @@ const BILLZ_DATA = {
           "tickets": 71,
           "desired": 31,
           "undesired": 40,
-          "cost": 700415,
+          "cost": 536831,
           "top_labels": [
             {
               "label": "Документооборот - Создание ссылки для оплаты",
@@ -3900,7 +3900,7 @@ const BILLZ_DATA = {
           "tickets": 6,
           "desired": 0,
           "undesired": 6,
-          "cost": 59190,
+          "cost": 45366,
           "top_labels": [
             {
               "label": "Кассовые смены — Открытие/Закрытие смен",
@@ -3913,7 +3913,7 @@ const BILLZ_DATA = {
           "tickets": 6,
           "desired": 3,
           "undesired": 3,
-          "cost": 59190,
+          "cost": 45366,
           "top_labels": [
             {
               "label": "Кассовые операции - Удаление расхода/дохода/инкассации",
@@ -3934,7 +3934,7 @@ const BILLZ_DATA = {
           "tickets": 6,
           "desired": 1,
           "undesired": 5,
-          "cost": 59190,
+          "cost": 45366,
           "top_labels": [
             {
               "label": "Кассовые смены — Открытие/Закрытие смен, Оборудование - Загрузка базу товаров в весы, Бэклог",
@@ -3955,7 +3955,7 @@ const BILLZ_DATA = {
           "tickets": 5,
           "desired": 4,
           "undesired": 1,
-          "cost": 49325,
+          "cost": 37805,
           "top_labels": [
             {
               "label": "Документооборот - Создание ссылки для оплаты",
@@ -3990,7 +3990,7 @@ const BILLZ_DATA = {
       "sla_pct": 85.0,
       "sla_not_met": 15.0,
       "avg_close_h": 0.05,
-      "cost": 3590860,
+      "cost": 2752204,
       "csat_pct": 100.0,
       "csat_rated": 17,
       "repeat_pct": 13.5,
@@ -4026,49 +4026,49 @@ const BILLZ_DATA = {
           "name": "Документооборот - Оплата за тариф",
           "tickets": 28,
           "undesired": 23,
-          "cost": 276220
+          "cost": 211708
         },
         {
           "name": "Кассовые смены — Открытие/Закрытие смен",
           "tickets": 14,
           "undesired": 14,
-          "cost": 138110
+          "cost": 105854
         },
         {
           "name": "Учётная запись - Помощь со входом в аккаунт",
           "tickets": 12,
           "undesired": 9,
-          "cost": 118380
+          "cost": 90732
         },
         {
           "name": "Импорт — импорт товаров через Excel",
           "tickets": 10,
           "undesired": 4,
-          "cost": 98650
+          "cost": 75610
         },
         {
           "name": "Документооборот - Создание ссылки для оплаты",
           "tickets": 9,
           "undesired": 4,
-          "cost": 88785
+          "cost": 68049
         },
         {
           "name": "Каталог — настройка печати ценника",
           "tickets": 8,
           "undesired": 6,
-          "cost": 78920
+          "cost": 60488
         },
         {
           "name": "Каталог — изменение свойств товара",
           "tickets": 8,
           "undesired": 4,
-          "cost": 78920
+          "cost": 60488
         },
         {
           "name": "Каталог — запрос на добавление товара",
           "tickets": 8,
           "undesired": 4,
-          "cost": 78920
+          "cost": 60488
         }
       ],
       "operators": [
@@ -4080,7 +4080,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 1,
           "sla_pct": 95.7,
-          "cost": 730010
+          "cost": 559514
         },
         {
           "name": "Алиёр",
@@ -4090,7 +4090,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 1,
           "sla_pct": 70.0,
-          "cost": 552440
+          "cost": 423416
         },
         {
           "name": "Робия Р.",
@@ -4100,7 +4100,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 10,
           "sla_pct": 79.2,
-          "cost": 542575
+          "cost": 415855
         },
         {
           "name": "Тожмухаммад",
@@ -4110,7 +4110,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 1,
           "sla_pct": 85.7,
-          "cost": 503115
+          "cost": 385611
         },
         {
           "name": "Робия А.",
@@ -4120,7 +4120,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 1,
           "sla_pct": 66.7,
-          "cost": 493250
+          "cost": 378050
         },
         {
           "name": "Нурилло",
@@ -4130,7 +4130,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 1,
           "sla_pct": 77.8,
-          "cost": 434060
+          "cost": 332684
         },
         {
           "name": "Шохина",
@@ -4140,7 +4140,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 2,
           "sla_pct": 97.1,
-          "cost": 335410
+          "cost": 257074
         }
       ],
       "top_companies": [
@@ -4149,7 +4149,7 @@ const BILLZ_DATA = {
           "tickets": 44,
           "desired": 16,
           "undesired": 23,
-          "cost": 434060,
+          "cost": 332684,
           "top_labels": [
             {
               "label": "Документооборот - Создание ссылки для оплаты",
@@ -4170,7 +4170,7 @@ const BILLZ_DATA = {
           "tickets": 9,
           "desired": 0,
           "undesired": 9,
-          "cost": 88785,
+          "cost": 68049,
           "top_labels": [
             {
               "label": "Кассовые смены — Открытие/Закрытие смен",
@@ -4187,7 +4187,7 @@ const BILLZ_DATA = {
           "tickets": 7,
           "desired": 1,
           "undesired": 5,
-          "cost": 69055,
+          "cost": 52927,
           "top_labels": [
             {
               "label": "Долги клиентов - Погашение/Удаление/Редактирование долга",
@@ -4204,7 +4204,7 @@ const BILLZ_DATA = {
           "tickets": 6,
           "desired": 3,
           "undesired": 3,
-          "cost": 59190,
+          "cost": 45366,
           "top_labels": [
             {
               "label": "Маркетинг - Работа с Сертификатом/Ваучером",
@@ -4225,7 +4225,7 @@ const BILLZ_DATA = {
           "tickets": 6,
           "desired": 4,
           "undesired": 2,
-          "cost": 59190,
+          "cost": 45366,
           "top_labels": [
             {
               "label": "Импорт — импорт товаров через Excel",
@@ -4260,7 +4260,7 @@ const BILLZ_DATA = {
       "sla_pct": 82.1,
       "sla_not_met": 17.9,
       "avg_close_h": 0.06,
-      "cost": 3590860,
+      "cost": 2752204,
       "csat_pct": 100.0,
       "csat_rated": 27,
       "repeat_pct": 11.3,
@@ -4295,49 +4295,49 @@ const BILLZ_DATA = {
           "name": "Документооборот - Оплата за тариф",
           "tickets": 39,
           "undesired": 19,
-          "cost": 384735
+          "cost": 294879
         },
         {
           "name": "Документооборот - Создание ссылки для оплаты",
           "tickets": 14,
           "undesired": 7,
-          "cost": 138110
+          "cost": 105854
         },
         {
           "name": "Учётная запись - Помощь со входом в аккаунт",
           "tickets": 12,
           "undesired": 7,
-          "cost": 118380
+          "cost": 90732
         },
         {
           "name": "Баг (реквест)",
           "tickets": 12,
           "undesired": 4,
-          "cost": 118380
+          "cost": 90732
         },
         {
           "name": "Кассовые смены — Открытие/Закрытие смен",
           "tickets": 9,
           "undesired": 7,
-          "cost": 88785
+          "cost": 68049
         },
         {
           "name": "Оборудование - Установка/Настройка/Удаление принтера",
           "tickets": 9,
           "undesired": 1,
-          "cost": 88785
+          "cost": 68049
         },
         {
           "name": "Управление - Создание/Редактирвоание/Удаление роли",
           "tickets": 9,
           "undesired": 4,
-          "cost": 88785
+          "cost": 68049
         },
         {
           "name": "Отчёты - Разбор отчётов",
           "tickets": 7,
           "undesired": 0,
-          "cost": 69055
+          "cost": 52927
         }
       ],
       "operators": [
@@ -4349,7 +4349,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 7,
           "sla_pct": 95.7,
-          "cost": 552440
+          "cost": 423416
         },
         {
           "name": "Ардак",
@@ -4359,7 +4359,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 1,
           "sla_pct": 71.4,
-          "cost": 552440
+          "cost": 423416
         },
         {
           "name": "Авазбек",
@@ -4369,7 +4369,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 7,
           "sla_pct": 81.2,
-          "cost": 503115
+          "cost": 385611
         },
         {
           "name": "Робия А.",
@@ -4379,7 +4379,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 3,
           "sla_pct": 75.0,
-          "cost": 374870
+          "cost": 287318
         },
         {
           "name": "Тожмухаммад",
@@ -4389,7 +4389,7 @@ const BILLZ_DATA = {
           "rating_pct": 0.0,
           "rated": 0,
           "sla_pct": 57.1,
-          "cost": 374870
+          "cost": 287318
         },
         {
           "name": "Робия Р.",
@@ -4399,7 +4399,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 5,
           "sla_pct": 76.0,
-          "cost": 345275
+          "cost": 264635
         },
         {
           "name": "Шохина",
@@ -4409,7 +4409,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 3,
           "sla_pct": 93.9,
-          "cost": 325545
+          "cost": 249513
         },
         {
           "name": "Сардор Б.",
@@ -4419,7 +4419,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 1,
           "sla_pct": 80.0,
-          "cost": 266355
+          "cost": 204147
         },
         {
           "name": "Атабек",
@@ -4429,7 +4429,7 @@ const BILLZ_DATA = {
           "rating_pct": 0.0,
           "rated": 0,
           "sla_pct": 100.0,
-          "cost": 246625
+          "cost": 189025
         },
         {
           "name": "Нурлан",
@@ -4439,7 +4439,7 @@ const BILLZ_DATA = {
           "rating_pct": 0.0,
           "rated": 0,
           "sla_pct": 66.7,
-          "cost": 29595
+          "cost": 22683
         },
         {
           "name": "Дильшод",
@@ -4449,7 +4449,7 @@ const BILLZ_DATA = {
           "rating_pct": 0.0,
           "rated": 0,
           "sla_pct": 0.0,
-          "cost": 9865
+          "cost": 7561
         },
         {
           "name": "Камолиддин",
@@ -4459,7 +4459,7 @@ const BILLZ_DATA = {
           "rating_pct": 0.0,
           "rated": 0,
           "sla_pct": 0.0,
-          "cost": 9865
+          "cost": 7561
         }
       ],
       "top_companies": [
@@ -4468,7 +4468,7 @@ const BILLZ_DATA = {
           "tickets": 57,
           "desired": 21,
           "undesired": 25,
-          "cost": 562305,
+          "cost": 430977,
           "top_labels": [
             {
               "label": "Документооборот - Создание ссылки для оплаты",
@@ -4489,7 +4489,7 @@ const BILLZ_DATA = {
           "tickets": 6,
           "desired": 4,
           "undesired": 2,
-          "cost": 59190,
+          "cost": 45366,
           "top_labels": [
             {
               "label": "Кассовые смены — Открытие/Закрытие смен",
@@ -4510,7 +4510,7 @@ const BILLZ_DATA = {
           "tickets": 5,
           "desired": 3,
           "undesired": 2,
-          "cost": 49325,
+          "cost": 37805,
           "top_labels": [
             {
               "label": "Документооборот - Оплата за тариф",
@@ -4527,7 +4527,7 @@ const BILLZ_DATA = {
           "tickets": 4,
           "desired": 2,
           "undesired": 2,
-          "cost": 39460,
+          "cost": 30244,
           "top_labels": [
             {
               "label": "Баг (реквест)",
@@ -4548,7 +4548,7 @@ const BILLZ_DATA = {
           "tickets": 4,
           "desired": 4,
           "undesired": 0,
-          "cost": 39460,
+          "cost": 30244,
           "top_labels": [
             {
               "label": "Документооборот - Оплата за тариф",
@@ -4583,7 +4583,7 @@ const BILLZ_DATA = {
       "sla_pct": 78.8,
       "sla_not_met": 21.2,
       "avg_close_h": 0.05,
-      "cost": 3492210,
+      "cost": 2676594,
       "csat_pct": 94.4,
       "csat_rated": 18,
       "repeat_pct": 10.7,
@@ -4618,49 +4618,49 @@ const BILLZ_DATA = {
           "name": "Оборудование - Установка/Настройка/Удаление принтера",
           "tickets": 21,
           "undesired": 4,
-          "cost": 207165
+          "cost": 158781
         },
         {
           "name": "Документооборот - Оплата за тариф",
           "tickets": 17,
           "undesired": 6,
-          "cost": 167705
+          "cost": 128537
         },
         {
           "name": "Учётная запись - Помощь со входом в аккаунт",
           "tickets": 12,
           "undesired": 9,
-          "cost": 118380
+          "cost": 90732
         },
         {
           "name": "Кассовые смены — Открытие/Закрытие смен",
           "tickets": 11,
           "undesired": 5,
-          "cost": 108515
+          "cost": 83171
         },
         {
           "name": "Учётная запись - Создание магазина",
           "tickets": 8,
           "undesired": 4,
-          "cost": 78920
+          "cost": 60488
         },
         {
           "name": "Каталог — настройка печати ценника",
           "tickets": 8,
           "undesired": 4,
-          "cost": 78920
+          "cost": 60488
         },
         {
           "name": "Каталог — изменение свойств товара",
           "tickets": 7,
           "undesired": 6,
-          "cost": 69055
+          "cost": 52927
         },
         {
           "name": "Документооборот - Создание ссылки для оплаты",
           "tickets": 7,
           "undesired": 6,
-          "cost": 69055
+          "cost": 52927
         }
       ],
       "operators": [
@@ -4672,7 +4672,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 1,
           "sla_pct": 88.9,
-          "cost": 532710
+          "cost": 408294
         },
         {
           "name": "Анасхон",
@@ -4682,7 +4682,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 4,
           "sla_pct": 100.0,
-          "cost": 443925
+          "cost": 340245
         },
         {
           "name": "Атабек",
@@ -4692,7 +4692,7 @@ const BILLZ_DATA = {
           "rating_pct": 0.0,
           "rated": 0,
           "sla_pct": 50.0,
-          "cost": 414330
+          "cost": 317562
         },
         {
           "name": "Ардак",
@@ -4702,7 +4702,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 2,
           "sla_pct": 72.7,
-          "cost": 404465
+          "cost": 310001
         },
         {
           "name": "Алиёр",
@@ -4712,7 +4712,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 2,
           "sla_pct": 77.3,
-          "cost": 394600
+          "cost": 302440
         },
         {
           "name": "Нурилло",
@@ -4722,7 +4722,7 @@ const BILLZ_DATA = {
           "rating_pct": 0.0,
           "rated": 0,
           "sla_pct": 75.0,
-          "cost": 345275
+          "cost": 264635
         },
         {
           "name": "Сардор Б.",
@@ -4732,7 +4732,7 @@ const BILLZ_DATA = {
           "rating_pct": 0.0,
           "rated": 0,
           "sla_pct": 100.0,
-          "cost": 335410
+          "cost": 257074
         },
         {
           "name": "Авазбек",
@@ -4742,7 +4742,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 3,
           "sla_pct": 73.7,
-          "cost": 315680
+          "cost": 241952
         },
         {
           "name": "Робия Р.",
@@ -4752,7 +4752,7 @@ const BILLZ_DATA = {
           "rating_pct": 83.3,
           "rated": 6,
           "sla_pct": 73.7,
-          "cost": 295950
+          "cost": 226830
         },
         {
           "name": "Дильшод",
@@ -4762,7 +4762,7 @@ const BILLZ_DATA = {
           "rating_pct": 0.0,
           "rated": 0,
           "sla_pct": 0.0,
-          "cost": 9865
+          "cost": 7561
         }
       ],
       "top_companies": [
@@ -4771,7 +4771,7 @@ const BILLZ_DATA = {
           "tickets": 58,
           "desired": 23,
           "undesired": 26,
-          "cost": 572170,
+          "cost": 438538,
           "top_labels": [
             {
               "label": "Учётная запись - Создание магазина",
@@ -4792,7 +4792,7 @@ const BILLZ_DATA = {
           "tickets": 9,
           "desired": 4,
           "undesired": 5,
-          "cost": 88785,
+          "cost": 68049,
           "top_labels": [
             {
               "label": "Баг (реквест), Desktop - Ошибка синхронизации",
@@ -4813,7 +4813,7 @@ const BILLZ_DATA = {
           "tickets": 7,
           "desired": 1,
           "undesired": 6,
-          "cost": 69055,
+          "cost": 52927,
           "top_labels": [
             {
               "label": "Кассовые смены — Открытие/Закрытие смен",
@@ -4834,7 +4834,7 @@ const BILLZ_DATA = {
           "tickets": 5,
           "desired": 0,
           "undesired": 5,
-          "cost": 49325,
+          "cost": 37805,
           "top_labels": [
             {
               "label": "Все продажи - Удаление/Редактирование продажи",
@@ -4855,7 +4855,7 @@ const BILLZ_DATA = {
           "tickets": 5,
           "desired": 3,
           "undesired": 2,
-          "cost": 49325,
+          "cost": 37805,
           "top_labels": [
             {
               "label": "Баг (реквест)",
@@ -4890,7 +4890,7 @@ const BILLZ_DATA = {
       "sla_pct": 80.5,
       "sla_not_met": 19.5,
       "avg_close_h": 0.05,
-      "cost": 3413290,
+      "cost": 2616106,
       "csat_pct": 97.0,
       "csat_rated": 33,
       "repeat_pct": 15.0,
@@ -4924,49 +4924,49 @@ const BILLZ_DATA = {
           "name": "Документооборот - Оплата за тариф",
           "tickets": 21,
           "undesired": 12,
-          "cost": 207165
+          "cost": 158781
         },
         {
           "name": "Оборудование - Установка/Настройка/Удаление принтера",
           "tickets": 15,
           "undesired": 2,
-          "cost": 147975
+          "cost": 113415
         },
         {
           "name": "Документооборот - Создание ссылки для оплаты",
           "tickets": 15,
           "undesired": 11,
-          "cost": 147975
+          "cost": 113415
         },
         {
           "name": "Каталог — изменение свойств товара",
           "tickets": 13,
           "undesired": 5,
-          "cost": 128245
+          "cost": 98293
         },
         {
           "name": "Desktop - Ошибка синхронизации",
           "tickets": 9,
           "undesired": 7,
-          "cost": 88785
+          "cost": 68049
         },
         {
           "name": "Учётная запись - Помощь со входом в аккаунт",
           "tickets": 8,
           "undesired": 8,
-          "cost": 78920
+          "cost": 60488
         },
         {
           "name": "Вопрос не по программе",
           "tickets": 6,
           "undesired": 3,
-          "cost": 59190
+          "cost": 45366
         },
         {
           "name": "Каталог — настройка печати ценника",
           "tickets": 6,
           "undesired": 3,
-          "cost": 59190
+          "cost": 45366
         }
       ],
       "operators": [
@@ -4978,7 +4978,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 5,
           "sla_pct": 86.7,
-          "cost": 670820
+          "cost": 514148
         },
         {
           "name": "Анасхон",
@@ -4988,7 +4988,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 8,
           "sla_pct": 100.0,
-          "cost": 660955
+          "cost": 506587
         },
         {
           "name": "Атабек",
@@ -4998,7 +4998,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 4,
           "sla_pct": 95.5,
-          "cost": 611630
+          "cost": 468782
         },
         {
           "name": "Авазбек",
@@ -5008,7 +5008,7 @@ const BILLZ_DATA = {
           "rating_pct": 87.5,
           "rated": 8,
           "sla_pct": 72.4,
-          "cost": 473520
+          "cost": 362928
         },
         {
           "name": "Сардор Б.",
@@ -5018,7 +5018,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 2,
           "sla_pct": 58.8,
-          "cost": 434060
+          "cost": 332684
         },
         {
           "name": "Алиёр",
@@ -5028,7 +5028,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 4,
           "sla_pct": 79.2,
-          "cost": 414330
+          "cost": 317562
         },
         {
           "name": "Дильшод",
@@ -5038,7 +5038,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 1,
           "sla_pct": 0.0,
-          "cost": 98650
+          "cost": 75610
         },
         {
           "name": "Камолиддин",
@@ -5048,7 +5048,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 1,
           "sla_pct": 60.0,
-          "cost": 49325
+          "cost": 37805
         }
       ],
       "top_companies": [
@@ -5057,7 +5057,7 @@ const BILLZ_DATA = {
           "tickets": 67,
           "desired": 30,
           "undesired": 29,
-          "cost": 660955,
+          "cost": 506587,
           "top_labels": [
             {
               "label": "Документооборот - Создание ссылки для оплаты",
@@ -5078,7 +5078,7 @@ const BILLZ_DATA = {
           "tickets": 7,
           "desired": 2,
           "undesired": 5,
-          "cost": 69055,
+          "cost": 52927,
           "top_labels": [
             {
               "label": "Desktop - Ошибка синхронизации",
@@ -5095,7 +5095,7 @@ const BILLZ_DATA = {
           "tickets": 4,
           "desired": 2,
           "undesired": 2,
-          "cost": 39460,
+          "cost": 30244,
           "top_labels": [
             {
               "label": "Баг (реквест), Desktop - Ошибка синхронизации",
@@ -5116,7 +5116,7 @@ const BILLZ_DATA = {
           "tickets": 4,
           "desired": 1,
           "undesired": 3,
-          "cost": 39460,
+          "cost": 30244,
           "top_labels": [
             {
               "label": "Импорт — ошибка при загрузке файла, Каталог — настройка печати ценника",
@@ -5133,7 +5133,7 @@ const BILLZ_DATA = {
           "tickets": 4,
           "desired": 1,
           "undesired": 3,
-          "cost": 39460,
+          "cost": 30244,
           "top_labels": [
             {
               "label": "Документооборот - Оплата за тариф, Реквест (внутренний запрос, выгрузка данных)",
@@ -5164,7 +5164,7 @@ const BILLZ_DATA = {
       "sla_pct": 80.5,
       "sla_not_met": 19.5,
       "avg_close_h": 0.07,
-      "cost": 3354100,
+      "cost": 2570740,
       "csat_pct": 95.7,
       "csat_rated": 23,
       "repeat_pct": 13.8,
@@ -5200,49 +5200,49 @@ const BILLZ_DATA = {
           "name": "Документооборот - Оплата за тариф",
           "tickets": 27,
           "undesired": 16,
-          "cost": 266355
+          "cost": 204147
         },
         {
           "name": "Документооборот - Создание ссылки для оплаты",
           "tickets": 20,
           "undesired": 15,
-          "cost": 197300
+          "cost": 151220
         },
         {
           "name": "Настройка - Установка BILLZ PAY/Payme/Epos/PAX",
           "tickets": 19,
           "undesired": 10,
-          "cost": 187435
+          "cost": 143659
         },
         {
           "name": "Каталог — изменение свойств товара",
           "tickets": 14,
           "undesired": 6,
-          "cost": 138110
+          "cost": 105854
         },
         {
           "name": "Оборудование - Установка/Настройка/Удаление принтера",
           "tickets": 11,
           "undesired": 4,
-          "cost": 108515
+          "cost": 83171
         },
         {
           "name": "Вопрос не по программе",
           "tickets": 10,
           "undesired": 9,
-          "cost": 98650
+          "cost": 75610
         },
         {
           "name": "Учётная запись - Помощь со входом в аккаунт",
           "tickets": 9,
           "undesired": 7,
-          "cost": 88785
+          "cost": 68049
         },
         {
           "name": "Инвентаризация — консультация по модулю (частичное обучение)",
           "tickets": 6,
           "undesired": 4,
-          "cost": 59190
+          "cost": 45366
         }
       ],
       "operators": [
@@ -5254,7 +5254,7 @@ const BILLZ_DATA = {
           "rating_pct": 75.0,
           "rated": 4,
           "sla_pct": 95.2,
-          "cost": 591900
+          "cost": 453660
         },
         {
           "name": "Авазбек",
@@ -5264,7 +5264,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 10,
           "sla_pct": 76.5,
-          "cost": 532710
+          "cost": 408294
         },
         {
           "name": "Робия Р.",
@@ -5274,7 +5274,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 3,
           "sla_pct": 75.0,
-          "cost": 493250
+          "cost": 378050
         },
         {
           "name": "Атабек",
@@ -5284,7 +5284,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 2,
           "sla_pct": 68.8,
-          "cost": 493250
+          "cost": 378050
         },
         {
           "name": "Алиёр",
@@ -5294,7 +5294,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 2,
           "sla_pct": 82.4,
-          "cost": 453790
+          "cost": 347806
         },
         {
           "name": "Нурилло",
@@ -5304,7 +5304,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 1,
           "sla_pct": 84.2,
-          "cost": 443925
+          "cost": 340245
         },
         {
           "name": "Тожмухаммад",
@@ -5314,7 +5314,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 1,
           "sla_pct": 90.0,
-          "cost": 276220
+          "cost": 211708
         },
         {
           "name": "Дильшод",
@@ -5324,7 +5324,7 @@ const BILLZ_DATA = {
           "rating_pct": 0.0,
           "rated": 0,
           "sla_pct": 0.0,
-          "cost": 49325
+          "cost": 37805
         },
         {
           "name": "Ардак",
@@ -5334,7 +5334,7 @@ const BILLZ_DATA = {
           "rating_pct": 0.0,
           "rated": 0,
           "sla_pct": 100.0,
-          "cost": 9865
+          "cost": 7561
         },
         {
           "name": "Камолиддин",
@@ -5344,7 +5344,7 @@ const BILLZ_DATA = {
           "rating_pct": 0.0,
           "rated": 0,
           "sla_pct": 0.0,
-          "cost": 9865
+          "cost": 7561
         }
       ],
       "top_companies": [
@@ -5353,7 +5353,7 @@ const BILLZ_DATA = {
           "tickets": 75,
           "desired": 27,
           "undesired": 39,
-          "cost": 739875,
+          "cost": 567075,
           "top_labels": [
             {
               "label": "Документооборот - Создание ссылки для оплаты",
@@ -5374,7 +5374,7 @@ const BILLZ_DATA = {
           "tickets": 8,
           "desired": 6,
           "undesired": 2,
-          "cost": 78920,
+          "cost": 60488,
           "top_labels": [
             {
               "label": "Каталог - Просмотр статистики",
@@ -5395,7 +5395,7 @@ const BILLZ_DATA = {
           "tickets": 7,
           "desired": 5,
           "undesired": 0,
-          "cost": 69055,
+          "cost": 52927,
           "top_labels": [
             {
               "label": "Все продажи - Выгрузка продаж, Баг (реквест)",
@@ -5416,7 +5416,7 @@ const BILLZ_DATA = {
           "tickets": 7,
           "desired": 4,
           "undesired": 2,
-          "cost": 69055,
+          "cost": 52927,
           "top_labels": [
             {
               "label": "Настройка - Установка BILLZ PAY/Payme/Epos/PAX",
@@ -5437,7 +5437,7 @@ const BILLZ_DATA = {
           "tickets": 6,
           "desired": 4,
           "undesired": 2,
-          "cost": 59190,
+          "cost": 45366,
           "top_labels": [
             {
               "label": "Каталог — изменение свойств товара",
@@ -5472,7 +5472,7 @@ const BILLZ_DATA = {
       "sla_pct": 72.2,
       "sla_not_met": 27.8,
       "avg_close_h": 0.07,
-      "cost": 4409655,
+      "cost": 3379767,
       "csat_pct": 91.7,
       "csat_rated": 24,
       "repeat_pct": 11.0,
@@ -5507,49 +5507,49 @@ const BILLZ_DATA = {
           "name": "Документооборот - Оплата за тариф",
           "tickets": 32,
           "undesired": 13,
-          "cost": 315680
+          "cost": 241952
         },
         {
           "name": "Оборудование - Установка/Настройка/Удаление принтера",
           "tickets": 18,
           "undesired": 6,
-          "cost": 177570
+          "cost": 136098
         },
         {
           "name": "Документооборот - Создание ссылки для оплаты",
           "tickets": 16,
           "undesired": 10,
-          "cost": 157840
+          "cost": 120976
         },
         {
           "name": "Кассовые смены — Открытие/Закрытие смен",
           "tickets": 15,
           "undesired": 6,
-          "cost": 147975
+          "cost": 113415
         },
         {
           "name": "Каталог — изменение свойств товара",
           "tickets": 15,
           "undesired": 5,
-          "cost": 147975
+          "cost": 113415
         },
         {
           "name": "Учётная запись - Помощь со входом в аккаунт",
           "tickets": 14,
           "undesired": 10,
-          "cost": 138110
+          "cost": 105854
         },
         {
           "name": "Учётная запись - Блокировка/Разблокировка аккаунта",
           "tickets": 10,
           "undesired": 6,
-          "cost": 98650
+          "cost": 75610
         },
         {
           "name": "Массовый сбой BILLZ, Учётная запись - Помощь со входом в аккаунт",
           "tickets": 10,
           "undesired": 9,
-          "cost": 98650
+          "cost": 75610
         }
       ],
       "operators": [
@@ -5561,7 +5561,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 7,
           "sla_pct": 85.7,
-          "cost": 759605
+          "cost": 582197
         },
         {
           "name": "Робия Р.",
@@ -5571,7 +5571,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 1,
           "sla_pct": 72.2,
-          "cost": 670820
+          "cost": 514148
         },
         {
           "name": "Атабек",
@@ -5581,7 +5581,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 4,
           "sla_pct": 59.3,
-          "cost": 621495
+          "cost": 476343
         },
         {
           "name": "Ардак",
@@ -5591,7 +5591,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 3,
           "sla_pct": 79.3,
-          "cost": 601765
+          "cost": 461221
         },
         {
           "name": "Алиёр",
@@ -5601,7 +5601,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 2,
           "sla_pct": 63.6,
-          "cost": 493250
+          "cost": 378050
         },
         {
           "name": "Сардор Б.",
@@ -5611,7 +5611,7 @@ const BILLZ_DATA = {
           "rating_pct": 0.0,
           "rated": 0,
           "sla_pct": 73.3,
-          "cost": 443925
+          "cost": 340245
         },
         {
           "name": "Авазбек",
@@ -5621,7 +5621,7 @@ const BILLZ_DATA = {
           "rating_pct": 66.7,
           "rated": 6,
           "sla_pct": 66.7,
-          "cost": 374870
+          "cost": 287318
         },
         {
           "name": "Тожмухаммад",
@@ -5631,7 +5631,7 @@ const BILLZ_DATA = {
           "rating_pct": 0.0,
           "rated": 0,
           "sla_pct": 73.3,
-          "cost": 365005
+          "cost": 279757
         },
         {
           "name": "Дильшод",
@@ -5641,7 +5641,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 1,
           "sla_pct": 50.0,
-          "cost": 78920
+          "cost": 60488
         }
       ],
       "top_companies": [
@@ -5650,7 +5650,7 @@ const BILLZ_DATA = {
           "tickets": 71,
           "desired": 33,
           "undesired": 33,
-          "cost": 700415,
+          "cost": 536831,
           "top_labels": [
             {
               "label": "Документооборот - Создание ссылки для оплаты",
@@ -5671,7 +5671,7 @@ const BILLZ_DATA = {
           "tickets": 10,
           "desired": 4,
           "undesired": 6,
-          "cost": 98650,
+          "cost": 75610,
           "top_labels": [
             {
               "label": "Кассовые смены — Открытие/Закрытие смен",
@@ -5692,7 +5692,7 @@ const BILLZ_DATA = {
           "tickets": 9,
           "desired": 5,
           "undesired": 2,
-          "cost": 88785,
+          "cost": 68049,
           "top_labels": [
             {
               "label": "Каталог — изменение свойств товара",
@@ -5713,7 +5713,7 @@ const BILLZ_DATA = {
           "tickets": 9,
           "desired": 7,
           "undesired": 2,
-          "cost": 88785,
+          "cost": 68049,
           "top_labels": [
             {
               "label": "Оборудование - Установка Anydesk/BILLZ Desktop/Программы компьютера и тд.",
@@ -5734,7 +5734,7 @@ const BILLZ_DATA = {
           "tickets": 5,
           "desired": 2,
           "undesired": 3,
-          "cost": 49325,
+          "cost": 37805,
           "top_labels": [
             {
               "label": "Массовый сбой BILLZ, Учётная запись - Помощь со входом в аккаунт",
@@ -5769,7 +5769,7 @@ const BILLZ_DATA = {
       "sla_pct": 76.1,
       "sla_not_met": 23.9,
       "avg_close_h": 0.08,
-      "cost": 4271545,
+      "cost": 3273913,
       "csat_pct": 92.3,
       "csat_rated": 26,
       "repeat_pct": 8.5,
@@ -5806,49 +5806,49 @@ const BILLZ_DATA = {
           "name": "Документооборот - Оплата за тариф",
           "tickets": 54,
           "undesired": 11,
-          "cost": 532710
+          "cost": 408294
         },
         {
           "name": "Документооборот - Создание ссылки для оплаты",
           "tickets": 33,
           "undesired": 21,
-          "cost": 325545
+          "cost": 249513
         },
         {
           "name": "Оборудование - Установка/Настройка/Удаление принтера",
           "tickets": 25,
           "undesired": 3,
-          "cost": 246625
+          "cost": 189025
         },
         {
           "name": "Учётная запись - Блокировка/Разблокировка аккаунта",
           "tickets": 22,
           "undesired": 10,
-          "cost": 217030
+          "cost": 166342
         },
         {
           "name": "Документооборот - Помощь в оплате долга",
           "tickets": 9,
           "undesired": 3,
-          "cost": 88785
+          "cost": 68049
         },
         {
           "name": "Оборудование - Установка Anydesk/BILLZ Desktop/Программы компьютера и тд.",
           "tickets": 9,
           "undesired": 4,
-          "cost": 88785
+          "cost": 68049
         },
         {
           "name": "Импорт — импорт товаров через Excel",
           "tickets": 8,
           "undesired": 1,
-          "cost": 78920
+          "cost": 60488
         },
         {
           "name": "Новая продажа - Не удаётся сделать продажу",
           "tickets": 8,
           "undesired": 3,
-          "cost": 78920
+          "cost": 60488
         }
       ],
       "operators": [
@@ -5860,7 +5860,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 4,
           "sla_pct": 67.6,
-          "cost": 937175
+          "cost": 718295
         },
         {
           "name": "Нурилло",
@@ -5870,7 +5870,7 @@ const BILLZ_DATA = {
           "rating_pct": 83.3,
           "rated": 6,
           "sla_pct": 69.8,
-          "cost": 907580
+          "cost": 695612
         },
         {
           "name": "Робия Р.",
@@ -5880,7 +5880,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 7,
           "sla_pct": 87.3,
-          "cost": 680685
+          "cost": 521709
         },
         {
           "name": "Сардор Б.",
@@ -5890,7 +5890,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 4,
           "sla_pct": 80.6,
-          "cost": 651090
+          "cost": 499026
         },
         {
           "name": "Тожмухаммад",
@@ -5900,7 +5900,7 @@ const BILLZ_DATA = {
           "rating_pct": 66.7,
           "rated": 3,
           "sla_pct": 60.9,
-          "cost": 572170
+          "cost": 438538
         },
         {
           "name": "Дильшод",
@@ -5910,7 +5910,7 @@ const BILLZ_DATA = {
           "rating_pct": 0.0,
           "rated": 0,
           "sla_pct": 71.4,
-          "cost": 404465
+          "cost": 310001
         },
         {
           "name": "Нурлан",
@@ -5920,7 +5920,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 2,
           "sla_pct": 91.7,
-          "cost": 118380
+          "cost": 90732
         }
       ],
       "top_companies": [
@@ -5929,7 +5929,7 @@ const BILLZ_DATA = {
           "tickets": 64,
           "desired": 36,
           "undesired": 24,
-          "cost": 631360,
+          "cost": 483904,
           "top_labels": [
             {
               "label": "Документооборот - Создание ссылки для оплаты",
@@ -5950,7 +5950,7 @@ const BILLZ_DATA = {
           "tickets": 6,
           "desired": 4,
           "undesired": 2,
-          "cost": 59190,
+          "cost": 45366,
           "top_labels": [
             {
               "label": "Кассовые смены — Открытие/Закрытие смен",
@@ -5971,7 +5971,7 @@ const BILLZ_DATA = {
           "tickets": 5,
           "desired": 5,
           "undesired": 0,
-          "cost": 49325,
+          "cost": 37805,
           "top_labels": [
             {
               "label": "Отчёты - Неверная сумма (реквест)",
@@ -5992,7 +5992,7 @@ const BILLZ_DATA = {
           "tickets": 5,
           "desired": 0,
           "undesired": 5,
-          "cost": 49325,
+          "cost": 37805,
           "top_labels": [
             {
               "label": "Все продажи - Удаление/Редактирование продажи",
@@ -6013,7 +6013,7 @@ const BILLZ_DATA = {
           "tickets": 4,
           "desired": 3,
           "undesired": 0,
-          "cost": 39460,
+          "cost": 30244,
           "top_labels": [
             {
               "label": "Баг (реквест), Сайт/Бот - Настройка/Удаление/Редактирование функций",
@@ -6048,7 +6048,7 @@ const BILLZ_DATA = {
       "sla_pct": 72.2,
       "sla_not_met": 27.8,
       "avg_close_h": 0.08,
-      "cost": 5761160,
+      "cost": 4415624,
       "csat_pct": 94.7,
       "csat_rated": 38,
       "repeat_pct": 9.9,
@@ -6084,49 +6084,49 @@ const BILLZ_DATA = {
           "name": "Документооборот - Оплата за тариф",
           "tickets": 233,
           "undesired": 178,
-          "cost": 2298545
+          "cost": 1761713
         },
         {
           "name": "Документооборот - Создание ссылки для оплаты",
           "tickets": 45,
           "undesired": 45,
-          "cost": 443925
+          "cost": 340245
         },
         {
           "name": "Учётная запись - Блокировка/Разблокировка аккаунта",
           "tickets": 31,
           "undesired": 28,
-          "cost": 305815
+          "cost": 234391
         },
         {
           "name": "Учётная запись - Помощь со входом в аккаунт",
           "tickets": 12,
           "undesired": 11,
-          "cost": 118380
+          "cost": 90732
         },
         {
           "name": "Каталог — изменение свойств товара",
           "tickets": 10,
           "undesired": 9,
-          "cost": 98650
+          "cost": 75610
         },
         {
           "name": "Оборудование - Установка/Настройка/Удаление принтера",
           "tickets": 10,
           "undesired": 2,
-          "cost": 98650
+          "cost": 75610
         },
         {
           "name": "Документооборот - Смена тарифа (upsell/downsell)",
           "tickets": 7,
           "undesired": 5,
-          "cost": 69055
+          "cost": 52927
         },
         {
           "name": "Документооборот - Консультация по сумме долга",
           "tickets": 7,
           "undesired": 5,
-          "cost": 69055
+          "cost": 52927
         }
       ],
       "operators": [
@@ -6138,7 +6138,7 @@ const BILLZ_DATA = {
           "rating_pct": 85.7,
           "rated": 14,
           "sla_pct": 75.2,
-          "cost": 1529075
+          "cost": 1171955
         },
         {
           "name": "Анасхон",
@@ -6148,7 +6148,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 7,
           "sla_pct": 90.9,
-          "cost": 1351505
+          "cost": 1035857
         },
         {
           "name": "Алиёр",
@@ -6158,7 +6158,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 4,
           "sla_pct": 43.8,
-          "cost": 1292315
+          "cost": 990491
         },
         {
           "name": "Тожмухаммад",
@@ -6168,7 +6168,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 7,
           "sla_pct": 54.8,
-          "cost": 799065
+          "cost": 612441
         },
         {
           "name": "Нурилло",
@@ -6178,7 +6178,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 6,
           "sla_pct": 67.6,
-          "cost": 749740
+          "cost": 574636
         },
         {
           "name": "Атабек",
@@ -6188,7 +6188,7 @@ const BILLZ_DATA = {
           "rating_pct": 0.0,
           "rated": 0,
           "sla_pct": 0.0,
-          "cost": 19730
+          "cost": 15122
         },
         {
           "name": "Ардак",
@@ -6198,7 +6198,7 @@ const BILLZ_DATA = {
           "rating_pct": 0.0,
           "rated": 0,
           "sla_pct": 0.0,
-          "cost": 9865
+          "cost": 7561
         },
         {
           "name": "Дильшод",
@@ -6208,7 +6208,7 @@ const BILLZ_DATA = {
           "rating_pct": 0.0,
           "rated": 0,
           "sla_pct": 100.0,
-          "cost": 9865
+          "cost": 7561
         }
       ],
       "top_companies": [
@@ -6217,7 +6217,7 @@ const BILLZ_DATA = {
           "tickets": 87,
           "desired": 7,
           "undesired": 73,
-          "cost": 858255,
+          "cost": 657807,
           "top_labels": [
             {
               "label": "Учётная запись - Блокировка/Разблокировка аккаунта",
@@ -6238,7 +6238,7 @@ const BILLZ_DATA = {
           "tickets": 7,
           "desired": 3,
           "undesired": 3,
-          "cost": 69055,
+          "cost": 52927,
           "top_labels": [
             {
               "label": "Учётная запись - Помощь со входом в аккаунт",
@@ -6259,7 +6259,7 @@ const BILLZ_DATA = {
           "tickets": 7,
           "desired": 0,
           "undesired": 5,
-          "cost": 69055,
+          "cost": 52927,
           "top_labels": [
             {
               "label": "Программа лояльности - Редактирование/Настройки уровней",
@@ -6280,7 +6280,7 @@ const BILLZ_DATA = {
           "tickets": 6,
           "desired": 0,
           "undesired": 5,
-          "cost": 59190,
+          "cost": 45366,
           "top_labels": [
             {
               "label": "Каталог — изменение свойств товара",
@@ -6301,7 +6301,7 @@ const BILLZ_DATA = {
           "tickets": 6,
           "desired": 0,
           "undesired": 6,
-          "cost": 59190,
+          "cost": 45366,
           "top_labels": [
             {
               "label": "Документооборот - Оплата за тариф",
@@ -6328,7 +6328,7 @@ const BILLZ_DATA = {
       "sla_pct": 74.8,
       "sla_not_met": 25.2,
       "avg_close_h": 0.07,
-      "cost": 4932500,
+      "cost": 3780500,
       "csat_pct": 96.3,
       "csat_rated": 27,
       "repeat_pct": 9.6,
@@ -6366,49 +6366,49 @@ const BILLZ_DATA = {
           "name": "Документооборот - Оплата за тариф",
           "tickets": 76,
           "undesired": 45,
-          "cost": 749740
+          "cost": 574636
         },
         {
           "name": "Документооборот - Создание ссылки для оплаты",
           "tickets": 21,
           "undesired": 18,
-          "cost": 207165
+          "cost": 158781
         },
         {
           "name": "Учётная запись - Блокировка/Разблокировка аккаунта",
           "tickets": 19,
           "undesired": 12,
-          "cost": 187435
+          "cost": 143659
         },
         {
           "name": "Оборудование - Установка/Настройка/Удаление принтера",
           "tickets": 19,
           "undesired": 9,
-          "cost": 187435
+          "cost": 143659
         },
         {
           "name": "Учётная запись - Создание магазина",
           "tickets": 14,
           "undesired": 8,
-          "cost": 138110
+          "cost": 105854
         },
         {
           "name": "Каталог — настройка печати ценника",
           "tickets": 13,
           "undesired": 9,
-          "cost": 128245
+          "cost": 98293
         },
         {
           "name": "Учётная запись - Помощь со входом в аккаунт",
           "tickets": 13,
           "undesired": 9,
-          "cost": 128245
+          "cost": 98293
         },
         {
           "name": "Каталог — изменение свойств товара",
           "tickets": 11,
           "undesired": 3,
-          "cost": 108515
+          "cost": 83171
         }
       ],
       "operators": [
@@ -6420,7 +6420,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 4,
           "sla_pct": 88.4,
-          "cost": 1025960
+          "cost": 786344
         },
         {
           "name": "Атабек",
@@ -6430,7 +6430,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 3,
           "sla_pct": 64.9,
-          "cost": 749740
+          "cost": 574636
         },
         {
           "name": "Авазбек",
@@ -6440,7 +6440,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 1,
           "sla_pct": 78.1,
-          "cost": 660955
+          "cost": 506587
         },
         {
           "name": "Робия Р.",
@@ -6450,7 +6450,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 5,
           "sla_pct": 77.8,
-          "cost": 591900
+          "cost": 453660
         },
         {
           "name": "Алиёр",
@@ -6460,7 +6460,7 @@ const BILLZ_DATA = {
           "rating_pct": 83.3,
           "rated": 6,
           "sla_pct": 75.0,
-          "cost": 572170
+          "cost": 438538
         },
         {
           "name": "Тожмухаммад",
@@ -6470,7 +6470,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 3,
           "sla_pct": 90.9,
-          "cost": 562305
+          "cost": 430977
         },
         {
           "name": "Сардор Б.",
@@ -6480,7 +6480,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 3,
           "sla_pct": 70.6,
-          "cost": 512980
+          "cost": 393172
         },
         {
           "name": "Нурлан",
@@ -6490,7 +6490,7 @@ const BILLZ_DATA = {
           "rating_pct": 0.0,
           "rated": 0,
           "sla_pct": 61.5,
-          "cost": 128245
+          "cost": 98293
         },
         {
           "name": "Камолиддин",
@@ -6500,7 +6500,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 2,
           "sla_pct": 40.0,
-          "cost": 98650
+          "cost": 75610
         },
         {
           "name": "Ардак",
@@ -6510,7 +6510,7 @@ const BILLZ_DATA = {
           "rating_pct": 0.0,
           "rated": 0,
           "sla_pct": 100.0,
-          "cost": 9865
+          "cost": 7561
         },
         {
           "name": "Нурилло",
@@ -6520,7 +6520,7 @@ const BILLZ_DATA = {
           "rating_pct": 0.0,
           "rated": 0,
           "sla_pct": 100.0,
-          "cost": 9865
+          "cost": 7561
         },
         {
           "name": "Дильшод",
@@ -6530,7 +6530,7 @@ const BILLZ_DATA = {
           "rating_pct": 0.0,
           "rated": 0,
           "sla_pct": 0.0,
-          "cost": 9865
+          "cost": 7561
         }
       ],
       "top_companies": [
@@ -6539,7 +6539,7 @@ const BILLZ_DATA = {
           "tickets": 105,
           "desired": 17,
           "undesired": 72,
-          "cost": 1035825,
+          "cost": 793905,
           "top_labels": [
             {
               "label": "Документооборот - Оплата за тариф",
@@ -6560,7 +6560,7 @@ const BILLZ_DATA = {
           "tickets": 9,
           "desired": 4,
           "undesired": 5,
-          "cost": 88785,
+          "cost": 68049,
           "top_labels": [
             {
               "label": "Кассовые смены — Расхождение суммы",
@@ -6581,7 +6581,7 @@ const BILLZ_DATA = {
           "tickets": 6,
           "desired": 4,
           "undesired": 1,
-          "cost": 59190,
+          "cost": 45366,
           "top_labels": [
             {
               "label": "Desktop - Ошибка синхронизации",
@@ -6602,7 +6602,7 @@ const BILLZ_DATA = {
           "tickets": 6,
           "desired": 2,
           "undesired": 4,
-          "cost": 59190,
+          "cost": 45366,
           "top_labels": [
             {
               "label": "Документооборот - Оплата за тариф",
@@ -6623,7 +6623,7 @@ const BILLZ_DATA = {
           "tickets": 5,
           "desired": 3,
           "undesired": 2,
-          "cost": 49325,
+          "cost": 37805,
           "top_labels": [
             {
               "label": "Документооборот - Оплата за тариф",
@@ -6654,7 +6654,7 @@ const BILLZ_DATA = {
       "sla_pct": 80.9,
       "sla_not_met": 19.1,
       "avg_close_h": 0.07,
-      "cost": 4005190,
+      "cost": 3069766,
       "csat_pct": 96.2,
       "csat_rated": 26,
       "repeat_pct": 10.1,
@@ -6690,49 +6690,49 @@ const BILLZ_DATA = {
           "name": "Документооборот - Оплата за тариф",
           "tickets": 23,
           "undesired": 8,
-          "cost": 226895
+          "cost": 173903
         },
         {
           "name": "Документооборот - Создание ссылки для оплаты",
           "tickets": 22,
           "undesired": 18,
-          "cost": 217030
+          "cost": 166342
         },
         {
           "name": "Оборудование - Установка/Настройка/Удаление принтера",
           "tickets": 20,
           "undesired": 2,
-          "cost": 197300
+          "cost": 151220
         },
         {
           "name": "Учётная запись - Блокировка/Разблокировка аккаунта",
           "tickets": 13,
           "undesired": 8,
-          "cost": 128245
+          "cost": 98293
         },
         {
           "name": "Учётная запись - Помощь со входом в аккаунт",
           "tickets": 11,
           "undesired": 5,
-          "cost": 108515
+          "cost": 83171
         },
         {
           "name": "Кассовые смены — Открытие/Закрытие смен",
           "tickets": 9,
           "undesired": 7,
-          "cost": 88785
+          "cost": 68049
         },
         {
           "name": "Каталог — настройка печати ценника",
           "tickets": 8,
           "undesired": 0,
-          "cost": 78920
+          "cost": 60488
         },
         {
           "name": "Управление - Создание/Редактирвоание/Удаление сотрудника",
           "tickets": 8,
           "undesired": 3,
-          "cost": 78920
+          "cost": 60488
         }
       ],
       "operators": [
@@ -6744,7 +6744,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 7,
           "sla_pct": 87.0,
-          "cost": 591900
+          "cost": 453660
         },
         {
           "name": "Атабек",
@@ -6754,7 +6754,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 1,
           "sla_pct": 80.0,
-          "cost": 552440
+          "cost": 423416
         },
         {
           "name": "Робия Р.",
@@ -6764,7 +6764,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 8,
           "sla_pct": 81.1,
-          "cost": 552440
+          "cost": 423416
         },
         {
           "name": "Сардор Б.",
@@ -6774,7 +6774,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 3,
           "sla_pct": 81.8,
-          "cost": 552440
+          "cost": 423416
         },
         {
           "name": "Ардак",
@@ -6784,7 +6784,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 1,
           "sla_pct": 76.5,
-          "cost": 532710
+          "cost": 408294
         },
         {
           "name": "Авазбек",
@@ -6794,7 +6794,7 @@ const BILLZ_DATA = {
           "rating_pct": 80.0,
           "rated": 5,
           "sla_pct": 76.0,
-          "cost": 503115
+          "cost": 385611
         },
         {
           "name": "Нурилло",
@@ -6804,7 +6804,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 1,
           "sla_pct": 100.0,
-          "cost": 404465
+          "cost": 310001
         },
         {
           "name": "Камолиддин",
@@ -6814,7 +6814,7 @@ const BILLZ_DATA = {
           "rating_pct": 0.0,
           "rated": 0,
           "sla_pct": 73.3,
-          "cost": 157840
+          "cost": 120976
         },
         {
           "name": "Дильшод",
@@ -6824,7 +6824,7 @@ const BILLZ_DATA = {
           "rating_pct": 0.0,
           "rated": 0,
           "sla_pct": 100.0,
-          "cost": 147975
+          "cost": 113415
         },
         {
           "name": "Алиёр",
@@ -6834,7 +6834,7 @@ const BILLZ_DATA = {
           "rating_pct": 0.0,
           "rated": 0,
           "sla_pct": 100.0,
-          "cost": 9865
+          "cost": 7561
         }
       ],
       "top_companies": [
@@ -6843,7 +6843,7 @@ const BILLZ_DATA = {
           "tickets": 78,
           "desired": 30,
           "undesired": 45,
-          "cost": 769470,
+          "cost": 589758,
           "top_labels": [
             {
               "label": "Документооборот - Создание ссылки для оплаты",
@@ -6864,7 +6864,7 @@ const BILLZ_DATA = {
           "tickets": 7,
           "desired": 0,
           "undesired": 7,
-          "cost": 69055,
+          "cost": 52927,
           "top_labels": [
             {
               "label": "Кассовые смены — Открытие/Закрытие смен",
@@ -6881,7 +6881,7 @@ const BILLZ_DATA = {
           "tickets": 5,
           "desired": 4,
           "undesired": 1,
-          "cost": 49325,
+          "cost": 37805,
           "top_labels": [
             {
               "label": "Оборудование - Установка/Настройка/Удаление принтера",
@@ -6894,7 +6894,7 @@ const BILLZ_DATA = {
           "tickets": 5,
           "desired": 5,
           "undesired": 0,
-          "cost": 49325,
+          "cost": 37805,
           "top_labels": [
             {
               "label": "Учётная запись - Сброс пароля",
@@ -6911,7 +6911,7 @@ const BILLZ_DATA = {
           "tickets": 4,
           "desired": 3,
           "undesired": 1,
-          "cost": 39460,
+          "cost": 30244,
           "top_labels": [
             {
               "label": "Документооборот - Оплата за тариф",
@@ -6942,7 +6942,7 @@ const BILLZ_DATA = {
       "sla_pct": 68.6,
       "sla_not_met": 31.4,
       "avg_close_h": 0.07,
-      "cost": 3275180,
+      "cost": 2510252,
       "csat_pct": 96.0,
       "csat_rated": 25,
       "repeat_pct": 9.6,
@@ -6977,49 +6977,49 @@ const BILLZ_DATA = {
           "name": "Документооборот - Оплата за тариф",
           "tickets": 17,
           "undesired": 11,
-          "cost": 167705
+          "cost": 128537
         },
         {
           "name": "Учётная запись - Блокировка/Разблокировка аккаунта",
           "tickets": 15,
           "undesired": 5,
-          "cost": 147975
+          "cost": 113415
         },
         {
           "name": "Управление - Создание/Редактирвоание/Удаление роли",
           "tickets": 12,
           "undesired": 3,
-          "cost": 118380
+          "cost": 90732
         },
         {
           "name": "Оборудование - Установка/Настройка/Удаление принтера",
           "tickets": 11,
           "undesired": 5,
-          "cost": 108515
+          "cost": 83171
         },
         {
           "name": "Каталог — изменение свойств товара",
           "tickets": 10,
           "undesired": 6,
-          "cost": 98650
+          "cost": 75610
         },
         {
           "name": "Каталог — настройка печати ценника",
           "tickets": 9,
           "undesired": 4,
-          "cost": 88785
+          "cost": 68049
         },
         {
           "name": "Документооборот - Создание ссылки для оплаты",
           "tickets": 9,
           "undesired": 8,
-          "cost": 88785
+          "cost": 68049
         },
         {
           "name": "Учётная запись - Помощь со входом в аккаунт",
           "tickets": 8,
           "undesired": 6,
-          "cost": 78920
+          "cost": 60488
         }
       ],
       "operators": [
@@ -7031,7 +7031,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 1,
           "sla_pct": 95.7,
-          "cost": 582035
+          "cost": 446099
         },
         {
           "name": "Ардак",
@@ -7041,7 +7041,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 3,
           "sla_pct": 46.7,
-          "cost": 532710
+          "cost": 408294
         },
         {
           "name": "Сардор Б.",
@@ -7051,7 +7051,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 3,
           "sla_pct": 71.4,
-          "cost": 493250
+          "cost": 378050
         },
         {
           "name": "Алиёр",
@@ -7061,7 +7061,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 4,
           "sla_pct": 75.0,
-          "cost": 463655
+          "cost": 355367
         },
         {
           "name": "Нурилло",
@@ -7071,7 +7071,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 5,
           "sla_pct": 80.0,
-          "cost": 463655
+          "cost": 355367
         },
         {
           "name": "Тожмухаммад",
@@ -7081,7 +7081,7 @@ const BILLZ_DATA = {
           "rating_pct": 75.0,
           "rated": 4,
           "sla_pct": 70.0,
-          "cost": 443925
+          "cost": 340245
         },
         {
           "name": "Камолиддин",
@@ -7091,7 +7091,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 1,
           "sla_pct": 58.8,
-          "cost": 167705
+          "cost": 128537
         },
         {
           "name": "Дильшод",
@@ -7101,7 +7101,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 4,
           "sla_pct": 0.0,
-          "cost": 118380
+          "cost": 90732
         },
         {
           "name": "Атабек",
@@ -7111,7 +7111,7 @@ const BILLZ_DATA = {
           "rating_pct": 0.0,
           "rated": 0,
           "sla_pct": 0.0,
-          "cost": 9865
+          "cost": 7561
         }
       ],
       "top_companies": [
@@ -7120,7 +7120,7 @@ const BILLZ_DATA = {
           "tickets": 67,
           "desired": 32,
           "undesired": 33,
-          "cost": 660955,
+          "cost": 506587,
           "top_labels": [
             {
               "label": "Учётная запись - Блокировка/Разблокировка аккаунта",
@@ -7141,7 +7141,7 @@ const BILLZ_DATA = {
           "tickets": 8,
           "desired": 4,
           "undesired": 4,
-          "cost": 78920,
+          "cost": 60488,
           "top_labels": [
             {
               "label": "Баг (реквест)",
@@ -7162,7 +7162,7 @@ const BILLZ_DATA = {
           "tickets": 5,
           "desired": 2,
           "undesired": 2,
-          "cost": 49325,
+          "cost": 37805,
           "top_labels": [
             {
               "label": "Desktop - Ошибка синхронизации",
@@ -7183,7 +7183,7 @@ const BILLZ_DATA = {
           "tickets": 5,
           "desired": 1,
           "undesired": 4,
-          "cost": 49325,
+          "cost": 37805,
           "top_labels": [
             {
               "label": "Каталог — изменение свойств товара",
@@ -7200,7 +7200,7 @@ const BILLZ_DATA = {
           "tickets": 3,
           "desired": 0,
           "undesired": 3,
-          "cost": 29595,
+          "cost": 22683,
           "top_labels": [
             {
               "label": "Документооборот - Оплата за тариф",
@@ -7235,7 +7235,7 @@ const BILLZ_DATA = {
       "sla_pct": 90.3,
       "sla_not_met": 9.7,
       "avg_close_h": 0.07,
-      "cost": 3709240,
+      "cost": 2842936,
       "csat_pct": 95.7,
       "csat_rated": 23,
       "repeat_pct": 12.0,
@@ -7270,49 +7270,49 @@ const BILLZ_DATA = {
           "name": "Оборудование - Установка/Настройка/Удаление принтера",
           "tickets": 15,
           "undesired": 6,
-          "cost": 147975
+          "cost": 113415
         },
         {
           "name": "Документооборот - Оплата за тариф",
           "tickets": 14,
           "undesired": 10,
-          "cost": 138110
+          "cost": 105854
         },
         {
           "name": "Вопрос не по программе",
           "tickets": 14,
           "undesired": 13,
-          "cost": 138110
+          "cost": 105854
         },
         {
           "name": "Учётная запись - Блокировка/Разблокировка аккаунта",
           "tickets": 12,
           "undesired": 6,
-          "cost": 118380
+          "cost": 90732
         },
         {
           "name": "Документооборот - Создание ссылки для оплаты",
           "tickets": 12,
           "undesired": 12,
-          "cost": 118380
+          "cost": 90732
         },
         {
           "name": "Учётная запись - Помощь со входом в аккаунт",
           "tickets": 10,
           "undesired": 10,
-          "cost": 98650
+          "cost": 75610
         },
         {
           "name": "Управление - Создание/Редактирвоание/Удаление роли",
           "tickets": 9,
           "undesired": 2,
-          "cost": 88785
+          "cost": 68049
         },
         {
           "name": "Каталог — изменение свойств товара",
           "tickets": 8,
           "undesired": 5,
-          "cost": 78920
+          "cost": 60488
         }
       ],
       "operators": [
@@ -7324,7 +7324,7 @@ const BILLZ_DATA = {
           "rating_pct": 85.7,
           "rated": 7,
           "sla_pct": 93.8,
-          "cost": 730010
+          "cost": 559514
         },
         {
           "name": "Атабек",
@@ -7334,7 +7334,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 3,
           "sla_pct": 79.2,
-          "cost": 710280
+          "cost": 544392
         },
         {
           "name": "Робия Р.",
@@ -7344,7 +7344,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 4,
           "sla_pct": 92.9,
-          "cost": 552440
+          "cost": 423416
         },
         {
           "name": "Нурилло",
@@ -7354,7 +7354,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 2,
           "sla_pct": 95.0,
-          "cost": 552440
+          "cost": 423416
         },
         {
           "name": "Авазбек",
@@ -7364,7 +7364,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 3,
           "sla_pct": 95.7,
-          "cost": 463655
+          "cost": 355367
         },
         {
           "name": "Тожмухаммад",
@@ -7374,7 +7374,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 2,
           "sla_pct": 81.8,
-          "cost": 404465
+          "cost": 310001
         },
         {
           "name": "Дильшод",
@@ -7384,7 +7384,7 @@ const BILLZ_DATA = {
           "rating_pct": 0.0,
           "rated": 0,
           "sla_pct": 100.0,
-          "cost": 147975
+          "cost": 113415
         },
         {
           "name": "Камолиддин",
@@ -7394,7 +7394,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 2,
           "sla_pct": 85.7,
-          "cost": 138110
+          "cost": 105854
         },
         {
           "name": "Ардак",
@@ -7404,7 +7404,7 @@ const BILLZ_DATA = {
           "rating_pct": 0.0,
           "rated": 0,
           "sla_pct": 0.0,
-          "cost": 9865
+          "cost": 7561
         }
       ],
       "top_companies": [
@@ -7413,7 +7413,7 @@ const BILLZ_DATA = {
           "tickets": 72,
           "desired": 17,
           "undesired": 53,
-          "cost": 710280,
+          "cost": 544392,
           "top_labels": [
             {
               "label": "Учётная запись - Блокировка/Разблокировка аккаунта",
@@ -7434,7 +7434,7 @@ const BILLZ_DATA = {
           "tickets": 6,
           "desired": 2,
           "undesired": 4,
-          "cost": 59190,
+          "cost": 45366,
           "top_labels": [
             {
               "label": "Desktop - Ошибка синхронизации",
@@ -7455,7 +7455,7 @@ const BILLZ_DATA = {
           "tickets": 6,
           "desired": 3,
           "undesired": 3,
-          "cost": 59190,
+          "cost": 45366,
           "top_labels": [
             {
               "label": "Управление - Создание/Редактирвоание/Удаление роли",
@@ -7472,7 +7472,7 @@ const BILLZ_DATA = {
           "tickets": 5,
           "desired": 3,
           "undesired": 2,
-          "cost": 49325,
+          "cost": 37805,
           "top_labels": [
             {
               "label": "Оборудование - Установка/Настройка/Удаление принтера",
@@ -7493,7 +7493,7 @@ const BILLZ_DATA = {
           "tickets": 4,
           "desired": 4,
           "undesired": 0,
-          "cost": 39460,
+          "cost": 30244,
           "top_labels": [
             {
               "label": "Кассовые операции - Создание дохода/расхода/инкассации",
@@ -7528,7 +7528,7 @@ const BILLZ_DATA = {
       "sla_pct": 68.6,
       "sla_not_met": 31.4,
       "avg_close_h": 0.07,
-      "cost": 3738835,
+      "cost": 2865619,
       "csat_pct": 84.2,
       "csat_rated": 19,
       "repeat_pct": 10.8,
@@ -7563,49 +7563,49 @@ const BILLZ_DATA = {
           "name": "Учётная запись - Помощь со входом в аккаунт",
           "tickets": 25,
           "undesired": 18,
-          "cost": 246625
+          "cost": 189025
         },
         {
           "name": "Документооборот - Оплата за тариф",
           "tickets": 19,
           "undesired": 11,
-          "cost": 187435
+          "cost": 143659
         },
         {
           "name": "Оборудование - Установка/Настройка/Удаление принтера",
           "tickets": 18,
           "undesired": 6,
-          "cost": 177570
+          "cost": 136098
         },
         {
           "name": "Учётная запись - Блокировка/Разблокировка аккаунта",
           "tickets": 14,
           "undesired": 8,
-          "cost": 138110
+          "cost": 105854
         },
         {
           "name": "Документооборот - Создание ссылки для оплаты",
           "tickets": 11,
           "undesired": 11,
-          "cost": 108515
+          "cost": 83171
         },
         {
           "name": "Новая продажа - Не удаётся сделать продажу",
           "tickets": 10,
           "undesired": 6,
-          "cost": 98650
+          "cost": 75610
         },
         {
           "name": "Вопрос не по программе",
           "tickets": 8,
           "undesired": 6,
-          "cost": 78920
+          "cost": 60488
         },
         {
           "name": "Массовый сбой BILLZ",
           "tickets": 7,
           "undesired": 2,
-          "cost": 69055
+          "cost": 52927
         }
       ],
       "operators": [
@@ -7617,7 +7617,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 3,
           "sla_pct": 86.1,
-          "cost": 739875
+          "cost": 567075
         },
         {
           "name": "Сардор Б.",
@@ -7627,7 +7627,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 1,
           "sla_pct": 50.0,
-          "cost": 611630
+          "cost": 468782
         },
         {
           "name": "Тожмухаммад",
@@ -7637,7 +7637,7 @@ const BILLZ_DATA = {
           "rating_pct": 80.0,
           "rated": 5,
           "sla_pct": 76.5,
-          "cost": 562305
+          "cost": 430977
         },
         {
           "name": "Авазбек",
@@ -7647,7 +7647,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 2,
           "sla_pct": 60.9,
-          "cost": 522845
+          "cost": 400733
         },
         {
           "name": "Алиёр",
@@ -7657,7 +7657,7 @@ const BILLZ_DATA = {
           "rating_pct": 0.0,
           "rated": 0,
           "sla_pct": 56.2,
-          "cost": 473520
+          "cost": 362928
         },
         {
           "name": "Нурилло",
@@ -7667,7 +7667,7 @@ const BILLZ_DATA = {
           "rating_pct": 66.7,
           "rated": 3,
           "sla_pct": 83.3,
-          "cost": 374870
+          "cost": 287318
         },
         {
           "name": "Робия Р.",
@@ -7677,7 +7677,7 @@ const BILLZ_DATA = {
           "rating_pct": 75.0,
           "rated": 4,
           "sla_pct": 64.0,
-          "cost": 365005
+          "cost": 279757
         },
         {
           "name": "Камолиддин",
@@ -7687,7 +7687,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 1,
           "sla_pct": 66.7,
-          "cost": 59190
+          "cost": 45366
         },
         {
           "name": "Дильшод",
@@ -7697,7 +7697,7 @@ const BILLZ_DATA = {
           "rating_pct": 0.0,
           "rated": 0,
           "sla_pct": 0.0,
-          "cost": 29595
+          "cost": 22683
         }
       ],
       "top_companies": [
@@ -7706,7 +7706,7 @@ const BILLZ_DATA = {
           "tickets": 71,
           "desired": 21,
           "undesired": 40,
-          "cost": 700415,
+          "cost": 536831,
           "top_labels": [
             {
               "label": "Документооборот - Создание ссылки для оплаты",
@@ -7727,7 +7727,7 @@ const BILLZ_DATA = {
           "tickets": 4,
           "desired": 1,
           "undesired": 3,
-          "cost": 39460,
+          "cost": 30244,
           "top_labels": [
             {
               "label": "Баг (реквест)",
@@ -7748,7 +7748,7 @@ const BILLZ_DATA = {
           "tickets": 4,
           "desired": 1,
           "undesired": 3,
-          "cost": 39460,
+          "cost": 30244,
           "top_labels": [
             {
               "label": "Настройка - Установка BILLZ PAY/Payme/Epos/PAX",
@@ -7769,7 +7769,7 @@ const BILLZ_DATA = {
           "tickets": 4,
           "desired": 3,
           "undesired": 1,
-          "cost": 39460,
+          "cost": 30244,
           "top_labels": [
             {
               "label": "Новая продажа - Не удаётся сделать продажу",
@@ -7786,7 +7786,7 @@ const BILLZ_DATA = {
           "tickets": 4,
           "desired": 1,
           "undesired": 0,
-          "cost": 39460,
+          "cost": 30244,
           "top_labels": [
             {
               "label": "Оборудование - Установка/Настройка/Удаление принтера",
@@ -7817,7 +7817,7 @@ const BILLZ_DATA = {
       "sla_pct": 76.5,
       "sla_not_met": 23.5,
       "avg_close_h": 0.07,
-      "cost": 4182760,
+      "cost": 3205864,
       "csat_pct": 100.0,
       "csat_rated": 26,
       "repeat_pct": 5.9,
@@ -7856,49 +7856,49 @@ const BILLZ_DATA = {
           "name": "Учётная запись - Помощь со входом в аккаунт",
           "tickets": 84,
           "undesired": 48,
-          "cost": 828660
+          "cost": 635124
         },
         {
           "name": "Документооборот - Оплата за тариф",
           "tickets": 18,
           "undesired": 8,
-          "cost": 177570
+          "cost": 136098
         },
         {
           "name": "Оборудование - Установка/Настройка/Удаление принтера",
           "tickets": 15,
           "undesired": 7,
-          "cost": 147975
+          "cost": 113415
         },
         {
           "name": "Инвентаризация — консультация по модулю (частичное обучение)",
           "tickets": 9,
           "undesired": 3,
-          "cost": 88785
+          "cost": 68049
         },
         {
           "name": "Учётная запись - Блокировка/Разблокировка аккаунта",
           "tickets": 9,
           "undesired": 7,
-          "cost": 88785
+          "cost": 68049
         },
         {
           "name": "Кассовые смены — Открытие/Закрытие смен",
           "tickets": 8,
           "undesired": 3,
-          "cost": 78920
+          "cost": 60488
         },
         {
           "name": "Каталог — настройка печати ценника",
           "tickets": 6,
           "undesired": 2,
-          "cost": 59190
+          "cost": 45366
         },
         {
           "name": "Документооборот - Консультация по сумме долга",
           "tickets": 5,
           "undesired": 3,
-          "cost": 49325
+          "cost": 37805
         }
       ],
       "operators": [
@@ -7910,7 +7910,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 6,
           "sla_pct": 85.2,
-          "cost": 986500
+          "cost": 756100
         },
         {
           "name": "Атабек",
@@ -7920,7 +7920,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 6,
           "sla_pct": 91.4,
-          "cost": 700415
+          "cost": 536831
         },
         {
           "name": "Нурилло",
@@ -7930,7 +7930,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 3,
           "sla_pct": 72.7,
-          "cost": 651090
+          "cost": 499026
         },
         {
           "name": "Ардак",
@@ -7940,7 +7940,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 3,
           "sla_pct": 66.7,
-          "cost": 601765
+          "cost": 461221
         },
         {
           "name": "Авазбек",
@@ -7950,7 +7950,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 5,
           "sla_pct": 88.5,
-          "cost": 601765
+          "cost": 461221
         },
         {
           "name": "Тожмухаммад",
@@ -7960,7 +7960,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 3,
           "sla_pct": 63.2,
-          "cost": 552440
+          "cost": 423416
         },
         {
           "name": "Дильшод",
@@ -7970,7 +7970,7 @@ const BILLZ_DATA = {
           "rating_pct": 0.0,
           "rated": 0,
           "sla_pct": 0.0,
-          "cost": 88785
+          "cost": 68049
         }
       ],
       "top_companies": [
@@ -7979,7 +7979,7 @@ const BILLZ_DATA = {
           "tickets": 52,
           "desired": 13,
           "undesired": 25,
-          "cost": 512980,
+          "cost": 393172,
           "top_labels": [
             {
               "label": "Учётная запись - Блокировка/Разблокировка аккаунта",
@@ -8000,7 +8000,7 @@ const BILLZ_DATA = {
           "tickets": 10,
           "desired": 5,
           "undesired": 2,
-          "cost": 98650,
+          "cost": 75610,
           "top_labels": [
             {
               "label": "Инвентаризация — консультация по модулю (частичное обучение)",
@@ -8017,7 +8017,7 @@ const BILLZ_DATA = {
           "tickets": 6,
           "desired": 3,
           "undesired": 3,
-          "cost": 59190,
+          "cost": 45366,
           "top_labels": [
             {
               "label": "Импорт — импорт товаров через Excel",
@@ -8038,7 +8038,7 @@ const BILLZ_DATA = {
           "tickets": 5,
           "desired": 5,
           "undesired": 0,
-          "cost": 49325,
+          "cost": 37805,
           "top_labels": [
             {
               "label": "Новая продажа - Не удаётся сделать продажу",
@@ -8059,7 +8059,7 @@ const BILLZ_DATA = {
           "tickets": 4,
           "desired": 1,
           "undesired": 2,
-          "cost": 39460,
+          "cost": 30244,
           "top_labels": [
             {
               "label": "Кассовые смены — Открытие/Закрытие смен",
@@ -8090,7 +8090,7 @@ const BILLZ_DATA = {
       "sla_pct": 78.2,
       "sla_not_met": 21.8,
       "avg_close_h": 0.05,
-      "cost": 2535305,
+      "cost": 1943177,
       "csat_pct": 94.7,
       "csat_rated": 19,
       "repeat_pct": 6.2,
@@ -8127,49 +8127,49 @@ const BILLZ_DATA = {
           "name": "Учётная запись - Помощь со входом в аккаунт",
           "tickets": 17,
           "undesired": 13,
-          "cost": 167705
+          "cost": 128537
         },
         {
           "name": "Оборудование - Установка/Настройка/Удаление принтера",
           "tickets": 16,
           "undesired": 6,
-          "cost": 157840
+          "cost": 120976
         },
         {
           "name": "Документооборот - Оплата за тариф",
           "tickets": 11,
           "undesired": 5,
-          "cost": 108515
+          "cost": 83171
         },
         {
           "name": "Учётная запись - Блокировка/Разблокировка аккаунта",
           "tickets": 8,
           "undesired": 4,
-          "cost": 78920
+          "cost": 60488
         },
         {
           "name": "Каталог — запрос на добавление товара",
           "tickets": 8,
           "undesired": 5,
-          "cost": 78920
+          "cost": 60488
         },
         {
           "name": "Каталог — изменение свойств товара",
           "tickets": 7,
           "undesired": 4,
-          "cost": 69055
+          "cost": 52927
         },
         {
           "name": "Управление - Создание/Редактирвоание/Удаление роли",
           "tickets": 7,
           "undesired": 2,
-          "cost": 69055
+          "cost": 52927
         },
         {
           "name": "Кассовые смены — Открытие/Закрытие смен",
           "tickets": 6,
           "undesired": 1,
-          "cost": 59190
+          "cost": 45366
         }
       ],
       "operators": [
@@ -8181,7 +8181,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 3,
           "sla_pct": 81.2,
-          "cost": 522845
+          "cost": 400733
         },
         {
           "name": "Алиёр",
@@ -8191,7 +8191,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 5,
           "sla_pct": 83.3,
-          "cost": 483385
+          "cost": 370489
         },
         {
           "name": "Нурилло",
@@ -8201,7 +8201,7 @@ const BILLZ_DATA = {
           "rating_pct": 66.7,
           "rated": 3,
           "sla_pct": 85.7,
-          "cost": 453790
+          "cost": 347806
         },
         {
           "name": "Сардор Б.",
@@ -8211,7 +8211,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 2,
           "sla_pct": 87.5,
-          "cost": 434060
+          "cost": 332684
         },
         {
           "name": "Атабек",
@@ -8221,7 +8221,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 3,
           "sla_pct": 88.9,
-          "cost": 394600
+          "cost": 302440
         },
         {
           "name": "Робия Р.",
@@ -8231,7 +8231,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 2,
           "sla_pct": 55.0,
-          "cost": 236760
+          "cost": 181464
         },
         {
           "name": "Авазбек",
@@ -8241,7 +8241,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 1,
           "sla_pct": 0.0,
-          "cost": 9865
+          "cost": 7561
         }
       ],
       "top_companies": [
@@ -8250,7 +8250,7 @@ const BILLZ_DATA = {
           "tickets": 37,
           "desired": 18,
           "undesired": 16,
-          "cost": 365005,
+          "cost": 279757,
           "top_labels": [
             {
               "label": "Учётная запись - Блокировка/Разблокировка аккаунта",
@@ -8271,7 +8271,7 @@ const BILLZ_DATA = {
           "tickets": 9,
           "desired": 4,
           "undesired": 4,
-          "cost": 88785,
+          "cost": 68049,
           "top_labels": [
             {
               "label": "Баг (реквест), Кассовые смены — Расхождение суммы",
@@ -8292,7 +8292,7 @@ const BILLZ_DATA = {
           "tickets": 6,
           "desired": 6,
           "undesired": 0,
-          "cost": 59190,
+          "cost": 45366,
           "top_labels": [
             {
               "label": "SMS рассылка - Шаблонирование",
@@ -8313,7 +8313,7 @@ const BILLZ_DATA = {
           "tickets": 5,
           "desired": 4,
           "undesired": 1,
-          "cost": 49325,
+          "cost": 37805,
           "top_labels": [
             {
               "label": "Каталог — запрос на добавление товара",
@@ -8334,7 +8334,7 @@ const BILLZ_DATA = {
           "tickets": 5,
           "desired": 2,
           "undesired": 2,
-          "cost": 49325,
+          "cost": 37805,
           "top_labels": [
             {
               "label": "Общались по звонку, Акции - Создание/Редактирование/Удаление акции",
@@ -8369,7 +8369,7 @@ const BILLZ_DATA = {
       "sla_pct": 81.2,
       "sla_not_met": 18.8,
       "avg_close_h": 0.04,
-      "cost": 3936135,
+      "cost": 3016839,
       "csat_pct": 95.0,
       "csat_rated": 20,
       "repeat_pct": 11.0,
@@ -8405,49 +8405,49 @@ const BILLZ_DATA = {
           "name": "Оборудование - Установка/Настройка/Удаление принтера",
           "tickets": 26,
           "undesired": 5,
-          "cost": 256490
+          "cost": 196586
         },
         {
           "name": "Вопрос не по программе",
           "tickets": 16,
           "undesired": 6,
-          "cost": 157840
+          "cost": 120976
         },
         {
           "name": "Документооборот - Оплата за тариф",
           "tickets": 12,
           "undesired": 11,
-          "cost": 118380
+          "cost": 90732
         },
         {
           "name": "Документооборот - Создание ссылки для оплаты",
           "tickets": 12,
           "undesired": 8,
-          "cost": 118380
+          "cost": 90732
         },
         {
           "name": "Учётная запись - Помощь со входом в аккаунт",
           "tickets": 10,
           "undesired": 8,
-          "cost": 98650
+          "cost": 75610
         },
         {
           "name": "Учётная запись - Блокировка/Разблокировка аккаунта",
           "tickets": 10,
           "undesired": 3,
-          "cost": 98650
+          "cost": 75610
         },
         {
           "name": "Каталог — настройка печати ценника",
           "tickets": 9,
           "undesired": 3,
-          "cost": 88785
+          "cost": 68049
         },
         {
           "name": "Учётная запись - Создание магазина",
           "tickets": 8,
           "undesired": 1,
-          "cost": 78920
+          "cost": 60488
         }
       ],
       "operators": [
@@ -8459,7 +8459,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 5,
           "sla_pct": 89.7,
-          "cost": 818795
+          "cost": 627563
         },
         {
           "name": "Иззатбек",
@@ -8469,7 +8469,7 @@ const BILLZ_DATA = {
           "rating_pct": 0.0,
           "rated": 0,
           "sla_pct": 73.3,
-          "cost": 779335
+          "cost": 597319
         },
         {
           "name": "Авазбек",
@@ -8479,7 +8479,7 @@ const BILLZ_DATA = {
           "rating_pct": 50.0,
           "rated": 2,
           "sla_pct": 83.3,
-          "cost": 631360
+          "cost": 483904
         },
         {
           "name": "Сардор Б.",
@@ -8489,7 +8489,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 3,
           "sla_pct": 80.0,
-          "cost": 572170
+          "cost": 438538
         },
         {
           "name": "Атабек",
@@ -8499,7 +8499,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 1,
           "sla_pct": 78.6,
-          "cost": 522845
+          "cost": 400733
         },
         {
           "name": "Робия Р.",
@@ -8509,7 +8509,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 7,
           "sla_pct": 72.4,
-          "cost": 374870
+          "cost": 287318
         },
         {
           "name": "Дильшод",
@@ -8519,7 +8519,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 1,
           "sla_pct": 100.0,
-          "cost": 177570
+          "cost": 136098
         },
         {
           "name": "Камолиддин",
@@ -8529,7 +8529,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 1,
           "sla_pct": 100.0,
-          "cost": 49325
+          "cost": 37805
         },
         {
           "name": "Азизбек",
@@ -8539,7 +8539,7 @@ const BILLZ_DATA = {
           "rating_pct": 0.0,
           "rated": 0,
           "sla_pct": 0.0,
-          "cost": 9865
+          "cost": 7561
         }
       ],
       "top_companies": [
@@ -8548,7 +8548,7 @@ const BILLZ_DATA = {
           "tickets": 63,
           "desired": 27,
           "undesired": 32,
-          "cost": 621495,
+          "cost": 476343,
           "top_labels": [
             {
               "label": "Документооборот - Создание ссылки для оплаты",
@@ -8569,7 +8569,7 @@ const BILLZ_DATA = {
           "tickets": 7,
           "desired": 4,
           "undesired": 3,
-          "cost": 69055,
+          "cost": 52927,
           "top_labels": [
             {
               "label": "Каталог - Просмотр статистики",
@@ -8590,7 +8590,7 @@ const BILLZ_DATA = {
           "tickets": 6,
           "desired": 5,
           "undesired": 1,
-          "cost": 59190,
+          "cost": 45366,
           "top_labels": [
             {
               "label": "Учётная запись - Очистка магазина",
@@ -8611,7 +8611,7 @@ const BILLZ_DATA = {
           "tickets": 5,
           "desired": 3,
           "undesired": 2,
-          "cost": 49325,
+          "cost": 37805,
           "top_labels": [
             {
               "label": "Кассовые смены — Открытие/Закрытие смен",
@@ -8632,7 +8632,7 @@ const BILLZ_DATA = {
           "tickets": 5,
           "desired": 0,
           "undesired": 5,
-          "cost": 49325,
+          "cost": 37805,
           "top_labels": [
             {
               "label": "Документооборот - Оплата за тариф",
@@ -8659,7 +8659,7 @@ const BILLZ_DATA = {
       "sla_pct": 82.5,
       "sla_not_met": 17.5,
       "avg_close_h": 0.06,
-      "cost": 3452750,
+      "cost": 2646350,
       "csat_pct": 92.9,
       "csat_rated": 14,
       "repeat_pct": 10.6,
@@ -8695,49 +8695,49 @@ const BILLZ_DATA = {
           "name": "Каталог — настройка печати ценника",
           "tickets": 17,
           "undesired": 6,
-          "cost": 167705
+          "cost": 128537
         },
         {
           "name": "Оборудование - Установка/Настройка/Удаление принтера",
           "tickets": 15,
           "undesired": 2,
-          "cost": 147975
+          "cost": 113415
         },
         {
           "name": "Настройка - Установка BILLZ PAY/Payme/Epos/PAX",
           "tickets": 13,
           "undesired": 4,
-          "cost": 128245
+          "cost": 98293
         },
         {
           "name": "Учётная запись - Помощь со входом в аккаунт",
           "tickets": 12,
           "undesired": 7,
-          "cost": 118380
+          "cost": 90732
         },
         {
           "name": "Вопрос не по программе",
           "tickets": 10,
           "undesired": 7,
-          "cost": 98650
+          "cost": 75610
         },
         {
           "name": "Учётная запись - Блокировка/Разблокировка аккаунта",
           "tickets": 8,
           "undesired": 6,
-          "cost": 78920
+          "cost": 60488
         },
         {
           "name": "Документооборот - Оплата за тариф",
           "tickets": 8,
           "undesired": 2,
-          "cost": 78920
+          "cost": 60488
         },
         {
           "name": "Импорт — импорт товаров через Excel",
           "tickets": 7,
           "undesired": 2,
-          "cost": 69055
+          "cost": 52927
         }
       ],
       "operators": [
@@ -8749,7 +8749,7 @@ const BILLZ_DATA = {
           "rating_pct": 0.0,
           "rated": 0,
           "sla_pct": 76.5,
-          "cost": 749740
+          "cost": 574636
         },
         {
           "name": "Авазбек",
@@ -8759,7 +8759,7 @@ const BILLZ_DATA = {
           "rating_pct": 75.0,
           "rated": 4,
           "sla_pct": 95.7,
-          "cost": 542575
+          "cost": 415855
         },
         {
           "name": "Алиёр",
@@ -8769,7 +8769,7 @@ const BILLZ_DATA = {
           "rating_pct": 0.0,
           "rated": 0,
           "sla_pct": 75.0,
-          "cost": 532710
+          "cost": 408294
         },
         {
           "name": "Тожмухаммад",
@@ -8779,7 +8779,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 2,
           "sla_pct": 68.8,
-          "cost": 493250
+          "cost": 378050
         },
         {
           "name": "Анасхон",
@@ -8789,7 +8789,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 4,
           "sla_pct": 86.4,
-          "cost": 483385
+          "cost": 370489
         },
         {
           "name": "Робия Р.",
@@ -8799,7 +8799,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 1,
           "sla_pct": 86.4,
-          "cost": 305815
+          "cost": 234391
         },
         {
           "name": "Нурилло",
@@ -8809,7 +8809,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 2,
           "sla_pct": 80.0,
-          "cost": 286085
+          "cost": 219269
         },
         {
           "name": "Дильшод",
@@ -8819,7 +8819,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 1,
           "sla_pct": 50.0,
-          "cost": 39460
+          "cost": 30244
         },
         {
           "name": "Сардор Б.",
@@ -8829,7 +8829,7 @@ const BILLZ_DATA = {
           "rating_pct": 0.0,
           "rated": 0,
           "sla_pct": 100.0,
-          "cost": 19730
+          "cost": 15122
         }
       ],
       "top_companies": [
@@ -8838,7 +8838,7 @@ const BILLZ_DATA = {
           "tickets": 72,
           "desired": 20,
           "undesired": 46,
-          "cost": 710280,
+          "cost": 544392,
           "top_labels": [
             {
               "label": "Учётная запись - Блокировка/Разблокировка аккаунта",
@@ -8859,7 +8859,7 @@ const BILLZ_DATA = {
           "tickets": 8,
           "desired": 6,
           "undesired": 2,
-          "cost": 78920,
+          "cost": 60488,
           "top_labels": [
             {
               "label": "Оборудование - Установка/Настройка/Удаление принтера",
@@ -8880,7 +8880,7 @@ const BILLZ_DATA = {
           "tickets": 6,
           "desired": 4,
           "undesired": 2,
-          "cost": 59190,
+          "cost": 45366,
           "top_labels": [
             {
               "label": "Настройка - Установка BILLZ PAY/Payme/Epos/PAX",
@@ -8897,7 +8897,7 @@ const BILLZ_DATA = {
           "tickets": 5,
           "desired": 0,
           "undesired": 5,
-          "cost": 49325,
+          "cost": 37805,
           "top_labels": [
             {
               "label": "Все продажи - Удаление/Редактирование продажи",
@@ -8914,7 +8914,7 @@ const BILLZ_DATA = {
           "tickets": 5,
           "desired": 4,
           "undesired": 1,
-          "cost": 49325,
+          "cost": 37805,
           "top_labels": [
             {
               "label": "Каталог — изменение свойств товара",
@@ -8949,7 +8949,7 @@ const BILLZ_DATA = {
       "sla_pct": 87.3,
       "sla_not_met": 12.7,
       "avg_close_h": 0.04,
-      "cost": 3255450,
+      "cost": 2495130,
       "csat_pct": 94.7,
       "csat_rated": 19,
       "repeat_pct": 10.6,
@@ -8984,49 +8984,49 @@ const BILLZ_DATA = {
           "name": "Учётная запись - Помощь со входом в аккаунт",
           "tickets": 21,
           "undesired": 12,
-          "cost": 207165
+          "cost": 158781
         },
         {
           "name": "Оборудование - Установка/Настройка/Удаление принтера",
           "tickets": 12,
           "undesired": 2,
-          "cost": 118380
+          "cost": 90732
         },
         {
           "name": "Документооборот - Создание ссылки для оплаты",
           "tickets": 10,
           "undesired": 6,
-          "cost": 98650
+          "cost": 75610
         },
         {
           "name": "Кассовые смены — Открытие/Закрытие смен",
           "tickets": 10,
           "undesired": 6,
-          "cost": 98650
+          "cost": 75610
         },
         {
           "name": "Настройка - Создание/Редактирование/Удаление чека",
           "tickets": 8,
           "undesired": 1,
-          "cost": 78920
+          "cost": 60488
         },
         {
           "name": "Учётная запись - Блокировка/Разблокировка аккаунта",
           "tickets": 8,
           "undesired": 1,
-          "cost": 78920
+          "cost": 60488
         },
         {
           "name": "Учётная запись - Создание магазина",
           "tickets": 8,
           "undesired": 0,
-          "cost": 78920
+          "cost": 60488
         },
         {
           "name": "Каталог — изменение свойств товара",
           "tickets": 8,
           "undesired": 6,
-          "cost": 78920
+          "cost": 60488
         }
       ],
       "operators": [
@@ -9038,7 +9038,7 @@ const BILLZ_DATA = {
           "rating_pct": 0.0,
           "rated": 1,
           "sla_pct": 93.8,
-          "cost": 611630
+          "cost": 468782
         },
         {
           "name": "Алиёр",
@@ -9048,7 +9048,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 1,
           "sla_pct": 92.9,
-          "cost": 453790
+          "cost": 347806
         },
         {
           "name": "Ардак",
@@ -9058,7 +9058,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 5,
           "sla_pct": 72.2,
-          "cost": 443925
+          "cost": 340245
         },
         {
           "name": "Анасхон",
@@ -9068,7 +9068,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 4,
           "sla_pct": 94.4,
-          "cost": 443925
+          "cost": 340245
         },
         {
           "name": "Сардор Б.",
@@ -9078,7 +9078,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 2,
           "sla_pct": 91.7,
-          "cost": 443925
+          "cost": 340245
         },
         {
           "name": "Атабек",
@@ -9088,7 +9088,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 2,
           "sla_pct": 69.2,
-          "cost": 365005
+          "cost": 279757
         },
         {
           "name": "Нурилло",
@@ -9098,7 +9098,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 2,
           "sla_pct": 80.0,
-          "cost": 345275
+          "cost": 264635
         },
         {
           "name": "Камолиддин",
@@ -9108,7 +9108,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 2,
           "sla_pct": 100.0,
-          "cost": 147975
+          "cost": 113415
         }
       ],
       "top_companies": [
@@ -9117,7 +9117,7 @@ const BILLZ_DATA = {
           "tickets": 59,
           "desired": 35,
           "undesired": 22,
-          "cost": 582035,
+          "cost": 446099,
           "top_labels": [
             {
               "label": "Документооборот - Создание ссылки для оплаты",
@@ -9138,7 +9138,7 @@ const BILLZ_DATA = {
           "tickets": 4,
           "desired": 3,
           "undesired": 1,
-          "cost": 39460,
+          "cost": 30244,
           "top_labels": [
             {
               "label": "Все продажи - Частичное обучение",
@@ -9159,7 +9159,7 @@ const BILLZ_DATA = {
           "tickets": 4,
           "desired": 4,
           "undesired": 0,
-          "cost": 39460,
+          "cost": 30244,
           "top_labels": [
             {
               "label": "Управление - Создание/Редактирвоание/Удаление сотрудника",
@@ -9180,7 +9180,7 @@ const BILLZ_DATA = {
           "tickets": 4,
           "desired": 3,
           "undesired": 1,
-          "cost": 39460,
+          "cost": 30244,
           "top_labels": [
             {
               "label": "Оборудование - Установка/Настройка/Удаление принтера, Оборудование - Вопрос по сканеру",
@@ -9201,7 +9201,7 @@ const BILLZ_DATA = {
           "tickets": 4,
           "desired": 2,
           "undesired": 2,
-          "cost": 39460,
+          "cost": 30244,
           "top_labels": [
             {
               "label": "Импорт — импорт товаров через Excel",
@@ -9236,7 +9236,7 @@ const BILLZ_DATA = {
       "sla_pct": 79.7,
       "sla_not_met": 20.3,
       "avg_close_h": 0.06,
-      "cost": 3186395,
+      "cost": 2442203,
       "csat_pct": 94.1,
       "csat_rated": 17,
       "repeat_pct": 5.3,
@@ -9271,49 +9271,49 @@ const BILLZ_DATA = {
           "name": "Каталог — изменение свойств товара",
           "tickets": 14,
           "undesired": 6,
-          "cost": 138110
+          "cost": 105854
         },
         {
           "name": "Кассовые смены — Открытие/Закрытие смен",
           "tickets": 13,
           "undesired": 10,
-          "cost": 128245
+          "cost": 98293
         },
         {
           "name": "Вопрос не по программе",
           "tickets": 13,
           "undesired": 7,
-          "cost": 128245
+          "cost": 98293
         },
         {
           "name": "Оборудование - Установка/Настройка/Удаление принтера",
           "tickets": 12,
           "undesired": 5,
-          "cost": 118380
+          "cost": 90732
         },
         {
           "name": "Документооборот - Оплата за тариф",
           "tickets": 9,
           "undesired": 2,
-          "cost": 88785
+          "cost": 68049
         },
         {
           "name": "Каталог — запрос на добавление товара",
           "tickets": 9,
           "undesired": 7,
-          "cost": 88785
+          "cost": 68049
         },
         {
           "name": "Учётная запись - Помощь со входом в аккаунт",
           "tickets": 8,
           "undesired": 8,
-          "cost": 78920
+          "cost": 60488
         },
         {
           "name": "Управление - Создание/Редактирвоание/Удаление роли",
           "tickets": 6,
           "undesired": 3,
-          "cost": 59190
+          "cost": 45366
         }
       ],
       "operators": [
@@ -9325,7 +9325,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 3,
           "sla_pct": 83.3,
-          "cost": 562305
+          "cost": 430977
         },
         {
           "name": "Атабек",
@@ -9335,7 +9335,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 1,
           "sla_pct": 100.0,
-          "cost": 483385
+          "cost": 370489
         },
         {
           "name": "Робия Р.",
@@ -9345,7 +9345,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 3,
           "sla_pct": 78.6,
-          "cost": 414330
+          "cost": 317562
         },
         {
           "name": "Сардор Б.",
@@ -9355,7 +9355,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 3,
           "sla_pct": 53.8,
-          "cost": 404465
+          "cost": 310001
         },
         {
           "name": "Авазбек",
@@ -9365,7 +9365,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 1,
           "sla_pct": 85.7,
-          "cost": 345275
+          "cost": 264635
         },
         {
           "name": "Алиёр",
@@ -9375,7 +9375,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 1,
           "sla_pct": 81.8,
-          "cost": 335410
+          "cost": 257074
         },
         {
           "name": "Тожмухаммад",
@@ -9385,7 +9385,7 @@ const BILLZ_DATA = {
           "rating_pct": 66.7,
           "rated": 3,
           "sla_pct": 75.0,
-          "cost": 325545
+          "cost": 249513
         },
         {
           "name": "Нурилло",
@@ -9395,7 +9395,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 1,
           "sla_pct": 85.7,
-          "cost": 256490
+          "cost": 196586
         },
         {
           "name": "Дильшод",
@@ -9405,7 +9405,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 1,
           "sla_pct": 66.7,
-          "cost": 59190
+          "cost": 45366
         }
       ],
       "top_companies": [
@@ -9414,7 +9414,7 @@ const BILLZ_DATA = {
           "tickets": 56,
           "desired": 28,
           "undesired": 25,
-          "cost": 552440,
+          "cost": 423416,
           "top_labels": [
             {
               "label": "Учётная запись - Блокировка/Разблокировка аккаунта",
@@ -9435,7 +9435,7 @@ const BILLZ_DATA = {
           "tickets": 7,
           "desired": 3,
           "undesired": 4,
-          "cost": 69055,
+          "cost": 52927,
           "top_labels": [
             {
               "label": "Кассовые смены — Открытие/Закрытие смен",
@@ -9456,7 +9456,7 @@ const BILLZ_DATA = {
           "tickets": 5,
           "desired": 4,
           "undesired": 1,
-          "cost": 49325,
+          "cost": 37805,
           "top_labels": [
             {
               "label": "Кассовые смены — Открытие/Закрытие смен",
@@ -9477,7 +9477,7 @@ const BILLZ_DATA = {
           "tickets": 5,
           "desired": 4,
           "undesired": 1,
-          "cost": 49325,
+          "cost": 37805,
           "top_labels": [
             {
               "label": "Документооборот - Оплата за тариф",
@@ -9498,7 +9498,7 @@ const BILLZ_DATA = {
           "tickets": 4,
           "desired": 1,
           "undesired": 3,
-          "cost": 39460,
+          "cost": 30244,
           "top_labels": [
             {
               "label": "Учётная запись - Помощь со входом в аккаунт",
@@ -9529,7 +9529,7 @@ const BILLZ_DATA = {
       "sla_pct": 82.0,
       "sla_not_met": 18.0,
       "avg_close_h": 0.04,
-      "cost": 2860850,
+      "cost": 2192690,
       "csat_pct": 100.0,
       "csat_rated": 20,
       "repeat_pct": 5.9,
@@ -9565,49 +9565,49 @@ const BILLZ_DATA = {
           "name": "Учётная запись - Помощь со входом в аккаунт",
           "tickets": 12,
           "undesired": 4,
-          "cost": 118380
+          "cost": 90732
         },
         {
           "name": "Вопрос не по программе",
           "tickets": 12,
           "undesired": 3,
-          "cost": 118380
+          "cost": 90732
         },
         {
           "name": "Каталог — настройка печати ценника",
           "tickets": 10,
           "undesired": 3,
-          "cost": 98650
+          "cost": 75610
         },
         {
           "name": "Кассовые смены — Открытие/Закрытие смен",
           "tickets": 9,
           "undesired": 7,
-          "cost": 88785
+          "cost": 68049
         },
         {
           "name": "Учётная запись - Очистка магазина",
           "tickets": 7,
           "undesired": 0,
-          "cost": 69055
+          "cost": 52927
         },
         {
           "name": "Каталог — изменение свойств товара",
           "tickets": 7,
           "undesired": 3,
-          "cost": 69055
+          "cost": 52927
         },
         {
           "name": "Оборудование - Установка/Настройка/Удаление принтера",
           "tickets": 7,
           "undesired": 4,
-          "cost": 69055
+          "cost": 52927
         },
         {
           "name": "Все продажи - Удаление/Редактирование продажи",
           "tickets": 6,
           "undesired": 4,
-          "cost": 59190
+          "cost": 45366
         }
       ],
       "operators": [
@@ -9619,7 +9619,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 5,
           "sla_pct": 70.4,
-          "cost": 621495
+          "cost": 476343
         },
         {
           "name": "Нурилло",
@@ -9629,7 +9629,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 2,
           "sla_pct": 81.2,
-          "cost": 443925
+          "cost": 340245
         },
         {
           "name": "Авазбек",
@@ -9639,7 +9639,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 9,
           "sla_pct": 91.7,
-          "cost": 414330
+          "cost": 317562
         },
         {
           "name": "Сардор Б.",
@@ -9649,7 +9649,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 1,
           "sla_pct": 100.0,
-          "cost": 365005
+          "cost": 279757
         },
         {
           "name": "Иззатбек",
@@ -9659,7 +9659,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 1,
           "sla_pct": 88.9,
-          "cost": 325545
+          "cost": 249513
         },
         {
           "name": "Тожмухаммад",
@@ -9669,7 +9669,7 @@ const BILLZ_DATA = {
           "rating_pct": 0.0,
           "rated": 0,
           "sla_pct": 90.9,
-          "cost": 266355
+          "cost": 204147
         },
         {
           "name": "Алиёр",
@@ -9679,7 +9679,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 1,
           "sla_pct": 85.7,
-          "cost": 246625
+          "cost": 189025
         },
         {
           "name": "Робия Р.",
@@ -9689,7 +9689,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 1,
           "sla_pct": 60.0,
-          "cost": 177570
+          "cost": 136098
         }
       ],
       "top_companies": [
@@ -9698,7 +9698,7 @@ const BILLZ_DATA = {
           "tickets": 45,
           "desired": 18,
           "undesired": 26,
-          "cost": 443925,
+          "cost": 340245,
           "top_labels": [
             {
               "label": "Учётная запись - Создание магазина",
@@ -9719,7 +9719,7 @@ const BILLZ_DATA = {
           "tickets": 6,
           "desired": 0,
           "undesired": 6,
-          "cost": 59190,
+          "cost": 45366,
           "top_labels": [
             {
               "label": "Кассовые смены — Открытие/Закрытие смен",
@@ -9732,7 +9732,7 @@ const BILLZ_DATA = {
           "tickets": 5,
           "desired": 3,
           "undesired": 2,
-          "cost": 49325,
+          "cost": 37805,
           "top_labels": [
             {
               "label": "Каталог — настройка печати ценника",
@@ -9753,7 +9753,7 @@ const BILLZ_DATA = {
           "tickets": 5,
           "desired": 3,
           "undesired": 2,
-          "cost": 49325,
+          "cost": 37805,
           "top_labels": [
             {
               "label": "Учётная запись - Помощь со входом в аккаунт",
@@ -9774,7 +9774,7 @@ const BILLZ_DATA = {
           "tickets": 5,
           "desired": 2,
           "undesired": 3,
-          "cost": 49325,
+          "cost": 37805,
           "top_labels": [
             {
               "label": "Оборудование - Продажа оборудования",
@@ -9805,7 +9805,7 @@ const BILLZ_DATA = {
       "sla_pct": 88.8,
       "sla_not_met": 11.2,
       "avg_close_h": 0.05,
-      "cost": 2712875,
+      "cost": 2079275,
       "csat_pct": 92.3,
       "csat_rated": 13,
       "repeat_pct": 12.0,
@@ -9841,49 +9841,49 @@ const BILLZ_DATA = {
           "name": "Оборудование - Установка/Настройка/Удаление принтера",
           "tickets": 13,
           "undesired": 5,
-          "cost": 128245
+          "cost": 98293
         },
         {
           "name": "Каталог — запрос на добавление товара",
           "tickets": 10,
           "undesired": 4,
-          "cost": 98650
+          "cost": 75610
         },
         {
           "name": "Управление - Создание/Редактирвоание/Удаление сотрудника",
           "tickets": 9,
           "undesired": 5,
-          "cost": 88785
+          "cost": 68049
         },
         {
           "name": "Вопрос не по программе",
           "tickets": 8,
           "undesired": 6,
-          "cost": 78920
+          "cost": 60488
         },
         {
           "name": "Оборудование - Установка Anydesk/BILLZ Desktop/Программы компьютера и тд.",
           "tickets": 8,
           "undesired": 3,
-          "cost": 78920
+          "cost": 60488
         },
         {
           "name": "Учётная запись - Помощь со входом в аккаунт",
           "tickets": 8,
           "undesired": 4,
-          "cost": 78920
+          "cost": 60488
         },
         {
           "name": "Учётная запись - Создание магазина",
           "tickets": 7,
           "undesired": 1,
-          "cost": 69055
+          "cost": 52927
         },
         {
           "name": "Новая продажа - Консультация",
           "tickets": 6,
           "undesired": 3,
-          "cost": 59190
+          "cost": 45366
         }
       ],
       "operators": [
@@ -9895,7 +9895,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 4,
           "sla_pct": 75.0,
-          "cost": 582035
+          "cost": 446099
         },
         {
           "name": "Анасхон",
@@ -9905,7 +9905,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 1,
           "sla_pct": 100.0,
-          "cost": 463655
+          "cost": 355367
         },
         {
           "name": "Нурилло",
@@ -9915,7 +9915,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 2,
           "sla_pct": 100.0,
-          "cost": 414330
+          "cost": 317562
         },
         {
           "name": "Тожмухаммад",
@@ -9925,7 +9925,7 @@ const BILLZ_DATA = {
           "rating_pct": 50.0,
           "rated": 2,
           "sla_pct": 90.0,
-          "cost": 414330
+          "cost": 317562
         },
         {
           "name": "Сардор Б.",
@@ -9935,7 +9935,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 1,
           "sla_pct": 100.0,
-          "cost": 374870
+          "cost": 287318
         },
         {
           "name": "Алиёр",
@@ -9945,7 +9945,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 2,
           "sla_pct": 84.2,
-          "cost": 335410
+          "cost": 257074
         },
         {
           "name": "Камолиддин",
@@ -9955,7 +9955,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 1,
           "sla_pct": 91.7,
-          "cost": 128245
+          "cost": 98293
         }
       ],
       "top_companies": [
@@ -9964,7 +9964,7 @@ const BILLZ_DATA = {
           "tickets": 54,
           "desired": 28,
           "undesired": 26,
-          "cost": 532710,
+          "cost": 408294,
           "top_labels": [
             {
               "label": "Оборудование - Установка/Настройка/Удаление принтера",
@@ -9985,7 +9985,7 @@ const BILLZ_DATA = {
           "tickets": 6,
           "desired": 0,
           "undesired": 6,
-          "cost": 59190,
+          "cost": 45366,
           "top_labels": [
             {
               "label": "Кассовые смены — Открытие/Закрытие смен",
@@ -10002,7 +10002,7 @@ const BILLZ_DATA = {
           "tickets": 6,
           "desired": 0,
           "undesired": 6,
-          "cost": 59190,
+          "cost": 45366,
           "top_labels": [
             {
               "label": "Долги клиентов - Просмотр статистики по долгам",
@@ -10015,7 +10015,7 @@ const BILLZ_DATA = {
           "tickets": 5,
           "desired": 3,
           "undesired": 2,
-          "cost": 49325,
+          "cost": 37805,
           "top_labels": [
             {
               "label": "Акции - Создание/Редактирование/Удаление акции",
@@ -10032,7 +10032,7 @@ const BILLZ_DATA = {
           "tickets": 5,
           "desired": 1,
           "undesired": 4,
-          "cost": 49325,
+          "cost": 37805,
           "top_labels": [
             {
               "label": "Учётная запись - Помощь со входом в аккаунт",
@@ -10067,7 +10067,7 @@ const BILLZ_DATA = {
       "sla_pct": 96.9,
       "sla_not_met": 3.1,
       "avg_close_h": 0.06,
-      "cost": 2939770,
+      "cost": 2253178,
       "csat_pct": 92.9,
       "csat_rated": 14,
       "repeat_pct": 12.4,
@@ -10104,49 +10104,49 @@ const BILLZ_DATA = {
           "name": "Каталог — настройка печати ценника",
           "tickets": 15,
           "undesired": 6,
-          "cost": 147975
+          "cost": 113415
         },
         {
           "name": "Учётная запись - Помощь со входом в аккаунт",
           "tickets": 12,
           "undesired": 1,
-          "cost": 118380
+          "cost": 90732
         },
         {
           "name": "Оборудование - Установка/Настройка/Удаление принтера",
           "tickets": 9,
           "undesired": 2,
-          "cost": 88785
+          "cost": 68049
         },
         {
           "name": "Учётная запись - Блокировка/Разблокировка аккаунта",
           "tickets": 7,
           "undesired": 6,
-          "cost": 69055
+          "cost": 52927
         },
         {
           "name": "Вопрос не по программе",
           "tickets": 6,
           "undesired": 4,
-          "cost": 59190
+          "cost": 45366
         },
         {
           "name": "SMS рассылка - Создание SMS рассылки",
           "tickets": 6,
           "undesired": 2,
-          "cost": 59190
+          "cost": 45366
         },
         {
           "name": "Документооборот - Смена тарифа (upsell/downsell)",
           "tickets": 6,
           "undesired": 0,
-          "cost": 59190
+          "cost": 45366
         },
         {
           "name": "Кассовые смены — Открытие/Закрытие смен",
           "tickets": 5,
           "undesired": 5,
-          "cost": 49325
+          "cost": 37805
         }
       ],
       "operators": [
@@ -10158,7 +10158,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 2,
           "sla_pct": 94.7,
-          "cost": 591900
+          "cost": 453660
         },
         {
           "name": "Анасхон",
@@ -10168,7 +10168,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 2,
           "sla_pct": 100.0,
-          "cost": 572170
+          "cost": 438538
         },
         {
           "name": "Атабек",
@@ -10178,7 +10178,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 3,
           "sla_pct": 91.7,
-          "cost": 552440
+          "cost": 423416
         },
         {
           "name": "Авазбек",
@@ -10188,7 +10188,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 2,
           "sla_pct": 100.0,
-          "cost": 503115
+          "cost": 385611
         },
         {
           "name": "Тожмухаммад",
@@ -10198,7 +10198,7 @@ const BILLZ_DATA = {
           "rating_pct": 66.7,
           "rated": 3,
           "sla_pct": 100.0,
-          "cost": 374870
+          "cost": 287318
         },
         {
           "name": "Робия Р.",
@@ -10208,7 +10208,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 2,
           "sla_pct": 93.3,
-          "cost": 286085
+          "cost": 219269
         },
         {
           "name": "Камолиддин",
@@ -10218,7 +10218,7 @@ const BILLZ_DATA = {
           "rating_pct": 0.0,
           "rated": 0,
           "sla_pct": 100.0,
-          "cost": 59190
+          "cost": 45366
         }
       ],
       "top_companies": [
@@ -10227,7 +10227,7 @@ const BILLZ_DATA = {
           "tickets": 36,
           "desired": 13,
           "undesired": 19,
-          "cost": 355140,
+          "cost": 272196,
           "top_labels": [
             {
               "label": "Учётная запись - Блокировка/Разблокировка аккаунта",
@@ -10248,7 +10248,7 @@ const BILLZ_DATA = {
           "tickets": 8,
           "desired": 7,
           "undesired": 1,
-          "cost": 78920,
+          "cost": 60488,
           "top_labels": [
             {
               "label": "Каталог — изменение свойств товара",
@@ -10269,7 +10269,7 @@ const BILLZ_DATA = {
           "tickets": 7,
           "desired": 2,
           "undesired": 5,
-          "cost": 69055,
+          "cost": 52927,
           "top_labels": [
             {
               "label": "Все продажи - Удаление/Редактирование продажи",
@@ -10290,7 +10290,7 @@ const BILLZ_DATA = {
           "tickets": 7,
           "desired": 7,
           "undesired": 0,
-          "cost": 69055,
+          "cost": 52927,
           "top_labels": [
             {
               "label": "Все продажи - Выгрузка продаж, Баг (реквест)",
@@ -10311,7 +10311,7 @@ const BILLZ_DATA = {
           "tickets": 7,
           "desired": 2,
           "undesired": 5,
-          "cost": 69055,
+          "cost": 52927,
           "top_labels": [
             {
               "label": "Документооборот - Создание ссылки для оплаты",
@@ -10346,7 +10346,7 @@ const BILLZ_DATA = {
       "sla_pct": 88.2,
       "sla_not_met": 11.8,
       "avg_close_h": 0.05,
-      "cost": 3127205,
+      "cost": 2396837,
       "csat_pct": 93.3,
       "csat_rated": 15,
       "repeat_pct": 7.9,
@@ -10380,49 +10380,49 @@ const BILLZ_DATA = {
           "name": "Оборудование - Установка/Настройка/Удаление принтера",
           "tickets": 13,
           "undesired": 1,
-          "cost": 128245
+          "cost": 98293
         },
         {
           "name": "Учётная запись - Блокировка/Разблокировка аккаунта",
           "tickets": 13,
           "undesired": 3,
-          "cost": 128245
+          "cost": 98293
         },
         {
           "name": "Новая продажа - Не удаётся сделать продажу",
           "tickets": 12,
           "undesired": 1,
-          "cost": 118380
+          "cost": 90732
         },
         {
           "name": "Учётная запись - Помощь со входом в аккаунт",
           "tickets": 12,
           "undesired": 5,
-          "cost": 118380
+          "cost": 90732
         },
         {
           "name": "Документооборот - Создание ссылки для оплаты",
           "tickets": 10,
           "undesired": 8,
-          "cost": 98650
+          "cost": 75610
         },
         {
           "name": "Кассовые смены — Открытие/Закрытие смен",
           "tickets": 8,
           "undesired": 5,
-          "cost": 78920
+          "cost": 60488
         },
         {
           "name": "Вопрос не по программе",
           "tickets": 8,
           "undesired": 3,
-          "cost": 78920
+          "cost": 60488
         },
         {
           "name": "Документооборот - Оплата за тариф",
           "tickets": 7,
           "undesired": 1,
-          "cost": 69055
+          "cost": 52927
         }
       ],
       "operators": [
@@ -10434,7 +10434,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 3,
           "sla_pct": 73.7,
-          "cost": 660955
+          "cost": 506587
         },
         {
           "name": "Анасхон",
@@ -10444,7 +10444,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 6,
           "sla_pct": 100.0,
-          "cost": 522845
+          "cost": 400733
         },
         {
           "name": "Авазбек",
@@ -10454,7 +10454,7 @@ const BILLZ_DATA = {
           "rating_pct": 66.7,
           "rated": 3,
           "sla_pct": 95.8,
-          "cost": 483385
+          "cost": 370489
         },
         {
           "name": "Сардор Б.",
@@ -10464,7 +10464,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 1,
           "sla_pct": 90.0,
-          "cost": 443925
+          "cost": 340245
         },
         {
           "name": "Иззатбек",
@@ -10474,7 +10474,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 1,
           "sla_pct": 90.0,
-          "cost": 345275
+          "cost": 264635
         },
         {
           "name": "Тожмухаммад",
@@ -10484,7 +10484,7 @@ const BILLZ_DATA = {
           "rating_pct": 0.0,
           "rated": 0,
           "sla_pct": 90.0,
-          "cost": 335410
+          "cost": 257074
         },
         {
           "name": "Робия Р.",
@@ -10494,7 +10494,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 1,
           "sla_pct": 80.0,
-          "cost": 226895
+          "cost": 173903
         },
         {
           "name": "Камолиддин",
@@ -10504,7 +10504,7 @@ const BILLZ_DATA = {
           "rating_pct": 0.0,
           "rated": 0,
           "sla_pct": 70.0,
-          "cost": 98650
+          "cost": 75610
         },
         {
           "name": "Азизбек",
@@ -10514,7 +10514,7 @@ const BILLZ_DATA = {
           "rating_pct": 0.0,
           "rated": 0,
           "sla_pct": 0.0,
-          "cost": 9865
+          "cost": 7561
         }
       ],
       "top_companies": [
@@ -10523,7 +10523,7 @@ const BILLZ_DATA = {
           "tickets": 59,
           "desired": 33,
           "undesired": 23,
-          "cost": 582035,
+          "cost": 446099,
           "top_labels": [
             {
               "label": "Документооборот - Создание ссылки для оплаты",
@@ -10544,7 +10544,7 @@ const BILLZ_DATA = {
           "tickets": 6,
           "desired": 6,
           "undesired": 0,
-          "cost": 59190,
+          "cost": 45366,
           "top_labels": [
             {
               "label": "Каталог - Скачивание товаров, Общались по звонку",
@@ -10565,7 +10565,7 @@ const BILLZ_DATA = {
           "tickets": 6,
           "desired": 3,
           "undesired": 3,
-          "cost": 59190,
+          "cost": 45366,
           "top_labels": [
             {
               "label": "Все продажи - Удаление/Редактирование продажи",
@@ -10586,7 +10586,7 @@ const BILLZ_DATA = {
           "tickets": 6,
           "desired": 3,
           "undesired": 3,
-          "cost": 59190,
+          "cost": 45366,
           "top_labels": [
             {
               "label": "Баг (реквест), Новая продажа - Возврат/Обмен",
@@ -10607,7 +10607,7 @@ const BILLZ_DATA = {
           "tickets": 6,
           "desired": 2,
           "undesired": 4,
-          "cost": 59190,
+          "cost": 45366,
           "top_labels": [
             {
               "label": "Оборудование - Установка/Настройка/Удаление принтера",
@@ -10642,7 +10642,7 @@ const BILLZ_DATA = {
       "sla_pct": 63.6,
       "sla_not_met": 36.4,
       "avg_close_h": 0.06,
-      "cost": 3196260,
+      "cost": 2449764,
       "csat_pct": 86.2,
       "csat_rated": 29,
       "repeat_pct": 2.8,
@@ -10678,49 +10678,49 @@ const BILLZ_DATA = {
           "name": "Массовый сбой BILLZ",
           "tickets": 30,
           "undesired": 30,
-          "cost": 295950
+          "cost": 226830
         },
         {
           "name": "Учётная запись - Помощь со входом в аккаунт",
           "tickets": 12,
           "undesired": 5,
-          "cost": 118380
+          "cost": 90732
         },
         {
           "name": "Каталог — изменение свойств товара",
           "tickets": 10,
           "undesired": 7,
-          "cost": 98650
+          "cost": 75610
         },
         {
           "name": "Учётная запись - Блокировка/Разблокировка аккаунта",
           "tickets": 9,
           "undesired": 6,
-          "cost": 88785
+          "cost": 68049
         },
         {
           "name": "Управление - Создание/Редактирвоание/Удаление роли",
           "tickets": 8,
           "undesired": 3,
-          "cost": 78920
+          "cost": 60488
         },
         {
           "name": "Управление - Создание/Редактирвоание/Удаление сотрудника",
           "tickets": 8,
           "undesired": 3,
-          "cost": 78920
+          "cost": 60488
         },
         {
           "name": "Настройка - Создание/Редактирование/Удаление доп. точки",
           "tickets": 7,
           "undesired": 1,
-          "cost": 69055
+          "cost": 52927
         },
         {
           "name": "Вопрос не по программе",
           "tickets": 7,
           "undesired": 3,
-          "cost": 69055
+          "cost": 52927
         }
       ],
       "operators": [
@@ -10732,7 +10732,7 @@ const BILLZ_DATA = {
           "rating_pct": 80.0,
           "rated": 5,
           "sla_pct": 43.8,
-          "cost": 651090
+          "cost": 499026
         },
         {
           "name": "Алиёр",
@@ -10742,7 +10742,7 @@ const BILLZ_DATA = {
           "rating_pct": 50.0,
           "rated": 2,
           "sla_pct": 42.9,
-          "cost": 522845
+          "cost": 400733
         },
         {
           "name": "Авазбек",
@@ -10752,7 +10752,7 @@ const BILLZ_DATA = {
           "rating_pct": 75.0,
           "rated": 4,
           "sla_pct": 92.6,
-          "cost": 443925
+          "cost": 340245
         },
         {
           "name": "Иззатбек",
@@ -10762,7 +10762,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 2,
           "sla_pct": 37.5,
-          "cost": 424195
+          "cost": 325123
         },
         {
           "name": "Атабек",
@@ -10772,7 +10772,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 9,
           "sla_pct": 64.7,
-          "cost": 325545
+          "cost": 249513
         },
         {
           "name": "Анасхон",
@@ -10782,7 +10782,7 @@ const BILLZ_DATA = {
           "rating_pct": 66.7,
           "rated": 3,
           "sla_pct": 92.9,
-          "cost": 315680
+          "cost": 241952
         },
         {
           "name": "Сардор Б.",
@@ -10792,7 +10792,7 @@ const BILLZ_DATA = {
           "rating_pct": 0.0,
           "rated": 0,
           "sla_pct": 50.0,
-          "cost": 256490
+          "cost": 196586
         },
         {
           "name": "Нурилло",
@@ -10802,7 +10802,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 4,
           "sla_pct": 70.0,
-          "cost": 246625
+          "cost": 189025
         },
         {
           "name": "Хуршид",
@@ -10812,7 +10812,7 @@ const BILLZ_DATA = {
           "rating_pct": 0.0,
           "rated": 0,
           "sla_pct": 0.0,
-          "cost": 9865
+          "cost": 7561
         }
       ],
       "top_companies": [
@@ -10821,7 +10821,7 @@ const BILLZ_DATA = {
           "tickets": 60,
           "desired": 25,
           "undesired": 30,
-          "cost": 591900,
+          "cost": 453660,
           "top_labels": [
             {
               "label": "Учётная запись - Блокировка/Разблокировка аккаунта",
@@ -10842,7 +10842,7 @@ const BILLZ_DATA = {
           "tickets": 8,
           "desired": 6,
           "undesired": 2,
-          "cost": 78920,
+          "cost": 60488,
           "top_labels": [
             {
               "label": "Управление - Создание/Редактирвоание/Удаление сотрудника",
@@ -10863,7 +10863,7 @@ const BILLZ_DATA = {
           "tickets": 6,
           "desired": 3,
           "undesired": 3,
-          "cost": 59190,
+          "cost": 45366,
           "top_labels": [
             {
               "label": "Все продажи - Удаление/Редактирование продажи",
@@ -10884,7 +10884,7 @@ const BILLZ_DATA = {
           "tickets": 4,
           "desired": 0,
           "undesired": 4,
-          "cost": 39460,
+          "cost": 30244,
           "top_labels": [
             {
               "label": "Кассовые смены — Открытие/Закрытие смен",
@@ -10897,7 +10897,7 @@ const BILLZ_DATA = {
           "tickets": 4,
           "desired": 2,
           "undesired": 2,
-          "cost": 39460,
+          "cost": 30244,
           "top_labels": [
             {
               "label": "Оборудование - Установка/Настройка/Удаление принтера, Настройка - Создание/Редактирование/Удаление чека",
@@ -10932,7 +10932,7 @@ const BILLZ_DATA = {
       "sla_pct": 84.6,
       "sla_not_met": 15.4,
       "avg_close_h": 0.06,
-      "cost": 3452750,
+      "cost": 2646350,
       "csat_pct": 86.4,
       "csat_rated": 22,
       "repeat_pct": 10.0,
@@ -10967,49 +10967,49 @@ const BILLZ_DATA = {
           "name": "Учётная запись - Блокировка/Разблокировка аккаунта",
           "tickets": 14,
           "undesired": 11,
-          "cost": 138110
+          "cost": 105854
         },
         {
           "name": "Оборудование - Установка/Настройка/Удаление принтера",
           "tickets": 14,
           "undesired": 4,
-          "cost": 138110
+          "cost": 105854
         },
         {
           "name": "Документооборот - Оплата за тариф",
           "tickets": 12,
           "undesired": 10,
-          "cost": 118380
+          "cost": 90732
         },
         {
           "name": "Документооборот - Создание ссылки для оплаты",
           "tickets": 10,
           "undesired": 8,
-          "cost": 98650
+          "cost": 75610
         },
         {
           "name": "Учётная запись - Помощь со входом в аккаунт",
           "tickets": 9,
           "undesired": 8,
-          "cost": 88785
+          "cost": 68049
         },
         {
           "name": "Инвентаризация — консультация по модулю (частичное обучение)",
           "tickets": 7,
           "undesired": 1,
-          "cost": 69055
+          "cost": 52927
         },
         {
           "name": "Каталог — изменение свойств товара",
           "tickets": 7,
           "undesired": 7,
-          "cost": 69055
+          "cost": 52927
         },
         {
           "name": "Каталог — настройка печати ценника",
           "tickets": 6,
           "undesired": 2,
-          "cost": 59190
+          "cost": 45366
         }
       ],
       "operators": [
@@ -11021,7 +11021,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 4,
           "sla_pct": 81.5,
-          "cost": 660955
+          "cost": 506587
         },
         {
           "name": "Атабек",
@@ -11031,7 +11031,7 @@ const BILLZ_DATA = {
           "rating_pct": 50.0,
           "rated": 4,
           "sla_pct": 90.9,
-          "cost": 631360
+          "cost": 483904
         },
         {
           "name": "Сардор Б.",
@@ -11041,7 +11041,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 4,
           "sla_pct": 78.6,
-          "cost": 463655
+          "cost": 355367
         },
         {
           "name": "Нурилло",
@@ -11051,7 +11051,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 2,
           "sla_pct": 93.8,
-          "cost": 434060
+          "cost": 332684
         },
         {
           "name": "Тожмухаммад",
@@ -11061,7 +11061,7 @@ const BILLZ_DATA = {
           "rating_pct": 0.0,
           "rated": 1,
           "sla_pct": 80.0,
-          "cost": 424195
+          "cost": 325123
         },
         {
           "name": "Алиёр",
@@ -11071,7 +11071,7 @@ const BILLZ_DATA = {
           "rating_pct": 0.0,
           "rated": 0,
           "sla_pct": 77.8,
-          "cost": 384735
+          "cost": 294879
         },
         {
           "name": "Робия Р.",
@@ -11081,7 +11081,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 4,
           "sla_pct": 85.7,
-          "cost": 276220
+          "cost": 211708
         },
         {
           "name": "Камолиддин",
@@ -11091,7 +11091,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 3,
           "sla_pct": 83.3,
-          "cost": 177570
+          "cost": 136098
         }
       ],
       "top_companies": [
@@ -11100,7 +11100,7 @@ const BILLZ_DATA = {
           "tickets": 64,
           "desired": 20,
           "undesired": 39,
-          "cost": 631360,
+          "cost": 483904,
           "top_labels": [
             {
               "label": "Документооборот - Создание ссылки для оплаты",
@@ -11121,7 +11121,7 @@ const BILLZ_DATA = {
           "tickets": 6,
           "desired": 3,
           "undesired": 3,
-          "cost": 59190,
+          "cost": 45366,
           "top_labels": [
             {
               "label": "Desktop - Ошибка синхронизации",
@@ -11142,7 +11142,7 @@ const BILLZ_DATA = {
           "tickets": 5,
           "desired": 1,
           "undesired": 4,
-          "cost": 49325,
+          "cost": 37805,
           "top_labels": [
             {
               "label": "Desktop - Ошибка синхронизации, Баг (реквест)",
@@ -11163,7 +11163,7 @@ const BILLZ_DATA = {
           "tickets": 5,
           "desired": 2,
           "undesired": 3,
-          "cost": 49325,
+          "cost": 37805,
           "top_labels": [
             {
               "label": "Импорт - Удаление импорта",
@@ -11184,7 +11184,7 @@ const BILLZ_DATA = {
           "tickets": 4,
           "desired": 3,
           "undesired": 1,
-          "cost": 39460,
+          "cost": 30244,
           "top_labels": [
             {
               "label": "Промокоды - Создание/Удаление/Редактирование ",
@@ -11219,7 +11219,7 @@ const BILLZ_DATA = {
       "sla_pct": 83.3,
       "sla_not_met": 16.7,
       "avg_close_h": 0.04,
-      "cost": 3788160,
+      "cost": 2903424,
       "csat_pct": 95.8,
       "csat_rated": 24,
       "repeat_pct": 2.9,
@@ -11254,49 +11254,49 @@ const BILLZ_DATA = {
           "name": "Оборудование - Установка/Настройка/Удаление принтера",
           "tickets": 18,
           "undesired": 6,
-          "cost": 177570
+          "cost": 136098
         },
         {
           "name": "Документооборот - Оплата за тариф",
           "tickets": 16,
           "undesired": 5,
-          "cost": 157840
+          "cost": 120976
         },
         {
           "name": "Настройка - Создание/Редактирование/Удаление доп. точки",
           "tickets": 13,
           "undesired": 4,
-          "cost": 128245
+          "cost": 98293
         },
         {
           "name": "Учётная запись - Блокировка/Разблокировка аккаунта",
           "tickets": 12,
           "undesired": 4,
-          "cost": 118380
+          "cost": 90732
         },
         {
           "name": "Учётная запись - Помощь со входом в аккаунт",
           "tickets": 12,
           "undesired": 3,
-          "cost": 118380
+          "cost": 90732
         },
         {
           "name": "Документооборот - Создание ссылки для оплаты",
           "tickets": 11,
           "undesired": 6,
-          "cost": 108515
+          "cost": 83171
         },
         {
           "name": "Кассовые смены — Открытие/Закрытие смен",
           "tickets": 10,
           "undesired": 5,
-          "cost": 98650
+          "cost": 75610
         },
         {
           "name": "Управление - Создание/Редактирвоание/Удаление роли",
           "tickets": 7,
           "undesired": 2,
-          "cost": 69055
+          "cost": 52927
         }
       ],
       "operators": [
@@ -11308,7 +11308,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 4,
           "sla_pct": 84.6,
-          "cost": 759605
+          "cost": 582197
         },
         {
           "name": "Сардор Б.",
@@ -11318,7 +11318,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 1,
           "sla_pct": 80.0,
-          "cost": 601765
+          "cost": 461221
         },
         {
           "name": "Авазбек",
@@ -11328,7 +11328,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 8,
           "sla_pct": 88.5,
-          "cost": 591900
+          "cost": 453660
         },
         {
           "name": "Иззатбек",
@@ -11338,7 +11338,7 @@ const BILLZ_DATA = {
           "rating_pct": 75.0,
           "rated": 4,
           "sla_pct": 68.4,
-          "cost": 562305
+          "cost": 430977
         },
         {
           "name": "Ардак",
@@ -11348,7 +11348,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 3,
           "sla_pct": 95.5,
-          "cost": 483385
+          "cost": 370489
         },
         {
           "name": "Тожмухаммад",
@@ -11358,7 +11358,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 1,
           "sla_pct": 66.7,
-          "cost": 463655
+          "cost": 355367
         },
         {
           "name": "Алиёр",
@@ -11368,7 +11368,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 2,
           "sla_pct": 80.0,
-          "cost": 187435
+          "cost": 143659
         },
         {
           "name": "Камолиддин",
@@ -11378,7 +11378,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 1,
           "sla_pct": 92.9,
-          "cost": 138110
+          "cost": 105854
         }
       ],
       "top_companies": [
@@ -11387,7 +11387,7 @@ const BILLZ_DATA = {
           "tickets": 82,
           "desired": 49,
           "undesired": 29,
-          "cost": 808930,
+          "cost": 620002,
           "top_labels": [
             {
               "label": "Документооборот - Создание ссылки для оплаты",
@@ -11408,7 +11408,7 @@ const BILLZ_DATA = {
           "tickets": 10,
           "desired": 7,
           "undesired": 3,
-          "cost": 98650,
+          "cost": 75610,
           "top_labels": [
             {
               "label": "Настройка - Создание/Редактирование/Удаление доп. точки",
@@ -11429,7 +11429,7 @@ const BILLZ_DATA = {
           "tickets": 6,
           "desired": 4,
           "undesired": 2,
-          "cost": 59190,
+          "cost": 45366,
           "top_labels": [
             {
               "label": "Кассовые смены — Открытие/Закрытие смен",
@@ -11450,7 +11450,7 @@ const BILLZ_DATA = {
           "tickets": 6,
           "desired": 2,
           "undesired": 4,
-          "cost": 59190,
+          "cost": 45366,
           "top_labels": [
             {
               "label": "Кассовые смены — Открытие/Закрытие смен",
@@ -11467,7 +11467,7 @@ const BILLZ_DATA = {
           "tickets": 6,
           "desired": 4,
           "undesired": 2,
-          "cost": 59190,
+          "cost": 45366,
           "top_labels": [
             {
               "label": "Оборудование - Установка/Настройка/Удаление принтера",
@@ -11500,7 +11500,7 @@ const BILLZ_DATA = {
       "csat_pct": 91.5,
       "csat_rated": 28,
       "repeat_pct": 8.5,
-      "cost": 4488575,
+      "cost": 3440255,
       "incoming_calls": 310,
       "outgoing_calls": 84,
       "missed_calls": 30,
@@ -11519,7 +11519,7 @@ const BILLZ_DATA = {
           "rating_pct": 93.1,
           "rated": 5,
           "sla_pct": 97.1,
-          "cost": 799065
+          "cost": 612441
         },
         {
           "name": "Атабек",
@@ -11529,7 +11529,7 @@ const BILLZ_DATA = {
           "rating_pct": 90.3,
           "rated": 4,
           "sla_pct": 92.5,
-          "cost": 503115
+          "cost": 385611
         },
         {
           "name": "Алиёр",
@@ -11539,7 +11539,7 @@ const BILLZ_DATA = {
           "rating_pct": 95.2,
           "rated": 3,
           "sla_pct": 93.0,
-          "cost": 453790
+          "cost": 347806
         },
         {
           "name": "Нурилло",
@@ -11549,7 +11549,7 @@ const BILLZ_DATA = {
           "rating_pct": 87.0,
           "rated": 3,
           "sla_pct": 95.5,
-          "cost": 434060
+          "cost": 332684
         },
         {
           "name": "Сардор Б.",
@@ -11559,7 +11559,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 3,
           "sla_pct": 85.9,
-          "cost": 434060
+          "cost": 332684
         },
         {
           "name": "Робия Р.",
@@ -11569,7 +11569,7 @@ const BILLZ_DATA = {
           "rating_pct": 89.7,
           "rated": 3,
           "sla_pct": 91.4,
-          "cost": 424195
+          "cost": 325123
         },
         {
           "name": "Авазбек",
@@ -11579,7 +11579,7 @@ const BILLZ_DATA = {
           "rating_pct": 88.4,
           "rated": 3,
           "sla_pct": 93.3,
-          "cost": 404465
+          "cost": 310001
         },
         {
           "name": "Тожмухаммад",
@@ -11589,7 +11589,7 @@ const BILLZ_DATA = {
           "rating_pct": 80.4,
           "rated": 3,
           "sla_pct": 90.6,
-          "cost": 404465
+          "cost": 310001
         },
         {
           "name": "Ардак",
@@ -11599,7 +11599,7 @@ const BILLZ_DATA = {
           "rating_pct": 97.7,
           "rated": 3,
           "sla_pct": 91.0,
-          "cost": 374870
+          "cost": 287318
         },
         {
           "name": "Иззатбек",
@@ -11609,7 +11609,7 @@ const BILLZ_DATA = {
           "rating_pct": 89.5,
           "rated": 2,
           "sla_pct": 93.6,
-          "cost": 256490
+          "cost": 196586
         }
       ],
       "no_massoviy": {},
@@ -11618,31 +11618,31 @@ const BILLZ_DATA = {
           "name": "Документооборот - Оплата за тариф",
           "tickets": 60,
           "undesired": 40,
-          "cost": 591900
+          "cost": 453660
         },
         {
           "name": "Учётная запись - Помощь со входом в аккаунт",
           "tickets": 43,
           "undesired": 30,
-          "cost": 424195
+          "cost": 325123
         },
         {
           "name": "Документооборот - Создание ссылки для оплаты",
           "tickets": 19,
           "undesired": 14,
-          "cost": 187435
+          "cost": 143659
         },
         {
           "name": "Кассовые смены — Открытие/Закрытие смен",
           "tickets": 18,
           "undesired": 13,
-          "cost": 177570
+          "cost": 136098
         },
         {
           "name": "Оборудование - Установка/Настройка/Удаление принтера",
           "tickets": 16,
           "undesired": 5,
-          "cost": 157840
+          "cost": 120976
         }
       ],
       "top_companies": [],
@@ -11670,7 +11670,7 @@ const BILLZ_DATA = {
       "csat_pct": 92.0,
       "csat_rated": 24,
       "repeat_pct": 9.0,
-      "cost": 3630320,
+      "cost": 2782448,
       "incoming_calls": 256,
       "outgoing_calls": 66,
       "missed_calls": 17,
@@ -11689,7 +11689,7 @@ const BILLZ_DATA = {
           "rating_pct": 93.1,
           "rated": 4,
           "sla_pct": 97.1,
-          "cost": 651090
+          "cost": 499026
         },
         {
           "name": "Атабек",
@@ -11699,7 +11699,7 @@ const BILLZ_DATA = {
           "rating_pct": 90.3,
           "rated": 3,
           "sla_pct": 92.5,
-          "cost": 404465
+          "cost": 310001
         },
         {
           "name": "Алиёр",
@@ -11709,7 +11709,7 @@ const BILLZ_DATA = {
           "rating_pct": 95.2,
           "rated": 3,
           "sla_pct": 93.0,
-          "cost": 365005
+          "cost": 279757
         },
         {
           "name": "Нурилло",
@@ -11719,7 +11719,7 @@ const BILLZ_DATA = {
           "rating_pct": 87.0,
           "rated": 3,
           "sla_pct": 95.5,
-          "cost": 355140
+          "cost": 272196
         },
         {
           "name": "Сардор Б.",
@@ -11729,7 +11729,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 3,
           "sla_pct": 85.9,
-          "cost": 355140
+          "cost": 272196
         },
         {
           "name": "Робия Р.",
@@ -11739,7 +11739,7 @@ const BILLZ_DATA = {
           "rating_pct": 89.7,
           "rated": 2,
           "sla_pct": 91.4,
-          "cost": 345275
+          "cost": 264635
         },
         {
           "name": "Авазбек",
@@ -11749,7 +11749,7 @@ const BILLZ_DATA = {
           "rating_pct": 88.4,
           "rated": 2,
           "sla_pct": 93.3,
-          "cost": 325545
+          "cost": 249513
         },
         {
           "name": "Тожмухаммад",
@@ -11759,7 +11759,7 @@ const BILLZ_DATA = {
           "rating_pct": 80.4,
           "rated": 2,
           "sla_pct": 90.6,
-          "cost": 325545
+          "cost": 249513
         },
         {
           "name": "Ардак",
@@ -11769,7 +11769,7 @@ const BILLZ_DATA = {
           "rating_pct": 97.7,
           "rated": 2,
           "sla_pct": 91.0,
-          "cost": 295950
+          "cost": 226830
         },
         {
           "name": "Иззатбек",
@@ -11779,7 +11779,7 @@ const BILLZ_DATA = {
           "rating_pct": 89.5,
           "rated": 1,
           "sla_pct": 93.6,
-          "cost": 207165
+          "cost": 158781
         }
       ],
       "no_massoviy": {},
@@ -11788,31 +11788,31 @@ const BILLZ_DATA = {
           "name": "Документооборот - Оплата за тариф",
           "tickets": 54,
           "undesired": 36,
-          "cost": 532710
+          "cost": 408294
         },
         {
           "name": "Документооборот - Создание ссылки для оплаты",
           "tickets": 18,
           "undesired": 13,
-          "cost": 177570
+          "cost": 136098
         },
         {
           "name": "Учётная запись - Помощь со входом в аккаунт",
           "tickets": 17,
           "undesired": 12,
-          "cost": 167705
+          "cost": 128537
         },
         {
           "name": "Каталог — настройка печати ценника",
           "tickets": 17,
           "undesired": 7,
-          "cost": 167705
+          "cost": 128537
         },
         {
           "name": "Оборудование - Установка/Настройка/Удаление принтера",
           "tickets": 17,
           "undesired": 5,
-          "cost": 167705
+          "cost": 128537
         }
       ],
       "top_companies": [],
@@ -11839,7 +11839,7 @@ const BILLZ_DATA = {
       "csat_pct": 93.0,
       "csat_rated": 20,
       "repeat_pct": 7.5,
-      "cost": 3275180,
+      "cost": 2510252,
       "incoming_calls": 198,
       "outgoing_calls": 30,
       "missed_calls": 27,
@@ -11858,7 +11858,7 @@ const BILLZ_DATA = {
           "rating_pct": 93.1,
           "rated": 3,
           "sla_pct": 97.1,
-          "cost": 591900
+          "cost": 453660
         },
         {
           "name": "Атабек",
@@ -11868,7 +11868,7 @@ const BILLZ_DATA = {
           "rating_pct": 90.3,
           "rated": 3,
           "sla_pct": 92.5,
-          "cost": 365005
+          "cost": 279757
         },
         {
           "name": "Алиёр",
@@ -11878,7 +11878,7 @@ const BILLZ_DATA = {
           "rating_pct": 95.2,
           "rated": 2,
           "sla_pct": 93.0,
-          "cost": 335410
+          "cost": 257074
         },
         {
           "name": "Нурилло",
@@ -11888,7 +11888,7 @@ const BILLZ_DATA = {
           "rating_pct": 87.0,
           "rated": 2,
           "sla_pct": 95.5,
-          "cost": 315680
+          "cost": 241952
         },
         {
           "name": "Сардор Б.",
@@ -11898,7 +11898,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 2,
           "sla_pct": 85.9,
-          "cost": 315680
+          "cost": 241952
         },
         {
           "name": "Робия Р.",
@@ -11908,7 +11908,7 @@ const BILLZ_DATA = {
           "rating_pct": 89.7,
           "rated": 2,
           "sla_pct": 91.4,
-          "cost": 305815
+          "cost": 234391
         },
         {
           "name": "Авазбек",
@@ -11918,7 +11918,7 @@ const BILLZ_DATA = {
           "rating_pct": 88.4,
           "rated": 2,
           "sla_pct": 93.3,
-          "cost": 295950
+          "cost": 226830
         },
         {
           "name": "Тожмухаммад",
@@ -11928,7 +11928,7 @@ const BILLZ_DATA = {
           "rating_pct": 80.4,
           "rated": 2,
           "sla_pct": 90.6,
-          "cost": 295950
+          "cost": 226830
         },
         {
           "name": "Ардак",
@@ -11938,7 +11938,7 @@ const BILLZ_DATA = {
           "rating_pct": 97.7,
           "rated": 2,
           "sla_pct": 91.0,
-          "cost": 266355
+          "cost": 204147
         },
         {
           "name": "Иззатбек",
@@ -11948,7 +11948,7 @@ const BILLZ_DATA = {
           "rating_pct": 89.5,
           "rated": 1,
           "sla_pct": 93.6,
-          "cost": 187435
+          "cost": 143659
         }
       ],
       "no_massoviy": {},
@@ -11957,31 +11957,31 @@ const BILLZ_DATA = {
           "name": "Документооборот - Оплата за тариф",
           "tickets": 35,
           "undesired": 22,
-          "cost": 345275
+          "cost": 264635
         },
         {
           "name": "Оборудование - Установка/Настройка/Удаление принтера",
           "tickets": 24,
           "undesired": 7,
-          "cost": 236760
+          "cost": 181464
         },
         {
           "name": "Документооборот - Создание ссылки для оплаты",
           "tickets": 21,
           "undesired": 16,
-          "cost": 207165
+          "cost": 158781
         },
         {
           "name": "Учётная запись - Помощь со входом в аккаунт",
           "tickets": 19,
           "undesired": 14,
-          "cost": 187435
+          "cost": 143659
         },
         {
           "name": "Кассовые смены — Открытие/Закрытие смен",
           "tickets": 12,
           "undesired": 9,
-          "cost": 118380
+          "cost": 90732
         }
       ],
       "top_companies": [],
@@ -12008,7 +12008,7 @@ const BILLZ_DATA = {
     ],
     "summary": {
       "total_tickets": 28409,
-      "total_cost_mln": 280.25,
+      "total_cost_mln": 243.24,
       "avg_cpt": 9856.0,
       "lcr_avg": 4.73,
       "csat_pct": 95.4,
@@ -12050,9 +12050,9 @@ const BILLZ_DATA = {
         "csat_pct": 94.6,
         "sla_pct": 92.5,
         "lcr": 4.59,
-        "cost_mln": 114.47,
-        "cost_per_ticket": 9865,
-        "cpt": 9865,
+        "cost_mln": 87.74,
+        "cost_per_ticket": 7561,
+        "cpt": 7561,
         "repeat_pct": 9.2,
         "undesired_pct": 49.1,
         "training_tickets": 471,
@@ -12066,9 +12066,9 @@ const BILLZ_DATA = {
         "csat_pct": 94.8,
         "sla_pct": 85.3,
         "lcr": 6.78,
-        "cost_mln": 44.02,
-        "cost_per_ticket": 9865,
-        "cpt": 9865,
+        "cost_mln": 33.74,
+        "cost_per_ticket": 7561,
+        "cpt": 7561,
         "repeat_pct": 7.9,
         "undesired_pct": 51.5,
         "training_tickets": 176,
@@ -12092,8 +12092,8 @@ const BILLZ_DATA = {
         "kk": 85,
         "test": 85,
         "undes_pct": 50,
-        "cost_mln": 32.61,
-        "cost": 32613690,
+        "cost_mln": 25.0,
+        "cost": 24996666,
         "score": 97.2
       },
       {
@@ -12112,8 +12112,8 @@ const BILLZ_DATA = {
         "kk": 85,
         "test": 85,
         "undes_pct": 50,
-        "cost_mln": 27.98,
-        "cost": 27977140,
+        "cost_mln": 21.44,
+        "cost": 21442996,
         "score": 91.3
       },
       {
@@ -12132,8 +12132,8 @@ const BILLZ_DATA = {
         "kk": 85,
         "test": 85,
         "undes_pct": 50,
-        "cost_mln": 25.85,
-        "cost": 25846300,
+        "cost_mln": 19.81,
+        "cost": 19809820,
         "score": 89.9
       },
       {
@@ -12152,8 +12152,8 @@ const BILLZ_DATA = {
         "kk": 85,
         "test": 85,
         "undes_pct": 50,
-        "cost_mln": 24.91,
-        "cost": 24909125,
+        "cost_mln": 19.09,
+        "cost": 19091525,
         "score": 88.6
       },
       {
@@ -12172,8 +12172,8 @@ const BILLZ_DATA = {
         "kk": 85,
         "test": 85,
         "undes_pct": 50,
-        "cost_mln": 24.68,
-        "cost": 24682230,
+        "cost_mln": 18.92,
+        "cost": 18917622,
         "score": 86.4
       },
       {
@@ -12192,8 +12192,8 @@ const BILLZ_DATA = {
         "kk": 85,
         "test": 85,
         "undes_pct": 50,
-        "cost_mln": 24.52,
-        "cost": 24524390,
+        "cost_mln": 18.8,
+        "cost": 18796646,
         "score": 88.9
       },
       {
@@ -12212,8 +12212,8 @@ const BILLZ_DATA = {
         "kk": 85,
         "test": 85,
         "undes_pct": 50,
-        "cost_mln": 22.89,
-        "cost": 22886800,
+        "cost_mln": 17.54,
+        "cost": 17541520,
         "score": 88.2
       },
       {
@@ -12232,8 +12232,8 @@ const BILLZ_DATA = {
         "kk": 85,
         "test": 85,
         "undes_pct": 50,
-        "cost_mln": 22.57,
-        "cost": 22571120,
+        "cost_mln": 17.3,
+        "cost": 17299568,
         "score": 89.2
       },
       {
@@ -12252,8 +12252,8 @@ const BILLZ_DATA = {
         "kk": 85,
         "test": 85,
         "undes_pct": 50,
-        "cost_mln": 22.47,
-        "cost": 22472470,
+        "cost_mln": 17.22,
+        "cost": 17223958,
         "score": 91.1
       },
       {
@@ -12272,8 +12272,8 @@ const BILLZ_DATA = {
         "kk": 85,
         "test": 85,
         "undes_pct": 50,
-        "cost_mln": 15.93,
-        "cost": 15931975,
+        "cost_mln": 12.21,
+        "cost": 12211015,
         "score": 92.2
       },
       {
@@ -12292,8 +12292,8 @@ const BILLZ_DATA = {
         "kk": 85,
         "test": 85,
         "undes_pct": 50,
-        "cost_mln": 14.33,
-        "cost": 14333845,
+        "cost_mln": 10.99,
+        "cost": 10986133,
         "score": 83.3
       },
       {
@@ -12312,8 +12312,8 @@ const BILLZ_DATA = {
         "kk": 85,
         "test": 85,
         "undes_pct": 50,
-        "cost_mln": 7.48,
-        "cost": 7477670,
+        "cost_mln": 5.73,
+        "cost": 5731238,
         "score": 87.6
       },
       {
@@ -12332,8 +12332,8 @@ const BILLZ_DATA = {
         "kk": 85,
         "test": 85,
         "undes_pct": 50,
-        "cost_mln": 4.78,
-        "cost": 4784525,
+        "cost_mln": 3.67,
+        "cost": 3667085,
         "score": 84.9
       },
       {
@@ -12352,8 +12352,8 @@ const BILLZ_DATA = {
         "kk": 85,
         "test": 85,
         "undes_pct": 50,
-        "cost_mln": 2.85,
-        "cost": 2850985,
+        "cost_mln": 2.19,
+        "cost": 2185129,
         "score": 91.2
       },
       {
@@ -12372,8 +12372,8 @@ const BILLZ_DATA = {
         "kk": 85,
         "test": 85,
         "undes_pct": 50,
-        "cost_mln": 0.28,
-        "cost": 276220,
+        "cost_mln": 0.21,
+        "cost": 211708,
         "score": 89.1
       },
       {
@@ -12392,15 +12392,15 @@ const BILLZ_DATA = {
         "kk": 85,
         "test": 85,
         "undes_pct": 50,
-        "cost_mln": 0.18,
-        "cost": 177570,
+        "cost_mln": 0.14,
+        "cost": 136098,
         "score": 88.4
       }
     ],
     "label_categories": {
       "junior": {
         "tickets": 3558,
-        "cost_mln": 35.1,
+        "cost_mln": 26.9,
         "description": "Базовые навыки · Документооборот, ВСЁ оборудование (вкл. Anydesk/Desktop), Кассы, Аккаунты, Печать",
         "labels": [
           {
@@ -12497,7 +12497,7 @@ const BILLZ_DATA = {
       },
       "middle": {
         "tickets": 2292,
-        "cost_mln": 22.61,
+        "cost_mln": 17.33,
         "description": "Опыт 3+ мес · Каталог, Управление, Новая продажа, Импорт, Настройка, Финансы",
         "labels": [
           {
@@ -12642,7 +12642,7 @@ const BILLZ_DATA = {
       },
       "senior": {
         "tickets": 200,
-        "cost_mln": 1.97,
+        "cost_mln": 1.51,
         "description": "Сложные технические · Баги, Массовый сбой, API, Интеграции",
         "labels": [
           {
@@ -12731,7 +12731,7 @@ const BILLZ_DATA = {
         "partial": 651,
         "full": 56,
         "med_close": 4.5,
-        "cost": 6994285
+        "cost": 5360749
       },
       {
         "month": "Февраль",
@@ -12739,7 +12739,7 @@ const BILLZ_DATA = {
         "partial": 558,
         "full": 33,
         "med_close": 6.2,
-        "cost": 5840080
+        "cost": 4476112
       },
       {
         "month": "Март",
@@ -12747,7 +12747,7 @@ const BILLZ_DATA = {
         "partial": 534,
         "full": 36,
         "med_close": 4.6,
-        "cost": 5632915
+        "cost": 4317331
       },
       {
         "month": "Апрель",
@@ -12755,7 +12755,7 @@ const BILLZ_DATA = {
         "partial": 434,
         "full": 31,
         "med_close": 4.6,
-        "cost": 4646415
+        "cost": 3561231
       }
     ],
     "by_ks_manager": [
@@ -12765,7 +12765,7 @@ const BILLZ_DATA = {
         "partial": 39,
         "full": 3,
         "med_close": 0.1,
-        "cost": 11788675,
+        "cost": 9035395,
         "tag": "big_base",
         "tag_label": "🔵 Большая база",
         "tag_color": "#3B82F6",
@@ -12778,7 +12778,7 @@ const BILLZ_DATA = {
         "partial": 43,
         "full": 1,
         "med_close": 0.1,
-        "cost": 8335925,
+        "cost": 6389045,
         "tag": "big_base",
         "tag_label": "🔵 Большая база",
         "tag_color": "#3B82F6",
@@ -12791,7 +12791,7 @@ const BILLZ_DATA = {
         "partial": 27,
         "full": 1,
         "med_close": 0.1,
-        "cost": 6875905,
+        "cost": 5270017,
         "tag": "red_flag",
         "tag_label": "🔴 Сигнал для КЦ",
         "tag_color": "#EF4444"
@@ -12802,7 +12802,7 @@ const BILLZ_DATA = {
         "partial": 17,
         "full": 2,
         "med_close": 0.1,
-        "cost": 5938730,
+        "cost": 4551722,
         "tag": "red_flag",
         "tag_label": "🔴 Сигнал для КЦ",
         "tag_color": "#EF4444"
@@ -12813,7 +12813,7 @@ const BILLZ_DATA = {
         "partial": 15,
         "full": 2,
         "med_close": 0.1,
-        "cost": 4241950,
+        "cost": 3251230,
         "tag": "red_flag",
         "tag_label": "🔴 Сигнал для КЦ",
         "tag_color": "#EF4444"
@@ -12824,7 +12824,7 @@ const BILLZ_DATA = {
         "partial": 14,
         "full": 3,
         "med_close": 0.1,
-        "cost": 4241950,
+        "cost": 3251230,
         "tag": "red_flag",
         "tag_label": "🔴 Сигнал для КЦ",
         "tag_color": "#EF4444"
@@ -12835,7 +12835,7 @@ const BILLZ_DATA = {
         "partial": 18,
         "full": null,
         "med_close": 0.0,
-        "cost": 3600725,
+        "cost": 2759765,
         "tag": "red_flag",
         "tag_label": "🔴 Сигнал для КЦ",
         "tag_color": "#EF4444"
@@ -12846,7 +12846,7 @@ const BILLZ_DATA = {
         "partial": 9,
         "full": 2,
         "med_close": 0.1,
-        "cost": 3452750,
+        "cost": 2646350,
         "tag": "red_flag",
         "tag_label": "🔴 Сигнал для КЦ",
         "tag_color": "#EF4444"
@@ -12857,7 +12857,7 @@ const BILLZ_DATA = {
         "partial": 8,
         "full": null,
         "med_close": 0.0,
-        "cost": 2949635,
+        "cost": 2260739,
         "tag": "red_flag",
         "tag_label": "🔴 Сигнал для КЦ",
         "tag_color": "#EF4444"
@@ -12868,7 +12868,7 @@ const BILLZ_DATA = {
         "partial": 19,
         "full": 3,
         "med_close": 0.1,
-        "cost": 2929905,
+        "cost": 2245617,
         "tag": "red_flag",
         "tag_label": "🔴 Сигнал для КЦ",
         "tag_color": "#EF4444"
@@ -12879,7 +12879,7 @@ const BILLZ_DATA = {
         "partial": 25,
         "full": null,
         "med_close": 0.1,
-        "cost": 2703010,
+        "cost": 2071714,
         "tag": "red_flag",
         "tag_label": "🔴 Сигнал для КЦ",
         "tag_color": "#EF4444"
@@ -12890,7 +12890,7 @@ const BILLZ_DATA = {
         "partial": 16,
         "full": 2,
         "med_close": 0.1,
-        "cost": 2545170,
+        "cost": 1950738,
         "tag": "red_flag",
         "tag_label": "🔴 Сигнал для КЦ",
         "tag_color": "#EF4444"
@@ -12901,7 +12901,7 @@ const BILLZ_DATA = {
         "partial": 9,
         "full": null,
         "med_close": 0.1,
-        "cost": 2219625,
+        "cost": 1701225,
         "tag": "red_flag",
         "tag_label": "🔴 Сигнал для КЦ",
         "tag_color": "#EF4444"
@@ -12912,7 +12912,7 @@ const BILLZ_DATA = {
         "partial": 1,
         "full": null,
         "med_close": 0.0,
-        "cost": 1884215,
+        "cost": 1444151,
         "tag": "red_flag",
         "tag_label": "🔴 Сигнал для КЦ",
         "tag_color": "#EF4444"
@@ -12923,7 +12923,7 @@ const BILLZ_DATA = {
         "partial": 5,
         "full": null,
         "med_close": 0.1,
-        "cost": 1785565,
+        "cost": 1368541,
         "tag": "red_flag",
         "tag_label": "🔴 Сигнал для КЦ",
         "tag_color": "#EF4444"
@@ -12934,7 +12934,7 @@ const BILLZ_DATA = {
         "partial": 11,
         "full": null,
         "med_close": 0.1,
-        "cost": 1489615,
+        "cost": 1141711,
         "tag": "red_flag",
         "tag_label": "🔴 Сигнал для КЦ",
         "tag_color": "#EF4444"
@@ -12945,7 +12945,7 @@ const BILLZ_DATA = {
         "partial": 11,
         "full": 1,
         "med_close": 0.1,
-        "cost": 1292315,
+        "cost": 990491,
         "tag": "red_flag",
         "tag_label": "🔴 Сигнал для КЦ",
         "tag_color": "#EF4444"
@@ -12956,7 +12956,7 @@ const BILLZ_DATA = {
         "partial": 8,
         "full": null,
         "med_close": 0.1,
-        "cost": 1272585,
+        "cost": 975369,
         "tag": "red_flag",
         "tag_label": "🔴 Сигнал для КЦ",
         "tag_color": "#EF4444"
@@ -12967,7 +12967,7 @@ const BILLZ_DATA = {
         "partial": 12,
         "full": null,
         "med_close": 0.1,
-        "cost": 1233125,
+        "cost": 945125,
         "tag": "red_flag",
         "tag_label": "🔴 Сигнал для КЦ",
         "tag_color": "#EF4444"
@@ -12978,7 +12978,7 @@ const BILLZ_DATA = {
         "partial": 3,
         "full": null,
         "med_close": 0.0,
-        "cost": 1203530,
+        "cost": 922442,
         "tag": "red_flag",
         "tag_label": "🔴 Сигнал для КЦ",
         "tag_color": "#EF4444"
@@ -12989,7 +12989,7 @@ const BILLZ_DATA = {
         "partial": 4,
         "full": null,
         "med_close": 0.1,
-        "cost": 1183800,
+        "cost": 907320,
         "tag": "red_flag",
         "tag_label": "🔴 Сигнал для КЦ",
         "tag_color": "#EF4444"
@@ -13000,7 +13000,7 @@ const BILLZ_DATA = {
         "partial": 2,
         "full": null,
         "med_close": 0.1,
-        "cost": 1085150,
+        "cost": 831710,
         "tag": "red_flag",
         "tag_label": "🔴 Сигнал для КЦ",
         "tag_color": "#EF4444"
@@ -13011,7 +13011,7 @@ const BILLZ_DATA = {
         "partial": 8,
         "full": null,
         "med_close": 0.1,
-        "cost": 996365,
+        "cost": 763661,
         "tag": "red_flag",
         "tag_label": "🔴 Сигнал для КЦ",
         "tag_color": "#EF4444"
@@ -13022,7 +13022,7 @@ const BILLZ_DATA = {
         "partial": 3,
         "full": null,
         "med_close": 0.1,
-        "cost": 976635,
+        "cost": 748539,
         "tag": "normal",
         "tag_label": "",
         "tag_color": ""
@@ -13033,7 +13033,7 @@ const BILLZ_DATA = {
         "partial": 2,
         "full": 1,
         "med_close": 0.0,
-        "cost": 966770,
+        "cost": 740978,
         "tag": "normal",
         "tag_label": "",
         "tag_color": ""
@@ -13044,7 +13044,7 @@ const BILLZ_DATA = {
         "partial": 2,
         "full": null,
         "med_close": 0.1,
-        "cost": 897715,
+        "cost": 688051,
         "tag": "normal",
         "tag_label": "",
         "tag_color": ""
@@ -13055,7 +13055,7 @@ const BILLZ_DATA = {
         "partial": 7,
         "full": null,
         "med_close": 0.1,
-        "cost": 799065,
+        "cost": 612441,
         "tag": "normal",
         "tag_label": "",
         "tag_color": ""
@@ -13066,7 +13066,7 @@ const BILLZ_DATA = {
         "partial": 3,
         "full": null,
         "med_close": 0.1,
-        "cost": 799065,
+        "cost": 612441,
         "tag": "normal",
         "tag_label": "",
         "tag_color": ""
@@ -13077,7 +13077,7 @@ const BILLZ_DATA = {
         "partial": 6,
         "full": null,
         "med_close": 0.1,
-        "cost": 720145,
+        "cost": 551953,
         "tag": "normal",
         "tag_label": "",
         "tag_color": ""
@@ -13088,7 +13088,7 @@ const BILLZ_DATA = {
         "partial": 3,
         "full": 1,
         "med_close": 0.1,
-        "cost": 710280,
+        "cost": 544392,
         "tag": "normal",
         "tag_label": "",
         "tag_color": ""
@@ -13099,7 +13099,7 @@ const BILLZ_DATA = {
         "partial": 6,
         "full": null,
         "med_close": 0.1,
-        "cost": 690550,
+        "cost": 529270,
         "tag": "normal",
         "tag_label": "",
         "tag_color": ""
@@ -13110,7 +13110,7 @@ const BILLZ_DATA = {
         "partial": 2,
         "full": null,
         "med_close": 0.1,
-        "cost": 562305,
+        "cost": 430977,
         "tag": "normal",
         "tag_label": "",
         "tag_color": ""
@@ -13121,7 +13121,7 @@ const BILLZ_DATA = {
         "partial": null,
         "full": null,
         "med_close": 0.1,
-        "cost": 503115,
+        "cost": 385611,
         "tag": "normal",
         "tag_label": "",
         "tag_color": ""
@@ -13132,7 +13132,7 @@ const BILLZ_DATA = {
         "partial": 2,
         "full": 3,
         "med_close": 0.1,
-        "cost": 453790,
+        "cost": 347806,
         "tag": "normal",
         "tag_label": "",
         "tag_color": ""
@@ -13143,7 +13143,7 @@ const BILLZ_DATA = {
         "partial": 1,
         "full": null,
         "med_close": 0.0,
-        "cost": 404465,
+        "cost": 310001,
         "tag": "normal",
         "tag_label": "",
         "tag_color": ""
@@ -13154,7 +13154,7 @@ const BILLZ_DATA = {
         "partial": null,
         "full": null,
         "med_close": 0.1,
-        "cost": 374870,
+        "cost": 287318,
         "tag": "normal",
         "tag_label": "",
         "tag_color": ""
@@ -13165,7 +13165,7 @@ const BILLZ_DATA = {
         "partial": null,
         "full": null,
         "med_close": 0.0,
-        "cost": 365005,
+        "cost": 279757,
         "tag": "normal",
         "tag_label": "",
         "tag_color": ""
@@ -13176,7 +13176,7 @@ const BILLZ_DATA = {
         "partial": 1,
         "full": null,
         "med_close": 0.0,
-        "cost": 345275,
+        "cost": 264635,
         "tag": "normal",
         "tag_label": "",
         "tag_color": ""
@@ -13187,7 +13187,7 @@ const BILLZ_DATA = {
         "partial": null,
         "full": null,
         "med_close": 0.1,
-        "cost": 325545,
+        "cost": 249513,
         "tag": "normal",
         "tag_label": "",
         "tag_color": ""
@@ -13198,7 +13198,7 @@ const BILLZ_DATA = {
         "partial": null,
         "full": 1,
         "med_close": 0.0,
-        "cost": 305815,
+        "cost": 234391,
         "tag": "normal",
         "tag_label": "",
         "tag_color": ""
@@ -13209,7 +13209,7 @@ const BILLZ_DATA = {
         "partial": null,
         "full": null,
         "med_close": 0.1,
-        "cost": 276220,
+        "cost": 211708,
         "tag": "normal",
         "tag_label": "",
         "tag_color": ""
@@ -13220,7 +13220,7 @@ const BILLZ_DATA = {
         "partial": null,
         "full": null,
         "med_close": 0.0,
-        "cost": 276220,
+        "cost": 211708,
         "tag": "normal",
         "tag_label": "",
         "tag_color": ""
@@ -13231,7 +13231,7 @@ const BILLZ_DATA = {
         "partial": 1,
         "full": null,
         "med_close": 0.0,
-        "cost": 266355,
+        "cost": 204147,
         "tag": "normal",
         "tag_label": "",
         "tag_color": ""
@@ -13242,7 +13242,7 @@ const BILLZ_DATA = {
         "partial": 1,
         "full": null,
         "med_close": 0.1,
-        "cost": 266355,
+        "cost": 204147,
         "tag": "normal",
         "tag_label": "",
         "tag_color": ""
@@ -13253,7 +13253,7 @@ const BILLZ_DATA = {
         "partial": null,
         "full": null,
         "med_close": 0.1,
-        "cost": 256490,
+        "cost": 196586,
         "tag": "normal",
         "tag_label": "",
         "tag_color": ""
@@ -13264,7 +13264,7 @@ const BILLZ_DATA = {
         "partial": null,
         "full": null,
         "med_close": 0.0,
-        "cost": 256490,
+        "cost": 196586,
         "tag": "normal",
         "tag_label": "",
         "tag_color": ""
@@ -13275,7 +13275,7 @@ const BILLZ_DATA = {
         "partial": null,
         "full": null,
         "med_close": 0.0,
-        "cost": 256490,
+        "cost": 196586,
         "tag": "normal",
         "tag_label": "",
         "tag_color": ""
@@ -13286,7 +13286,7 @@ const BILLZ_DATA = {
         "partial": null,
         "full": null,
         "med_close": 0.1,
-        "cost": 256490,
+        "cost": 196586,
         "tag": "normal",
         "tag_label": "",
         "tag_color": ""
@@ -13297,7 +13297,7 @@ const BILLZ_DATA = {
         "partial": null,
         "full": null,
         "med_close": 0.1,
-        "cost": 246625,
+        "cost": 189025,
         "tag": "normal",
         "tag_label": "",
         "tag_color": ""
@@ -13308,7 +13308,7 @@ const BILLZ_DATA = {
         "partial": 3,
         "full": null,
         "med_close": 0.1,
-        "cost": 246625,
+        "cost": 189025,
         "tag": "normal",
         "tag_label": "",
         "tag_color": ""
@@ -13319,7 +13319,7 @@ const BILLZ_DATA = {
         "partial": null,
         "full": null,
         "med_close": 0.1,
-        "cost": 236760,
+        "cost": 181464,
         "tag": "normal",
         "tag_label": "",
         "tag_color": ""
@@ -13330,7 +13330,7 @@ const BILLZ_DATA = {
         "partial": null,
         "full": null,
         "med_close": 0.0,
-        "cost": 226895,
+        "cost": 173903,
         "tag": "normal",
         "tag_label": "",
         "tag_color": ""
@@ -13341,7 +13341,7 @@ const BILLZ_DATA = {
         "partial": null,
         "full": null,
         "med_close": 0.1,
-        "cost": 226895,
+        "cost": 173903,
         "tag": "normal",
         "tag_label": "",
         "tag_color": ""
@@ -13352,7 +13352,7 @@ const BILLZ_DATA = {
         "partial": null,
         "full": null,
         "med_close": 0.0,
-        "cost": 217030,
+        "cost": 166342,
         "tag": "normal",
         "tag_label": "",
         "tag_color": ""
@@ -13363,7 +13363,7 @@ const BILLZ_DATA = {
         "partial": 1,
         "full": null,
         "med_close": 0.1,
-        "cost": 207165,
+        "cost": 158781,
         "tag": "normal",
         "tag_label": "",
         "tag_color": ""
@@ -13374,7 +13374,7 @@ const BILLZ_DATA = {
         "partial": 1,
         "full": null,
         "med_close": 0.0,
-        "cost": 187435,
+        "cost": 143659,
         "tag": "normal",
         "tag_label": "",
         "tag_color": ""
@@ -13385,7 +13385,7 @@ const BILLZ_DATA = {
         "partial": 2,
         "full": null,
         "med_close": 0.1,
-        "cost": 187435,
+        "cost": 143659,
         "tag": "normal",
         "tag_label": "",
         "tag_color": ""
@@ -13396,7 +13396,7 @@ const BILLZ_DATA = {
         "partial": 3,
         "full": null,
         "med_close": 0.1,
-        "cost": 187435,
+        "cost": 143659,
         "tag": "normal",
         "tag_label": "",
         "tag_color": ""
@@ -13407,7 +13407,7 @@ const BILLZ_DATA = {
         "partial": 3,
         "full": null,
         "med_close": 0.1,
-        "cost": 167705,
+        "cost": 128537,
         "tag": "normal",
         "tag_label": "",
         "tag_color": ""
@@ -13418,7 +13418,7 @@ const BILLZ_DATA = {
         "partial": 1,
         "full": null,
         "med_close": 0.2,
-        "cost": 167705,
+        "cost": 128537,
         "tag": "normal",
         "tag_label": "",
         "tag_color": ""
@@ -13429,7 +13429,7 @@ const BILLZ_DATA = {
         "partial": null,
         "full": null,
         "med_close": 0.0,
-        "cost": 157840,
+        "cost": 120976,
         "tag": "normal",
         "tag_label": "",
         "tag_color": ""
@@ -13440,7 +13440,7 @@ const BILLZ_DATA = {
         "partial": null,
         "full": null,
         "med_close": 0.0,
-        "cost": 157840,
+        "cost": 120976,
         "tag": "normal",
         "tag_label": "",
         "tag_color": ""
@@ -13451,7 +13451,7 @@ const BILLZ_DATA = {
         "partial": null,
         "full": null,
         "med_close": 0.0,
-        "cost": 157840,
+        "cost": 120976,
         "tag": "normal",
         "tag_label": "",
         "tag_color": ""
@@ -13462,7 +13462,7 @@ const BILLZ_DATA = {
         "partial": null,
         "full": null,
         "med_close": 0.0,
-        "cost": 147975,
+        "cost": 113415,
         "tag": "normal",
         "tag_label": "",
         "tag_color": ""
@@ -13473,7 +13473,7 @@ const BILLZ_DATA = {
         "partial": null,
         "full": null,
         "med_close": 0.0,
-        "cost": 147975,
+        "cost": 113415,
         "tag": "normal",
         "tag_label": "",
         "tag_color": ""
@@ -13484,7 +13484,7 @@ const BILLZ_DATA = {
         "partial": null,
         "full": null,
         "med_close": 0.1,
-        "cost": 138110,
+        "cost": 105854,
         "tag": "normal",
         "tag_label": "",
         "tag_color": ""
@@ -13495,7 +13495,7 @@ const BILLZ_DATA = {
         "partial": null,
         "full": null,
         "med_close": 0.1,
-        "cost": 138110,
+        "cost": 105854,
         "tag": "normal",
         "tag_label": "",
         "tag_color": ""
@@ -13506,7 +13506,7 @@ const BILLZ_DATA = {
         "partial": null,
         "full": null,
         "med_close": 0.1,
-        "cost": 128245,
+        "cost": 98293,
         "tag": "normal",
         "tag_label": "",
         "tag_color": ""
@@ -13517,7 +13517,7 @@ const BILLZ_DATA = {
         "partial": null,
         "full": null,
         "med_close": 0.1,
-        "cost": 128245,
+        "cost": 98293,
         "tag": "normal",
         "tag_label": "",
         "tag_color": ""
@@ -13528,7 +13528,7 @@ const BILLZ_DATA = {
         "partial": null,
         "full": null,
         "med_close": 0.1,
-        "cost": 128245,
+        "cost": 98293,
         "tag": "normal",
         "tag_label": "",
         "tag_color": ""
@@ -13539,7 +13539,7 @@ const BILLZ_DATA = {
         "partial": null,
         "full": null,
         "med_close": 0.1,
-        "cost": 118380,
+        "cost": 90732,
         "tag": "normal",
         "tag_label": "",
         "tag_color": ""
@@ -13550,7 +13550,7 @@ const BILLZ_DATA = {
         "partial": null,
         "full": null,
         "med_close": 0.0,
-        "cost": 108515,
+        "cost": 83171,
         "tag": "normal",
         "tag_label": "",
         "tag_color": ""
@@ -13561,7 +13561,7 @@ const BILLZ_DATA = {
         "partial": null,
         "full": 1,
         "med_close": 0.1,
-        "cost": 108515,
+        "cost": 83171,
         "tag": "normal",
         "tag_label": "",
         "tag_color": ""
@@ -13572,7 +13572,7 @@ const BILLZ_DATA = {
         "partial": null,
         "full": null,
         "med_close": 0.0,
-        "cost": 108515,
+        "cost": 83171,
         "tag": "normal",
         "tag_label": "",
         "tag_color": ""
@@ -13583,7 +13583,7 @@ const BILLZ_DATA = {
         "partial": null,
         "full": null,
         "med_close": 0.1,
-        "cost": 98650,
+        "cost": 75610,
         "tag": "normal",
         "tag_label": "",
         "tag_color": ""
@@ -13594,7 +13594,7 @@ const BILLZ_DATA = {
         "partial": null,
         "full": null,
         "med_close": 0.0,
-        "cost": 98650,
+        "cost": 75610,
         "tag": "normal",
         "tag_label": "",
         "tag_color": ""
@@ -13605,7 +13605,7 @@ const BILLZ_DATA = {
         "partial": 2,
         "full": null,
         "med_close": 0.0,
-        "cost": 98650,
+        "cost": 75610,
         "tag": "normal",
         "tag_label": "",
         "tag_color": ""
@@ -13616,7 +13616,7 @@ const BILLZ_DATA = {
         "partial": null,
         "full": null,
         "med_close": 0.0,
-        "cost": 98650,
+        "cost": 75610,
         "tag": "normal",
         "tag_label": "",
         "tag_color": ""
@@ -13627,7 +13627,7 @@ const BILLZ_DATA = {
         "partial": 2,
         "full": 1,
         "med_close": 0.2,
-        "cost": 98650,
+        "cost": 75610,
         "tag": "normal",
         "tag_label": "",
         "tag_color": ""
@@ -13638,7 +13638,7 @@ const BILLZ_DATA = {
         "partial": null,
         "full": null,
         "med_close": 0.1,
-        "cost": 98650,
+        "cost": 75610,
         "tag": "normal",
         "tag_label": "",
         "tag_color": ""
@@ -13649,7 +13649,7 @@ const BILLZ_DATA = {
         "partial": null,
         "full": null,
         "med_close": 0.0,
-        "cost": 98650,
+        "cost": 75610,
         "tag": "normal",
         "tag_label": "",
         "tag_color": ""
@@ -13660,7 +13660,7 @@ const BILLZ_DATA = {
         "partial": null,
         "full": null,
         "med_close": 0.0,
-        "cost": 88785,
+        "cost": 68049,
         "tag": "normal",
         "tag_label": "",
         "tag_color": ""
@@ -13671,7 +13671,7 @@ const BILLZ_DATA = {
         "partial": null,
         "full": null,
         "med_close": 0.0,
-        "cost": 88785,
+        "cost": 68049,
         "tag": "normal",
         "tag_label": "",
         "tag_color": ""
@@ -13682,7 +13682,7 @@ const BILLZ_DATA = {
         "partial": 3,
         "full": null,
         "med_close": 0.1,
-        "cost": 88785,
+        "cost": 68049,
         "tag": "normal",
         "tag_label": "",
         "tag_color": ""
@@ -13693,7 +13693,7 @@ const BILLZ_DATA = {
         "partial": null,
         "full": null,
         "med_close": 0.0,
-        "cost": 88785,
+        "cost": 68049,
         "tag": "normal",
         "tag_label": "",
         "tag_color": ""
@@ -13704,7 +13704,7 @@ const BILLZ_DATA = {
         "partial": null,
         "full": null,
         "med_close": 0.0,
-        "cost": 88785,
+        "cost": 68049,
         "tag": "normal",
         "tag_label": "",
         "tag_color": ""
@@ -13715,7 +13715,7 @@ const BILLZ_DATA = {
         "partial": null,
         "full": null,
         "med_close": 0.0,
-        "cost": 88785,
+        "cost": 68049,
         "tag": "normal",
         "tag_label": "",
         "tag_color": ""
@@ -13726,7 +13726,7 @@ const BILLZ_DATA = {
         "partial": 2,
         "full": null,
         "med_close": 0.1,
-        "cost": 78920,
+        "cost": 60488,
         "tag": "normal",
         "tag_label": "",
         "tag_color": ""
@@ -13737,7 +13737,7 @@ const BILLZ_DATA = {
         "partial": null,
         "full": null,
         "med_close": 0.0,
-        "cost": 78920,
+        "cost": 60488,
         "tag": "normal",
         "tag_label": "",
         "tag_color": ""
@@ -13748,7 +13748,7 @@ const BILLZ_DATA = {
         "partial": null,
         "full": null,
         "med_close": 0.4,
-        "cost": 78920,
+        "cost": 60488,
         "tag": "normal",
         "tag_label": "",
         "tag_color": ""
@@ -13759,7 +13759,7 @@ const BILLZ_DATA = {
         "partial": null,
         "full": null,
         "med_close": 0.2,
-        "cost": 78920,
+        "cost": 60488,
         "tag": "normal",
         "tag_label": "",
         "tag_color": ""
@@ -13770,7 +13770,7 @@ const BILLZ_DATA = {
         "partial": null,
         "full": null,
         "med_close": 0.1,
-        "cost": 69055,
+        "cost": 52927,
         "tag": "normal",
         "tag_label": "",
         "tag_color": ""
@@ -13781,91 +13781,91 @@ const BILLZ_DATA = {
         "name": "Инвентаризация — консультация по модулю (частичное обучение)",
         "tickets": 385,
         "type": "Частичное",
-        "cost": 3798025
+        "cost": 2910985
       },
       {
         "name": "Отчёты — Частичное обучение",
         "tickets": 186,
         "type": "Частичное",
-        "cost": 1834890
+        "cost": 1406346
       },
       {
         "name": "Трансфер — консультация по модулю (частичное обучение)",
         "tickets": 153,
         "type": "Частичное",
-        "cost": 1509345
+        "cost": 1156833
       },
       {
         "name": "Заказы — консультация по модулю (частичное обучение)",
         "tickets": 141,
         "type": "Частичное",
-        "cost": 1390965
+        "cost": 1066101
       },
       {
         "name": "Импорт — консультация по импорту (частичное обучение)",
         "tickets": 119,
         "type": "Частичное",
-        "cost": 1173935
+        "cost": 899759
       },
       {
         "name": "Финансы — Частичное обучение",
         "tickets": 113,
         "type": "Частичное",
-        "cost": 1114745
+        "cost": 854393
       },
       {
         "name": "Новая продажа — Частичное обучение",
         "tickets": 107,
         "type": "Частичное",
-        "cost": 1055555
+        "cost": 809027
       },
       {
         "name": "Долги клиентов — Частичное обучение",
         "tickets": 79,
         "type": "Частичное",
-        "cost": 779335
+        "cost": 597319
       },
       {
         "name": "Все продажи — Частичное обучение",
         "tickets": 59,
         "type": "Частичное",
-        "cost": 581935
+        "cost": 446099
       },
       {
         "name": "Списание — частичное обучение",
         "tickets": 46,
         "type": "Частичное",
-        "cost": 453790
+        "cost": 347806
       },
       {
         "name": "Акции — Частичное обучение",
         "tickets": 44,
         "type": "Частичное",
-        "cost": 433460
+        "cost": 332684
       },
       {
         "name": "Инвентаризация — консультация по модулю (полное обучение)",
         "tickets": 30,
         "type": "Полное",
-        "cost": 295950
+        "cost": 226830
       },
       {
         "name": "Переоценка — Частичное обучение",
         "tickets": 21,
         "type": "Частичное",
-        "cost": 207165
+        "cost": 158781
       },
       {
         "name": "Финансы — Полное обучение",
         "tickets": 19,
         "type": "Полное",
-        "cost": 187435
+        "cost": 143659
       },
       {
         "name": "Импорт — консультация по импорту (полное обучение)",
         "tickets": 14,
         "type": "Полное",
-        "cost": 138110
+        "cost": 105854
       }
     ],
     "repeat_connection": [
@@ -13926,7 +13926,7 @@ const BILLZ_DATA = {
         "partial": 46,
         "full": 8,
         "med_close": 3.1,
-        "cost": 532710
+        "cost": 408294
       },
       {
         "name": "avto-doctor",
@@ -13934,7 +13934,7 @@ const BILLZ_DATA = {
         "partial": 24,
         "full": 0,
         "med_close": 6.2,
-        "cost": 246625
+        "cost": 189025
       },
       {
         "name": "usman",
@@ -13942,7 +13942,7 @@ const BILLZ_DATA = {
         "partial": 23,
         "full": 2,
         "med_close": 5.3,
-        "cost": 246625
+        "cost": 189025
       },
       {
         "name": "isfarxon",
@@ -13950,7 +13950,7 @@ const BILLZ_DATA = {
         "partial": 24,
         "full": 0,
         "med_close": 7.2,
-        "cost": 236760
+        "cost": 181464
       },
       {
         "name": "baraka-oyinchoqlar",
@@ -13958,7 +13958,7 @@ const BILLZ_DATA = {
         "partial": 20,
         "full": 1,
         "med_close": 5.6,
-        "cost": 207165
+        "cost": 158781
       },
       {
         "name": "vitazone",
@@ -13966,7 +13966,7 @@ const BILLZ_DATA = {
         "partial": 18,
         "full": 1,
         "med_close": 8.3,
-        "cost": 187435
+        "cost": 143659
       },
       {
         "name": "DEFFCHONKI",
@@ -13974,7 +13974,7 @@ const BILLZ_DATA = {
         "partial": 13,
         "full": 1,
         "med_close": 7.2,
-        "cost": 138110
+        "cost": 105854
       },
       {
         "name": "Picasso",
@@ -13982,7 +13982,7 @@ const BILLZ_DATA = {
         "partial": 11,
         "full": 2,
         "med_close": 7.2,
-        "cost": 128245
+        "cost": 98293
       },
       {
         "name": "Colibri",
@@ -13990,7 +13990,7 @@ const BILLZ_DATA = {
         "partial": 13,
         "full": 0,
         "med_close": 3.5,
-        "cost": 128245
+        "cost": 98293
       },
       {
         "name": "gastronom",
@@ -13998,7 +13998,7 @@ const BILLZ_DATA = {
         "partial": 12,
         "full": 0,
         "med_close": 7.2,
-        "cost": 118380
+        "cost": 90732
       },
       {
         "name": "alpuz",
@@ -14006,7 +14006,7 @@ const BILLZ_DATA = {
         "partial": 12,
         "full": 0,
         "med_close": 7.9,
-        "cost": 118380
+        "cost": 90732
       },
       {
         "name": "vegagroup",
@@ -14014,7 +14014,7 @@ const BILLZ_DATA = {
         "partial": 12,
         "full": 0,
         "med_close": 4.7,
-        "cost": 118380
+        "cost": 90732
       },
       {
         "name": "asilbozor",
@@ -14022,7 +14022,7 @@ const BILLZ_DATA = {
         "partial": 11,
         "full": 1,
         "med_close": 4.3,
-        "cost": 118380
+        "cost": 90732
       },
       {
         "name": "asvisso",
@@ -14030,7 +14030,7 @@ const BILLZ_DATA = {
         "partial": 12,
         "full": 0,
         "med_close": 7.9,
-        "cost": 118380
+        "cost": 90732
       },
       {
         "name": "Amir",
@@ -14038,7 +14038,7 @@ const BILLZ_DATA = {
         "partial": 11,
         "full": 1,
         "med_close": 7.2,
-        "cost": 118380
+        "cost": 90732
       },
       {
         "name": "Kolbasachi",
@@ -14046,7 +14046,7 @@ const BILLZ_DATA = {
         "partial": 10,
         "full": 1,
         "med_close": 4.1,
-        "cost": 108515
+        "cost": 83171
       },
       {
         "name": "amour",
@@ -14054,7 +14054,7 @@ const BILLZ_DATA = {
         "partial": 10,
         "full": 1,
         "med_close": 3.3,
-        "cost": 108515
+        "cost": 83171
       },
       {
         "name": "tamur",
@@ -14062,7 +14062,7 @@ const BILLZ_DATA = {
         "partial": 10,
         "full": 0,
         "med_close": 6.7,
-        "cost": 98650
+        "cost": 75610
       },
       {
         "name": "Essenza-parfumes",
@@ -14070,7 +14070,7 @@ const BILLZ_DATA = {
         "partial": 9,
         "full": 0,
         "med_close": 1.1,
-        "cost": 88785
+        "cost": 68049
       },
       {
         "name": "Bloom",
@@ -14078,7 +14078,7 @@ const BILLZ_DATA = {
         "partial": 9,
         "full": 0,
         "med_close": 4.3,
-        "cost": 88785
+        "cost": 68049
       }
     ],
     "by_store_ks": [
@@ -14088,7 +14088,7 @@ const BILLZ_DATA = {
         "tickets": 12,
         "partial": 11,
         "full": 1,
-        "cost": 118380
+        "cost": 90732
       },
       {
         "store": "Colibri",
@@ -14096,7 +14096,7 @@ const BILLZ_DATA = {
         "tickets": 9,
         "partial": 9,
         "full": 0,
-        "cost": 88785
+        "cost": 68049
       },
       {
         "store": "Colibri",
@@ -14104,7 +14104,7 @@ const BILLZ_DATA = {
         "tickets": 4,
         "partial": 4,
         "full": 0,
-        "cost": 39460
+        "cost": 30244
       },
       {
         "store": "DEFFCHONKI",
@@ -14112,7 +14112,7 @@ const BILLZ_DATA = {
         "tickets": 14,
         "partial": 13,
         "full": 1,
-        "cost": 138110
+        "cost": 105854
       },
       {
         "store": "Picasso",
@@ -14120,7 +14120,7 @@ const BILLZ_DATA = {
         "tickets": 11,
         "partial": 9,
         "full": 2,
-        "cost": 108515
+        "cost": 83171
       },
       {
         "store": "Picasso",
@@ -14128,7 +14128,7 @@ const BILLZ_DATA = {
         "tickets": 2,
         "partial": 2,
         "full": 0,
-        "cost": 19730
+        "cost": 15122
       },
       {
         "store": "alpuz",
@@ -14136,7 +14136,7 @@ const BILLZ_DATA = {
         "tickets": 8,
         "partial": 8,
         "full": 0,
-        "cost": 78920
+        "cost": 60488
       },
       {
         "store": "alpuz",
@@ -14144,7 +14144,7 @@ const BILLZ_DATA = {
         "tickets": 4,
         "partial": 4,
         "full": 0,
-        "cost": 39460
+        "cost": 30244
       },
       {
         "store": "asilbozor",
@@ -14152,7 +14152,7 @@ const BILLZ_DATA = {
         "tickets": 6,
         "partial": 5,
         "full": 1,
-        "cost": 59190
+        "cost": 45366
       },
       {
         "store": "asvisso",
@@ -14160,7 +14160,7 @@ const BILLZ_DATA = {
         "tickets": 9,
         "partial": 9,
         "full": 0,
-        "cost": 88785
+        "cost": 68049
       },
       {
         "store": "avto-doctor",
@@ -14168,7 +14168,7 @@ const BILLZ_DATA = {
         "tickets": 23,
         "partial": 22,
         "full": 0,
-        "cost": 226895
+        "cost": 173903
       },
       {
         "store": "baraka-oyinchoqlar",
@@ -14176,7 +14176,7 @@ const BILLZ_DATA = {
         "tickets": 20,
         "partial": 19,
         "full": 1,
-        "cost": 197300
+        "cost": 151220
       },
       {
         "store": "gastronom",
@@ -14184,7 +14184,7 @@ const BILLZ_DATA = {
         "tickets": 11,
         "partial": 11,
         "full": 0,
-        "cost": 108515
+        "cost": 83171
       },
       {
         "store": "isfarxon",
@@ -14192,7 +14192,7 @@ const BILLZ_DATA = {
         "tickets": 24,
         "partial": 24,
         "full": 0,
-        "cost": 236760
+        "cost": 181464
       },
       {
         "store": "usman",
@@ -14200,7 +14200,7 @@ const BILLZ_DATA = {
         "tickets": 25,
         "partial": 23,
         "full": 2,
-        "cost": 246625
+        "cost": 189025
       },
       {
         "store": "vegagroup",
@@ -14208,7 +14208,7 @@ const BILLZ_DATA = {
         "tickets": 12,
         "partial": 12,
         "full": 0,
-        "cost": 118380
+        "cost": 90732
       },
       {
         "store": "vitazone",
@@ -14216,7 +14216,7 @@ const BILLZ_DATA = {
         "tickets": 18,
         "partial": 17,
         "full": 1,
-        "cost": 177570
+        "cost": 136098
       },
       {
         "store": "BILLZ (внутр.)",
@@ -14224,7 +14224,7 @@ const BILLZ_DATA = {
         "tickets": 7,
         "partial": 7,
         "full": 0,
-        "cost": 69055
+        "cost": 52927
       },
       {
         "store": "BILLZ (внутр.)",
@@ -14232,7 +14232,7 @@ const BILLZ_DATA = {
         "tickets": 6,
         "partial": 5,
         "full": 1,
-        "cost": 59190
+        "cost": 45366
       },
       {
         "store": "BILLZ (внутр.)",
@@ -14240,7 +14240,7 @@ const BILLZ_DATA = {
         "tickets": 5,
         "partial": 5,
         "full": 0,
-        "cost": 49325
+        "cost": 37805
       }
     ],
     "stores_count": 4165,
@@ -14563,8 +14563,8 @@ const BILLZ_DATA = {
       "sla_chat_pct": 76.9,
       "lcr": 3.5,
       "repeat_pct": 6.2,
-      "cost": 103503580,
-      "cpt": 9865,
+      "cost": 79330012,
+      "cpt": 7561,
       "csat_pct": 97.0,
       "rating_pct": 97.0,
       "csat_rated": 761,
@@ -14578,7 +14578,7 @@ const BILLZ_DATA = {
           "rating_pct": 95.3,
           "rated": 85,
           "sla_pct": 87.1,
-          "cost": 13682755
+          "cost": 10487107
         },
         {
           "name": "Атабек",
@@ -14588,7 +14588,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 72,
           "sla_pct": 81.1,
-          "cost": 12114220
+          "cost": 9284908
         },
         {
           "name": "Иззатбек",
@@ -14598,7 +14598,7 @@ const BILLZ_DATA = {
           "rating_pct": 96.3,
           "rated": 54,
           "sla_pct": 78.9,
-          "cost": 11729485
+          "cost": 8990029
         },
         {
           "name": "Робия А.",
@@ -14608,7 +14608,7 @@ const BILLZ_DATA = {
           "rating_pct": 95.0,
           "rated": 60,
           "sla_pct": 76.9,
-          "cost": 9677565
+          "cost": 7417341
         },
         {
           "name": "Тожмухаммад",
@@ -14618,7 +14618,7 @@ const BILLZ_DATA = {
           "rating_pct": 95.7,
           "rated": 70,
           "sla_pct": 74.1,
-          "cost": 9164585
+          "cost": 7024169
         },
         {
           "name": "Алиёр",
@@ -14628,7 +14628,7 @@ const BILLZ_DATA = {
           "rating_pct": 96.2,
           "rated": 53,
           "sla_pct": 71.4,
-          "cost": 9134990
+          "cost": 7001486
         },
         {
           "name": "Сардор Б.",
@@ -14638,7 +14638,7 @@ const BILLZ_DATA = {
           "rating_pct": 98.2,
           "rated": 56,
           "sla_pct": 64.0,
-          "cost": 8089300
+          "cost": 6200020
         },
         {
           "name": "Анасхон",
@@ -14648,7 +14648,7 @@ const BILLZ_DATA = {
           "rating_pct": 96.9,
           "rated": 98,
           "sla_pct": 93.6,
-          "cost": 6885770
+          "cost": 5277578
         },
         {
           "name": "Шохина",
@@ -14658,7 +14658,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 36,
           "sla_pct": 51.8,
-          "cost": 6224815
+          "cost": 4770991
         },
         {
           "name": "Робия Р.",
@@ -14668,7 +14668,7 @@ const BILLZ_DATA = {
           "rating_pct": 97.3,
           "rated": 74,
           "sla_pct": 78.2,
-          "cost": 5849945
+          "cost": 4483673
         },
         {
           "name": "Азизбек",
@@ -14678,7 +14678,7 @@ const BILLZ_DATA = {
           "rating_pct": 96.9,
           "rated": 32,
           "sla_pct": 48.0,
-          "cost": 5761160
+          "cost": 4415624
         },
         {
           "name": "Авазбек",
@@ -14688,7 +14688,7 @@ const BILLZ_DATA = {
           "rating_pct": 97.0,
           "rated": 66,
           "sla_pct": 75.3,
-          "cost": 4419520
+          "cost": 3387328
         },
         {
           "name": "Ардак",
@@ -14698,7 +14698,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 2,
           "sla_pct": 91.7,
-          "cost": 286085
+          "cost": 219269
         },
         {
           "name": "Дильшод",
@@ -14708,7 +14708,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 2,
           "sla_pct": 57.1,
-          "cost": 286085
+          "cost": 219269
         },
         {
           "name": "Хуршид",
@@ -14718,7 +14718,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 1,
           "sla_pct": 28.6,
-          "cost": 197300
+          "cost": 151220
         }
       ],
       "top_labels": [
@@ -14727,105 +14727,105 @@ const BILLZ_DATA = {
           "tickets": 558,
           "desired": 86,
           "undesired": 444,
-          "cost": 5504670
+          "cost": 4219038
         },
         {
           "name": "Документооборот - Оплата за тариф",
           "tickets": 450,
           "desired": 101,
           "undesired": 264,
-          "cost": 4439250
+          "cost": 3402450
         },
         {
           "name": "Документооборот - Создание ссылки для оплаты",
           "tickets": 447,
           "desired": 53,
           "undesired": 369,
-          "cost": 4409655
+          "cost": 3379767
         },
         {
           "name": "Оборудование - Установка/Настройка/Удаление принтера",
           "tickets": 390,
           "desired": 245,
           "undesired": 121,
-          "cost": 3847350
+          "cost": 2948790
         },
         {
           "name": "Учётная запись - Блокировка/Разблокировка аккаунта",
           "tickets": 313,
           "desired": 121,
           "undesired": 160,
-          "cost": 3087745
+          "cost": 2366593
         },
         {
           "name": "Учётная запись - Помощь со входом в аккаунт",
           "tickets": 284,
           "desired": 84,
           "undesired": 158,
-          "cost": 2801660
+          "cost": 2147324
         },
         {
           "name": "Каталог — настройка печати ценника",
           "tickets": 218,
           "desired": 84,
           "undesired": 58,
-          "cost": 2150570
+          "cost": 1648298
         },
         {
           "name": "Документооборот - Консультация по сумме долга",
           "tickets": 205,
           "desired": 53,
           "undesired": 106,
-          "cost": 2022325
+          "cost": 1550005
         },
         {
           "name": "Массовый сбой BILLZ",
           "tickets": 202,
           "desired": 26,
           "undesired": 125,
-          "cost": 1992730
+          "cost": 1527322
         },
         {
           "name": "Управление - Создание/Редактирвоание/Удаление роли",
           "tickets": 179,
           "desired": 55,
           "undesired": 79,
-          "cost": 1765835
+          "cost": 1353419
         },
         {
           "name": "Каталог — изменение свойств товара",
           "tickets": 175,
           "desired": 70,
           "undesired": 69,
-          "cost": 1726375
+          "cost": 1323175
         },
         {
           "name": "Учётная запись - Создание магазина",
           "tickets": 162,
           "desired": 96,
           "undesired": 46,
-          "cost": 1598130
+          "cost": 1224882
         },
         {
           "name": "Инвентаризация — консультация по модулю (частичное обучение)",
           "tickets": 146,
           "desired": 58,
           "undesired": 70,
-          "cost": 1440290
+          "cost": 1103906
         },
         {
           "name": "Документооборот - Помощь в оплате долга",
           "tickets": 137,
           "desired": 48,
           "undesired": 55,
-          "cost": 1351505
+          "cost": 1035857
         },
         {
           "name": "Баг (реквест)",
           "tickets": 126,
           "desired": 83,
           "undesired": 36,
-          "cost": 1242990
+          "cost": 952686
         }
       ],
       "top_companies": [
@@ -14834,7 +14834,7 @@ const BILLZ_DATA = {
           "tickets": 1671,
           "desired": 472,
           "undesired": 975,
-          "cost": 16484415,
+          "cost": 12634431,
           "top_labels": [
             {
               "label": "Документооборот - Создание ссылки для оплаты",
@@ -14855,7 +14855,7 @@ const BILLZ_DATA = {
           "tickets": 504,
           "desired": 52,
           "undesired": 428,
-          "cost": 4971960,
+          "cost": 3810744,
           "top_labels": [
             {
               "label": "Кассовые смены — Открытие/Закрытие смен",
@@ -14876,7 +14876,7 @@ const BILLZ_DATA = {
           "tickets": 193,
           "desired": 95,
           "undesired": 81,
-          "cost": 1903945,
+          "cost": 1459273,
           "top_labels": [
             {
               "label": "Кассовые смены — Открытие/Закрытие смен",
@@ -14897,7 +14897,7 @@ const BILLZ_DATA = {
           "tickets": 63,
           "desired": 22,
           "undesired": 37,
-          "cost": 621495,
+          "cost": 476343,
           "top_labels": [
             {
               "label": "Все продажи - Удаление/Редактирование продажи",
@@ -14918,7 +14918,7 @@ const BILLZ_DATA = {
           "tickets": 50,
           "desired": 13,
           "undesired": 27,
-          "cost": 493250,
+          "cost": 378050,
           "top_labels": [
             {
               "label": "Каталог — изменение свойств товара",
@@ -14939,7 +14939,7 @@ const BILLZ_DATA = {
           "tickets": 45,
           "desired": 12,
           "undesired": 26,
-          "cost": 443925,
+          "cost": 340245,
           "top_labels": [
             {
               "label": "Оборудование - Установка/Настройка/Удаление принтера",
@@ -14960,7 +14960,7 @@ const BILLZ_DATA = {
           "tickets": 42,
           "desired": 12,
           "undesired": 23,
-          "cost": 414330,
+          "cost": 317562,
           "top_labels": [
             {
               "label": "Все клиенты - Создание/удаление/редактирование ",
@@ -14981,7 +14981,7 @@ const BILLZ_DATA = {
           "tickets": 40,
           "desired": 14,
           "undesired": 16,
-          "cost": 394600,
+          "cost": 302440,
           "top_labels": [
             {
               "label": "Баг (реквест)",
@@ -15002,7 +15002,7 @@ const BILLZ_DATA = {
           "tickets": 36,
           "desired": 15,
           "undesired": 14,
-          "cost": 355140,
+          "cost": 272196,
           "top_labels": [
             {
               "label": "Каталог — изменение свойств товара",
@@ -15023,7 +15023,7 @@ const BILLZ_DATA = {
           "tickets": 36,
           "desired": 9,
           "undesired": 22,
-          "cost": 355140,
+          "cost": 272196,
           "top_labels": [
             {
               "label": "Каталог — настройка печати ценника",
@@ -15063,8 +15063,8 @@ const BILLZ_DATA = {
       "sla_chat_pct": 68.6,
       "lcr": 3.85,
       "repeat_pct": 6.3,
-      "cost": 123874805,
-      "cpt": 9865,
+      "cost": 94943477,
+      "cpt": 7561,
       "csat_pct": 95.2,
       "rating_pct": 95.2,
       "csat_rated": 827,
@@ -15078,7 +15078,7 @@ const BILLZ_DATA = {
           "rating_pct": 98.0,
           "rated": 98,
           "sla_pct": 91.1,
-          "cost": 14669255
+          "cost": 11243207
         },
         {
           "name": "Иззатбек",
@@ -15088,7 +15088,7 @@ const BILLZ_DATA = {
           "rating_pct": 87.2,
           "rated": 86,
           "sla_pct": 64.6,
-          "cost": 13653160
+          "cost": 10464424
         },
         {
           "name": "Робия А.",
@@ -15098,7 +15098,7 @@ const BILLZ_DATA = {
           "rating_pct": 96.4,
           "rated": 84,
           "sla_pct": 64.8,
-          "cost": 13071125
+          "cost": 10018325
         },
         {
           "name": "Алиёр",
@@ -15108,7 +15108,7 @@ const BILLZ_DATA = {
           "rating_pct": 95.8,
           "rated": 48,
           "sla_pct": 65.6,
-          "cost": 11522320
+          "cost": 8831248
         },
         {
           "name": "Тожмухаммад",
@@ -15118,7 +15118,7 @@ const BILLZ_DATA = {
           "rating_pct": 94.4,
           "rated": 72,
           "sla_pct": 65.7,
-          "cost": 11216505
+          "cost": 8596857
         },
         {
           "name": "Робия Р.",
@@ -15128,7 +15128,7 @@ const BILLZ_DATA = {
           "rating_pct": 97.1,
           "rated": 137,
           "sla_pct": 75.2,
-          "cost": 10979745
+          "cost": 8415393
         },
         {
           "name": "Нурилло",
@@ -15138,7 +15138,7 @@ const BILLZ_DATA = {
           "rating_pct": 95.0,
           "rated": 60,
           "sla_pct": 84.2,
-          "cost": 10466765
+          "cost": 8022221
         },
         {
           "name": "Ардак",
@@ -15148,7 +15148,7 @@ const BILLZ_DATA = {
           "rating_pct": 96.0,
           "rated": 50,
           "sla_pct": 65.0,
-          "cost": 9036340
+          "cost": 6925876
         },
         {
           "name": "Сардор Б.",
@@ -15158,7 +15158,7 @@ const BILLZ_DATA = {
           "rating_pct": 92.5,
           "rated": 40,
           "sla_pct": 54.4,
-          "cost": 8533225
+          "cost": 6540265
         },
         {
           "name": "Азизбек",
@@ -15168,7 +15168,7 @@ const BILLZ_DATA = {
           "rating_pct": 93.5,
           "rated": 31,
           "sla_pct": 38.5,
-          "cost": 6796985
+          "cost": 5209529
         },
         {
           "name": "Шохина",
@@ -15178,7 +15178,7 @@ const BILLZ_DATA = {
           "rating_pct": 96.6,
           "rated": 58,
           "sla_pct": 45.9,
-          "cost": 5849945
+          "cost": 4483673
         },
         {
           "name": "Атабек",
@@ -15188,7 +15188,7 @@ const BILLZ_DATA = {
           "rating_pct": 96.3,
           "rated": 27,
           "sla_pct": 78.6,
-          "cost": 4015055
+          "cost": 3077327
         },
         {
           "name": "Авазбек",
@@ -15198,7 +15198,7 @@ const BILLZ_DATA = {
           "rating_pct": 95.2,
           "rated": 21,
           "sla_pct": 52.8,
-          "cost": 2969365
+          "cost": 2275861
         },
         {
           "name": "Дильшод",
@@ -15208,7 +15208,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 8,
           "sla_pct": 35.1,
-          "cost": 779335
+          "cost": 597319
         },
         {
           "name": "Хуршид",
@@ -15218,7 +15218,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 7,
           "sla_pct": 86.4,
-          "cost": 315680
+          "cost": 241952
         }
       ],
       "top_labels": [
@@ -15227,105 +15227,105 @@ const BILLZ_DATA = {
           "tickets": 1122,
           "desired": 23,
           "undesired": 1066,
-          "cost": 11068530
+          "cost": 8483442
         },
         {
           "name": "Кассовые смены — Открытие/Закрытие смен",
           "tickets": 646,
           "desired": 90,
           "undesired": 480,
-          "cost": 6372790
+          "cost": 4884406
         },
         {
           "name": "Документооборот - Оплата за тариф",
           "tickets": 527,
           "desired": 137,
           "undesired": 291,
-          "cost": 5198855
+          "cost": 3984647
         },
         {
           "name": "Документооборот - Создание ссылки для оплаты",
           "tickets": 484,
           "desired": 51,
           "undesired": 406,
-          "cost": 4774660
+          "cost": 3659524
         },
         {
           "name": "Оборудование - Установка/Настройка/Удаление принтера",
           "tickets": 446,
           "desired": 309,
           "undesired": 92,
-          "cost": 4399790
+          "cost": 3372206
         },
         {
           "name": "Учётная запись - Помощь со входом в аккаунт",
           "tickets": 380,
           "desired": 72,
           "undesired": 248,
-          "cost": 3748700
+          "cost": 2873180
         },
         {
           "name": "Каталог — изменение свойств товара",
           "tickets": 357,
           "desired": 64,
           "undesired": 188,
-          "cost": 3521805
+          "cost": 2699277
         },
         {
           "name": "Каталог — настройка печати ценника",
           "tickets": 319,
           "desired": 131,
           "undesired": 121,
-          "cost": 3146935
+          "cost": 2411959
         },
         {
           "name": "Учётная запись - Блокировка/Разблокировка аккаунта",
           "tickets": 296,
           "desired": 85,
           "undesired": 181,
-          "cost": 2920040
+          "cost": 2238056
         },
         {
           "name": "Новая продажа - Не удаётся сделать продажу",
           "tickets": 191,
           "desired": 56,
           "undesired": 105,
-          "cost": 1884215
+          "cost": 1444151
         },
         {
           "name": "Управление - Создание/Редактирвоание/Удаление роли",
           "tickets": 150,
           "desired": 59,
           "undesired": 60,
-          "cost": 1479750
+          "cost": 1134150
         },
         {
           "name": "Импорт — импорт товаров через Excel",
           "tickets": 146,
           "desired": 74,
           "undesired": 58,
-          "cost": 1440290
+          "cost": 1103906
         },
         {
           "name": "Вопрос не по программе",
           "tickets": 134,
           "desired": 19,
           "undesired": 96,
-          "cost": 1321910
+          "cost": 1013174
         },
         {
           "name": "Документооборот - Консультация по сумме долга",
           "tickets": 124,
           "desired": 57,
           "undesired": 60,
-          "cost": 1223260
+          "cost": 937564
         },
         {
           "name": "Учётная запись - Создание магазина",
           "tickets": 120,
           "desired": 66,
           "undesired": 40,
-          "cost": 1183800
+          "cost": 907320
         }
       ],
       "top_companies": [
@@ -15334,7 +15334,7 @@ const BILLZ_DATA = {
           "tickets": 1785,
           "desired": 461,
           "undesired": 1081,
-          "cost": 17609025,
+          "cost": 13496385,
           "top_labels": [
             {
               "label": "Документооборот - Создание ссылки для оплаты",
@@ -15355,7 +15355,7 @@ const BILLZ_DATA = {
           "tickets": 531,
           "desired": 29,
           "undesired": 436,
-          "cost": 5238315,
+          "cost": 4014891,
           "top_labels": [
             {
               "label": "Кассовые смены — Открытие/Закрытие смен",
@@ -15376,7 +15376,7 @@ const BILLZ_DATA = {
           "tickets": 185,
           "desired": 82,
           "undesired": 81,
-          "cost": 1825025,
+          "cost": 1398785,
           "top_labels": [
             {
               "label": "Кассовые смены — Открытие/Закрытие смен",
@@ -15397,7 +15397,7 @@ const BILLZ_DATA = {
           "tickets": 69,
           "desired": 20,
           "undesired": 41,
-          "cost": 680685,
+          "cost": 521709,
           "top_labels": [
             {
               "label": "Массовый сбой BILLZ",
@@ -15418,7 +15418,7 @@ const BILLZ_DATA = {
           "tickets": 64,
           "desired": 17,
           "undesired": 40,
-          "cost": 631360,
+          "cost": 483904,
           "top_labels": [
             {
               "label": "Кассовые смены — Открытие/Закрытие смен",
@@ -15439,7 +15439,7 @@ const BILLZ_DATA = {
           "tickets": 56,
           "desired": 13,
           "undesired": 33,
-          "cost": 552440,
+          "cost": 423416,
           "top_labels": [
             {
               "label": "Все продажи - Удаление/Редактирование продажи",
@@ -15460,7 +15460,7 @@ const BILLZ_DATA = {
           "tickets": 53,
           "desired": 24,
           "undesired": 27,
-          "cost": 522845,
+          "cost": 400733,
           "top_labels": [
             {
               "label": "Каталог - Просмотр статистики",
@@ -15481,7 +15481,7 @@ const BILLZ_DATA = {
           "tickets": 52,
           "desired": 15,
           "undesired": 26,
-          "cost": 512980,
+          "cost": 393172,
           "top_labels": [
             {
               "label": "Массовый сбой BILLZ",
@@ -15502,7 +15502,7 @@ const BILLZ_DATA = {
           "tickets": 46,
           "desired": 14,
           "undesired": 28,
-          "cost": 453790,
+          "cost": 347806,
           "top_labels": [
             {
               "label": "Управление - Создание/Редактирвоание/Удаление сотрудника",
@@ -15523,7 +15523,7 @@ const BILLZ_DATA = {
           "tickets": 42,
           "desired": 16,
           "undesired": 21,
-          "cost": 414330,
+          "cost": 317562,
           "top_labels": [
             {
               "label": "Оборудование - Установка/Настройка/Удаление весов",
@@ -15563,8 +15563,8 @@ const BILLZ_DATA = {
       "sla_chat_pct": 76.6,
       "lcr": 3.78,
       "repeat_pct": 9.1,
-      "cost": 121763695,
-      "cpt": 9865,
+      "cost": 93325423,
+      "cpt": 7561,
       "csat_pct": 94.8,
       "rating_pct": 94.8,
       "csat_rated": 851,
@@ -15578,7 +15578,7 @@ const BILLZ_DATA = {
           "rating_pct": 93.9,
           "rated": 66,
           "sla_pct": 67.5,
-          "cost": 13031665
+          "cost": 9988081
         },
         {
           "name": "Анасхон",
@@ -15588,7 +15588,7 @@ const BILLZ_DATA = {
           "rating_pct": 98.2,
           "rated": 112,
           "sla_pct": 94.6,
-          "cost": 12854095
+          "cost": 9851983
         },
         {
           "name": "Атабек",
@@ -15598,7 +15598,7 @@ const BILLZ_DATA = {
           "rating_pct": 96.0,
           "rated": 75,
           "sla_pct": 81.5,
-          "cost": 11117855
+          "cost": 8521247
         },
         {
           "name": "Робия А.",
@@ -15608,7 +15608,7 @@ const BILLZ_DATA = {
           "rating_pct": 92.8,
           "rated": 83,
           "sla_pct": 69.5,
-          "cost": 10969880
+          "cost": 8407832
         },
         {
           "name": "Ардак",
@@ -15618,7 +15618,7 @@ const BILLZ_DATA = {
           "rating_pct": 98.2,
           "rated": 57,
           "sla_pct": 73.0,
-          "cost": 10585145
+          "cost": 8112953
         },
         {
           "name": "Сардор Б.",
@@ -15628,7 +15628,7 @@ const BILLZ_DATA = {
           "rating_pct": 97.8,
           "rated": 46,
           "sla_pct": 58.7,
-          "cost": 10555550
+          "cost": 8090270
         },
         {
           "name": "Робия Р.",
@@ -15638,7 +15638,7 @@ const BILLZ_DATA = {
           "rating_pct": 93.0,
           "rated": 115,
           "sla_pct": 72.4,
-          "cost": 10299060
+          "cost": 7893684
         },
         {
           "name": "Нурилло",
@@ -15648,7 +15648,7 @@ const BILLZ_DATA = {
           "rating_pct": 96.5,
           "rated": 57,
           "sla_pct": 85.3,
-          "cost": 9884730
+          "cost": 7576122
         },
         {
           "name": "Тожмухаммад",
@@ -15658,7 +15658,7 @@ const BILLZ_DATA = {
           "rating_pct": 93.9,
           "rated": 49,
           "sla_pct": 73.6,
-          "cost": 9588780
+          "cost": 7349292
         },
         {
           "name": "Алиёр",
@@ -15668,7 +15668,7 @@ const BILLZ_DATA = {
           "rating_pct": 94.6,
           "rated": 56,
           "sla_pct": 70.6,
-          "cost": 9164585
+          "cost": 7024169
         },
         {
           "name": "Шохина",
@@ -15678,7 +15678,7 @@ const BILLZ_DATA = {
           "rating_pct": 90.4,
           "rated": 114,
           "sla_pct": 84.0,
-          "cost": 7477670
+          "cost": 5731238
         },
         {
           "name": "Азизбек",
@@ -15688,7 +15688,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 2,
           "sla_pct": 63.6,
-          "cost": 4784525
+          "cost": 3667085
         },
         {
           "name": "Авазбек",
@@ -15698,7 +15698,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 8,
           "sla_pct": 85.9,
-          "cost": 789200
+          "cost": 604880
         },
         {
           "name": "Дильшод",
@@ -15708,7 +15708,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 8,
           "sla_pct": 52.5,
-          "cost": 434060
+          "cost": 332684
         },
         {
           "name": "Хуршид",
@@ -15718,7 +15718,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 1,
           "sla_pct": 42.9,
-          "cost": 147975
+          "cost": 113415
         },
         {
           "name": "Абдурауф",
@@ -15728,7 +15728,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 2,
           "sla_pct": 75.0,
-          "cost": 78920
+          "cost": 60488
         }
       ],
       "top_labels": [
@@ -15737,105 +15737,105 @@ const BILLZ_DATA = {
           "tickets": 591,
           "desired": 168,
           "undesired": 409,
-          "cost": 5830215
+          "cost": 4468551
         },
         {
           "name": "Массовый сбой BILLZ",
           "tickets": 559,
           "desired": 21,
           "undesired": 538,
-          "cost": 5514535
+          "cost": 4226599
         },
         {
           "name": "Кассовые смены — Открытие/Закрытие смен",
           "tickets": 490,
           "desired": 90,
           "undesired": 397,
-          "cost": 4833850
+          "cost": 3704890
         },
         {
           "name": "Документооборот - Создание ссылки для оплаты",
           "tickets": 483,
           "desired": 94,
           "undesired": 385,
-          "cost": 4764795
+          "cost": 3651963
         },
         {
           "name": "Оборудование - Установка/Настройка/Удаление принтера",
           "tickets": 386,
           "desired": 263,
           "undesired": 121,
-          "cost": 3807890
+          "cost": 2918546
         },
         {
           "name": "Учётная запись - Блокировка/Разблокировка аккаунта",
           "tickets": 337,
           "desired": 130,
           "undesired": 195,
-          "cost": 3324505
+          "cost": 2548057
         },
         {
           "name": "Учётная запись - Помощь со входом в аккаунт",
           "tickets": 282,
           "desired": 57,
           "undesired": 207,
-          "cost": 2781930
+          "cost": 2132202
         },
         {
           "name": "Каталог — настройка печати ценника",
           "tickets": 244,
           "desired": 108,
           "undesired": 133,
-          "cost": 2407060
+          "cost": 1844884
         },
         {
           "name": "Каталог — изменение свойств товара",
           "tickets": 242,
           "desired": 87,
           "undesired": 148,
-          "cost": 2387330
+          "cost": 1829762
         },
         {
           "name": "Управление - Создание/Редактирвоание/Удаление роли",
           "tickets": 226,
           "desired": 128,
           "undesired": 95,
-          "cost": 2229490
+          "cost": 1708786
         },
         {
           "name": "Вопрос не по программе",
           "tickets": 218,
           "desired": 50,
           "undesired": 167,
-          "cost": 2150570
+          "cost": 1648298
         },
         {
           "name": "Баг (реквест)",
           "tickets": 197,
           "desired": 110,
           "undesired": 83,
-          "cost": 1943405
+          "cost": 1489517
         },
         {
           "name": "Новая продажа - Не удаётся сделать продажу",
           "tickets": 187,
           "desired": 73,
           "undesired": 113,
-          "cost": 1844755
+          "cost": 1413907
         },
         {
           "name": "Учётная запись - Создание магазина",
           "tickets": 164,
           "desired": 103,
           "undesired": 57,
-          "cost": 1617860
+          "cost": 1240004
         },
         {
           "name": "Оборудование - Установка Anydesk/BILLZ Desktop/Программы компьютера и тд.",
           "tickets": 158,
           "desired": 88,
           "undesired": 68,
-          "cost": 1558670
+          "cost": 1194638
         }
       ],
       "top_companies": [
@@ -15844,7 +15844,7 @@ const BILLZ_DATA = {
           "tickets": 1958,
           "desired": 696,
           "undesired": 1164,
-          "cost": 19315670,
+          "cost": 14804438,
           "top_labels": [
             {
               "label": "Документооборот - Создание ссылки для оплаты",
@@ -15865,7 +15865,7 @@ const BILLZ_DATA = {
           "tickets": 413,
           "desired": 50,
           "undesired": 359,
-          "cost": 4074245,
+          "cost": 3122693,
           "top_labels": [
             {
               "label": "Кассовые смены — Открытие/Закрытие смен",
@@ -15886,7 +15886,7 @@ const BILLZ_DATA = {
           "tickets": 230,
           "desired": 105,
           "undesired": 124,
-          "cost": 2268950,
+          "cost": 1739030,
           "top_labels": [
             {
               "label": "Кассовые смены — Открытие/Закрытие смен",
@@ -15907,7 +15907,7 @@ const BILLZ_DATA = {
           "tickets": 79,
           "desired": 16,
           "undesired": 62,
-          "cost": 779335,
+          "cost": 597319,
           "top_labels": [
             {
               "label": "Все продажи - Удаление/Редактирование продажи",
@@ -15928,7 +15928,7 @@ const BILLZ_DATA = {
           "tickets": 74,
           "desired": 24,
           "undesired": 49,
-          "cost": 730010,
+          "cost": 559514,
           "top_labels": [
             {
               "label": "Новая продажа - Не удаётся сделать продажу",
@@ -15949,7 +15949,7 @@ const BILLZ_DATA = {
           "tickets": 65,
           "desired": 39,
           "undesired": 26,
-          "cost": 641225,
+          "cost": 491465,
           "top_labels": [
             {
               "label": "Оборудование - Установка Anydesk/BILLZ Desktop/Программы компьютера и тд.",
@@ -15970,7 +15970,7 @@ const BILLZ_DATA = {
           "tickets": 50,
           "desired": 25,
           "undesired": 24,
-          "cost": 493250,
+          "cost": 378050,
           "top_labels": [
             {
               "label": "Оборудование - Установка Anydesk/BILLZ Desktop/Программы компьютера и тд.",
@@ -15991,7 +15991,7 @@ const BILLZ_DATA = {
           "tickets": 48,
           "desired": 23,
           "undesired": 23,
-          "cost": 473520,
+          "cost": 362928,
           "top_labels": [
             {
               "label": "Баг (реквест)",
@@ -16012,7 +16012,7 @@ const BILLZ_DATA = {
           "tickets": 45,
           "desired": 18,
           "undesired": 27,
-          "cost": 443925,
+          "cost": 340245,
           "top_labels": [
             {
               "label": "Управление - Создание/Редактирвоание/Удаление сотрудника",
@@ -16033,7 +16033,7 @@ const BILLZ_DATA = {
           "tickets": 43,
           "desired": 13,
           "undesired": 27,
-          "cost": 424195,
+          "cost": 325123,
           "top_labels": [
             {
               "label": "Массовый сбой BILLZ",
@@ -16073,8 +16073,8 @@ const BILLZ_DATA = {
       "sla_chat_pct": 78.8,
       "lcr": 4.59,
       "repeat_pct": 9.2,
-      "cost": 114473460,
-      "cpt": 9865,
+      "cost": 87737844,
+      "cpt": 7561,
       "csat_pct": 94.6,
       "rating_pct": 94.6,
       "csat_rated": 725,
@@ -16088,7 +16088,7 @@ const BILLZ_DATA = {
           "avg_close": 16.67,
           "rating_pct": 93.1,
           "rated": 180,
-          "cost": 14501550,
+          "cost": 11114670,
           "close_rate": 99.5
         },
         {
@@ -16099,7 +16099,7 @@ const BILLZ_DATA = {
           "avg_close": 46.75,
           "rating_pct": 90.3,
           "rated": 124,
-          "cost": 12143815,
+          "cost": 9307591,
           "close_rate": 99.5
         },
         {
@@ -16110,7 +16110,7 @@ const BILLZ_DATA = {
           "avg_close": 13.68,
           "rating_pct": 95.2,
           "rated": 115,
-          "cost": 11068530,
+          "cost": 8483442,
           "close_rate": 99.5
         },
         {
@@ -16121,7 +16121,7 @@ const BILLZ_DATA = {
           "avg_close": 27.15,
           "rating_pct": 87.0,
           "rated": 100,
-          "cost": 10595010,
+          "cost": 8120514,
           "close_rate": 99.5
         },
         {
@@ -16132,7 +16132,7 @@ const BILLZ_DATA = {
           "avg_close": 18.53,
           "rating_pct": 100.0,
           "rated": 42,
-          "cost": 10585145,
+          "cost": 8112953,
           "close_rate": 99.5
         },
         {
@@ -16143,7 +16143,7 @@ const BILLZ_DATA = {
           "avg_close": 44.65,
           "rating_pct": 89.7,
           "rated": 68,
-          "cost": 10358250,
+          "cost": 7939050,
           "close_rate": 99.5
         },
         {
@@ -16154,7 +16154,7 @@ const BILLZ_DATA = {
           "avg_close": 28.4,
           "rating_pct": 88.4,
           "rated": 60,
-          "cost": 9855135,
+          "cost": 7553439,
           "close_rate": 99.5
         },
         {
@@ -16165,7 +16165,7 @@ const BILLZ_DATA = {
           "avg_close": 24.05,
           "rating_pct": 80.4,
           "rated": 52,
-          "cost": 9835405,
+          "cost": 7538317,
           "close_rate": 99.5
         },
         {
@@ -16176,7 +16176,7 @@ const BILLZ_DATA = {
           "avg_close": 54.0,
           "rating_pct": 97.7,
           "rated": 44,
-          "cost": 9006745,
+          "cost": 6903193,
           "close_rate": 99.5
         },
         {
@@ -16187,7 +16187,7 @@ const BILLZ_DATA = {
           "avg_close": 22.67,
           "rating_pct": 89.5,
           "rated": 38,
-          "cost": 6145895,
+          "cost": 4710503,
           "close_rate": 99.5
         },
         {
@@ -16198,7 +16198,7 @@ const BILLZ_DATA = {
           "avg_close": 177.0,
           "rating_pct": 100.0,
           "rated": 18,
-          "cost": 3363965,
+          "cost": 2578301,
           "close_rate": 99.5
         },
         {
@@ -16209,7 +16209,7 @@ const BILLZ_DATA = {
           "avg_close": 14.2,
           "rating_pct": 100.0,
           "rated": 11,
-          "cost": 1489615,
+          "cost": 1141711,
           "close_rate": 99.5
         },
         {
@@ -16220,7 +16220,7 @@ const BILLZ_DATA = {
           "avg_close": 6.42,
           "rating_pct": 100.0,
           "rated": 2,
-          "cost": 276220,
+          "cost": 211708,
           "close_rate": 99.5
         }
       ],
@@ -16230,105 +16230,105 @@ const BILLZ_DATA = {
           "tickets": 889,
           "desired": 305,
           "undesired": 515,
-          "cost": 8769985
+          "cost": 6721729
         },
         {
           "name": "Учётная запись - Помощь со входом в аккаунт",
           "tickets": 494,
           "desired": 155,
           "undesired": 320,
-          "cost": 4873310
+          "cost": 3735134
         },
         {
           "name": "Оборудование - Установка/Настройка/Удаление принтера",
           "tickets": 427,
           "desired": 301,
           "undesired": 119,
-          "cost": 4212355
+          "cost": 3228547
         },
         {
           "name": "Документооборот - Создание ссылки для оплаты",
           "tickets": 395,
           "desired": 97,
           "undesired": 295,
-          "cost": 3896675
+          "cost": 2756195
         },
         {
           "name": "Учётная запись - Блокировка/Разблокировка аккаунта",
           "tickets": 294,
           "desired": 117,
           "undesired": 164,
-          "cost": 2900310
+          "cost": 2222934
         },
         {
           "name": "Вопрос не по программе",
           "tickets": 236,
           "desired": 78,
           "undesired": 148,
-          "cost": 2328140
+          "cost": 1784396
         },
         {
           "name": "Каталог — изменение свойств товара",
           "tickets": 227,
           "desired": 97,
           "undesired": 117,
-          "cost": 2239355
+          "cost": 1716347
         },
         {
           "name": "Кассовые смены — Открытие/Закрытие смен",
           "tickets": 214,
           "desired": 67,
           "undesired": 147,
-          "cost": 2111110
+          "cost": 1618054
         },
         {
           "name": "Каталог — настройка печати ценника",
           "tickets": 181,
           "desired": 102,
           "undesired": 78,
-          "cost": 1785565
+          "cost": 1368541
         },
         {
           "name": "Управление - Создание/Редактирвоание/Удаление роли",
           "tickets": 175,
           "desired": 105,
           "undesired": 70,
-          "cost": 1726375
+          "cost": 1323175
         },
         {
           "name": "Учётная запись - Создание магазина",
           "tickets": 147,
           "desired": 89,
           "undesired": 54,
-          "cost": 1450155
+          "cost": 1111467
         },
         {
           "name": "Новая продажа - Не удаётся сделать продажу",
           "tickets": 127,
           "desired": 65,
           "undesired": 62,
-          "cost": 1252855
+          "cost": 960247
         },
         {
           "name": "Управление - Создание/Редактирвоание/Удаление сотрудника",
           "tickets": 125,
           "desired": 74,
           "undesired": 51,
-          "cost": 1233125
+          "cost": 945125
         },
         {
           "name": "Импорт — импорт товаров через Excel",
           "tickets": 119,
           "desired": 74,
           "undesired": 45,
-          "cost": 1173935
+          "cost": 899759
         },
         {
           "name": "Оборудование - Установка Anydesk/BILLZ Desktop/Программы компьютера и тд.",
           "tickets": 117,
           "desired": 70,
           "undesired": 46,
-          "cost": 1154205
+          "cost": 884637
         }
       ],
       "top_companies": [
@@ -16337,7 +16337,7 @@ const BILLZ_DATA = {
           "tickets": 1965,
           "desired": 763,
           "undesired": 1036,
-          "cost": 19384725,
+          "cost": 14857365,
           "top_labels": [
             {
               "label": "Документооборот - Создание ссылки для оплаты",
@@ -16358,7 +16358,7 @@ const BILLZ_DATA = {
           "tickets": 147,
           "desired": 69,
           "undesired": 75,
-          "cost": 1450155,
+          "cost": 1111467,
           "top_labels": [
             {
               "label": "Маркетинг - Работа с Сертификатом/Ваучером",
@@ -16379,7 +16379,7 @@ const BILLZ_DATA = {
           "tickets": 121,
           "desired": 27,
           "undesired": 93,
-          "cost": 1193665,
+          "cost": 914881,
           "top_labels": [
             {
               "label": "Кассовые смены — Открытие/Закрытие смен",
@@ -16400,7 +16400,7 @@ const BILLZ_DATA = {
           "tickets": 72,
           "desired": 35,
           "undesired": 34,
-          "cost": 710280,
+          "cost": 544392,
           "top_labels": [
             {
               "label": "Оборудование - Установка Anydesk/BILLZ Desktop/Программы компьютера и тд.",
@@ -16421,7 +16421,7 @@ const BILLZ_DATA = {
           "tickets": 71,
           "desired": 29,
           "undesired": 42,
-          "cost": 700415,
+          "cost": 536831,
           "top_labels": [
             {
               "label": "Desktop - Ошибка синхронизации",
@@ -16442,7 +16442,7 @@ const BILLZ_DATA = {
           "tickets": 65,
           "desired": 12,
           "undesired": 53,
-          "cost": 641225,
+          "cost": 491465,
           "top_labels": [
             {
               "label": "Все продажи - Удаление/Редактирование продажи",
@@ -16463,7 +16463,7 @@ const BILLZ_DATA = {
           "tickets": 52,
           "desired": 31,
           "undesired": 20,
-          "cost": 512980,
+          "cost": 393172,
           "top_labels": [
             {
               "label": "Desktop - Ошибка синхронизации",
@@ -16484,7 +16484,7 @@ const BILLZ_DATA = {
           "tickets": 49,
           "desired": 16,
           "undesired": 31,
-          "cost": 483385,
+          "cost": 370489,
           "top_labels": [
             {
               "label": "Учётная запись - Помощь со входом в аккаунт",
@@ -16505,7 +16505,7 @@ const BILLZ_DATA = {
           "tickets": 43,
           "desired": 18,
           "undesired": 25,
-          "cost": 424195,
+          "cost": 325123,
           "top_labels": [
             {
               "label": "Массовый сбой BILLZ",
@@ -16526,7 +16526,7 @@ const BILLZ_DATA = {
           "tickets": 38,
           "desired": 21,
           "undesired": 14,
-          "cost": 374870,
+          "cost": 287318,
           "top_labels": [
             {
               "label": "Сайт/Бот - Настройка/Удаление/Редактирование функций, Баг (реквест)",
@@ -16583,8 +16583,8 @@ const BILLZ_DATA = {
       "sla_chat_pct": 82.0,
       "lcr": 9.97,
       "repeat_pct": 8.3,
-      "cost": 11394075,
-      "cpt": 9865,
+      "cost": 8732955,
+      "cpt": 7561,
       "csat_pct": 92.0,
       "rating_pct": 92.0,
       "csat_rated": 72,
@@ -16609,7 +16609,7 @@ const BILLZ_DATA = {
           "rating_pct": 93.1,
           "rated": 12,
           "sla_pct": 97.1,
-          "cost": 1529075
+          "cost": 1171955
         },
         {
           "name": "Атабек",
@@ -16619,7 +16619,7 @@ const BILLZ_DATA = {
           "rating_pct": 90.3,
           "rated": 10,
           "sla_pct": 92.5,
-          "cost": 1272585
+          "cost": 975369
         },
         {
           "name": "Алиёр",
@@ -16629,7 +16629,7 @@ const BILLZ_DATA = {
           "rating_pct": 95.2,
           "rated": 9,
           "sla_pct": 93.0,
-          "cost": 1154205
+          "cost": 884637
         },
         {
           "name": "Нурилло",
@@ -16639,7 +16639,7 @@ const BILLZ_DATA = {
           "rating_pct": 87.0,
           "rated": 9,
           "sla_pct": 95.5,
-          "cost": 1104880
+          "cost": 846832
         },
         {
           "name": "Сардор Б.",
@@ -16649,7 +16649,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 9,
           "sla_pct": 85.9,
-          "cost": 1104880
+          "cost": 846832
         },
         {
           "name": "Робия Р.",
@@ -16659,7 +16659,7 @@ const BILLZ_DATA = {
           "rating_pct": 89.7,
           "rated": 9,
           "sla_pct": 91.4,
-          "cost": 1085150
+          "cost": 831710
         },
         {
           "name": "Авазбек",
@@ -16669,7 +16669,7 @@ const BILLZ_DATA = {
           "rating_pct": 88.4,
           "rated": 8,
           "sla_pct": 93.3,
-          "cost": 1025960
+          "cost": 786344
         },
         {
           "name": "Тожмухаммад",
@@ -16679,7 +16679,7 @@ const BILLZ_DATA = {
           "rating_pct": 80.4,
           "rated": 8,
           "sla_pct": 90.6,
-          "cost": 1025960
+          "cost": 786344
         },
         {
           "name": "Ардак",
@@ -16689,7 +16689,7 @@ const BILLZ_DATA = {
           "rating_pct": 97.7,
           "rated": 7,
           "sla_pct": 91.0,
-          "cost": 937175
+          "cost": 718295
         },
         {
           "name": "Иззатбек",
@@ -16699,7 +16699,7 @@ const BILLZ_DATA = {
           "rating_pct": 89.5,
           "rated": 5,
           "sla_pct": 93.6,
-          "cost": 641225
+          "cost": 491465
         },
         {
           "name": "Робия А.",
@@ -16709,7 +16709,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 3,
           "sla_pct": 90.6,
-          "cost": 355140
+          "cost": 272196
         },
         {
           "name": "Камолиддин",
@@ -16719,7 +16719,7 @@ const BILLZ_DATA = {
           "rating_pct": 100.0,
           "rated": 2,
           "sla_pct": 91.8,
-          "cost": 157840
+          "cost": 120976
         }
       ],
       "top_labels": [
@@ -16728,42 +16728,42 @@ const BILLZ_DATA = {
           "tickets": 149,
           "undesired": 98,
           "desired": 51,
-          "cost": 1469885
+          "cost": 1126589
         },
         {
           "name": "Учётная запись - Помощь со входом в аккаунт",
           "tickets": 79,
           "undesired": 56,
           "desired": 23,
-          "cost": 779335
+          "cost": 597319
         },
         {
           "name": "Документооборот - Создание ссылки для оплаты",
           "tickets": 58,
           "undesired": 43,
           "desired": 15,
-          "cost": 572170
+          "cost": 438538
         },
         {
           "name": "Оборудование - Установка/Настройка/Удаление принтера",
           "tickets": 57,
           "undesired": 18,
           "desired": 39,
-          "cost": 562305
+          "cost": 430977
         },
         {
           "name": "Кассовые смены — Открытие/Закрытие смен",
           "tickets": 30,
           "undesired": 22,
           "desired": 8,
-          "cost": 295950
+          "cost": 226830
         },
         {
           "name": "Каталог — настройка печати ценника",
           "tickets": 17,
           "undesired": 7,
           "desired": 10,
-          "cost": 167705
+          "cost": 128537
         }
       ],
       "top_companies": [],
@@ -16803,7 +16803,7 @@ const BILLZ_DATA = {
         "sla_not_met": 7.5,
         "lcr": 4.59,
         "repeat_pct": 9.2,
-        "cost": 114473460,
+        "cost": 87737844,
         "massoviy_cnt": 154,
         "no_massoviy": {
           "tickets": 5700,
@@ -16813,147 +16813,147 @@ const BILLZ_DATA = {
           "afrt_raw": 0.804,
           "sla_pct": 98.3,
           "sla_not_met": 1.7,
-          "cost": 56230500,
+          "cost": 43097700,
           "top_labels": [
             {
               "name": "Документооборот - Оплата за тариф",
               "tickets": 705,
               "desired": 220,
               "undesired": 425,
-              "cost": 6954825
+              "cost": 5330505
             },
             {
               "name": "Документооборот - Создание ссылки для оплаты",
               "tickets": 266,
               "desired": 66,
               "undesired": 197,
-              "cost": 2624090
+              "cost": 2011226
             },
             {
               "name": "Учётная запись - Помощь со входом в аккаунт",
               "tickets": 209,
               "desired": 56,
               "undesired": 152,
-              "cost": 2061785
+              "cost": 1580249
             },
             {
               "name": "Оборудование - Установка/Настройка/Удаление принтера",
               "tickets": 188,
               "desired": 135,
               "undesired": 49,
-              "cost": 1854620
+              "cost": 1421468
             },
             {
               "name": "Учётная запись - Блокировка/Разблокировка аккаунта",
               "tickets": 132,
               "desired": 42,
               "undesired": 83,
-              "cost": 1302180
+              "cost": 998052
             },
             {
               "name": "Каталог — изменение свойств товара",
               "tickets": 114,
               "desired": 50,
               "undesired": 56,
-              "cost": 1124610
+              "cost": 861954
             },
             {
               "name": "Кассовые смены — Открытие/Закрытие смен",
               "tickets": 108,
               "desired": 34,
               "undesired": 74,
-              "cost": 1065420
+              "cost": 816588
             },
             {
               "name": "Вопрос не по программе",
               "tickets": 99,
               "desired": 30,
               "undesired": 64,
-              "cost": 976635
+              "cost": 748539
             },
             {
               "name": "Документооборот - Консультация по сумме долга",
               "tickets": 72,
               "desired": 28,
               "undesired": 42,
-              "cost": 710280
+              "cost": 544392
             },
             {
               "name": "Каталог — настройка печати ценника",
               "tickets": 71,
               "desired": 31,
               "undesired": 39,
-              "cost": 700415
+              "cost": 536831
             },
             {
               "name": "Управление - Создание/Редактирвоание/Удаление роли",
               "tickets": 69,
               "desired": 36,
               "undesired": 33,
-              "cost": 680685
+              "cost": 521709
             },
             {
               "name": "Учётная запись - Создание магазина",
               "tickets": 67,
               "desired": 41,
               "undesired": 25,
-              "cost": 660955
+              "cost": 506587
             },
             {
               "name": "Управление - Создание/Редактирвоание/Удаление сотрудника",
               "tickets": 64,
               "desired": 38,
               "undesired": 26,
-              "cost": 631360
+              "cost": 483904
             },
             {
               "name": "Оборудование - Установка Anydesk/BILLZ Desktop/Программы компьютера и тд.",
               "tickets": 62,
               "desired": 34,
               "undesired": 28,
-              "cost": 611630
+              "cost": 468782
             },
             {
               "name": "Импорт — импорт товаров через Excel",
               "tickets": 61,
               "desired": 35,
               "undesired": 26,
-              "cost": 601765
+              "cost": 461221
             },
             {
               "name": "Новая продажа - Не удаётся сделать продажу",
               "tickets": 58,
               "desired": 25,
               "undesired": 33,
-              "cost": 572170
+              "cost": 438538
             },
             {
               "name": "Документооборот - Помощь в оплате долга",
               "tickets": 53,
               "desired": 25,
               "undesired": 24,
-              "cost": 522845
+              "cost": 400733
             },
             {
               "name": "Баг (реквест)",
               "tickets": 51,
               "desired": 26,
               "undesired": 25,
-              "cost": 503115
+              "cost": 385611
             },
             {
               "name": "Настройка - Установка BILLZ PAY/Payme/Epos/PAX",
               "tickets": 50,
               "desired": 35,
               "undesired": 15,
-              "cost": 493250
+              "cost": 378050
             },
             {
               "name": "Каталог — запрос на добавление товара",
               "tickets": 46,
               "desired": 29,
               "undesired": 17,
-              "cost": 453790
+              "cost": 347806
             }
           ],
           "top_companies": [
@@ -16962,7 +16962,7 @@ const BILLZ_DATA = {
               "tickets": 945,
               "desired": 337,
               "undesired": 512,
-              "cost": 9322425,
+              "cost": 7145145,
               "top_labels": [
                 {
                   "label": "Документооборот - Создание ссылки для оплаты",
@@ -16991,7 +16991,7 @@ const BILLZ_DATA = {
               "tickets": 72,
               "desired": 30,
               "undesired": 39,
-              "cost": 710280,
+              "cost": 544392,
               "top_labels": [
                 {
                   "label": "Маркетинг - Работа с Сертификатом/Ваучером",
@@ -17020,7 +17020,7 @@ const BILLZ_DATA = {
               "tickets": 58,
               "desired": 16,
               "undesired": 42,
-              "cost": 572170,
+              "cost": 438538,
               "top_labels": [
                 {
                   "label": "Кассовые смены — Открытие/Закрытие смен",
@@ -17049,7 +17049,7 @@ const BILLZ_DATA = {
               "tickets": 55,
               "desired": 29,
               "undesired": 23,
-              "cost": 542575,
+              "cost": 415855,
               "top_labels": [
                 {
                   "label": "Оборудование - Установка Anydesk/BILLZ Desktop/Программы компьютера и тд.",
@@ -17078,7 +17078,7 @@ const BILLZ_DATA = {
               "tickets": 47,
               "desired": 21,
               "undesired": 26,
-              "cost": 463655,
+              "cost": 355367,
               "top_labels": [
                 {
                   "label": "Desktop - Ошибка синхронизации",
@@ -17107,7 +17107,7 @@ const BILLZ_DATA = {
               "tickets": 25,
               "desired": 4,
               "undesired": 21,
-              "cost": 246625,
+              "cost": 189025,
               "top_labels": [
                 {
                   "label": "Все продажи - Удаление/Редактирование продажи",
@@ -17136,7 +17136,7 @@ const BILLZ_DATA = {
               "tickets": 24,
               "desired": 16,
               "undesired": 7,
-              "cost": 236760,
+              "cost": 181464,
               "top_labels": [
                 {
                   "label": "Desktop - Ошибка синхронизации",
@@ -17165,7 +17165,7 @@ const BILLZ_DATA = {
               "tickets": 22,
               "desired": 12,
               "undesired": 10,
-              "cost": 217030,
+              "cost": 166342,
               "top_labels": [
                 {
                   "label": "Инвентаризация — консультация по модулю (частичное обучение)",
@@ -17194,7 +17194,7 @@ const BILLZ_DATA = {
               "tickets": 20,
               "desired": 4,
               "undesired": 13,
-              "cost": 197300,
+              "cost": 151220,
               "top_labels": [
                 {
                   "label": "Кассовые смены — Открытие/Закрытие смен",
@@ -17219,7 +17219,7 @@ const BILLZ_DATA = {
               "tickets": 19,
               "desired": 10,
               "undesired": 9,
-              "cost": 187435,
+              "cost": 143659,
               "top_labels": [
                 {
                   "label": "Каталог - Просмотр статистики",
@@ -17253,7 +17253,7 @@ const BILLZ_DATA = {
               "rating_pct": 96.2,
               "rated": 53,
               "sla_pct": 100.0,
-              "cost": 7576320
+              "cost": 5806848
             },
             {
               "name": "Робия Р.",
@@ -17263,7 +17263,7 @@ const BILLZ_DATA = {
               "rating_pct": 93.1,
               "rated": 72,
               "sla_pct": 98.2,
-              "cost": 6579955
+              "cost": 5043187
             },
             {
               "name": "Алиёр",
@@ -17273,7 +17273,7 @@ const BILLZ_DATA = {
               "rating_pct": 97.0,
               "rated": 33,
               "sla_pct": 91.7,
-              "cost": 5682240
+              "cost": 4355136
             },
             {
               "name": "Атабек",
@@ -17283,7 +17283,7 @@ const BILLZ_DATA = {
               "rating_pct": 92.9,
               "rated": 28,
               "sla_pct": 99.0,
-              "cost": 5544130
+              "cost": 4249282
             },
             {
               "name": "Нурилло",
@@ -17293,7 +17293,7 @@ const BILLZ_DATA = {
               "rating_pct": 92.9,
               "rated": 28,
               "sla_pct": 99.0,
-              "cost": 5327100
+              "cost": 4082940
             },
             {
               "name": "Тожмухаммад",
@@ -17303,7 +17303,7 @@ const BILLZ_DATA = {
               "rating_pct": 95.8,
               "rated": 24,
               "sla_pct": 96.5,
-              "cost": 4823985
+              "cost": 3697329
             },
             {
               "name": "Сардор Б.",
@@ -17313,7 +17313,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 16,
               "sla_pct": 93.9,
-              "cost": 4754930
+              "cost": 3644402
             },
             {
               "name": "Ардак",
@@ -17323,7 +17323,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 16,
               "sla_pct": 99.3,
-              "cost": 4113705
+              "cost": 3152937
             },
             {
               "name": "Авазбек",
@@ -17333,7 +17333,7 @@ const BILLZ_DATA = {
               "rating_pct": 93.6,
               "rated": 47,
               "sla_pct": 95.4,
-              "cost": 4074245
+              "cost": 3122693
             },
             {
               "name": "Робия А.",
@@ -17343,7 +17343,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 15,
               "sla_pct": 73.1,
-              "cost": 3363965
+              "cost": 2578301
             },
             {
               "name": "Иззатбек",
@@ -17353,7 +17353,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 6,
               "sla_pct": 94.5,
-              "cost": 1864485
+              "cost": 1429029
             },
             {
               "name": "Шохина",
@@ -17363,7 +17363,7 @@ const BILLZ_DATA = {
               "rating_pct": 95.8,
               "rated": 24,
               "sla_pct": 99.4,
-              "cost": 1815160
+              "cost": 1391224
             },
             {
               "name": "Нурлан",
@@ -17373,7 +17373,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 2,
               "sla_pct": 96.4,
-              "cost": 276220
+              "cost": 211708
             },
             {
               "name": "Камолиддин",
@@ -17383,7 +17383,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 3,
               "sla_pct": 78.9,
-              "cost": 197300
+              "cost": 151220
             }
           ],
           "lcr": 7.1
@@ -17397,7 +17397,7 @@ const BILLZ_DATA = {
             "avg_close": 16.67,
             "rating_pct": 93.1,
             "rated": 180,
-            "cost": 14501550,
+            "cost": 11114670,
             "close_rate": 99.5,
             "burnout_level": "high",
             "burnout_color": "#EF4444",
@@ -17413,7 +17413,7 @@ const BILLZ_DATA = {
             "avg_close": 46.75,
             "rating_pct": 90.3,
             "rated": 124,
-            "cost": 12143815,
+            "cost": 9307591,
             "close_rate": 99.5,
             "burnout_level": "high",
             "burnout_color": "#EF4444",
@@ -17429,7 +17429,7 @@ const BILLZ_DATA = {
             "avg_close": 13.68,
             "rating_pct": 95.2,
             "rated": 115,
-            "cost": 11068530,
+            "cost": 8483442,
             "close_rate": 99.5,
             "burnout_level": "high",
             "burnout_color": "#EF4444",
@@ -17445,7 +17445,7 @@ const BILLZ_DATA = {
             "avg_close": 27.15,
             "rating_pct": 87.0,
             "rated": 100,
-            "cost": 10595010,
+            "cost": 8120514,
             "close_rate": 99.5,
             "burnout_level": "high",
             "burnout_color": "#EF4444",
@@ -17461,7 +17461,7 @@ const BILLZ_DATA = {
             "avg_close": 18.53,
             "rating_pct": 100.0,
             "rated": 42,
-            "cost": 10585145,
+            "cost": 8112953,
             "close_rate": 99.5,
             "burnout_level": "high",
             "burnout_color": "#EF4444",
@@ -17477,7 +17477,7 @@ const BILLZ_DATA = {
             "avg_close": 44.65,
             "rating_pct": 89.7,
             "rated": 68,
-            "cost": 10358250,
+            "cost": 7939050,
             "close_rate": 99.5,
             "burnout_level": "high",
             "burnout_color": "#EF4444",
@@ -17493,7 +17493,7 @@ const BILLZ_DATA = {
             "avg_close": 28.4,
             "rating_pct": 88.4,
             "rated": 60,
-            "cost": 9855135,
+            "cost": 7553439,
             "close_rate": 99.5,
             "burnout_level": "mid",
             "burnout_color": "#F59E0B",
@@ -17509,7 +17509,7 @@ const BILLZ_DATA = {
             "avg_close": 24.05,
             "rating_pct": 80.4,
             "rated": 52,
-            "cost": 9835405,
+            "cost": 7538317,
             "close_rate": 99.5,
             "burnout_level": "mid",
             "burnout_color": "#F59E0B",
@@ -17525,7 +17525,7 @@ const BILLZ_DATA = {
             "avg_close": 54.0,
             "rating_pct": 97.7,
             "rated": 44,
-            "cost": 9006745,
+            "cost": 6903193,
             "close_rate": 99.5,
             "burnout_level": "mid",
             "burnout_color": "#F59E0B",
@@ -17541,7 +17541,7 @@ const BILLZ_DATA = {
             "avg_close": 22.67,
             "rating_pct": 89.5,
             "rated": 38,
-            "cost": 6145895,
+            "cost": 4710503,
             "close_rate": 99.5,
             "burnout_level": "norm",
             "burnout_color": "#10B981",
@@ -17557,7 +17557,7 @@ const BILLZ_DATA = {
             "avg_close": 177.0,
             "rating_pct": 100.0,
             "rated": 18,
-            "cost": 3363965,
+            "cost": 2578301,
             "close_rate": 99.5,
             "burnout_level": "norm",
             "burnout_color": "#10B981",
@@ -17573,7 +17573,7 @@ const BILLZ_DATA = {
             "avg_close": 14.2,
             "rating_pct": 100.0,
             "rated": 11,
-            "cost": 1489615,
+            "cost": 1141711,
             "close_rate": 99.5,
             "burnout_level": "norm",
             "burnout_color": "#10B981",
@@ -17589,7 +17589,7 @@ const BILLZ_DATA = {
             "avg_close": 6.42,
             "rating_pct": 100.0,
             "rated": 2,
-            "cost": 276220,
+            "cost": 211708,
             "close_rate": 99.5,
             "burnout_level": "norm",
             "burnout_color": "#10B981",
@@ -17604,105 +17604,105 @@ const BILLZ_DATA = {
             "tickets": 889,
             "desired": 305,
             "undesired": 515,
-            "cost": 8769985
+            "cost": 6721729
           },
           {
             "name": "Учётная запись - Помощь со входом в аккаунт",
             "tickets": 494,
             "desired": 155,
             "undesired": 320,
-            "cost": 4873310
+            "cost": 3735134
           },
           {
             "name": "Оборудование - Установка/Настройка/Удаление принтера",
             "tickets": 427,
             "desired": 301,
             "undesired": 119,
-            "cost": 4212355
+            "cost": 3228547
           },
           {
             "name": "Документооборот - Создание ссылки для оплаты",
             "tickets": 395,
             "desired": 97,
             "undesired": 295,
-            "cost": 3896675
+            "cost": 2756195
           },
           {
             "name": "Учётная запись - Блокировка/Разблокировка аккаунта",
             "tickets": 294,
             "desired": 117,
             "undesired": 164,
-            "cost": 2900310
+            "cost": 2222934
           },
           {
             "name": "Вопрос не по программе",
             "tickets": 236,
             "desired": 78,
             "undesired": 148,
-            "cost": 2328140
+            "cost": 1784396
           },
           {
             "name": "Каталог — изменение свойств товара",
             "tickets": 227,
             "desired": 97,
             "undesired": 117,
-            "cost": 2239355
+            "cost": 1716347
           },
           {
             "name": "Кассовые смены — Открытие/Закрытие смен",
             "tickets": 214,
             "desired": 67,
             "undesired": 147,
-            "cost": 2111110
+            "cost": 1618054
           },
           {
             "name": "Каталог — настройка печати ценника",
             "tickets": 181,
             "desired": 102,
             "undesired": 78,
-            "cost": 1785565
+            "cost": 1368541
           },
           {
             "name": "Управление - Создание/Редактирвоание/Удаление роли",
             "tickets": 175,
             "desired": 105,
             "undesired": 70,
-            "cost": 1726375
+            "cost": 1323175
           },
           {
             "name": "Учётная запись - Создание магазина",
             "tickets": 147,
             "desired": 89,
             "undesired": 54,
-            "cost": 1450155
+            "cost": 1111467
           },
           {
             "name": "Новая продажа - Не удаётся сделать продажу",
             "tickets": 127,
             "desired": 65,
             "undesired": 62,
-            "cost": 1252855
+            "cost": 960247
           },
           {
             "name": "Управление - Создание/Редактирвоание/Удаление сотрудника",
             "tickets": 125,
             "desired": 74,
             "undesired": 51,
-            "cost": 1233125
+            "cost": 945125
           },
           {
             "name": "Импорт — импорт товаров через Excel",
             "tickets": 119,
             "desired": 74,
             "undesired": 45,
-            "cost": 1173935
+            "cost": 899759
           },
           {
             "name": "Оборудование - Установка Anydesk/BILLZ Desktop/Программы компьютера и тд.",
             "tickets": 117,
             "desired": 70,
             "undesired": 46,
-            "cost": 1154205
+            "cost": 884637
           }
         ],
         "top_companies": [
@@ -17711,7 +17711,7 @@ const BILLZ_DATA = {
             "tickets": 1965,
             "desired": 763,
             "undesired": 1036,
-            "cost": 19384725,
+            "cost": 14857365,
             "top_labels": [
               {
                 "label": "Документооборот - Создание ссылки для оплаты",
@@ -17732,7 +17732,7 @@ const BILLZ_DATA = {
             "tickets": 147,
             "desired": 69,
             "undesired": 75,
-            "cost": 1450155,
+            "cost": 1111467,
             "top_labels": [
               {
                 "label": "Маркетинг - Работа с Сертификатом/Ваучером",
@@ -17753,7 +17753,7 @@ const BILLZ_DATA = {
             "tickets": 121,
             "desired": 27,
             "undesired": 93,
-            "cost": 1193665,
+            "cost": 914881,
             "top_labels": [
               {
                 "label": "Кассовые смены — Открытие/Закрытие смен",
@@ -17774,7 +17774,7 @@ const BILLZ_DATA = {
             "tickets": 72,
             "desired": 35,
             "undesired": 34,
-            "cost": 710280,
+            "cost": 544392,
             "top_labels": [
               {
                 "label": "Оборудование - Установка Anydesk/BILLZ Desktop/Программы компьютера и тд.",
@@ -17795,7 +17795,7 @@ const BILLZ_DATA = {
             "tickets": 71,
             "desired": 29,
             "undesired": 42,
-            "cost": 700415,
+            "cost": 536831,
             "top_labels": [
               {
                 "label": "Desktop - Ошибка синхронизации",
@@ -17816,7 +17816,7 @@ const BILLZ_DATA = {
             "tickets": 65,
             "desired": 12,
             "undesired": 53,
-            "cost": 641225,
+            "cost": 491465,
             "top_labels": [
               {
                 "label": "Все продажи - Удаление/Редактирование продажи",
@@ -17837,7 +17837,7 @@ const BILLZ_DATA = {
             "tickets": 52,
             "desired": 31,
             "undesired": 20,
-            "cost": 512980,
+            "cost": 393172,
             "top_labels": [
               {
                 "label": "Desktop - Ошибка синхронизации",
@@ -17858,7 +17858,7 @@ const BILLZ_DATA = {
             "tickets": 49,
             "desired": 16,
             "undesired": 31,
-            "cost": 483385,
+            "cost": 370489,
             "top_labels": [
               {
                 "label": "Учётная запись - Помощь со входом в аккаунт",
@@ -17879,7 +17879,7 @@ const BILLZ_DATA = {
             "tickets": 43,
             "desired": 18,
             "undesired": 25,
-            "cost": 424195,
+            "cost": 325123,
             "top_labels": [
               {
                 "label": "Массовый сбой BILLZ",
@@ -17900,7 +17900,7 @@ const BILLZ_DATA = {
             "tickets": 38,
             "desired": 21,
             "undesired": 14,
-            "cost": 374870,
+            "cost": 287318,
             "top_labels": [
               {
                 "label": "Сайт/Бот - Настройка/Удаление/Редактирование функций, Баг (реквест)",
@@ -17923,7 +17923,7 @@ const BILLZ_DATA = {
         "users": 36963,
         "tpc": 2.79,
         "tpu": 0.3139,
-        "cpt": 9865,
+        "cpt": 7561,
         "newcomers": "Уволены: Шохинабону, Нурлан. Алишерова переведена в КС. Итого: 11 операторов.",
         "csat_pct": 94.6,
         "team_context": "Критический дефицит: 11 операторов, 7-8 в смене. Пиковый час 17:00-22:00 не перекрыт.",
@@ -18036,7 +18036,7 @@ const BILLZ_DATA = {
           "lcr": 0,
           "csat_pct": 95.7,
           "csat_rated": 164,
-          "cost": 23893030,
+          "cost": 18312742,
           "operators": [
             {
               "name": "Атабек",
@@ -18046,7 +18046,7 @@ const BILLZ_DATA = {
               "rating_pct": 87.5,
               "rated": 16,
               "sla_pct": 92.5,
-              "cost": 2476115
+              "cost": 1897811
             },
             {
               "name": "Робия А.",
@@ -18056,7 +18056,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 11,
               "sla_pct": 90.6,
-              "cost": 2476115
+              "cost": 1897811
             },
             {
               "name": "Анасхон",
@@ -18066,7 +18066,7 @@ const BILLZ_DATA = {
               "rating_pct": 92.9,
               "rated": 14,
               "sla_pct": 97.1,
-              "cost": 2416925
+              "cost": 1852445
             },
             {
               "name": "Нурилло",
@@ -18076,7 +18076,7 @@ const BILLZ_DATA = {
               "rating_pct": 92.9,
               "rated": 14,
               "sla_pct": 95.5,
-              "cost": 2377465
+              "cost": 1822201
             },
             {
               "name": "Алиёр",
@@ -18086,7 +18086,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 13,
               "sla_pct": 93.0,
-              "cost": 2061785
+              "cost": 1580249
             },
             {
               "name": "Иззатбек",
@@ -18096,7 +18096,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 6,
               "sla_pct": 93.6,
-              "cost": 1973000
+              "cost": 1512200
             },
             {
               "name": "Тожмухаммад",
@@ -18106,7 +18106,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 11,
               "sla_pct": 90.6,
-              "cost": 1933540
+              "cost": 1481956
             },
             {
               "name": "Сардор Б.",
@@ -18116,7 +18116,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 7,
               "sla_pct": 85.9,
-              "cost": 1913810
+              "cost": 1466834
             },
             {
               "name": "Робия Р.",
@@ -18126,7 +18126,7 @@ const BILLZ_DATA = {
               "rating_pct": 93.1,
               "rated": 29,
               "sla_pct": 91.4,
-              "cost": 1775700
+              "cost": 1360980
             },
             {
               "name": "Ардак",
@@ -18136,7 +18136,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 8,
               "sla_pct": 91.0,
-              "cost": 1706645
+              "cost": 1308053
             },
             {
               "name": "Шохина",
@@ -18146,7 +18146,7 @@ const BILLZ_DATA = {
               "rating_pct": 95.2,
               "rated": 21,
               "sla_pct": 97.8,
-              "cost": 1647455
+              "cost": 1262687
             },
             {
               "name": "Авазбек",
@@ -18156,7 +18156,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 13,
               "sla_pct": 93.3,
-              "cost": 1075285
+              "cost": 824149
             },
             {
               "name": "Дильшод",
@@ -18166,7 +18166,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 1,
               "sla_pct": 80.0,
-              "cost": 49325
+              "cost": 37805
             },
             {
               "name": "Азизбек",
@@ -18176,7 +18176,7 @@ const BILLZ_DATA = {
               "rating_pct": 0.0,
               "rated": 0,
               "sla_pct": 0.0,
-              "cost": 9865
+              "cost": 7561
             }
           ],
           "top_labels": [
@@ -18185,56 +18185,56 @@ const BILLZ_DATA = {
               "tickets": 206,
               "desired": 78,
               "undesired": 125,
-              "cost": 2032190
+              "cost": 1557566
             },
             {
               "name": "Учётная запись - Помощь со входом в аккаунт",
               "tickets": 127,
               "desired": 34,
               "undesired": 92,
-              "cost": 1252855
+              "cost": 960247
             },
             {
               "name": "Документооборот - Создание ссылки для оплаты",
               "tickets": 91,
               "desired": 29,
               "undesired": 60,
-              "cost": 897715
+              "cost": 688051
             },
             {
               "name": "Оборудование - Установка/Настройка/Удаление принтера",
               "tickets": 59,
               "desired": 42,
               "undesired": 17,
-              "cost": 582035
+              "cost": 446099
             },
             {
               "name": "Массовый сбой BILLZ",
               "tickets": 57,
               "desired": 14,
               "undesired": 43,
-              "cost": 562305
+              "cost": 430977
             },
             {
               "name": "Вопрос не по программе",
               "tickets": 50,
               "desired": 18,
               "undesired": 32,
-              "cost": 493250
+              "cost": 378050
             },
             {
               "name": "Кассовые смены — Открытие/Закрытие смен",
               "tickets": 49,
               "desired": 7,
               "undesired": 42,
-              "cost": 483385
+              "cost": 370489
             },
             {
               "name": "Каталог — изменение свойств товара",
               "tickets": 41,
               "desired": 17,
               "undesired": 22,
-              "cost": 404465
+              "cost": 310001
             }
           ],
           "top_companies": [
@@ -18243,7 +18243,7 @@ const BILLZ_DATA = {
               "tickets": 354,
               "desired": 142,
               "undesired": 186,
-              "cost": 3492210,
+              "cost": 2676594,
               "top_labels": [
                 {
                   "label": "Документооборот - Создание ссылки для оплаты",
@@ -18264,7 +18264,7 @@ const BILLZ_DATA = {
               "tickets": 35,
               "desired": 14,
               "undesired": 20,
-              "cost": 345275,
+              "cost": 264635,
               "top_labels": [
                 {
                   "label": "Маркетинг - Работа с Сертификатом/Ваучером",
@@ -18285,7 +18285,7 @@ const BILLZ_DATA = {
               "tickets": 29,
               "desired": 3,
               "undesired": 26,
-              "cost": 286085,
+              "cost": 219269,
               "top_labels": [
                 {
                   "label": "Кассовые смены — Открытие/Закрытие смен",
@@ -18306,7 +18306,7 @@ const BILLZ_DATA = {
               "tickets": 28,
               "desired": 14,
               "undesired": 12,
-              "cost": 276220,
+              "cost": 211708,
               "top_labels": [
                 {
                   "label": "Оборудование - Установка Anydesk/BILLZ Desktop/Программы компьютера и тд.",
@@ -18327,7 +18327,7 @@ const BILLZ_DATA = {
               "tickets": 18,
               "desired": 11,
               "undesired": 7,
-              "cost": 177570,
+              "cost": 136098,
               "top_labels": [
                 {
                   "label": "Кассовые смены — Открытие/Закрытие смен",
@@ -18363,7 +18363,7 @@ const BILLZ_DATA = {
           "lcr": 0,
           "csat_pct": 95.2,
           "csat_rated": 189,
-          "cost": 28292820,
+          "cost": 21684948,
           "operators": [
             {
               "name": "Анасхон",
@@ -18373,7 +18373,7 @@ const BILLZ_DATA = {
               "rating_pct": 97.3,
               "rated": 37,
               "sla_pct": 97.1,
-              "cost": 4360330
+              "cost": 3341962
             },
             {
               "name": "Робия Р.",
@@ -18383,7 +18383,7 @@ const BILLZ_DATA = {
               "rating_pct": 91.7,
               "rated": 36,
               "sla_pct": 91.4,
-              "cost": 4015055
+              "cost": 3077327
             },
             {
               "name": "Нурилло",
@@ -18393,7 +18393,7 @@ const BILLZ_DATA = {
               "rating_pct": 94.4,
               "rated": 18,
               "sla_pct": 95.5,
-              "cost": 3117340
+              "cost": 2389276
             },
             {
               "name": "Алиёр",
@@ -18403,7 +18403,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 14,
               "sla_pct": 93.0,
-              "cost": 3048285
+              "cost": 2336349
             },
             {
               "name": "Ардак",
@@ -18413,7 +18413,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 10,
               "sla_pct": 91.0,
-              "cost": 2515575
+              "cost": 1928055
             },
             {
               "name": "Атабек",
@@ -18423,7 +18423,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 10,
               "sla_pct": 92.5,
-              "cost": 2407060
+              "cost": 1844884
             },
             {
               "name": "Тожмухаммад",
@@ -18433,7 +18433,7 @@ const BILLZ_DATA = {
               "rating_pct": 90.9,
               "rated": 11,
               "sla_pct": 90.6,
-              "cost": 2387330
+              "cost": 1829762
             },
             {
               "name": "Авазбек",
@@ -18443,7 +18443,7 @@ const BILLZ_DATA = {
               "rating_pct": 91.2,
               "rated": 34,
               "sla_pct": 93.3,
-              "cost": 2199895
+              "cost": 1686103
             },
             {
               "name": "Сардор Б.",
@@ -18453,7 +18453,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 7,
               "sla_pct": 85.9,
-              "cost": 2130840
+              "cost": 1633176
             },
             {
               "name": "Робия А.",
@@ -18463,7 +18463,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 4,
               "sla_pct": 90.6,
-              "cost": 907580
+              "cost": 695612
             },
             {
               "name": "Дильшод",
@@ -18473,7 +18473,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 2,
               "sla_pct": 46.7,
-              "cost": 660955
+              "cost": 506587
             },
             {
               "name": "Шохина",
@@ -18483,7 +18483,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 3,
               "sla_pct": 97.8,
-              "cost": 325545
+              "cost": 249513
             },
             {
               "name": "Нурлан",
@@ -18493,7 +18493,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 2,
               "sla_pct": 85.7,
-              "cost": 147975
+              "cost": 113415
             },
             {
               "name": "Камолиддин",
@@ -18503,7 +18503,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 1,
               "sla_pct": 91.8,
-              "cost": 69055
+              "cost": 52927
             }
           ],
           "top_labels": [
@@ -18512,56 +18512,56 @@ const BILLZ_DATA = {
               "tickets": 423,
               "desired": 119,
               "undesired": 255,
-              "cost": 4172895
+              "cost": 3198303
             },
             {
               "name": "Документооборот - Создание ссылки для оплаты",
               "tickets": 150,
               "desired": 35,
               "undesired": 115,
-              "cost": 1479750
+              "cost": 1134150
             },
             {
               "name": "Оборудование - Установка/Настройка/Удаление принтера",
               "tickets": 109,
               "desired": 84,
               "undesired": 22,
-              "cost": 1075285
+              "cost": 824149
             },
             {
               "name": "Учётная запись - Блокировка/Разблокировка аккаунта",
               "tickets": 75,
               "desired": 24,
               "undesired": 50,
-              "cost": 739875
+              "cost": 567075
             },
             {
               "name": "Учётная запись - Помощь со входом в аккаунт",
               "tickets": 71,
               "desired": 17,
               "undesired": 54,
-              "cost": 700415
+              "cost": 536831
             },
             {
               "name": "Каталог — изменение свойств товара",
               "tickets": 65,
               "desired": 26,
               "undesired": 33,
-              "cost": 641225
+              "cost": 491465
             },
             {
               "name": "Кассовые смены — Открытие/Закрытие смен",
               "tickets": 53,
               "desired": 27,
               "undesired": 26,
-              "cost": 522845
+              "cost": 400733
             },
             {
               "name": "Вопрос не по программе",
               "tickets": 41,
               "desired": 9,
               "undesired": 28,
-              "cost": 404465
+              "cost": 310001
             }
           ],
           "top_companies": [
@@ -18570,7 +18570,7 @@ const BILLZ_DATA = {
               "tickets": 479,
               "desired": 177,
               "undesired": 249,
-              "cost": 4725335,
+              "cost": 3621719,
               "top_labels": [
                 {
                   "label": "Документооборот - Создание ссылки для оплаты",
@@ -18591,7 +18591,7 @@ const BILLZ_DATA = {
               "tickets": 31,
               "desired": 12,
               "undesired": 19,
-              "cost": 305815,
+              "cost": 234391,
               "top_labels": [
                 {
                   "label": "Кассовые смены — Открытие/Закрытие смен",
@@ -18612,7 +18612,7 @@ const BILLZ_DATA = {
               "tickets": 29,
               "desired": 12,
               "undesired": 16,
-              "cost": 286085,
+              "cost": 219269,
               "top_labels": [
                 {
                   "label": "Кассовые смены — Открытие/Закрытие смен",
@@ -18633,7 +18633,7 @@ const BILLZ_DATA = {
               "tickets": 27,
               "desired": 10,
               "undesired": 17,
-              "cost": 266355,
+              "cost": 204147,
               "top_labels": [
                 {
                   "label": "Desktop - Ошибка синхронизации",
@@ -18654,7 +18654,7 @@ const BILLZ_DATA = {
               "tickets": 26,
               "desired": 14,
               "undesired": 11,
-              "cost": 256490,
+              "cost": 196586,
               "top_labels": [
                 {
                   "label": "Баг (реквест), Desktop - Ошибка синхронизации",
@@ -18690,7 +18690,7 @@ const BILLZ_DATA = {
           "lcr": 7.8,
           "csat_pct": 95.2,
           "csat_rated": 165,
-          "cost": 26379010,
+          "cost": 20218114,
           "operators": [
             {
               "name": "Анасхон",
@@ -18700,7 +18700,7 @@ const BILLZ_DATA = {
               "rating_pct": 95.5,
               "rated": 22,
               "sla_pct": 97.1,
-              "cost": 3669780
+              "cost": 2812692
             },
             {
               "name": "Атабек",
@@ -18710,7 +18710,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 16,
               "sla_pct": 92.5,
-              "cost": 3117340
+              "cost": 2389276
             },
             {
               "name": "Алиёр",
@@ -18720,7 +18720,7 @@ const BILLZ_DATA = {
               "rating_pct": 95.2,
               "rated": 21,
               "sla_pct": 93.0,
-              "cost": 2989095
+              "cost": 2290983
             },
             {
               "name": "Нурилло",
@@ -18730,7 +18730,7 @@ const BILLZ_DATA = {
               "rating_pct": 88.2,
               "rated": 17,
               "sla_pct": 95.5,
-              "cost": 2910175
+              "cost": 2230495
             },
             {
               "name": "Авазбек",
@@ -18740,7 +18740,7 @@ const BILLZ_DATA = {
               "rating_pct": 94.1,
               "rated": 17,
               "sla_pct": 93.3,
-              "cost": 2762200
+              "cost": 2117080
             },
             {
               "name": "Сардор Б.",
@@ -18750,7 +18750,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 12,
               "sla_pct": 85.9,
-              "cost": 2604360
+              "cost": 1996104
             },
             {
               "name": "Тожмухаммад",
@@ -18760,7 +18760,7 @@ const BILLZ_DATA = {
               "rating_pct": 88.2,
               "rated": 17,
               "sla_pct": 90.6,
-              "cost": 2525440
+              "cost": 1935616
             },
             {
               "name": "Робия Р.",
@@ -18770,7 +18770,7 @@ const BILLZ_DATA = {
               "rating_pct": 95.7,
               "rated": 23,
               "sla_pct": 91.4,
-              "cost": 2298545
+              "cost": 1761713
             },
             {
               "name": "Ардак",
@@ -18780,7 +18780,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 10,
               "sla_pct": 91.0,
-              "cost": 2209760
+              "cost": 1693664
             },
             {
               "name": "Камолиддин",
@@ -18790,7 +18790,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 6,
               "sla_pct": 91.8,
-              "cost": 621495
+              "cost": 476343
             },
             {
               "name": "Дильшод",
@@ -18800,7 +18800,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 4,
               "sla_pct": 19.0,
-              "cost": 542575
+              "cost": 415855
             },
             {
               "name": "Нурлан",
@@ -18810,7 +18810,7 @@ const BILLZ_DATA = {
               "rating_pct": 0.0,
               "rated": 0,
               "sla_pct": 85.7,
-              "cost": 128245
+              "cost": 98293
             }
           ],
           "top_labels": [
@@ -18819,56 +18819,56 @@ const BILLZ_DATA = {
               "tickets": 178,
               "desired": 64,
               "undesired": 98,
-              "cost": 1755970
+              "cost": 1345858
             },
             {
               "name": "Учётная запись - Помощь со входом в аккаунт",
               "tickets": 168,
               "desired": 41,
               "undesired": 109,
-              "cost": 1657320
+              "cost": 1270248
             },
             {
               "name": "Оборудование - Установка/Настройка/Удаление принтера",
               "tickets": 114,
               "desired": 70,
               "undesired": 41,
-              "cost": 1124610
+              "cost": 861954
             },
             {
               "name": "Учётная запись - Блокировка/Разблокировка аккаунта",
               "tickets": 90,
               "desired": 34,
               "undesired": 50,
-              "cost": 887850
+              "cost": 680490
             },
             {
               "name": "Документооборот - Создание ссылки для оплаты",
               "tickets": 84,
               "desired": 9,
               "undesired": 74,
-              "cost": 828660
+              "cost": 635124
             },
             {
               "name": "Вопрос не по программе",
               "tickets": 51,
               "desired": 7,
               "undesired": 38,
-              "cost": 503115
+              "cost": 385611
             },
             {
               "name": "Управление - Создание/Редактирвоание/Удаление роли",
               "tickets": 50,
               "desired": 33,
               "undesired": 17,
-              "cost": 493250
+              "cost": 378050
             },
             {
               "name": "Каталог — изменение свойств товара",
               "tickets": 49,
               "desired": 23,
               "undesired": 22,
-              "cost": 483385
+              "cost": 370489
             }
           ],
           "top_companies": [
@@ -18877,7 +18877,7 @@ const BILLZ_DATA = {
               "tickets": 482,
               "desired": 148,
               "undesired": 284,
-              "cost": 4754930,
+              "cost": 3644402,
               "top_labels": [
                 {
                   "label": "Учётная запись - Блокировка/Разблокировка аккаунта",
@@ -18898,7 +18898,7 @@ const BILLZ_DATA = {
               "tickets": 38,
               "desired": 21,
               "undesired": 16,
-              "cost": 374870,
+              "cost": 287318,
               "top_labels": [
                 {
                   "label": "Маркетинг - Работа с Сертификатом/Ваучером",
@@ -18919,7 +18919,7 @@ const BILLZ_DATA = {
               "tickets": 17,
               "desired": 6,
               "undesired": 4,
-              "cost": 167705,
+              "cost": 128537,
               "top_labels": [
                 {
                   "label": "Оборудование - Установка/Настройка/Удаление принтера",
@@ -18940,7 +18940,7 @@ const BILLZ_DATA = {
               "tickets": 14,
               "desired": 8,
               "undesired": 6,
-              "cost": 138110,
+              "cost": 105854,
               "top_labels": [
                 {
                   "label": "Кассовые смены — Открытие/Закрытие смен",
@@ -18961,7 +18961,7 @@ const BILLZ_DATA = {
               "tickets": 14,
               "desired": 8,
               "undesired": 5,
-              "cost": 138110,
+              "cost": 105854,
               "top_labels": [
                 {
                   "label": "Desktop - Ошибка синхронизации",
@@ -18997,7 +18997,7 @@ const BILLZ_DATA = {
           "lcr": 6.0,
           "csat_pct": 94.9,
           "csat_rated": 117,
-          "cost": 22344225,
+          "cost": 17125665,
           "operators": [
             {
               "name": "Иззатбек",
@@ -19007,7 +19007,7 @@ const BILLZ_DATA = {
               "rating_pct": 83.3,
               "rated": 6,
               "sla_pct": 93.6,
-              "cost": 3048285
+              "cost": 2336349
             },
             {
               "name": "Анасхон",
@@ -19017,7 +19017,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 16,
               "sla_pct": 97.1,
-              "cost": 2781930
+              "cost": 2132202
             },
             {
               "name": "Атабек",
@@ -19027,7 +19027,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 12,
               "sla_pct": 92.5,
-              "cost": 2545170
+              "cost": 1950738
             },
             {
               "name": "Авазбек",
@@ -19037,7 +19037,7 @@ const BILLZ_DATA = {
               "rating_pct": 88.9,
               "rated": 18,
               "sla_pct": 93.3,
-              "cost": 2436655
+              "cost": 1867567
             },
             {
               "name": "Сардор Б.",
@@ -19047,7 +19047,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 10,
               "sla_pct": 85.9,
-              "cost": 2180165
+              "cost": 1670981
             },
             {
               "name": "Алиёр",
@@ -19057,7 +19057,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 5,
               "sla_pct": 93.0,
-              "cost": 1903945
+              "cost": 1459273
             },
             {
               "name": "Тожмухаммад",
@@ -19067,7 +19067,7 @@ const BILLZ_DATA = {
               "rating_pct": 70.0,
               "rated": 10,
               "sla_pct": 90.6,
-              "cost": 1874350
+              "cost": 1436590
             },
             {
               "name": "Нурилло",
@@ -19077,7 +19077,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 9,
               "sla_pct": 95.5,
-              "cost": 1746105
+              "cost": 1338297
             },
             {
               "name": "Ардак",
@@ -19087,7 +19087,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 10,
               "sla_pct": 91.0,
-              "cost": 1598130
+              "cost": 1224882
             },
             {
               "name": "Робия Р.",
@@ -19097,7 +19097,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 14,
               "sla_pct": 91.4,
-              "cost": 1558670
+              "cost": 1194638
             },
             {
               "name": "Камолиддин",
@@ -19107,7 +19107,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 4,
               "sla_pct": 91.8,
-              "cost": 384735
+              "cost": 294879
             },
             {
               "name": "Дильшод",
@@ -19117,7 +19117,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 3,
               "sla_pct": 70.0,
-              "cost": 276220
+              "cost": 211708
             },
             {
               "name": "Азизбек",
@@ -19127,7 +19127,7 @@ const BILLZ_DATA = {
               "rating_pct": 0.0,
               "rated": 0,
               "sla_pct": 0.0,
-              "cost": 9865
+              "cost": 7561
             }
           ],
           "top_labels": [
@@ -19136,56 +19136,56 @@ const BILLZ_DATA = {
               "tickets": 94,
               "desired": 69,
               "undesired": 25,
-              "cost": 927310
+              "cost": 710734
             },
             {
               "name": "Учётная запись - Помощь со входом в аккаунт",
               "tickets": 83,
               "desired": 39,
               "undesired": 44,
-              "cost": 818795
+              "cost": 627563
             },
             {
               "name": "Вопрос не по программе",
               "tickets": 69,
               "desired": 33,
               "undesired": 36,
-              "cost": 680685
+              "cost": 521709
             },
             {
               "name": "Каталог — настройка печати ценника",
               "tickets": 63,
               "desired": 41,
               "undesired": 22,
-              "cost": 621495
+              "cost": 476343
             },
             {
               "name": "Кассовые смены — Открытие/Закрытие смен",
               "tickets": 53,
               "desired": 11,
               "undesired": 42,
-              "cost": 522845
+              "cost": 400733
             },
             {
               "name": "Каталог — изменение свойств товара",
               "tickets": 49,
               "desired": 25,
               "undesired": 23,
-              "cost": 483385
+              "cost": 370489
             },
             {
               "name": "Учётная запись - Блокировка/Разблокировка аккаунта",
               "tickets": 45,
               "desired": 24,
               "undesired": 20,
-              "cost": 443925
+              "cost": 340245
             },
             {
               "name": "Документооборот - Оплата за тариф",
               "tickets": 42,
               "desired": 22,
               "undesired": 20,
-              "cost": 414330
+              "cost": 317562
             }
           ],
           "top_companies": [
@@ -19194,7 +19194,7 @@ const BILLZ_DATA = {
               "tickets": 385,
               "desired": 169,
               "undesired": 196,
-              "cost": 3798025,
+              "cost": 2910985,
               "top_labels": [
                 {
                   "label": "Учётная запись - Блокировка/Разблокировка аккаунта",
@@ -19215,7 +19215,7 @@ const BILLZ_DATA = {
               "tickets": 29,
               "desired": 5,
               "undesired": 24,
-              "cost": 286085,
+              "cost": 219269,
               "top_labels": [
                 {
                   "label": "Кассовые смены — Открытие/Закрытие смен",
@@ -19236,7 +19236,7 @@ const BILLZ_DATA = {
               "tickets": 28,
               "desired": 13,
               "undesired": 15,
-              "cost": 276220,
+              "cost": 211708,
               "top_labels": [
                 {
                   "label": "Маркетинг - Работа с Сертификатом/Ваучером",
@@ -19257,7 +19257,7 @@ const BILLZ_DATA = {
               "tickets": 23,
               "desired": 5,
               "undesired": 18,
-              "cost": 226895,
+              "cost": 173903,
               "top_labels": [
                 {
                   "label": "Все продажи - Удаление/Редактирование продажи",
@@ -19278,7 +19278,7 @@ const BILLZ_DATA = {
               "tickets": 16,
               "desired": 7,
               "undesired": 9,
-              "cost": 157840,
+              "cost": 120976,
               "top_labels": [
                 {
                   "label": "Долги клиентов - Просмотр статистики по долгам",
@@ -19318,7 +19318,7 @@ const BILLZ_DATA = {
           "csat_pct": 90.0,
           "csat_rated": 90,
           "repeat_pct": 5.8,
-          "cost": 13564375,
+          "cost": 10396375,
           "operators": [
             {
               "name": "Сардор Б.",
@@ -19328,7 +19328,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 6,
               "sla_pct": 85.9,
-              "cost": 1765835
+              "cost": 1353419
             },
             {
               "name": "Атабек",
@@ -19338,7 +19338,7 @@ const BILLZ_DATA = {
               "rating_pct": 88.2,
               "rated": 17,
               "sla_pct": 92.5,
-              "cost": 1716510
+              "cost": 1315614
             },
             {
               "name": "Авазбек",
@@ -19348,7 +19348,7 @@ const BILLZ_DATA = {
               "rating_pct": 86.7,
               "rated": 15,
               "sla_pct": 93.3,
-              "cost": 1519210
+              "cost": 1164394
             },
             {
               "name": "Анасхон",
@@ -19358,7 +19358,7 @@ const BILLZ_DATA = {
               "rating_pct": 92.3,
               "rated": 13,
               "sla_pct": 97.1,
-              "cost": 1499480
+              "cost": 1149272
             },
             {
               "name": "Иззатбек",
@@ -19368,7 +19368,7 @@ const BILLZ_DATA = {
               "rating_pct": 85.7,
               "rated": 7,
               "sla_pct": 93.6,
-              "cost": 1331775
+              "cost": 1020735
             },
             {
               "name": "Тожмухаммад",
@@ -19378,7 +19378,7 @@ const BILLZ_DATA = {
               "rating_pct": 50.0,
               "rated": 2,
               "sla_pct": 90.6,
-              "cost": 1223260
+              "cost": 937564
             },
             {
               "name": "Робия Р.",
@@ -19388,7 +19388,7 @@ const BILLZ_DATA = {
               "rating_pct": 90.0,
               "rated": 10,
               "sla_pct": 91.4,
-              "cost": 1154205
+              "cost": 884637
             },
             {
               "name": "Ардак",
@@ -19398,7 +19398,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 6,
               "sla_pct": 91.0,
-              "cost": 1144340
+              "cost": 877076
             },
             {
               "name": "Алиёр",
@@ -19408,7 +19408,7 @@ const BILLZ_DATA = {
               "rating_pct": 75.0,
               "rated": 4,
               "sla_pct": 93.0,
-              "cost": 1095015
+              "cost": 839271
             },
             {
               "name": "Нурилло",
@@ -19418,7 +19418,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 6,
               "sla_pct": 95.5,
-              "cost": 680685
+              "cost": 521709
             },
             {
               "name": "Камолиддин",
@@ -19428,7 +19428,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 4,
               "sla_pct": 91.8,
-              "cost": 414330
+              "cost": 317562
             },
             {
               "name": "Азизбек",
@@ -19438,7 +19438,7 @@ const BILLZ_DATA = {
               "rating_pct": 0.0,
               "rated": 0,
               "sla_pct": 0.0,
-              "cost": 9865
+              "cost": 7561
             },
             {
               "name": "Хуршид",
@@ -19448,7 +19448,7 @@ const BILLZ_DATA = {
               "rating_pct": 0.0,
               "rated": 0,
               "sla_pct": 0.0,
-              "cost": 9865
+              "cost": 7561
             }
           ],
           "top_labels": [
@@ -19457,56 +19457,56 @@ const BILLZ_DATA = {
               "tickets": 51,
               "desired": 36,
               "undesired": 14,
-              "cost": 503115
+              "cost": 385611
             },
             {
               "name": "Учётная запись - Блокировка/Разблокировка аккаунта",
               "tickets": 48,
               "desired": 23,
               "undesired": 24,
-              "cost": 473520
+              "cost": 362928
             },
             {
               "name": "Учётная запись - Помощь со входом в аккаунт",
               "tickets": 45,
               "desired": 24,
               "undesired": 21,
-              "cost": 443925
+              "cost": 340245
             },
             {
               "name": "Документооборот - Оплата за тариф",
               "tickets": 40,
               "desired": 22,
               "undesired": 17,
-              "cost": 394600
+              "cost": 302440
             },
             {
               "name": "Массовый сбой BILLZ",
               "tickets": 35,
               "desired": 1,
               "undesired": 34,
-              "cost": 345275
+              "cost": 264635
             },
             {
               "name": "Документооборот - Создание ссылки для оплаты",
               "tickets": 33,
               "desired": 9,
               "undesired": 24,
-              "cost": 325545
+              "cost": 249513
             },
             {
               "name": "Кассовые смены — Открытие/Закрытие смен",
               "tickets": 27,
               "desired": 8,
               "undesired": 19,
-              "cost": 266355
+              "cost": 204147
             },
             {
               "name": "Настройка - Создание/Редактирование/Удаление доп. точки",
               "tickets": 26,
               "desired": 21,
               "undesired": 5,
-              "cost": 256490
+              "cost": 196586
             }
           ],
           "top_companies": [
@@ -19515,7 +19515,7 @@ const BILLZ_DATA = {
               "tickets": 265,
               "desired": 127,
               "undesired": 121,
-              "cost": 2614225,
+              "cost": 2003665,
               "top_labels": [
                 {
                   "label": "Документооборот - Создание ссылки для оплаты",
@@ -19536,7 +19536,7 @@ const BILLZ_DATA = {
               "tickets": 18,
               "desired": 3,
               "undesired": 15,
-              "cost": 177570,
+              "cost": 136098,
               "top_labels": [
                 {
                   "label": "Кассовые смены — Открытие/Закрытие смен",
@@ -19553,7 +19553,7 @@ const BILLZ_DATA = {
               "tickets": 17,
               "desired": 9,
               "undesired": 8,
-              "cost": 167705,
+              "cost": 128537,
               "top_labels": [
                 {
                   "label": "Все продажи - Удаление/Редактирование продажи",
@@ -19574,7 +19574,7 @@ const BILLZ_DATA = {
               "tickets": 13,
               "desired": 10,
               "undesired": 3,
-              "cost": 128245,
+              "cost": 98293,
               "top_labels": [
                 {
                   "label": "Настройка - Создание/Редактирование/Удаление доп. точки",
@@ -19595,7 +19595,7 @@ const BILLZ_DATA = {
               "tickets": 10,
               "desired": 10,
               "undesired": 0,
-              "cost": 98650,
+              "cost": 75610,
               "top_labels": [
                 {
                   "label": "Инвентаризация — консультация по модулю (частичное обучение)",
@@ -19629,7 +19629,7 @@ const BILLZ_DATA = {
           "sla_pct": 83.0,
           "sla_not_met": 17.0,
           "avg_close_h": 0.04,
-          "cost": 5159395,
+          "cost": 3954403,
           "csat_pct": 97.2,
           "csat_rated": 36,
           "repeat_pct": 10.7,
@@ -19665,49 +19665,49 @@ const BILLZ_DATA = {
               "name": "Документооборот - Оплата за тариф",
               "tickets": 39,
               "undesired": 30,
-              "cost": 384735
+              "cost": 294879
             },
             {
               "name": "Массовый сбой BILLZ",
               "tickets": 35,
               "undesired": 26,
-              "cost": 345275
+              "cost": 264635
             },
             {
               "name": "Документооборот - Создание ссылки для оплаты",
               "tickets": 19,
               "undesired": 11,
-              "cost": 187435
+              "cost": 143659
             },
             {
               "name": "Вопрос не по программе",
               "tickets": 19,
               "undesired": 9,
-              "cost": 187435
+              "cost": 143659
             },
             {
               "name": "Каталог — изменение свойств товара",
               "tickets": 13,
               "undesired": 9,
-              "cost": 128245
+              "cost": 98293
             },
             {
               "name": "Оборудование - Установка/Настройка/Удаление принтера",
               "tickets": 12,
               "undesired": 4,
-              "cost": 118380
+              "cost": 90732
             },
             {
               "name": "Учётная запись - Блокировка/Разблокировка аккаунта",
               "tickets": 11,
               "undesired": 10,
-              "cost": 108515
+              "cost": 83171
             },
             {
               "name": "Управление - Создание/Редактирвоание/Удаление роли",
               "tickets": 10,
               "undesired": 7,
-              "cost": 98650
+              "cost": 75610
             }
           ],
           "operators": [
@@ -19719,7 +19719,7 @@ const BILLZ_DATA = {
               "rating_pct": 90.0,
               "rated": 10,
               "sla_pct": 92.5,
-              "cost": 858255
+              "cost": 657807
             },
             {
               "name": "Нурилло",
@@ -19729,7 +19729,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 4,
               "sla_pct": 96.2,
-              "cost": 700415
+              "cost": 536831
             },
             {
               "name": "Иззатбек",
@@ -19739,7 +19739,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 3,
               "sla_pct": 61.1,
-              "cost": 690550
+              "cost": 529270
             },
             {
               "name": "Атабек",
@@ -19749,7 +19749,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 1,
               "sla_pct": 95.0,
-              "cost": 690550
+              "cost": 529270
             },
             {
               "name": "Шохина",
@@ -19759,7 +19759,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 6,
               "sla_pct": 91.2,
-              "cost": 572170
+              "cost": 438538
             },
             {
               "name": "Алиёр",
@@ -19769,7 +19769,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 3,
               "sla_pct": 94.4,
-              "cost": 512980
+              "cost": 393172
             },
             {
               "name": "Робия А.",
@@ -19779,7 +19779,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 4,
               "sla_pct": 57.9,
-              "cost": 493250
+              "cost": 378050
             },
             {
               "name": "Тожмухаммад",
@@ -19789,7 +19789,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 1,
               "sla_pct": 63.6,
-              "cost": 434060
+              "cost": 332684
             },
             {
               "name": "Авазбек",
@@ -19799,7 +19799,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 4,
               "sla_pct": 52.6,
-              "cost": 197300
+              "cost": 151220
             },
             {
               "name": "Ардак",
@@ -19809,7 +19809,7 @@ const BILLZ_DATA = {
               "rating_pct": 0.0,
               "rated": 0,
               "sla_pct": 100.0,
-              "cost": 9865
+              "cost": 7561
             }
           ],
           "top_companies": [
@@ -19818,7 +19818,7 @@ const BILLZ_DATA = {
               "tickets": 80,
               "desired": 19,
               "undesired": 55,
-              "cost": 789200,
+              "cost": 604880,
               "top_labels": [
                 {
                   "label": "Документооборот - Создание ссылки для оплаты",
@@ -19839,7 +19839,7 @@ const BILLZ_DATA = {
               "tickets": 9,
               "desired": 3,
               "undesired": 5,
-              "cost": 88785,
+              "cost": 68049,
               "top_labels": [
                 {
                   "label": "Новая продажа - Не удаётся сделать продажу",
@@ -19860,7 +19860,7 @@ const BILLZ_DATA = {
               "tickets": 7,
               "desired": 3,
               "undesired": 4,
-              "cost": 69055,
+              "cost": 52927,
               "top_labels": [
                 {
                   "label": "Все продажи - Частичное обучение",
@@ -19881,7 +19881,7 @@ const BILLZ_DATA = {
               "tickets": 7,
               "desired": 4,
               "undesired": 3,
-              "cost": 69055,
+              "cost": 52927,
               "top_labels": [
                 {
                   "label": "Кассовые смены — Открытие/Закрытие смен",
@@ -19902,7 +19902,7 @@ const BILLZ_DATA = {
               "tickets": 6,
               "desired": 1,
               "undesired": 5,
-              "cost": 59190,
+              "cost": 45366,
               "top_labels": [
                 {
                   "label": "Кассовые смены — Открытие/Закрытие смен",
@@ -19944,7 +19944,7 @@ const BILLZ_DATA = {
           "sla_pct": 85.3,
           "sla_not_met": 14.7,
           "avg_close_h": 0.06,
-          "cost": 5258045,
+          "cost": 4030013,
           "csat_pct": 97.6,
           "csat_rated": 42,
           "repeat_pct": 7.7,
@@ -19982,49 +19982,49 @@ const BILLZ_DATA = {
               "name": "Документооборот - Оплата за тариф",
               "tickets": 72,
               "undesired": 34,
-              "cost": 710280
+              "cost": 544392
             },
             {
               "name": "Документооборот - Создание ссылки для оплаты",
               "tickets": 27,
               "undesired": 16,
-              "cost": 266355
+              "cost": 204147
             },
             {
               "name": "Вопрос не по программе",
               "tickets": 15,
               "undesired": 12,
-              "cost": 147975
+              "cost": 113415
             },
             {
               "name": "Массовый сбой BILLZ",
               "tickets": 14,
               "undesired": 9,
-              "cost": 138110
+              "cost": 105854
             },
             {
               "name": "Каталог — изменение свойств товара",
               "tickets": 13,
               "undesired": 5,
-              "cost": 128245
+              "cost": 98293
             },
             {
               "name": "Оборудование - Установка/Настройка/Удаление принтера",
               "tickets": 13,
               "undesired": 0,
-              "cost": 128245
+              "cost": 98293
             },
             {
               "name": "Документооборот - Консультация по сумме долга",
               "tickets": 12,
               "undesired": 4,
-              "cost": 118380
+              "cost": 90732
             },
             {
               "name": "Новая продажа - Не удаётся сделать продажу",
               "tickets": 10,
               "undesired": 5,
-              "cost": 98650
+              "cost": 75610
             }
           ],
           "operators": [
@@ -20036,7 +20036,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 3,
               "sla_pct": 96.4,
-              "cost": 818795
+              "cost": 627563
             },
             {
               "name": "Иззатбек",
@@ -20046,7 +20046,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 2,
               "sla_pct": 65.2,
-              "cost": 700415
+              "cost": 536831
             },
             {
               "name": "Ардак",
@@ -20056,7 +20056,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 3,
               "sla_pct": 73.9,
-              "cost": 670820
+              "cost": 514148
             },
             {
               "name": "Робия Р.",
@@ -20066,7 +20066,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 7,
               "sla_pct": 81.1,
-              "cost": 670820
+              "cost": 514148
             },
             {
               "name": "Алиёр",
@@ -20076,7 +20076,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 5,
               "sla_pct": 84.2,
-              "cost": 512980
+              "cost": 393172
             },
             {
               "name": "Сардор Б.",
@@ -20086,7 +20086,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 3,
               "sla_pct": 87.5,
-              "cost": 503115
+              "cost": 385611
             },
             {
               "name": "Нурилло",
@@ -20096,7 +20096,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 3,
               "sla_pct": 100.0,
-              "cost": 493250
+              "cost": 378050
             },
             {
               "name": "Авазбек",
@@ -20106,7 +20106,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 5,
               "sla_pct": 88.2,
-              "cost": 434060
+              "cost": 332684
             },
             {
               "name": "Шохина",
@@ -20116,7 +20116,7 @@ const BILLZ_DATA = {
               "rating_pct": 90.0,
               "rated": 10,
               "sla_pct": 92.1,
-              "cost": 414330
+              "cost": 317562
             },
             {
               "name": "Дильшод",
@@ -20126,7 +20126,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 1,
               "sla_pct": 100.0,
-              "cost": 39460
+              "cost": 30244
             }
           ],
           "top_companies": [
@@ -20135,7 +20135,7 @@ const BILLZ_DATA = {
               "tickets": 90,
               "desired": 49,
               "undesired": 32,
-              "cost": 887850,
+              "cost": 680490,
               "top_labels": [
                 {
                   "label": "Документооборот - Создание ссылки для оплаты",
@@ -20156,7 +20156,7 @@ const BILLZ_DATA = {
               "tickets": 9,
               "desired": 4,
               "undesired": 5,
-              "cost": 88785,
+              "cost": 68049,
               "top_labels": [
                 {
                   "label": "Новая продажа - Возврат/Обмен, Баг (реквест)",
@@ -20177,7 +20177,7 @@ const BILLZ_DATA = {
               "tickets": 5,
               "desired": 2,
               "undesired": 3,
-              "cost": 49325,
+              "cost": 37805,
               "top_labels": [
                 {
                   "label": "Отчёты - Разбор отчётов",
@@ -20198,7 +20198,7 @@ const BILLZ_DATA = {
               "tickets": 5,
               "desired": 2,
               "undesired": 3,
-              "cost": 49325,
+              "cost": 37805,
               "top_labels": [
                 {
                   "label": "Документооборот - Оплата за тариф",
@@ -20219,7 +20219,7 @@ const BILLZ_DATA = {
               "tickets": 5,
               "desired": 1,
               "undesired": 4,
-              "cost": 49325,
+              "cost": 37805,
               "top_labels": [
                 {
                   "label": "Массовый сбой BILLZ",
@@ -20261,7 +20261,7 @@ const BILLZ_DATA = {
           "sla_pct": 70.7,
           "sla_not_met": 29.3,
           "avg_close_h": 0.07,
-          "cost": 5623050,
+          "cost": 4309770,
           "csat_pct": 90.2,
           "csat_rated": 41,
           "repeat_pct": 4.2,
@@ -20299,49 +20299,49 @@ const BILLZ_DATA = {
               "name": "Учётная запись - Помощь со входом в аккаунт",
               "tickets": 76,
               "undesired": 57,
-              "cost": 749740
+              "cost": 574636
             },
             {
               "name": "Документооборот - Оплата за тариф",
               "tickets": 47,
               "undesired": 21,
-              "cost": 463655
+              "cost": 355367
             },
             {
               "name": "Документооборот - Создание ссылки для оплаты",
               "tickets": 11,
               "undesired": 7,
-              "cost": 108515
+              "cost": 83171
             },
             {
               "name": "Оборудование - Установка/Настройка/Удаление принтера",
               "tickets": 10,
               "undesired": 2,
-              "cost": 98650
+              "cost": 75610
             },
             {
               "name": "Импорт — импорт товаров через Excel",
               "tickets": 10,
               "undesired": 5,
-              "cost": 98650
+              "cost": 75610
             },
             {
               "name": "Массовый сбой BILLZ",
               "tickets": 8,
               "undesired": 8,
-              "cost": 78920
+              "cost": 60488
             },
             {
               "name": "Управление - Создание/Редактирвоание/Удаление сотрудника",
               "tickets": 7,
               "undesired": 3,
-              "cost": 69055
+              "cost": 52927
             },
             {
               "name": "Кассовые смены — Открытие/Закрытие смен",
               "tickets": 7,
               "undesired": 5,
-              "cost": 69055
+              "cost": 52927
             }
           ],
           "operators": [
@@ -20353,7 +20353,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 5,
               "sla_pct": 71.4,
-              "cost": 1025960
+              "cost": 786344
             },
             {
               "name": "Атабек",
@@ -20363,7 +20363,7 @@ const BILLZ_DATA = {
               "rating_pct": 77.8,
               "rated": 9,
               "sla_pct": 71.4,
-              "cost": 956905
+              "cost": 733417
             },
             {
               "name": "Иззатбек",
@@ -20373,7 +20373,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 1,
               "sla_pct": 78.9,
-              "cost": 582035
+              "cost": 446099
             },
             {
               "name": "Сардор Б.",
@@ -20383,7 +20383,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 2,
               "sla_pct": 27.3,
-              "cost": 582035
+              "cost": 446099
             },
             {
               "name": "Робия Р.",
@@ -20393,7 +20393,7 @@ const BILLZ_DATA = {
               "rating_pct": 83.3,
               "rated": 12,
               "sla_pct": 61.5,
-              "cost": 562305
+              "cost": 430977
             },
             {
               "name": "Робия А.",
@@ -20403,7 +20403,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 3,
               "sla_pct": 85.7,
-              "cost": 532710
+              "cost": 408294
             },
             {
               "name": "Алиёр",
@@ -20413,7 +20413,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 4,
               "sla_pct": 83.3,
-              "cost": 483385
+              "cost": 370489
             },
             {
               "name": "Авазбек",
@@ -20423,7 +20423,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 4,
               "sla_pct": 83.9,
-              "cost": 443925
+              "cost": 340245
             },
             {
               "name": "Тожмухаммад",
@@ -20433,7 +20433,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 1,
               "sla_pct": 63.6,
-              "cost": 414330
+              "cost": 317562
             },
             {
               "name": "Анасхон",
@@ -20443,7 +20443,7 @@ const BILLZ_DATA = {
               "rating_pct": 0.0,
               "rated": 0,
               "sla_pct": 0.0,
-              "cost": 9865
+              "cost": 7561
             },
             {
               "name": "Азизбек",
@@ -20453,7 +20453,7 @@ const BILLZ_DATA = {
               "rating_pct": 0.0,
               "rated": 0,
               "sla_pct": 0.0,
-              "cost": 9865
+              "cost": 7561
             },
             {
               "name": "Дильшод",
@@ -20463,7 +20463,7 @@ const BILLZ_DATA = {
               "rating_pct": 0.0,
               "rated": 0,
               "sla_pct": 0.0,
-              "cost": 9865
+              "cost": 7561
             },
             {
               "name": "Шохина",
@@ -20473,7 +20473,7 @@ const BILLZ_DATA = {
               "rating_pct": 0.0,
               "rated": 0,
               "sla_pct": 0.0,
-              "cost": 9865
+              "cost": 7561
             }
           ],
           "top_companies": [
@@ -20482,7 +20482,7 @@ const BILLZ_DATA = {
               "tickets": 69,
               "desired": 27,
               "undesired": 36,
-              "cost": 680685,
+              "cost": 521709,
               "top_labels": [
                 {
                   "label": "Документооборот - Создание ссылки для оплаты",
@@ -20503,7 +20503,7 @@ const BILLZ_DATA = {
               "tickets": 15,
               "desired": 9,
               "undesired": 4,
-              "cost": 147975,
+              "cost": 113415,
               "top_labels": [
                 {
                   "label": "Desktop - Ошибка синхронизации, Оборудование - Установка Anydesk/BILLZ Desktop/Программы компьютера и тд.",
@@ -20524,7 +20524,7 @@ const BILLZ_DATA = {
               "tickets": 7,
               "desired": 3,
               "undesired": 4,
-              "cost": 69055,
+              "cost": 52927,
               "top_labels": [
                 {
                   "label": "Маркетинг - Работа с Сертификатом/Ваучером",
@@ -20545,7 +20545,7 @@ const BILLZ_DATA = {
               "tickets": 6,
               "desired": 2,
               "undesired": 3,
-              "cost": 59190,
+              "cost": 45366,
               "top_labels": [
                 {
                   "label": "Оборудование - Загрузка базу товаров в весы",
@@ -20562,7 +20562,7 @@ const BILLZ_DATA = {
               "tickets": 6,
               "desired": 5,
               "undesired": 1,
-              "cost": 59190,
+              "cost": 45366,
               "top_labels": [
                 {
                   "label": "Новая продажа - Не удаётся сделать продажу",
@@ -20604,7 +20604,7 @@ const BILLZ_DATA = {
           "sla_pct": 66.3,
           "sla_not_met": 33.7,
           "avg_close_h": 0.07,
-          "cost": 4261680,
+          "cost": 3266352,
           "csat_pct": 96.4,
           "csat_rated": 28,
           "repeat_pct": 6.0,
@@ -20641,49 +20641,49 @@ const BILLZ_DATA = {
               "name": "Документооборот - Создание ссылки для оплаты",
               "tickets": 25,
               "undesired": 22,
-              "cost": 246625
+              "cost": 189025
             },
             {
               "name": "Учётная запись - Помощь со входом в аккаунт",
               "tickets": 24,
               "undesired": 18,
-              "cost": 236760
+              "cost": 181464
             },
             {
               "name": "Документооборот - Оплата за тариф",
               "tickets": 20,
               "undesired": 17,
-              "cost": 197300
+              "cost": 151220
             },
             {
               "name": "Оборудование - Установка/Настройка/Удаление принтера",
               "tickets": 16,
               "undesired": 6,
-              "cost": 157840
+              "cost": 120976
             },
             {
               "name": "Кассовые смены — Открытие/Закрытие смен",
               "tickets": 15,
               "undesired": 15,
-              "cost": 147975
+              "cost": 113415
             },
             {
               "name": "Управление - Создание/Редактирвоание/Удаление сотрудника",
               "tickets": 11,
               "undesired": 5,
-              "cost": 108515
+              "cost": 83171
             },
             {
               "name": "Вопрос не по программе",
               "tickets": 10,
               "undesired": 7,
-              "cost": 98650
+              "cost": 75610
             },
             {
               "name": "Управление - Создание/Редактирвоание/Удаление роли",
               "tickets": 10,
               "undesired": 5,
-              "cost": 98650
+              "cost": 75610
             }
           ],
           "operators": [
@@ -20695,7 +20695,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 3,
               "sla_pct": 50.0,
-              "cost": 956905
+              "cost": 733417
             },
             {
               "name": "Атабек",
@@ -20705,7 +20705,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 6,
               "sla_pct": 74.1,
-              "cost": 828660
+              "cost": 635124
             },
             {
               "name": "Сардор Б.",
@@ -20715,7 +20715,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 2,
               "sla_pct": 58.8,
-              "cost": 828660
+              "cost": 635124
             },
             {
               "name": "Нурилло",
@@ -20725,7 +20725,7 @@ const BILLZ_DATA = {
               "rating_pct": 83.3,
               "rated": 6,
               "sla_pct": 84.0,
-              "cost": 749740
+              "cost": 574636
             },
             {
               "name": "Тожмухаммад",
@@ -20735,7 +20735,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 8,
               "sla_pct": 43.5,
-              "cost": 582035
+              "cost": 446099
             },
             {
               "name": "Шохина",
@@ -20745,7 +20745,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 3,
               "sla_pct": 90.6,
-              "cost": 315680
+              "cost": 241952
             }
           ],
           "top_companies": [
@@ -20754,7 +20754,7 @@ const BILLZ_DATA = {
               "tickets": 71,
               "desired": 31,
               "undesired": 40,
-              "cost": 700415,
+              "cost": 536831,
               "top_labels": [
                 {
                   "label": "Документооборот - Создание ссылки для оплаты",
@@ -20775,7 +20775,7 @@ const BILLZ_DATA = {
               "tickets": 6,
               "desired": 0,
               "undesired": 6,
-              "cost": 59190,
+              "cost": 45366,
               "top_labels": [
                 {
                   "label": "Кассовые смены — Открытие/Закрытие смен",
@@ -20788,7 +20788,7 @@ const BILLZ_DATA = {
               "tickets": 6,
               "desired": 3,
               "undesired": 3,
-              "cost": 59190,
+              "cost": 45366,
               "top_labels": [
                 {
                   "label": "Кассовые операции - Удаление расхода/дохода/инкассации",
@@ -20809,7 +20809,7 @@ const BILLZ_DATA = {
               "tickets": 6,
               "desired": 1,
               "undesired": 5,
-              "cost": 59190,
+              "cost": 45366,
               "top_labels": [
                 {
                   "label": "Кассовые смены — Открытие/Закрытие смен, Оборудование - Загрузка базу товаров в весы, Бэклог",
@@ -20830,7 +20830,7 @@ const BILLZ_DATA = {
               "tickets": 5,
               "desired": 4,
               "undesired": 1,
-              "cost": 49325,
+              "cost": 37805,
               "top_labels": [
                 {
                   "label": "Документооборот - Создание ссылки для оплаты",
@@ -20872,7 +20872,7 @@ const BILLZ_DATA = {
           "sla_pct": 85.0,
           "sla_not_met": 15.0,
           "avg_close_h": 0.05,
-          "cost": 3590860,
+          "cost": 2752204,
           "csat_pct": 100.0,
           "csat_rated": 17,
           "repeat_pct": 13.5,
@@ -20908,49 +20908,49 @@ const BILLZ_DATA = {
               "name": "Документооборот - Оплата за тариф",
               "tickets": 28,
               "undesired": 23,
-              "cost": 276220
+              "cost": 211708
             },
             {
               "name": "Кассовые смены — Открытие/Закрытие смен",
               "tickets": 14,
               "undesired": 14,
-              "cost": 138110
+              "cost": 105854
             },
             {
               "name": "Учётная запись - Помощь со входом в аккаунт",
               "tickets": 12,
               "undesired": 9,
-              "cost": 118380
+              "cost": 90732
             },
             {
               "name": "Импорт — импорт товаров через Excel",
               "tickets": 10,
               "undesired": 4,
-              "cost": 98650
+              "cost": 75610
             },
             {
               "name": "Документооборот - Создание ссылки для оплаты",
               "tickets": 9,
               "undesired": 4,
-              "cost": 88785
+              "cost": 68049
             },
             {
               "name": "Каталог — настройка печати ценника",
               "tickets": 8,
               "undesired": 6,
-              "cost": 78920
+              "cost": 60488
             },
             {
               "name": "Каталог — изменение свойств товара",
               "tickets": 8,
               "undesired": 4,
-              "cost": 78920
+              "cost": 60488
             },
             {
               "name": "Каталог — запрос на добавление товара",
               "tickets": 8,
               "undesired": 4,
-              "cost": 78920
+              "cost": 60488
             }
           ],
           "operators": [
@@ -20962,7 +20962,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 1,
               "sla_pct": 95.7,
-              "cost": 730010
+              "cost": 559514
             },
             {
               "name": "Алиёр",
@@ -20972,7 +20972,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 1,
               "sla_pct": 70.0,
-              "cost": 552440
+              "cost": 423416
             },
             {
               "name": "Робия Р.",
@@ -20982,7 +20982,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 10,
               "sla_pct": 79.2,
-              "cost": 542575
+              "cost": 415855
             },
             {
               "name": "Тожмухаммад",
@@ -20992,7 +20992,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 1,
               "sla_pct": 85.7,
-              "cost": 503115
+              "cost": 385611
             },
             {
               "name": "Робия А.",
@@ -21002,7 +21002,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 1,
               "sla_pct": 66.7,
-              "cost": 493250
+              "cost": 378050
             },
             {
               "name": "Нурилло",
@@ -21012,7 +21012,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 1,
               "sla_pct": 77.8,
-              "cost": 434060
+              "cost": 332684
             },
             {
               "name": "Шохина",
@@ -21022,7 +21022,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 2,
               "sla_pct": 97.1,
-              "cost": 335410
+              "cost": 257074
             }
           ],
           "top_companies": [
@@ -21031,7 +21031,7 @@ const BILLZ_DATA = {
               "tickets": 44,
               "desired": 16,
               "undesired": 23,
-              "cost": 434060,
+              "cost": 332684,
               "top_labels": [
                 {
                   "label": "Документооборот - Создание ссылки для оплаты",
@@ -21052,7 +21052,7 @@ const BILLZ_DATA = {
               "tickets": 9,
               "desired": 0,
               "undesired": 9,
-              "cost": 88785,
+              "cost": 68049,
               "top_labels": [
                 {
                   "label": "Кассовые смены — Открытие/Закрытие смен",
@@ -21069,7 +21069,7 @@ const BILLZ_DATA = {
               "tickets": 7,
               "desired": 1,
               "undesired": 5,
-              "cost": 69055,
+              "cost": 52927,
               "top_labels": [
                 {
                   "label": "Долги клиентов - Погашение/Удаление/Редактирование долга",
@@ -21086,7 +21086,7 @@ const BILLZ_DATA = {
               "tickets": 6,
               "desired": 3,
               "undesired": 3,
-              "cost": 59190,
+              "cost": 45366,
               "top_labels": [
                 {
                   "label": "Маркетинг - Работа с Сертификатом/Ваучером",
@@ -21107,7 +21107,7 @@ const BILLZ_DATA = {
               "tickets": 6,
               "desired": 4,
               "undesired": 2,
-              "cost": 59190,
+              "cost": 45366,
               "top_labels": [
                 {
                   "label": "Импорт — импорт товаров через Excel",
@@ -21149,7 +21149,7 @@ const BILLZ_DATA = {
           "sla_pct": 82.1,
           "sla_not_met": 17.9,
           "avg_close_h": 0.06,
-          "cost": 3590860,
+          "cost": 2752204,
           "csat_pct": 100.0,
           "csat_rated": 27,
           "repeat_pct": 11.3,
@@ -21184,49 +21184,49 @@ const BILLZ_DATA = {
               "name": "Документооборот - Оплата за тариф",
               "tickets": 39,
               "undesired": 19,
-              "cost": 384735
+              "cost": 294879
             },
             {
               "name": "Документооборот - Создание ссылки для оплаты",
               "tickets": 14,
               "undesired": 7,
-              "cost": 138110
+              "cost": 105854
             },
             {
               "name": "Учётная запись - Помощь со входом в аккаунт",
               "tickets": 12,
               "undesired": 7,
-              "cost": 118380
+              "cost": 90732
             },
             {
               "name": "Баг (реквест)",
               "tickets": 12,
               "undesired": 4,
-              "cost": 118380
+              "cost": 90732
             },
             {
               "name": "Кассовые смены — Открытие/Закрытие смен",
               "tickets": 9,
               "undesired": 7,
-              "cost": 88785
+              "cost": 68049
             },
             {
               "name": "Оборудование - Установка/Настройка/Удаление принтера",
               "tickets": 9,
               "undesired": 1,
-              "cost": 88785
+              "cost": 68049
             },
             {
               "name": "Управление - Создание/Редактирвоание/Удаление роли",
               "tickets": 9,
               "undesired": 4,
-              "cost": 88785
+              "cost": 68049
             },
             {
               "name": "Отчёты - Разбор отчётов",
               "tickets": 7,
               "undesired": 0,
-              "cost": 69055
+              "cost": 52927
             }
           ],
           "operators": [
@@ -21238,7 +21238,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 7,
               "sla_pct": 95.7,
-              "cost": 552440
+              "cost": 423416
             },
             {
               "name": "Ардак",
@@ -21248,7 +21248,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 1,
               "sla_pct": 71.4,
-              "cost": 552440
+              "cost": 423416
             },
             {
               "name": "Авазбек",
@@ -21258,7 +21258,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 7,
               "sla_pct": 81.2,
-              "cost": 503115
+              "cost": 385611
             },
             {
               "name": "Робия А.",
@@ -21268,7 +21268,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 3,
               "sla_pct": 75.0,
-              "cost": 374870
+              "cost": 287318
             },
             {
               "name": "Тожмухаммад",
@@ -21278,7 +21278,7 @@ const BILLZ_DATA = {
               "rating_pct": 0.0,
               "rated": 0,
               "sla_pct": 57.1,
-              "cost": 374870
+              "cost": 287318
             },
             {
               "name": "Робия Р.",
@@ -21288,7 +21288,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 5,
               "sla_pct": 76.0,
-              "cost": 345275
+              "cost": 264635
             },
             {
               "name": "Шохина",
@@ -21298,7 +21298,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 3,
               "sla_pct": 93.9,
-              "cost": 325545
+              "cost": 249513
             },
             {
               "name": "Сардор Б.",
@@ -21308,7 +21308,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 1,
               "sla_pct": 80.0,
-              "cost": 266355
+              "cost": 204147
             },
             {
               "name": "Атабек",
@@ -21318,7 +21318,7 @@ const BILLZ_DATA = {
               "rating_pct": 0.0,
               "rated": 0,
               "sla_pct": 100.0,
-              "cost": 246625
+              "cost": 189025
             },
             {
               "name": "Нурлан",
@@ -21328,7 +21328,7 @@ const BILLZ_DATA = {
               "rating_pct": 0.0,
               "rated": 0,
               "sla_pct": 66.7,
-              "cost": 29595
+              "cost": 22683
             },
             {
               "name": "Дильшод",
@@ -21338,7 +21338,7 @@ const BILLZ_DATA = {
               "rating_pct": 0.0,
               "rated": 0,
               "sla_pct": 0.0,
-              "cost": 9865
+              "cost": 7561
             },
             {
               "name": "Камолиддин",
@@ -21348,7 +21348,7 @@ const BILLZ_DATA = {
               "rating_pct": 0.0,
               "rated": 0,
               "sla_pct": 0.0,
-              "cost": 9865
+              "cost": 7561
             }
           ],
           "top_companies": [
@@ -21357,7 +21357,7 @@ const BILLZ_DATA = {
               "tickets": 57,
               "desired": 21,
               "undesired": 25,
-              "cost": 562305,
+              "cost": 430977,
               "top_labels": [
                 {
                   "label": "Документооборот - Создание ссылки для оплаты",
@@ -21378,7 +21378,7 @@ const BILLZ_DATA = {
               "tickets": 6,
               "desired": 4,
               "undesired": 2,
-              "cost": 59190,
+              "cost": 45366,
               "top_labels": [
                 {
                   "label": "Кассовые смены — Открытие/Закрытие смен",
@@ -21399,7 +21399,7 @@ const BILLZ_DATA = {
               "tickets": 5,
               "desired": 3,
               "undesired": 2,
-              "cost": 49325,
+              "cost": 37805,
               "top_labels": [
                 {
                   "label": "Документооборот - Оплата за тариф",
@@ -21416,7 +21416,7 @@ const BILLZ_DATA = {
               "tickets": 4,
               "desired": 2,
               "undesired": 2,
-              "cost": 39460,
+              "cost": 30244,
               "top_labels": [
                 {
                   "label": "Баг (реквест)",
@@ -21437,7 +21437,7 @@ const BILLZ_DATA = {
               "tickets": 4,
               "desired": 4,
               "undesired": 0,
-              "cost": 39460,
+              "cost": 30244,
               "top_labels": [
                 {
                   "label": "Документооборот - Оплата за тариф",
@@ -21479,7 +21479,7 @@ const BILLZ_DATA = {
           "sla_pct": 78.8,
           "sla_not_met": 21.2,
           "avg_close_h": 0.05,
-          "cost": 3492210,
+          "cost": 2676594,
           "csat_pct": 94.4,
           "csat_rated": 18,
           "repeat_pct": 10.7,
@@ -21514,49 +21514,49 @@ const BILLZ_DATA = {
               "name": "Оборудование - Установка/Настройка/Удаление принтера",
               "tickets": 21,
               "undesired": 4,
-              "cost": 207165
+              "cost": 158781
             },
             {
               "name": "Документооборот - Оплата за тариф",
               "tickets": 17,
               "undesired": 6,
-              "cost": 167705
+              "cost": 128537
             },
             {
               "name": "Учётная запись - Помощь со входом в аккаунт",
               "tickets": 12,
               "undesired": 9,
-              "cost": 118380
+              "cost": 90732
             },
             {
               "name": "Кассовые смены — Открытие/Закрытие смен",
               "tickets": 11,
               "undesired": 5,
-              "cost": 108515
+              "cost": 83171
             },
             {
               "name": "Учётная запись - Создание магазина",
               "tickets": 8,
               "undesired": 4,
-              "cost": 78920
+              "cost": 60488
             },
             {
               "name": "Каталог — настройка печати ценника",
               "tickets": 8,
               "undesired": 4,
-              "cost": 78920
+              "cost": 60488
             },
             {
               "name": "Каталог — изменение свойств товара",
               "tickets": 7,
               "undesired": 6,
-              "cost": 69055
+              "cost": 52927
             },
             {
               "name": "Документооборот - Создание ссылки для оплаты",
               "tickets": 7,
               "undesired": 6,
-              "cost": 69055
+              "cost": 52927
             }
           ],
           "operators": [
@@ -21568,7 +21568,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 1,
               "sla_pct": 88.9,
-              "cost": 532710
+              "cost": 408294
             },
             {
               "name": "Анасхон",
@@ -21578,7 +21578,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 4,
               "sla_pct": 100.0,
-              "cost": 443925
+              "cost": 340245
             },
             {
               "name": "Атабек",
@@ -21588,7 +21588,7 @@ const BILLZ_DATA = {
               "rating_pct": 0.0,
               "rated": 0,
               "sla_pct": 50.0,
-              "cost": 414330
+              "cost": 317562
             },
             {
               "name": "Ардак",
@@ -21598,7 +21598,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 2,
               "sla_pct": 72.7,
-              "cost": 404465
+              "cost": 310001
             },
             {
               "name": "Алиёр",
@@ -21608,7 +21608,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 2,
               "sla_pct": 77.3,
-              "cost": 394600
+              "cost": 302440
             },
             {
               "name": "Нурилло",
@@ -21618,7 +21618,7 @@ const BILLZ_DATA = {
               "rating_pct": 0.0,
               "rated": 0,
               "sla_pct": 75.0,
-              "cost": 345275
+              "cost": 264635
             },
             {
               "name": "Сардор Б.",
@@ -21628,7 +21628,7 @@ const BILLZ_DATA = {
               "rating_pct": 0.0,
               "rated": 0,
               "sla_pct": 100.0,
-              "cost": 335410
+              "cost": 257074
             },
             {
               "name": "Авазбек",
@@ -21638,7 +21638,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 3,
               "sla_pct": 73.7,
-              "cost": 315680
+              "cost": 241952
             },
             {
               "name": "Робия Р.",
@@ -21648,7 +21648,7 @@ const BILLZ_DATA = {
               "rating_pct": 83.3,
               "rated": 6,
               "sla_pct": 73.7,
-              "cost": 295950
+              "cost": 226830
             },
             {
               "name": "Дильшод",
@@ -21658,7 +21658,7 @@ const BILLZ_DATA = {
               "rating_pct": 0.0,
               "rated": 0,
               "sla_pct": 0.0,
-              "cost": 9865
+              "cost": 7561
             }
           ],
           "top_companies": [
@@ -21667,7 +21667,7 @@ const BILLZ_DATA = {
               "tickets": 58,
               "desired": 23,
               "undesired": 26,
-              "cost": 572170,
+              "cost": 438538,
               "top_labels": [
                 {
                   "label": "Учётная запись - Создание магазина",
@@ -21688,7 +21688,7 @@ const BILLZ_DATA = {
               "tickets": 9,
               "desired": 4,
               "undesired": 5,
-              "cost": 88785,
+              "cost": 68049,
               "top_labels": [
                 {
                   "label": "Баг (реквест), Desktop - Ошибка синхронизации",
@@ -21709,7 +21709,7 @@ const BILLZ_DATA = {
               "tickets": 7,
               "desired": 1,
               "undesired": 6,
-              "cost": 69055,
+              "cost": 52927,
               "top_labels": [
                 {
                   "label": "Кассовые смены — Открытие/Закрытие смен",
@@ -21730,7 +21730,7 @@ const BILLZ_DATA = {
               "tickets": 5,
               "desired": 0,
               "undesired": 5,
-              "cost": 49325,
+              "cost": 37805,
               "top_labels": [
                 {
                   "label": "Все продажи - Удаление/Редактирование продажи",
@@ -21751,7 +21751,7 @@ const BILLZ_DATA = {
               "tickets": 5,
               "desired": 3,
               "undesired": 2,
-              "cost": 49325,
+              "cost": 37805,
               "top_labels": [
                 {
                   "label": "Баг (реквест)",
@@ -21793,7 +21793,7 @@ const BILLZ_DATA = {
           "sla_pct": 80.5,
           "sla_not_met": 19.5,
           "avg_close_h": 0.05,
-          "cost": 3413290,
+          "cost": 2616106,
           "csat_pct": 97.0,
           "csat_rated": 33,
           "repeat_pct": 15.0,
@@ -21827,49 +21827,49 @@ const BILLZ_DATA = {
               "name": "Документооборот - Оплата за тариф",
               "tickets": 21,
               "undesired": 12,
-              "cost": 207165
+              "cost": 158781
             },
             {
               "name": "Оборудование - Установка/Настройка/Удаление принтера",
               "tickets": 15,
               "undesired": 2,
-              "cost": 147975
+              "cost": 113415
             },
             {
               "name": "Документооборот - Создание ссылки для оплаты",
               "tickets": 15,
               "undesired": 11,
-              "cost": 147975
+              "cost": 113415
             },
             {
               "name": "Каталог — изменение свойств товара",
               "tickets": 13,
               "undesired": 5,
-              "cost": 128245
+              "cost": 98293
             },
             {
               "name": "Desktop - Ошибка синхронизации",
               "tickets": 9,
               "undesired": 7,
-              "cost": 88785
+              "cost": 68049
             },
             {
               "name": "Учётная запись - Помощь со входом в аккаунт",
               "tickets": 8,
               "undesired": 8,
-              "cost": 78920
+              "cost": 60488
             },
             {
               "name": "Вопрос не по программе",
               "tickets": 6,
               "undesired": 3,
-              "cost": 59190
+              "cost": 45366
             },
             {
               "name": "Каталог — настройка печати ценника",
               "tickets": 6,
               "undesired": 3,
-              "cost": 59190
+              "cost": 45366
             }
           ],
           "operators": [
@@ -21881,7 +21881,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 5,
               "sla_pct": 86.7,
-              "cost": 670820
+              "cost": 514148
             },
             {
               "name": "Анасхон",
@@ -21891,7 +21891,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 8,
               "sla_pct": 100.0,
-              "cost": 660955
+              "cost": 506587
             },
             {
               "name": "Атабек",
@@ -21901,7 +21901,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 4,
               "sla_pct": 95.5,
-              "cost": 611630
+              "cost": 468782
             },
             {
               "name": "Авазбек",
@@ -21911,7 +21911,7 @@ const BILLZ_DATA = {
               "rating_pct": 87.5,
               "rated": 8,
               "sla_pct": 72.4,
-              "cost": 473520
+              "cost": 362928
             },
             {
               "name": "Сардор Б.",
@@ -21921,7 +21921,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 2,
               "sla_pct": 58.8,
-              "cost": 434060
+              "cost": 332684
             },
             {
               "name": "Алиёр",
@@ -21931,7 +21931,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 4,
               "sla_pct": 79.2,
-              "cost": 414330
+              "cost": 317562
             },
             {
               "name": "Дильшод",
@@ -21941,7 +21941,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 1,
               "sla_pct": 0.0,
-              "cost": 98650
+              "cost": 75610
             },
             {
               "name": "Камолиддин",
@@ -21951,7 +21951,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 1,
               "sla_pct": 60.0,
-              "cost": 49325
+              "cost": 37805
             }
           ],
           "top_companies": [
@@ -21960,7 +21960,7 @@ const BILLZ_DATA = {
               "tickets": 67,
               "desired": 30,
               "undesired": 29,
-              "cost": 660955,
+              "cost": 506587,
               "top_labels": [
                 {
                   "label": "Документооборот - Создание ссылки для оплаты",
@@ -21981,7 +21981,7 @@ const BILLZ_DATA = {
               "tickets": 7,
               "desired": 2,
               "undesired": 5,
-              "cost": 69055,
+              "cost": 52927,
               "top_labels": [
                 {
                   "label": "Desktop - Ошибка синхронизации",
@@ -21998,7 +21998,7 @@ const BILLZ_DATA = {
               "tickets": 4,
               "desired": 2,
               "undesired": 2,
-              "cost": 39460,
+              "cost": 30244,
               "top_labels": [
                 {
                   "label": "Баг (реквест), Desktop - Ошибка синхронизации",
@@ -22019,7 +22019,7 @@ const BILLZ_DATA = {
               "tickets": 4,
               "desired": 1,
               "undesired": 3,
-              "cost": 39460,
+              "cost": 30244,
               "top_labels": [
                 {
                   "label": "Импорт — ошибка при загрузке файла, Каталог — настройка печати ценника",
@@ -22036,7 +22036,7 @@ const BILLZ_DATA = {
               "tickets": 4,
               "desired": 1,
               "undesired": 3,
-              "cost": 39460,
+              "cost": 30244,
               "top_labels": [
                 {
                   "label": "Документооборот - Оплата за тариф, Реквест (внутренний запрос, выгрузка данных)",
@@ -22074,7 +22074,7 @@ const BILLZ_DATA = {
           "sla_pct": 80.5,
           "sla_not_met": 19.5,
           "avg_close_h": 0.07,
-          "cost": 3354100,
+          "cost": 2570740,
           "csat_pct": 95.7,
           "csat_rated": 23,
           "repeat_pct": 13.8,
@@ -22110,49 +22110,49 @@ const BILLZ_DATA = {
               "name": "Документооборот - Оплата за тариф",
               "tickets": 27,
               "undesired": 16,
-              "cost": 266355
+              "cost": 204147
             },
             {
               "name": "Документооборот - Создание ссылки для оплаты",
               "tickets": 20,
               "undesired": 15,
-              "cost": 197300
+              "cost": 151220
             },
             {
               "name": "Настройка - Установка BILLZ PAY/Payme/Epos/PAX",
               "tickets": 19,
               "undesired": 10,
-              "cost": 187435
+              "cost": 143659
             },
             {
               "name": "Каталог — изменение свойств товара",
               "tickets": 14,
               "undesired": 6,
-              "cost": 138110
+              "cost": 105854
             },
             {
               "name": "Оборудование - Установка/Настройка/Удаление принтера",
               "tickets": 11,
               "undesired": 4,
-              "cost": 108515
+              "cost": 83171
             },
             {
               "name": "Вопрос не по программе",
               "tickets": 10,
               "undesired": 9,
-              "cost": 98650
+              "cost": 75610
             },
             {
               "name": "Учётная запись - Помощь со входом в аккаунт",
               "tickets": 9,
               "undesired": 7,
-              "cost": 88785
+              "cost": 68049
             },
             {
               "name": "Инвентаризация — консультация по модулю (частичное обучение)",
               "tickets": 6,
               "undesired": 4,
-              "cost": 59190
+              "cost": 45366
             }
           ],
           "operators": [
@@ -22164,7 +22164,7 @@ const BILLZ_DATA = {
               "rating_pct": 75.0,
               "rated": 4,
               "sla_pct": 95.2,
-              "cost": 591900
+              "cost": 453660
             },
             {
               "name": "Авазбек",
@@ -22174,7 +22174,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 10,
               "sla_pct": 76.5,
-              "cost": 532710
+              "cost": 408294
             },
             {
               "name": "Робия Р.",
@@ -22184,7 +22184,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 3,
               "sla_pct": 75.0,
-              "cost": 493250
+              "cost": 378050
             },
             {
               "name": "Атабек",
@@ -22194,7 +22194,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 2,
               "sla_pct": 68.8,
-              "cost": 493250
+              "cost": 378050
             },
             {
               "name": "Алиёр",
@@ -22204,7 +22204,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 2,
               "sla_pct": 82.4,
-              "cost": 453790
+              "cost": 347806
             },
             {
               "name": "Нурилло",
@@ -22214,7 +22214,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 1,
               "sla_pct": 84.2,
-              "cost": 443925
+              "cost": 340245
             },
             {
               "name": "Тожмухаммад",
@@ -22224,7 +22224,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 1,
               "sla_pct": 90.0,
-              "cost": 276220
+              "cost": 211708
             },
             {
               "name": "Дильшод",
@@ -22234,7 +22234,7 @@ const BILLZ_DATA = {
               "rating_pct": 0.0,
               "rated": 0,
               "sla_pct": 0.0,
-              "cost": 49325
+              "cost": 37805
             },
             {
               "name": "Ардак",
@@ -22244,7 +22244,7 @@ const BILLZ_DATA = {
               "rating_pct": 0.0,
               "rated": 0,
               "sla_pct": 100.0,
-              "cost": 9865
+              "cost": 7561
             },
             {
               "name": "Камолиддин",
@@ -22254,7 +22254,7 @@ const BILLZ_DATA = {
               "rating_pct": 0.0,
               "rated": 0,
               "sla_pct": 0.0,
-              "cost": 9865
+              "cost": 7561
             }
           ],
           "top_companies": [
@@ -22263,7 +22263,7 @@ const BILLZ_DATA = {
               "tickets": 75,
               "desired": 27,
               "undesired": 39,
-              "cost": 739875,
+              "cost": 567075,
               "top_labels": [
                 {
                   "label": "Документооборот - Создание ссылки для оплаты",
@@ -22284,7 +22284,7 @@ const BILLZ_DATA = {
               "tickets": 8,
               "desired": 6,
               "undesired": 2,
-              "cost": 78920,
+              "cost": 60488,
               "top_labels": [
                 {
                   "label": "Каталог - Просмотр статистики",
@@ -22305,7 +22305,7 @@ const BILLZ_DATA = {
               "tickets": 7,
               "desired": 5,
               "undesired": 0,
-              "cost": 69055,
+              "cost": 52927,
               "top_labels": [
                 {
                   "label": "Все продажи - Выгрузка продаж, Баг (реквест)",
@@ -22326,7 +22326,7 @@ const BILLZ_DATA = {
               "tickets": 7,
               "desired": 4,
               "undesired": 2,
-              "cost": 69055,
+              "cost": 52927,
               "top_labels": [
                 {
                   "label": "Настройка - Установка BILLZ PAY/Payme/Epos/PAX",
@@ -22347,7 +22347,7 @@ const BILLZ_DATA = {
               "tickets": 6,
               "desired": 4,
               "undesired": 2,
-              "cost": 59190,
+              "cost": 45366,
               "top_labels": [
                 {
                   "label": "Каталог — изменение свойств товара",
@@ -22389,7 +22389,7 @@ const BILLZ_DATA = {
           "sla_pct": 72.2,
           "sla_not_met": 27.8,
           "avg_close_h": 0.07,
-          "cost": 4409655,
+          "cost": 3379767,
           "csat_pct": 91.7,
           "csat_rated": 24,
           "repeat_pct": 11.0,
@@ -22424,49 +22424,49 @@ const BILLZ_DATA = {
               "name": "Документооборот - Оплата за тариф",
               "tickets": 32,
               "undesired": 13,
-              "cost": 315680
+              "cost": 241952
             },
             {
               "name": "Оборудование - Установка/Настройка/Удаление принтера",
               "tickets": 18,
               "undesired": 6,
-              "cost": 177570
+              "cost": 136098
             },
             {
               "name": "Документооборот - Создание ссылки для оплаты",
               "tickets": 16,
               "undesired": 10,
-              "cost": 157840
+              "cost": 120976
             },
             {
               "name": "Кассовые смены — Открытие/Закрытие смен",
               "tickets": 15,
               "undesired": 6,
-              "cost": 147975
+              "cost": 113415
             },
             {
               "name": "Каталог — изменение свойств товара",
               "tickets": 15,
               "undesired": 5,
-              "cost": 147975
+              "cost": 113415
             },
             {
               "name": "Учётная запись - Помощь со входом в аккаунт",
               "tickets": 14,
               "undesired": 10,
-              "cost": 138110
+              "cost": 105854
             },
             {
               "name": "Учётная запись - Блокировка/Разблокировка аккаунта",
               "tickets": 10,
               "undesired": 6,
-              "cost": 98650
+              "cost": 75610
             },
             {
               "name": "Массовый сбой BILLZ, Учётная запись - Помощь со входом в аккаунт",
               "tickets": 10,
               "undesired": 9,
-              "cost": 98650
+              "cost": 75610
             }
           ],
           "operators": [
@@ -22478,7 +22478,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 7,
               "sla_pct": 85.7,
-              "cost": 759605
+              "cost": 582197
             },
             {
               "name": "Робия Р.",
@@ -22488,7 +22488,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 1,
               "sla_pct": 72.2,
-              "cost": 670820
+              "cost": 514148
             },
             {
               "name": "Атабек",
@@ -22498,7 +22498,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 4,
               "sla_pct": 59.3,
-              "cost": 621495
+              "cost": 476343
             },
             {
               "name": "Ардак",
@@ -22508,7 +22508,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 3,
               "sla_pct": 79.3,
-              "cost": 601765
+              "cost": 461221
             },
             {
               "name": "Алиёр",
@@ -22518,7 +22518,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 2,
               "sla_pct": 63.6,
-              "cost": 493250
+              "cost": 378050
             },
             {
               "name": "Сардор Б.",
@@ -22528,7 +22528,7 @@ const BILLZ_DATA = {
               "rating_pct": 0.0,
               "rated": 0,
               "sla_pct": 73.3,
-              "cost": 443925
+              "cost": 340245
             },
             {
               "name": "Авазбек",
@@ -22538,7 +22538,7 @@ const BILLZ_DATA = {
               "rating_pct": 66.7,
               "rated": 6,
               "sla_pct": 66.7,
-              "cost": 374870
+              "cost": 287318
             },
             {
               "name": "Тожмухаммад",
@@ -22548,7 +22548,7 @@ const BILLZ_DATA = {
               "rating_pct": 0.0,
               "rated": 0,
               "sla_pct": 73.3,
-              "cost": 365005
+              "cost": 279757
             },
             {
               "name": "Дильшод",
@@ -22558,7 +22558,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 1,
               "sla_pct": 50.0,
-              "cost": 78920
+              "cost": 60488
             }
           ],
           "top_companies": [
@@ -22567,7 +22567,7 @@ const BILLZ_DATA = {
               "tickets": 71,
               "desired": 33,
               "undesired": 33,
-              "cost": 700415,
+              "cost": 536831,
               "top_labels": [
                 {
                   "label": "Документооборот - Создание ссылки для оплаты",
@@ -22588,7 +22588,7 @@ const BILLZ_DATA = {
               "tickets": 10,
               "desired": 4,
               "undesired": 6,
-              "cost": 98650,
+              "cost": 75610,
               "top_labels": [
                 {
                   "label": "Кассовые смены — Открытие/Закрытие смен",
@@ -22609,7 +22609,7 @@ const BILLZ_DATA = {
               "tickets": 9,
               "desired": 5,
               "undesired": 2,
-              "cost": 88785,
+              "cost": 68049,
               "top_labels": [
                 {
                   "label": "Каталог — изменение свойств товара",
@@ -22630,7 +22630,7 @@ const BILLZ_DATA = {
               "tickets": 9,
               "desired": 7,
               "undesired": 2,
-              "cost": 88785,
+              "cost": 68049,
               "top_labels": [
                 {
                   "label": "Оборудование - Установка Anydesk/BILLZ Desktop/Программы компьютера и тд.",
@@ -22651,7 +22651,7 @@ const BILLZ_DATA = {
               "tickets": 5,
               "desired": 2,
               "undesired": 3,
-              "cost": 49325,
+              "cost": 37805,
               "top_labels": [
                 {
                   "label": "Массовый сбой BILLZ, Учётная запись - Помощь со входом в аккаунт",
@@ -22693,7 +22693,7 @@ const BILLZ_DATA = {
           "sla_pct": 76.1,
           "sla_not_met": 23.9,
           "avg_close_h": 0.08,
-          "cost": 4271545,
+          "cost": 3273913,
           "csat_pct": 92.3,
           "csat_rated": 26,
           "repeat_pct": 8.5,
@@ -22730,49 +22730,49 @@ const BILLZ_DATA = {
               "name": "Документооборот - Оплата за тариф",
               "tickets": 54,
               "undesired": 11,
-              "cost": 532710
+              "cost": 408294
             },
             {
               "name": "Документооборот - Создание ссылки для оплаты",
               "tickets": 33,
               "undesired": 21,
-              "cost": 325545
+              "cost": 249513
             },
             {
               "name": "Оборудование - Установка/Настройка/Удаление принтера",
               "tickets": 25,
               "undesired": 3,
-              "cost": 246625
+              "cost": 189025
             },
             {
               "name": "Учётная запись - Блокировка/Разблокировка аккаунта",
               "tickets": 22,
               "undesired": 10,
-              "cost": 217030
+              "cost": 166342
             },
             {
               "name": "Документооборот - Помощь в оплате долга",
               "tickets": 9,
               "undesired": 3,
-              "cost": 88785
+              "cost": 68049
             },
             {
               "name": "Оборудование - Установка Anydesk/BILLZ Desktop/Программы компьютера и тд.",
               "tickets": 9,
               "undesired": 4,
-              "cost": 88785
+              "cost": 68049
             },
             {
               "name": "Импорт — импорт товаров через Excel",
               "tickets": 8,
               "undesired": 1,
-              "cost": 78920
+              "cost": 60488
             },
             {
               "name": "Новая продажа - Не удаётся сделать продажу",
               "tickets": 8,
               "undesired": 3,
-              "cost": 78920
+              "cost": 60488
             }
           ],
           "operators": [
@@ -22784,7 +22784,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 4,
               "sla_pct": 67.6,
-              "cost": 937175
+              "cost": 718295
             },
             {
               "name": "Нурилло",
@@ -22794,7 +22794,7 @@ const BILLZ_DATA = {
               "rating_pct": 83.3,
               "rated": 6,
               "sla_pct": 69.8,
-              "cost": 907580
+              "cost": 695612
             },
             {
               "name": "Робия Р.",
@@ -22804,7 +22804,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 7,
               "sla_pct": 87.3,
-              "cost": 680685
+              "cost": 521709
             },
             {
               "name": "Сардор Б.",
@@ -22814,7 +22814,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 4,
               "sla_pct": 80.6,
-              "cost": 651090
+              "cost": 499026
             },
             {
               "name": "Тожмухаммад",
@@ -22824,7 +22824,7 @@ const BILLZ_DATA = {
               "rating_pct": 66.7,
               "rated": 3,
               "sla_pct": 60.9,
-              "cost": 572170
+              "cost": 438538
             },
             {
               "name": "Дильшод",
@@ -22834,7 +22834,7 @@ const BILLZ_DATA = {
               "rating_pct": 0.0,
               "rated": 0,
               "sla_pct": 71.4,
-              "cost": 404465
+              "cost": 310001
             },
             {
               "name": "Нурлан",
@@ -22844,7 +22844,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 2,
               "sla_pct": 91.7,
-              "cost": 118380
+              "cost": 90732
             }
           ],
           "top_companies": [
@@ -22853,7 +22853,7 @@ const BILLZ_DATA = {
               "tickets": 64,
               "desired": 36,
               "undesired": 24,
-              "cost": 631360,
+              "cost": 483904,
               "top_labels": [
                 {
                   "label": "Документооборот - Создание ссылки для оплаты",
@@ -22874,7 +22874,7 @@ const BILLZ_DATA = {
               "tickets": 6,
               "desired": 4,
               "undesired": 2,
-              "cost": 59190,
+              "cost": 45366,
               "top_labels": [
                 {
                   "label": "Кассовые смены — Открытие/Закрытие смен",
@@ -22895,7 +22895,7 @@ const BILLZ_DATA = {
               "tickets": 5,
               "desired": 5,
               "undesired": 0,
-              "cost": 49325,
+              "cost": 37805,
               "top_labels": [
                 {
                   "label": "Отчёты - Неверная сумма (реквест)",
@@ -22916,7 +22916,7 @@ const BILLZ_DATA = {
               "tickets": 5,
               "desired": 0,
               "undesired": 5,
-              "cost": 49325,
+              "cost": 37805,
               "top_labels": [
                 {
                   "label": "Все продажи - Удаление/Редактирование продажи",
@@ -22937,7 +22937,7 @@ const BILLZ_DATA = {
               "tickets": 4,
               "desired": 3,
               "undesired": 0,
-              "cost": 39460,
+              "cost": 30244,
               "top_labels": [
                 {
                   "label": "Баг (реквест), Сайт/Бот - Настройка/Удаление/Редактирование функций",
@@ -22979,7 +22979,7 @@ const BILLZ_DATA = {
           "sla_pct": 72.2,
           "sla_not_met": 27.8,
           "avg_close_h": 0.08,
-          "cost": 5761160,
+          "cost": 4415624,
           "csat_pct": 94.7,
           "csat_rated": 38,
           "repeat_pct": 9.9,
@@ -23015,49 +23015,49 @@ const BILLZ_DATA = {
               "name": "Документооборот - Оплата за тариф",
               "tickets": 233,
               "undesired": 178,
-              "cost": 2298545
+              "cost": 1761713
             },
             {
               "name": "Документооборот - Создание ссылки для оплаты",
               "tickets": 45,
               "undesired": 45,
-              "cost": 443925
+              "cost": 340245
             },
             {
               "name": "Учётная запись - Блокировка/Разблокировка аккаунта",
               "tickets": 31,
               "undesired": 28,
-              "cost": 305815
+              "cost": 234391
             },
             {
               "name": "Учётная запись - Помощь со входом в аккаунт",
               "tickets": 12,
               "undesired": 11,
-              "cost": 118380
+              "cost": 90732
             },
             {
               "name": "Каталог — изменение свойств товара",
               "tickets": 10,
               "undesired": 9,
-              "cost": 98650
+              "cost": 75610
             },
             {
               "name": "Оборудование - Установка/Настройка/Удаление принтера",
               "tickets": 10,
               "undesired": 2,
-              "cost": 98650
+              "cost": 75610
             },
             {
               "name": "Документооборот - Смена тарифа (upsell/downsell)",
               "tickets": 7,
               "undesired": 5,
-              "cost": 69055
+              "cost": 52927
             },
             {
               "name": "Документооборот - Консультация по сумме долга",
               "tickets": 7,
               "undesired": 5,
-              "cost": 69055
+              "cost": 52927
             }
           ],
           "operators": [
@@ -23069,7 +23069,7 @@ const BILLZ_DATA = {
               "rating_pct": 85.7,
               "rated": 14,
               "sla_pct": 75.2,
-              "cost": 1529075
+              "cost": 1171955
             },
             {
               "name": "Анасхон",
@@ -23079,7 +23079,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 7,
               "sla_pct": 90.9,
-              "cost": 1351505
+              "cost": 1035857
             },
             {
               "name": "Алиёр",
@@ -23089,7 +23089,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 4,
               "sla_pct": 43.8,
-              "cost": 1292315
+              "cost": 990491
             },
             {
               "name": "Тожмухаммад",
@@ -23099,7 +23099,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 7,
               "sla_pct": 54.8,
-              "cost": 799065
+              "cost": 612441
             },
             {
               "name": "Нурилло",
@@ -23109,7 +23109,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 6,
               "sla_pct": 67.6,
-              "cost": 749740
+              "cost": 574636
             },
             {
               "name": "Атабек",
@@ -23119,7 +23119,7 @@ const BILLZ_DATA = {
               "rating_pct": 0.0,
               "rated": 0,
               "sla_pct": 0.0,
-              "cost": 19730
+              "cost": 15122
             },
             {
               "name": "Ардак",
@@ -23129,7 +23129,7 @@ const BILLZ_DATA = {
               "rating_pct": 0.0,
               "rated": 0,
               "sla_pct": 0.0,
-              "cost": 9865
+              "cost": 7561
             },
             {
               "name": "Дильшод",
@@ -23139,7 +23139,7 @@ const BILLZ_DATA = {
               "rating_pct": 0.0,
               "rated": 0,
               "sla_pct": 100.0,
-              "cost": 9865
+              "cost": 7561
             }
           ],
           "top_companies": [
@@ -23148,7 +23148,7 @@ const BILLZ_DATA = {
               "tickets": 87,
               "desired": 7,
               "undesired": 73,
-              "cost": 858255,
+              "cost": 657807,
               "top_labels": [
                 {
                   "label": "Учётная запись - Блокировка/Разблокировка аккаунта",
@@ -23169,7 +23169,7 @@ const BILLZ_DATA = {
               "tickets": 7,
               "desired": 3,
               "undesired": 3,
-              "cost": 69055,
+              "cost": 52927,
               "top_labels": [
                 {
                   "label": "Учётная запись - Помощь со входом в аккаунт",
@@ -23190,7 +23190,7 @@ const BILLZ_DATA = {
               "tickets": 7,
               "desired": 0,
               "undesired": 5,
-              "cost": 69055,
+              "cost": 52927,
               "top_labels": [
                 {
                   "label": "Программа лояльности - Редактирование/Настройки уровней",
@@ -23211,7 +23211,7 @@ const BILLZ_DATA = {
               "tickets": 6,
               "desired": 0,
               "undesired": 5,
-              "cost": 59190,
+              "cost": 45366,
               "top_labels": [
                 {
                   "label": "Каталог — изменение свойств товара",
@@ -23232,7 +23232,7 @@ const BILLZ_DATA = {
               "tickets": 6,
               "desired": 0,
               "undesired": 6,
-              "cost": 59190,
+              "cost": 45366,
               "top_labels": [
                 {
                   "label": "Документооборот - Оплата за тариф",
@@ -23266,7 +23266,7 @@ const BILLZ_DATA = {
           "sla_pct": 74.8,
           "sla_not_met": 25.2,
           "avg_close_h": 0.07,
-          "cost": 4932500,
+          "cost": 3780500,
           "csat_pct": 96.3,
           "csat_rated": 27,
           "repeat_pct": 9.6,
@@ -23304,49 +23304,49 @@ const BILLZ_DATA = {
               "name": "Документооборот - Оплата за тариф",
               "tickets": 76,
               "undesired": 45,
-              "cost": 749740
+              "cost": 574636
             },
             {
               "name": "Документооборот - Создание ссылки для оплаты",
               "tickets": 21,
               "undesired": 18,
-              "cost": 207165
+              "cost": 158781
             },
             {
               "name": "Учётная запись - Блокировка/Разблокировка аккаунта",
               "tickets": 19,
               "undesired": 12,
-              "cost": 187435
+              "cost": 143659
             },
             {
               "name": "Оборудование - Установка/Настройка/Удаление принтера",
               "tickets": 19,
               "undesired": 9,
-              "cost": 187435
+              "cost": 143659
             },
             {
               "name": "Учётная запись - Создание магазина",
               "tickets": 14,
               "undesired": 8,
-              "cost": 138110
+              "cost": 105854
             },
             {
               "name": "Каталог — настройка печати ценника",
               "tickets": 13,
               "undesired": 9,
-              "cost": 128245
+              "cost": 98293
             },
             {
               "name": "Учётная запись - Помощь со входом в аккаунт",
               "tickets": 13,
               "undesired": 9,
-              "cost": 128245
+              "cost": 98293
             },
             {
               "name": "Каталог — изменение свойств товара",
               "tickets": 11,
               "undesired": 3,
-              "cost": 108515
+              "cost": 83171
             }
           ],
           "operators": [
@@ -23358,7 +23358,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 4,
               "sla_pct": 88.4,
-              "cost": 1025960
+              "cost": 786344
             },
             {
               "name": "Атабек",
@@ -23368,7 +23368,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 3,
               "sla_pct": 64.9,
-              "cost": 749740
+              "cost": 574636
             },
             {
               "name": "Авазбек",
@@ -23378,7 +23378,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 1,
               "sla_pct": 78.1,
-              "cost": 660955
+              "cost": 506587
             },
             {
               "name": "Робия Р.",
@@ -23388,7 +23388,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 5,
               "sla_pct": 77.8,
-              "cost": 591900
+              "cost": 453660
             },
             {
               "name": "Алиёр",
@@ -23398,7 +23398,7 @@ const BILLZ_DATA = {
               "rating_pct": 83.3,
               "rated": 6,
               "sla_pct": 75.0,
-              "cost": 572170
+              "cost": 438538
             },
             {
               "name": "Тожмухаммад",
@@ -23408,7 +23408,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 3,
               "sla_pct": 90.9,
-              "cost": 562305
+              "cost": 430977
             },
             {
               "name": "Сардор Б.",
@@ -23418,7 +23418,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 3,
               "sla_pct": 70.6,
-              "cost": 512980
+              "cost": 393172
             },
             {
               "name": "Нурлан",
@@ -23428,7 +23428,7 @@ const BILLZ_DATA = {
               "rating_pct": 0.0,
               "rated": 0,
               "sla_pct": 61.5,
-              "cost": 128245
+              "cost": 98293
             },
             {
               "name": "Камолиддин",
@@ -23438,7 +23438,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 2,
               "sla_pct": 40.0,
-              "cost": 98650
+              "cost": 75610
             },
             {
               "name": "Ардак",
@@ -23448,7 +23448,7 @@ const BILLZ_DATA = {
               "rating_pct": 0.0,
               "rated": 0,
               "sla_pct": 100.0,
-              "cost": 9865
+              "cost": 7561
             },
             {
               "name": "Нурилло",
@@ -23458,7 +23458,7 @@ const BILLZ_DATA = {
               "rating_pct": 0.0,
               "rated": 0,
               "sla_pct": 100.0,
-              "cost": 9865
+              "cost": 7561
             },
             {
               "name": "Дильшод",
@@ -23468,7 +23468,7 @@ const BILLZ_DATA = {
               "rating_pct": 0.0,
               "rated": 0,
               "sla_pct": 0.0,
-              "cost": 9865
+              "cost": 7561
             }
           ],
           "top_companies": [
@@ -23477,7 +23477,7 @@ const BILLZ_DATA = {
               "tickets": 105,
               "desired": 17,
               "undesired": 72,
-              "cost": 1035825,
+              "cost": 793905,
               "top_labels": [
                 {
                   "label": "Документооборот - Оплата за тариф",
@@ -23498,7 +23498,7 @@ const BILLZ_DATA = {
               "tickets": 9,
               "desired": 4,
               "undesired": 5,
-              "cost": 88785,
+              "cost": 68049,
               "top_labels": [
                 {
                   "label": "Кассовые смены — Расхождение суммы",
@@ -23519,7 +23519,7 @@ const BILLZ_DATA = {
               "tickets": 6,
               "desired": 4,
               "undesired": 1,
-              "cost": 59190,
+              "cost": 45366,
               "top_labels": [
                 {
                   "label": "Desktop - Ошибка синхронизации",
@@ -23540,7 +23540,7 @@ const BILLZ_DATA = {
               "tickets": 6,
               "desired": 2,
               "undesired": 4,
-              "cost": 59190,
+              "cost": 45366,
               "top_labels": [
                 {
                   "label": "Документооборот - Оплата за тариф",
@@ -23561,7 +23561,7 @@ const BILLZ_DATA = {
               "tickets": 5,
               "desired": 3,
               "undesired": 2,
-              "cost": 49325,
+              "cost": 37805,
               "top_labels": [
                 {
                   "label": "Документооборот - Оплата за тариф",
@@ -23599,7 +23599,7 @@ const BILLZ_DATA = {
           "sla_pct": 80.9,
           "sla_not_met": 19.1,
           "avg_close_h": 0.07,
-          "cost": 4005190,
+          "cost": 3069766,
           "csat_pct": 96.2,
           "csat_rated": 26,
           "repeat_pct": 10.1,
@@ -23635,49 +23635,49 @@ const BILLZ_DATA = {
               "name": "Документооборот - Оплата за тариф",
               "tickets": 23,
               "undesired": 8,
-              "cost": 226895
+              "cost": 173903
             },
             {
               "name": "Документооборот - Создание ссылки для оплаты",
               "tickets": 22,
               "undesired": 18,
-              "cost": 217030
+              "cost": 166342
             },
             {
               "name": "Оборудование - Установка/Настройка/Удаление принтера",
               "tickets": 20,
               "undesired": 2,
-              "cost": 197300
+              "cost": 151220
             },
             {
               "name": "Учётная запись - Блокировка/Разблокировка аккаунта",
               "tickets": 13,
               "undesired": 8,
-              "cost": 128245
+              "cost": 98293
             },
             {
               "name": "Учётная запись - Помощь со входом в аккаунт",
               "tickets": 11,
               "undesired": 5,
-              "cost": 108515
+              "cost": 83171
             },
             {
               "name": "Кассовые смены — Открытие/Закрытие смен",
               "tickets": 9,
               "undesired": 7,
-              "cost": 88785
+              "cost": 68049
             },
             {
               "name": "Каталог — настройка печати ценника",
               "tickets": 8,
               "undesired": 0,
-              "cost": 78920
+              "cost": 60488
             },
             {
               "name": "Управление - Создание/Редактирвоание/Удаление сотрудника",
               "tickets": 8,
               "undesired": 3,
-              "cost": 78920
+              "cost": 60488
             }
           ],
           "operators": [
@@ -23689,7 +23689,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 7,
               "sla_pct": 87.0,
-              "cost": 591900
+              "cost": 453660
             },
             {
               "name": "Атабек",
@@ -23699,7 +23699,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 1,
               "sla_pct": 80.0,
-              "cost": 552440
+              "cost": 423416
             },
             {
               "name": "Робия Р.",
@@ -23709,7 +23709,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 8,
               "sla_pct": 81.1,
-              "cost": 552440
+              "cost": 423416
             },
             {
               "name": "Сардор Б.",
@@ -23719,7 +23719,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 3,
               "sla_pct": 81.8,
-              "cost": 552440
+              "cost": 423416
             },
             {
               "name": "Ардак",
@@ -23729,7 +23729,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 1,
               "sla_pct": 76.5,
-              "cost": 532710
+              "cost": 408294
             },
             {
               "name": "Авазбек",
@@ -23739,7 +23739,7 @@ const BILLZ_DATA = {
               "rating_pct": 80.0,
               "rated": 5,
               "sla_pct": 76.0,
-              "cost": 503115
+              "cost": 385611
             },
             {
               "name": "Нурилло",
@@ -23749,7 +23749,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 1,
               "sla_pct": 100.0,
-              "cost": 404465
+              "cost": 310001
             },
             {
               "name": "Камолиддин",
@@ -23759,7 +23759,7 @@ const BILLZ_DATA = {
               "rating_pct": 0.0,
               "rated": 0,
               "sla_pct": 73.3,
-              "cost": 157840
+              "cost": 120976
             },
             {
               "name": "Дильшод",
@@ -23769,7 +23769,7 @@ const BILLZ_DATA = {
               "rating_pct": 0.0,
               "rated": 0,
               "sla_pct": 100.0,
-              "cost": 147975
+              "cost": 113415
             },
             {
               "name": "Алиёр",
@@ -23779,7 +23779,7 @@ const BILLZ_DATA = {
               "rating_pct": 0.0,
               "rated": 0,
               "sla_pct": 100.0,
-              "cost": 9865
+              "cost": 7561
             }
           ],
           "top_companies": [
@@ -23788,7 +23788,7 @@ const BILLZ_DATA = {
               "tickets": 78,
               "desired": 30,
               "undesired": 45,
-              "cost": 769470,
+              "cost": 589758,
               "top_labels": [
                 {
                   "label": "Документооборот - Создание ссылки для оплаты",
@@ -23809,7 +23809,7 @@ const BILLZ_DATA = {
               "tickets": 7,
               "desired": 0,
               "undesired": 7,
-              "cost": 69055,
+              "cost": 52927,
               "top_labels": [
                 {
                   "label": "Кассовые смены — Открытие/Закрытие смен",
@@ -23826,7 +23826,7 @@ const BILLZ_DATA = {
               "tickets": 5,
               "desired": 4,
               "undesired": 1,
-              "cost": 49325,
+              "cost": 37805,
               "top_labels": [
                 {
                   "label": "Оборудование - Установка/Настройка/Удаление принтера",
@@ -23839,7 +23839,7 @@ const BILLZ_DATA = {
               "tickets": 5,
               "desired": 5,
               "undesired": 0,
-              "cost": 49325,
+              "cost": 37805,
               "top_labels": [
                 {
                   "label": "Учётная запись - Сброс пароля",
@@ -23856,7 +23856,7 @@ const BILLZ_DATA = {
               "tickets": 4,
               "desired": 3,
               "undesired": 1,
-              "cost": 39460,
+              "cost": 30244,
               "top_labels": [
                 {
                   "label": "Документооборот - Оплата за тариф",
@@ -23894,7 +23894,7 @@ const BILLZ_DATA = {
           "sla_pct": 68.6,
           "sla_not_met": 31.4,
           "avg_close_h": 0.07,
-          "cost": 3275180,
+          "cost": 2510252,
           "csat_pct": 96.0,
           "csat_rated": 25,
           "repeat_pct": 9.6,
@@ -23929,49 +23929,49 @@ const BILLZ_DATA = {
               "name": "Документооборот - Оплата за тариф",
               "tickets": 17,
               "undesired": 11,
-              "cost": 167705
+              "cost": 128537
             },
             {
               "name": "Учётная запись - Блокировка/Разблокировка аккаунта",
               "tickets": 15,
               "undesired": 5,
-              "cost": 147975
+              "cost": 113415
             },
             {
               "name": "Управление - Создание/Редактирвоание/Удаление роли",
               "tickets": 12,
               "undesired": 3,
-              "cost": 118380
+              "cost": 90732
             },
             {
               "name": "Оборудование - Установка/Настройка/Удаление принтера",
               "tickets": 11,
               "undesired": 5,
-              "cost": 108515
+              "cost": 83171
             },
             {
               "name": "Каталог — изменение свойств товара",
               "tickets": 10,
               "undesired": 6,
-              "cost": 98650
+              "cost": 75610
             },
             {
               "name": "Каталог — настройка печати ценника",
               "tickets": 9,
               "undesired": 4,
-              "cost": 88785
+              "cost": 68049
             },
             {
               "name": "Документооборот - Создание ссылки для оплаты",
               "tickets": 9,
               "undesired": 8,
-              "cost": 88785
+              "cost": 68049
             },
             {
               "name": "Учётная запись - Помощь со входом в аккаунт",
               "tickets": 8,
               "undesired": 6,
-              "cost": 78920
+              "cost": 60488
             }
           ],
           "operators": [
@@ -23983,7 +23983,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 1,
               "sla_pct": 95.7,
-              "cost": 582035
+              "cost": 446099
             },
             {
               "name": "Ардак",
@@ -23993,7 +23993,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 3,
               "sla_pct": 46.7,
-              "cost": 532710
+              "cost": 408294
             },
             {
               "name": "Сардор Б.",
@@ -24003,7 +24003,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 3,
               "sla_pct": 71.4,
-              "cost": 493250
+              "cost": 378050
             },
             {
               "name": "Алиёр",
@@ -24013,7 +24013,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 4,
               "sla_pct": 75.0,
-              "cost": 463655
+              "cost": 355367
             },
             {
               "name": "Нурилло",
@@ -24023,7 +24023,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 5,
               "sla_pct": 80.0,
-              "cost": 463655
+              "cost": 355367
             },
             {
               "name": "Тожмухаммад",
@@ -24033,7 +24033,7 @@ const BILLZ_DATA = {
               "rating_pct": 75.0,
               "rated": 4,
               "sla_pct": 70.0,
-              "cost": 443925
+              "cost": 340245
             },
             {
               "name": "Камолиддин",
@@ -24043,7 +24043,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 1,
               "sla_pct": 58.8,
-              "cost": 167705
+              "cost": 128537
             },
             {
               "name": "Дильшод",
@@ -24053,7 +24053,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 4,
               "sla_pct": 0.0,
-              "cost": 118380
+              "cost": 90732
             },
             {
               "name": "Атабек",
@@ -24063,7 +24063,7 @@ const BILLZ_DATA = {
               "rating_pct": 0.0,
               "rated": 0,
               "sla_pct": 0.0,
-              "cost": 9865
+              "cost": 7561
             }
           ],
           "top_companies": [
@@ -24072,7 +24072,7 @@ const BILLZ_DATA = {
               "tickets": 67,
               "desired": 32,
               "undesired": 33,
-              "cost": 660955,
+              "cost": 506587,
               "top_labels": [
                 {
                   "label": "Учётная запись - Блокировка/Разблокировка аккаунта",
@@ -24093,7 +24093,7 @@ const BILLZ_DATA = {
               "tickets": 8,
               "desired": 4,
               "undesired": 4,
-              "cost": 78920,
+              "cost": 60488,
               "top_labels": [
                 {
                   "label": "Баг (реквест)",
@@ -24114,7 +24114,7 @@ const BILLZ_DATA = {
               "tickets": 5,
               "desired": 2,
               "undesired": 2,
-              "cost": 49325,
+              "cost": 37805,
               "top_labels": [
                 {
                   "label": "Desktop - Ошибка синхронизации",
@@ -24135,7 +24135,7 @@ const BILLZ_DATA = {
               "tickets": 5,
               "desired": 1,
               "undesired": 4,
-              "cost": 49325,
+              "cost": 37805,
               "top_labels": [
                 {
                   "label": "Каталог — изменение свойств товара",
@@ -24152,7 +24152,7 @@ const BILLZ_DATA = {
               "tickets": 3,
               "desired": 0,
               "undesired": 3,
-              "cost": 29595,
+              "cost": 22683,
               "top_labels": [
                 {
                   "label": "Документооборот - Оплата за тариф",
@@ -24194,7 +24194,7 @@ const BILLZ_DATA = {
           "sla_pct": 90.3,
           "sla_not_met": 9.7,
           "avg_close_h": 0.07,
-          "cost": 3709240,
+          "cost": 2842936,
           "csat_pct": 95.7,
           "csat_rated": 23,
           "repeat_pct": 12.0,
@@ -24229,49 +24229,49 @@ const BILLZ_DATA = {
               "name": "Оборудование - Установка/Настройка/Удаление принтера",
               "tickets": 15,
               "undesired": 6,
-              "cost": 147975
+              "cost": 113415
             },
             {
               "name": "Документооборот - Оплата за тариф",
               "tickets": 14,
               "undesired": 10,
-              "cost": 138110
+              "cost": 105854
             },
             {
               "name": "Вопрос не по программе",
               "tickets": 14,
               "undesired": 13,
-              "cost": 138110
+              "cost": 105854
             },
             {
               "name": "Учётная запись - Блокировка/Разблокировка аккаунта",
               "tickets": 12,
               "undesired": 6,
-              "cost": 118380
+              "cost": 90732
             },
             {
               "name": "Документооборот - Создание ссылки для оплаты",
               "tickets": 12,
               "undesired": 12,
-              "cost": 118380
+              "cost": 90732
             },
             {
               "name": "Учётная запись - Помощь со входом в аккаунт",
               "tickets": 10,
               "undesired": 10,
-              "cost": 98650
+              "cost": 75610
             },
             {
               "name": "Управление - Создание/Редактирвоание/Удаление роли",
               "tickets": 9,
               "undesired": 2,
-              "cost": 88785
+              "cost": 68049
             },
             {
               "name": "Каталог — изменение свойств товара",
               "tickets": 8,
               "undesired": 5,
-              "cost": 78920
+              "cost": 60488
             }
           ],
           "operators": [
@@ -24283,7 +24283,7 @@ const BILLZ_DATA = {
               "rating_pct": 85.7,
               "rated": 7,
               "sla_pct": 93.8,
-              "cost": 730010
+              "cost": 559514
             },
             {
               "name": "Атабек",
@@ -24293,7 +24293,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 3,
               "sla_pct": 79.2,
-              "cost": 710280
+              "cost": 544392
             },
             {
               "name": "Робия Р.",
@@ -24303,7 +24303,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 4,
               "sla_pct": 92.9,
-              "cost": 552440
+              "cost": 423416
             },
             {
               "name": "Нурилло",
@@ -24313,7 +24313,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 2,
               "sla_pct": 95.0,
-              "cost": 552440
+              "cost": 423416
             },
             {
               "name": "Авазбек",
@@ -24323,7 +24323,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 3,
               "sla_pct": 95.7,
-              "cost": 463655
+              "cost": 355367
             },
             {
               "name": "Тожмухаммад",
@@ -24333,7 +24333,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 2,
               "sla_pct": 81.8,
-              "cost": 404465
+              "cost": 310001
             },
             {
               "name": "Дильшод",
@@ -24343,7 +24343,7 @@ const BILLZ_DATA = {
               "rating_pct": 0.0,
               "rated": 0,
               "sla_pct": 100.0,
-              "cost": 147975
+              "cost": 113415
             },
             {
               "name": "Камолиддин",
@@ -24353,7 +24353,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 2,
               "sla_pct": 85.7,
-              "cost": 138110
+              "cost": 105854
             },
             {
               "name": "Ардак",
@@ -24363,7 +24363,7 @@ const BILLZ_DATA = {
               "rating_pct": 0.0,
               "rated": 0,
               "sla_pct": 0.0,
-              "cost": 9865
+              "cost": 7561
             }
           ],
           "top_companies": [
@@ -24372,7 +24372,7 @@ const BILLZ_DATA = {
               "tickets": 72,
               "desired": 17,
               "undesired": 53,
-              "cost": 710280,
+              "cost": 544392,
               "top_labels": [
                 {
                   "label": "Учётная запись - Блокировка/Разблокировка аккаунта",
@@ -24393,7 +24393,7 @@ const BILLZ_DATA = {
               "tickets": 6,
               "desired": 2,
               "undesired": 4,
-              "cost": 59190,
+              "cost": 45366,
               "top_labels": [
                 {
                   "label": "Desktop - Ошибка синхронизации",
@@ -24414,7 +24414,7 @@ const BILLZ_DATA = {
               "tickets": 6,
               "desired": 3,
               "undesired": 3,
-              "cost": 59190,
+              "cost": 45366,
               "top_labels": [
                 {
                   "label": "Управление - Создание/Редактирвоание/Удаление роли",
@@ -24431,7 +24431,7 @@ const BILLZ_DATA = {
               "tickets": 5,
               "desired": 3,
               "undesired": 2,
-              "cost": 49325,
+              "cost": 37805,
               "top_labels": [
                 {
                   "label": "Оборудование - Установка/Настройка/Удаление принтера",
@@ -24452,7 +24452,7 @@ const BILLZ_DATA = {
               "tickets": 4,
               "desired": 4,
               "undesired": 0,
-              "cost": 39460,
+              "cost": 30244,
               "top_labels": [
                 {
                   "label": "Кассовые операции - Создание дохода/расхода/инкассации",
@@ -24494,7 +24494,7 @@ const BILLZ_DATA = {
           "sla_pct": 68.6,
           "sla_not_met": 31.4,
           "avg_close_h": 0.07,
-          "cost": 3738835,
+          "cost": 2865619,
           "csat_pct": 84.2,
           "csat_rated": 19,
           "repeat_pct": 10.8,
@@ -24529,49 +24529,49 @@ const BILLZ_DATA = {
               "name": "Учётная запись - Помощь со входом в аккаунт",
               "tickets": 25,
               "undesired": 18,
-              "cost": 246625
+              "cost": 189025
             },
             {
               "name": "Документооборот - Оплата за тариф",
               "tickets": 19,
               "undesired": 11,
-              "cost": 187435
+              "cost": 143659
             },
             {
               "name": "Оборудование - Установка/Настройка/Удаление принтера",
               "tickets": 18,
               "undesired": 6,
-              "cost": 177570
+              "cost": 136098
             },
             {
               "name": "Учётная запись - Блокировка/Разблокировка аккаунта",
               "tickets": 14,
               "undesired": 8,
-              "cost": 138110
+              "cost": 105854
             },
             {
               "name": "Документооборот - Создание ссылки для оплаты",
               "tickets": 11,
               "undesired": 11,
-              "cost": 108515
+              "cost": 83171
             },
             {
               "name": "Новая продажа - Не удаётся сделать продажу",
               "tickets": 10,
               "undesired": 6,
-              "cost": 98650
+              "cost": 75610
             },
             {
               "name": "Вопрос не по программе",
               "tickets": 8,
               "undesired": 6,
-              "cost": 78920
+              "cost": 60488
             },
             {
               "name": "Массовый сбой BILLZ",
               "tickets": 7,
               "undesired": 2,
-              "cost": 69055
+              "cost": 52927
             }
           ],
           "operators": [
@@ -24583,7 +24583,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 3,
               "sla_pct": 86.1,
-              "cost": 739875
+              "cost": 567075
             },
             {
               "name": "Сардор Б.",
@@ -24593,7 +24593,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 1,
               "sla_pct": 50.0,
-              "cost": 611630
+              "cost": 468782
             },
             {
               "name": "Тожмухаммад",
@@ -24603,7 +24603,7 @@ const BILLZ_DATA = {
               "rating_pct": 80.0,
               "rated": 5,
               "sla_pct": 76.5,
-              "cost": 562305
+              "cost": 430977
             },
             {
               "name": "Авазбек",
@@ -24613,7 +24613,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 2,
               "sla_pct": 60.9,
-              "cost": 522845
+              "cost": 400733
             },
             {
               "name": "Алиёр",
@@ -24623,7 +24623,7 @@ const BILLZ_DATA = {
               "rating_pct": 0.0,
               "rated": 0,
               "sla_pct": 56.2,
-              "cost": 473520
+              "cost": 362928
             },
             {
               "name": "Нурилло",
@@ -24633,7 +24633,7 @@ const BILLZ_DATA = {
               "rating_pct": 66.7,
               "rated": 3,
               "sla_pct": 83.3,
-              "cost": 374870
+              "cost": 287318
             },
             {
               "name": "Робия Р.",
@@ -24643,7 +24643,7 @@ const BILLZ_DATA = {
               "rating_pct": 75.0,
               "rated": 4,
               "sla_pct": 64.0,
-              "cost": 365005
+              "cost": 279757
             },
             {
               "name": "Камолиддин",
@@ -24653,7 +24653,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 1,
               "sla_pct": 66.7,
-              "cost": 59190
+              "cost": 45366
             },
             {
               "name": "Дильшод",
@@ -24663,7 +24663,7 @@ const BILLZ_DATA = {
               "rating_pct": 0.0,
               "rated": 0,
               "sla_pct": 0.0,
-              "cost": 29595
+              "cost": 22683
             }
           ],
           "top_companies": [
@@ -24672,7 +24672,7 @@ const BILLZ_DATA = {
               "tickets": 71,
               "desired": 21,
               "undesired": 40,
-              "cost": 700415,
+              "cost": 536831,
               "top_labels": [
                 {
                   "label": "Документооборот - Создание ссылки для оплаты",
@@ -24693,7 +24693,7 @@ const BILLZ_DATA = {
               "tickets": 4,
               "desired": 1,
               "undesired": 3,
-              "cost": 39460,
+              "cost": 30244,
               "top_labels": [
                 {
                   "label": "Баг (реквест)",
@@ -24714,7 +24714,7 @@ const BILLZ_DATA = {
               "tickets": 4,
               "desired": 1,
               "undesired": 3,
-              "cost": 39460,
+              "cost": 30244,
               "top_labels": [
                 {
                   "label": "Настройка - Установка BILLZ PAY/Payme/Epos/PAX",
@@ -24735,7 +24735,7 @@ const BILLZ_DATA = {
               "tickets": 4,
               "desired": 3,
               "undesired": 1,
-              "cost": 39460,
+              "cost": 30244,
               "top_labels": [
                 {
                   "label": "Новая продажа - Не удаётся сделать продажу",
@@ -24752,7 +24752,7 @@ const BILLZ_DATA = {
               "tickets": 4,
               "desired": 1,
               "undesired": 0,
-              "cost": 39460,
+              "cost": 30244,
               "top_labels": [
                 {
                   "label": "Оборудование - Установка/Настройка/Удаление принтера",
@@ -24790,7 +24790,7 @@ const BILLZ_DATA = {
           "sla_pct": 76.5,
           "sla_not_met": 23.5,
           "avg_close_h": 0.07,
-          "cost": 4182760,
+          "cost": 3205864,
           "csat_pct": 100.0,
           "csat_rated": 26,
           "repeat_pct": 5.9,
@@ -24829,49 +24829,49 @@ const BILLZ_DATA = {
               "name": "Учётная запись - Помощь со входом в аккаунт",
               "tickets": 84,
               "undesired": 48,
-              "cost": 828660
+              "cost": 635124
             },
             {
               "name": "Документооборот - Оплата за тариф",
               "tickets": 18,
               "undesired": 8,
-              "cost": 177570
+              "cost": 136098
             },
             {
               "name": "Оборудование - Установка/Настройка/Удаление принтера",
               "tickets": 15,
               "undesired": 7,
-              "cost": 147975
+              "cost": 113415
             },
             {
               "name": "Инвентаризация — консультация по модулю (частичное обучение)",
               "tickets": 9,
               "undesired": 3,
-              "cost": 88785
+              "cost": 68049
             },
             {
               "name": "Учётная запись - Блокировка/Разблокировка аккаунта",
               "tickets": 9,
               "undesired": 7,
-              "cost": 88785
+              "cost": 68049
             },
             {
               "name": "Кассовые смены — Открытие/Закрытие смен",
               "tickets": 8,
               "undesired": 3,
-              "cost": 78920
+              "cost": 60488
             },
             {
               "name": "Каталог — настройка печати ценника",
               "tickets": 6,
               "undesired": 2,
-              "cost": 59190
+              "cost": 45366
             },
             {
               "name": "Документооборот - Консультация по сумме долга",
               "tickets": 5,
               "undesired": 3,
-              "cost": 49325
+              "cost": 37805
             }
           ],
           "operators": [
@@ -24883,7 +24883,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 6,
               "sla_pct": 85.2,
-              "cost": 986500
+              "cost": 756100
             },
             {
               "name": "Атабек",
@@ -24893,7 +24893,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 6,
               "sla_pct": 91.4,
-              "cost": 700415
+              "cost": 536831
             },
             {
               "name": "Нурилло",
@@ -24903,7 +24903,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 3,
               "sla_pct": 72.7,
-              "cost": 651090
+              "cost": 499026
             },
             {
               "name": "Ардак",
@@ -24913,7 +24913,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 3,
               "sla_pct": 66.7,
-              "cost": 601765
+              "cost": 461221
             },
             {
               "name": "Авазбек",
@@ -24923,7 +24923,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 5,
               "sla_pct": 88.5,
-              "cost": 601765
+              "cost": 461221
             },
             {
               "name": "Тожмухаммад",
@@ -24933,7 +24933,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 3,
               "sla_pct": 63.2,
-              "cost": 552440
+              "cost": 423416
             },
             {
               "name": "Дильшод",
@@ -24943,7 +24943,7 @@ const BILLZ_DATA = {
               "rating_pct": 0.0,
               "rated": 0,
               "sla_pct": 0.0,
-              "cost": 88785
+              "cost": 68049
             }
           ],
           "top_companies": [
@@ -24952,7 +24952,7 @@ const BILLZ_DATA = {
               "tickets": 52,
               "desired": 13,
               "undesired": 25,
-              "cost": 512980,
+              "cost": 393172,
               "top_labels": [
                 {
                   "label": "Учётная запись - Блокировка/Разблокировка аккаунта",
@@ -24973,7 +24973,7 @@ const BILLZ_DATA = {
               "tickets": 10,
               "desired": 5,
               "undesired": 2,
-              "cost": 98650,
+              "cost": 75610,
               "top_labels": [
                 {
                   "label": "Инвентаризация — консультация по модулю (частичное обучение)",
@@ -24990,7 +24990,7 @@ const BILLZ_DATA = {
               "tickets": 6,
               "desired": 3,
               "undesired": 3,
-              "cost": 59190,
+              "cost": 45366,
               "top_labels": [
                 {
                   "label": "Импорт — импорт товаров через Excel",
@@ -25011,7 +25011,7 @@ const BILLZ_DATA = {
               "tickets": 5,
               "desired": 5,
               "undesired": 0,
-              "cost": 49325,
+              "cost": 37805,
               "top_labels": [
                 {
                   "label": "Новая продажа - Не удаётся сделать продажу",
@@ -25032,7 +25032,7 @@ const BILLZ_DATA = {
               "tickets": 4,
               "desired": 1,
               "undesired": 2,
-              "cost": 39460,
+              "cost": 30244,
               "top_labels": [
                 {
                   "label": "Кассовые смены — Открытие/Закрытие смен",
@@ -25070,7 +25070,7 @@ const BILLZ_DATA = {
           "sla_pct": 78.2,
           "sla_not_met": 21.8,
           "avg_close_h": 0.05,
-          "cost": 2535305,
+          "cost": 1943177,
           "csat_pct": 94.7,
           "csat_rated": 19,
           "repeat_pct": 6.2,
@@ -25107,49 +25107,49 @@ const BILLZ_DATA = {
               "name": "Учётная запись - Помощь со входом в аккаунт",
               "tickets": 17,
               "undesired": 13,
-              "cost": 167705
+              "cost": 128537
             },
             {
               "name": "Оборудование - Установка/Настройка/Удаление принтера",
               "tickets": 16,
               "undesired": 6,
-              "cost": 157840
+              "cost": 120976
             },
             {
               "name": "Документооборот - Оплата за тариф",
               "tickets": 11,
               "undesired": 5,
-              "cost": 108515
+              "cost": 83171
             },
             {
               "name": "Учётная запись - Блокировка/Разблокировка аккаунта",
               "tickets": 8,
               "undesired": 4,
-              "cost": 78920
+              "cost": 60488
             },
             {
               "name": "Каталог — запрос на добавление товара",
               "tickets": 8,
               "undesired": 5,
-              "cost": 78920
+              "cost": 60488
             },
             {
               "name": "Каталог — изменение свойств товара",
               "tickets": 7,
               "undesired": 4,
-              "cost": 69055
+              "cost": 52927
             },
             {
               "name": "Управление - Создание/Редактирвоание/Удаление роли",
               "tickets": 7,
               "undesired": 2,
-              "cost": 69055
+              "cost": 52927
             },
             {
               "name": "Кассовые смены — Открытие/Закрытие смен",
               "tickets": 6,
               "undesired": 1,
-              "cost": 59190
+              "cost": 45366
             }
           ],
           "operators": [
@@ -25161,7 +25161,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 3,
               "sla_pct": 81.2,
-              "cost": 522845
+              "cost": 400733
             },
             {
               "name": "Алиёр",
@@ -25171,7 +25171,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 5,
               "sla_pct": 83.3,
-              "cost": 483385
+              "cost": 370489
             },
             {
               "name": "Нурилло",
@@ -25181,7 +25181,7 @@ const BILLZ_DATA = {
               "rating_pct": 66.7,
               "rated": 3,
               "sla_pct": 85.7,
-              "cost": 453790
+              "cost": 347806
             },
             {
               "name": "Сардор Б.",
@@ -25191,7 +25191,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 2,
               "sla_pct": 87.5,
-              "cost": 434060
+              "cost": 332684
             },
             {
               "name": "Атабек",
@@ -25201,7 +25201,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 3,
               "sla_pct": 88.9,
-              "cost": 394600
+              "cost": 302440
             },
             {
               "name": "Робия Р.",
@@ -25211,7 +25211,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 2,
               "sla_pct": 55.0,
-              "cost": 236760
+              "cost": 181464
             },
             {
               "name": "Авазбек",
@@ -25221,7 +25221,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 1,
               "sla_pct": 0.0,
-              "cost": 9865
+              "cost": 7561
             }
           ],
           "top_companies": [
@@ -25230,7 +25230,7 @@ const BILLZ_DATA = {
               "tickets": 37,
               "desired": 18,
               "undesired": 16,
-              "cost": 365005,
+              "cost": 279757,
               "top_labels": [
                 {
                   "label": "Учётная запись - Блокировка/Разблокировка аккаунта",
@@ -25251,7 +25251,7 @@ const BILLZ_DATA = {
               "tickets": 9,
               "desired": 4,
               "undesired": 4,
-              "cost": 88785,
+              "cost": 68049,
               "top_labels": [
                 {
                   "label": "Баг (реквест), Кассовые смены — Расхождение суммы",
@@ -25272,7 +25272,7 @@ const BILLZ_DATA = {
               "tickets": 6,
               "desired": 6,
               "undesired": 0,
-              "cost": 59190,
+              "cost": 45366,
               "top_labels": [
                 {
                   "label": "SMS рассылка - Шаблонирование",
@@ -25293,7 +25293,7 @@ const BILLZ_DATA = {
               "tickets": 5,
               "desired": 4,
               "undesired": 1,
-              "cost": 49325,
+              "cost": 37805,
               "top_labels": [
                 {
                   "label": "Каталог — запрос на добавление товара",
@@ -25314,7 +25314,7 @@ const BILLZ_DATA = {
               "tickets": 5,
               "desired": 2,
               "undesired": 2,
-              "cost": 49325,
+              "cost": 37805,
               "top_labels": [
                 {
                   "label": "Общались по звонку, Акции - Создание/Редактирование/Удаление акции",
@@ -25356,7 +25356,7 @@ const BILLZ_DATA = {
           "sla_pct": 81.2,
           "sla_not_met": 18.8,
           "avg_close_h": 0.04,
-          "cost": 3936135,
+          "cost": 3016839,
           "csat_pct": 95.0,
           "csat_rated": 20,
           "repeat_pct": 11.0,
@@ -25392,49 +25392,49 @@ const BILLZ_DATA = {
               "name": "Оборудование - Установка/Настройка/Удаление принтера",
               "tickets": 26,
               "undesired": 5,
-              "cost": 256490
+              "cost": 196586
             },
             {
               "name": "Вопрос не по программе",
               "tickets": 16,
               "undesired": 6,
-              "cost": 157840
+              "cost": 120976
             },
             {
               "name": "Документооборот - Оплата за тариф",
               "tickets": 12,
               "undesired": 11,
-              "cost": 118380
+              "cost": 90732
             },
             {
               "name": "Документооборот - Создание ссылки для оплаты",
               "tickets": 12,
               "undesired": 8,
-              "cost": 118380
+              "cost": 90732
             },
             {
               "name": "Учётная запись - Помощь со входом в аккаунт",
               "tickets": 10,
               "undesired": 8,
-              "cost": 98650
+              "cost": 75610
             },
             {
               "name": "Учётная запись - Блокировка/Разблокировка аккаунта",
               "tickets": 10,
               "undesired": 3,
-              "cost": 98650
+              "cost": 75610
             },
             {
               "name": "Каталог — настройка печати ценника",
               "tickets": 9,
               "undesired": 3,
-              "cost": 88785
+              "cost": 68049
             },
             {
               "name": "Учётная запись - Создание магазина",
               "tickets": 8,
               "undesired": 1,
-              "cost": 78920
+              "cost": 60488
             }
           ],
           "operators": [
@@ -25446,7 +25446,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 5,
               "sla_pct": 89.7,
-              "cost": 818795
+              "cost": 627563
             },
             {
               "name": "Иззатбек",
@@ -25456,7 +25456,7 @@ const BILLZ_DATA = {
               "rating_pct": 0.0,
               "rated": 0,
               "sla_pct": 73.3,
-              "cost": 779335
+              "cost": 597319
             },
             {
               "name": "Авазбек",
@@ -25466,7 +25466,7 @@ const BILLZ_DATA = {
               "rating_pct": 50.0,
               "rated": 2,
               "sla_pct": 83.3,
-              "cost": 631360
+              "cost": 483904
             },
             {
               "name": "Сардор Б.",
@@ -25476,7 +25476,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 3,
               "sla_pct": 80.0,
-              "cost": 572170
+              "cost": 438538
             },
             {
               "name": "Атабек",
@@ -25486,7 +25486,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 1,
               "sla_pct": 78.6,
-              "cost": 522845
+              "cost": 400733
             },
             {
               "name": "Робия Р.",
@@ -25496,7 +25496,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 7,
               "sla_pct": 72.4,
-              "cost": 374870
+              "cost": 287318
             },
             {
               "name": "Дильшод",
@@ -25506,7 +25506,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 1,
               "sla_pct": 100.0,
-              "cost": 177570
+              "cost": 136098
             },
             {
               "name": "Камолиддин",
@@ -25516,7 +25516,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 1,
               "sla_pct": 100.0,
-              "cost": 49325
+              "cost": 37805
             },
             {
               "name": "Азизбек",
@@ -25526,7 +25526,7 @@ const BILLZ_DATA = {
               "rating_pct": 0.0,
               "rated": 0,
               "sla_pct": 0.0,
-              "cost": 9865
+              "cost": 7561
             }
           ],
           "top_companies": [
@@ -25535,7 +25535,7 @@ const BILLZ_DATA = {
               "tickets": 63,
               "desired": 27,
               "undesired": 32,
-              "cost": 621495,
+              "cost": 476343,
               "top_labels": [
                 {
                   "label": "Документооборот - Создание ссылки для оплаты",
@@ -25556,7 +25556,7 @@ const BILLZ_DATA = {
               "tickets": 7,
               "desired": 4,
               "undesired": 3,
-              "cost": 69055,
+              "cost": 52927,
               "top_labels": [
                 {
                   "label": "Каталог - Просмотр статистики",
@@ -25577,7 +25577,7 @@ const BILLZ_DATA = {
               "tickets": 6,
               "desired": 5,
               "undesired": 1,
-              "cost": 59190,
+              "cost": 45366,
               "top_labels": [
                 {
                   "label": "Учётная запись - Очистка магазина",
@@ -25598,7 +25598,7 @@ const BILLZ_DATA = {
               "tickets": 5,
               "desired": 3,
               "undesired": 2,
-              "cost": 49325,
+              "cost": 37805,
               "top_labels": [
                 {
                   "label": "Кассовые смены — Открытие/Закрытие смен",
@@ -25619,7 +25619,7 @@ const BILLZ_DATA = {
               "tickets": 5,
               "desired": 0,
               "undesired": 5,
-              "cost": 49325,
+              "cost": 37805,
               "top_labels": [
                 {
                   "label": "Документооборот - Оплата за тариф",
@@ -25653,7 +25653,7 @@ const BILLZ_DATA = {
           "sla_pct": 82.5,
           "sla_not_met": 17.5,
           "avg_close_h": 0.06,
-          "cost": 3452750,
+          "cost": 2646350,
           "csat_pct": 92.9,
           "csat_rated": 14,
           "repeat_pct": 10.6,
@@ -25689,49 +25689,49 @@ const BILLZ_DATA = {
               "name": "Каталог — настройка печати ценника",
               "tickets": 17,
               "undesired": 6,
-              "cost": 167705
+              "cost": 128537
             },
             {
               "name": "Оборудование - Установка/Настройка/Удаление принтера",
               "tickets": 15,
               "undesired": 2,
-              "cost": 147975
+              "cost": 113415
             },
             {
               "name": "Настройка - Установка BILLZ PAY/Payme/Epos/PAX",
               "tickets": 13,
               "undesired": 4,
-              "cost": 128245
+              "cost": 98293
             },
             {
               "name": "Учётная запись - Помощь со входом в аккаунт",
               "tickets": 12,
               "undesired": 7,
-              "cost": 118380
+              "cost": 90732
             },
             {
               "name": "Вопрос не по программе",
               "tickets": 10,
               "undesired": 7,
-              "cost": 98650
+              "cost": 75610
             },
             {
               "name": "Учётная запись - Блокировка/Разблокировка аккаунта",
               "tickets": 8,
               "undesired": 6,
-              "cost": 78920
+              "cost": 60488
             },
             {
               "name": "Документооборот - Оплата за тариф",
               "tickets": 8,
               "undesired": 2,
-              "cost": 78920
+              "cost": 60488
             },
             {
               "name": "Импорт — импорт товаров через Excel",
               "tickets": 7,
               "undesired": 2,
-              "cost": 69055
+              "cost": 52927
             }
           ],
           "operators": [
@@ -25743,7 +25743,7 @@ const BILLZ_DATA = {
               "rating_pct": 0.0,
               "rated": 0,
               "sla_pct": 76.5,
-              "cost": 749740
+              "cost": 574636
             },
             {
               "name": "Авазбек",
@@ -25753,7 +25753,7 @@ const BILLZ_DATA = {
               "rating_pct": 75.0,
               "rated": 4,
               "sla_pct": 95.7,
-              "cost": 542575
+              "cost": 415855
             },
             {
               "name": "Алиёр",
@@ -25763,7 +25763,7 @@ const BILLZ_DATA = {
               "rating_pct": 0.0,
               "rated": 0,
               "sla_pct": 75.0,
-              "cost": 532710
+              "cost": 408294
             },
             {
               "name": "Тожмухаммад",
@@ -25773,7 +25773,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 2,
               "sla_pct": 68.8,
-              "cost": 493250
+              "cost": 378050
             },
             {
               "name": "Анасхон",
@@ -25783,7 +25783,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 4,
               "sla_pct": 86.4,
-              "cost": 483385
+              "cost": 370489
             },
             {
               "name": "Робия Р.",
@@ -25793,7 +25793,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 1,
               "sla_pct": 86.4,
-              "cost": 305815
+              "cost": 234391
             },
             {
               "name": "Нурилло",
@@ -25803,7 +25803,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 2,
               "sla_pct": 80.0,
-              "cost": 286085
+              "cost": 219269
             },
             {
               "name": "Дильшод",
@@ -25813,7 +25813,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 1,
               "sla_pct": 50.0,
-              "cost": 39460
+              "cost": 30244
             },
             {
               "name": "Сардор Б.",
@@ -25823,7 +25823,7 @@ const BILLZ_DATA = {
               "rating_pct": 0.0,
               "rated": 0,
               "sla_pct": 100.0,
-              "cost": 19730
+              "cost": 15122
             }
           ],
           "top_companies": [
@@ -25832,7 +25832,7 @@ const BILLZ_DATA = {
               "tickets": 72,
               "desired": 20,
               "undesired": 46,
-              "cost": 710280,
+              "cost": 544392,
               "top_labels": [
                 {
                   "label": "Учётная запись - Блокировка/Разблокировка аккаунта",
@@ -25853,7 +25853,7 @@ const BILLZ_DATA = {
               "tickets": 8,
               "desired": 6,
               "undesired": 2,
-              "cost": 78920,
+              "cost": 60488,
               "top_labels": [
                 {
                   "label": "Оборудование - Установка/Настройка/Удаление принтера",
@@ -25874,7 +25874,7 @@ const BILLZ_DATA = {
               "tickets": 6,
               "desired": 4,
               "undesired": 2,
-              "cost": 59190,
+              "cost": 45366,
               "top_labels": [
                 {
                   "label": "Настройка - Установка BILLZ PAY/Payme/Epos/PAX",
@@ -25891,7 +25891,7 @@ const BILLZ_DATA = {
               "tickets": 5,
               "desired": 0,
               "undesired": 5,
-              "cost": 49325,
+              "cost": 37805,
               "top_labels": [
                 {
                   "label": "Все продажи - Удаление/Редактирование продажи",
@@ -25908,7 +25908,7 @@ const BILLZ_DATA = {
               "tickets": 5,
               "desired": 4,
               "undesired": 1,
-              "cost": 49325,
+              "cost": 37805,
               "top_labels": [
                 {
                   "label": "Каталог — изменение свойств товара",
@@ -25950,7 +25950,7 @@ const BILLZ_DATA = {
           "sla_pct": 87.3,
           "sla_not_met": 12.7,
           "avg_close_h": 0.04,
-          "cost": 3255450,
+          "cost": 2495130,
           "csat_pct": 94.7,
           "csat_rated": 19,
           "repeat_pct": 10.6,
@@ -25985,49 +25985,49 @@ const BILLZ_DATA = {
               "name": "Учётная запись - Помощь со входом в аккаунт",
               "tickets": 21,
               "undesired": 12,
-              "cost": 207165
+              "cost": 158781
             },
             {
               "name": "Оборудование - Установка/Настройка/Удаление принтера",
               "tickets": 12,
               "undesired": 2,
-              "cost": 118380
+              "cost": 90732
             },
             {
               "name": "Документооборот - Создание ссылки для оплаты",
               "tickets": 10,
               "undesired": 6,
-              "cost": 98650
+              "cost": 75610
             },
             {
               "name": "Кассовые смены — Открытие/Закрытие смен",
               "tickets": 10,
               "undesired": 6,
-              "cost": 98650
+              "cost": 75610
             },
             {
               "name": "Настройка - Создание/Редактирование/Удаление чека",
               "tickets": 8,
               "undesired": 1,
-              "cost": 78920
+              "cost": 60488
             },
             {
               "name": "Учётная запись - Блокировка/Разблокировка аккаунта",
               "tickets": 8,
               "undesired": 1,
-              "cost": 78920
+              "cost": 60488
             },
             {
               "name": "Учётная запись - Создание магазина",
               "tickets": 8,
               "undesired": 0,
-              "cost": 78920
+              "cost": 60488
             },
             {
               "name": "Каталог — изменение свойств товара",
               "tickets": 8,
               "undesired": 6,
-              "cost": 78920
+              "cost": 60488
             }
           ],
           "operators": [
@@ -26039,7 +26039,7 @@ const BILLZ_DATA = {
               "rating_pct": 0.0,
               "rated": 1,
               "sla_pct": 93.8,
-              "cost": 611630
+              "cost": 468782
             },
             {
               "name": "Алиёр",
@@ -26049,7 +26049,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 1,
               "sla_pct": 92.9,
-              "cost": 453790
+              "cost": 347806
             },
             {
               "name": "Ардак",
@@ -26059,7 +26059,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 5,
               "sla_pct": 72.2,
-              "cost": 443925
+              "cost": 340245
             },
             {
               "name": "Анасхон",
@@ -26069,7 +26069,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 4,
               "sla_pct": 94.4,
-              "cost": 443925
+              "cost": 340245
             },
             {
               "name": "Сардор Б.",
@@ -26079,7 +26079,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 2,
               "sla_pct": 91.7,
-              "cost": 443925
+              "cost": 340245
             },
             {
               "name": "Атабек",
@@ -26089,7 +26089,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 2,
               "sla_pct": 69.2,
-              "cost": 365005
+              "cost": 279757
             },
             {
               "name": "Нурилло",
@@ -26099,7 +26099,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 2,
               "sla_pct": 80.0,
-              "cost": 345275
+              "cost": 264635
             },
             {
               "name": "Камолиддин",
@@ -26109,7 +26109,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 2,
               "sla_pct": 100.0,
-              "cost": 147975
+              "cost": 113415
             }
           ],
           "top_companies": [
@@ -26118,7 +26118,7 @@ const BILLZ_DATA = {
               "tickets": 59,
               "desired": 35,
               "undesired": 22,
-              "cost": 582035,
+              "cost": 446099,
               "top_labels": [
                 {
                   "label": "Документооборот - Создание ссылки для оплаты",
@@ -26139,7 +26139,7 @@ const BILLZ_DATA = {
               "tickets": 4,
               "desired": 3,
               "undesired": 1,
-              "cost": 39460,
+              "cost": 30244,
               "top_labels": [
                 {
                   "label": "Все продажи - Частичное обучение",
@@ -26160,7 +26160,7 @@ const BILLZ_DATA = {
               "tickets": 4,
               "desired": 4,
               "undesired": 0,
-              "cost": 39460,
+              "cost": 30244,
               "top_labels": [
                 {
                   "label": "Управление - Создание/Редактирвоание/Удаление сотрудника",
@@ -26181,7 +26181,7 @@ const BILLZ_DATA = {
               "tickets": 4,
               "desired": 3,
               "undesired": 1,
-              "cost": 39460,
+              "cost": 30244,
               "top_labels": [
                 {
                   "label": "Оборудование - Установка/Настройка/Удаление принтера, Оборудование - Вопрос по сканеру",
@@ -26202,7 +26202,7 @@ const BILLZ_DATA = {
               "tickets": 4,
               "desired": 2,
               "undesired": 2,
-              "cost": 39460,
+              "cost": 30244,
               "top_labels": [
                 {
                   "label": "Импорт — импорт товаров через Excel",
@@ -26244,7 +26244,7 @@ const BILLZ_DATA = {
           "sla_pct": 79.7,
           "sla_not_met": 20.3,
           "avg_close_h": 0.06,
-          "cost": 3186395,
+          "cost": 2442203,
           "csat_pct": 94.1,
           "csat_rated": 17,
           "repeat_pct": 5.3,
@@ -26279,49 +26279,49 @@ const BILLZ_DATA = {
               "name": "Каталог — изменение свойств товара",
               "tickets": 14,
               "undesired": 6,
-              "cost": 138110
+              "cost": 105854
             },
             {
               "name": "Кассовые смены — Открытие/Закрытие смен",
               "tickets": 13,
               "undesired": 10,
-              "cost": 128245
+              "cost": 98293
             },
             {
               "name": "Вопрос не по программе",
               "tickets": 13,
               "undesired": 7,
-              "cost": 128245
+              "cost": 98293
             },
             {
               "name": "Оборудование - Установка/Настройка/Удаление принтера",
               "tickets": 12,
               "undesired": 5,
-              "cost": 118380
+              "cost": 90732
             },
             {
               "name": "Документооборот - Оплата за тариф",
               "tickets": 9,
               "undesired": 2,
-              "cost": 88785
+              "cost": 68049
             },
             {
               "name": "Каталог — запрос на добавление товара",
               "tickets": 9,
               "undesired": 7,
-              "cost": 88785
+              "cost": 68049
             },
             {
               "name": "Учётная запись - Помощь со входом в аккаунт",
               "tickets": 8,
               "undesired": 8,
-              "cost": 78920
+              "cost": 60488
             },
             {
               "name": "Управление - Создание/Редактирвоание/Удаление роли",
               "tickets": 6,
               "undesired": 3,
-              "cost": 59190
+              "cost": 45366
             }
           ],
           "operators": [
@@ -26333,7 +26333,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 3,
               "sla_pct": 83.3,
-              "cost": 562305
+              "cost": 430977
             },
             {
               "name": "Атабек",
@@ -26343,7 +26343,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 1,
               "sla_pct": 100.0,
-              "cost": 483385
+              "cost": 370489
             },
             {
               "name": "Робия Р.",
@@ -26353,7 +26353,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 3,
               "sla_pct": 78.6,
-              "cost": 414330
+              "cost": 317562
             },
             {
               "name": "Сардор Б.",
@@ -26363,7 +26363,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 3,
               "sla_pct": 53.8,
-              "cost": 404465
+              "cost": 310001
             },
             {
               "name": "Авазбек",
@@ -26373,7 +26373,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 1,
               "sla_pct": 85.7,
-              "cost": 345275
+              "cost": 264635
             },
             {
               "name": "Алиёр",
@@ -26383,7 +26383,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 1,
               "sla_pct": 81.8,
-              "cost": 335410
+              "cost": 257074
             },
             {
               "name": "Тожмухаммад",
@@ -26393,7 +26393,7 @@ const BILLZ_DATA = {
               "rating_pct": 66.7,
               "rated": 3,
               "sla_pct": 75.0,
-              "cost": 325545
+              "cost": 249513
             },
             {
               "name": "Нурилло",
@@ -26403,7 +26403,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 1,
               "sla_pct": 85.7,
-              "cost": 256490
+              "cost": 196586
             },
             {
               "name": "Дильшод",
@@ -26413,7 +26413,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 1,
               "sla_pct": 66.7,
-              "cost": 59190
+              "cost": 45366
             }
           ],
           "top_companies": [
@@ -26422,7 +26422,7 @@ const BILLZ_DATA = {
               "tickets": 56,
               "desired": 28,
               "undesired": 25,
-              "cost": 552440,
+              "cost": 423416,
               "top_labels": [
                 {
                   "label": "Учётная запись - Блокировка/Разблокировка аккаунта",
@@ -26443,7 +26443,7 @@ const BILLZ_DATA = {
               "tickets": 7,
               "desired": 3,
               "undesired": 4,
-              "cost": 69055,
+              "cost": 52927,
               "top_labels": [
                 {
                   "label": "Кассовые смены — Открытие/Закрытие смен",
@@ -26464,7 +26464,7 @@ const BILLZ_DATA = {
               "tickets": 5,
               "desired": 4,
               "undesired": 1,
-              "cost": 49325,
+              "cost": 37805,
               "top_labels": [
                 {
                   "label": "Кассовые смены — Открытие/Закрытие смен",
@@ -26485,7 +26485,7 @@ const BILLZ_DATA = {
               "tickets": 5,
               "desired": 4,
               "undesired": 1,
-              "cost": 49325,
+              "cost": 37805,
               "top_labels": [
                 {
                   "label": "Документооборот - Оплата за тариф",
@@ -26506,7 +26506,7 @@ const BILLZ_DATA = {
               "tickets": 4,
               "desired": 1,
               "undesired": 3,
-              "cost": 39460,
+              "cost": 30244,
               "top_labels": [
                 {
                   "label": "Учётная запись - Помощь со входом в аккаунт",
@@ -26544,7 +26544,7 @@ const BILLZ_DATA = {
           "sla_pct": 82.0,
           "sla_not_met": 18.0,
           "avg_close_h": 0.04,
-          "cost": 2860850,
+          "cost": 2192690,
           "csat_pct": 100.0,
           "csat_rated": 20,
           "repeat_pct": 5.9,
@@ -26580,49 +26580,49 @@ const BILLZ_DATA = {
               "name": "Учётная запись - Помощь со входом в аккаунт",
               "tickets": 12,
               "undesired": 4,
-              "cost": 118380
+              "cost": 90732
             },
             {
               "name": "Вопрос не по программе",
               "tickets": 12,
               "undesired": 3,
-              "cost": 118380
+              "cost": 90732
             },
             {
               "name": "Каталог — настройка печати ценника",
               "tickets": 10,
               "undesired": 3,
-              "cost": 98650
+              "cost": 75610
             },
             {
               "name": "Кассовые смены — Открытие/Закрытие смен",
               "tickets": 9,
               "undesired": 7,
-              "cost": 88785
+              "cost": 68049
             },
             {
               "name": "Учётная запись - Очистка магазина",
               "tickets": 7,
               "undesired": 0,
-              "cost": 69055
+              "cost": 52927
             },
             {
               "name": "Каталог — изменение свойств товара",
               "tickets": 7,
               "undesired": 3,
-              "cost": 69055
+              "cost": 52927
             },
             {
               "name": "Оборудование - Установка/Настройка/Удаление принтера",
               "tickets": 7,
               "undesired": 4,
-              "cost": 69055
+              "cost": 52927
             },
             {
               "name": "Все продажи - Удаление/Редактирование продажи",
               "tickets": 6,
               "undesired": 4,
-              "cost": 59190
+              "cost": 45366
             }
           ],
           "operators": [
@@ -26634,7 +26634,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 5,
               "sla_pct": 70.4,
-              "cost": 621495
+              "cost": 476343
             },
             {
               "name": "Нурилло",
@@ -26644,7 +26644,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 2,
               "sla_pct": 81.2,
-              "cost": 443925
+              "cost": 340245
             },
             {
               "name": "Авазбек",
@@ -26654,7 +26654,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 9,
               "sla_pct": 91.7,
-              "cost": 414330
+              "cost": 317562
             },
             {
               "name": "Сардор Б.",
@@ -26664,7 +26664,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 1,
               "sla_pct": 100.0,
-              "cost": 365005
+              "cost": 279757
             },
             {
               "name": "Иззатбек",
@@ -26674,7 +26674,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 1,
               "sla_pct": 88.9,
-              "cost": 325545
+              "cost": 249513
             },
             {
               "name": "Тожмухаммад",
@@ -26684,7 +26684,7 @@ const BILLZ_DATA = {
               "rating_pct": 0.0,
               "rated": 0,
               "sla_pct": 90.9,
-              "cost": 266355
+              "cost": 204147
             },
             {
               "name": "Алиёр",
@@ -26694,7 +26694,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 1,
               "sla_pct": 85.7,
-              "cost": 246625
+              "cost": 189025
             },
             {
               "name": "Робия Р.",
@@ -26704,7 +26704,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 1,
               "sla_pct": 60.0,
-              "cost": 177570
+              "cost": 136098
             }
           ],
           "top_companies": [
@@ -26713,7 +26713,7 @@ const BILLZ_DATA = {
               "tickets": 45,
               "desired": 18,
               "undesired": 26,
-              "cost": 443925,
+              "cost": 340245,
               "top_labels": [
                 {
                   "label": "Учётная запись - Создание магазина",
@@ -26734,7 +26734,7 @@ const BILLZ_DATA = {
               "tickets": 6,
               "desired": 0,
               "undesired": 6,
-              "cost": 59190,
+              "cost": 45366,
               "top_labels": [
                 {
                   "label": "Кассовые смены — Открытие/Закрытие смен",
@@ -26747,7 +26747,7 @@ const BILLZ_DATA = {
               "tickets": 5,
               "desired": 3,
               "undesired": 2,
-              "cost": 49325,
+              "cost": 37805,
               "top_labels": [
                 {
                   "label": "Каталог — настройка печати ценника",
@@ -26768,7 +26768,7 @@ const BILLZ_DATA = {
               "tickets": 5,
               "desired": 3,
               "undesired": 2,
-              "cost": 49325,
+              "cost": 37805,
               "top_labels": [
                 {
                   "label": "Учётная запись - Помощь со входом в аккаунт",
@@ -26789,7 +26789,7 @@ const BILLZ_DATA = {
               "tickets": 5,
               "desired": 2,
               "undesired": 3,
-              "cost": 49325,
+              "cost": 37805,
               "top_labels": [
                 {
                   "label": "Оборудование - Продажа оборудования",
@@ -26827,7 +26827,7 @@ const BILLZ_DATA = {
           "sla_pct": 88.8,
           "sla_not_met": 11.2,
           "avg_close_h": 0.05,
-          "cost": 2712875,
+          "cost": 2079275,
           "csat_pct": 92.3,
           "csat_rated": 13,
           "repeat_pct": 12.0,
@@ -26863,49 +26863,49 @@ const BILLZ_DATA = {
               "name": "Оборудование - Установка/Настройка/Удаление принтера",
               "tickets": 13,
               "undesired": 5,
-              "cost": 128245
+              "cost": 98293
             },
             {
               "name": "Каталог — запрос на добавление товара",
               "tickets": 10,
               "undesired": 4,
-              "cost": 98650
+              "cost": 75610
             },
             {
               "name": "Управление - Создание/Редактирвоание/Удаление сотрудника",
               "tickets": 9,
               "undesired": 5,
-              "cost": 88785
+              "cost": 68049
             },
             {
               "name": "Вопрос не по программе",
               "tickets": 8,
               "undesired": 6,
-              "cost": 78920
+              "cost": 60488
             },
             {
               "name": "Оборудование - Установка Anydesk/BILLZ Desktop/Программы компьютера и тд.",
               "tickets": 8,
               "undesired": 3,
-              "cost": 78920
+              "cost": 60488
             },
             {
               "name": "Учётная запись - Помощь со входом в аккаунт",
               "tickets": 8,
               "undesired": 4,
-              "cost": 78920
+              "cost": 60488
             },
             {
               "name": "Учётная запись - Создание магазина",
               "tickets": 7,
               "undesired": 1,
-              "cost": 69055
+              "cost": 52927
             },
             {
               "name": "Новая продажа - Консультация",
               "tickets": 6,
               "undesired": 3,
-              "cost": 59190
+              "cost": 45366
             }
           ],
           "operators": [
@@ -26917,7 +26917,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 4,
               "sla_pct": 75.0,
-              "cost": 582035
+              "cost": 446099
             },
             {
               "name": "Анасхон",
@@ -26927,7 +26927,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 1,
               "sla_pct": 100.0,
-              "cost": 463655
+              "cost": 355367
             },
             {
               "name": "Нурилло",
@@ -26937,7 +26937,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 2,
               "sla_pct": 100.0,
-              "cost": 414330
+              "cost": 317562
             },
             {
               "name": "Тожмухаммад",
@@ -26947,7 +26947,7 @@ const BILLZ_DATA = {
               "rating_pct": 50.0,
               "rated": 2,
               "sla_pct": 90.0,
-              "cost": 414330
+              "cost": 317562
             },
             {
               "name": "Сардор Б.",
@@ -26957,7 +26957,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 1,
               "sla_pct": 100.0,
-              "cost": 374870
+              "cost": 287318
             },
             {
               "name": "Алиёр",
@@ -26967,7 +26967,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 2,
               "sla_pct": 84.2,
-              "cost": 335410
+              "cost": 257074
             },
             {
               "name": "Камолиддин",
@@ -26977,7 +26977,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 1,
               "sla_pct": 91.7,
-              "cost": 128245
+              "cost": 98293
             }
           ],
           "top_companies": [
@@ -26986,7 +26986,7 @@ const BILLZ_DATA = {
               "tickets": 54,
               "desired": 28,
               "undesired": 26,
-              "cost": 532710,
+              "cost": 408294,
               "top_labels": [
                 {
                   "label": "Оборудование - Установка/Настройка/Удаление принтера",
@@ -27007,7 +27007,7 @@ const BILLZ_DATA = {
               "tickets": 6,
               "desired": 0,
               "undesired": 6,
-              "cost": 59190,
+              "cost": 45366,
               "top_labels": [
                 {
                   "label": "Кассовые смены — Открытие/Закрытие смен",
@@ -27024,7 +27024,7 @@ const BILLZ_DATA = {
               "tickets": 6,
               "desired": 0,
               "undesired": 6,
-              "cost": 59190,
+              "cost": 45366,
               "top_labels": [
                 {
                   "label": "Долги клиентов - Просмотр статистики по долгам",
@@ -27037,7 +27037,7 @@ const BILLZ_DATA = {
               "tickets": 5,
               "desired": 3,
               "undesired": 2,
-              "cost": 49325,
+              "cost": 37805,
               "top_labels": [
                 {
                   "label": "Акции - Создание/Редактирование/Удаление акции",
@@ -27054,7 +27054,7 @@ const BILLZ_DATA = {
               "tickets": 5,
               "desired": 1,
               "undesired": 4,
-              "cost": 49325,
+              "cost": 37805,
               "top_labels": [
                 {
                   "label": "Учётная запись - Помощь со входом в аккаунт",
@@ -27096,7 +27096,7 @@ const BILLZ_DATA = {
           "sla_pct": 96.9,
           "sla_not_met": 3.1,
           "avg_close_h": 0.06,
-          "cost": 2939770,
+          "cost": 2253178,
           "csat_pct": 92.9,
           "csat_rated": 14,
           "repeat_pct": 12.4,
@@ -27133,49 +27133,49 @@ const BILLZ_DATA = {
               "name": "Каталог — настройка печати ценника",
               "tickets": 15,
               "undesired": 6,
-              "cost": 147975
+              "cost": 113415
             },
             {
               "name": "Учётная запись - Помощь со входом в аккаунт",
               "tickets": 12,
               "undesired": 1,
-              "cost": 118380
+              "cost": 90732
             },
             {
               "name": "Оборудование - Установка/Настройка/Удаление принтера",
               "tickets": 9,
               "undesired": 2,
-              "cost": 88785
+              "cost": 68049
             },
             {
               "name": "Учётная запись - Блокировка/Разблокировка аккаунта",
               "tickets": 7,
               "undesired": 6,
-              "cost": 69055
+              "cost": 52927
             },
             {
               "name": "Вопрос не по программе",
               "tickets": 6,
               "undesired": 4,
-              "cost": 59190
+              "cost": 45366
             },
             {
               "name": "SMS рассылка - Создание SMS рассылки",
               "tickets": 6,
               "undesired": 2,
-              "cost": 59190
+              "cost": 45366
             },
             {
               "name": "Документооборот - Смена тарифа (upsell/downsell)",
               "tickets": 6,
               "undesired": 0,
-              "cost": 59190
+              "cost": 45366
             },
             {
               "name": "Кассовые смены — Открытие/Закрытие смен",
               "tickets": 5,
               "undesired": 5,
-              "cost": 49325
+              "cost": 37805
             }
           ],
           "operators": [
@@ -27187,7 +27187,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 2,
               "sla_pct": 94.7,
-              "cost": 591900
+              "cost": 453660
             },
             {
               "name": "Анасхон",
@@ -27197,7 +27197,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 2,
               "sla_pct": 100.0,
-              "cost": 572170
+              "cost": 438538
             },
             {
               "name": "Атабек",
@@ -27207,7 +27207,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 3,
               "sla_pct": 91.7,
-              "cost": 552440
+              "cost": 423416
             },
             {
               "name": "Авазбек",
@@ -27217,7 +27217,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 2,
               "sla_pct": 100.0,
-              "cost": 503115
+              "cost": 385611
             },
             {
               "name": "Тожмухаммад",
@@ -27227,7 +27227,7 @@ const BILLZ_DATA = {
               "rating_pct": 66.7,
               "rated": 3,
               "sla_pct": 100.0,
-              "cost": 374870
+              "cost": 287318
             },
             {
               "name": "Робия Р.",
@@ -27237,7 +27237,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 2,
               "sla_pct": 93.3,
-              "cost": 286085
+              "cost": 219269
             },
             {
               "name": "Камолиддин",
@@ -27247,7 +27247,7 @@ const BILLZ_DATA = {
               "rating_pct": 0.0,
               "rated": 0,
               "sla_pct": 100.0,
-              "cost": 59190
+              "cost": 45366
             }
           ],
           "top_companies": [
@@ -27256,7 +27256,7 @@ const BILLZ_DATA = {
               "tickets": 36,
               "desired": 13,
               "undesired": 19,
-              "cost": 355140,
+              "cost": 272196,
               "top_labels": [
                 {
                   "label": "Учётная запись - Блокировка/Разблокировка аккаунта",
@@ -27277,7 +27277,7 @@ const BILLZ_DATA = {
               "tickets": 8,
               "desired": 7,
               "undesired": 1,
-              "cost": 78920,
+              "cost": 60488,
               "top_labels": [
                 {
                   "label": "Каталог — изменение свойств товара",
@@ -27298,7 +27298,7 @@ const BILLZ_DATA = {
               "tickets": 7,
               "desired": 2,
               "undesired": 5,
-              "cost": 69055,
+              "cost": 52927,
               "top_labels": [
                 {
                   "label": "Все продажи - Удаление/Редактирование продажи",
@@ -27319,7 +27319,7 @@ const BILLZ_DATA = {
               "tickets": 7,
               "desired": 7,
               "undesired": 0,
-              "cost": 69055,
+              "cost": 52927,
               "top_labels": [
                 {
                   "label": "Все продажи - Выгрузка продаж, Баг (реквест)",
@@ -27340,7 +27340,7 @@ const BILLZ_DATA = {
               "tickets": 7,
               "desired": 2,
               "undesired": 5,
-              "cost": 69055,
+              "cost": 52927,
               "top_labels": [
                 {
                   "label": "Документооборот - Создание ссылки для оплаты",
@@ -27382,7 +27382,7 @@ const BILLZ_DATA = {
           "sla_pct": 88.2,
           "sla_not_met": 11.8,
           "avg_close_h": 0.05,
-          "cost": 3127205,
+          "cost": 2396837,
           "csat_pct": 93.3,
           "csat_rated": 15,
           "repeat_pct": 7.9,
@@ -27416,49 +27416,49 @@ const BILLZ_DATA = {
               "name": "Оборудование - Установка/Настройка/Удаление принтера",
               "tickets": 13,
               "undesired": 1,
-              "cost": 128245
+              "cost": 98293
             },
             {
               "name": "Учётная запись - Блокировка/Разблокировка аккаунта",
               "tickets": 13,
               "undesired": 3,
-              "cost": 128245
+              "cost": 98293
             },
             {
               "name": "Новая продажа - Не удаётся сделать продажу",
               "tickets": 12,
               "undesired": 1,
-              "cost": 118380
+              "cost": 90732
             },
             {
               "name": "Учётная запись - Помощь со входом в аккаунт",
               "tickets": 12,
               "undesired": 5,
-              "cost": 118380
+              "cost": 90732
             },
             {
               "name": "Документооборот - Создание ссылки для оплаты",
               "tickets": 10,
               "undesired": 8,
-              "cost": 98650
+              "cost": 75610
             },
             {
               "name": "Кассовые смены — Открытие/Закрытие смен",
               "tickets": 8,
               "undesired": 5,
-              "cost": 78920
+              "cost": 60488
             },
             {
               "name": "Вопрос не по программе",
               "tickets": 8,
               "undesired": 3,
-              "cost": 78920
+              "cost": 60488
             },
             {
               "name": "Документооборот - Оплата за тариф",
               "tickets": 7,
               "undesired": 1,
-              "cost": 69055
+              "cost": 52927
             }
           ],
           "operators": [
@@ -27470,7 +27470,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 3,
               "sla_pct": 73.7,
-              "cost": 660955
+              "cost": 506587
             },
             {
               "name": "Анасхон",
@@ -27480,7 +27480,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 6,
               "sla_pct": 100.0,
-              "cost": 522845
+              "cost": 400733
             },
             {
               "name": "Авазбек",
@@ -27490,7 +27490,7 @@ const BILLZ_DATA = {
               "rating_pct": 66.7,
               "rated": 3,
               "sla_pct": 95.8,
-              "cost": 483385
+              "cost": 370489
             },
             {
               "name": "Сардор Б.",
@@ -27500,7 +27500,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 1,
               "sla_pct": 90.0,
-              "cost": 443925
+              "cost": 340245
             },
             {
               "name": "Иззатбек",
@@ -27510,7 +27510,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 1,
               "sla_pct": 90.0,
-              "cost": 345275
+              "cost": 264635
             },
             {
               "name": "Тожмухаммад",
@@ -27520,7 +27520,7 @@ const BILLZ_DATA = {
               "rating_pct": 0.0,
               "rated": 0,
               "sla_pct": 90.0,
-              "cost": 335410
+              "cost": 257074
             },
             {
               "name": "Робия Р.",
@@ -27530,7 +27530,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 1,
               "sla_pct": 80.0,
-              "cost": 226895
+              "cost": 173903
             },
             {
               "name": "Камолиддин",
@@ -27540,7 +27540,7 @@ const BILLZ_DATA = {
               "rating_pct": 0.0,
               "rated": 0,
               "sla_pct": 70.0,
-              "cost": 98650
+              "cost": 75610
             },
             {
               "name": "Азизбек",
@@ -27550,7 +27550,7 @@ const BILLZ_DATA = {
               "rating_pct": 0.0,
               "rated": 0,
               "sla_pct": 0.0,
-              "cost": 9865
+              "cost": 7561
             }
           ],
           "top_companies": [
@@ -27559,7 +27559,7 @@ const BILLZ_DATA = {
               "tickets": 59,
               "desired": 33,
               "undesired": 23,
-              "cost": 582035,
+              "cost": 446099,
               "top_labels": [
                 {
                   "label": "Документооборот - Создание ссылки для оплаты",
@@ -27580,7 +27580,7 @@ const BILLZ_DATA = {
               "tickets": 6,
               "desired": 6,
               "undesired": 0,
-              "cost": 59190,
+              "cost": 45366,
               "top_labels": [
                 {
                   "label": "Каталог - Скачивание товаров, Общались по звонку",
@@ -27601,7 +27601,7 @@ const BILLZ_DATA = {
               "tickets": 6,
               "desired": 3,
               "undesired": 3,
-              "cost": 59190,
+              "cost": 45366,
               "top_labels": [
                 {
                   "label": "Все продажи - Удаление/Редактирование продажи",
@@ -27622,7 +27622,7 @@ const BILLZ_DATA = {
               "tickets": 6,
               "desired": 3,
               "undesired": 3,
-              "cost": 59190,
+              "cost": 45366,
               "top_labels": [
                 {
                   "label": "Баг (реквест), Новая продажа - Возврат/Обмен",
@@ -27643,7 +27643,7 @@ const BILLZ_DATA = {
               "tickets": 6,
               "desired": 2,
               "undesired": 4,
-              "cost": 59190,
+              "cost": 45366,
               "top_labels": [
                 {
                   "label": "Оборудование - Установка/Настройка/Удаление принтера",
@@ -27685,7 +27685,7 @@ const BILLZ_DATA = {
           "sla_pct": 63.6,
           "sla_not_met": 36.4,
           "avg_close_h": 0.06,
-          "cost": 3196260,
+          "cost": 2449764,
           "csat_pct": 86.2,
           "csat_rated": 29,
           "repeat_pct": 2.8,
@@ -27721,49 +27721,49 @@ const BILLZ_DATA = {
               "name": "Массовый сбой BILLZ",
               "tickets": 30,
               "undesired": 30,
-              "cost": 295950
+              "cost": 226830
             },
             {
               "name": "Учётная запись - Помощь со входом в аккаунт",
               "tickets": 12,
               "undesired": 5,
-              "cost": 118380
+              "cost": 90732
             },
             {
               "name": "Каталог — изменение свойств товара",
               "tickets": 10,
               "undesired": 7,
-              "cost": 98650
+              "cost": 75610
             },
             {
               "name": "Учётная запись - Блокировка/Разблокировка аккаунта",
               "tickets": 9,
               "undesired": 6,
-              "cost": 88785
+              "cost": 68049
             },
             {
               "name": "Управление - Создание/Редактирвоание/Удаление роли",
               "tickets": 8,
               "undesired": 3,
-              "cost": 78920
+              "cost": 60488
             },
             {
               "name": "Управление - Создание/Редактирвоание/Удаление сотрудника",
               "tickets": 8,
               "undesired": 3,
-              "cost": 78920
+              "cost": 60488
             },
             {
               "name": "Настройка - Создание/Редактирование/Удаление доп. точки",
               "tickets": 7,
               "undesired": 1,
-              "cost": 69055
+              "cost": 52927
             },
             {
               "name": "Вопрос не по программе",
               "tickets": 7,
               "undesired": 3,
-              "cost": 69055
+              "cost": 52927
             }
           ],
           "operators": [
@@ -27775,7 +27775,7 @@ const BILLZ_DATA = {
               "rating_pct": 80.0,
               "rated": 5,
               "sla_pct": 43.8,
-              "cost": 651090
+              "cost": 499026
             },
             {
               "name": "Алиёр",
@@ -27785,7 +27785,7 @@ const BILLZ_DATA = {
               "rating_pct": 50.0,
               "rated": 2,
               "sla_pct": 42.9,
-              "cost": 522845
+              "cost": 400733
             },
             {
               "name": "Авазбек",
@@ -27795,7 +27795,7 @@ const BILLZ_DATA = {
               "rating_pct": 75.0,
               "rated": 4,
               "sla_pct": 92.6,
-              "cost": 443925
+              "cost": 340245
             },
             {
               "name": "Иззатбек",
@@ -27805,7 +27805,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 2,
               "sla_pct": 37.5,
-              "cost": 424195
+              "cost": 325123
             },
             {
               "name": "Атабек",
@@ -27815,7 +27815,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 9,
               "sla_pct": 64.7,
-              "cost": 325545
+              "cost": 249513
             },
             {
               "name": "Анасхон",
@@ -27825,7 +27825,7 @@ const BILLZ_DATA = {
               "rating_pct": 66.7,
               "rated": 3,
               "sla_pct": 92.9,
-              "cost": 315680
+              "cost": 241952
             },
             {
               "name": "Сардор Б.",
@@ -27835,7 +27835,7 @@ const BILLZ_DATA = {
               "rating_pct": 0.0,
               "rated": 0,
               "sla_pct": 50.0,
-              "cost": 256490
+              "cost": 196586
             },
             {
               "name": "Нурилло",
@@ -27845,7 +27845,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 4,
               "sla_pct": 70.0,
-              "cost": 246625
+              "cost": 189025
             },
             {
               "name": "Хуршид",
@@ -27855,7 +27855,7 @@ const BILLZ_DATA = {
               "rating_pct": 0.0,
               "rated": 0,
               "sla_pct": 0.0,
-              "cost": 9865
+              "cost": 7561
             }
           ],
           "top_companies": [
@@ -27864,7 +27864,7 @@ const BILLZ_DATA = {
               "tickets": 60,
               "desired": 25,
               "undesired": 30,
-              "cost": 591900,
+              "cost": 453660,
               "top_labels": [
                 {
                   "label": "Учётная запись - Блокировка/Разблокировка аккаунта",
@@ -27885,7 +27885,7 @@ const BILLZ_DATA = {
               "tickets": 8,
               "desired": 6,
               "undesired": 2,
-              "cost": 78920,
+              "cost": 60488,
               "top_labels": [
                 {
                   "label": "Управление - Создание/Редактирвоание/Удаление сотрудника",
@@ -27906,7 +27906,7 @@ const BILLZ_DATA = {
               "tickets": 6,
               "desired": 3,
               "undesired": 3,
-              "cost": 59190,
+              "cost": 45366,
               "top_labels": [
                 {
                   "label": "Все продажи - Удаление/Редактирование продажи",
@@ -27927,7 +27927,7 @@ const BILLZ_DATA = {
               "tickets": 4,
               "desired": 0,
               "undesired": 4,
-              "cost": 39460,
+              "cost": 30244,
               "top_labels": [
                 {
                   "label": "Кассовые смены — Открытие/Закрытие смен",
@@ -27940,7 +27940,7 @@ const BILLZ_DATA = {
               "tickets": 4,
               "desired": 2,
               "undesired": 2,
-              "cost": 39460,
+              "cost": 30244,
               "top_labels": [
                 {
                   "label": "Оборудование - Установка/Настройка/Удаление принтера, Настройка - Создание/Редактирование/Удаление чека",
@@ -27982,7 +27982,7 @@ const BILLZ_DATA = {
           "sla_pct": 84.6,
           "sla_not_met": 15.4,
           "avg_close_h": 0.06,
-          "cost": 3452750,
+          "cost": 2646350,
           "csat_pct": 86.4,
           "csat_rated": 22,
           "repeat_pct": 10.0,
@@ -28017,49 +28017,49 @@ const BILLZ_DATA = {
               "name": "Учётная запись - Блокировка/Разблокировка аккаунта",
               "tickets": 14,
               "undesired": 11,
-              "cost": 138110
+              "cost": 105854
             },
             {
               "name": "Оборудование - Установка/Настройка/Удаление принтера",
               "tickets": 14,
               "undesired": 4,
-              "cost": 138110
+              "cost": 105854
             },
             {
               "name": "Документооборот - Оплата за тариф",
               "tickets": 12,
               "undesired": 10,
-              "cost": 118380
+              "cost": 90732
             },
             {
               "name": "Документооборот - Создание ссылки для оплаты",
               "tickets": 10,
               "undesired": 8,
-              "cost": 98650
+              "cost": 75610
             },
             {
               "name": "Учётная запись - Помощь со входом в аккаунт",
               "tickets": 9,
               "undesired": 8,
-              "cost": 88785
+              "cost": 68049
             },
             {
               "name": "Инвентаризация — консультация по модулю (частичное обучение)",
               "tickets": 7,
               "undesired": 1,
-              "cost": 69055
+              "cost": 52927
             },
             {
               "name": "Каталог — изменение свойств товара",
               "tickets": 7,
               "undesired": 7,
-              "cost": 69055
+              "cost": 52927
             },
             {
               "name": "Каталог — настройка печати ценника",
               "tickets": 6,
               "undesired": 2,
-              "cost": 59190
+              "cost": 45366
             }
           ],
           "operators": [
@@ -28071,7 +28071,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 4,
               "sla_pct": 81.5,
-              "cost": 660955
+              "cost": 506587
             },
             {
               "name": "Атабек",
@@ -28081,7 +28081,7 @@ const BILLZ_DATA = {
               "rating_pct": 50.0,
               "rated": 4,
               "sla_pct": 90.9,
-              "cost": 631360
+              "cost": 483904
             },
             {
               "name": "Сардор Б.",
@@ -28091,7 +28091,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 4,
               "sla_pct": 78.6,
-              "cost": 463655
+              "cost": 355367
             },
             {
               "name": "Нурилло",
@@ -28101,7 +28101,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 2,
               "sla_pct": 93.8,
-              "cost": 434060
+              "cost": 332684
             },
             {
               "name": "Тожмухаммад",
@@ -28111,7 +28111,7 @@ const BILLZ_DATA = {
               "rating_pct": 0.0,
               "rated": 1,
               "sla_pct": 80.0,
-              "cost": 424195
+              "cost": 325123
             },
             {
               "name": "Алиёр",
@@ -28121,7 +28121,7 @@ const BILLZ_DATA = {
               "rating_pct": 0.0,
               "rated": 0,
               "sla_pct": 77.8,
-              "cost": 384735
+              "cost": 294879
             },
             {
               "name": "Робия Р.",
@@ -28131,7 +28131,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 4,
               "sla_pct": 85.7,
-              "cost": 276220
+              "cost": 211708
             },
             {
               "name": "Камолиддин",
@@ -28141,7 +28141,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 3,
               "sla_pct": 83.3,
-              "cost": 177570
+              "cost": 136098
             }
           ],
           "top_companies": [
@@ -28150,7 +28150,7 @@ const BILLZ_DATA = {
               "tickets": 64,
               "desired": 20,
               "undesired": 39,
-              "cost": 631360,
+              "cost": 483904,
               "top_labels": [
                 {
                   "label": "Документооборот - Создание ссылки для оплаты",
@@ -28171,7 +28171,7 @@ const BILLZ_DATA = {
               "tickets": 6,
               "desired": 3,
               "undesired": 3,
-              "cost": 59190,
+              "cost": 45366,
               "top_labels": [
                 {
                   "label": "Desktop - Ошибка синхронизации",
@@ -28192,7 +28192,7 @@ const BILLZ_DATA = {
               "tickets": 5,
               "desired": 1,
               "undesired": 4,
-              "cost": 49325,
+              "cost": 37805,
               "top_labels": [
                 {
                   "label": "Desktop - Ошибка синхронизации, Баг (реквест)",
@@ -28213,7 +28213,7 @@ const BILLZ_DATA = {
               "tickets": 5,
               "desired": 2,
               "undesired": 3,
-              "cost": 49325,
+              "cost": 37805,
               "top_labels": [
                 {
                   "label": "Импорт - Удаление импорта",
@@ -28234,7 +28234,7 @@ const BILLZ_DATA = {
               "tickets": 4,
               "desired": 3,
               "undesired": 1,
-              "cost": 39460,
+              "cost": 30244,
               "top_labels": [
                 {
                   "label": "Промокоды - Создание/Удаление/Редактирование ",
@@ -28276,7 +28276,7 @@ const BILLZ_DATA = {
           "sla_pct": 83.3,
           "sla_not_met": 16.7,
           "avg_close_h": 0.04,
-          "cost": 3788160,
+          "cost": 2903424,
           "csat_pct": 95.8,
           "csat_rated": 24,
           "repeat_pct": 2.9,
@@ -28311,49 +28311,49 @@ const BILLZ_DATA = {
               "name": "Оборудование - Установка/Настройка/Удаление принтера",
               "tickets": 18,
               "undesired": 6,
-              "cost": 177570
+              "cost": 136098
             },
             {
               "name": "Документооборот - Оплата за тариф",
               "tickets": 16,
               "undesired": 5,
-              "cost": 157840
+              "cost": 120976
             },
             {
               "name": "Настройка - Создание/Редактирование/Удаление доп. точки",
               "tickets": 13,
               "undesired": 4,
-              "cost": 128245
+              "cost": 98293
             },
             {
               "name": "Учётная запись - Блокировка/Разблокировка аккаунта",
               "tickets": 12,
               "undesired": 4,
-              "cost": 118380
+              "cost": 90732
             },
             {
               "name": "Учётная запись - Помощь со входом в аккаунт",
               "tickets": 12,
               "undesired": 3,
-              "cost": 118380
+              "cost": 90732
             },
             {
               "name": "Документооборот - Создание ссылки для оплаты",
               "tickets": 11,
               "undesired": 6,
-              "cost": 108515
+              "cost": 83171
             },
             {
               "name": "Кассовые смены — Открытие/Закрытие смен",
               "tickets": 10,
               "undesired": 5,
-              "cost": 98650
+              "cost": 75610
             },
             {
               "name": "Управление - Создание/Редактирвоание/Удаление роли",
               "tickets": 7,
               "undesired": 2,
-              "cost": 69055
+              "cost": 52927
             }
           ],
           "operators": [
@@ -28365,7 +28365,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 4,
               "sla_pct": 84.6,
-              "cost": 759605
+              "cost": 582197
             },
             {
               "name": "Сардор Б.",
@@ -28375,7 +28375,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 1,
               "sla_pct": 80.0,
-              "cost": 601765
+              "cost": 461221
             },
             {
               "name": "Авазбек",
@@ -28385,7 +28385,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 8,
               "sla_pct": 88.5,
-              "cost": 591900
+              "cost": 453660
             },
             {
               "name": "Иззатбек",
@@ -28395,7 +28395,7 @@ const BILLZ_DATA = {
               "rating_pct": 75.0,
               "rated": 4,
               "sla_pct": 68.4,
-              "cost": 562305
+              "cost": 430977
             },
             {
               "name": "Ардак",
@@ -28405,7 +28405,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 3,
               "sla_pct": 95.5,
-              "cost": 483385
+              "cost": 370489
             },
             {
               "name": "Тожмухаммад",
@@ -28415,7 +28415,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 1,
               "sla_pct": 66.7,
-              "cost": 463655
+              "cost": 355367
             },
             {
               "name": "Алиёр",
@@ -28425,7 +28425,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 2,
               "sla_pct": 80.0,
-              "cost": 187435
+              "cost": 143659
             },
             {
               "name": "Камолиддин",
@@ -28435,7 +28435,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 1,
               "sla_pct": 92.9,
-              "cost": 138110
+              "cost": 105854
             }
           ],
           "top_companies": [
@@ -28444,7 +28444,7 @@ const BILLZ_DATA = {
               "tickets": 82,
               "desired": 49,
               "undesired": 29,
-              "cost": 808930,
+              "cost": 620002,
               "top_labels": [
                 {
                   "label": "Документооборот - Создание ссылки для оплаты",
@@ -28465,7 +28465,7 @@ const BILLZ_DATA = {
               "tickets": 10,
               "desired": 7,
               "undesired": 3,
-              "cost": 98650,
+              "cost": 75610,
               "top_labels": [
                 {
                   "label": "Настройка - Создание/Редактирование/Удаление доп. точки",
@@ -28486,7 +28486,7 @@ const BILLZ_DATA = {
               "tickets": 6,
               "desired": 4,
               "undesired": 2,
-              "cost": 59190,
+              "cost": 45366,
               "top_labels": [
                 {
                   "label": "Кассовые смены — Открытие/Закрытие смен",
@@ -28507,7 +28507,7 @@ const BILLZ_DATA = {
               "tickets": 6,
               "desired": 2,
               "undesired": 4,
-              "cost": 59190,
+              "cost": 45366,
               "top_labels": [
                 {
                   "label": "Кассовые смены — Открытие/Закрытие смен",
@@ -28524,7 +28524,7 @@ const BILLZ_DATA = {
               "tickets": 6,
               "desired": 4,
               "undesired": 2,
-              "cost": 59190,
+              "cost": 45366,
               "top_labels": [
                 {
                   "label": "Оборудование - Установка/Настройка/Удаление принтера",
@@ -28559,7 +28559,7 @@ const BILLZ_DATA = {
       "cs": {
         "period": "Январь–Апрель 2026",
         "total_train_tickets": 2343,
-        "total_train_cost": 23113695,
+        "total_train_cost": 17715423,
         "partial_tickets": 2055,
         "full_tickets": 153,
         "avg_med_close_min": 5.2,
@@ -28570,7 +28570,7 @@ const BILLZ_DATA = {
             "partial": 651,
             "full": 56,
             "med_close": 4.5,
-            "cost": 6994285
+            "cost": 5360749
           },
           {
             "month": "Февраль",
@@ -28578,7 +28578,7 @@ const BILLZ_DATA = {
             "partial": 558,
             "full": 33,
             "med_close": 6.2,
-            "cost": 5840080
+            "cost": 4476112
           },
           {
             "month": "Март",
@@ -28586,7 +28586,7 @@ const BILLZ_DATA = {
             "partial": 534,
             "full": 36,
             "med_close": 4.6,
-            "cost": 5632915
+            "cost": 4317331
           },
           {
             "month": "Апрель",
@@ -28594,7 +28594,7 @@ const BILLZ_DATA = {
             "partial": 434,
             "full": 31,
             "med_close": 4.6,
-            "cost": 4646415
+            "cost": 3561231
           }
         ],
         "by_ks_manager": [
@@ -28604,7 +28604,7 @@ const BILLZ_DATA = {
             "partial": 39,
             "full": 3,
             "med_close": 0.1,
-            "cost": 11788675,
+            "cost": 9035395,
             "tag": "big_base",
             "tag_label": "🔵 Большая база",
             "tag_color": "#3B82F6",
@@ -28617,7 +28617,7 @@ const BILLZ_DATA = {
             "partial": 43,
             "full": 1,
             "med_close": 0.1,
-            "cost": 8335925,
+            "cost": 6389045,
             "tag": "big_base",
             "tag_label": "🔵 Большая база",
             "tag_color": "#3B82F6",
@@ -28630,7 +28630,7 @@ const BILLZ_DATA = {
             "partial": 27,
             "full": 1,
             "med_close": 0.1,
-            "cost": 6875905,
+            "cost": 5270017,
             "tag": "red_flag",
             "tag_label": "🔴 Сигнал для КЦ",
             "tag_color": "#EF4444"
@@ -28641,7 +28641,7 @@ const BILLZ_DATA = {
             "partial": 17,
             "full": 2,
             "med_close": 0.1,
-            "cost": 5938730,
+            "cost": 4551722,
             "tag": "red_flag",
             "tag_label": "🔴 Сигнал для КЦ",
             "tag_color": "#EF4444"
@@ -28652,7 +28652,7 @@ const BILLZ_DATA = {
             "partial": 15,
             "full": 2,
             "med_close": 0.1,
-            "cost": 4241950,
+            "cost": 3251230,
             "tag": "red_flag",
             "tag_label": "🔴 Сигнал для КЦ",
             "tag_color": "#EF4444"
@@ -28663,7 +28663,7 @@ const BILLZ_DATA = {
             "partial": 14,
             "full": 3,
             "med_close": 0.1,
-            "cost": 4241950,
+            "cost": 3251230,
             "tag": "red_flag",
             "tag_label": "🔴 Сигнал для КЦ",
             "tag_color": "#EF4444"
@@ -28674,7 +28674,7 @@ const BILLZ_DATA = {
             "partial": 18,
             "full": null,
             "med_close": 0.0,
-            "cost": 3600725,
+            "cost": 2759765,
             "tag": "red_flag",
             "tag_label": "🔴 Сигнал для КЦ",
             "tag_color": "#EF4444"
@@ -28685,7 +28685,7 @@ const BILLZ_DATA = {
             "partial": 9,
             "full": 2,
             "med_close": 0.1,
-            "cost": 3452750,
+            "cost": 2646350,
             "tag": "red_flag",
             "tag_label": "🔴 Сигнал для КЦ",
             "tag_color": "#EF4444"
@@ -28696,7 +28696,7 @@ const BILLZ_DATA = {
             "partial": 8,
             "full": null,
             "med_close": 0.0,
-            "cost": 2949635,
+            "cost": 2260739,
             "tag": "red_flag",
             "tag_label": "🔴 Сигнал для КЦ",
             "tag_color": "#EF4444"
@@ -28707,7 +28707,7 @@ const BILLZ_DATA = {
             "partial": 19,
             "full": 3,
             "med_close": 0.1,
-            "cost": 2929905,
+            "cost": 2245617,
             "tag": "red_flag",
             "tag_label": "🔴 Сигнал для КЦ",
             "tag_color": "#EF4444"
@@ -28718,7 +28718,7 @@ const BILLZ_DATA = {
             "partial": 25,
             "full": null,
             "med_close": 0.1,
-            "cost": 2703010,
+            "cost": 2071714,
             "tag": "red_flag",
             "tag_label": "🔴 Сигнал для КЦ",
             "tag_color": "#EF4444"
@@ -28729,7 +28729,7 @@ const BILLZ_DATA = {
             "partial": 16,
             "full": 2,
             "med_close": 0.1,
-            "cost": 2545170,
+            "cost": 1950738,
             "tag": "red_flag",
             "tag_label": "🔴 Сигнал для КЦ",
             "tag_color": "#EF4444"
@@ -28740,7 +28740,7 @@ const BILLZ_DATA = {
             "partial": 9,
             "full": null,
             "med_close": 0.1,
-            "cost": 2219625,
+            "cost": 1701225,
             "tag": "red_flag",
             "tag_label": "🔴 Сигнал для КЦ",
             "tag_color": "#EF4444"
@@ -28751,7 +28751,7 @@ const BILLZ_DATA = {
             "partial": 1,
             "full": null,
             "med_close": 0.0,
-            "cost": 1884215,
+            "cost": 1444151,
             "tag": "red_flag",
             "tag_label": "🔴 Сигнал для КЦ",
             "tag_color": "#EF4444"
@@ -28762,7 +28762,7 @@ const BILLZ_DATA = {
             "partial": 5,
             "full": null,
             "med_close": 0.1,
-            "cost": 1785565,
+            "cost": 1368541,
             "tag": "red_flag",
             "tag_label": "🔴 Сигнал для КЦ",
             "tag_color": "#EF4444"
@@ -28773,7 +28773,7 @@ const BILLZ_DATA = {
             "partial": 11,
             "full": null,
             "med_close": 0.1,
-            "cost": 1489615,
+            "cost": 1141711,
             "tag": "red_flag",
             "tag_label": "🔴 Сигнал для КЦ",
             "tag_color": "#EF4444"
@@ -28784,7 +28784,7 @@ const BILLZ_DATA = {
             "partial": 11,
             "full": 1,
             "med_close": 0.1,
-            "cost": 1292315,
+            "cost": 990491,
             "tag": "red_flag",
             "tag_label": "🔴 Сигнал для КЦ",
             "tag_color": "#EF4444"
@@ -28795,7 +28795,7 @@ const BILLZ_DATA = {
             "partial": 8,
             "full": null,
             "med_close": 0.1,
-            "cost": 1272585,
+            "cost": 975369,
             "tag": "red_flag",
             "tag_label": "🔴 Сигнал для КЦ",
             "tag_color": "#EF4444"
@@ -28806,7 +28806,7 @@ const BILLZ_DATA = {
             "partial": 12,
             "full": null,
             "med_close": 0.1,
-            "cost": 1233125,
+            "cost": 945125,
             "tag": "red_flag",
             "tag_label": "🔴 Сигнал для КЦ",
             "tag_color": "#EF4444"
@@ -28817,7 +28817,7 @@ const BILLZ_DATA = {
             "partial": 3,
             "full": null,
             "med_close": 0.0,
-            "cost": 1203530,
+            "cost": 922442,
             "tag": "red_flag",
             "tag_label": "🔴 Сигнал для КЦ",
             "tag_color": "#EF4444"
@@ -28828,7 +28828,7 @@ const BILLZ_DATA = {
             "partial": 4,
             "full": null,
             "med_close": 0.1,
-            "cost": 1183800,
+            "cost": 907320,
             "tag": "red_flag",
             "tag_label": "🔴 Сигнал для КЦ",
             "tag_color": "#EF4444"
@@ -28839,7 +28839,7 @@ const BILLZ_DATA = {
             "partial": 2,
             "full": null,
             "med_close": 0.1,
-            "cost": 1085150,
+            "cost": 831710,
             "tag": "red_flag",
             "tag_label": "🔴 Сигнал для КЦ",
             "tag_color": "#EF4444"
@@ -28850,7 +28850,7 @@ const BILLZ_DATA = {
             "partial": 8,
             "full": null,
             "med_close": 0.1,
-            "cost": 996365,
+            "cost": 763661,
             "tag": "red_flag",
             "tag_label": "🔴 Сигнал для КЦ",
             "tag_color": "#EF4444"
@@ -28861,7 +28861,7 @@ const BILLZ_DATA = {
             "partial": 3,
             "full": null,
             "med_close": 0.1,
-            "cost": 976635,
+            "cost": 748539,
             "tag": "normal",
             "tag_label": "",
             "tag_color": ""
@@ -28872,7 +28872,7 @@ const BILLZ_DATA = {
             "partial": 2,
             "full": 1,
             "med_close": 0.0,
-            "cost": 966770,
+            "cost": 740978,
             "tag": "normal",
             "tag_label": "",
             "tag_color": ""
@@ -28883,7 +28883,7 @@ const BILLZ_DATA = {
             "partial": 2,
             "full": null,
             "med_close": 0.1,
-            "cost": 897715,
+            "cost": 688051,
             "tag": "normal",
             "tag_label": "",
             "tag_color": ""
@@ -28894,7 +28894,7 @@ const BILLZ_DATA = {
             "partial": 7,
             "full": null,
             "med_close": 0.1,
-            "cost": 799065,
+            "cost": 612441,
             "tag": "normal",
             "tag_label": "",
             "tag_color": ""
@@ -28905,7 +28905,7 @@ const BILLZ_DATA = {
             "partial": 3,
             "full": null,
             "med_close": 0.1,
-            "cost": 799065,
+            "cost": 612441,
             "tag": "normal",
             "tag_label": "",
             "tag_color": ""
@@ -28916,7 +28916,7 @@ const BILLZ_DATA = {
             "partial": 6,
             "full": null,
             "med_close": 0.1,
-            "cost": 720145,
+            "cost": 551953,
             "tag": "normal",
             "tag_label": "",
             "tag_color": ""
@@ -28927,7 +28927,7 @@ const BILLZ_DATA = {
             "partial": 3,
             "full": 1,
             "med_close": 0.1,
-            "cost": 710280,
+            "cost": 544392,
             "tag": "normal",
             "tag_label": "",
             "tag_color": ""
@@ -28938,7 +28938,7 @@ const BILLZ_DATA = {
             "partial": 6,
             "full": null,
             "med_close": 0.1,
-            "cost": 690550,
+            "cost": 529270,
             "tag": "normal",
             "tag_label": "",
             "tag_color": ""
@@ -28949,7 +28949,7 @@ const BILLZ_DATA = {
             "partial": 2,
             "full": null,
             "med_close": 0.1,
-            "cost": 562305,
+            "cost": 430977,
             "tag": "normal",
             "tag_label": "",
             "tag_color": ""
@@ -28960,7 +28960,7 @@ const BILLZ_DATA = {
             "partial": null,
             "full": null,
             "med_close": 0.1,
-            "cost": 503115,
+            "cost": 385611,
             "tag": "normal",
             "tag_label": "",
             "tag_color": ""
@@ -28971,7 +28971,7 @@ const BILLZ_DATA = {
             "partial": 2,
             "full": 3,
             "med_close": 0.1,
-            "cost": 453790,
+            "cost": 347806,
             "tag": "normal",
             "tag_label": "",
             "tag_color": ""
@@ -28982,7 +28982,7 @@ const BILLZ_DATA = {
             "partial": 1,
             "full": null,
             "med_close": 0.0,
-            "cost": 404465,
+            "cost": 310001,
             "tag": "normal",
             "tag_label": "",
             "tag_color": ""
@@ -28993,7 +28993,7 @@ const BILLZ_DATA = {
             "partial": null,
             "full": null,
             "med_close": 0.1,
-            "cost": 374870,
+            "cost": 287318,
             "tag": "normal",
             "tag_label": "",
             "tag_color": ""
@@ -29004,7 +29004,7 @@ const BILLZ_DATA = {
             "partial": null,
             "full": null,
             "med_close": 0.0,
-            "cost": 365005,
+            "cost": 279757,
             "tag": "normal",
             "tag_label": "",
             "tag_color": ""
@@ -29015,7 +29015,7 @@ const BILLZ_DATA = {
             "partial": 1,
             "full": null,
             "med_close": 0.0,
-            "cost": 345275,
+            "cost": 264635,
             "tag": "normal",
             "tag_label": "",
             "tag_color": ""
@@ -29026,7 +29026,7 @@ const BILLZ_DATA = {
             "partial": null,
             "full": null,
             "med_close": 0.1,
-            "cost": 325545,
+            "cost": 249513,
             "tag": "normal",
             "tag_label": "",
             "tag_color": ""
@@ -29037,7 +29037,7 @@ const BILLZ_DATA = {
             "partial": null,
             "full": 1,
             "med_close": 0.0,
-            "cost": 305815,
+            "cost": 234391,
             "tag": "normal",
             "tag_label": "",
             "tag_color": ""
@@ -29048,7 +29048,7 @@ const BILLZ_DATA = {
             "partial": null,
             "full": null,
             "med_close": 0.1,
-            "cost": 276220,
+            "cost": 211708,
             "tag": "normal",
             "tag_label": "",
             "tag_color": ""
@@ -29059,7 +29059,7 @@ const BILLZ_DATA = {
             "partial": null,
             "full": null,
             "med_close": 0.0,
-            "cost": 276220,
+            "cost": 211708,
             "tag": "normal",
             "tag_label": "",
             "tag_color": ""
@@ -29070,7 +29070,7 @@ const BILLZ_DATA = {
             "partial": 1,
             "full": null,
             "med_close": 0.0,
-            "cost": 266355,
+            "cost": 204147,
             "tag": "normal",
             "tag_label": "",
             "tag_color": ""
@@ -29081,7 +29081,7 @@ const BILLZ_DATA = {
             "partial": 1,
             "full": null,
             "med_close": 0.1,
-            "cost": 266355,
+            "cost": 204147,
             "tag": "normal",
             "tag_label": "",
             "tag_color": ""
@@ -29092,7 +29092,7 @@ const BILLZ_DATA = {
             "partial": null,
             "full": null,
             "med_close": 0.1,
-            "cost": 256490,
+            "cost": 196586,
             "tag": "normal",
             "tag_label": "",
             "tag_color": ""
@@ -29103,7 +29103,7 @@ const BILLZ_DATA = {
             "partial": null,
             "full": null,
             "med_close": 0.0,
-            "cost": 256490,
+            "cost": 196586,
             "tag": "normal",
             "tag_label": "",
             "tag_color": ""
@@ -29114,7 +29114,7 @@ const BILLZ_DATA = {
             "partial": null,
             "full": null,
             "med_close": 0.0,
-            "cost": 256490,
+            "cost": 196586,
             "tag": "normal",
             "tag_label": "",
             "tag_color": ""
@@ -29125,7 +29125,7 @@ const BILLZ_DATA = {
             "partial": null,
             "full": null,
             "med_close": 0.1,
-            "cost": 256490,
+            "cost": 196586,
             "tag": "normal",
             "tag_label": "",
             "tag_color": ""
@@ -29136,7 +29136,7 @@ const BILLZ_DATA = {
             "partial": null,
             "full": null,
             "med_close": 0.1,
-            "cost": 246625,
+            "cost": 189025,
             "tag": "normal",
             "tag_label": "",
             "tag_color": ""
@@ -29147,7 +29147,7 @@ const BILLZ_DATA = {
             "partial": 3,
             "full": null,
             "med_close": 0.1,
-            "cost": 246625,
+            "cost": 189025,
             "tag": "normal",
             "tag_label": "",
             "tag_color": ""
@@ -29158,7 +29158,7 @@ const BILLZ_DATA = {
             "partial": null,
             "full": null,
             "med_close": 0.1,
-            "cost": 236760,
+            "cost": 181464,
             "tag": "normal",
             "tag_label": "",
             "tag_color": ""
@@ -29169,7 +29169,7 @@ const BILLZ_DATA = {
             "partial": null,
             "full": null,
             "med_close": 0.0,
-            "cost": 226895,
+            "cost": 173903,
             "tag": "normal",
             "tag_label": "",
             "tag_color": ""
@@ -29180,7 +29180,7 @@ const BILLZ_DATA = {
             "partial": null,
             "full": null,
             "med_close": 0.1,
-            "cost": 226895,
+            "cost": 173903,
             "tag": "normal",
             "tag_label": "",
             "tag_color": ""
@@ -29191,7 +29191,7 @@ const BILLZ_DATA = {
             "partial": null,
             "full": null,
             "med_close": 0.0,
-            "cost": 217030,
+            "cost": 166342,
             "tag": "normal",
             "tag_label": "",
             "tag_color": ""
@@ -29202,7 +29202,7 @@ const BILLZ_DATA = {
             "partial": 1,
             "full": null,
             "med_close": 0.1,
-            "cost": 207165,
+            "cost": 158781,
             "tag": "normal",
             "tag_label": "",
             "tag_color": ""
@@ -29213,7 +29213,7 @@ const BILLZ_DATA = {
             "partial": 1,
             "full": null,
             "med_close": 0.0,
-            "cost": 187435,
+            "cost": 143659,
             "tag": "normal",
             "tag_label": "",
             "tag_color": ""
@@ -29224,7 +29224,7 @@ const BILLZ_DATA = {
             "partial": 2,
             "full": null,
             "med_close": 0.1,
-            "cost": 187435,
+            "cost": 143659,
             "tag": "normal",
             "tag_label": "",
             "tag_color": ""
@@ -29235,7 +29235,7 @@ const BILLZ_DATA = {
             "partial": 3,
             "full": null,
             "med_close": 0.1,
-            "cost": 187435,
+            "cost": 143659,
             "tag": "normal",
             "tag_label": "",
             "tag_color": ""
@@ -29246,7 +29246,7 @@ const BILLZ_DATA = {
             "partial": 3,
             "full": null,
             "med_close": 0.1,
-            "cost": 167705,
+            "cost": 128537,
             "tag": "normal",
             "tag_label": "",
             "tag_color": ""
@@ -29257,7 +29257,7 @@ const BILLZ_DATA = {
             "partial": 1,
             "full": null,
             "med_close": 0.2,
-            "cost": 167705,
+            "cost": 128537,
             "tag": "normal",
             "tag_label": "",
             "tag_color": ""
@@ -29268,7 +29268,7 @@ const BILLZ_DATA = {
             "partial": null,
             "full": null,
             "med_close": 0.0,
-            "cost": 157840,
+            "cost": 120976,
             "tag": "normal",
             "tag_label": "",
             "tag_color": ""
@@ -29279,7 +29279,7 @@ const BILLZ_DATA = {
             "partial": null,
             "full": null,
             "med_close": 0.0,
-            "cost": 157840,
+            "cost": 120976,
             "tag": "normal",
             "tag_label": "",
             "tag_color": ""
@@ -29290,7 +29290,7 @@ const BILLZ_DATA = {
             "partial": null,
             "full": null,
             "med_close": 0.0,
-            "cost": 157840,
+            "cost": 120976,
             "tag": "normal",
             "tag_label": "",
             "tag_color": ""
@@ -29301,7 +29301,7 @@ const BILLZ_DATA = {
             "partial": null,
             "full": null,
             "med_close": 0.0,
-            "cost": 147975,
+            "cost": 113415,
             "tag": "normal",
             "tag_label": "",
             "tag_color": ""
@@ -29312,7 +29312,7 @@ const BILLZ_DATA = {
             "partial": null,
             "full": null,
             "med_close": 0.0,
-            "cost": 147975,
+            "cost": 113415,
             "tag": "normal",
             "tag_label": "",
             "tag_color": ""
@@ -29323,7 +29323,7 @@ const BILLZ_DATA = {
             "partial": null,
             "full": null,
             "med_close": 0.1,
-            "cost": 138110,
+            "cost": 105854,
             "tag": "normal",
             "tag_label": "",
             "tag_color": ""
@@ -29334,7 +29334,7 @@ const BILLZ_DATA = {
             "partial": null,
             "full": null,
             "med_close": 0.1,
-            "cost": 138110,
+            "cost": 105854,
             "tag": "normal",
             "tag_label": "",
             "tag_color": ""
@@ -29345,7 +29345,7 @@ const BILLZ_DATA = {
             "partial": null,
             "full": null,
             "med_close": 0.1,
-            "cost": 128245,
+            "cost": 98293,
             "tag": "normal",
             "tag_label": "",
             "tag_color": ""
@@ -29356,7 +29356,7 @@ const BILLZ_DATA = {
             "partial": null,
             "full": null,
             "med_close": 0.1,
-            "cost": 128245,
+            "cost": 98293,
             "tag": "normal",
             "tag_label": "",
             "tag_color": ""
@@ -29367,7 +29367,7 @@ const BILLZ_DATA = {
             "partial": null,
             "full": null,
             "med_close": 0.1,
-            "cost": 128245,
+            "cost": 98293,
             "tag": "normal",
             "tag_label": "",
             "tag_color": ""
@@ -29378,7 +29378,7 @@ const BILLZ_DATA = {
             "partial": null,
             "full": null,
             "med_close": 0.1,
-            "cost": 118380,
+            "cost": 90732,
             "tag": "normal",
             "tag_label": "",
             "tag_color": ""
@@ -29389,7 +29389,7 @@ const BILLZ_DATA = {
             "partial": null,
             "full": null,
             "med_close": 0.0,
-            "cost": 108515,
+            "cost": 83171,
             "tag": "normal",
             "tag_label": "",
             "tag_color": ""
@@ -29400,7 +29400,7 @@ const BILLZ_DATA = {
             "partial": null,
             "full": 1,
             "med_close": 0.1,
-            "cost": 108515,
+            "cost": 83171,
             "tag": "normal",
             "tag_label": "",
             "tag_color": ""
@@ -29411,7 +29411,7 @@ const BILLZ_DATA = {
             "partial": null,
             "full": null,
             "med_close": 0.0,
-            "cost": 108515,
+            "cost": 83171,
             "tag": "normal",
             "tag_label": "",
             "tag_color": ""
@@ -29422,7 +29422,7 @@ const BILLZ_DATA = {
             "partial": null,
             "full": null,
             "med_close": 0.1,
-            "cost": 98650,
+            "cost": 75610,
             "tag": "normal",
             "tag_label": "",
             "tag_color": ""
@@ -29433,7 +29433,7 @@ const BILLZ_DATA = {
             "partial": null,
             "full": null,
             "med_close": 0.0,
-            "cost": 98650,
+            "cost": 75610,
             "tag": "normal",
             "tag_label": "",
             "tag_color": ""
@@ -29444,7 +29444,7 @@ const BILLZ_DATA = {
             "partial": 2,
             "full": null,
             "med_close": 0.0,
-            "cost": 98650,
+            "cost": 75610,
             "tag": "normal",
             "tag_label": "",
             "tag_color": ""
@@ -29455,7 +29455,7 @@ const BILLZ_DATA = {
             "partial": null,
             "full": null,
             "med_close": 0.0,
-            "cost": 98650,
+            "cost": 75610,
             "tag": "normal",
             "tag_label": "",
             "tag_color": ""
@@ -29466,7 +29466,7 @@ const BILLZ_DATA = {
             "partial": 2,
             "full": 1,
             "med_close": 0.2,
-            "cost": 98650,
+            "cost": 75610,
             "tag": "normal",
             "tag_label": "",
             "tag_color": ""
@@ -29477,7 +29477,7 @@ const BILLZ_DATA = {
             "partial": null,
             "full": null,
             "med_close": 0.1,
-            "cost": 98650,
+            "cost": 75610,
             "tag": "normal",
             "tag_label": "",
             "tag_color": ""
@@ -29488,7 +29488,7 @@ const BILLZ_DATA = {
             "partial": null,
             "full": null,
             "med_close": 0.0,
-            "cost": 98650,
+            "cost": 75610,
             "tag": "normal",
             "tag_label": "",
             "tag_color": ""
@@ -29499,7 +29499,7 @@ const BILLZ_DATA = {
             "partial": null,
             "full": null,
             "med_close": 0.0,
-            "cost": 88785,
+            "cost": 68049,
             "tag": "normal",
             "tag_label": "",
             "tag_color": ""
@@ -29510,7 +29510,7 @@ const BILLZ_DATA = {
             "partial": null,
             "full": null,
             "med_close": 0.0,
-            "cost": 88785,
+            "cost": 68049,
             "tag": "normal",
             "tag_label": "",
             "tag_color": ""
@@ -29521,7 +29521,7 @@ const BILLZ_DATA = {
             "partial": 3,
             "full": null,
             "med_close": 0.1,
-            "cost": 88785,
+            "cost": 68049,
             "tag": "normal",
             "tag_label": "",
             "tag_color": ""
@@ -29532,7 +29532,7 @@ const BILLZ_DATA = {
             "partial": null,
             "full": null,
             "med_close": 0.0,
-            "cost": 88785,
+            "cost": 68049,
             "tag": "normal",
             "tag_label": "",
             "tag_color": ""
@@ -29543,7 +29543,7 @@ const BILLZ_DATA = {
             "partial": null,
             "full": null,
             "med_close": 0.0,
-            "cost": 88785,
+            "cost": 68049,
             "tag": "normal",
             "tag_label": "",
             "tag_color": ""
@@ -29554,7 +29554,7 @@ const BILLZ_DATA = {
             "partial": null,
             "full": null,
             "med_close": 0.0,
-            "cost": 88785,
+            "cost": 68049,
             "tag": "normal",
             "tag_label": "",
             "tag_color": ""
@@ -29565,7 +29565,7 @@ const BILLZ_DATA = {
             "partial": 2,
             "full": null,
             "med_close": 0.1,
-            "cost": 78920,
+            "cost": 60488,
             "tag": "normal",
             "tag_label": "",
             "tag_color": ""
@@ -29576,7 +29576,7 @@ const BILLZ_DATA = {
             "partial": null,
             "full": null,
             "med_close": 0.0,
-            "cost": 78920,
+            "cost": 60488,
             "tag": "normal",
             "tag_label": "",
             "tag_color": ""
@@ -29587,7 +29587,7 @@ const BILLZ_DATA = {
             "partial": null,
             "full": null,
             "med_close": 0.4,
-            "cost": 78920,
+            "cost": 60488,
             "tag": "normal",
             "tag_label": "",
             "tag_color": ""
@@ -29598,7 +29598,7 @@ const BILLZ_DATA = {
             "partial": null,
             "full": null,
             "med_close": 0.2,
-            "cost": 78920,
+            "cost": 60488,
             "tag": "normal",
             "tag_label": "",
             "tag_color": ""
@@ -29609,7 +29609,7 @@ const BILLZ_DATA = {
             "partial": null,
             "full": null,
             "med_close": 0.1,
-            "cost": 69055,
+            "cost": 52927,
             "tag": "normal",
             "tag_label": "",
             "tag_color": ""
@@ -29620,91 +29620,91 @@ const BILLZ_DATA = {
             "name": "Инвентаризация — консультация по модулю (частичное обучение)",
             "tickets": 385,
             "type": "Частичное",
-            "cost": 3798025
+            "cost": 2910985
           },
           {
             "name": "Отчёты — Частичное обучение",
             "tickets": 186,
             "type": "Частичное",
-            "cost": 1834890
+            "cost": 1406346
           },
           {
             "name": "Трансфер — консультация по модулю (частичное обучение)",
             "tickets": 153,
             "type": "Частичное",
-            "cost": 1509345
+            "cost": 1156833
           },
           {
             "name": "Заказы — консультация по модулю (частичное обучение)",
             "tickets": 141,
             "type": "Частичное",
-            "cost": 1390965
+            "cost": 1066101
           },
           {
             "name": "Импорт — консультация по импорту (частичное обучение)",
             "tickets": 119,
             "type": "Частичное",
-            "cost": 1173935
+            "cost": 899759
           },
           {
             "name": "Финансы — Частичное обучение",
             "tickets": 113,
             "type": "Частичное",
-            "cost": 1114745
+            "cost": 854393
           },
           {
             "name": "Новая продажа — Частичное обучение",
             "tickets": 107,
             "type": "Частичное",
-            "cost": 1055555
+            "cost": 809027
           },
           {
             "name": "Долги клиентов — Частичное обучение",
             "tickets": 79,
             "type": "Частичное",
-            "cost": 779335
+            "cost": 597319
           },
           {
             "name": "Все продажи — Частичное обучение",
             "tickets": 59,
             "type": "Частичное",
-            "cost": 581935
+            "cost": 446099
           },
           {
             "name": "Списание — частичное обучение",
             "tickets": 46,
             "type": "Частичное",
-            "cost": 453790
+            "cost": 347806
           },
           {
             "name": "Акции — Частичное обучение",
             "tickets": 44,
             "type": "Частичное",
-            "cost": 433460
+            "cost": 332684
           },
           {
             "name": "Инвентаризация — консультация по модулю (полное обучение)",
             "tickets": 30,
             "type": "Полное",
-            "cost": 295950
+            "cost": 226830
           },
           {
             "name": "Переоценка — Частичное обучение",
             "tickets": 21,
             "type": "Частичное",
-            "cost": 207165
+            "cost": 158781
           },
           {
             "name": "Финансы — Полное обучение",
             "tickets": 19,
             "type": "Полное",
-            "cost": 187435
+            "cost": 143659
           },
           {
             "name": "Импорт — консультация по импорту (полное обучение)",
             "tickets": 14,
             "type": "Полное",
-            "cost": 138110
+            "cost": 105854
           }
         ],
         "repeat_connection": [
@@ -29765,7 +29765,7 @@ const BILLZ_DATA = {
             "partial": 46,
             "full": 8,
             "med_close": 3.1,
-            "cost": 532710
+            "cost": 408294
           },
           {
             "name": "avto-doctor",
@@ -29773,7 +29773,7 @@ const BILLZ_DATA = {
             "partial": 24,
             "full": 0,
             "med_close": 6.2,
-            "cost": 246625
+            "cost": 189025
           },
           {
             "name": "usman",
@@ -29781,7 +29781,7 @@ const BILLZ_DATA = {
             "partial": 23,
             "full": 2,
             "med_close": 5.3,
-            "cost": 246625
+            "cost": 189025
           },
           {
             "name": "isfarxon",
@@ -29789,7 +29789,7 @@ const BILLZ_DATA = {
             "partial": 24,
             "full": 0,
             "med_close": 7.2,
-            "cost": 236760
+            "cost": 181464
           },
           {
             "name": "baraka-oyinchoqlar",
@@ -29797,7 +29797,7 @@ const BILLZ_DATA = {
             "partial": 20,
             "full": 1,
             "med_close": 5.6,
-            "cost": 207165
+            "cost": 158781
           },
           {
             "name": "vitazone",
@@ -29805,7 +29805,7 @@ const BILLZ_DATA = {
             "partial": 18,
             "full": 1,
             "med_close": 8.3,
-            "cost": 187435
+            "cost": 143659
           },
           {
             "name": "DEFFCHONKI",
@@ -29813,7 +29813,7 @@ const BILLZ_DATA = {
             "partial": 13,
             "full": 1,
             "med_close": 7.2,
-            "cost": 138110
+            "cost": 105854
           },
           {
             "name": "Picasso",
@@ -29821,7 +29821,7 @@ const BILLZ_DATA = {
             "partial": 11,
             "full": 2,
             "med_close": 7.2,
-            "cost": 128245
+            "cost": 98293
           },
           {
             "name": "Colibri",
@@ -29829,7 +29829,7 @@ const BILLZ_DATA = {
             "partial": 13,
             "full": 0,
             "med_close": 3.5,
-            "cost": 128245
+            "cost": 98293
           },
           {
             "name": "gastronom",
@@ -29837,7 +29837,7 @@ const BILLZ_DATA = {
             "partial": 12,
             "full": 0,
             "med_close": 7.2,
-            "cost": 118380
+            "cost": 90732
           },
           {
             "name": "alpuz",
@@ -29845,7 +29845,7 @@ const BILLZ_DATA = {
             "partial": 12,
             "full": 0,
             "med_close": 7.9,
-            "cost": 118380
+            "cost": 90732
           },
           {
             "name": "vegagroup",
@@ -29853,7 +29853,7 @@ const BILLZ_DATA = {
             "partial": 12,
             "full": 0,
             "med_close": 4.7,
-            "cost": 118380
+            "cost": 90732
           },
           {
             "name": "asilbozor",
@@ -29861,7 +29861,7 @@ const BILLZ_DATA = {
             "partial": 11,
             "full": 1,
             "med_close": 4.3,
-            "cost": 118380
+            "cost": 90732
           },
           {
             "name": "asvisso",
@@ -29869,7 +29869,7 @@ const BILLZ_DATA = {
             "partial": 12,
             "full": 0,
             "med_close": 7.9,
-            "cost": 118380
+            "cost": 90732
           },
           {
             "name": "Amir",
@@ -29877,7 +29877,7 @@ const BILLZ_DATA = {
             "partial": 11,
             "full": 1,
             "med_close": 7.2,
-            "cost": 118380
+            "cost": 90732
           },
           {
             "name": "Kolbasachi",
@@ -29885,7 +29885,7 @@ const BILLZ_DATA = {
             "partial": 10,
             "full": 1,
             "med_close": 4.1,
-            "cost": 108515
+            "cost": 83171
           },
           {
             "name": "amour",
@@ -29893,7 +29893,7 @@ const BILLZ_DATA = {
             "partial": 10,
             "full": 1,
             "med_close": 3.3,
-            "cost": 108515
+            "cost": 83171
           },
           {
             "name": "tamur",
@@ -29901,7 +29901,7 @@ const BILLZ_DATA = {
             "partial": 10,
             "full": 0,
             "med_close": 6.7,
-            "cost": 98650
+            "cost": 75610
           },
           {
             "name": "Essenza-parfumes",
@@ -29909,7 +29909,7 @@ const BILLZ_DATA = {
             "partial": 9,
             "full": 0,
             "med_close": 1.1,
-            "cost": 88785
+            "cost": 68049
           },
           {
             "name": "Bloom",
@@ -29917,7 +29917,7 @@ const BILLZ_DATA = {
             "partial": 9,
             "full": 0,
             "med_close": 4.3,
-            "cost": 88785
+            "cost": 68049
           }
         ],
         "by_store_ks": [
@@ -29927,7 +29927,7 @@ const BILLZ_DATA = {
             "tickets": 12,
             "partial": 11,
             "full": 1,
-            "cost": 118380
+            "cost": 90732
           },
           {
             "store": "Colibri",
@@ -29935,7 +29935,7 @@ const BILLZ_DATA = {
             "tickets": 9,
             "partial": 9,
             "full": 0,
-            "cost": 88785
+            "cost": 68049
           },
           {
             "store": "Colibri",
@@ -29943,7 +29943,7 @@ const BILLZ_DATA = {
             "tickets": 4,
             "partial": 4,
             "full": 0,
-            "cost": 39460
+            "cost": 30244
           },
           {
             "store": "DEFFCHONKI",
@@ -29951,7 +29951,7 @@ const BILLZ_DATA = {
             "tickets": 14,
             "partial": 13,
             "full": 1,
-            "cost": 138110
+            "cost": 105854
           },
           {
             "store": "Picasso",
@@ -29959,7 +29959,7 @@ const BILLZ_DATA = {
             "tickets": 11,
             "partial": 9,
             "full": 2,
-            "cost": 108515
+            "cost": 83171
           },
           {
             "store": "Picasso",
@@ -29967,7 +29967,7 @@ const BILLZ_DATA = {
             "tickets": 2,
             "partial": 2,
             "full": 0,
-            "cost": 19730
+            "cost": 15122
           },
           {
             "store": "alpuz",
@@ -29975,7 +29975,7 @@ const BILLZ_DATA = {
             "tickets": 8,
             "partial": 8,
             "full": 0,
-            "cost": 78920
+            "cost": 60488
           },
           {
             "store": "alpuz",
@@ -29983,7 +29983,7 @@ const BILLZ_DATA = {
             "tickets": 4,
             "partial": 4,
             "full": 0,
-            "cost": 39460
+            "cost": 30244
           },
           {
             "store": "asilbozor",
@@ -29991,7 +29991,7 @@ const BILLZ_DATA = {
             "tickets": 6,
             "partial": 5,
             "full": 1,
-            "cost": 59190
+            "cost": 45366
           },
           {
             "store": "asvisso",
@@ -29999,7 +29999,7 @@ const BILLZ_DATA = {
             "tickets": 9,
             "partial": 9,
             "full": 0,
-            "cost": 88785
+            "cost": 68049
           },
           {
             "store": "avto-doctor",
@@ -30007,7 +30007,7 @@ const BILLZ_DATA = {
             "tickets": 23,
             "partial": 22,
             "full": 0,
-            "cost": 226895
+            "cost": 173903
           },
           {
             "store": "baraka-oyinchoqlar",
@@ -30015,7 +30015,7 @@ const BILLZ_DATA = {
             "tickets": 20,
             "partial": 19,
             "full": 1,
-            "cost": 197300
+            "cost": 151220
           },
           {
             "store": "gastronom",
@@ -30023,7 +30023,7 @@ const BILLZ_DATA = {
             "tickets": 11,
             "partial": 11,
             "full": 0,
-            "cost": 108515
+            "cost": 83171
           },
           {
             "store": "isfarxon",
@@ -30031,7 +30031,7 @@ const BILLZ_DATA = {
             "tickets": 24,
             "partial": 24,
             "full": 0,
-            "cost": 236760
+            "cost": 181464
           },
           {
             "store": "usman",
@@ -30039,7 +30039,7 @@ const BILLZ_DATA = {
             "tickets": 25,
             "partial": 23,
             "full": 2,
-            "cost": 246625
+            "cost": 189025
           },
           {
             "store": "vegagroup",
@@ -30047,7 +30047,7 @@ const BILLZ_DATA = {
             "tickets": 12,
             "partial": 12,
             "full": 0,
-            "cost": 118380
+            "cost": 90732
           },
           {
             "store": "vitazone",
@@ -30055,7 +30055,7 @@ const BILLZ_DATA = {
             "tickets": 18,
             "partial": 17,
             "full": 1,
-            "cost": 177570
+            "cost": 136098
           },
           {
             "store": "BILLZ (внутр.)",
@@ -30063,7 +30063,7 @@ const BILLZ_DATA = {
             "tickets": 7,
             "partial": 7,
             "full": 0,
-            "cost": 69055
+            "cost": 52927
           },
           {
             "store": "BILLZ (внутр.)",
@@ -30071,7 +30071,7 @@ const BILLZ_DATA = {
             "tickets": 6,
             "partial": 5,
             "full": 1,
-            "cost": 59190
+            "cost": 45366
           },
           {
             "store": "BILLZ (внутр.)",
@@ -30079,7 +30079,7 @@ const BILLZ_DATA = {
             "tickets": 5,
             "partial": 5,
             "full": 0,
-            "cost": 49325
+            "cost": 37805
           }
         ],
         "stores_count": 4165,
@@ -43202,7 +43202,7 @@ const BILLZ_DATA = {
             "icon": "⚠️",
             "type": "finding",
             "title": "Обучение через CC дорогое",
-            "text": "9 865 сум за тикет vs ~3-4 тыс за плановое CS-онбординг. Передавать сложные кейсы в CS обязательно."
+            "text": "7 561 сум за тикет vs ~3-4 тыс за плановое CS-онбординг. Передавать сложные кейсы в CS обязательно."
           },
           {
             "icon": "✅",
@@ -43267,8 +43267,8 @@ const BILLZ_DATA = {
         "sla_chat_pct": 85.0,
         "lcr": 6.78,
         "repeat_pct": 7.9,
-        "cost": 44017630,
-        "cpt": 9865,
+        "cost": 33737182,
+        "cpt": 7561,
         "csat_pct": 94.8,
         "rating_pct": 94.8,
         "csat_rated": 271,
@@ -43296,7 +43296,7 @@ const BILLZ_DATA = {
             "rated": 33,
             "sla_pct": 87.6,
             "frt_sec": 50,
-            "cost": 5366560
+            "cost": 4113184
           },
           {
             "name": "Иззатбек",
@@ -43307,7 +43307,7 @@ const BILLZ_DATA = {
             "rated": 23,
             "sla_pct": 79.5,
             "frt_sec": 50,
-            "cost": 5346830
+            "cost": 4098062
           },
           {
             "name": "Авазбек",
@@ -43318,7 +43318,7 @@ const BILLZ_DATA = {
             "rated": 55,
             "sla_pct": 92.5,
             "frt_sec": 50,
-            "cost": 5277775
+            "cost": 4045135
           },
           {
             "name": "Анасхон",
@@ -43329,7 +43329,7 @@ const BILLZ_DATA = {
             "rated": 35,
             "sla_pct": 97.1,
             "frt_sec": 50,
-            "cost": 5258045
+            "cost": 4030013
           },
           {
             "name": "Атабек",
@@ -43340,7 +43340,7 @@ const BILLZ_DATA = {
             "rated": 25,
             "sla_pct": 89.0,
             "frt_sec": 50,
-            "cost": 4715470
+            "cost": 3614158
           },
           {
             "name": "Робия Р.",
@@ -43351,7 +43351,7 @@ const BILLZ_DATA = {
             "rated": 28,
             "sla_pct": 71.8,
             "frt_sec": 50,
-            "cost": 4024920
+            "cost": 3084888
           },
           {
             "name": "Сардор Б.",
@@ -43362,7 +43362,7 @@ const BILLZ_DATA = {
             "rated": 20,
             "sla_pct": 77.9,
             "frt_sec": 50,
-            "cost": 3768430
+            "cost": 2888302
           },
           {
             "name": "Тожмухаммад",
@@ -43373,7 +43373,7 @@ const BILLZ_DATA = {
             "rated": 14,
             "sla_pct": 89.2,
             "frt_sec": 50,
-            "cost": 3462615
+            "cost": 2653911
           },
           {
             "name": "Ардак",
@@ -43384,7 +43384,7 @@ const BILLZ_DATA = {
             "rated": 19,
             "sla_pct": 80.9,
             "frt_sec": 50,
-            "cost": 2989095
+            "cost": 2290983
           },
           {
             "name": "Алиёр",
@@ -43395,7 +43395,7 @@ const BILLZ_DATA = {
             "rated": 4,
             "sla_pct": 80.0,
             "frt_sec": 50,
-            "cost": 2239355
+            "cost": 1716347
           },
           {
             "name": "Камолиддин",
@@ -43406,7 +43406,7 @@ const BILLZ_DATA = {
             "rated": 13,
             "sla_pct": 84.1,
             "frt_sec": 50,
-            "cost": 1361370
+            "cost": 1043418
           },
           {
             "name": "Севинч",
@@ -43417,7 +43417,7 @@ const BILLZ_DATA = {
             "rated": 1,
             "sla_pct": 77.8,
             "frt_sec": 50,
-            "cost": 177570
+            "cost": 136098
           }
         ],
         "top_labels": [
@@ -43426,105 +43426,105 @@ const BILLZ_DATA = {
             "tickets": 410,
             "desired": 200,
             "undesired": 209,
-            "cost": 4044650
+            "cost": 3100010
           },
           {
             "name": "Оборудование - Установка/Настройка/Удаление принтера",
             "tickets": 160,
             "desired": 99,
             "undesired": 60,
-            "cost": 1578400
+            "cost": 1209760
           },
           {
             "name": "Учётная запись - Помощь со входом в аккаунт",
             "tickets": 158,
             "desired": 47,
             "undesired": 111,
-            "cost": 1558670
+            "cost": 1194638
           },
           {
             "name": "Документооборот - Создание ссылки для оплаты",
             "tickets": 136,
             "desired": 25,
             "undesired": 111,
-            "cost": 1341640
+            "cost": 1028296
           },
           {
             "name": "Кассовые смены — Открытие/Закрытие смен",
             "tickets": 115,
             "desired": 57,
             "undesired": 58,
-            "cost": 1134475
+            "cost": 869515
           },
           {
             "name": "Учётная запись - Блокировка/Разблокировка аккаунта",
             "tickets": 91,
             "desired": 51,
             "undesired": 40,
-            "cost": 897715
+            "cost": 688051
           },
           {
             "name": "Каталог — настройка печати ценника",
             "tickets": 71,
             "desired": 52,
             "undesired": 19,
-            "cost": 700415
+            "cost": 536831
           },
           {
             "name": "Учётная запись - Создание магазина",
             "tickets": 64,
             "desired": 43,
             "undesired": 21,
-            "cost": 631360
+            "cost": 483904
           },
           {
             "name": "Управление - Создание/Редактирвоание/Удаление сотрудника",
             "tickets": 59,
             "desired": 37,
             "undesired": 22,
-            "cost": 582035
+            "cost": 446099
           },
           {
             "name": "Управление - Создание/Редактирвоание/Удаление роли",
             "tickets": 59,
             "desired": 44,
             "undesired": 15,
-            "cost": 582035
+            "cost": 446099
           },
           {
             "name": "Оборудование - Установка Anydesk/BILLZ Desktop/Программы компьютера и тд.",
             "tickets": 56,
             "desired": 33,
             "undesired": 23,
-            "cost": 552440
+            "cost": 423416
           },
           {
             "name": "Настройка - Создание/Редактирование/Удаление доп. точки",
             "tickets": 52,
             "desired": 40,
             "undesired": 11,
-            "cost": 512980
+            "cost": 393172
           },
           {
             "name": "Новая продажа - Не удаётся сделать продажу",
             "tickets": 51,
             "desired": 28,
             "undesired": 23,
-            "cost": 503115
+            "cost": 385611
           },
           {
             "name": "Массовый сбой BILLZ",
             "tickets": 49,
             "desired": 5,
             "undesired": 44,
-            "cost": 483385
+            "cost": 370489
           },
           {
             "name": "Документооборот - Консультация по сумме долга",
             "tickets": 48,
             "desired": 23,
             "undesired": 25,
-            "cost": 473520
+            "cost": 362928
           }
         ],
         "top_companies": [
@@ -43533,7 +43533,7 @@ const BILLZ_DATA = {
             "tickets": 695,
             "desired": 291,
             "undesired": 380,
-            "cost": 6856175,
+            "cost": 5254895,
             "top_labels": [
               {
                 "label": "Документооборот - Создание ссылки для оплаты",
@@ -43554,7 +43554,7 @@ const BILLZ_DATA = {
             "tickets": 55,
             "desired": 13,
             "undesired": 42,
-            "cost": 542575,
+            "cost": 415855,
             "top_labels": [
               {
                 "label": "Кассовые смены — Открытие/Закрытие смен",
@@ -43575,7 +43575,7 @@ const BILLZ_DATA = {
             "tickets": 45,
             "desired": 18,
             "undesired": 27,
-            "cost": 443925,
+            "cost": 340245,
             "top_labels": [
               {
                 "label": "Кассовые смены — Открытие/Закрытие смен",
@@ -43596,7 +43596,7 @@ const BILLZ_DATA = {
             "tickets": 30,
             "desired": 11,
             "undesired": 19,
-            "cost": 295950,
+            "cost": 226830,
             "top_labels": [
               {
                 "label": "Все продажи - Удаление/Редактирование продажи",
@@ -43617,7 +43617,7 @@ const BILLZ_DATA = {
             "tickets": 25,
             "desired": 13,
             "undesired": 12,
-            "cost": 246625,
+            "cost": 189025,
             "top_labels": [
               {
                 "label": "Новая продажа - Возврат/Обмен",
@@ -43638,7 +43638,7 @@ const BILLZ_DATA = {
             "tickets": 25,
             "desired": 12,
             "undesired": 12,
-            "cost": 246625,
+            "cost": 189025,
             "top_labels": [
               {
                 "label": "Кассовые смены — Расхождение суммы, Баг (реквест)",
@@ -43659,7 +43659,7 @@ const BILLZ_DATA = {
             "tickets": 20,
             "desired": 7,
             "undesired": 13,
-            "cost": 197300,
+            "cost": 151220,
             "top_labels": [
               {
                 "label": "Кассовые смены — Открытие/Закрытие смен",
@@ -43680,7 +43680,7 @@ const BILLZ_DATA = {
             "tickets": 18,
             "desired": 11,
             "undesired": 7,
-            "cost": 177570,
+            "cost": 136098,
             "top_labels": [
               {
                 "label": "Финансы - Создание/Удаление/Редактирование категорий",
@@ -43701,7 +43701,7 @@ const BILLZ_DATA = {
             "tickets": 17,
             "desired": 13,
             "undesired": 4,
-            "cost": 167705,
+            "cost": 128537,
             "top_labels": [
               {
                 "label": "Документооборот - Возврат денежных средств",
@@ -43722,7 +43722,7 @@ const BILLZ_DATA = {
             "tickets": 17,
             "desired": 9,
             "undesired": 8,
-            "cost": 167705,
+            "cost": 128537,
             "top_labels": [
               {
                 "label": "Настройка - Создание/Редактирование/Удаление чека",
@@ -43797,7 +43797,7 @@ const BILLZ_DATA = {
           "csat_pct": 97.2,
           "csat_rated": 91,
           "repeat_pct": 8.4,
-          "cost": 12508820,
+          "cost": 9587348,
           "lcr": 9.97,
           "operators": [
             {
@@ -43808,7 +43808,7 @@ const BILLZ_DATA = {
               "rating_pct": 93.3,
               "rated": 15,
               "sla_pct": 88.0,
-              "cost": 1884215
+              "cost": 1444151
             },
             {
               "name": "Иззатбек",
@@ -43818,7 +43818,7 @@ const BILLZ_DATA = {
               "rating_pct": 90.9,
               "rated": 11,
               "sla_pct": 72.7,
-              "cost": 1805295
+              "cost": 1383663
             },
             {
               "name": "Робия Р.",
@@ -43828,7 +43828,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 10,
               "sla_pct": 68.2,
-              "cost": 1736240
+              "cost": 1330736
             },
             {
               "name": "Авазбек",
@@ -43838,7 +43838,7 @@ const BILLZ_DATA = {
               "rating_pct": 93.3,
               "rated": 15,
               "sla_pct": 85.3,
-              "cost": 1341640
+              "cost": 1028296
             },
             {
               "name": "Анасхон",
@@ -43848,7 +43848,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 9,
               "sla_pct": 96.1,
-              "cost": 1272585
+              "cost": 975369
             },
             {
               "name": "Атабек",
@@ -43858,7 +43858,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 8,
               "sla_pct": 87.7,
-              "cost": 1124610
+              "cost": 861954
             },
             {
               "name": "Тожмухаммад",
@@ -43868,7 +43868,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 6,
               "sla_pct": 79.4,
-              "cost": 956905
+              "cost": 733417
             },
             {
               "name": "Сардор Б.",
@@ -43878,7 +43878,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 2,
               "sla_pct": 69.6,
-              "cost": 680685
+              "cost": 521709
             },
             {
               "name": "Ардак",
@@ -43888,7 +43888,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 7,
               "sla_pct": 74.6,
-              "cost": 582035
+              "cost": 446099
             },
             {
               "name": "Камолиддин",
@@ -43898,7 +43898,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 7,
               "sla_pct": 86.2,
-              "cost": 572170
+              "cost": 438538
             },
             {
               "name": "Алиёр",
@@ -43908,7 +43908,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 1,
               "sla_pct": 70.9,
-              "cost": 542575
+              "cost": 415855
             }
           ],
           "top_labels": [
@@ -43917,70 +43917,70 @@ const BILLZ_DATA = {
               "tickets": 125,
               "desired": 57,
               "undesired": 67,
-              "cost": 1233125
+              "cost": 945125
             },
             {
               "name": "Учётная запись - Помощь со входом в аккаунт",
               "tickets": 70,
               "desired": 14,
               "undesired": 56,
-              "cost": 690550
+              "cost": 529270
             },
             {
               "name": "Оборудование - Установка/Настройка/Удаление принтера",
               "tickets": 49,
               "desired": 32,
               "undesired": 17,
-              "cost": 483385
+              "cost": 370489
             },
             {
               "name": "Документооборот - Создание ссылки для оплаты",
               "tickets": 48,
               "desired": 4,
               "undesired": 44,
-              "cost": 473520
+              "cost": 362928
             },
             {
               "name": "Кассовые смены — Открытие/Закрытие смен",
               "tickets": 37,
               "desired": 23,
               "undesired": 14,
-              "cost": 365005
+              "cost": 279757
             },
             {
               "name": "Документооборот - Консультация по сумме долга",
               "tickets": 22,
               "desired": 10,
               "undesired": 12,
-              "cost": 217030
+              "cost": 166342
             },
             {
               "name": "Отчёты - Разбор отчётов",
               "tickets": 21,
               "desired": 14,
               "undesired": 7,
-              "cost": 207165
+              "cost": 158781
             },
             {
               "name": "Каталог — настройка печати ценника",
               "tickets": 21,
               "desired": 20,
               "undesired": 1,
-              "cost": 207165
+              "cost": 158781
             },
             {
               "name": "Учётная запись - Блокировка/Разблокировка аккаунта",
               "tickets": 20,
               "desired": 10,
               "undesired": 10,
-              "cost": 197300
+              "cost": 151220
             },
             {
               "name": "Оборудование - Установка Anydesk/BILLZ Desktop/Программы компьютера и тд.",
               "tickets": 19,
               "desired": 9,
               "undesired": 10,
-              "cost": 187435
+              "cost": 143659
             }
           ],
           "top_companies": [
@@ -43989,7 +43989,7 @@ const BILLZ_DATA = {
               "tickets": 193,
               "desired": 82,
               "undesired": 105,
-              "cost": 1903945,
+              "cost": 1459273,
               "top_labels": [
                 {
                   "label": "Документооборот - Создание ссылки для оплаты",
@@ -44010,7 +44010,7 @@ const BILLZ_DATA = {
               "tickets": 19,
               "desired": 9,
               "undesired": 10,
-              "cost": 187435,
+              "cost": 143659,
               "top_labels": [
                 {
                   "label": "Кассовые смены — Открытие/Закрытие смен",
@@ -44031,7 +44031,7 @@ const BILLZ_DATA = {
               "tickets": 16,
               "desired": 9,
               "undesired": 7,
-              "cost": 157840,
+              "cost": 120976,
               "top_labels": [
                 {
                   "label": "Кассовые смены — Расхождение суммы, Баг (реквест)",
@@ -44052,7 +44052,7 @@ const BILLZ_DATA = {
               "tickets": 12,
               "desired": 3,
               "undesired": 9,
-              "cost": 118380,
+              "cost": 90732,
               "top_labels": [
                 {
                   "label": "Кассовые смены — Открытие/Закрытие смен",
@@ -44069,7 +44069,7 @@ const BILLZ_DATA = {
               "tickets": 10,
               "desired": 4,
               "undesired": 6,
-              "cost": 98650,
+              "cost": 75610,
               "top_labels": [
                 {
                   "label": "Все продажи - Удаление/Редактирование продажи",
@@ -44104,7 +44104,7 @@ const BILLZ_DATA = {
           "csat_pct": 93.9,
           "csat_rated": 150,
           "repeat_pct": 6.9,
-          "cost": 26763745,
+          "cost": 20512993,
           "lcr": 5.45,
           "operators": [
             {
@@ -44115,7 +44115,7 @@ const BILLZ_DATA = {
               "rating_pct": 91.4,
               "rated": 35,
               "sla_pct": 95.0,
-              "cost": 3186395
+              "cost": 2442203
             },
             {
               "name": "Анасхон",
@@ -44125,7 +44125,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 17,
               "sla_pct": 96.6,
-              "cost": 3186395
+              "cost": 2442203
             },
             {
               "name": "Иззатбек",
@@ -44135,7 +44135,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 10,
               "sla_pct": 80.9,
-              "cost": 2989095
+              "cost": 2290983
             },
             {
               "name": "Атабек",
@@ -44145,7 +44145,7 @@ const BILLZ_DATA = {
               "rating_pct": 93.3,
               "rated": 15,
               "sla_pct": 90.0,
-              "cost": 2969365
+              "cost": 2275861
             },
             {
               "name": "Нурилло",
@@ -44155,7 +44155,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 14,
               "sla_pct": 88.9,
-              "cost": 2920040
+              "cost": 2238056
             },
             {
               "name": "Сардор Б.",
@@ -44165,7 +44165,7 @@ const BILLZ_DATA = {
               "rating_pct": 93.3,
               "rated": 15,
               "sla_pct": 80.7,
-              "cost": 2663550
+              "cost": 2041470
             },
             {
               "name": "Ардак",
@@ -44175,7 +44175,7 @@ const BILLZ_DATA = {
               "rating_pct": 91.7,
               "rated": 12,
               "sla_pct": 83.6,
-              "cost": 2407060
+              "cost": 1844884
             },
             {
               "name": "Тожмухаммад",
@@ -44185,7 +44185,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 8,
               "sla_pct": 94.3,
-              "cost": 2071650
+              "cost": 1587810
             },
             {
               "name": "Робия Р.",
@@ -44195,7 +44195,7 @@ const BILLZ_DATA = {
               "rating_pct": 78.6,
               "rated": 14,
               "sla_pct": 74.6,
-              "cost": 1825025
+              "cost": 1398785
             },
             {
               "name": "Алиёр",
@@ -44205,7 +44205,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 3,
               "sla_pct": 85.4,
-              "cost": 1686915
+              "cost": 1292931
             },
             {
               "name": "Камолиддин",
@@ -44215,7 +44215,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 6,
               "sla_pct": 82.5,
-              "cost": 789200
+              "cost": 604880
             },
             {
               "name": "Севинч",
@@ -44225,7 +44225,7 @@ const BILLZ_DATA = {
               "rating_pct": 0.0,
               "rated": 0,
               "sla_pct": 80.0,
-              "cost": 49325
+              "cost": 37805
             }
           ],
           "top_labels": [
@@ -44234,70 +44234,70 @@ const BILLZ_DATA = {
               "tickets": 222,
               "desired": 106,
               "undesired": 116,
-              "cost": 2190030
+              "cost": 1678542
             },
             {
               "name": "Оборудование - Установка/Настройка/Удаление принтера",
               "tickets": 96,
               "desired": 57,
               "undesired": 38,
-              "cost": 947040
+              "cost": 725856
             },
             {
               "name": "Учётная запись - Помощь со входом в аккаунт",
               "tickets": 76,
               "desired": 28,
               "undesired": 48,
-              "cost": 749740
+              "cost": 574636
             },
             {
               "name": "Кассовые смены — Открытие/Закрытие смен",
               "tickets": 66,
               "desired": 29,
               "undesired": 37,
-              "cost": 651090
+              "cost": 499026
             },
             {
               "name": "Документооборот - Создание ссылки для оплаты",
               "tickets": 64,
               "desired": 11,
               "undesired": 53,
-              "cost": 631360
+              "cost": 483904
             },
             {
               "name": "Учётная запись - Блокировка/Разблокировка аккаунта",
               "tickets": 54,
               "desired": 35,
               "undesired": 19,
-              "cost": 532710
+              "cost": 408294
             },
             {
               "name": "Учётная запись - Создание магазина",
               "tickets": 50,
               "desired": 33,
               "undesired": 17,
-              "cost": 493250
+              "cost": 378050
             },
             {
               "name": "Каталог — настройка печати ценника",
               "tickets": 46,
               "desired": 29,
               "undesired": 17,
-              "cost": 453790
+              "cost": 347806
             },
             {
               "name": "Массовый сбой BILLZ",
               "tickets": 43,
               "desired": 4,
               "undesired": 39,
-              "cost": 424195
+              "cost": 325123
             },
             {
               "name": "Новая продажа - Не удаётся сделать продажу",
               "tickets": 40,
               "desired": 23,
               "undesired": 17,
-              "cost": 394600
+              "cost": 302440
             }
           ],
           "top_companies": [
@@ -44306,7 +44306,7 @@ const BILLZ_DATA = {
               "tickets": 418,
               "desired": 174,
               "undesired": 228,
-              "cost": 4123570,
+              "cost": 3160498,
               "top_labels": [
                 {
                   "label": "Документооборот - Создание ссылки для оплаты",
@@ -44327,7 +44327,7 @@ const BILLZ_DATA = {
               "tickets": 35,
               "desired": 9,
               "undesired": 26,
-              "cost": 345275,
+              "cost": 264635,
               "top_labels": [
                 {
                   "label": "Кассовые смены — Открытие/Закрытие смен",
@@ -44348,7 +44348,7 @@ const BILLZ_DATA = {
               "tickets": 20,
               "desired": 8,
               "undesired": 12,
-              "cost": 197300,
+              "cost": 151220,
               "top_labels": [
                 {
                   "label": "Кассовые смены — Открытие/Закрытие смен",
@@ -44369,7 +44369,7 @@ const BILLZ_DATA = {
               "tickets": 18,
               "desired": 10,
               "undesired": 8,
-              "cost": 177570,
+              "cost": 136098,
               "top_labels": [
                 {
                   "label": "Каталог — изменение свойств товара",
@@ -44390,7 +44390,7 @@ const BILLZ_DATA = {
               "tickets": 16,
               "desired": 6,
               "undesired": 10,
-              "cost": 157840,
+              "cost": 120976,
               "top_labels": [
                 {
                   "label": "Все продажи - Удаление/Редактирование продажи",
@@ -44425,7 +44425,7 @@ const BILLZ_DATA = {
           "csat_pct": 93.3,
           "csat_rated": 30,
           "repeat_pct": 12.3,
-          "cost": 4745065,
+          "cost": 3636841,
           "lcr": 4.6,
           "operators": [
             {
@@ -44436,7 +44436,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 9,
               "sla_pct": 100.0,
-              "cost": 799065
+              "cost": 612441
             },
             {
               "name": "Авазбек",
@@ -44446,7 +44446,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 5,
               "sla_pct": 97.4,
-              "cost": 749740
+              "cost": 574636
             },
             {
               "name": "Атабек",
@@ -44456,7 +44456,7 @@ const BILLZ_DATA = {
               "rating_pct": 50.0,
               "rated": 2,
               "sla_pct": 87.3,
-              "cost": 621495
+              "cost": 476343
             },
             {
               "name": "Нурилло",
@@ -44466,7 +44466,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 4,
               "sla_pct": 94.7,
-              "cost": 562305
+              "cost": 430977
             },
             {
               "name": "Иззатбек",
@@ -44476,7 +44476,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 2,
               "sla_pct": 82.1,
-              "cost": 552440
+              "cost": 423416
             },
             {
               "name": "Робия Р.",
@@ -44486,7 +44486,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 4,
               "sla_pct": 72.3,
-              "cost": 463655
+              "cost": 355367
             },
             {
               "name": "Тожмухаммад",
@@ -44496,7 +44496,7 @@ const BILLZ_DATA = {
               "rating_pct": 0.0,
               "rated": 0,
               "sla_pct": 86.4,
-              "cost": 434060
+              "cost": 332684
             },
             {
               "name": "Сардор Б.",
@@ -44506,7 +44506,7 @@ const BILLZ_DATA = {
               "rating_pct": 66.7,
               "rated": 3,
               "sla_pct": 79.1,
-              "cost": 424195
+              "cost": 325123
             },
             {
               "name": "Севинч",
@@ -44516,7 +44516,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 1,
               "sla_pct": 76.9,
-              "cost": 128245
+              "cost": 98293
             },
             {
               "name": "Алиёр",
@@ -44526,7 +44526,7 @@ const BILLZ_DATA = {
               "rating_pct": 0.0,
               "rated": 0,
               "sla_pct": 0.0,
-              "cost": 9865
+              "cost": 7561
             }
           ],
           "top_labels": [
@@ -44535,70 +44535,70 @@ const BILLZ_DATA = {
               "tickets": 63,
               "desired": 37,
               "undesired": 26,
-              "cost": 621495
+              "cost": 476343
             },
             {
               "name": "Документооборот - Создание ссылки для оплаты",
               "tickets": 24,
               "desired": 10,
               "undesired": 14,
-              "cost": 236760
+              "cost": 181464
             },
             {
               "name": "Учётная запись - Блокировка/Разблокировка аккаунта",
               "tickets": 17,
               "desired": 6,
               "undesired": 11,
-              "cost": 167705
+              "cost": 128537
             },
             {
               "name": "Оборудование - Установка/Настройка/Удаление принтера",
               "tickets": 15,
               "desired": 10,
               "undesired": 5,
-              "cost": 147975
+              "cost": 113415
             },
             {
               "name": "Кассовые смены — Открытие/Закрытие смен",
               "tickets": 12,
               "desired": 5,
               "undesired": 7,
-              "cost": 118380
+              "cost": 90732
             },
             {
               "name": "Учётная запись - Помощь со входом в аккаунт",
               "tickets": 12,
               "desired": 5,
               "undesired": 7,
-              "cost": 118380
+              "cost": 90732
             },
             {
               "name": "Новая продажа - Возврат/Обмен",
               "tickets": 11,
               "desired": 5,
               "undesired": 6,
-              "cost": 108515
+              "cost": 83171
             },
             {
               "name": "Управление - Создание/Редактирвоание/Удаление роли",
               "tickets": 8,
               "desired": 6,
               "undesired": 2,
-              "cost": 78920
+              "cost": 60488
             },
             {
               "name": "Оборудование - Загрузка базу товаров в весы",
               "tickets": 8,
               "desired": 6,
               "undesired": 2,
-              "cost": 78920
+              "cost": 60488
             },
             {
               "name": "Управление - Создание/Редактирвоание/Удаление сотрудника",
               "tickets": 7,
               "desired": 5,
               "undesired": 2,
-              "cost": 69055
+              "cost": 52927
             }
           ],
           "top_companies": [
@@ -44607,7 +44607,7 @@ const BILLZ_DATA = {
               "tickets": 84,
               "desired": 35,
               "undesired": 47,
-              "cost": 828660,
+              "cost": 635124,
               "top_labels": [
                 {
                   "label": "Документооборот - Создание ссылки для оплаты",
@@ -44628,7 +44628,7 @@ const BILLZ_DATA = {
               "tickets": 14,
               "desired": 8,
               "undesired": 6,
-              "cost": 138110,
+              "cost": 105854,
               "top_labels": [
                 {
                   "label": "Оборудование - Установка/Настройка/Удаление принтера",
@@ -44649,7 +44649,7 @@ const BILLZ_DATA = {
               "tickets": 8,
               "desired": 1,
               "undesired": 7,
-              "cost": 78920,
+              "cost": 60488,
               "top_labels": [
                 {
                   "label": "Кассовые смены — Открытие/Закрытие смен",
@@ -44670,7 +44670,7 @@ const BILLZ_DATA = {
               "tickets": 7,
               "desired": 3,
               "undesired": 4,
-              "cost": 69055,
+              "cost": 52927,
               "top_labels": [
                 {
                   "label": "Новая продажа - Возврат/Обмен",
@@ -44691,7 +44691,7 @@ const BILLZ_DATA = {
               "tickets": 6,
               "desired": 4,
               "undesired": 2,
-              "cost": 59190,
+              "cost": 45366,
               "top_labels": [
                 {
                   "label": "Оборудование - Загрузка базу товаров в весы",
@@ -44726,7 +44726,7 @@ const BILLZ_DATA = {
           "sla_pct": 72.3,
           "sla_not_met": 27.7,
           "avg_close_h": 0.06,
-          "cost": 4843715,
+          "cost": 3712451,
           "csat_pct": 97.5,
           "csat_rated": 40,
           "repeat_pct": 2.4,
@@ -44767,49 +44767,49 @@ const BILLZ_DATA = {
               "name": "Документооборот - Оплата за тариф",
               "tickets": 51,
               "undesired": 19,
-              "cost": 503115
+              "cost": 385611
             },
             {
               "name": "Учётная запись - Помощь со входом в аккаунт",
               "tickets": 39,
               "undesired": 29,
-              "cost": 384735
+              "cost": 294879
             },
             {
               "name": "Документооборот - Создание ссылки для оплаты",
               "tickets": 17,
               "undesired": 14,
-              "cost": 167705
+              "cost": 128537
             },
             {
               "name": "Кассовые смены — Открытие/Закрытие смен",
               "tickets": 16,
               "undesired": 2,
-              "cost": 157840
+              "cost": 120976
             },
             {
               "name": "Оборудование - Установка/Настройка/Удаление принтера",
               "tickets": 11,
               "undesired": 3,
-              "cost": 108515
+              "cost": 83171
             },
             {
               "name": "Управление - Создание/Редактирвоание/Удаление роли",
               "tickets": 10,
               "undesired": 2,
-              "cost": 98650
+              "cost": 75610
             },
             {
               "name": "Учётная запись - Блокировка/Разблокировка аккаунта",
               "tickets": 9,
               "undesired": 5,
-              "cost": 88785
+              "cost": 68049
             },
             {
               "name": "Документооборот - Консультация по сумме долга",
               "tickets": 9,
               "undesired": 5,
-              "cost": 88785
+              "cost": 68049
             }
           ],
           "operators": [
@@ -44821,7 +44821,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 5,
               "sla_pct": 70.4,
-              "cost": 789200
+              "cost": 604880
             },
             {
               "name": "Нурилло",
@@ -44831,7 +44831,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 8,
               "sla_pct": 76.6,
-              "cost": 749740
+              "cost": 574636
             },
             {
               "name": "Авазбек",
@@ -44841,7 +44841,7 @@ const BILLZ_DATA = {
               "rating_pct": 87.5,
               "rated": 8,
               "sla_pct": 78.6,
-              "cost": 720145
+              "cost": 551953
             },
             {
               "name": "Робия Р.",
@@ -44851,7 +44851,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 7,
               "sla_pct": 64.7,
-              "cost": 700415
+              "cost": 536831
             },
             {
               "name": "Сардор Б.",
@@ -44861,7 +44861,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 2,
               "sla_pct": 69.2,
-              "cost": 680685
+              "cost": 521709
             },
             {
               "name": "Ардак",
@@ -44871,7 +44871,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 7,
               "sla_pct": 74.1,
-              "cost": 582035
+              "cost": 446099
             },
             {
               "name": "Алиёр",
@@ -44881,7 +44881,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 1,
               "sla_pct": 71.4,
-              "cost": 542575
+              "cost": 415855
             },
             {
               "name": "Камолиддин",
@@ -44891,7 +44891,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 2,
               "sla_pct": 85.7,
-              "cost": 69055
+              "cost": 52927
             }
           ],
           "top_companies": [
@@ -44900,7 +44900,7 @@ const BILLZ_DATA = {
               "tickets": 74,
               "desired": 46,
               "undesired": 27,
-              "cost": 730010,
+              "cost": 559514,
               "top_labels": [
                 {
                   "label": "Документооборот - Оплата за тариф",
@@ -44921,7 +44921,7 @@ const BILLZ_DATA = {
               "tickets": 8,
               "desired": 6,
               "undesired": 2,
-              "cost": 78920,
+              "cost": 60488,
               "top_labels": [
                 {
                   "label": "Каталог — настройка печати ценника",
@@ -44942,7 +44942,7 @@ const BILLZ_DATA = {
               "tickets": 5,
               "desired": 3,
               "undesired": 2,
-              "cost": 49325,
+              "cost": 37805,
               "top_labels": [
                 {
                   "label": "Трансфер - перешёл в статус \"Инвентаризация\"",
@@ -44963,7 +44963,7 @@ const BILLZ_DATA = {
               "tickets": 4,
               "desired": 3,
               "undesired": 1,
-              "cost": 39460,
+              "cost": 30244,
               "top_labels": [
                 {
                   "label": "Кассовые смены — Открытие/Закрытие смен",
@@ -44976,7 +44976,7 @@ const BILLZ_DATA = {
               "tickets": 4,
               "desired": 4,
               "undesired": 0,
-              "cost": 39460,
+              "cost": 30244,
               "top_labels": [
                 {
                   "label": "Кассовые смены — Открытие/Закрытие смен",
@@ -45022,7 +45022,7 @@ const BILLZ_DATA = {
           "sla_pct": 88.9,
           "sla_not_met": 11.1,
           "avg_close_h": 0.05,
-          "cost": 4311005,
+          "cost": 3304157,
           "csat_pct": 94.1,
           "csat_rated": 34,
           "repeat_pct": 12.8,
@@ -45061,49 +45061,49 @@ const BILLZ_DATA = {
               "name": "Документооборот - Оплата за тариф",
               "tickets": 46,
               "undesired": 21,
-              "cost": 453790
+              "cost": 347806
             },
             {
               "name": "Документооборот - Создание ссылки для оплаты",
               "tickets": 15,
               "undesired": 15,
-              "cost": 147975
+              "cost": 113415
             },
             {
               "name": "Оборудование - Установка/Настройка/Удаление принтера",
               "tickets": 15,
               "undesired": 3,
-              "cost": 147975
+              "cost": 113415
             },
             {
               "name": "Учётная запись - Помощь со входом в аккаунт",
               "tickets": 15,
               "undesired": 12,
-              "cost": 147975
+              "cost": 113415
             },
             {
               "name": "Каталог — настройка печати ценника",
               "tickets": 13,
               "undesired": 0,
-              "cost": 128245
+              "cost": 98293
             },
             {
               "name": "Оборудование - Установка Anydesk/BILLZ Desktop/Программы компьютера и тд.",
               "tickets": 12,
               "undesired": 7,
-              "cost": 118380
+              "cost": 90732
             },
             {
               "name": "Кассовые смены — Открытие/Закрытие смен",
               "tickets": 10,
               "undesired": 3,
-              "cost": 98650
+              "cost": 75610
             },
             {
               "name": "Документооборот - Консультация по сумме долга",
               "tickets": 9,
               "undesired": 4,
-              "cost": 88785
+              "cost": 68049
             }
           ],
           "operators": [
@@ -45115,7 +45115,7 @@ const BILLZ_DATA = {
               "rating_pct": 83.3,
               "rated": 6,
               "sla_pct": 75.0,
-              "cost": 1016095
+              "cost": 778783
             },
             {
               "name": "Анасхон",
@@ -45125,7 +45125,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 4,
               "sla_pct": 100.0,
-              "cost": 690550
+              "cost": 529270
             },
             {
               "name": "Атабек",
@@ -45135,7 +45135,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 4,
               "sla_pct": 88.5,
-              "cost": 641225
+              "cost": 491465
             },
             {
               "name": "Нурилло",
@@ -45145,7 +45145,7 @@ const BILLZ_DATA = {
               "rating_pct": 83.3,
               "rated": 6,
               "sla_pct": 100.0,
-              "cost": 641225
+              "cost": 491465
             },
             {
               "name": "Авазбек",
@@ -45155,7 +45155,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 7,
               "sla_pct": 93.8,
-              "cost": 621495
+              "cost": 476343
             },
             {
               "name": "Тожмухаммад",
@@ -45165,7 +45165,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 3,
               "sla_pct": 88.2,
-              "cost": 493250
+              "cost": 378050
             },
             {
               "name": "Камолиддин",
@@ -45175,7 +45175,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 4,
               "sla_pct": 90.0,
-              "cost": 197300
+              "cost": 151220
             },
             {
               "name": "Робия Р.",
@@ -45185,7 +45185,7 @@ const BILLZ_DATA = {
               "rating_pct": 0.0,
               "rated": 0,
               "sla_pct": 100.0,
-              "cost": 9865
+              "cost": 7561
             }
           ],
           "top_companies": [
@@ -45194,7 +45194,7 @@ const BILLZ_DATA = {
               "tickets": 69,
               "desired": 28,
               "undesired": 39,
-              "cost": 680685,
+              "cost": 521709,
               "top_labels": [
                 {
                   "label": "Документооборот - Создание ссылки для оплаты",
@@ -45215,7 +45215,7 @@ const BILLZ_DATA = {
               "tickets": 8,
               "desired": 3,
               "undesired": 5,
-              "cost": 78920,
+              "cost": 60488,
               "top_labels": [
                 {
                   "label": "Кассовые смены — Расхождение суммы, Баг (реквест)",
@@ -45236,7 +45236,7 @@ const BILLZ_DATA = {
               "tickets": 8,
               "desired": 3,
               "undesired": 5,
-              "cost": 78920,
+              "cost": 60488,
               "top_labels": [
                 {
                   "label": "Все продажи - Удаление/Редактирование продажи",
@@ -45257,7 +45257,7 @@ const BILLZ_DATA = {
               "tickets": 5,
               "desired": 3,
               "undesired": 2,
-              "cost": 49325,
+              "cost": 37805,
               "top_labels": [
                 {
                   "label": "Поставщики - Статистика по поставщику",
@@ -45278,7 +45278,7 @@ const BILLZ_DATA = {
               "tickets": 5,
               "desired": 3,
               "undesired": 2,
-              "cost": 49325,
+              "cost": 37805,
               "top_labels": [
                 {
                   "label": "Трансфер - перешёл в статус \"Инвентаризация\"",
@@ -45323,7 +45323,7 @@ const BILLZ_DATA = {
           "sla_pct": 81.0,
           "sla_not_met": 19.0,
           "avg_close_h": 0.08,
-          "cost": 3354100,
+          "cost": 2570740,
           "csat_pct": 100.0,
           "csat_rated": 17,
           "repeat_pct": 10.0,
@@ -45362,49 +45362,49 @@ const BILLZ_DATA = {
               "name": "Документооборот - Оплата за тариф",
               "tickets": 28,
               "undesired": 27,
-              "cost": 276220
+              "cost": 211708
             },
             {
               "name": "Оборудование - Установка/Настройка/Удаление принтера",
               "tickets": 23,
               "undesired": 11,
-              "cost": 226895
+              "cost": 173903
             },
             {
               "name": "Учётная запись - Помощь со входом в аккаунт",
               "tickets": 16,
               "undesired": 15,
-              "cost": 157840
+              "cost": 120976
             },
             {
               "name": "Документооборот - Создание ссылки для оплаты",
               "tickets": 16,
               "undesired": 15,
-              "cost": 157840
+              "cost": 120976
             },
             {
               "name": "Кассовые смены — Открытие/Закрытие смен",
               "tickets": 11,
               "undesired": 9,
-              "cost": 108515
+              "cost": 83171
             },
             {
               "name": "Учётная запись - Блокировка/Разблокировка аккаунта",
               "tickets": 8,
               "undesired": 4,
-              "cost": 78920
+              "cost": 60488
             },
             {
               "name": "Отчёты - Разбор отчётов",
               "tickets": 8,
               "undesired": 5,
-              "cost": 78920
+              "cost": 60488
             },
             {
               "name": "Управление - Создание/Редактирвоание/Удаление сотрудника",
               "tickets": 5,
               "undesired": 2,
-              "cost": 49325
+              "cost": 37805
             }
           ],
           "operators": [
@@ -45416,7 +45416,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 3,
               "sla_pct": 70.3,
-              "cost": 1025960
+              "cost": 786344
             },
             {
               "name": "Анасхон",
@@ -45426,7 +45426,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 5,
               "sla_pct": 91.3,
-              "cost": 582035
+              "cost": 446099
             },
             {
               "name": "Нурилло",
@@ -45436,7 +45436,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 1,
               "sla_pct": 89.5,
-              "cost": 493250
+              "cost": 378050
             },
             {
               "name": "Атабек",
@@ -45446,7 +45446,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 4,
               "sla_pct": 85.0,
-              "cost": 483385
+              "cost": 370489
             },
             {
               "name": "Тожмухаммад",
@@ -45456,7 +45456,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 3,
               "sla_pct": 70.6,
-              "cost": 463655
+              "cost": 355367
             },
             {
               "name": "Камолиддин",
@@ -45466,7 +45466,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 1,
               "sla_pct": 83.9,
-              "cost": 305815
+              "cost": 234391
             }
           ],
           "top_companies": [
@@ -45475,7 +45475,7 @@ const BILLZ_DATA = {
               "tickets": 50,
               "desired": 8,
               "undesired": 39,
-              "cost": 493250,
+              "cost": 378050,
               "top_labels": [
                 {
                   "label": "Документооборот - Создание ссылки для оплаты",
@@ -45496,7 +45496,7 @@ const BILLZ_DATA = {
               "tickets": 9,
               "desired": 4,
               "undesired": 5,
-              "cost": 88785,
+              "cost": 68049,
               "top_labels": [
                 {
                   "label": "Инвентаризация — консультация по модулю (частичное обучение)",
@@ -45517,7 +45517,7 @@ const BILLZ_DATA = {
               "tickets": 7,
               "desired": 2,
               "undesired": 5,
-              "cost": 69055,
+              "cost": 52927,
               "top_labels": [
                 {
                   "label": "Маркетинг - Работа с Сертификатом/Ваучером",
@@ -45538,7 +45538,7 @@ const BILLZ_DATA = {
               "tickets": 7,
               "desired": 0,
               "undesired": 7,
-              "cost": 69055,
+              "cost": 52927,
               "top_labels": [
                 {
                   "label": "Кассовые смены — Открытие/Закрытие смен",
@@ -45555,7 +45555,7 @@ const BILLZ_DATA = {
               "tickets": 5,
               "desired": 1,
               "undesired": 4,
-              "cost": 49325,
+              "cost": 37805,
               "top_labels": [
                 {
                   "label": "Документооборот - Оплата за тариф",
@@ -45602,7 +45602,7 @@ const BILLZ_DATA = {
           "sla_pct": 81.6,
           "sla_not_met": 18.4,
           "avg_close_h": 0.06,
-          "cost": 4311005,
+          "cost": 3304157,
           "csat_pct": 91.7,
           "csat_rated": 24,
           "repeat_pct": 10.8,
@@ -45637,49 +45637,49 @@ const BILLZ_DATA = {
               "name": "Документооборот - Оплата за тариф",
               "tickets": 26,
               "undesired": 8,
-              "cost": 256490
+              "cost": 196586
             },
             {
               "name": "Учётная запись - Помощь со входом в аккаунт",
               "tickets": 17,
               "undesired": 9,
-              "cost": 167705
+              "cost": 128537
             },
             {
               "name": "Кассовые смены — Открытие/Закрытие смен",
               "tickets": 17,
               "undesired": 7,
-              "cost": 167705
+              "cost": 128537
             },
             {
               "name": "Оборудование - Установка/Настройка/Удаление принтера",
               "tickets": 14,
               "undesired": 7,
-              "cost": 138110
+              "cost": 105854
             },
             {
               "name": "Настройка - Создание/Редактирование/Удаление доп. точки",
               "tickets": 10,
               "undesired": 2,
-              "cost": 98650
+              "cost": 75610
             },
             {
               "name": "Документооборот - Создание ссылки для оплаты",
               "tickets": 10,
               "undesired": 8,
-              "cost": 98650
+              "cost": 75610
             },
             {
               "name": "Управление - Создание/Редактирвоание/Удаление роли",
               "tickets": 10,
               "undesired": 2,
-              "cost": 98650
+              "cost": 75610
             },
             {
               "name": "Управление - Создание/Редактирвоание/Удаление сотрудника",
               "tickets": 9,
               "undesired": 2,
-              "cost": 88785
+              "cost": 68049
             }
           ],
           "operators": [
@@ -45691,7 +45691,7 @@ const BILLZ_DATA = {
               "rating_pct": 87.5,
               "rated": 8,
               "sla_pct": 100.0,
-              "cost": 700415
+              "cost": 536831
             },
             {
               "name": "Анасхон",
@@ -45701,7 +45701,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 3,
               "sla_pct": 95.5,
-              "cost": 700415
+              "cost": 536831
             },
             {
               "name": "Ардак",
@@ -45711,7 +45711,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 4,
               "sla_pct": 80.0,
-              "cost": 660955
+              "cost": 506587
             },
             {
               "name": "Иззатбек",
@@ -45721,7 +45721,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 3,
               "sla_pct": 68.8,
-              "cost": 621495
+              "cost": 476343
             },
             {
               "name": "Сардор Б.",
@@ -45731,7 +45731,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 1,
               "sla_pct": 64.3,
-              "cost": 591900
+              "cost": 453660
             },
             {
               "name": "Атабек",
@@ -45741,7 +45741,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 2,
               "sla_pct": 88.9,
-              "cost": 434060
+              "cost": 332684
             },
             {
               "name": "Робия Р.",
@@ -45751,7 +45751,7 @@ const BILLZ_DATA = {
               "rating_pct": 66.7,
               "rated": 3,
               "sla_pct": 68.8,
-              "cost": 424195
+              "cost": 325123
             },
             {
               "name": "Камолиддин",
@@ -45761,7 +45761,7 @@ const BILLZ_DATA = {
               "rating_pct": 0.0,
               "rated": 0,
               "sla_pct": 77.8,
-              "cost": 177570
+              "cost": 136098
             }
           ],
           "top_companies": [
@@ -45770,7 +45770,7 @@ const BILLZ_DATA = {
               "tickets": 59,
               "desired": 29,
               "undesired": 25,
-              "cost": 582035,
+              "cost": 446099,
               "top_labels": [
                 {
                   "label": "Документооборот - Создание ссылки для оплаты",
@@ -45791,7 +45791,7 @@ const BILLZ_DATA = {
               "tickets": 8,
               "desired": 4,
               "undesired": 4,
-              "cost": 78920,
+              "cost": 60488,
               "top_labels": [
                 {
                   "label": "Кассовые смены — Открытие/Закрытие смен",
@@ -45812,7 +45812,7 @@ const BILLZ_DATA = {
               "tickets": 8,
               "desired": 7,
               "undesired": 1,
-              "cost": 78920,
+              "cost": 60488,
               "top_labels": [
                 {
                   "label": "Управление - Создание/Редактирвоание/Удаление сотрудника",
@@ -45833,7 +45833,7 @@ const BILLZ_DATA = {
               "tickets": 6,
               "desired": 1,
               "undesired": 5,
-              "cost": 59190,
+              "cost": 45366,
               "top_labels": [
                 {
                   "label": "Кассовые смены — Открытие/Закрытие смен",
@@ -45854,7 +45854,7 @@ const BILLZ_DATA = {
               "tickets": 6,
               "desired": 5,
               "undesired": 1,
-              "cost": 59190,
+              "cost": 45366,
               "top_labels": [
                 {
                   "label": "Оборудование - Установка Anydesk/BILLZ Desktop/Программы компьютера и тд.",
@@ -45899,7 +45899,7 @@ const BILLZ_DATA = {
           "sla_pct": 83.2,
           "sla_not_met": 16.8,
           "avg_close_h": 0.05,
-          "cost": 3867080,
+          "cost": 2963912,
           "csat_pct": 95.5,
           "csat_rated": 22,
           "repeat_pct": 8.4,
@@ -45936,49 +45936,49 @@ const BILLZ_DATA = {
               "name": "Документооборот - Оплата за тариф",
               "tickets": 39,
               "undesired": 17,
-              "cost": 384735
+              "cost": 294879
             },
             {
               "name": "Оборудование - Установка/Настройка/Удаление принтера",
               "tickets": 19,
               "undesired": 5,
-              "cost": 187435
+              "cost": 143659
             },
             {
               "name": "Учётная запись - Блокировка/Разблокировка аккаунта",
               "tickets": 10,
               "undesired": 2,
-              "cost": 98650
+              "cost": 75610
             },
             {
               "name": "Настройка - Создание/Редактирование/Удаление доп. точки",
               "tickets": 8,
               "undesired": 0,
-              "cost": 78920
+              "cost": 60488
             },
             {
               "name": "Заказы — отмена/возврат заказа",
               "tickets": 8,
               "undesired": 1,
-              "cost": 78920
+              "cost": 60488
             },
             {
               "name": "Кассовые смены — Открытие/Закрытие смен",
               "tickets": 7,
               "undesired": 1,
-              "cost": 69055
+              "cost": 52927
             },
             {
               "name": "Новая продажа - Не удаётся сделать продажу",
               "tickets": 7,
               "undesired": 3,
-              "cost": 69055
+              "cost": 52927
             },
             {
               "name": "Каталог — настройка печати ценника",
               "tickets": 6,
               "undesired": 1,
-              "cost": 59190
+              "cost": 45366
             }
           ],
           "operators": [
@@ -45990,7 +45990,7 @@ const BILLZ_DATA = {
               "rating_pct": 0.0,
               "rated": 0,
               "sla_pct": 70.6,
-              "cost": 690550
+              "cost": 529270
             },
             {
               "name": "Анасхон",
@@ -46000,7 +46000,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 6,
               "sla_pct": 96.0,
-              "cost": 670820
+              "cost": 514148
             },
             {
               "name": "Авазбек",
@@ -46010,7 +46010,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 5,
               "sla_pct": 93.5,
-              "cost": 651090
+              "cost": 499026
             },
             {
               "name": "Ардак",
@@ -46020,7 +46020,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 4,
               "sla_pct": 72.0,
-              "cost": 591900
+              "cost": 453660
             },
             {
               "name": "Нурилло",
@@ -46030,7 +46030,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 3,
               "sla_pct": 100.0,
-              "cost": 473520
+              "cost": 362928
             },
             {
               "name": "Тожмухаммад",
@@ -46040,7 +46040,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 1,
               "sla_pct": 91.7,
-              "cost": 443925
+              "cost": 340245
             },
             {
               "name": "Робия Р.",
@@ -46050,7 +46050,7 @@ const BILLZ_DATA = {
               "rating_pct": 66.7,
               "rated": 3,
               "sla_pct": 60.9,
-              "cost": 345275
+              "cost": 264635
             }
           ],
           "top_companies": [
@@ -46059,7 +46059,7 @@ const BILLZ_DATA = {
               "tickets": 69,
               "desired": 32,
               "undesired": 37,
-              "cost": 680685,
+              "cost": 521709,
               "top_labels": [
                 {
                   "label": "Документооборот - Оплата за тариф",
@@ -46080,7 +46080,7 @@ const BILLZ_DATA = {
               "tickets": 7,
               "desired": 3,
               "undesired": 4,
-              "cost": 69055,
+              "cost": 52927,
               "top_labels": [
                 {
                   "label": "Управление - Создание/Редактирвоание/Удаление роли, Управление - Создание/Редактирвоание/Удаление сотрудника",
@@ -46101,7 +46101,7 @@ const BILLZ_DATA = {
               "tickets": 6,
               "desired": 3,
               "undesired": 3,
-              "cost": 59190,
+              "cost": 45366,
               "top_labels": [
                 {
                   "label": "Новая продажа - Не удаётся сделать продажу",
@@ -46122,7 +46122,7 @@ const BILLZ_DATA = {
               "tickets": 6,
               "desired": 4,
               "undesired": 2,
-              "cost": 59190,
+              "cost": 45366,
               "top_labels": [
                 {
                   "label": "Кассовые смены — Открытие/Закрытие смен",
@@ -46143,7 +46143,7 @@ const BILLZ_DATA = {
               "tickets": 6,
               "desired": 3,
               "undesired": 3,
-              "cost": 59190,
+              "cost": 45366,
               "top_labels": [
                 {
                   "label": "Документооборот - Оплата за тариф",
@@ -46190,7 +46190,7 @@ const BILLZ_DATA = {
           "sla_pct": 88.1,
           "sla_not_met": 11.9,
           "avg_close_h": 0.06,
-          "cost": 3502075,
+          "cost": 2684155,
           "csat_pct": 87.0,
           "csat_rated": 23,
           "repeat_pct": 8.7,
@@ -46226,49 +46226,49 @@ const BILLZ_DATA = {
               "name": "Документооборот - Оплата за тариф",
               "tickets": 19,
               "undesired": 14,
-              "cost": 187435
+              "cost": 143659
             },
             {
               "name": "Оборудование - Установка/Настройка/Удаление принтера",
               "tickets": 13,
               "undesired": 5,
-              "cost": 128245
+              "cost": 98293
             },
             {
               "name": "Учётная запись - Создание магазина",
               "tickets": 12,
               "undesired": 6,
-              "cost": 118380
+              "cost": 90732
             },
             {
               "name": "Учётная запись - Блокировка/Разблокировка аккаунта",
               "tickets": 11,
               "undesired": 6,
-              "cost": 108515
+              "cost": 83171
             },
             {
               "name": "Документооборот - Создание ссылки для оплаты",
               "tickets": 10,
               "undesired": 8,
-              "cost": 98650
+              "cost": 75610
             },
             {
               "name": "Кассовые смены — Открытие/Закрытие смен",
               "tickets": 9,
               "undesired": 7,
-              "cost": 88785
+              "cost": 68049
             },
             {
               "name": "Учётная запись - Помощь со входом в аккаунт",
               "tickets": 9,
               "undesired": 4,
-              "cost": 88785
+              "cost": 68049
             },
             {
               "name": "Настройка - Создание/Редактирование/Удаление чека",
               "tickets": 7,
               "undesired": 1,
-              "cost": 69055
+              "cost": 52927
             }
           ],
           "operators": [
@@ -46280,7 +46280,7 @@ const BILLZ_DATA = {
               "rating_pct": 85.7,
               "rated": 7,
               "sla_pct": 94.3,
-              "cost": 631360
+              "cost": 483904
             },
             {
               "name": "Атабек",
@@ -46290,7 +46290,7 @@ const BILLZ_DATA = {
               "rating_pct": 75.0,
               "rated": 4,
               "sla_pct": 87.5,
-              "cost": 601765
+              "cost": 461221
             },
             {
               "name": "Робия Р.",
@@ -46300,7 +46300,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 3,
               "sla_pct": 85.0,
-              "cost": 601765
+              "cost": 461221
             },
             {
               "name": "Сардор Б.",
@@ -46310,7 +46310,7 @@ const BILLZ_DATA = {
               "rating_pct": 75.0,
               "rated": 4,
               "sla_pct": 80.0,
-              "cost": 512980
+              "cost": 393172
             },
             {
               "name": "Анасхон",
@@ -46320,7 +46320,7 @@ const BILLZ_DATA = {
               "rating_pct": 0.0,
               "rated": 0,
               "sla_pct": 94.1,
-              "cost": 503115
+              "cost": 385611
             },
             {
               "name": "Нурилло",
@@ -46330,7 +46330,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 3,
               "sla_pct": 81.2,
-              "cost": 473520
+              "cost": 362928
             },
             {
               "name": "Камолиддин",
@@ -46340,7 +46340,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 1,
               "sla_pct": 93.8,
-              "cost": 157840
+              "cost": 120976
             }
           ],
           "top_companies": [
@@ -46349,7 +46349,7 @@ const BILLZ_DATA = {
               "tickets": 75,
               "desired": 31,
               "undesired": 41,
-              "cost": 739875,
+              "cost": 567075,
               "top_labels": [
                 {
                   "label": "Учётная запись - Блокировка/Разблокировка аккаунта",
@@ -46370,7 +46370,7 @@ const BILLZ_DATA = {
               "tickets": 6,
               "desired": 1,
               "undesired": 5,
-              "cost": 59190,
+              "cost": 45366,
               "top_labels": [
                 {
                   "label": "Кассовые смены — Открытие/Закрытие смен",
@@ -46383,7 +46383,7 @@ const BILLZ_DATA = {
               "tickets": 5,
               "desired": 0,
               "undesired": 5,
-              "cost": 49325,
+              "cost": 37805,
               "top_labels": [
                 {
                   "label": "Документооборот - Создание ссылки для оплаты",
@@ -46400,7 +46400,7 @@ const BILLZ_DATA = {
               "tickets": 4,
               "desired": 0,
               "undesired": 4,
-              "cost": 39460,
+              "cost": 30244,
               "top_labels": [
                 {
                   "label": "Управление - Создание/Редактирвоание/Удаление роли",
@@ -46417,7 +46417,7 @@ const BILLZ_DATA = {
               "tickets": 4,
               "desired": 4,
               "undesired": 0,
-              "cost": 39460,
+              "cost": 30244,
               "top_labels": [
                 {
                   "label": "Отчёты - Выгрузка отчёта",
@@ -46464,7 +46464,7 @@ const BILLZ_DATA = {
           "sla_pct": 86.9,
           "sla_not_met": 13.1,
           "avg_close_h": 0.03,
-          "cost": 4330735,
+          "cost": 3319279,
           "csat_pct": 100.0,
           "csat_rated": 26,
           "repeat_pct": 2.3,
@@ -46501,49 +46501,49 @@ const BILLZ_DATA = {
               "name": "Документооборот - Оплата за тариф",
               "tickets": 47,
               "undesired": 28,
-              "cost": 463655
+              "cost": 355367
             },
             {
               "name": "Учётная запись - Помощь со входом в аккаунт",
               "tickets": 13,
               "undesired": 11,
-              "cost": 128245
+              "cost": 98293
             },
             {
               "name": "Оборудование - Установка/Настройка/Удаление принтера",
               "tickets": 11,
               "undesired": 5,
-              "cost": 108515
+              "cost": 83171
             },
             {
               "name": "Каталог — настройка печати ценника",
               "tickets": 10,
               "undesired": 4,
-              "cost": 98650
+              "cost": 75610
             },
             {
               "name": "Документооборот - Создание ссылки для оплаты",
               "tickets": 10,
               "undesired": 8,
-              "cost": 98650
+              "cost": 75610
             },
             {
               "name": "Каталог — изменение свойств товара",
               "tickets": 9,
               "undesired": 6,
-              "cost": 88785
+              "cost": 68049
             },
             {
               "name": "Оборудование - Установка Anydesk/BILLZ Desktop/Программы компьютера и тд.",
               "tickets": 7,
               "undesired": 2,
-              "cost": 69055
+              "cost": 52927
             },
             {
               "name": "Учётная запись - Очистка магазина",
               "tickets": 6,
               "undesired": 1,
-              "cost": 59190
+              "cost": 45366
             }
           ],
           "operators": [
@@ -46555,7 +46555,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 2,
               "sla_pct": 95.5,
-              "cost": 739875
+              "cost": 567075
             },
             {
               "name": "Нурилло",
@@ -46565,7 +46565,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 4,
               "sla_pct": 93.1,
-              "cost": 730010
+              "cost": 559514
             },
             {
               "name": "Сардор Б.",
@@ -46575,7 +46575,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 3,
               "sla_pct": 92.3,
-              "cost": 611630
+              "cost": 468782
             },
             {
               "name": "Алиёр",
@@ -46585,7 +46585,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 2,
               "sla_pct": 80.0,
-              "cost": 591900
+              "cost": 453660
             },
             {
               "name": "Авазбек",
@@ -46595,7 +46595,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 8,
               "sla_pct": 87.5,
-              "cost": 503115
+              "cost": 385611
             },
             {
               "name": "Иззатбек",
@@ -46605,7 +46605,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 1,
               "sla_pct": 83.3,
-              "cost": 463655
+              "cost": 355367
             },
             {
               "name": "Тожмухаммад",
@@ -46615,7 +46615,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 4,
               "sla_pct": 89.5,
-              "cost": 453790
+              "cost": 347806
             },
             {
               "name": "Робия Р.",
@@ -46625,7 +46625,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 2,
               "sla_pct": 68.4,
-              "cost": 236760
+              "cost": 181464
             }
           ],
           "top_companies": [
@@ -46634,7 +46634,7 @@ const BILLZ_DATA = {
               "tickets": 53,
               "desired": 22,
               "undesired": 28,
-              "cost": 522845,
+              "cost": 400733,
               "top_labels": [
                 {
                   "label": "Документооборот - Создание ссылки для оплаты",
@@ -46655,7 +46655,7 @@ const BILLZ_DATA = {
               "tickets": 8,
               "desired": 3,
               "undesired": 5,
-              "cost": 78920,
+              "cost": 60488,
               "top_labels": [
                 {
                   "label": "Каталог — изменение свойств товара",
@@ -46676,7 +46676,7 @@ const BILLZ_DATA = {
               "tickets": 7,
               "desired": 4,
               "undesired": 3,
-              "cost": 69055,
+              "cost": 52927,
               "top_labels": [
                 {
                   "label": "Документооборот - Оплата за тариф",
@@ -46693,7 +46693,7 @@ const BILLZ_DATA = {
               "tickets": 5,
               "desired": 0,
               "undesired": 5,
-              "cost": 49325,
+              "cost": 37805,
               "top_labels": [
                 {
                   "label": "Все продажи - Удаление/Редактирование продажи",
@@ -46714,7 +46714,7 @@ const BILLZ_DATA = {
               "tickets": 5,
               "desired": 1,
               "undesired": 4,
-              "cost": 49325,
+              "cost": 37805,
               "top_labels": [
                 {
                   "label": "Учётная запись - Помощь со входом в аккаунт",
@@ -46756,7 +46756,7 @@ const BILLZ_DATA = {
           "sla_pct": 92.3,
           "sla_not_met": 7.7,
           "avg_close_h": 0.04,
-          "cost": 4468845,
+          "cost": 3425133,
           "csat_pct": 94.4,
           "csat_rated": 18,
           "repeat_pct": 7.5,
@@ -46794,49 +46794,49 @@ const BILLZ_DATA = {
               "name": "Документооборот - Оплата за тариф",
               "tickets": 57,
               "undesired": 22,
-              "cost": 562305
+              "cost": 430977
             },
             {
               "name": "Оборудование - Установка/Настройка/Удаление принтера",
               "tickets": 19,
               "undesired": 5,
-              "cost": 187435
+              "cost": 143659
             },
             {
               "name": "Документооборот - Создание ссылки для оплаты",
               "tickets": 12,
               "undesired": 10,
-              "cost": 118380
+              "cost": 90732
             },
             {
               "name": "Каталог — настройка печати ценника",
               "tickets": 12,
               "undesired": 5,
-              "cost": 118380
+              "cost": 90732
             },
             {
               "name": "Учётная запись - Блокировка/Разблокировка аккаунта",
               "tickets": 11,
               "undesired": 4,
-              "cost": 108515
+              "cost": 83171
             },
             {
               "name": "Учётная запись - Помощь со входом в аккаунт",
               "tickets": 9,
               "undesired": 3,
-              "cost": 88785
+              "cost": 68049
             },
             {
               "name": "Кассовые смены — Открытие/Закрытие смен",
               "tickets": 8,
               "undesired": 4,
-              "cost": 78920
+              "cost": 60488
             },
             {
               "name": "Учётная запись - Создание магазина",
               "tickets": 8,
               "undesired": 2,
-              "cost": 78920
+              "cost": 60488
             }
           ],
           "operators": [
@@ -46848,7 +46848,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 5,
               "sla_pct": 97.1,
-              "cost": 799065
+              "cost": 612441
             },
             {
               "name": "Алиёр",
@@ -46858,7 +46858,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 1,
               "sla_pct": 90.9,
-              "cost": 779335
+              "cost": 597319
             },
             {
               "name": "Авазбек",
@@ -46868,7 +46868,7 @@ const BILLZ_DATA = {
               "rating_pct": 85.7,
               "rated": 7,
               "sla_pct": 97.1,
-              "cost": 700415
+              "cost": 536831
             },
             {
               "name": "Иззатбек",
@@ -46878,7 +46878,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 2,
               "sla_pct": 88.9,
-              "cost": 651090
+              "cost": 499026
             },
             {
               "name": "Ардак",
@@ -46888,7 +46888,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 1,
               "sla_pct": 95.0,
-              "cost": 601765
+              "cost": 461221
             },
             {
               "name": "Тожмухаммад",
@@ -46898,7 +46898,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 1,
               "sla_pct": 100.0,
-              "cost": 473520
+              "cost": 362928
             },
             {
               "name": "Нурилло",
@@ -46908,7 +46908,7 @@ const BILLZ_DATA = {
               "rating_pct": 0.0,
               "rated": 0,
               "sla_pct": 87.5,
-              "cost": 256490
+              "cost": 196586
             },
             {
               "name": "Камолиддин",
@@ -46918,7 +46918,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 1,
               "sla_pct": 75.0,
-              "cost": 197300
+              "cost": 151220
             },
             {
               "name": "Сардор Б.",
@@ -46928,7 +46928,7 @@ const BILLZ_DATA = {
               "rating_pct": 0.0,
               "rated": 0,
               "sla_pct": 0.0,
-              "cost": 9865
+              "cost": 7561
             }
           ],
           "top_companies": [
@@ -46937,7 +46937,7 @@ const BILLZ_DATA = {
               "tickets": 72,
               "desired": 27,
               "undesired": 45,
-              "cost": 710280,
+              "cost": 544392,
               "top_labels": [
                 {
                   "label": "Документооборот - Оплата за тариф",
@@ -46958,7 +46958,7 @@ const BILLZ_DATA = {
               "tickets": 11,
               "desired": 6,
               "undesired": 5,
-              "cost": 108515,
+              "cost": 83171,
               "top_labels": [
                 {
                   "label": "Оборудование - Установка/Настройка/Удаление принтера",
@@ -46979,7 +46979,7 @@ const BILLZ_DATA = {
               "tickets": 4,
               "desired": 1,
               "undesired": 3,
-              "cost": 39460,
+              "cost": 30244,
               "top_labels": [
                 {
                   "label": "Кассовые смены — Открытие/Закрытие смен",
@@ -46996,7 +46996,7 @@ const BILLZ_DATA = {
               "tickets": 4,
               "desired": 3,
               "undesired": 1,
-              "cost": 39460,
+              "cost": 30244,
               "top_labels": [
                 {
                   "label": "Документооборот - Оплата за тариф",
@@ -47017,7 +47017,7 @@ const BILLZ_DATA = {
               "tickets": 4,
               "desired": 4,
               "undesired": 0,
-              "cost": 39460,
+              "cost": 30244,
               "top_labels": [
                 {
                   "label": "Отчёты - Разбор отчётов, Баг (реквест)",
@@ -47055,7 +47055,7 @@ const BILLZ_DATA = {
           "sla_pct": 91.4,
           "sla_not_met": 8.6,
           "avg_close_h": 0.04,
-          "cost": 3541535,
+          "cost": 2714399,
           "csat_pct": 95.2,
           "csat_rated": 21,
           "repeat_pct": 8.6,
@@ -47091,49 +47091,49 @@ const BILLZ_DATA = {
               "name": "Массовый сбой BILLZ",
               "tickets": 40,
               "undesired": 36,
-              "cost": 394600
+              "cost": 302440
             },
             {
               "name": "Документооборот - Оплата за тариф",
               "tickets": 19,
               "undesired": 14,
-              "cost": 187435
+              "cost": 143659
             },
             {
               "name": "Кассовые смены — Открытие/Закрытие смен",
               "tickets": 11,
               "undesired": 4,
-              "cost": 108515
+              "cost": 83171
             },
             {
               "name": "Учётная запись - Помощь со входом в аккаунт",
               "tickets": 11,
               "undesired": 7,
-              "cost": 108515
+              "cost": 83171
             },
             {
               "name": "Учётная запись - Создание магазина",
               "tickets": 11,
               "undesired": 4,
-              "cost": 108515
+              "cost": 83171
             },
             {
               "name": "Документооборот - Создание ссылки для оплаты",
               "tickets": 10,
               "undesired": 8,
-              "cost": 98650
+              "cost": 75610
             },
             {
               "name": "Оборудование - Установка/Настройка/Удаление принтера",
               "tickets": 10,
               "undesired": 6,
-              "cost": 98650
+              "cost": 75610
             },
             {
               "name": "Новая продажа - Не удаётся сделать продажу",
               "tickets": 8,
               "undesired": 2,
-              "cost": 78920
+              "cost": 60488
             }
           ],
           "operators": [
@@ -47145,7 +47145,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 4,
               "sla_pct": 96.6,
-              "cost": 562305
+              "cost": 430977
             },
             {
               "name": "Ардак",
@@ -47155,7 +47155,7 @@ const BILLZ_DATA = {
               "rating_pct": 66.7,
               "rated": 3,
               "sla_pct": 87.0,
-              "cost": 552440
+              "cost": 423416
             },
             {
               "name": "Анасхон",
@@ -47165,7 +47165,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 3,
               "sla_pct": 100.0,
-              "cost": 512980
+              "cost": 393172
             },
             {
               "name": "Атабек",
@@ -47175,7 +47175,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 1,
               "sla_pct": 84.6,
-              "cost": 453790
+              "cost": 347806
             },
             {
               "name": "Сардор Б.",
@@ -47185,7 +47185,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 5,
               "sla_pct": 91.7,
-              "cost": 434060
+              "cost": 332684
             },
             {
               "name": "Нурилло",
@@ -47195,7 +47195,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 1,
               "sla_pct": 83.3,
-              "cost": 424195
+              "cost": 325123
             },
             {
               "name": "Тожмухаммад",
@@ -47205,7 +47205,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 2,
               "sla_pct": 100.0,
-              "cost": 374870
+              "cost": 287318
             },
             {
               "name": "Камолиддин",
@@ -47215,7 +47215,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 2,
               "sla_pct": 83.3,
-              "cost": 177570
+              "cost": 136098
             },
             {
               "name": "Севинч",
@@ -47225,7 +47225,7 @@ const BILLZ_DATA = {
               "rating_pct": 0.0,
               "rated": 0,
               "sla_pct": 80.0,
-              "cost": 49325
+              "cost": 37805
             }
           ],
           "top_companies": [
@@ -47234,7 +47234,7 @@ const BILLZ_DATA = {
               "tickets": 53,
               "desired": 22,
               "undesired": 28,
-              "cost": 522845,
+              "cost": 400733,
               "top_labels": [
                 {
                   "label": "Документооборот - Создание ссылки для оплаты",
@@ -47255,7 +47255,7 @@ const BILLZ_DATA = {
               "tickets": 10,
               "desired": 7,
               "undesired": 3,
-              "cost": 98650,
+              "cost": 75610,
               "top_labels": [
                 {
                   "label": "Новая продажа - Не удаётся сделать продажу",
@@ -47276,7 +47276,7 @@ const BILLZ_DATA = {
               "tickets": 8,
               "desired": 3,
               "undesired": 5,
-              "cost": 78920,
+              "cost": 60488,
               "top_labels": [
                 {
                   "label": "Кассовые смены — Открытие/Закрытие смен",
@@ -47297,7 +47297,7 @@ const BILLZ_DATA = {
               "tickets": 7,
               "desired": 1,
               "undesired": 6,
-              "cost": 69055,
+              "cost": 52927,
               "top_labels": [
                 {
                   "label": "Учётная запись - Помощь со входом в аккаунт",
@@ -47318,7 +47318,7 @@ const BILLZ_DATA = {
               "tickets": 5,
               "desired": 3,
               "undesired": 2,
-              "cost": 49325,
+              "cost": 37805,
               "top_labels": [
                 {
                   "label": "Новая продажа - Не удаётся сделать продажу",
@@ -47364,7 +47364,7 @@ const BILLZ_DATA = {
           "sla_pct": 86.3,
           "sla_not_met": 13.7,
           "avg_close_h": 0.05,
-          "cost": 2742470,
+          "cost": 2101958,
           "csat_pct": 93.8,
           "csat_rated": 16,
           "repeat_pct": 2.2,
@@ -47401,49 +47401,49 @@ const BILLZ_DATA = {
               "name": "Документооборот - Оплата за тариф",
               "tickets": 15,
               "undesired": 13,
-              "cost": 147975
+              "cost": 113415
             },
             {
               "name": "Учётная запись - Помощь со входом в аккаунт",
               "tickets": 11,
               "undesired": 10,
-              "cost": 108515
+              "cost": 83171
             },
             {
               "name": "Оборудование - Установка/Настройка/Удаление принтера",
               "tickets": 10,
               "undesired": 5,
-              "cost": 98650
+              "cost": 75610
             },
             {
               "name": "Кассовые смены — Открытие/Закрытие смен",
               "tickets": 9,
               "undesired": 9,
-              "cost": 88785
+              "cost": 68049
             },
             {
               "name": "Каталог — настройка печати ценника",
               "tickets": 7,
               "undesired": 5,
-              "cost": 69055
+              "cost": 52927
             },
             {
               "name": "Новая продажа - Возврат/Обмен",
               "tickets": 7,
               "undesired": 6,
-              "cost": 69055
+              "cost": 52927
             },
             {
               "name": "Документооборот - Создание ссылки для оплаты",
               "tickets": 7,
               "undesired": 6,
-              "cost": 69055
+              "cost": 52927
             },
             {
               "name": "Каталог — изменение свойств товара",
               "tickets": 7,
               "undesired": 6,
-              "cost": 69055
+              "cost": 52927
             }
           ],
           "operators": [
@@ -47455,7 +47455,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 6,
               "sla_pct": 90.9,
-              "cost": 739875
+              "cost": 567075
             },
             {
               "name": "Нурилло",
@@ -47465,7 +47465,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 3,
               "sla_pct": 84.0,
-              "cost": 562305
+              "cost": 430977
             },
             {
               "name": "Сардор Б.",
@@ -47475,7 +47475,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 2,
               "sla_pct": 78.6,
-              "cost": 503115
+              "cost": 385611
             },
             {
               "name": "Тожмухаммад",
@@ -47485,7 +47485,7 @@ const BILLZ_DATA = {
               "rating_pct": 0.0,
               "rated": 0,
               "sla_pct": 90.9,
-              "cost": 325545
+              "cost": 249513
             },
             {
               "name": "Алиёр",
@@ -47495,7 +47495,7 @@ const BILLZ_DATA = {
               "rating_pct": 0.0,
               "rated": 0,
               "sla_pct": 80.0,
-              "cost": 315680
+              "cost": 241952
             },
             {
               "name": "Робия Р.",
@@ -47505,7 +47505,7 @@ const BILLZ_DATA = {
               "rating_pct": 66.7,
               "rated": 3,
               "sla_pct": 87.5,
-              "cost": 217030
+              "cost": 166342
             },
             {
               "name": "Камолиддин",
@@ -47515,7 +47515,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 2,
               "sla_pct": 87.5,
-              "cost": 78920
+              "cost": 60488
             }
           ],
           "top_companies": [
@@ -47524,7 +47524,7 @@ const BILLZ_DATA = {
               "tickets": 37,
               "desired": 11,
               "undesired": 24,
-              "cost": 365005,
+              "cost": 279757,
               "top_labels": [
                 {
                   "label": "Учётная запись - Блокировка/Разблокировка аккаунта",
@@ -47545,7 +47545,7 @@ const BILLZ_DATA = {
               "tickets": 7,
               "desired": 1,
               "undesired": 6,
-              "cost": 69055,
+              "cost": 52927,
               "top_labels": [
                 {
                   "label": "Кассовые смены — Открытие/Закрытие смен",
@@ -47566,7 +47566,7 @@ const BILLZ_DATA = {
               "tickets": 5,
               "desired": 1,
               "undesired": 4,
-              "cost": 49325,
+              "cost": 37805,
               "top_labels": [
                 {
                   "label": "Маркетинг - Работа с Сертификатом/Ваучером",
@@ -47587,7 +47587,7 @@ const BILLZ_DATA = {
               "tickets": 5,
               "desired": 3,
               "undesired": 2,
-              "cost": 49325,
+              "cost": 37805,
               "top_labels": [
                 {
                   "label": "Каталог — изменение свойств товара, Каталог - Архивация товаров, Импорт - Удаление импорта",
@@ -47608,7 +47608,7 @@ const BILLZ_DATA = {
               "tickets": 5,
               "desired": 2,
               "undesired": 2,
-              "cost": 49325,
+              "cost": 37805,
               "top_labels": [
                 {
                   "label": "Баг (реквест), Каталог — изменение свойств товара",
@@ -47649,7 +47649,7 @@ const BILLZ_DATA = {
           "sla_pct": 88.2,
           "sla_not_met": 11.8,
           "avg_close_h": 0.04,
-          "cost": 4745065,
+          "cost": 3636841,
           "csat_pct": 93.3,
           "csat_rated": 30,
           "repeat_pct": 12.3,
@@ -47684,49 +47684,49 @@ const BILLZ_DATA = {
               "name": "Документооборот - Оплата за тариф",
               "tickets": 63,
               "undesired": 26,
-              "cost": 621495
+              "cost": 476343
             },
             {
               "name": "Документооборот - Создание ссылки для оплаты",
               "tickets": 24,
               "undesired": 14,
-              "cost": 236760
+              "cost": 181464
             },
             {
               "name": "Учётная запись - Блокировка/Разблокировка аккаунта",
               "tickets": 17,
               "undesired": 11,
-              "cost": 167705
+              "cost": 128537
             },
             {
               "name": "Оборудование - Установка/Настройка/Удаление принтера",
               "tickets": 15,
               "undesired": 5,
-              "cost": 147975
+              "cost": 113415
             },
             {
               "name": "Кассовые смены — Открытие/Закрытие смен",
               "tickets": 12,
               "undesired": 7,
-              "cost": 118380
+              "cost": 90732
             },
             {
               "name": "Учётная запись - Помощь со входом в аккаунт",
               "tickets": 12,
               "undesired": 7,
-              "cost": 118380
+              "cost": 90732
             },
             {
               "name": "Новая продажа - Возврат/Обмен",
               "tickets": 11,
               "undesired": 6,
-              "cost": 108515
+              "cost": 83171
             },
             {
               "name": "Управление - Создание/Редактирвоание/Удаление роли",
               "tickets": 8,
               "undesired": 2,
-              "cost": 78920
+              "cost": 60488
             }
           ],
           "operators": [
@@ -47738,7 +47738,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 9,
               "sla_pct": 100.0,
-              "cost": 799065
+              "cost": 612441
             },
             {
               "name": "Авазбек",
@@ -47748,7 +47748,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 5,
               "sla_pct": 97.4,
-              "cost": 749740
+              "cost": 574636
             },
             {
               "name": "Атабек",
@@ -47758,7 +47758,7 @@ const BILLZ_DATA = {
               "rating_pct": 50.0,
               "rated": 2,
               "sla_pct": 88.0,
-              "cost": 621495
+              "cost": 476343
             },
             {
               "name": "Нурилло",
@@ -47768,7 +47768,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 4,
               "sla_pct": 95.0,
-              "cost": 562305
+              "cost": 430977
             },
             {
               "name": "Иззатбек",
@@ -47778,7 +47778,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 2,
               "sla_pct": 81.8,
-              "cost": 552440
+              "cost": 423416
             },
             {
               "name": "Робия Р.",
@@ -47788,7 +47788,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 4,
               "sla_pct": 72.7,
-              "cost": 463655
+              "cost": 355367
             },
             {
               "name": "Тожмухаммад",
@@ -47798,7 +47798,7 @@ const BILLZ_DATA = {
               "rating_pct": 0.0,
               "rated": 0,
               "sla_pct": 87.5,
-              "cost": 434060
+              "cost": 332684
             },
             {
               "name": "Сардор Б.",
@@ -47808,7 +47808,7 @@ const BILLZ_DATA = {
               "rating_pct": 66.7,
               "rated": 3,
               "sla_pct": 80.0,
-              "cost": 424195
+              "cost": 325123
             },
             {
               "name": "Севинч",
@@ -47818,7 +47818,7 @@ const BILLZ_DATA = {
               "rating_pct": 100.0,
               "rated": 1,
               "sla_pct": 76.9,
-              "cost": 128245
+              "cost": 98293
             },
             {
               "name": "Алиёр",
@@ -47828,7 +47828,7 @@ const BILLZ_DATA = {
               "rating_pct": 0.0,
               "rated": 0,
               "sla_pct": 0.0,
-              "cost": 9865
+              "cost": 7561
             }
           ],
           "top_companies": [
@@ -47837,7 +47837,7 @@ const BILLZ_DATA = {
               "tickets": 84,
               "desired": 35,
               "undesired": 47,
-              "cost": 828660,
+              "cost": 635124,
               "top_labels": [
                 {
                   "label": "Документооборот - Создание ссылки для оплаты",
@@ -47858,7 +47858,7 @@ const BILLZ_DATA = {
               "tickets": 14,
               "desired": 8,
               "undesired": 6,
-              "cost": 138110,
+              "cost": 105854,
               "top_labels": [
                 {
                   "label": "Оборудование - Установка/Настройка/Удаление принтера",
@@ -47879,7 +47879,7 @@ const BILLZ_DATA = {
               "tickets": 8,
               "desired": 1,
               "undesired": 7,
-              "cost": 78920,
+              "cost": 60488,
               "top_labels": [
                 {
                   "label": "Кассовые смены — Открытие/Закрытие смен",
@@ -47900,7 +47900,7 @@ const BILLZ_DATA = {
               "tickets": 7,
               "desired": 3,
               "undesired": 4,
-              "cost": 69055,
+              "cost": 52927,
               "top_labels": [
                 {
                   "label": "Новая продажа - Возврат/Обмен",
@@ -47921,7 +47921,7 @@ const BILLZ_DATA = {
               "tickets": 6,
               "desired": 4,
               "undesired": 2,
-              "cost": 59190,
+              "cost": 45366,
               "top_labels": [
                 {
                   "label": "Оборудование - Загрузка базу товаров в весы",
@@ -47956,7 +47956,7 @@ const BILLZ_DATA = {
       "cs": {
         "period": "Май 2026 · 1-11 мая",
         "total_train_tickets": 176,
-        "total_train_cost": 1736240,
+        "total_train_cost": 1330736,
         "partial_tickets": 165,
         "full_tickets": 11,
         "avg_med_close_min": 0.1,
@@ -47964,7 +47964,7 @@ const BILLZ_DATA = {
           {
             "month": "Май (1-11)",
             "tickets": 176,
-            "cost": 1736240,
+            "cost": 1330736,
             "partial": 165,
             "full": 11
           }
@@ -47976,7 +47976,7 @@ const BILLZ_DATA = {
             "partial": 14,
             "full": null,
             "med_close": 0.1,
-            "cost": 138110,
+            "cost": 105854,
             "tag": "big_base",
             "big_base": true
           },
@@ -47986,7 +47986,7 @@ const BILLZ_DATA = {
             "partial": 13,
             "full": 1,
             "med_close": 0.1,
-            "cost": 128245,
+            "cost": 98293,
             "tag": "red_flag",
             "big_base": false
           },
@@ -47996,7 +47996,7 @@ const BILLZ_DATA = {
             "partial": 13,
             "full": null,
             "med_close": 0.1,
-            "cost": 128245,
+            "cost": 98293,
             "tag": "big_base",
             "big_base": true
           },
@@ -48006,7 +48006,7 @@ const BILLZ_DATA = {
             "partial": 11,
             "full": null,
             "med_close": 0.0,
-            "cost": 108515,
+            "cost": 83171,
             "tag": "red_flag",
             "big_base": false
           },
@@ -48016,7 +48016,7 @@ const BILLZ_DATA = {
             "partial": 10,
             "full": null,
             "med_close": 0.1,
-            "cost": 98650,
+            "cost": 75610,
             "tag": "normal",
             "big_base": false
           },
@@ -48026,7 +48026,7 @@ const BILLZ_DATA = {
             "partial": 7,
             "full": 2,
             "med_close": 0.2,
-            "cost": 88785,
+            "cost": 68049,
             "tag": "normal",
             "big_base": false
           },
@@ -48036,7 +48036,7 @@ const BILLZ_DATA = {
             "partial": 8,
             "full": null,
             "med_close": 0.1,
-            "cost": 78920,
+            "cost": 60488,
             "tag": "normal",
             "big_base": false
           },
@@ -48046,7 +48046,7 @@ const BILLZ_DATA = {
             "partial": 6,
             "full": 1,
             "med_close": 0.1,
-            "cost": 69055,
+            "cost": 52927,
             "tag": "normal",
             "big_base": false
           },
@@ -48056,7 +48056,7 @@ const BILLZ_DATA = {
             "partial": 5,
             "full": 2,
             "med_close": 0.1,
-            "cost": 69055,
+            "cost": 52927,
             "tag": "normal",
             "big_base": false
           },
@@ -48066,7 +48066,7 @@ const BILLZ_DATA = {
             "partial": 6,
             "full": null,
             "med_close": 0.1,
-            "cost": 59190,
+            "cost": 45366,
             "tag": "normal",
             "big_base": false
           },
@@ -48076,7 +48076,7 @@ const BILLZ_DATA = {
             "partial": 5,
             "full": null,
             "med_close": 0.1,
-            "cost": 49325,
+            "cost": 37805,
             "tag": "normal",
             "big_base": false
           },
@@ -48086,7 +48086,7 @@ const BILLZ_DATA = {
             "partial": 4,
             "full": null,
             "med_close": 0.2,
-            "cost": 39460,
+            "cost": 30244,
             "tag": "normal",
             "big_base": false
           },
@@ -48096,7 +48096,7 @@ const BILLZ_DATA = {
             "partial": 4,
             "full": null,
             "med_close": 0.0,
-            "cost": 39460,
+            "cost": 30244,
             "tag": "normal",
             "big_base": false
           },
@@ -48106,7 +48106,7 @@ const BILLZ_DATA = {
             "partial": 3,
             "full": 1,
             "med_close": 0.1,
-            "cost": 39460,
+            "cost": 30244,
             "tag": "normal",
             "big_base": false
           },
@@ -48116,7 +48116,7 @@ const BILLZ_DATA = {
             "partial": 4,
             "full": null,
             "med_close": 0.1,
-            "cost": 39460,
+            "cost": 30244,
             "tag": "normal",
             "big_base": false
           },
@@ -48126,7 +48126,7 @@ const BILLZ_DATA = {
             "partial": 4,
             "full": null,
             "med_close": 0.1,
-            "cost": 39460,
+            "cost": 30244,
             "tag": "normal",
             "big_base": false
           },
@@ -48136,7 +48136,7 @@ const BILLZ_DATA = {
             "partial": 3,
             "full": null,
             "med_close": 0.1,
-            "cost": 39460,
+            "cost": 30244,
             "tag": "normal",
             "big_base": false
           },
@@ -48146,7 +48146,7 @@ const BILLZ_DATA = {
             "partial": 2,
             "full": 1,
             "med_close": 0.1,
-            "cost": 29595,
+            "cost": 22683,
             "tag": "normal",
             "big_base": false
           },
@@ -48156,7 +48156,7 @@ const BILLZ_DATA = {
             "partial": 2,
             "full": 1,
             "med_close": 0.0,
-            "cost": 29595,
+            "cost": 22683,
             "tag": "normal",
             "big_base": false
           },
@@ -48166,7 +48166,7 @@ const BILLZ_DATA = {
             "partial": 3,
             "full": null,
             "med_close": 0.1,
-            "cost": 29595,
+            "cost": 22683,
             "tag": "normal",
             "big_base": false
           },
@@ -48176,7 +48176,7 @@ const BILLZ_DATA = {
             "partial": 3,
             "full": null,
             "med_close": 0.1,
-            "cost": 29595,
+            "cost": 22683,
             "tag": "normal",
             "big_base": false
           },
@@ -48186,7 +48186,7 @@ const BILLZ_DATA = {
             "partial": 2,
             "full": null,
             "med_close": 0.7,
-            "cost": 19730,
+            "cost": 15122,
             "tag": "normal",
             "big_base": false
           },
@@ -48196,7 +48196,7 @@ const BILLZ_DATA = {
             "partial": 2,
             "full": null,
             "med_close": 0.0,
-            "cost": 19730,
+            "cost": 15122,
             "tag": "normal",
             "big_base": false
           },
@@ -48206,7 +48206,7 @@ const BILLZ_DATA = {
             "partial": 1,
             "full": null,
             "med_close": 0.0,
-            "cost": 9865,
+            "cost": 7561,
             "tag": "normal",
             "big_base": false
           },
@@ -48216,7 +48216,7 @@ const BILLZ_DATA = {
             "partial": 1,
             "full": null,
             "med_close": 0.1,
-            "cost": 9865,
+            "cost": 7561,
             "tag": "normal",
             "big_base": false
           },
@@ -48226,7 +48226,7 @@ const BILLZ_DATA = {
             "partial": 1,
             "full": null,
             "med_close": 0.0,
-            "cost": 9865,
+            "cost": 7561,
             "tag": "normal",
             "big_base": false
           },
@@ -48236,7 +48236,7 @@ const BILLZ_DATA = {
             "partial": 1,
             "full": null,
             "med_close": 0.1,
-            "cost": 9865,
+            "cost": 7561,
             "tag": "normal",
             "big_base": false
           },
@@ -48246,7 +48246,7 @@ const BILLZ_DATA = {
             "partial": 1,
             "full": null,
             "med_close": 0.1,
-            "cost": 9865,
+            "cost": 7561,
             "tag": "normal",
             "big_base": false
           },
@@ -48256,7 +48256,7 @@ const BILLZ_DATA = {
             "partial": 1,
             "full": null,
             "med_close": 0.0,
-            "cost": 9865,
+            "cost": 7561,
             "tag": "normal",
             "big_base": false
           },
@@ -48266,7 +48266,7 @@ const BILLZ_DATA = {
             "partial": 1,
             "full": null,
             "med_close": 0.2,
-            "cost": 9865,
+            "cost": 7561,
             "tag": "normal",
             "big_base": false
           },
@@ -48276,7 +48276,7 @@ const BILLZ_DATA = {
             "partial": 1,
             "full": null,
             "med_close": 0.0,
-            "cost": 9865,
+            "cost": 7561,
             "tag": "normal",
             "big_base": false
           },
@@ -48286,7 +48286,7 @@ const BILLZ_DATA = {
             "partial": 1,
             "full": null,
             "med_close": 0.0,
-            "cost": 9865,
+            "cost": 7561,
             "tag": "normal",
             "big_base": false
           },
@@ -48296,7 +48296,7 @@ const BILLZ_DATA = {
             "partial": 1,
             "full": null,
             "med_close": 0.1,
-            "cost": 9865,
+            "cost": 7561,
             "tag": "normal",
             "big_base": false
           },
@@ -48306,7 +48306,7 @@ const BILLZ_DATA = {
             "partial": 1,
             "full": null,
             "med_close": 1.7,
-            "cost": 9865,
+            "cost": 7561,
             "tag": "normal",
             "big_base": false
           },
@@ -48316,7 +48316,7 @@ const BILLZ_DATA = {
             "partial": 1,
             "full": null,
             "med_close": 0.1,
-            "cost": 9865,
+            "cost": 7561,
             "tag": "normal",
             "big_base": false
           },
@@ -48326,7 +48326,7 @@ const BILLZ_DATA = {
             "partial": null,
             "full": 1,
             "med_close": 0.1,
-            "cost": 9865,
+            "cost": 7561,
             "tag": "normal",
             "big_base": false
           },
@@ -48336,7 +48336,7 @@ const BILLZ_DATA = {
             "partial": 1,
             "full": null,
             "med_close": 0.0,
-            "cost": 9865,
+            "cost": 7561,
             "tag": "normal",
             "big_base": false
           }
@@ -48345,52 +48345,52 @@ const BILLZ_DATA = {
           {
             "label": "Инвентаризация — консультация по модулю (частичное обучение)",
             "tickets": 28,
-            "cost": 276220
+            "cost": 211708
           },
           {
             "label": "Импорт — консультация по импорту (частичное обучение)",
             "tickets": 15,
-            "cost": 147975
+            "cost": 113415
           },
           {
             "label": "Отчёты - Частичное обучение",
             "tickets": 15,
-            "cost": 147975
+            "cost": 113415
           },
           {
             "label": "Трансфер - консультация по модулю (частичное обучение)",
             "tickets": 15,
-            "cost": 147975
+            "cost": 113415
           },
           {
             "label": "Заказы — консультация по модулю (частичное обучение)",
             "tickets": 9,
-            "cost": 88785
+            "cost": 68049
           },
           {
             "label": "Финансы - Частичное обучение",
             "tickets": 7,
-            "cost": 69055
+            "cost": 52927
           },
           {
             "label": "Новая продажа - Частичное обучение ",
             "tickets": 6,
-            "cost": 59190
+            "cost": 45366
           },
           {
             "label": "Долги клиентов - Частичное обучение",
             "tickets": 5,
-            "cost": 49325
+            "cost": 37805
           },
           {
             "label": "Списание - частичное обучение",
             "tickets": 5,
-            "cost": 49325
+            "cost": 37805
           },
           {
             "label": "Все продажи - Частичное обучение",
             "tickets": 3,
-            "cost": 29595
+            "cost": 22683
           }
         ],
         "repeat_connection": [],
@@ -48398,70 +48398,70 @@ const BILLZ_DATA = {
           {
             "name": "BILLZ",
             "tickets": 6,
-            "cost": 59190,
-            "cost_mln": 0.06,
+            "cost": 45366,
+            "cost_mln": 0.05,
             "med_close_min": 0.0
           },
           {
             "name": "springcosmetics",
             "tickets": 6,
-            "cost": 59190,
-            "cost_mln": 0.06,
+            "cost": 45366,
+            "cost_mln": 0.05,
             "med_close_min": 0.0
           },
           {
             "name": "Sezaro",
             "tickets": 4,
-            "cost": 39460,
-            "cost_mln": 0.04,
+            "cost": 30244,
+            "cost_mln": 0.03,
             "med_close_min": 0.1
           },
           {
             "name": "uyutniy-dom",
             "tickets": 4,
-            "cost": 39460,
-            "cost_mln": 0.04,
+            "cost": 30244,
+            "cost_mln": 0.03,
             "med_close_min": 0.1
           },
           {
             "name": "Hadiya",
             "tickets": 3,
-            "cost": 29595,
-            "cost_mln": 0.03,
+            "cost": 22683,
+            "cost_mln": 0.02,
             "med_close_min": 0.8
           },
           {
             "name": "Optom-shoes",
             "tickets": 3,
-            "cost": 29595,
-            "cost_mln": 0.03,
+            "cost": 22683,
+            "cost_mln": 0.02,
             "med_close_min": 0.1
           },
           {
             "name": "Bloom",
             "tickets": 3,
-            "cost": 29595,
-            "cost_mln": 0.03,
+            "cost": 22683,
+            "cost_mln": 0.02,
             "med_close_min": 0.1
           },
           {
             "name": "Goldenfood",
             "tickets": 2,
-            "cost": 19730,
+            "cost": 15122,
             "cost_mln": 0.02,
             "med_close_min": 0.7
           },
           {
             "name": "Schetchik",
             "tickets": 2,
-            "cost": 19730,
+            "cost": 15122,
             "cost_mln": 0.02,
             "med_close_min": 0.0
           },
           {
             "name": "Berluti",
             "tickets": 2,
-            "cost": 19730,
+            "cost": 15122,
             "cost_mln": 0.02,
             "med_close_min": 0.1
           }
@@ -48471,91 +48471,91 @@ const BILLZ_DATA = {
             "store": "springcosmetics",
             "ks": "Maftuna Shernazarova",
             "tickets": 6,
-            "cost": 59190
+            "cost": 45366
           },
           {
             "store": "Sezaro",
             "ks": "Не указан в админке",
             "tickets": 4,
-            "cost": 39460
+            "cost": 30244
           },
           {
             "store": "uyutniy-dom",
             "ks": "Sanat Toshpulatov",
             "tickets": 4,
-            "cost": 39460
+            "cost": 30244
           },
           {
             "store": "Hadiya",
             "ks": "Jasur Mukhamedjanov",
             "tickets": 3,
-            "cost": 29595
+            "cost": 22683
           },
           {
             "store": "Optom-shoes",
             "ks": "Parviz Khafizov Partner",
             "tickets": 3,
-            "cost": 29595
+            "cost": 22683
           },
           {
             "store": "Bloom",
             "ks": "Robiya Alisherova",
             "tickets": 2,
-            "cost": 19730
+            "cost": 15122
           },
           {
             "store": "Goldenfood",
             "ks": "Abdulaziz Abduganiev",
             "tickets": 2,
-            "cost": 19730
+            "cost": 15122
           },
           {
             "store": "Berluti",
             "ks": "Jasur Mukhamedjanov",
             "tickets": 2,
-            "cost": 19730
+            "cost": 15122
           },
           {
             "store": "astinaaroma",
             "ks": "Karim Serikov",
             "tickets": 2,
-            "cost": 19730
+            "cost": 15122
           },
           {
             "store": "asman1",
             "ks": "Husan Artikov",
             "tickets": 2,
-            "cost": 19730
+            "cost": 15122
           },
           {
             "store": "Zoo Hause",
             "ks": "Marfiya Shadiyeva",
             "tickets": 2,
-            "cost": 19730
+            "cost": 15122
           },
           {
             "store": "Schetchik",
             "ks": "Sunnattilla Abdurazzoqov",
             "tickets": 2,
-            "cost": 19730
+            "cost": 15122
           },
           {
             "store": "dizi",
             "ks": "Xasanali Ummatov",
             "tickets": 2,
-            "cost": 19730
+            "cost": 15122
           },
           {
             "store": "cafeduas",
             "ks": "Other Partner",
             "tickets": 2,
-            "cost": 19730
+            "cost": 15122
           },
           {
             "store": "asl-santexnika",
             "ks": "Mukhammadaziz Koshakbayev",
             "tickets": 2,
-            "cost": 19730
+            "cost": 15122
           }
         ],
         "stores_count": 4380,

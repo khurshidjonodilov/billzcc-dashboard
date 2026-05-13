@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>BILLZ CC · Customer Success Анализ</title>
-<link rel="stylesheet" href="shared.css?v=32">
+<link rel="stylesheet" href="shared.css?v=34">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 <script src="data.js"></script>
-<script src="shared.js?v=32"></script>
+<script src="shared.js?v=34"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 <style>
 .cs-insight{background:rgba(124,58,237,0.07);border:1px solid rgba(124,58,237,0.22);border-radius:10px;padding:16px 18px;display:flex;gap:14px;align-items:flex-start;margin-bottom:8px;transition:border-color .2s}
@@ -185,7 +185,7 @@
   <div class="sec"><div class="sec-num">05</div><div class="sec-title">Топ модулей обучений</div><div class="sec-line"></div></div>
   <div class="row two">
     <div class="card">
-      <div class="card-hd"><div class="card-title">Модули — объём и затраты</div><div class="card-note">каждый тикет = 9 865 сўм нагрузки на CC</div></div>
+      <div class="card-hd"><div class="card-title">Модули — объём и затраты</div><div class="card-note">каждый тикет = 7 561 сўм нагрузки на CC</div></div>
       <table class="tbl">
         <thead><tr><th>Модуль обучения</th><th>Тикеты</th><th>Тип</th><th>Затраты</th></tr></thead>
         <tbody id="labelsTbody"></tbody>
@@ -266,7 +266,7 @@ document.getElementById('metricBand').innerHTML = [
 
 document.getElementById('kpiGrid').innerHTML = [
   kpi('Тикетов-обучений',  fmt.num(CS.total_train_tickets), '5.0% от объёма CC', 'rose','❗'),
-  kpi('Затраты CC на CS',  (CS.total_train_cost/1_000_000).toFixed(1)+' млн', `${CS.total_train_tickets.toLocaleString('ru')} × 9 865 сум`, 'rose','💰'),
+  kpi('Затраты CC на CS',  (CS.total_train_cost/1_000_000).toFixed(1)+' млн', `${CS.total_train_tickets.toLocaleString('ru')} × 7 561 сум`, 'rose','💰'),
   kpi('Время/звонок',      CS.avg_call_min+' мин',          'медиана · не тикета', 'amber','⏱'),
   kpi('Shoxruh Maxmud',    '249 тик',                       '🟡 Большая база · 9 магаз.', 'amber'),
   kpi('Baxtiyor Kasimov',  '202 тик',                       '🟡 Большая база · 7 магаз.', 'amber'),
@@ -380,7 +380,7 @@ document.getElementById('repeatBlock').innerHTML = `
   ${CS.repeat_connection.map(r=>`<div class="repeat-item">
     <span class="repeat-label">${r.label}<br><span style="font-size:10px;color:var(--text4)">${r.context}</span></span>
     <span class="repeat-count">${fmt.num(r.repeat)}</span>
-    <span class="repeat-cost">${fmt.num(r.repeat*9865)}</span>
+    <span class="repeat-cost">${fmt.num(r.repeat*7561)}</span>
     <span><span class="b ${r.cs_related?'ok':''}">${r.cs_related?'🎓 Онбординг CS':'⚙️ CC / Тех.'}</span></span>
   </div>`).join('')}`;
 
@@ -470,7 +470,7 @@ function exportCSExcel(){
     XLSX.utils.book_append_sheet(wb, makeSheet([mH,...mR],[14,10,12,10,14,14,18,12]), '📅 По месяцам');
 
     const rpH = ['Метка','Повторных','Затраты повт. сўм','Онбординг CS?','Контекст'];
-    const rpR = CS.repeat_connection.map(r=>[r.label,r.repeat,r.repeat*9865,r.cs_related?'✅ Да':'❌ Нет',r.context]);
+    const rpR = CS.repeat_connection.map(r=>[r.label,r.repeat,r.repeat*7561,r.cs_related?'✅ Да':'❌ Нет',r.context]);
     XLSX.utils.book_append_sheet(wb, makeSheet([rpH,...rpR],[42,12,20,28,45]), '🔄 Повторные');
 
     const insH = ['Тип','Заголовок','Описание'];
@@ -539,6 +539,30 @@ document.addEventListener('DOMContentLoaded', function() {
     </tr>`;
   }).join('');
 });
+</script>
+
+
+<script>
+// Dynamically update CPT references in static text based on selected month
+(function(){
+  if (typeof BILLZ_DATA === 'undefined') return;
+  const M = BILLZ_DATA.monthly || (BILLZ_DATA.months && BILLZ_DATA.months.apr && BILLZ_DATA.months.apr.monthly);
+  if (!M || !M.cpt) return;
+  const cpt = M.cpt;
+  const cptStr = cpt.toLocaleString('ru').replace(/,/g,' ');
+  // Walk all text nodes and replace 7 561 / 9 865 with current cpt
+  const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null);
+  const nodes = [];
+  let n;
+  while (n = walker.nextNode()) {
+    if (n.nodeValue && /\b(7\s?561|9\s?865)\b/.test(n.nodeValue)) {
+      nodes.push(n);
+    }
+  }
+  nodes.forEach(n => {
+    n.nodeValue = n.nodeValue.replace(/\b7\s?561\b/g, cptStr).replace(/\b9\s?865\b/g, cptStr);
+  });
+})();
 </script>
 
 </body>

@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>BILLZ CC · Квартальный анализ</title>
-<link rel="stylesheet" href="shared.css?v=32">
+<link rel="stylesheet" href="shared.css?v=34">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 <script src="data.js"></script>
-<script src="shared.js?v=32"></script>
+<script src="shared.js?v=34"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 <style>
 .export-bar{margin-top:32px;padding:20px 24px;background:var(--surface);border:1px solid var(--br2);border-radius:12px;display:flex;align-items:center;justify-content:space-between;gap:16px}
@@ -190,7 +190,7 @@
         </div>
       </div>
       <div style="position:relative;height:300px"><canvas id="costByLabelChart"></canvas></div>
-      <div class="card-formula">📐 Затраты метки = тикеты × CPT 9 865 сум · Уровень = сложность кейса</div>
+      <div class="card-formula">📐 Затраты метки = тикеты × CPT 7 561 сум · Уровень = сложность кейса</div>
     </div>
     <div class="card">
       <div class="card-hd"><div class="card-title">Распределение по уровням</div></div>
@@ -402,7 +402,7 @@ let charts = {};
     (lc[lvl]?.labels || []).map(l => ({
       name: l.name, tickets: l.tickets,
       med_close: l.med_close_min || 0,
-      cost: Math.round(l.tickets * 9865), level: lvl
+      cost: Math.round(l.tickets * 7561), level: lvl
     }))
   ).sort((a,b) => b.tickets - a.tickets).slice(0, 10);
 
@@ -418,7 +418,7 @@ let charts = {};
         yFmt: v => v.toLocaleString('ru'),
         tooltipFmt: ctx => {
           const l = allLabels[ctx.dataIndex];
-          return ` ${l.name.slice(0,40)}: ${ctx.raw.toLocaleString('ru')} тик · ${(ctx.raw*9865/1e6).toFixed(2)} млн · ${l.level.toUpperCase()} · ${l.med_close}мин`;
+          return ` ${l.name.slice(0,40)}: ${ctx.raw.toLocaleString('ru')} тик · ${(ctx.raw*7561/1e6).toFixed(2)} млн · ${l.level.toUpperCase()} · ${l.med_close}мин`;
         }
       }
     );
@@ -593,7 +593,7 @@ function exportCSExcel(){
       const lcRows=[['Уровень','Описание','Метка','Тикеты','Мед.закр мин','Затраты сўм']];
       [['senior','SENIOR'],['middle','MIDDLE'],['junior','JUNIOR']].forEach(([k,n])=>{
         const d=lc[k];
-        if(d&&d.labels) d.labels.forEach(l=>lcRows.push([n,d.description,l.name,l.tickets,l.med_close_min,l.tickets*9865]));
+        if(d&&d.labels) d.labels.forEach(l=>lcRows.push([n,d.description,l.name,l.tickets,l.med_close_min,l.tickets*7561]));
       });
       XLSX.utils.book_append_sheet(wb, makeSheet(lcRows,[10,24,48,10,14,18]),'🏷 Категории меток');
     }
@@ -659,6 +659,30 @@ function exportCSExcel(){
   }
 })();
 
+</script>
+
+
+<script>
+// Dynamically update CPT references in static text based on selected month
+(function(){
+  if (typeof BILLZ_DATA === 'undefined') return;
+  const M = BILLZ_DATA.monthly || (BILLZ_DATA.months && BILLZ_DATA.months.apr && BILLZ_DATA.months.apr.monthly);
+  if (!M || !M.cpt) return;
+  const cpt = M.cpt;
+  const cptStr = cpt.toLocaleString('ru').replace(/,/g,' ');
+  // Walk all text nodes and replace 7 561 / 9 865 with current cpt
+  const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null);
+  const nodes = [];
+  let n;
+  while (n = walker.nextNode()) {
+    if (n.nodeValue && /\b(7\s?561|9\s?865)\b/.test(n.nodeValue)) {
+      nodes.push(n);
+    }
+  }
+  nodes.forEach(n => {
+    n.nodeValue = n.nodeValue.replace(/\b7\s?561\b/g, cptStr).replace(/\b9\s?865\b/g, cptStr);
+  });
+})();
 </script>
 
 </body>

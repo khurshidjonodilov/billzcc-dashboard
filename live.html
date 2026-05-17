@@ -528,14 +528,14 @@ body::after {
                       stroke-dasharray="238.76" stroke-dashoffset="223.4"></circle>
             </svg>
             <div class="lcr-ring-val">
-              <span style="font-size:20px;color:var(--red-glow)">6.4<span style="font-size:12px">%</span></span>
+              <span id="vLcrPct" style="font-size:20px;color:var(--red-glow)">0<span style="font-size:12px">%</span></span>
               <span>LCR</span>
             </div>
           </div>
           <div class="lcr-r">
             <div class="lcr-label">LCR · пропущенные &gt;7 сек</div>
-            <div class="lcr-num" id="vLcr7">16</div>
-            <div class="lcr-desc">из 247 входящих · цель &lt; 3%</div>
+            <div class="lcr-num" id="vLcr7">0</div>
+            <div class="lcr-desc">из <span id="vLcrTotal">0</span> входящих · цель &lt; 3%</div>
           </div>
         </div>
       </div>
@@ -707,6 +707,11 @@ function renderPBX() {
   document.getElementById('vMissed').textContent = fmt(p.missed_total);
   document.getElementById('vMissedPct').textContent = (p.missed_total / p.incoming_total * 100).toFixed(1) + '%';
   document.getElementById('vLcr7').textContent = fmt(p.missed_7sec);
+  
+  // Update LCR percentage in the center of the ring
+  document.getElementById('vLcrPct').innerHTML = `${p.lcr_pct}<span style="font-size:12px">%</span>`;
+  // Update "из X входящих" description
+  document.getElementById('vLcrTotal').textContent = fmt(p.incoming_total);
   
   // LCR ring (circumference = 2*pi*38 = 238.76)
   const circ = 238.76;

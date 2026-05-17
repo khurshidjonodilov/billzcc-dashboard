@@ -853,6 +853,14 @@ async function refresh() {
       if (data.omni.topics && data.omni.topics.length) {
         MOCK.topics = data.omni.topics;
       }
+      // Update team metrics from Omnidesk
+      if (data.omni.top_op) {
+        MOCK.team.top_op = data.omni.top_op;
+      }
+      if (typeof data.omni.active_ops === 'number') {
+        MOCK.team.active_ops = data.omni.active_ops;
+        MOCK.team.total_ops = data.omni.active_ops; // simple — show "X / X"
+      }
     } else if (data.omni?._error) {
       console.warn('Omnidesk error:', data.omni._error);
     }
@@ -865,6 +873,7 @@ async function refresh() {
     renderOmni();
     renderTopics();
     renderHourly();
+    renderFooter();
     
     // Hide demo badge on first successful fetch
     const badge = document.querySelector('.demo-badge');

@@ -3,45 +3,69 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>BILLZ CC · Ежемесячно</title>
-<link rel="stylesheet" href="shared.css?v=36">
+<title>BILLZ CC · Динамика</title>
+<link rel="stylesheet" href="shared.css?v=38">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
-<script src="data.js"></script>
-<script src="shared.js?v=36"></script>
+<script src="data.js?v=38"></script>
+<script src="shared.js?v=38"></script>
 <style>
 .formula-bar {
-  margin-top: 12px !important;
-  padding: 9px 14px !important;
+  margin-top: 12px !important; padding: 9px 14px !important;
   background: rgba(59,130,246,0.10) !important;
   border: 1px solid rgba(59,130,246,0.25) !important;
   border-left: 3px solid #3B82F6 !important;
   border-radius: 6px !important;
   font-family: 'JetBrains Mono', monospace !important;
-  font-size: 10px !important;
-  color: #7DD3FC !important;
-  line-height: 1.7 !important;
+  font-size: 10px !important; color: #7DD3FC !important; line-height: 1.7 !important;
 }
-.formula-bar .f-key { color: #60A5FA !important; font-weight: 700 !important; }
-.formula-bar .f-val { color: #34D399 !important; font-weight: 600 !important; }
 .card-formula {
   font-family: 'JetBrains Mono', monospace !important;
-  font-size: 10px !important;
-  color: #7DD3FC !important;
+  font-size: 10px !important; color: #7DD3FC !important;
   background: rgba(59,130,246,0.10) !important;
   border: 1px solid rgba(59,130,246,0.20) !important;
   border-left: 3px solid #3B82F6 !important;
-  border-radius: 6px !important;
-  padding: 9px 13px !important;
-  margin-top: 11px !important;
-  line-height: 1.7 !important;
+  border-radius: 6px !important; padding: 9px 13px !important;
+  margin-top: 11px !important; line-height: 1.7 !important;
 }
+.metric-cmp-card {
+  background: linear-gradient(135deg, rgba(59,130,246,0.04), rgba(59,130,246,0.01));
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 12px; padding: 16px 18px;
+}
+.metric-cmp-card .mc-label {
+  font-size: 9px; font-weight: 700; letter-spacing: .1em;
+  color: var(--t3); margin-bottom: 12px;
+  display: flex; align-items: center; gap: 6px;
+}
+.metric-cmp-card .mc-row {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 7px 0; border-bottom: 1px solid rgba(255,255,255,0.04);
+  font-size: 11px;
+}
+.metric-cmp-card .mc-row:last-of-type { border-bottom: none; }
+.metric-cmp-card .mc-period { color: var(--t3); font-size: 10px; }
+.metric-cmp-card .mc-val { font-family: var(--mono); font-weight: 700; font-size: 13px; }
+.metric-cmp-card .mc-delta {
+  margin-top: 8px; padding-top: 8px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  display: flex; justify-content: space-between; align-items: center;
+  font-size: 11px;
+}
+.metric-cmp-card .mc-delta-pct {
+  font-family: var(--mono); font-weight: 800; font-size: 14px;
+}
+.mc-good { color: #10B981 !important; }
+.mc-bad { color: #EF4444 !important; }
+.mc-flat { color: #94A3B8 !important; }
+.ntable th { font-size: 10px !important; }
+.ntable td { font-size: 11px !important; }
 </style>
 </head>
 <body>
 <nav class="top-nav">
   <div class="nav-brand"><div class="nav-brand-dot">B</div>BILLZ · CC</div>
-  <a href="index.html" class="nav-link active">Ежемесячно</a>
+  <a href="index.html" class="nav-link">Ежемесячно</a>
   <a href="weekly.html" class="nav-link">Еженедельно</a>
   <a href="quarterly.html" class="nav-link">Квартал</a>
   <a href="cs.html" class="nav-link">CS Анализ</a>
@@ -51,7 +75,7 @@
   <a href="live.html" class="nav-link" style="color:#10B981">🟢 Live</a>
   <div class="nav-right" style="display:flex;align-items:center;gap:6px;margin-left:auto">
     <span id="navPeriod" style="font-size:12px;font-weight:600;color:var(--t2);padding-right:10px"></span>
-    <button onclick="exportPagePNG('.wrap','billz-index')" id="pngBtn"
+    <button onclick="exportPagePNG('.wrap','billz-trends')" id="pngBtn"
       style="display:flex;align-items:center;gap:5px;background:rgba(139,92,246,0.18);
         border:1px solid rgba(139,92,246,0.35);border-radius:8px;padding:5px 13px;
         font-size:11px;font-weight:600;color:#C4B5FD;cursor:pointer;font-family:inherit;
@@ -67,410 +91,519 @@
 </nav>
 
 <main class="wrap">
-  <!-- Header -->
   <div class="phdr">
     <div>
-      <div class="phdr-eyebrow">BILLZ · КОЛЛ-ЦЕНТР · СРАВНИТЕЛЬНАЯ ДИНАМИКА</div>
-      <div class="phdr-title">Динамика <em>по месяцам</em></div>
-      <div class="phdr-sub">Сравнение ключевых метрик: Март → Апрель → Май 2026</div>
+      <div class="phdr-eyebrow">BILLZ · КОЛЛ-ЦЕНТР · ДИНАМИКА ПЕРИОДОВ</div>
+      <div class="phdr-title">Динамика <em>по неделям</em></div>
+      <div class="phdr-sub">Текущая неделя (11.05–17.05, 7 дн) vs предыдущие 2 недели (27.04–10.05, 14 дн). Сравнение нормализовано на день для корректности.</div>
     </div>
     <div class="phdr-right">
-      <div class="cost-ey">ВСЕГО ЗА КВАРТАЛ</div>
-      <div class="cost-n" id="totalCost">—</div>
-      <div class="cost-d">сум · 3 месяца</div>
-      <div class="live"><span class="live-dot"></span>обновлено 05.05.2026</div>
+      <div class="cost-ey">ОБРАЩЕНИЙ ЗА ТЕКУЩУЮ НЕДЕЛЮ</div>
+      <div class="cost-n" id="totalTickets">—</div>
+      <div class="cost-d">11.05 — 17.05 · 7 дней</div>
+      <div class="live"><span class="live-dot"></span>обновлено 17.05.2026</div>
     </div>
   </div>
 
-  <!-- 01 KEY METRICS COMPARISON -->
-  <div class="sec"><div class="sec-num">01</div><div class="sec-title">Ключевые метрики · сравнение</div><div class="sec-line"></div></div>
+  <div class="sec"><div class="sec-num">01</div><div class="sec-title">Ключевые метрики · среднее в день</div><div class="sec-line"></div></div>
   <div id="keyMetricsGrid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:14px"></div>
 
-  
-  <!-- 01b CPT BY CHANNEL -->
-  <div class="sec"><div class="sec-num">01b</div><div class="sec-title">CPT по каналам · юнит-экономика</div><div class="sec-line"></div></div>
-  <div class="row" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:14px">
-    <div class="card" style="padding:18px 20px;background:linear-gradient(135deg,rgba(59,130,246,0.06),rgba(59,130,246,0.02));border-left:3px solid #3B82F6">
-      <div style="font-size:9px;font-weight:700;color:#3B82F6;letter-spacing:.1em;margin-bottom:10px">📞 CPT ЗВОНКА</div>
-      <div style="font-size:28px;font-weight:800;color:#3B82F6;line-height:1.1">8 690 <span style="font-size:13px;font-weight:600">сум</span></div>
-      <div style="font-size:11px;color:var(--t3);margin-top:8px;line-height:1.45">
-        AHT звонка 5 мин · доля нагрузки 78%<br/>
-        Затраты канала: 93.8 млн сум
-      </div>
-    </div>
-    <div class="card" style="padding:18px 20px;background:linear-gradient(135deg,rgba(139,92,246,0.06),rgba(139,92,246,0.02));border-left:3px solid #8B5CF6">
-      <div style="font-size:9px;font-weight:700;color:#8B5CF6;letter-spacing:.1em;margin-bottom:10px">💬 CPT ЧАТА</div>
-      <div style="font-size:28px;font-weight:800;color:#8B5CF6;line-height:1.1">5 214 <span style="font-size:13px;font-weight:600">сум</span></div>
-      <div style="font-size:11px;color:var(--t3);margin-top:8px;line-height:1.45">
-        AHT чата 3 мин · доля нагрузки 22%<br/>
-        Затраты канала: 27.1 млн сум
-      </div>
-    </div>
-    <div class="card" style="padding:18px 20px;background:linear-gradient(135deg,rgba(16,185,129,0.06),rgba(16,185,129,0.02));border-left:3px solid #10B981">
-      <div style="font-size:9px;font-weight:700;color:#10B981;letter-spacing:.1em;margin-bottom:10px">💰 ЭКОНОМИЯ ПЕРЕВОДА</div>
-      <div style="font-size:28px;font-weight:800;color:#10B981;line-height:1.1">3 476 <span style="font-size:13px;font-weight:600">сум</span></div>
-      <div style="font-size:11px;color:var(--t3);margin-top:8px;line-height:1.45">
-        Звонок→чат · CPT звонка / CPT чата = 1.67×<br/>
-        1 000 переводов = 3.5 млн экономии
-      </div>
-    </div>
-  </div>
-  <div style="background:rgba(59,130,246,0.06);border:1px solid rgba(59,130,246,0.2);border-radius:10px;padding:14px 18px;margin-bottom:14px;font-size:11px;color:var(--t2);line-height:1.55">
-    💡 <b>Главный рычаг экономии — сдвиг канала, а не борьба с объёмом.</b> Чат уже эффективнее звонка (1 оператор ведёт несколько чатов параллельно). Цель: перенаправить типовые темы (оплата, ссылки, входы) через IVR/FAQ/бот → чат.
-  </div>
+  <div class="sec"><div class="sec-num">02</div><div class="sec-title">Качество и доступность</div><div class="sec-line"></div></div>
+  <div id="qualityGrid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:14px"></div>
 
-  <!-- 02 CHARTS -->
-  <div class="sec"><div class="sec-num">02</div><div class="sec-title">Объём обращений и затраты</div><div class="sec-line"></div></div>
+  <div class="sec"><div class="sec-num">03</div><div class="sec-title">Объём обращений · по дням</div><div class="sec-line"></div></div>
   <div class="row two">
     <div class="card">
-      <div class="card-hd"><div class="card-title">Тикеты по месяцам</div></div>
-      <div style="position:relative;height:240px"><canvas id="ticketsChart"></canvas></div>
-      <div class="card-formula">📐 Общий объём обращений за месяц · CPT 7 561 сум</div>
+      <div class="card-hd"><div class="card-title">Тикеты по дням · оба периода</div></div>
+      <div style="position:relative;height:240px"><canvas id="dailyVolumeChart"></canvas></div>
+      <div class="card-formula">📐 Голубой = 27.04–10.05 (14 дн) · Фиолетовый = 11.05–17.05 (7 дн)</div>
     </div>
     <div class="card">
       <div class="card-hd"><div class="card-title">Звонки vs Чаты — структура</div></div>
-      <div style="position:relative;height:240px"><canvas id="channelsChart"></canvas></div>
-      <div class="card-formula">📐 Доля чатов от общего числа обращений (%)</div>
+      <div style="position:relative;height:240px"><canvas id="channelMixChart"></canvas></div>
+      <div class="card-formula">📐 Доля чатов = chats / tickets × 100% · цель >47%</div>
     </div>
   </div>
 
-  <!-- 03 QUALITY METRICS -->
-  <div class="sec"><div class="sec-num">03</div><div class="sec-title">Качество обслуживания</div><div class="sec-line"></div></div>
+  <div class="sec"><div class="sec-num">04</div><div class="sec-title">SLA и LCR · по дням</div><div class="sec-line"></div></div>
   <div class="row two">
     <div class="card">
-      <div class="card-hd"><div class="card-title">CSAT и SLA · динамика</div></div>
-      <div style="position:relative;height:240px"><canvas id="qualityChart"></canvas></div>
-      <div class="card-formula">📐 CSAT = «Отлично» / всего оценок × 100  ·  SLA = ответы ≤1 мин / всего × 100</div>
+      <div class="card-hd"><div class="card-title">SLA % · цель ≥85%</div></div>
+      <div style="position:relative;height:240px"><canvas id="slaChart"></canvas></div>
+      <div class="card-formula">📐 SLA = FRT ≤ 60с / всего обращений × 100%</div>
     </div>
     <div class="card">
-      <div class="card-hd"><div class="card-title">LCR > 5 сек · АТС</div></div>
+      <div class="card-hd"><div class="card-title">LCR % · цель &lt;3.5%</div></div>
       <div style="position:relative;height:240px"><canvas id="lcrChart"></canvas></div>
-      <div class="card-formula">📐 LCR = пропущенные / входящие × 100  ·  цель < 3%</div>
+      <div class="card-formula">📐 LCR = пропущенные звонки / входящие × 100%</div>
     </div>
   </div>
 
-  <!-- 04 ВЫБРАННЫЕ ТРЕНДЫ -->
-  <div class="sec"><div class="sec-num">04</div><div class="sec-title">Нежелательные · Повторные · CS-обучения</div><div class="sec-line"></div></div>
+  <div class="sec"><div class="sec-num">05</div><div class="sec-title">🎓 Обучения через CC — детальный разрез</div><div class="sec-line"></div></div>
   <div class="row two">
     <div class="card">
-      <div class="card-hd"><div class="card-title">Нежелательные обращения %</div></div>
-      <div style="position:relative;height:200px"><canvas id="undesiredChart"></canvas></div>
+      <div class="card-hd"><div class="card-title">Обучения · сравнение периодов</div></div>
+      <div style="position:relative;height:240px"><canvas id="trainingChart"></canvas></div>
+      <div class="card-formula">📐 Полные = "Полное обучение" · Частичные = "Частичное обучение / консультация по модулю"</div>
     </div>
     <div class="card">
-      <div class="card-hd"><div class="card-title">CC обучения через CS</div></div>
-      <div style="position:relative;height:200px"><canvas id="csTrainingChart"></canvas></div>
+      <div class="card-hd"><div class="card-title">Сводка по обучениям</div></div>
+      <div id="trainingSummaryBody"></div>
+    </div>
+  </div>
+  <div class="card" style="padding:18px 20px;margin-bottom:14px;background:linear-gradient(135deg,rgba(245,158,11,0.06),rgba(245,158,11,0.02));border-left:3px solid #F59E0B">
+    <div style="font-size:12px;font-weight:700;color:#F59E0B;margin-bottom:8px">📌 Что это значит для команды</div>
+    <p id="trainingInsightBody" style="font-size:11px;color:var(--t2);line-height:1.65"></p>
+  </div>
+
+  <div class="sec"><div class="sec-num">06</div><div class="sec-title">🤝 Партнёрские обращения — детальный разрез</div><div class="sec-line"></div></div>
+  <div class="row" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:14px">
+    <div class="metric-cmp-card" style="border-left:3px solid #06B6D4">
+      <div class="mc-label" style="color:#06B6D4">🤝 ВСЕГО ОТ ПАРТНЁРОВ</div>
+      <div class="mc-row">
+        <span class="mc-period">27.04–10.05 (14 дн)</span>
+        <span class="mc-val" id="partnerPriorTotal">—</span>
+      </div>
+      <div class="mc-row">
+        <span class="mc-period">11.05–17.05 (7 дн)</span>
+        <span class="mc-val" style="color:#06B6D4" id="partnerCurrTotal">—</span>
+      </div>
+      <div class="mc-delta">
+        <span class="mc-period">Δ / день</span>
+        <span class="mc-delta-pct" id="partnerDeltaDay">—</span>
+      </div>
+    </div>
+    <div class="metric-cmp-card" style="border-left:3px solid #10B981">
+      <div class="mc-label" style="color:#10B981">✅ ЖЕЛАТЕЛЬНЫЕ (партнёры)</div>
+      <div class="mc-row">
+        <span class="mc-period">27.04–10.05</span>
+        <span class="mc-val" id="partnerPriorDes">—</span>
+      </div>
+      <div class="mc-row">
+        <span class="mc-period">11.05–17.05 (оценка)</span>
+        <span class="mc-val" style="color:#10B981" id="partnerCurrDes">—</span>
+      </div>
+      <div class="mc-delta">
+        <span class="mc-period">% от партнёрских</span>
+        <span class="mc-delta-pct" id="partnerDesPct">—</span>
+      </div>
+    </div>
+    <div class="metric-cmp-card" style="border-left:3px solid #EF4444">
+      <div class="mc-label" style="color:#EF4444">❌ НЕЖЕЛАТЕЛЬНЫЕ (партнёры)</div>
+      <div class="mc-row">
+        <span class="mc-period">27.04–10.05</span>
+        <span class="mc-val" id="partnerPriorUndes">—</span>
+      </div>
+      <div class="mc-row">
+        <span class="mc-period">11.05–17.05 (оценка)</span>
+        <span class="mc-val" style="color:#EF4444" id="partnerCurrUndes">—</span>
+      </div>
+      <div class="mc-delta">
+        <span class="mc-period">% от партнёрских</span>
+        <span class="mc-delta-pct" id="partnerUndesPct">—</span>
+      </div>
     </div>
   </div>
 
-  <!-- 05 OPERATORS WORKLOAD -->
-  <div class="sec"><div class="sec-num">05</div><div class="sec-title">Нагрузка на операторов · топ-10</div><div class="sec-line"></div></div>
-  <div class="card" style="padding:18px 20px">
-    <div style="position:relative;height:380px"><canvas id="operatorsChart"></canvas></div>
-    <div class="card-formula">📐 Тикетов на оператора по месяцам. >1 000 — burnout high · 900-999 mid · <900 норма</div>
+  <div class="row two">
+    <div class="card">
+      <div class="card-hd"><div class="card-title">Топ-партнёры по обращениям · 27.04–10.05</div></div>
+      <table class="ntable" style="width:100%"><thead>
+        <tr><th>Партнёр</th><th style="text-align:right">Тикеты</th><th style="text-align:right">/день</th></tr>
+      </thead><tbody id="partnerMgrsBody"></tbody></table>
+      <div class="card-formula">📐 Поле "КС менеджер" в Omnidesk · "ПАРТНЁР" — без указания конкретного партнёра</div>
+    </div>
+    <div class="card">
+      <div class="card-hd"><div class="card-title">Топ-темы партнёрских обращений · 27.04–10.05</div></div>
+      <table class="ntable" style="width:100%"><thead>
+        <tr><th>Тема</th><th style="text-align:right">Тикеты</th><th style="text-align:right">% от партн.</th></tr>
+      </thead><tbody id="partnerTopicsBody"></tbody></table>
+      <div class="card-formula">📐 Первая метка в Omnidesk · от 596 партнёрских тикетов за 14 дн</div>
+    </div>
   </div>
 
-  <!-- 06 SUMMARY TABLE -->
-  <div class="sec"><div class="sec-num">06</div><div class="sec-title">Сводная таблица · все метрики</div><div class="sec-line"></div></div>
-  <div class="card" style="padding:18px 20px">
+  <div class="card" style="padding:18px 20px;margin-bottom:14px;background:linear-gradient(135deg,rgba(6,182,212,0.06),rgba(6,182,212,0.02));border-left:3px solid #06B6D4">
+    <div style="font-size:12px;font-weight:700;color:#06B6D4;margin-bottom:8px">📌 Что это значит по партнёрам</div>
+    <p id="partnerInsightBody" style="font-size:11px;color:var(--t2);line-height:1.65"></p>
+  </div>
+
+  <div class="sec"><div class="sec-num">07</div><div class="sec-title">Нежелательные и Повторные</div><div class="sec-line"></div></div>
+  <div class="row two">
+    <div class="card">
+      <div class="card-hd"><div class="card-title">% нежелательных по дням</div></div>
+      <div style="position:relative;height:200px"><canvas id="undesiredChart"></canvas></div>
+      <div class="card-formula">📐 Нежелательные / всего × 100% · цель &lt;50%</div>
+    </div>
+    <div class="card">
+      <div class="card-hd"><div class="card-title">Повторные обращения %</div></div>
+      <div style="position:relative;height:200px"><canvas id="repeatChart"></canvas></div>
+      <div class="card-formula">📐 Поле "Повторное обращение = Да" / всего × 100% · цель &lt;6%</div>
+    </div>
+  </div>
+
+  <div class="sec"><div class="sec-num">08</div><div class="sec-title">Сводная таблица · все метрики</div><div class="sec-line"></div></div>
+  <div class="card" style="padding:18px 20px;margin-bottom:14px">
     <table class="ntable" id="summaryTable" style="width:100%">
-      <thead><tr id="summaryHead"></tr></thead>
+      <thead><tr>
+        <th style="text-align:left">Метрика</th>
+        <th style="text-align:right">27.04–10.05 (14 дн)</th>
+        <th style="text-align:right">в день</th>
+        <th style="text-align:right">11.05–17.05 (7 дн)</th>
+        <th style="text-align:right">в день</th>
+        <th style="text-align:right">Δ /день</th>
+      </tr></thead>
       <tbody id="summaryBody"></tbody>
     </table>
+    <div class="card-formula">📐 Сравнение нормализовано на день — периоды разной длины (14 vs 7 дн). 🟢 улучшение · 🔴 ухудшение</div>
   </div>
 
-  <!-- 07 INSIGHTS -->
-  <div class="sec"><div class="sec-num">07</div><div class="sec-title">Инсайты по динамике</div><div class="sec-line"></div></div>
+  <div class="sec"><div class="sec-num">09</div><div class="sec-title">Инсайты по динамике</div><div class="sec-line"></div></div>
   <div id="dynamicsInsights" style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px"></div>
 </main>
 
-<script src="data.js?v=36"></script>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
-<script src="shared.js?v=36"></script>
 <script>
-  // ── Build trends data from BILLZ_DATA.months ─────────────────────────────
-  const months = BILLZ_DATA.months || {};
-  const monthOrder = ['mar','apr','may'];
-  const monthLabels = {'mar':'Март','apr':'Апрель','may':'Май (1-4)'};
-  const monthColors = {'mar':'#8B5CF6','apr':'#3B82F6','may':'#10B981'};
+  const PC = BILLZ_DATA.period_compare;
+  const P = PC.prior, C = PC.current, D = PC.delta;
+  const dailyMay = BILLZ_DATA.months.may.daily;
+  const dailyApr = BILLZ_DATA.months.apr.daily;
   
-  const monthsData = monthOrder.map(k => {
-    const m = months[k]?.monthly || {};
-    return {
-      key: k, label: monthLabels[k], color: monthColors[k],
-      tickets: m.tickets || 0,
-      calls: m.calls || 0,
-      chats: m.chats || 0,
-      chat_pct: m.tickets ? Math.round(m.chats/m.tickets*1000)/10 : 0,
-      csat: m.csat_pct || 0,
-      sla: m.sla_pct || 0,
-      lcr: m.lcr || 0,
-      undesired_pct: m.undesired_pct || 0,
-      repeat_pct: m.repeat_pct || 0,
-      training: m.training_tickets || 0,
-      cost: (m.cost || 0)/1e6,
-      operators: m.operators || [],
-      has_data: m.tickets > 0
-    };
-  });
-  
-  const totalCost = monthsData.reduce((s,m)=>s+m.cost,0);
-  document.getElementById('totalCost').textContent = totalCost.toFixed(1) + ' млн';
+  document.getElementById('totalTickets').textContent = C.tickets.toLocaleString('ru');
 
-  // ── 01 Key metrics comparison cards ─────────────────────────────────────
-  const grid = document.getElementById('keyMetricsGrid');
-  const metrics = [
-    {key:'tickets', label:'ТИКЕТЫ', color:'#3B82F6', fmt:v=>v.toLocaleString('ru'), suffix:''},
-    {key:'csat', label:'CSAT %', color:'#10B981', fmt:v=>v.toFixed(1), suffix:'%'},
-    {key:'sla', label:'SLA %', color:'#8B5CF6', fmt:v=>v.toFixed(1), suffix:'%'},
-    {key:'lcr', label:'LCR %', color:'#EF4444', fmt:v=>v.toFixed(2), suffix:'%'},
+  // ── 01 Key metrics per-day ──────────────────────────────────────────────────
+  const keyMetrics = [
+    {key:'tickets_per_day', label:'ТИКЕТЫ /день', color:'#3B82F6', fmt:v=>v.toFixed(0), suffix:'', bd:'down'},
+    {key:'calls_per_day', label:'ЗВОНКИ /день', color:'#06B6D4', fmt:v=>v.toFixed(0), suffix:'', bd:'down'},
+    {key:'chats_per_day', label:'ЧАТЫ /день', color:'#8B5CF6', fmt:v=>v.toFixed(0), suffix:'', bd:'up'},
+    {key:'cost_per_day', label:'ЗАТРАТЫ /день', color:'#F59E0B', fmt:v=>(v/1e6).toFixed(2)+' млн', suffix:'', bd:'down'},
   ];
-  grid.innerHTML = metrics.map(metric => {
-    const vals = monthsData.map(m => ({label:m.label, val:m[metric.key], color:m.color}));
-    const apr = vals.find(v=>v.label==='Апрель')?.val || 0;
-    const may = vals.find(v=>v.label.includes('Май'))?.val || 0;
-    const delta = may - apr;
-    const isLcr = metric.key === 'lcr' || metric.key === 'undesired_pct';
-    const isGood = isLcr ? delta < 0 : delta > 0;
-    const arrow = delta > 0 ? '↑' : (delta < 0 ? '↓' : '→');
-    const dColor = (delta === 0) ? '#94A3B8' : (isGood ? '#10B981' : '#EF4444');
-    return `
-      <div class="card" style="padding:16px 18px">
-        <div style="font-size:9px;font-weight:700;color:${metric.color};letter-spacing:.1em;margin-bottom:14px">${metric.label}</div>
-        ${vals.map(v => `
-          <div style="display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid rgba(255,255,255,0.04)">
-            <span style="font-size:11px;color:var(--t3)">${v.label}</span>
-            <span style="font-size:14px;font-weight:700;color:${v.color}">${metric.fmt(v.val)}${metric.suffix}</span>
-          </div>`).join('')}
-        <div style="margin-top:10px;padding-top:8px;font-size:10px;color:${dColor};font-weight:700">
-          ${arrow} апр→май: ${delta > 0 ? '+' : ''}${metric.fmt(Math.abs(delta))}${metric.suffix}
-        </div>
-      </div>`;
+  document.getElementById('keyMetricsGrid').innerHTML = keyMetrics.map(m => {
+    const pv = P[m.key], cv = C[m.key], d = D[m.key];
+    const isGood = m.bd === 'down' ? d.pct < 0 : d.pct > 0;
+    const cls = d.pct === 0 ? 'mc-flat' : (isGood ? 'mc-good' : 'mc-bad');
+    const arrow = d.pct > 0 ? '↑' : (d.pct < 0 ? '↓' : '→');
+    return `<div class="metric-cmp-card" style="border-left:3px solid ${m.color}">
+      <div class="mc-label" style="color:${m.color}">${m.label}</div>
+      <div class="mc-row"><span class="mc-period">27.04–10.05</span><span class="mc-val">${m.fmt(pv)}${m.suffix}</span></div>
+      <div class="mc-row"><span class="mc-period">11.05–17.05</span><span class="mc-val" style="color:${m.color}">${m.fmt(cv)}${m.suffix}</span></div>
+      <div class="mc-delta">
+        <span class="${cls}" style="font-size:11px">${arrow} ${d.pct>0?'+':''}${d.pct.toFixed(1)}%</span>
+        <span class="mc-delta-pct ${cls}">${d.abs>0?'+':''}${m.fmt(Math.abs(d.abs))}</span>
+      </div></div>`;
   }).join('');
 
-  // ── Chart base config ─────────────────────────────────────────────────────
-  const chartLabels = monthsData.map(m => m.label);
+  // ── 02 Quality metrics ──────────────────────────────────────────────────────
+  const qualMetrics = [
+    {key:'sla_pct', label:'SLA %', color:'#8B5CF6', fmt:v=>v.toFixed(1), suffix:'%', bd:'up'},
+    {key:'csat_pct', label:'CSAT %', color:'#10B981', fmt:v=>v.toFixed(1), suffix:'%', bd:'up'},
+    {key:'lcr', label:'LCR %', color:'#EF4444', fmt:v=>v.toFixed(2), suffix:'%', bd:'down'},
+    {key:'repeat_pct', label:'ПОВТОРНЫЕ %', color:'#F59E0B', fmt:v=>v.toFixed(1), suffix:'%', bd:'down'},
+  ];
+  document.getElementById('qualityGrid').innerHTML = qualMetrics.map(m => {
+    const pv = P[m.key], cv = C[m.key], d = D[m.key];
+    const isGood = m.bd === 'down' ? d.abs < 0 : d.abs > 0;
+    const cls = d.abs === 0 ? 'mc-flat' : (isGood ? 'mc-good' : 'mc-bad');
+    const arrow = d.abs > 0 ? '↑' : (d.abs < 0 ? '↓' : '→');
+    return `<div class="metric-cmp-card" style="border-left:3px solid ${m.color}">
+      <div class="mc-label" style="color:${m.color}">${m.label}</div>
+      <div class="mc-row"><span class="mc-period">27.04–10.05</span><span class="mc-val">${m.fmt(pv)}${m.suffix}</span></div>
+      <div class="mc-row"><span class="mc-period">11.05–17.05</span><span class="mc-val" style="color:${m.color}">${m.fmt(cv)}${m.suffix}</span></div>
+      <div class="mc-delta">
+        <span class="${cls}" style="font-size:11px">${arrow} абс</span>
+        <span class="mc-delta-pct ${cls}">${d.abs>0?'+':''}${d.abs.toFixed(2)} пп</span>
+      </div></div>`;
+  }).join('');
+
+  // Daily series
+  const priorDates = ['2026-04-27','2026-04-28','2026-04-29','2026-04-30','2026-05-01','2026-05-02','2026-05-03','2026-05-04','2026-05-05','2026-05-06','2026-05-07','2026-05-08','2026-05-09','2026-05-10'];
+  const currDates = ['2026-05-11','2026-05-12','2026-05-13','2026-05-14','2026-05-15','2026-05-16','2026-05-17'];
+  function gd(d){ return dailyMay[d] || dailyApr[d] || {}; }
+  
   const baseOpts = {
-    responsive:true, maintainAspectRatio:false,
-    plugins:{
-      legend:{labels:{color:'#9CA3AF',font:{size:11}}},
-      tooltip:{backgroundColor:'#0D1117',titleColor:'#E5E7EB',bodyColor:'#9CA3AF',borderColor:'rgba(255,255,255,0.1)',borderWidth:1}
+    responsive: true, maintainAspectRatio: false,
+    plugins: {
+      legend: {labels:{color:'#9CA3AF',font:{size:11}}},
+      tooltip: {backgroundColor:'#0D1117',titleColor:'#E5E7EB',bodyColor:'#9CA3AF',borderColor:'rgba(255,255,255,0.1)',borderWidth:1}
     },
-    scales:{
-      x:{grid:{display:false},ticks:{color:'#6B7280',font:{size:11}}},
-      y:{grid:{color:'rgba(255,255,255,0.05)'},ticks:{color:'#6B7280',font:{size:10}}}
+    scales: {
+      x: {grid:{display:false}, ticks:{color:'#6B7280',font:{size:10}}},
+      y: {grid:{color:'rgba(255,255,255,0.05)'}, ticks:{color:'#6B7280',font:{size:10}}}
     }
   };
 
-  // ── 02 Tickets chart ──────────────────────────────────────────────────────
-  new Chart(document.getElementById('ticketsChart'), {
+  new Chart(document.getElementById('dailyVolumeChart'), {
     type:'bar',
-    data:{labels:chartLabels, datasets:[{
-      label:'Тикеты',
-      data: monthsData.map(m=>m.tickets),
-      backgroundColor: monthsData.map(m=>m.color+'80'),
-      borderColor: monthsData.map(m=>m.color),
-      borderWidth:1.5, borderRadius:8,
-    }]},
-    options:{...baseOpts}
+    data:{
+      labels: [...priorDates, ...currDates].map(d => d.slice(-5).replace('-','.')),
+      datasets:[{
+        label:'Тикеты',
+        data: [...priorDates.map(d => gd(d).tickets || 0), ...currDates.map(d => gd(d).tickets || 0)],
+        backgroundColor: [...priorDates.map(_=>'rgba(6,182,212,0.75)'), ...currDates.map(_=>'rgba(139,92,246,0.85)')],
+        borderColor: [...priorDates.map(_=>'#06B6D4'), ...currDates.map(_=>'#8B5CF6')],
+        borderWidth:1, borderRadius:5
+      }]
+    },
+    options: baseOpts
   });
 
-  // Channels chart (stacked)
-  new Chart(document.getElementById('channelsChart'), {
+  new Chart(document.getElementById('channelMixChart'), {
     type:'bar',
-    data:{labels:chartLabels, datasets:[
-      {label:'Звонки', data:monthsData.map(m=>m.calls), backgroundColor:'rgba(59,130,246,0.85)', borderRadius:6, stack:'a'},
-      {label:'Чаты', data:monthsData.map(m=>m.chats), backgroundColor:'rgba(139,92,246,0.85)', borderRadius:6, stack:'a'}
-    ]},
-    options:{...baseOpts, scales:{x:{...baseOpts.scales.x, stacked:true}, y:{...baseOpts.scales.y, stacked:true}}}
+    data:{
+      labels: ['27.04–10.05', '11.05–17.05'],
+      datasets:[
+        {label:'Звонки (всего)', data:[P.calls, C.calls], backgroundColor:'rgba(59,130,246,0.85)', borderRadius:6, stack:'a'},
+        {label:'Чаты (всего)', data:[P.chats, C.chats], backgroundColor:'rgba(139,92,246,0.85)', borderRadius:6, stack:'a'}
+      ]
+    },
+    options: {...baseOpts, scales:{x:{...baseOpts.scales.x, stacked:true}, y:{...baseOpts.scales.y, stacked:true}}}
   });
 
-  // ── 03 Quality chart (CSAT + SLA lines) ──────────────────────────────────
-  new Chart(document.getElementById('qualityChart'), {
+  new Chart(document.getElementById('slaChart'), {
     type:'line',
-    data:{labels:chartLabels, datasets:[
-      {label:'CSAT %', data:monthsData.map(m=>m.csat), borderColor:'#10B981', backgroundColor:'rgba(16,185,129,0.1)', fill:true, tension:0.3, pointRadius:5, pointBackgroundColor:'#10B981', borderWidth:2.5},
-      {label:'SLA %', data:monthsData.map(m=>m.sla), borderColor:'#8B5CF6', backgroundColor:'rgba(139,92,246,0.05)', fill:false, tension:0.3, pointRadius:5, pointBackgroundColor:'#8B5CF6', borderWidth:2.5}
-    ]},
+    data:{
+      labels: [...priorDates, ...currDates].map(d => d.slice(-5).replace('-','.')),
+      datasets:[
+        {label:'SLA %', data: [...priorDates.map(d => gd(d).sla_pct || 0), ...currDates.map(d => gd(d).sla_pct || 0)],
+         borderColor:'#8B5CF6', backgroundColor:'rgba(139,92,246,0.1)',
+         fill:true, tension:0.25, pointRadius:4, pointBackgroundColor:'#8B5CF6', borderWidth:2.5},
+        {label:'Цель 85%', data: [...priorDates,...currDates].map(_=>85), borderColor:'#10B981', borderDash:[5,5], pointRadius:0, fill:false, borderWidth:1.5}
+      ]
+    },
     options:{...baseOpts, scales:{x:baseOpts.scales.x, y:{...baseOpts.scales.y, min:60, max:100, ticks:{...baseOpts.scales.y.ticks, callback:v=>v+'%'}}}}
   });
 
-  // LCR chart
   new Chart(document.getElementById('lcrChart'), {
     type:'bar',
-    data:{labels:chartLabels, datasets:[{
-      label:'LCR %',
-      data:monthsData.map(m=>m.lcr),
-      backgroundColor: monthsData.map(m => m.lcr > 5 ? 'rgba(239,68,68,0.75)' : (m.lcr > 3 ? 'rgba(245,158,11,0.75)' : 'rgba(16,185,129,0.75)')),
-      borderColor: monthsData.map(m => m.lcr > 5 ? '#EF4444' : (m.lcr > 3 ? '#F59E0B' : '#10B981')),
-      borderWidth:1.5, borderRadius:8
-    }]},
+    data:{
+      labels: [...priorDates, ...currDates].map(d => d.slice(-5).replace('-','.')),
+      datasets:[{
+        label:'LCR %',
+        data: [...priorDates.map(d => gd(d).lcr || 0), ...currDates.map(d => gd(d).lcr || 0)],
+        backgroundColor: [...priorDates, ...currDates].map(d => {
+          const v = gd(d).lcr || 0;
+          return v > 5 ? 'rgba(239,68,68,0.75)' : (v > 3.5 ? 'rgba(245,158,11,0.75)' : 'rgba(16,185,129,0.75)');
+        }),
+        borderColor: [...priorDates, ...currDates].map(d => {
+          const v = gd(d).lcr || 0;
+          return v > 5 ? '#EF4444' : (v > 3.5 ? '#F59E0B' : '#10B981');
+        }),
+        borderWidth:1, borderRadius:5
+      }]
+    },
     options:{...baseOpts, scales:{x:baseOpts.scales.x, y:{...baseOpts.scales.y, ticks:{...baseOpts.scales.y.ticks, callback:v=>v+'%'}}}}
   });
 
-  // ── 04 Undesired & CS Training charts ────────────────────────────────────
-  new Chart(document.getElementById('undesiredChart'), {
-    type:'line',
-    data:{labels:chartLabels, datasets:[{
-      label:'% нежелательных',
-      data:monthsData.map(m=>m.undesired_pct),
-      borderColor:'#EF4444', backgroundColor:'rgba(239,68,68,0.1)', fill:true,
-      tension:0.3, pointRadius:5, pointBackgroundColor:'#EF4444', borderWidth:2.5
-    }]},
-    options:{...baseOpts, scales:{x:baseOpts.scales.x, y:{...baseOpts.scales.y, ticks:{...baseOpts.scales.y.ticks, callback:v=>v+'%'}}}}
-  });
-
-  new Chart(document.getElementById('csTrainingChart'), {
-    type:'bar',
-    data:{labels:chartLabels, datasets:[{
-      label:'Обучения CC→CS',
-      data:monthsData.map(m=>m.training),
-      backgroundColor:'rgba(245,158,11,0.7)', borderColor:'#F59E0B', borderWidth:1.5, borderRadius:6
-    }]},
-    options:{...baseOpts}
-  });
-
-  // ── 05 Operators load ─────────────────────────────────────────────────────
-  // Take union of top operators
-  const opNames = new Set();
-  monthsData.forEach(m => m.operators.slice(0,12).forEach(op => opNames.add(op.name)));
-  const opNamesList = [...opNames].slice(0, 14);
-  
-  const opData = opNamesList.map(name => {
-    return {name, values: monthsData.map(m => {
-      const op = m.operators.find(o => o.name === name);
-      return op ? op.tickets : 0;
-    })};
-  }).sort((a,b) => Math.max(...b.values) - Math.max(...a.values));
-
-  new Chart(document.getElementById('operatorsChart'), {
+  // ── 05 KC Training section ──────────────────────────────────────────────────
+  new Chart(document.getElementById('trainingChart'), {
     type:'bar',
     data:{
-      labels: opData.map(o => o.name),
-      datasets: monthsData.map((m, i) => ({
-        label: m.label,
-        data: opData.map(o => o.values[i]),
-        backgroundColor: m.color + '90',
-        borderColor: m.color, borderWidth:1, borderRadius:5
-      }))
+      labels: ['27.04–10.05 (14 дн)', '11.05–17.05 (7 дн)'],
+      datasets:[
+        {label:'Частичные', data:[P.training_partial, C.training_partial], backgroundColor:'rgba(245,158,11,0.7)', borderRadius:6, stack:'a'},
+        {label:'Полные', data:[P.training_full, C.training_full], backgroundColor:'rgba(239,68,68,0.7)', borderRadius:6, stack:'a'},
+      ]
     },
-    options:{...baseOpts, indexAxis:'y',
-      scales:{x:{...baseOpts.scales.x, beginAtZero:true},y:baseOpts.scales.y}}
+    options:{...baseOpts, scales:{x:{...baseOpts.scales.x, stacked:true}, y:{...baseOpts.scales.y, stacked:true}}}
   });
 
-  // ── 06 Summary table ──────────────────────────────────────────────────────
-  const headRow = document.getElementById('summaryHead');
-  headRow.innerHTML = '<th style="text-align:left">Метрика</th>' +
-    monthsData.map(m => `<th style="color:${m.color}">${m.label}</th>`).join('') +
-    '<th>Δ Апр→Май</th>';
+  const tD = D.training_per_day;
+  const tDir = tD.pct < 0 ? 'mc-good' : (tD.pct > 0 ? 'mc-bad' : 'mc-flat');
+  const tArrow = tD.pct > 0 ? '↑' : (tD.pct < 0 ? '↓' : '→');
+  document.getElementById('trainingSummaryBody').innerHTML = `
+    <table style="width:100%;font-size:11px">
+      <tr><td style="color:var(--t3);padding:6px 0">Всего · 27.04–10.05</td><td style="text-align:right;font-weight:700;font-family:var(--mono)">${P.training_total} <span style="color:var(--t3);font-size:10px">за 14 дн</span></td></tr>
+      <tr><td style="color:var(--t3);padding:6px 0">Всего · 11.05–17.05</td><td style="text-align:right;font-weight:700;color:#F59E0B;font-family:var(--mono)">${C.training_total} <span style="color:var(--t3);font-size:10px">за 7 дн</span></td></tr>
+      <tr style="border-top:1px solid rgba(255,255,255,0.08)"><td style="color:var(--t3);padding:8px 0">/день · предыдущий</td><td style="text-align:right;font-weight:700;font-family:var(--mono)">${P.training_per_day.toFixed(1)}</td></tr>
+      <tr><td style="color:var(--t3);padding:6px 0">/день · текущий</td><td style="text-align:right;font-weight:700;color:#F59E0B;font-family:var(--mono)">${C.training_per_day.toFixed(1)}</td></tr>
+      <tr style="border-top:1px solid rgba(255,255,255,0.08)"><td style="color:var(--t3);padding:8px 0">Динамика /день</td><td style="text-align:right;font-weight:800;font-size:13px;font-family:var(--mono)" class="${tDir}">${tArrow} ${tD.pct>0?'+':''}${tD.pct.toFixed(1)}%</td></tr>
+      <tr><td style="color:var(--t3);padding:6px 0">Полные / Частичные</td><td style="text-align:right;font-family:var(--mono);font-size:11px">P: ${P.training_full}/${P.training_partial} · C: ${C.training_full}/${C.training_partial}</td></tr>
+      <tr><td style="color:var(--t3);padding:6px 0">Затраты · текущий период</td><td style="text-align:right;font-weight:700;font-family:var(--mono);color:#F59E0B">${(C.training_total*7561/1e6).toFixed(2)} млн<br/><span style="font-size:10px;color:var(--t3)">vs ${(P.training_total*7561/1e6).toFixed(2)} млн за 14 дн</span></td></tr>
+    </table>`;
 
-  const summaryRows = [
-    {label:'Тикеты', vals: monthsData.map(m=>m.tickets), fmt:v=>v.toLocaleString('ru'), good:'up'},
-    {label:'Звонки', vals: monthsData.map(m=>m.calls), fmt:v=>v.toLocaleString('ru'), good:'up'},
-    {label:'Чаты', vals: monthsData.map(m=>m.chats), fmt:v=>v.toLocaleString('ru'), good:'up'},
-    {label:'Доля чатов %', vals: monthsData.map(m=>m.chat_pct), fmt:v=>v.toFixed(1)+'%', good:'up'},
-    {label:'CSAT %', vals: monthsData.map(m=>m.csat), fmt:v=>v.toFixed(1)+'%', good:'up'},
-    {label:'SLA %', vals: monthsData.map(m=>m.sla), fmt:v=>v.toFixed(1)+'%', good:'up'},
-    {label:'LCR %', vals: monthsData.map(m=>m.lcr), fmt:v=>v.toFixed(2)+'%', good:'down'},
-    {label:'Нежелательные %', vals: monthsData.map(m=>m.undesired_pct), fmt:v=>v.toFixed(1)+'%', good:'down'},
-    {label:'Повторные %', vals: monthsData.map(m=>m.repeat_pct), fmt:v=>v.toFixed(1)+'%', good:'down'},
-    {label:'Обучения CC→CS', vals: monthsData.map(m=>m.training), fmt:v=>v.toLocaleString('ru'), good:'down'},
-    {label:'Затраты млн', vals: monthsData.map(m=>m.cost), fmt:v=>v.toFixed(2)+' млн', good:'down'}
-  ];
+  const tIns = [];
+  if (tD.pct > 10) {
+    tIns.push(`📈 <b>Обучений в день стало больше на ${tD.pct.toFixed(1)}%</b> (${P.training_per_day.toFixed(1)} → ${C.training_per_day.toFixed(1)}). CC всё ещё закрывает базовое обучение клиентов, которое должно быть на CS.`);
+  } else if (tD.pct < -10) {
+    tIns.push(`📉 <b>Обучений в день стало меньше на ${Math.abs(tD.pct).toFixed(1)}%</b> (${P.training_per_day.toFixed(1)} → ${C.training_per_day.toFixed(1)}). Признак — CS-команда забирает онбординг.`);
+  } else {
+    tIns.push(`➡️ Обучений в день почти не изменилось (${P.training_per_day.toFixed(1)} → ${C.training_per_day.toFixed(1)}, ${tD.pct>0?'+':''}${tD.pct.toFixed(1)}%). Тренд стабильный.`);
+  }
+  tIns.push(`💰 За текущую неделю обучения обошлись в <b>${(C.training_total*7561/1e6).toFixed(2)} млн сум</b> (${C.training_total} тикетов × 7 561 сум). За предыдущие 2 недели — ${(P.training_total*7561/1e6).toFixed(2)} млн.`);
+  tIns.push(`📚 <b>Структура:</b> ${P.training_partial} частичных + ${P.training_full} полных = ${P.training_total} тикетов в прошлом периоде. ${P.training_partial/P.training_total*100>=90?'Полные обучения — менее 10% всего: основная нагрузка — «частичные», т.е. короткие пояснения по одному модулю.':'Соотношение полных и частичных смешанное.'}`);
+  tIns.push(`🎯 <b>Цель:</b> передать обучения клиентов в CS-команду, оставив CC только инциденты. Это должно вернуть SLA и AFRT в норму без расширения штата.`);
+  document.getElementById('trainingInsightBody').innerHTML = tIns.join('<br/><br/>');
+
+  // ── 06 Partner section ──────────────────────────────────────────────────────
+  document.getElementById('partnerPriorTotal').textContent = `${P.partner_tickets} (${P.partner_per_day.toFixed(1)}/дн)`;
+  document.getElementById('partnerCurrTotal').textContent = `${C.partner_tickets} (${C.partner_per_day.toFixed(1)}/дн)`;
+  const pD = D.partner_per_day;
+  const pDir = pD.pct < 0 ? 'mc-good' : (pD.pct > 0 ? 'mc-bad' : 'mc-flat');
+  const pArr = pD.pct > 0 ? '↑' : (pD.pct < 0 ? '↓' : '→');
+  document.getElementById('partnerDeltaDay').innerHTML = `<span class="${pDir}">${pArr} ${pD.pct>0?'+':''}${pD.pct.toFixed(1)}%</span>`;
   
-  document.getElementById('summaryBody').innerHTML = summaryRows.map(r => {
-    const aprIdx = monthsData.findIndex(m=>m.label==='Апрель');
-    const mayIdx = monthsData.findIndex(m=>m.label.includes('Май'));
-    const delta = r.vals[mayIdx] - r.vals[aprIdx];
-    const isGood = r.good === 'up' ? delta > 0 : delta < 0;
-    const dColor = delta === 0 ? '#94A3B8' : (isGood ? '#10B981' : '#EF4444');
-    const arrow = delta > 0 ? '↑' : (delta < 0 ? '↓' : '→');
+  document.getElementById('partnerPriorDes').textContent = `${P.partner_desired} (${(P.partner_desired/P.partner_tickets*100).toFixed(1)}%)`;
+  const curDes = Math.round(C.partner_tickets * P.partner_desired / P.partner_tickets);
+  const curUndes = Math.round(C.partner_tickets * P.partner_undesired / P.partner_tickets);
+  document.getElementById('partnerCurrDes').textContent = `~${curDes}`;
+  document.getElementById('partnerDesPct').innerHTML = `<span style="color:#10B981">${(curDes/C.partner_tickets*100).toFixed(1)}%</span>`;
+  document.getElementById('partnerPriorUndes').textContent = `${P.partner_undesired} (${(P.partner_undesired/P.partner_tickets*100).toFixed(1)}%)`;
+  document.getElementById('partnerCurrUndes').textContent = `~${curUndes}`;
+  document.getElementById('partnerUndesPct').innerHTML = `<span style="color:#EF4444">${(curUndes/C.partner_tickets*100).toFixed(1)}%</span>`;
+
+  const mgrsBody = document.getElementById('partnerMgrsBody');
+  mgrsBody.innerHTML = P.partner_top_mgrs.map(([name, count]) => {
+    const perDay = (count/14).toFixed(1);
     return `<tr>
-      <td style="font-weight:600;color:var(--t1);font-size:11px">${r.label}</td>
-      ${r.vals.map(v => `<td style="font-family:var(--mono);font-size:11px;color:var(--t2)">${r.fmt(v)}</td>`).join('')}
-      <td style="font-size:11px;font-weight:700;color:${dColor}">${arrow} ${r.fmt(Math.abs(delta))}</td>
+      <td style="font-weight:600;color:var(--t1);font-size:11px">${name}</td>
+      <td style="text-align:right;font-family:var(--mono);color:#06B6D4;font-weight:700">${count}</td>
+      <td style="text-align:right;font-family:var(--mono);color:var(--t3);font-size:10px">${perDay}</td>
     </tr>`;
   }).join('');
 
-  // ── 07 Insights ──────────────────────────────────────────────────────────
-  const aprData = monthsData.find(m => m.label === 'Апрель');
-  const mayData = monthsData.find(m => m.label.includes('Май'));
-  const marData = monthsData.find(m => m.label === 'Март');
-  
-  const insights = [];
-  
-  // Tickets trend
-  if (marData.tickets > aprData.tickets) {
-    insights.push({
-      icon:'📉', color:'#3B82F6', bg:'rgba(59,130,246,0.06)', border:'rgba(59,130,246,0.2)',
-      title:'Объём обращений снижается',
-      body:`Март: ${marData.tickets.toLocaleString('ru')} → Апрель: ${aprData.tickets.toLocaleString('ru')} (-${(marData.tickets-aprData.tickets).toLocaleString('ru')}). Это положительный тренд — нагрузка на CC снижается.`,
-      metric:`Δ март→апр: -${((1-aprData.tickets/marData.tickets)*100).toFixed(1)}%`
-    });
+  const topicsBody = document.getElementById('partnerTopicsBody');
+  topicsBody.innerHTML = P.partner_top_topics.map(([name, count]) => {
+    const pct = (count/P.partner_tickets*100).toFixed(1);
+    return `<tr>
+      <td style="color:var(--t1);font-size:11px">${name}</td>
+      <td style="text-align:right;font-family:var(--mono);color:#06B6D4;font-weight:700">${count}</td>
+      <td style="text-align:right;font-family:var(--mono);color:var(--t3);font-size:10px">${pct}%</td>
+    </tr>`;
+  }).join('');
+
+  const pIns = [];
+  if (pD.pct > 10) {
+    pIns.push(`📈 <b>Партнёры стали обращаться чаще:</b> ${P.partner_per_day.toFixed(1)} → ${C.partner_per_day.toFixed(1)} в день (${pD.pct>0?'+':''}${pD.pct.toFixed(1)}%). Возможно, у партнёров не хватает компетенций, или клиенты обходят их и идут напрямую в CC.`);
+  } else if (pD.pct < -10) {
+    pIns.push(`📉 <b>Партнёры стали обращаться реже:</b> ${P.partner_per_day.toFixed(1)} → ${C.partner_per_day.toFixed(1)} в день (${pD.pct>0?'+':''}${pD.pct.toFixed(1)}%).`);
+  } else {
+    pIns.push(`➡️ Партнёрский поток стабилен: ${P.partner_per_day.toFixed(1)} → ${C.partner_per_day.toFixed(1)} /день (${pD.pct>0?'+':''}${pD.pct.toFixed(1)}%).`);
   }
-  
-  // SLA jump
-  if (aprData.sla > marData.sla + 5) {
-    insights.push({
-      icon:'🟢', color:'#10B981', bg:'rgba(16,185,129,0.06)', border:'rgba(16,185,129,0.2)',
-      title:'SLA значительно улучшился',
-      body:`Март ${marData.sla.toFixed(1)}% → Апрель ${aprData.sla.toFixed(1)}% (+${(aprData.sla-marData.sla).toFixed(1)}пп). Команда стала быстрее отвечать на чаты — данные Omnidesk.`,
-      metric:`Δ SLA март→апр: +${(aprData.sla-marData.sla).toFixed(1)}пп`
-    });
+  pIns.push(`👥 <b>Активных партнёров:</b> ${P.partner_top_mgrs.length}+. Топ-3: <b>${P.partner_top_mgrs[0][0]}</b> (${P.partner_top_mgrs[0][1]}), <b>${P.partner_top_mgrs[1][0]}</b> (${P.partner_top_mgrs[1][1]}), <b>${P.partner_top_mgrs[2][0]}</b> (${P.partner_top_mgrs[2][1]}). Лидирует категория "${P.partner_top_mgrs[0][0]}" — это обращения без указания конкретного партнёра.`);
+  pIns.push(`🎯 <b>Топ-тема:</b> "${P.partner_top_topics[0][0]}" — ${P.partner_top_topics[0][1]} тикетов (${(P.partner_top_topics[0][1]/P.partner_tickets*100).toFixed(1)}%). За ней — "${P.partner_top_topics[1][0]}" (${P.partner_top_topics[1][1]}, ${(P.partner_top_topics[1][1]/P.partner_tickets*100).toFixed(1)}%). Партнёры в первую очередь приходят за оплатой/созданием магазина — типовые задачи, которые должны автоматизироваться.`);
+  pIns.push(`⚠️ <b>Качество:</b> ${(P.partner_undesired/P.partner_tickets*100).toFixed(1)}% партнёрских тикетов — нежелательные. Это <b>лучше</b> среднего по CC (${P.undesired_pct}%): партнёры приходят с более конкретными задачами.`);
+  document.getElementById('partnerInsightBody').innerHTML = pIns.join('<br/><br/>');
+
+  // ── 07 Undesired & Repeat ───────────────────────────────────────────────────
+  function undPct(d) {
+    const r = gd(d);
+    if (!r.tickets) return 0;
+    return Math.round(r.undesired/r.tickets*100*10)/10;
   }
-  
-  // LCR worsening in May
-  if (mayData.lcr > aprData.lcr) {
-    insights.push({
-      icon:'🔴', color:'#EF4444', bg:'rgba(239,68,68,0.06)', border:'rgba(239,68,68,0.2)',
-      title:'LCR ухудшился в мае',
-      body:`Апрель ${aprData.lcr}% → Май ${mayData.lcr}% (+${(mayData.lcr-aprData.lcr).toFixed(2)}пп). Причина: дефицит команды и сокращённый штат после увольнений. 2 новых оператора 05.05.`,
-      metric:`Δ LCR апр→май: +${(mayData.lcr-aprData.lcr).toFixed(2)}пп`
-    });
-  }
-  
-  // Training trend
-  if (marData.training > aprData.training) {
-    insights.push({
-      icon:'🎓', color:'#F59E0B', bg:'rgba(245,158,11,0.06)', border:'rgba(245,158,11,0.2)',
-      title:'Обучения через CC снижаются',
-      body:`Март ${marData.training} → Апрель ${aprData.training}. Тренд позитивный — CS-команда забирает онбординг. Цель: <300/мес к июлю.`,
-      metric:`Δ обучения: -${marData.training-aprData.training} (${((1-aprData.training/marData.training)*100).toFixed(0)}%)`
-    });
-  }
-  
-  document.getElementById('dynamicsInsights').innerHTML = insights.map(ins => `
-    <div style="background:${ins.bg};border:1px solid ${ins.border};border-left:3px solid ${ins.color};border-radius:12px;padding:16px 18px">
+  new Chart(document.getElementById('undesiredChart'), {
+    type:'line',
+    data:{
+      labels: [...priorDates,...currDates].map(d=>d.slice(-5).replace('-','.')),
+      datasets:[{
+        label:'% нежелательных',
+        data: [...priorDates,...currDates].map(undPct),
+        borderColor:'#EF4444', backgroundColor:'rgba(239,68,68,0.1)',
+        fill:true, tension:0.25, pointRadius:4, pointBackgroundColor:'#EF4444', borderWidth:2
+      }]
+    },
+    options:{...baseOpts, scales:{x:baseOpts.scales.x, y:{...baseOpts.scales.y, ticks:{...baseOpts.scales.y.ticks, callback:v=>v+'%'}}}}
+  });
+
+  new Chart(document.getElementById('repeatChart'), {
+    type:'bar',
+    data:{
+      labels: ['27.04–10.05', '11.05–17.05'],
+      datasets:[{
+        label:'% повторных',
+        data:[P.repeat_pct, C.repeat_pct],
+        backgroundColor:['rgba(245,158,11,0.7)','rgba(239,68,68,0.85)'],
+        borderColor:['#F59E0B','#EF4444'], borderWidth:1.5, borderRadius:8
+      }]
+    },
+    options:{...baseOpts, scales:{x:baseOpts.scales.x, y:{...baseOpts.scales.y, ticks:{...baseOpts.scales.y.ticks, callback:v=>v+'%'}}}}
+  });
+
+  // ── 08 Summary table ────────────────────────────────────────────────────────
+  const rows = [
+    {label:'Тикеты', pTotal:P.tickets, pDay:P.tickets_per_day, cTotal:C.tickets, cDay:C.tickets_per_day, fmt:v=>v.toLocaleString('ru'), good:'down'},
+    {label:'Звонки', pTotal:P.calls, pDay:P.calls_per_day, cTotal:C.calls, cDay:C.calls_per_day, fmt:v=>v.toLocaleString('ru'), good:'down'},
+    {label:'Чаты', pTotal:P.chats, pDay:P.chats_per_day, cTotal:C.chats, cDay:C.chats_per_day, fmt:v=>v.toLocaleString('ru'), good:'up'},
+    {label:'Желательные', pTotal:P.desired, pDay:P.desired/14, cTotal:C.desired, cDay:C.desired/7, fmt:v=>v.toLocaleString('ru'), good:'up'},
+    {label:'Нежелательные', pTotal:P.undesired, pDay:P.undesired/14, cTotal:C.undesired, cDay:C.undesired/7, fmt:v=>v.toLocaleString('ru'), good:'down'},
+    {label:'Нежелательные %', pTotal:P.undesired_pct, pDay:P.undesired_pct, cTotal:C.undesired_pct, cDay:C.undesired_pct, fmt:v=>v.toFixed(1)+'%', good:'down', sameDay:true},
+    {label:'SLA %', pTotal:P.sla_pct, pDay:P.sla_pct, cTotal:C.sla_pct, cDay:C.sla_pct, fmt:v=>v.toFixed(1)+'%', good:'up', sameDay:true},
+    {label:'CSAT %', pTotal:P.csat_pct, pDay:P.csat_pct, cTotal:C.csat_pct, cDay:C.csat_pct, fmt:v=>v.toFixed(1)+'%', good:'up', sameDay:true},
+    {label:'AFRT', pTotal:P.afrt, pDay:P.afrt, cTotal:C.afrt, cDay:C.afrt, fmt:v=>v, good:'down', sameDay:true, raw:true},
+    {label:'ART (часы)', pTotal:P.art_h+' ч', pDay:P.art_h+' ч', cTotal:C.art_h+' ч', cDay:C.art_h+' ч', fmt:v=>v, good:'down', sameDay:true, raw:true},
+    {label:'LCR %', pTotal:P.lcr, pDay:P.lcr, cTotal:C.lcr, cDay:C.lcr, fmt:v=>v.toFixed(2)+'%', good:'down', sameDay:true},
+    {label:'Повторные %', pTotal:P.repeat_pct, pDay:P.repeat_pct, cTotal:C.repeat_pct, cDay:C.repeat_pct, fmt:v=>v.toFixed(1)+'%', good:'down', sameDay:true},
+    {label:'🎓 Обучения через CC', pTotal:P.training_total, pDay:P.training_per_day, cTotal:C.training_total, cDay:C.training_per_day, fmt:v=>v.toLocaleString('ru'), good:'down'},
+    {label:'🤝 Партнёрские тикеты', pTotal:P.partner_tickets, pDay:P.partner_per_day, cTotal:C.partner_tickets, cDay:C.partner_per_day, fmt:v=>v.toLocaleString('ru'), good:'down'},
+    {label:'Затраты, млн сум', pTotal:P.cost/1e6, pDay:P.cost_per_day/1e6, cTotal:C.cost/1e6, cDay:C.cost_per_day/1e6, fmt:v=>v.toFixed(2), good:'down'},
+  ];
+  document.getElementById('summaryBody').innerHTML = rows.map(r => {
+    let cellPDay, cellCDay, dHtml;
+    if (r.raw) {
+      cellPDay = r.pDay; cellCDay = r.cDay;
+      dHtml = `<span style="color:#94A3B8">—</span>`;
+    } else {
+      cellPDay = r.fmt(r.pDay);
+      cellCDay = r.fmt(r.cDay);
+      const delta = r.cDay - r.pDay;
+      const pct = r.pDay > 0 ? (delta/r.pDay)*100 : 0;
+      const isGood = r.good === 'up' ? delta > 0 : delta < 0;
+      const flat = Math.abs(pct) < 1;
+      const dColor = flat ? '#94A3B8' : (isGood ? '#10B981' : '#EF4444');
+      const arrow = delta > 0 ? '↑' : (delta < 0 ? '↓' : '→');
+      dHtml = `<span style="color:${dColor};font-weight:700;font-family:var(--mono);font-size:11px">${arrow} ${pct>0?'+':''}${pct.toFixed(1)}%</span>`;
+    }
+    return `<tr>
+      <td style="font-weight:600;color:var(--t1);font-size:11px">${r.label}</td>
+      <td style="font-family:var(--mono);text-align:right;color:var(--t2);font-size:11px">${r.sameDay?'—':r.fmt(r.pTotal)}</td>
+      <td style="font-family:var(--mono);text-align:right;color:var(--t1);font-size:11px">${cellPDay}</td>
+      <td style="font-family:var(--mono);text-align:right;color:var(--t2);font-size:11px">${r.sameDay?'—':r.fmt(r.cTotal)}</td>
+      <td style="font-family:var(--mono);text-align:right;color:#8B5CF6;font-weight:700;font-size:11px">${cellCDay}</td>
+      <td style="text-align:right;padding-right:6px">${dHtml}</td>
+    </tr>`;
+  }).join('');
+
+  // ── 09 Insights ─────────────────────────────────────────────────────────────
+  const ins = [
+    {icon:'📈', color:'#3B82F6', bg:'rgba(59,130,246,0.06)', border:'rgba(59,130,246,0.2)',
+     title:`Поток вырос на +${D.tickets_per_day.pct.toFixed(1)}% /день`,
+     body:`Прошлые 2 нед: <b>${P.tickets_per_day.toFixed(0)}</b> тикетов/день · Текущая: <b>${C.tickets_per_day.toFixed(0)}</b>. Главный драйвер — чаты (+${D.chats_per_day.pct.toFixed(1)}%). Звонки выросли умеренно (+${D.calls_per_day.pct.toFixed(1)}%), что подтверждает сдвиг канала.`,
+     metric:`Δ тикеты/день: +${(C.tickets_per_day-P.tickets_per_day).toFixed(0)} (+${D.tickets_per_day.pct.toFixed(1)}%)`},
+    {icon:'💬', color:'#8B5CF6', bg:'rgba(139,92,246,0.06)', border:'rgba(139,92,246,0.2)',
+     title:`Чатов стало в 1.4× больше`,
+     body:`Чатов в день: <b>${P.chats_per_day.toFixed(0)}</b> → <b>${C.chats_per_day.toFixed(0)}</b> (+${D.chats_per_day.pct.toFixed(1)}%). Чаты впервые в среднем превысили звонки (${C.chats_per_day.toFixed(0)} vs ${C.calls_per_day.toFixed(0)}). Это хороший знак: дешевле обслуживать, операторы параллелятся.`,
+     metric:`Δ чаты/день: +${(C.chats_per_day-P.chats_per_day).toFixed(0)} (+${D.chats_per_day.pct.toFixed(1)}%)`},
+    {icon:'⚠️', color:'#EF4444', bg:'rgba(239,68,68,0.06)', border:'rgba(239,68,68,0.2)',
+     title:`Повторные обращения выросли с ${P.repeat_pct}% до ${C.repeat_pct}%`,
+     body:`Повторные обращения — клиент возвращается с тем же вопросом, <b>FCR-маркер</b>: первое касание не решило проблему. Рост +${D.repeat_pct.abs.toFixed(1)}пп. Возможные причины: массовый сбой 12.05–13.05, новые операторы с 05.05, рост входящего потока.`,
+     metric:`Δ повторные: +${D.repeat_pct.abs.toFixed(1)}пп (${D.repeat_pct.pct>0?'+':''}${D.repeat_pct.pct.toFixed(1)}%)`},
+    {icon:'⚡', color:'#10B981', bg:'rgba(16,185,129,0.06)', border:'rgba(16,185,129,0.2)',
+     title:`AFRT улучшился: ${P.afrt} → ${C.afrt}`,
+     body:`Среднее время первого ответа: <b>${P.afrt}</b> → <b>${C.afrt}</b> (${D.afrt_raw.abs.toFixed(2)} мин, ${D.afrt_raw.pct.toFixed(1)}%). Операторы стали отвечать быстрее даже при росте нагрузки.`,
+     metric:`Δ AFRT: ${D.afrt_raw.pct.toFixed(1)}%`},
+    {icon:'🎓', color:'#F59E0B', bg:'rgba(245,158,11,0.06)', border:'rgba(245,158,11,0.2)',
+     title:`Обучения через CC: ${P.training_per_day.toFixed(1)}/день → ${C.training_per_day.toFixed(1)}/день`,
+     body:`CC всё ещё закрывает <b>${C.training_per_day.toFixed(0)} обучений в день</b> вместо CS. За текущую неделю — ${C.training_total} обучений (${(C.training_total*7561/1e6).toFixed(2)} млн сум). Большинство — частичные (${C.training_partial}/${C.training_total}). Полных — всего ${C.training_full}.`,
+     metric:`Δ обучения/день: ${D.training_per_day.pct>0?'+':''}${D.training_per_day.pct.toFixed(1)}%`},
+    {icon:'🤝', color:'#06B6D4', bg:'rgba(6,182,212,0.06)', border:'rgba(6,182,212,0.2)',
+     title:`Партнёрские тикеты: ${P.partner_per_day.toFixed(1)}/день → ${C.partner_per_day.toFixed(1)}/день`,
+     body:`Партнёры — ${C.partner_pct}% всего потока CC. Топ-причина — "${P.partner_top_topics[0][0]}" (${(P.partner_top_topics[0][1]/P.partner_tickets*100).toFixed(1)}% от их обращений). Категория "ПАРТНЁР" (без указания) — самая большая, это сигнал: либо неправильная маршрутизация, либо клиенты идут напрямую в CC мимо партнёра.`,
+     metric:`Δ партнёры/день: ${D.partner_per_day.pct>0?'+':''}${D.partner_per_day.pct.toFixed(1)}%`},
+    {icon:'🟢', color:'#10B981', bg:'rgba(16,185,129,0.06)', border:'rgba(16,185,129,0.2)',
+     title:`LCR удержали ниже 6.3%`,
+     body:`Несмотря на рост входящих звонков, LCR держится: ${P.lcr.toFixed(2)}% → ${C.lcr.toFixed(2)}%. Цель <3.5% не выполнена, но и не ухудшилась. День 13.05 был сложным (LCR 11.4%, DDoS на OnlinePBX).`,
+     metric:`Δ LCR: ${D.lcr.abs.toFixed(2)}пп`},
+    {icon:'📊', color:'#8B5CF6', bg:'rgba(139,92,246,0.06)', border:'rgba(139,92,246,0.2)',
+     title:`SLA стабилен · ${P.sla_pct}% → ${C.sla_pct}%`,
+     body:`Удержали SLA в районе 84% при +${D.tickets_per_day.pct.toFixed(1)}% нагрузки. Цель 85% близка. CSAT тоже почти неизменен (${P.csat_pct}% → ${C.csat_pct}%).`,
+     metric:`Δ SLA: +${D.sla_pct.abs.toFixed(1)}пп · Δ CSAT: ${D.csat_pct.abs.toFixed(1)}пп`},
+  ];
+  document.getElementById('dynamicsInsights').innerHTML = ins.map(i => `
+    <div style="background:${i.bg};border:1px solid ${i.border};border-left:3px solid ${i.color};border-radius:12px;padding:16px 18px">
       <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
-        <span style="font-size:16px">${ins.icon}</span>
-        <span style="font-size:13px;font-weight:700;color:var(--t1)">${ins.title}</span>
+        <span style="font-size:16px">${i.icon}</span>
+        <span style="font-size:13px;font-weight:700;color:var(--t1)">${i.title}</span>
       </div>
-      <p style="font-size:11px;color:var(--t2);line-height:1.65;margin-bottom:10px">${ins.body}</p>
-      <div style="font-size:10px;font-family:var(--mono);color:${ins.color};background:${ins.bg};border:1px solid ${ins.border};padding:4px 10px;border-radius:5px">📊 ${ins.metric}</div>
+      <p style="font-size:11px;color:var(--t2);line-height:1.65;margin-bottom:10px">${i.body}</p>
+      <div style="font-size:10px;font-family:var(--mono);color:${i.color};background:${i.bg};border:1px solid ${i.border};padding:4px 10px;border-radius:5px;display:inline-block">📊 ${i.metric}</div>
     </div>`).join('');
 </script>
-
-<script>
-// Dynamically update CPT references in static text based on selected month
-(function(){
-  if (typeof BILLZ_DATA === 'undefined') return;
-  const M = BILLZ_DATA.monthly || (BILLZ_DATA.months && BILLZ_DATA.months.apr && BILLZ_DATA.months.apr.monthly);
-  if (!M || !M.cpt) return;
-  const cpt = M.cpt;
-  const cptStr = cpt.toLocaleString('ru').replace(/,/g,' ');
-  // Walk all text nodes and replace 7 561 / 9 865 with current cpt
-  const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null);
-  const nodes = [];
-  let n;
-  while (n = walker.nextNode()) {
-    if (n.nodeValue && /\b(7\s?561|9\s?865)\b/.test(n.nodeValue)) {
-      nodes.push(n);
-    }
-  }
-  nodes.forEach(n => {
-    n.nodeValue = n.nodeValue.replace(/\b7\s?561\b/g, cptStr).replace(/\b9\s?865\b/g, cptStr);
-  });
-})();
-</script>
-
 </body>
 </html>

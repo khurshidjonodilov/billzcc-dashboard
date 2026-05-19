@@ -4,11 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>BILLZ CC · Операторы</title>
-<link rel="stylesheet" href="shared.css?v=36">
+<link rel="stylesheet" href="shared.css?v=38">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 <script src="data.js"></script>
-<script src="shared.js?v=36"></script>
+<script src="shared.js?v=38"></script>
 <style>
 .formula-bar {
   margin-top: 12px !important;
@@ -78,7 +78,7 @@
       <div class="cost-ey">ФОТ ОЦЕНКА (АПРЕЛЬ)</div>
       <div class="cost-n" id="totalCost">—</div>
       <div class="cost-d">сум · тикеты × CPT 7 561</div>
-      <div class="live"><span class="live-dot"></span>данные актуальны · 03.05.2026</div>
+      <div class="live"><span class="live-dot"></span>данные актуальны · 17.05.2026</div>
     </div>
   </div>
 
@@ -233,7 +233,7 @@
   <div class="ftr">
     <div class="fl">BILLZ · CC Intelligence · Omnidesk CRM</div>
     <div class="fr">
-      <span>📅 Обновлено: <strong style="color:var(--t2)">03.05.2026</strong></span>
+      <span>📅 Обновлено: <strong style="color:var(--t2)">17.05.2026</strong></span>
       <span>Операторы · <span class="month-text" data-month-label>Апрель 2026</span></span>
     </div>
   </div>
@@ -248,6 +248,9 @@ let charts = {};
 
 const PERIODS = {
   monthly: { label: 'Апрель 2026 (полный)', ops: M.operators },
+  week_20: { label: 'Нед 20 · 11–17 мая',  ops: W.week_20?.operators || [] },
+  week_19: { label: 'Нед 19 · 04–10 мая',  ops: W.week_19?.operators || [] },
+  week_18: { label: 'Нед 18 · 27.04–03.05', ops: W.week_18?.operators || [] },
   week_17: { label: 'Нед 17 · 20–26 апр',  ops: W.week_17?.operators || [] },
   week_16: { label: 'Нед 16 · 13–19 апр',  ops: W.week_16?.operators || [] },
   week_15: { label: 'Нед 15 · 6–12 апр',   ops: W.week_15?.operators || [] },

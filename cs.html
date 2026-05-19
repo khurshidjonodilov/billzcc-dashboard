@@ -136,6 +136,10 @@
   </div>
 
   <div class="metric-band" id="metricBand"></div>
+  
+  <!-- Full CS stats banner (visible when month has full data) -->
+  <div id="csFullStats" style="display:none;margin-bottom:16px"></div>
+  
   <div class="kpi-grid" id="kpiGrid"></div>
 
   <div class="sec"><div class="sec-num">01</div><div class="sec-title">Выводы и рекомендации</div><div class="sec-line"></div></div>
@@ -150,6 +154,36 @@
     <div class="card">
       <div class="card-hd"><div class="card-title">Частичное vs Полное обучение</div></div>
       <div style="position:relative;height:200px"><canvas id="typeChart"></canvas></div>
+    </div>
+  </div>
+
+  <!-- New section: Full CS manager stats (shows when month has full data) -->
+  <div id="csFullSection" style="display:none">
+    <div class="sec"><div class="sec-num">03A</div><div class="sec-title">Полная нагрузка по CS-менеджерам · все тикеты</div><div class="sec-line"></div></div>
+    <div class="row one">
+      <div class="card">
+        <div class="card-hd">
+          <div class="card-title">CS-менеджеры — все обращения клиентов в CC</div>
+          <div class="card-note">не только обучения · разбивка по нежел./повторным</div>
+        </div>
+        <div style="overflow-x:auto">
+          <table class="tbl" style="font-size:11px">
+            <thead><tr>
+              <th>#</th>
+              <th>CS Менеджер</th>
+              <th>Тикеты</th>
+              <th>Нежел.%</th>
+              <th>Повтор.%</th>
+              <th>Обуч.</th>
+              <th>Магаз.</th>
+              <th>Мед.закр (ч)</th>
+              <th>Топ-тема</th>
+              <th>Затраты</th>
+            </tr></thead>
+            <tbody id="csFullTable"></tbody>
+          </table>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -410,6 +444,86 @@ document.getElementById('repeatBlock').innerHTML = `
     <div class="al-label">Разграничить роли: обучение vs поддержка</div>
     <div class="al-txt">Обучение по модулям — CS. Технические ошибки и баги — CC. Частичные обучения через CC должны фиксироваться как пробел онбординга и инициировать запрос к закреплённому КС-менеджеру клиента.</div>
   </div></div>`;
+
+/* ── Full CS stats (when months.may.cs has total_cs_tickets) ────────────── */
+if (CS.total_cs_tickets) {
+  const totalTix = CS.total_cs_tickets;
+  const totalCost = CS.total_cs_cost;
+  const undesiredPct = CS.undesired_pct_avg || 0;
+  const repeatPct = CS.repeat_pct_avg || 0;
+  
+  // Show the banner
+  const banner = document.getElementById('csFullStats');
+  banner.style.display = '';
+  banner.innerHTML = `
+    <div style="background:linear-gradient(135deg,rgba(59,130,246,0.10),rgba(124,58,237,0.08));border:1px solid rgba(96,165,250,0.3);border-radius:12px;padding:18px 22px">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
+        <span style="font-size:18px">📊</span>
+        <span style="font-size:14px;font-weight:700;color:var(--blue2)">Полная статистика CS — ${CS.period || 'выбранный период'}</span>
+        <span style="font-size:10px;color:var(--text4);font-family:var(--mono);background:rgba(59,130,246,0.10);padding:2px 8px;border-radius:4px;border:1px solid rgba(96,165,250,0.2)">все тикеты с CS-менеджером</span>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:18px">
+        <div>
+          <div style="font-size:9px;letter-spacing:.12em;color:var(--text4);text-transform:uppercase;margin-bottom:4px">Всего CS-тикетов</div>
+          <div style="font-size:22px;font-weight:800;color:#60A5FA;line-height:1">${fmt.num(totalTix)}</div>
+          <div style="font-size:10px;color:var(--text3);margin-top:3px">${CS.by_ks_manager.length} менеджеров</div>
+        </div>
+        <div>
+          <div style="font-size:9px;letter-spacing:.12em;color:var(--text4);text-transform:uppercase;margin-bottom:4px">Затраты CC</div>
+          <div style="font-size:22px;font-weight:800;color:#F87171;line-height:1">${(totalCost/1e6).toFixed(1)} млн</div>
+          <div style="font-size:10px;color:var(--text3);margin-top:3px">${fmt.num(totalTix)} × 7 561 сум</div>
+        </div>
+        <div>
+          <div style="font-size:9px;letter-spacing:.12em;color:var(--text4);text-transform:uppercase;margin-bottom:4px">Нежелательные</div>
+          <div style="font-size:22px;font-weight:800;color:${undesiredPct>50?'#F87171':'#FCD34D'};line-height:1">${undesiredPct.toFixed(1)}%</div>
+          <div style="font-size:10px;color:var(--text3);margin-top:3px">${fmt.num(CS.undesired_total||0)} тикетов</div>
+        </div>
+        <div>
+          <div style="font-size:9px;letter-spacing:.12em;color:var(--text4);text-transform:uppercase;margin-bottom:4px">Повторные</div>
+          <div style="font-size:22px;font-weight:800;color:${repeatPct>15?'#F87171':'#FCD34D'};line-height:1">${repeatPct.toFixed(1)}%</div>
+          <div style="font-size:10px;color:var(--text3);margin-top:3px">${fmt.num(CS.repeat_total||0)} обращений</div>
+        </div>
+        <div>
+          <div style="font-size:9px;letter-spacing:.12em;color:var(--text4);text-transform:uppercase;margin-bottom:4px">Обучения (часть)</div>
+          <div style="font-size:22px;font-weight:800;color:#C4A4FF;line-height:1">${fmt.num(CS.total_train_tickets||0)}</div>
+          <div style="font-size:10px;color:var(--text3);margin-top:3px">${((CS.total_train_tickets||0)/totalTix*100).toFixed(1)}% от CS-объёма</div>
+        </div>
+      </div>
+    </div>
+  `;
+  
+  // Populate full table
+  const section = document.getElementById('csFullSection');
+  if (section) {
+    section.style.display = '';
+    const tbody = document.getElementById('csFullTable');
+    if (tbody) {
+      tbody.innerHTML = CS.by_ks_manager.map((k, i) => {
+        const upct = k.undesired_pct || 0;
+        const rpct = k.repeat_pct || 0;
+        const uClass = upct > 60 ? 'bad' : upct > 40 ? 'warn' : 'ok';
+        const rClass = rpct > 15 ? 'bad' : rpct > 8 ? 'warn' : 'ok';
+        const badge = k.tag === 'big_base'
+          ? '<span style="font-size:9px;padding:2px 6px;border-radius:4px;background:rgba(59,130,246,0.15);color:#60A5FA;margin-left:5px;font-weight:600;border:1px solid rgba(59,130,246,0.3)">🔵</span>'
+          : k.tag === 'red_flag'
+          ? '<span style="font-size:9px;padding:2px 6px;border-radius:4px;background:rgba(239,68,68,0.15);color:#F87171;margin-left:5px;font-weight:600;border:1px solid rgba(239,68,68,0.3)">🔴</span>'
+          : '';
+        return `<tr>
+          <td style="font-weight:700;color:var(--amber2)">${i+1}</td>
+          <td class="n-name" style="font-size:11px">${k.name}${badge}</td>
+          <td class="n-num">${fmt.num(k.tickets)}</td>
+          <td><span class="b ${uClass}">${upct.toFixed(1)}%</span></td>
+          <td><span class="b ${rClass}">${rpct.toFixed(1)}%</span></td>
+          <td style="color:var(--text2);font-family:var(--mono);font-size:10px">${k.training_total || 0}</td>
+          <td style="color:var(--text3);font-family:var(--mono);font-size:10px">${k.stores_count || 0}</td>
+          <td style="color:var(--text3);font-family:var(--mono);font-size:10px">${k.med_close || 0}</td>
+          <td style="font-size:10px;color:var(--text2);max-width:180px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="${k.top_topic || ''}">${k.top_topic || '—'}</td>
+          <td style="font-family:var(--mono);font-size:10px;color:var(--text3)">${fmt.mln(k.cost)}</td>
+        </tr>`;
+      }).join('');
+    }
+  }
+}
 </script>
 
 

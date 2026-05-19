@@ -2720,7 +2720,9 @@ const BILLZ_DATA = {
           "undesired": 25,
           "cost": 302440
         }
-      ]
+      ],
+      "massoviy_cnt": 120,
+      "no_massoviy": {}
     },
     "week_19": {
       "label": "Нед 19 · 04.05–10.05",
@@ -2985,7 +2987,9 @@ const BILLZ_DATA = {
           "undesired": 18,
           "cost": 317562
         }
-      ]
+      ],
+      "massoviy_cnt": 102,
+      "no_massoviy": {}
     },
     "week_20": {
       "label": "Нед 20 · 11–17 мая",
@@ -3016,113 +3020,123 @@ const BILLZ_DATA = {
       "operators": [
         {
           "name": "Анасхон",
-          "tickets": 81,
+          "tickets": 549,
           "avg_close": 7.54,
           "close_rate": 99.5,
           "rating_pct": 100.0,
           "rated": 9,
           "sla_pct": 100.0,
           "frt_sec": 50,
-          "cost": 612441
+          "cost": 4150989,
+          "_estimated_week": true
         },
         {
           "name": "Авазбек",
-          "tickets": 76,
+          "tickets": 515,
           "avg_close": 5.18,
           "close_rate": 99.5,
           "rating_pct": 100.0,
           "rated": 5,
           "sla_pct": 97.4,
           "frt_sec": 50,
-          "cost": 574636
+          "cost": 3893915,
+          "_estimated_week": true
         },
         {
           "name": "Атабек",
-          "tickets": 63,
+          "tickets": 427,
           "avg_close": 4.65,
           "close_rate": 99.5,
           "rating_pct": 50.0,
           "rated": 2,
           "sla_pct": 88.0,
           "frt_sec": 50,
-          "cost": 476343
+          "cost": 3228547,
+          "_estimated_week": true
         },
         {
           "name": "Нурилло",
-          "tickets": 57,
+          "tickets": 386,
           "avg_close": 10.77,
           "close_rate": 99.5,
           "rating_pct": 100.0,
           "rated": 4,
           "sla_pct": 95.0,
           "frt_sec": 50,
-          "cost": 430977
+          "cost": 2918546,
+          "_estimated_week": true
         },
         {
           "name": "Иззатбек",
-          "tickets": 56,
+          "tickets": 379,
           "avg_close": 3.88,
           "close_rate": 99.5,
           "rating_pct": 100.0,
           "rated": 2,
           "sla_pct": 81.8,
           "frt_sec": 50,
-          "cost": 423416
+          "cost": 2865619,
+          "_estimated_week": true
         },
         {
           "name": "Робия Р.",
-          "tickets": 47,
+          "tickets": 318,
           "avg_close": 25.86,
           "close_rate": 99.5,
           "rating_pct": 100.0,
           "rated": 4,
           "sla_pct": 72.7,
           "frt_sec": 50,
-          "cost": 355367
+          "cost": 2404398,
+          "_estimated_week": true
         },
         {
           "name": "Тожмухаммад",
-          "tickets": 44,
+          "tickets": 298,
           "avg_close": 14.47,
           "close_rate": 99.5,
           "rating_pct": 0,
           "rated": 0,
           "sla_pct": 87.5,
           "frt_sec": 50,
-          "cost": 332684
+          "cost": 2253178,
+          "_estimated_week": true
         },
         {
           "name": "Сардор Б.",
-          "tickets": 43,
+          "tickets": 291,
           "avg_close": 9.08,
           "close_rate": 99.5,
           "rating_pct": 66.7,
           "rated": 3,
           "sla_pct": 80.0,
           "frt_sec": 50,
-          "cost": 325123
+          "cost": 2200251,
+          "_estimated_week": true
         },
         {
           "name": "Севинч",
-          "tickets": 13,
+          "tickets": 88,
           "avg_close": 3.68,
           "close_rate": 99.5,
           "rating_pct": 100.0,
           "rated": 1,
           "sla_pct": 76.9,
           "frt_sec": 50,
-          "cost": 98293
+          "cost": 665368,
+          "_estimated_week": true
         },
         {
           "name": "Алиёр",
-          "tickets": 1,
+          "tickets": 7,
           "avg_close": 0,
           "close_rate": 99.5,
           "rating_pct": 0,
           "rated": 0,
           "sla_pct": 0,
           "frt_sec": 50,
-          "cost": 7561
+          "cost": 52927,
+          "_estimated_week": true
         }
       ],
       "undesired_pct": 50.2,
@@ -3190,7 +3204,10 @@ const BILLZ_DATA = {
           "Управление - Создание/Редактирвоание/Удаление сотрудника",
           47
         ]
-      ]
+      ],
+      "_ops_estimated": true,
+      "massoviy_cnt": 139,
+      "no_massoviy": {}
     }
   },
   "daily": {
@@ -44925,7 +44942,9 @@ const BILLZ_DATA = {
               "undesired": 25,
               "cost": 302440
             }
-          ]
+          ],
+          "massoviy_cnt": 120,
+          "no_massoviy": {}
         },
         "week_19": {
           "label": "Нед 19 · 04.05–10.05",
@@ -45190,7 +45209,9 @@ const BILLZ_DATA = {
               "undesired": 18,
               "cost": 317562
             }
-          ]
+          ],
+          "massoviy_cnt": 102,
+          "no_massoviy": {}
         },
         "week_20": {
           "label": "Нед 20 · 11–17 мая",
@@ -45221,113 +45242,123 @@ const BILLZ_DATA = {
           "operators": [
             {
               "name": "Анасхон",
-              "tickets": 81,
+              "tickets": 549,
               "avg_close": 7.54,
               "close_rate": 99.5,
               "rating_pct": 100.0,
               "rated": 9,
               "sla_pct": 100.0,
               "frt_sec": 50,
-              "cost": 612441
+              "cost": 4150989,
+              "_estimated_week": true
             },
             {
               "name": "Авазбек",
-              "tickets": 76,
+              "tickets": 515,
               "avg_close": 5.18,
               "close_rate": 99.5,
               "rating_pct": 100.0,
               "rated": 5,
               "sla_pct": 97.4,
               "frt_sec": 50,
-              "cost": 574636
+              "cost": 3893915,
+              "_estimated_week": true
             },
             {
               "name": "Атабек",
-              "tickets": 63,
+              "tickets": 427,
               "avg_close": 4.65,
               "close_rate": 99.5,
               "rating_pct": 50.0,
               "rated": 2,
               "sla_pct": 88.0,
               "frt_sec": 50,
-              "cost": 476343
+              "cost": 3228547,
+              "_estimated_week": true
             },
             {
               "name": "Нурилло",
-              "tickets": 57,
+              "tickets": 386,
               "avg_close": 10.77,
               "close_rate": 99.5,
               "rating_pct": 100.0,
               "rated": 4,
               "sla_pct": 95.0,
               "frt_sec": 50,
-              "cost": 430977
+              "cost": 2918546,
+              "_estimated_week": true
             },
             {
               "name": "Иззатбек",
-              "tickets": 56,
+              "tickets": 379,
               "avg_close": 3.88,
               "close_rate": 99.5,
               "rating_pct": 100.0,
               "rated": 2,
               "sla_pct": 81.8,
               "frt_sec": 50,
-              "cost": 423416
+              "cost": 2865619,
+              "_estimated_week": true
             },
             {
               "name": "Робия Р.",
-              "tickets": 47,
+              "tickets": 318,
               "avg_close": 25.86,
               "close_rate": 99.5,
               "rating_pct": 100.0,
               "rated": 4,
               "sla_pct": 72.7,
               "frt_sec": 50,
-              "cost": 355367
+              "cost": 2404398,
+              "_estimated_week": true
             },
             {
               "name": "Тожмухаммад",
-              "tickets": 44,
+              "tickets": 298,
               "avg_close": 14.47,
               "close_rate": 99.5,
               "rating_pct": 0,
               "rated": 0,
               "sla_pct": 87.5,
               "frt_sec": 50,
-              "cost": 332684
+              "cost": 2253178,
+              "_estimated_week": true
             },
             {
               "name": "Сардор Б.",
-              "tickets": 43,
+              "tickets": 291,
               "avg_close": 9.08,
               "close_rate": 99.5,
               "rating_pct": 66.7,
               "rated": 3,
               "sla_pct": 80.0,
               "frt_sec": 50,
-              "cost": 325123
+              "cost": 2200251,
+              "_estimated_week": true
             },
             {
               "name": "Севинч",
-              "tickets": 13,
+              "tickets": 88,
               "avg_close": 3.68,
               "close_rate": 99.5,
               "rating_pct": 100.0,
               "rated": 1,
               "sla_pct": 76.9,
               "frt_sec": 50,
-              "cost": 98293
+              "cost": 665368,
+              "_estimated_week": true
             },
             {
               "name": "Алиёр",
-              "tickets": 1,
+              "tickets": 7,
               "avg_close": 0,
               "close_rate": 99.5,
               "rating_pct": 0,
               "rated": 0,
               "sla_pct": 0,
               "frt_sec": 50,
-              "cost": 7561
+              "cost": 52927,
+              "_estimated_week": true
             }
           ],
           "undesired_pct": 50.2,
@@ -45395,7 +45426,10 @@ const BILLZ_DATA = {
               "Управление - Создание/Редактирвоание/Удаление сотрудника",
               47
             ]
-          ]
+          ],
+          "_ops_estimated": true,
+          "massoviy_cnt": 139,
+          "no_massoviy": {}
         }
       },
       "daily": {

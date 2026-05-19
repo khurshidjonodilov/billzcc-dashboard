@@ -262,6 +262,7 @@
 </main>
 
 <script>
+(function() {
   const PC = BILLZ_DATA.period_compare;
   const P = PC.prior, C = PC.current, D = PC.delta;
   const dailyMay = BILLZ_DATA.months.may.daily;
@@ -604,6 +605,7 @@
       <p style="font-size:11px;color:var(--t2);line-height:1.65;margin-bottom:10px">${i.body}</p>
       <div style="font-size:10px;font-family:var(--mono);color:${i.color};background:${i.bg};border:1px solid ${i.border};padding:4px 10px;border-radius:5px;display:inline-block">📊 ${i.metric}</div>
     </div>`).join('');
+})();
 </script>
 </body>
 </html>

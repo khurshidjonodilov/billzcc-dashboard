@@ -4,11 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>BILLZ CC · Ежемесячно</title>
-<link rel="stylesheet" href="shared.css?v=38">
+<link rel="stylesheet" href="shared.css?v=40">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
-<script src="data.js?v=38"></script>
-<script src="shared.js?v=38"></script>
+<script src="data.js?v=40"></script>
+<script src="shared.js?v=40"></script>
 <style>
 .formula-bar {
   margin-top: 12px !important;
@@ -45,6 +45,7 @@
   <a href="weekly.html" class="nav-link">Еженедельно</a>
   <a href="quarterly.html" class="nav-link">Квартал</a>
   <a href="cs.html" class="nav-link">CS Анализ</a>
+  <a href="partners.html" class="nav-link">Партнёры</a>
   <a href="daily.html" class="nav-link">Ежедневно</a>
   <a href="operators.html" class="nav-link">Операторы</a>
   <a href="trends.html" class="nav-link">Динамика</a>
@@ -79,7 +80,7 @@
       <div class="cost-ey">ЗАТРАТЫ ЗА МЕСЯЦ</div>
       <div class="cost-n" id="costVal">—</div>
       <div class="cost-d">сум · тикеты × CPT</div>
-      <div class="live"><span class="live-dot"></span>данные актуальны · 19.05.2026</div>
+      <div class="live"><span class="live-dot"></span>данные актуальны · 24.05.2026</div>
     </div>
   </div>
 
@@ -204,7 +205,7 @@
   <div class="ftr">
     <div class="fl">BILLZ · CC Intelligence · Omnidesk CRM · без тикетов Дильшода</div>
     <div class="fr">
-      <span>📅 Обновлено: <strong style="color:var(--t2)">19.05.2026</strong></span>
+      <span>📅 Обновлено: <strong style="color:var(--t2)">24.05.2026</strong></span>
       <span>Ежемесячно · <span class="month-text" data-month-label>Апрель 2026</span></span>
     </div>
   </div>
@@ -524,8 +525,8 @@ function exportCSExcel() {
       ['SLA не соблюдён', M.sla_not_met, '100 − SLA %'],
       ['AFRT', M.afrt, 'Среднее время первого ответа'],
       ['Повторные %', M.repeat_pct, 'Повторные / все × 100'],
-      ['Клиентов (магазинов)', STORES, 'На 19.05.2026'],
-      ['Пользователей', USERS, 'На 19.05.2026'],
+      ['Клиентов (магазинов)', STORES, 'На 24.05.2026'],
+      ['Пользователей', USERS, 'На 24.05.2026'],
       ['Тик/магазин', M.tpc, 'Тикеты / магазины'],
       ['Тик/пользователь', M.tpu, 'Тикеты / пользователи'],
       ['Обучений через CC', M.training_tickets||401, 'Тикеты с меткой "Обучени*"'],
@@ -683,7 +684,7 @@ function exportCSExcel() {
           <div style="font-size:10px;color:var(--t3)">по мере поступления<br>обращений в мае</div>
           <div style="margin-top:12px;font-size:10px;font-family:monospace;
             color:var(--blue2);background:rgba(59,130,246,0.08);
-            padding:5px 10px;border-radius:6px">Обновлено: 19.05.2026</div>
+            padding:5px 10px;border-radius:6px">Обновлено: 24.05.2026</div>
         </div>
       </div>`;
   }

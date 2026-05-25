@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BILLZ CC · Анализ Партнёров</title>
+<link rel="stylesheet" href="shared.css?v=40">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<script src="data.js?v=40"></script>
+<script src="shared.js?v=40"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<style>
+.partner-insight{background:rgba(6,182,212,0.07);border:1px solid rgba(6,182,212,0.22);border-radius:10px;padding:16px 18px;display:flex;gap:14px;align-items:flex-start;margin-bottom:8px;transition:border-color .2s}
+.partner-insight:hover{border-color:rgba(6,182,212,0.4)}
+.partner-insight.rec{background:rgba(16,185,129,0.06);border-color:rgba(52,211,153,0.2)}
+.partner-insight.warning{background:rgba(245,158,11,0.07);border-color:rgba(252,211,77,0.25)}
+.partner-insight-icon{font-size:22px;flex-shrink:0;margin-top:1px;line-height:1}
+.partner-insight-title{font-size:13px;font-weight:700;color:#fff;margin-bottom:5px}
+.partner-insight.rec .partner-insight-title{color:var(--green2)}
+.partner-insight.warning .partner-insight-title{color:var(--amber2)}
+.partner-insight-text{font-size:12px;color:var(--text2);line-height:1.65}
+.metric-band{background:var(--surface);border:1px solid var(--br2);border-radius:10px;padding:20px 24px;display:grid;grid-template-columns:repeat(5,1fr);gap:20px;margin-bottom:10px}
+.metric-band-item{text-align:center}
+.metric-band-label{font-family:var(--mono);font-size:9px;letter-spacing:.15em;color:var(--text4);text-transform:uppercase;margin-bottom:6px}
+.metric-band-val{font-size:24px;font-weight:800;line-height:1;margin-bottom:3px}
+.metric-band-sub{font-size:10px;color:var(--text3)}
+.formula-bar{margin-top:12px!important;padding:9px 14px!important;background:rgba(6,182,212,0.10)!important;border:1px solid rgba(6,182,212,0.25)!important;border-left:3px solid #06B6D4!important;border-radius:6px!important;font-family:'JetBrains Mono',monospace!important;font-size:10px!important;color:#67E8F9!important;line-height:1.7!important}
+.formula-bar .f-key{color:#22D3EE!important;font-weight:700!important}
+.formula-bar .f-val{color:#34D399!important;font-weight:600!important}
+.card-formula{font-family:'JetBrains Mono',monospace!important;font-size:10px!important;color:#67E8F9!important;background:rgba(6,182,212,0.10)!important;border:1px solid rgba(6,182,212,0.20)!important;border-left:3px solid #06B6D4!important;border-radius:6px!important;padding:9px 13px!important;margin-top:11px!important;line-height:1.7!important}
+</style>
+</head>
+<body>
+<nav class="top-nav">
+  <div class="nav-brand"><div class="nav-brand-dot">B</div>BILLZ · CC</div>
+  <a href="index.html" class="nav-link">Ежемесячно</a>
+  <a href="weekly.html" class="nav-link">Еженедельно</a>
+  <a href="quarterly.html" class="nav-link">Квартал</a>
+  <a href="cs.html" class="nav-link">CS Анализ</a>
+  <a href="partners.html" class="nav-link active">Партнёры</a>
+  <a href="daily.html" class="nav-link">Ежедневно</a>
+  <a href="operators.html" class="nav-link">Операторы</a>
+  <a href="trends.html" class="nav-link">Динамика</a>
+  <a href="live.html" class="nav-link" style="color:#10B981">🟢 Live</a>
+</nav>
+
+<main class="container">
+  <div class="phdr" style="margin-bottom:20px;padding:22px 26px;background:linear-gradient(135deg,rgba(6,182,212,0.10),rgba(8,145,178,0.06));border:1px solid rgba(34,211,238,0.25);border-radius:14px">
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap">
+      <div>
+        <div style="font-family:var(--mono);font-size:10px;letter-spacing:.18em;color:#67E8F9;text-transform:uppercase;margin-bottom:5px">BILLZ · CC INTELLIGENCE · ПАРТНЁРСКАЯ АНАЛИТИКА</div>
+        <div style="font-size:32px;font-weight:800;color:#fff;margin-bottom:6px"><span style="background:linear-gradient(135deg,#22D3EE,#06B6D4);-webkit-background-clip:text;-webkit-text-fill-color:transparent">🤝 Партнёры</span></div>
+        <div id="phdrSub" style="font-size:12px;color:var(--text3)">Май 2026 · Обращения от партнёрских клиентов</div>
+      </div>
+      <div style="text-align:right">
+        <div style="font-family:var(--mono);font-size:10px;letter-spacing:.15em;color:var(--text4);text-transform:uppercase;margin-bottom:5px">ЗАТРАТЫ НА ПАРТНЁРСКИЕ</div>
+        <div id="phdrCost" style="font-size:28px;font-weight:800;background:linear-gradient(135deg,#F87171,#EF4444);-webkit-background-clip:text;-webkit-text-fill-color:transparent;line-height:1">— млн</div>
+        <div style="font-size:10px;color:var(--text3);margin-top:3px">сум · 1–24 мая</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="metric-band" id="metricBand"></div>
+
+  <div class="sec"><div class="sec-num">01</div><div class="sec-title">Партнёры · полная разбивка по обращениям</div><div class="sec-line"></div></div>
+  <div class="row one">
+    <div class="card">
+      <div class="card-hd">
+        <div class="card-title">Партнёрские менеджеры · нагрузка на CC</div>
+        <div class="card-note">все тикеты с partner-привязкой · сортировка по объёму</div>
+      </div>
+      <div style="overflow-x:auto">
+        <table class="tbl" style="font-size:11px">
+          <thead><tr>
+            <th>#</th>
+            <th>Партнёр</th>
+            <th>Тикеты</th>
+            <th>Нежел.%</th>
+            <th>Повтор.%</th>
+            <th>Обуч.</th>
+            <th>Магаз.</th>
+            <th>Мед.закр (ч)</th>
+            <th>Топ-тема</th>
+            <th>Затраты</th>
+          </tr></thead>
+          <tbody id="partnersTable"></tbody>
+        </table>
+      </div>
+      <div class="card-formula">📐 Тикет = обращение в CC от клиента партнёра · % нежел = нежелательные / всего × 100 · Затраты = тикеты × 7 561 сум</div>
+    </div>
+  </div>
+
+  <div class="sec"><div class="sec-num">02</div><div class="sec-title">Темы и метки партнёрских обращений</div><div class="sec-line"></div></div>
+  <div class="row two">
+    <div class="card">
+      <div class="card-hd"><div class="card-title">Топ-15 меток</div><div class="card-note">первая метка тикета</div></div>
+      <div style="overflow-x:auto">
+        <table class="tbl" style="font-size:11px">
+          <thead><tr>
+            <th>#</th><th>Метка</th><th>Тип</th><th>Тикеты</th><th>Нежел.</th><th>Затраты</th>
+          </tr></thead>
+          <tbody id="pLabelsTable"></tbody>
+        </table>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-hd"><div class="card-title">Топ-12 тем</div><div class="card-note">по первому сегменту метки</div></div>
+      <div style="position:relative;height:380px"><canvas id="pTopicsChart"></canvas></div>
+    </div>
+  </div>
+
+  <div class="sec"><div class="sec-num">03</div><div class="sec-title">Магазины партнёров</div><div class="sec-line"></div></div>
+  <div class="row one">
+    <div class="card">
+      <div class="card-hd"><div class="card-title">Топ-20 магазинов от партнёров</div><div class="card-note">login_prefix · кто из партнёров ведёт</div></div>
+      <div style="overflow-x:auto">
+        <table class="tbl" style="font-size:11px">
+          <thead><tr>
+            <th>#</th><th>Магазин</th><th>Партнёр</th><th>Тикеты</th><th>Затраты</th>
+          </tr></thead>
+          <tbody id="pStoresTable"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec"><div class="sec-num">04</div><div class="sec-title">Сравнение: партнёры vs CS-менеджеры</div><div class="sec-line"></div></div>
+  <div class="row two">
+    <div class="card">
+      <div class="card-hd"><div class="card-title">Объём обращений</div><div class="card-note">всего тикетов в CC</div></div>
+      <div style="position:relative;height:240px"><canvas id="pVsCsChart"></canvas></div>
+    </div>
+    <div class="card">
+      <div class="card-hd"><div class="card-title">Качество — % нежелательных</div><div class="card-note">из всех обращений</div></div>
+      <div style="position:relative;height:240px"><canvas id="pVsCsQualityChart"></canvas></div>
+    </div>
+  </div>
+
+  <div class="sec"><div class="sec-num">05</div><div class="sec-title">Инсайты и рекомендации</div><div class="sec-line"></div></div>
+  <div id="pInsights" style="display:flex;flex-direction:column;gap:10px;margin-bottom:24px"></div>
+
+  <footer class="fr">
+    <div>Данные: Omnidesk CRM · фильтр по полю «КС менеджер» = partner/партн.</div>
+    <span style="font-size:10px;color:var(--text4);font-family:var(--mono)">📅 Обновлено: <strong style="color:var(--text3)">24.05.2026</strong></span>
+  </footer>
+</main>
+
+<script>
+(function(){
+  if (typeof BILLZ_DATA === 'undefined') { console.error('BILLZ_DATA not loaded'); return; }
+  const P = BILLZ_DATA.partners;
+  if (!P) {
+    document.querySelector('main').innerHTML = '<div style="padding:60px 20px;text-align:center;color:var(--text3)"><div style="font-size:40px;margin-bottom:16px">🤝</div><div style="font-size:16px;font-weight:600;margin-bottom:8px">Данные партнёров отсутствуют для выбранного месяца</div><div style="font-size:12px">Переключитесь на «Май 2026» для просмотра.</div></div>';
+    return;
+  }
+
+  // Header period and cost
+  document.getElementById('phdrSub').textContent = `${P.period} · Обращения от партнёрских клиентов`;
+  document.getElementById('phdrCost').textContent = `${(P.total_partner_cost/1e6).toFixed(1)} млн`;
+
+  // Metric band
+  document.getElementById('metricBand').innerHTML = `
+    <div class="metric-band-item">
+      <div class="metric-band-label">Всего тикетов</div>
+      <div class="metric-band-val" style="color:#22D3EE">${P.total_partner_tickets.toLocaleString('ru')}</div>
+      <div class="metric-band-sub">${P.partner_share_pct}% всего потока</div>
+    </div>
+    <div class="metric-band-item">
+      <div class="metric-band-label">Партнёров</div>
+      <div class="metric-band-val" style="color:#A78BFA">${P.partners_count}</div>
+      <div class="metric-band-sub">активных в мае</div>
+    </div>
+    <div class="metric-band-item">
+      <div class="metric-band-label">Нежелательные</div>
+      <div class="metric-band-val" style="color:${P.undesired_pct_avg>50?'#F87171':'#FCD34D'}">${P.undesired_pct_avg}%</div>
+      <div class="metric-band-sub">${P.undesired_total.toLocaleString('ru')} тикетов</div>
+    </div>
+    <div class="metric-band-item">
+      <div class="metric-band-label">Повторные</div>
+      <div class="metric-band-val" style="color:${P.repeat_pct_avg>15?'#F87171':'#FCD34D'}">${P.repeat_pct_avg}%</div>
+      <div class="metric-band-sub">${P.repeat_total} обращений</div>
+    </div>
+    <div class="metric-band-item">
+      <div class="metric-band-label">Магазины</div>
+      <div class="metric-band-val" style="color:#34D399">${P.stores_count.toLocaleString('ru')}</div>
+      <div class="metric-band-sub">${P.tpc} тик/магаз</div>
+    </div>
+  `;
+
+  // Partners table
+  const ptable = document.getElementById('partnersTable');
+  ptable.innerHTML = P.by_partner.map((p, i) => {
+    const upct = p.undesired_pct || 0;
+    const rpct = p.repeat_pct || 0;
+    const uClass = upct > 60 ? 'bad' : upct > 40 ? 'warn' : 'ok';
+    const rClass = rpct > 15 ? 'bad' : rpct > 8 ? 'warn' : 'ok';
+    return `<tr>
+      <td style="font-weight:700;color:#67E8F9">${i+1}</td>
+      <td class="n-name" style="font-size:11px;color:#A5F3FC">${p.name}</td>
+      <td class="n-num">${(p.tickets||0).toLocaleString('ru')}</td>
+      <td><span class="b ${uClass}">${upct.toFixed(1)}%</span></td>
+      <td><span class="b ${rClass}">${rpct.toFixed(1)}%</span></td>
+      <td style="color:var(--text2);font-family:var(--mono);font-size:10px">${p.training_total||0}</td>
+      <td style="color:var(--text3);font-family:var(--mono);font-size:10px">${p.stores_count||0}</td>
+      <td style="color:var(--text3);font-family:var(--mono);font-size:10px">${p.med_close||0}</td>
+      <td style="font-size:10px;color:var(--text2);max-width:200px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="${p.top_topic||''}">${p.top_topic||'—'}</td>
+      <td style="font-family:var(--mono);font-size:10px;color:var(--text3)">${fmt.mln(p.cost||0)}</td>
+    </tr>`;
+  }).join('');
+
+  // Labels table
+  const ltable = document.getElementById('pLabelsTable');
+  ltable.innerHTML = P.top_labels.slice(0, 15).map((l, i) => {
+    const typeColor = l.type === 'Полное' ? '#A78BFA' : l.type === 'Частичное' ? '#FCD34D' : '#94A3B8';
+    return `<tr>
+      <td style="color:#67E8F9;font-weight:700">${i+1}</td>
+      <td style="font-size:11px;color:var(--text)">${l.name}</td>
+      <td><span style="font-size:10px;font-weight:600;padding:2px 7px;border-radius:4px;background:${typeColor}15;color:${typeColor}">${l.type}</span></td>
+      <td class="n-num">${l.tickets}</td>
+      <td style="color:var(--red2);font-family:var(--mono);font-size:10px">${l.undesired}</td>
+      <td style="font-family:var(--mono);font-size:10px;color:var(--text3)">${fmt.mln(l.cost)}</td>
+    </tr>`;
+  }).join('');
+
+  // Topics chart
+  const tCtx = document.getElementById('pTopicsChart').getContext('2d');
+  const topics = P.top_topics.slice(0, 12);
+  new Chart(tCtx, {
+    type: 'bar',
+    data: {
+      labels: topics.map(t => t.name.length > 40 ? t.name.slice(0,38)+'…' : t.name),
+      datasets: [{
+        label: 'Тикеты', data: topics.map(t => t.tickets),
+        backgroundColor: 'rgba(6,182,212,0.65)', borderColor: '#06B6D4', borderWidth: 1.5, borderRadius: 6
+      }]
+    },
+    options: {
+      indexAxis: 'y', responsive: true, maintainAspectRatio: false,
+      plugins: { legend: { display: false } },
+      scales: { x: { ticks: { color: '#94A3B8' }, grid: { color: 'rgba(148,163,184,0.1)' } },
+                y: { ticks: { color: '#CBD5E1', font: { size: 10 } }, grid: { display: false } } }
+    }
+  });
+
+  // Stores table
+  const stable = document.getElementById('pStoresTable');
+  stable.innerHTML = P.by_store.map((s, i) => `
+    <tr>
+      <td style="color:#67E8F9;font-weight:700">${i+1}</td>
+      <td style="font-weight:600;color:var(--text);font-size:11px">${s.name}</td>
+      <td style="color:#A5F3FC;font-size:11px">${s.partner||'—'}</td>
+      <td class="n-num">${s.tickets}</td>
+      <td style="font-family:var(--mono);font-size:10px;color:var(--text3)">${fmt.mln(s.cost)}</td>
+    </tr>`).join('');
+
+  // Comparison charts
+  const CS = BILLZ_DATA.cs;
+  const csTickets = CS?.total_cs_tickets || 0;
+  const csUndPct = CS?.undesired_pct_avg || 0;
+
+  const vCtx = document.getElementById('pVsCsChart').getContext('2d');
+  new Chart(vCtx, {
+    type: 'doughnut',
+    data: {
+      labels: ['CS-менеджеры', 'Партнёры', 'Без привязки'],
+      datasets: [{
+        data: [csTickets, P.total_partner_tickets, Math.max(0, BILLZ_DATA.monthly.tickets - csTickets - P.total_partner_tickets)],
+        backgroundColor: ['rgba(139,92,246,0.7)', 'rgba(6,182,212,0.7)', 'rgba(148,163,184,0.4)'],
+        borderColor: ['#8B5CF6', '#06B6D4', '#94A3B8'], borderWidth: 2
+      }]
+    },
+    options: { responsive: true, maintainAspectRatio: false,
+      plugins: { legend: { position: 'bottom', labels: { color: '#CBD5E1', font: { size: 11 } } } } }
+  });
+
+  const qCtx = document.getElementById('pVsCsQualityChart').getContext('2d');
+  new Chart(qCtx, {
+    type: 'bar',
+    data: {
+      labels: ['CS', 'Партнёры'],
+      datasets: [{
+        label: '% нежелательных',
+        data: [csUndPct, P.undesired_pct_avg],
+        backgroundColor: ['rgba(139,92,246,0.7)', 'rgba(6,182,212,0.7)'],
+        borderColor: ['#8B5CF6', '#06B6D4'], borderWidth: 1.5, borderRadius: 8
+      }]
+    },
+    options: { responsive: true, maintainAspectRatio: false,
+      plugins: { legend: { display: false } },
+      scales: { x: { ticks: { color: '#CBD5E1', font: { size: 12, weight: 'bold' } }, grid: { display: false } },
+                y: { ticks: { color: '#94A3B8', callback: v => v + '%' }, grid: { color: 'rgba(148,163,184,0.1)' }, beginAtZero: true } } }
+  });
+
+  // Insights
+  const topP = P.by_partner[0];
+  const insights = [];
+  insights.push({type:'',icon:'📊',title:`${P.total_partner_tickets.toLocaleString('ru')} тикетов от партнёров за ${P.period}`,
+    text:`${P.partners_count} активных партнёров обработали ${P.partner_share_pct}% всех обращений в CC. Затраты: ${(P.total_partner_cost/1e6).toFixed(1)} млн сум.`});
+  insights.push({type:'',icon:'🏆',title:`Топ-партнёр: ${topP?.name||'—'} (${topP?.tickets||0} тик)`,
+    text:`Этот партнёр сгенерировал больше всего обращений в CC. Нежел: ${topP?.undesired_pct||0}%, повторные: ${topP?.repeat_pct||0}%, магазинов: ${topP?.stores_count||0}.`});
+  
+  if (P.undesired_pct_avg > csUndPct) {
+    insights.push({type:'warning',icon:'⚠️',title:`Партнёры дают БОЛЬШЕ нежелательных: ${P.undesired_pct_avg}% vs CS ${csUndPct}%`,
+      text:`Разница ${(P.undesired_pct_avg - csUndPct).toFixed(1)}пп. Возможные причины: партнёры пропускают первичный фильтр обращений или не закрывают базовые вопросы у себя.`});
+  } else {
+    insights.push({type:'rec',icon:'✅',title:`Партнёры дают МЕНЬШЕ нежелательных, чем CS`,
+      text:`Партнёры ${P.undesired_pct_avg}% vs CS ${csUndPct}%. Хороший знак — фильтрация работает.`});
+  }
+  
+  insights.push({type:'',icon:'🎓',title:`Обучения через CC от партнёров: ${P.training_total}`,
+    text:`${P.training_partial_total} частичных + ${P.training_full_total} полных. Партнёры должны закрывать обучения сами — это пробел.`});
+  
+  insights.push({type:'rec',icon:'📋',title:'Рекомендация: SLA-протокол для партнёров',
+    text:`Закрепить целевые KPI: нежел ≤40%, повтор ≤10%. Партнёр с превышением — на разбор. Ежемесячный отчёт по топ-10 партнёрам.`});
+
+  const insEl = document.getElementById('pInsights');
+  insEl.innerHTML = insights.map(i => `
+    <div class="partner-insight ${i.type}">
+      <div class="partner-insight-icon">${i.icon}</div>
+      <div style="flex:1">
+        <div class="partner-insight-title">${i.title}</div>
+        <div class="partner-insight-text">${i.text}</div>
+      </div>
+    </div>
+  `).join('');
+
+})();
+</script>
+</body>
+</html>

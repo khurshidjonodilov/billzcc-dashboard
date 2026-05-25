@@ -4,11 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>BILLZ CC · Операторы</title>
-<link rel="stylesheet" href="shared.css?v=38">
+<link rel="stylesheet" href="shared.css?v=40">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
-<script src="data.js?v=38"></script>
-<script src="shared.js?v=38"></script>
+<script src="data.js?v=40"></script>
+<script src="shared.js?v=40"></script>
 <style>
 .formula-bar {
   margin-top: 12px !important;
@@ -45,6 +45,7 @@
   <a href="weekly.html" class="nav-link">Еженедельно</a>
   <a href="quarterly.html" class="nav-link">Квартал</a>
   <a href="cs.html" class="nav-link">CS Анализ</a>
+  <a href="partners.html" class="nav-link">Партнёры</a>
   <a href="daily.html" class="nav-link">Ежедневно</a>
   <a href="operators.html" class="nav-link active">Операторы</a>
   <a href="trends.html" class="nav-link">Динамика</a>
@@ -78,7 +79,7 @@
       <div class="cost-ey">ФОТ ОЦЕНКА (АПРЕЛЬ)</div>
       <div class="cost-n" id="totalCost">—</div>
       <div class="cost-d">сум · тикеты × CPT 7 561</div>
-      <div class="live"><span class="live-dot"></span>данные актуальны · 19.05.2026</div>
+      <div class="live"><span class="live-dot"></span>данные актуальны · 24.05.2026</div>
     </div>
   </div>
 
@@ -122,8 +123,6 @@
             <th>SLA %</th>
             <th>CSAT %</th>
             <th>Оценок</th>
-            <th title="Контроль качества — прослушки/чтение чатов">КК балл</th>
-            <th title="Тестирование — ежемесячное">Тест</th>
             <th>Затраты</th>
           </tr></thead>
           <tbody id="opTableBody"></tbody>
@@ -233,7 +232,7 @@
   <div class="ftr">
     <div class="fl">BILLZ · CC Intelligence · Omnidesk CRM</div>
     <div class="fr">
-      <span>📅 Обновлено: <strong style="color:var(--t2)">19.05.2026</strong></span>
+      <span>📅 Обновлено: <strong style="color:var(--t2)">24.05.2026</strong></span>
       <span>Операторы · <span class="month-text" data-month-label>Апрель 2026</span></span>
     </div>
   </div>
@@ -248,7 +247,7 @@ let charts = {};
 
 const PERIODS = {
   monthly: { label: BILLZ_DATA.current_month === 'may' ? 'Май 2026 (1–19)' : 'Апрель 2026 (полный)', ops: M.operators },
-  week_21: { label: 'Нед 21 · 18–19 мая',  ops: W.week_21?.operators || [] },
+  week_21: { label: 'Нед 21 · 18–24 мая',  ops: W.week_21?.operators || [] },
   week_20: { label: 'Нед 20 · 11–17 мая',  ops: W.week_20?.operators || [] },
   week_19: { label: 'Нед 19 · 04–10 мая',  ops: W.week_19?.operators || [] },
   week_18: { label: 'Нед 18 · 27.04–03.05', ops: W.week_18?.operators || [] },
@@ -341,8 +340,6 @@ function render() {
       <td><span class="b ${slaC}">${op.sla_pct||0}%</span></td>
       <td>${(op.rated||0)>0?`<span class="b ${csatC}">${op.rating_pct||0}%</span>`:'<span style="color:var(--t4);font-size:10px">нет оценок</span>'}</td>
       <td style="font-size:10px;color:var(--t3)">${op.rated||0}</td>
-      <td>${op.kk_score!=null?`<span style="font-size:11px;font-weight:700;padding:3px 8px;border-radius:5px;background:${op.kk_score>=90?'rgba(16,185,129,0.15)':(op.kk_score>=75?'rgba(245,158,11,0.15)':'rgba(239,68,68,0.15)')};color:${op.kk_score>=90?'#10B981':(op.kk_score>=75?'#F59E0B':'#EF4444')}">${op.kk_score}</span>`:'<span style="color:var(--t4);font-size:10px">—</span>'}</td>
-      <td>${op.test_score!=null?`<span style="font-size:11px;font-weight:700;padding:3px 8px;border-radius:5px;background:${op.test_score>=90?'rgba(16,185,129,0.15)':(op.test_score>=75?'rgba(245,158,11,0.15)':'rgba(239,68,68,0.15)')};color:${op.test_score>=90?'#10B981':(op.test_score>=75?'#F59E0B':'#EF4444')}">${op.test_score}</span>`:'<span style="color:var(--t4);font-size:10px">—</span>'}</td>
       <td class="cost-cell">${fmt.mln(op.cost||op.tickets*CPT)}</td>
     </tr>`;
   }).join('');
@@ -600,7 +597,8 @@ function exportCSExcel() {
 render();
 </script>
 
-  <!-- ── KK ERRORS SECTION ───────────────────────────────────────────────── -->
+  <!-- ── KK ERRORS SECTION (hidden for May 2026 — data not yet collected) ── -->
+  <div id="kkSectionWrap" style="display:none">
   <div class="sec"><div class="sec-num">07</div><div class="sec-title">Контроль качества · Темы ошибок</div><div class="sec-line"></div></div>
   
   <!-- Summary cards row -->
@@ -608,15 +606,25 @@ render();
   
   <!-- Two-column: top errors + by operator -->
   <div class="row two" id="kkContent" style="margin-bottom:14px"></div>
+  </div>
 
   <script>
     (function() {
       if (typeof BILLZ_DATA === 'undefined') return;
+      // Only show KK section if data exists AND we are not in May 2026 mode
       const ke = BILLZ_DATA.kk_errors;
+      const isMay = BILLZ_DATA.current_month === 'may';
+      const wrap = document.getElementById('kkSectionWrap');
+      if (!wrap) return;
+      if (isMay || !ke || !ke.top_error_categories || ke.top_error_categories.length === 0) {
+        // Keep hidden — May not yet evaluated, or data missing
+        return;
+      }
+      wrap.style.display = '';
       const summaryEl = document.getElementById('kkSummary');
       const contentEl = document.getElementById('kkContent');
       
-      if (!ke || !ke.top_error_categories || ke.top_error_categories.length === 0) {
+      if (false) {
         if (contentEl) {
           contentEl.innerHTML = `
             <div class="card" style="grid-column:span 2;padding:30px 20px;text-align:center;color:var(--t3)">

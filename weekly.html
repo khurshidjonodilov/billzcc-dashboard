@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>BILLZ CC · Еженедельный</title>
-<link rel="stylesheet" href="shared.css?v=40">
+<link rel="stylesheet" href="shared.css?v=41">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
-<script src="data.js?v=40"></script>
-<script src="shared.js?v=40"></script>
+<script src="data.js?v=41"></script>
+<script src="shared.js?v=41"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 <style>
 .export-bar{margin-top:32px;padding:20px 24px;background:var(--surface);border:1px solid var(--br2);border-radius:12px;display:flex;align-items:center;justify-content:space-between;gap:16px}
@@ -119,6 +119,12 @@
     <button onclick="this.parentElement.style.display='none'"
       style="background:none;border:none;color:var(--text4);cursor:pointer;font-size:16px;flex-shrink:0;padding:0 4px">✕</button>
   </div>
+
+  <!-- Clean-mode note (visible when "Без массового сбоя" mode is selected) -->
+  <div id="cleanModeNote" style="display:none;background:rgba(16,185,129,0.08);border:1px solid rgba(52,211,153,0.25);border-left:3px solid #10B981;border-radius:8px;padding:10px 14px;margin-bottom:12px;font-size:11px;color:var(--text2);line-height:1.6"></div>
+  
+  <!-- ATS report block (visible when week has ats_data) -->
+  <div id="atsReportBlock" style="display:none"></div>
 
   <div class="kpi-grid" id="kpiGrid"></div>
   <div class="alert-grid" id="alertGrid"></div>
@@ -237,7 +243,72 @@ function setMode(m) {
 
 function render() {
   const WK = W[currentWeek];
-  const D = mode==='with' ? WK : {...WK, ...WK.no_massoviy};
+  // Build clean overlay from new clean fields if they exist (fallback to old no_massoviy)
+  const cleanOverlay = {
+    tickets:        WK.tickets_clean        ?? (WK.no_massoviy?.tickets        ?? WK.tickets),
+    sla_pct:        WK.sla_clean            ?? (WK.no_massoviy?.sla_pct        ?? WK.sla_pct),
+    sla_not_met:    (WK.sla_clean != null)  ? (100 - WK.sla_clean) : (WK.no_massoviy?.sla_not_met ?? WK.sla_not_met),
+    lcr:            WK.lcr_clean            ?? (WK.no_massoviy?.lcr            ?? WK.lcr),
+    csat_pct:       WK.csat_clean           ?? (WK.no_massoviy?.csat_pct       ?? WK.csat_pct),
+    afrt:           WK.afrt_clean           ?? (WK.no_massoviy?.afrt           ?? WK.afrt),
+    undesired:      WK.undesired_clean      ?? (WK.no_massoviy?.undesired      ?? WK.undesired),
+    undesired_pct:  WK.undesired_pct_clean  ?? (WK.no_massoviy?.undesired_pct  ?? WK.undesired_pct),
+    repeat_pct:     WK.repeat_pct_clean     ?? (WK.no_massoviy?.repeat_pct     ?? WK.repeat_pct),
+  };
+  const D = mode === 'with' ? WK : { ...WK, ...cleanOverlay };
+  
+  // Note about cleaning
+  const noteEl = document.getElementById('cleanModeNote');
+  if (noteEl) {
+    if (mode === 'without' && WK.massoviy_sboy_count) {
+      noteEl.style.display = '';
+      noteEl.innerHTML = `🧹 Исключены <b>${WK.massoviy_sboy_count}</b> тикетов с меткой "Массовый сбой BILLZ" (${WK.massoviy_sboy_pct||0}% всех тикетов недели). SLA, LCR, CSAT и AFRT пересчитаны без них.`;
+    } else {
+      noteEl.style.display = 'none';
+    }
+  }
+  
+  // ATS report block (for week 21 with full ATS data from report)
+  const atsEl = document.getElementById('atsReportBlock');
+  if (atsEl) {
+    if (WK.ats_data) {
+      atsEl.style.display = '';
+      const ats = WK.ats_data;
+      atsEl.innerHTML = `
+        <div class="card" style="margin-bottom:14px;background:linear-gradient(135deg,rgba(16,185,129,0.07),rgba(6,182,212,0.05));border:1px solid rgba(52,211,153,0.25)">
+          <div style="display:flex;align-items:center;justify-content:space-between;padding:14px 18px 8px;flex-wrap:wrap;gap:10px">
+            <div>
+              <div style="font-size:14px;font-weight:700;color:var(--green2)">📊 Корректные данные за неделю · из отчёта CC</div>
+              <div style="font-size:11px;color:var(--text3);margin-top:3px">${ats.note||'Данные из АТС и Omnidesk, рассчитанные командой CC'}</div>
+            </div>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;padding:8px 18px 18px">
+            <div style="background:rgba(0,0,0,0.2);border-radius:8px;padding:10px 14px;border-left:3px solid #3B82F6">
+              <div style="font-size:9px;letter-spacing:.1em;color:var(--text4);text-transform:uppercase;margin-bottom:4px">LCR чистый</div>
+              <div style="font-size:22px;font-weight:800;color:${ats.lcr_clean>3.5?'#FCD34D':'#34D399'}">${ats.lcr_clean}%</div>
+              <div style="font-size:10px;color:var(--text3);margin-top:3px">план 3.5% · с даунтаймом: ${ats.lcr_with_downtime}%</div>
+            </div>
+            <div style="background:rgba(0,0,0,0.2);border-radius:8px;padding:10px 14px;border-left:3px solid #10B981">
+              <div style="font-size:9px;letter-spacing:.1em;color:var(--text4);text-transform:uppercase;margin-bottom:4px">SLA</div>
+              <div style="font-size:22px;font-weight:800;color:#34D399">${ats.sla}%</div>
+              <div style="font-size:10px;color:var(--text3);margin-top:3px">AFRT: ${ats.afrt}, ART: ${ats.art}</div>
+            </div>
+            <div style="background:rgba(0,0,0,0.2);border-radius:8px;padding:10px 14px;border-left:3px solid #8B5CF6">
+              <div style="font-size:9px;letter-spacing:.1em;color:var(--text4);text-transform:uppercase;margin-bottom:4px">CSAT</div>
+              <div style="font-size:22px;font-weight:800;color:${ats.csat>=95?'#34D399':'#FCD34D'}">${ats.csat}%</div>
+              <div style="font-size:10px;color:var(--text3);margin-top:3px">план 95%</div>
+            </div>
+            <div style="background:rgba(0,0,0,0.2);border-radius:8px;padding:10px 14px;border-left:3px solid #06B6D4">
+              <div style="font-size:9px;letter-spacing:.1em;color:var(--text4);text-transform:uppercase;margin-bottom:4px">Активных операторов</div>
+              <div style="font-size:22px;font-weight:800;color:#67E8F9">${ats.active_operators}</div>
+              <div style="font-size:10px;color:var(--text3);margin-top:3px">входящих ${ats.incoming}, пропущ ${ats.missed_total}</div>
+            </div>
+          </div>
+        </div>`;
+    } else {
+      atsEl.style.display = 'none';
+    }
+  }
 
   document.getElementById('wTitle').textContent = WK.label;
   document.getElementById('wSub').textContent = `Неделя ${WK.week_num} · ${D.tickets} тикетов`;

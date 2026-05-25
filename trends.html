@@ -4,11 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>BILLZ CC · Динамика</title>
-<link rel="stylesheet" href="shared.css?v=40">
+<link rel="stylesheet" href="shared.css?v=41">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
-<script src="data.js?v=40"></script>
-<script src="shared.js?v=40"></script>
+<script src="data.js?v=41"></script>
+<script src="shared.js?v=41"></script>
 <style>
 .formula-bar {
   margin-top: 12px !important; padding: 9px 14px !important;
@@ -256,6 +256,20 @@
       <tbody id="summaryBody"></tbody>
     </table>
     <div class="card-formula">📐 Сравнение нормализовано на день — периоды разной длины (14 vs 14 дн). 🟢 улучшение · 🔴 ухудшение</div>
+  </div>
+
+  <!-- Week-vs-Week comparison block -->
+  <div class="sec"><div class="sec-num">08А</div><div class="sec-title">Неделя vs прошлая неделя · только из CSV</div><div class="sec-line"></div></div>
+  <div class="card" style="padding:18px 22px;margin-bottom:14px;background:linear-gradient(135deg,rgba(139,92,246,0.07),rgba(124,58,237,0.04));border:1px solid rgba(167,139,250,0.25)">
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-bottom:14px">
+      <div>
+        <div style="font-size:13px;font-weight:700;color:#C4B5FD" id="wvwTitle">Нед 20 vs Нед 19</div>
+        <div style="font-size:11px;color:var(--text3);margin-top:3px" id="wvwSub">Изменение за неделю · только данные из CSV (Omnidesk)</div>
+      </div>
+      <div style="font-size:10px;color:var(--text4);font-family:var(--mono);background:rgba(167,139,250,0.10);padding:3px 9px;border-radius:5px;border:1px solid rgba(167,139,250,0.25)">из BILLZ_DATA.week_vs_week</div>
+    </div>
+    <div id="wvwGrid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px"></div>
+    <div class="card-formula" style="margin-top:14px">📐 Сравнивается полная неделя 20 (11–17.05) с полной неделей 19 (04–10.05). Период 21 здесь не учитывается, так как он был с массовыми сбоями</div>
   </div>
 
   <div class="sec"><div class="sec-num">09</div><div class="sec-title">Инсайты по динамике</div><div class="sec-line"></div></div>
@@ -609,6 +623,40 @@
       <p style="font-size:11px;color:var(--t2);line-height:1.65;margin-bottom:10px">${i.body}</p>
       <div style="font-size:10px;font-family:var(--mono);color:${i.color};background:${i.bg};border:1px solid ${i.border};padding:4px 10px;border-radius:5px;display:inline-block">📊 ${i.metric}</div>
     </div>`).join('');
+
+  // ── Week-vs-Week ────────────────────────────────────────────────────────────
+  const WVW = BILLZ_DATA.week_vs_week;
+  if (WVW) {
+    document.getElementById('wvwTitle').textContent = `${WVW.label_b} vs ${WVW.label_a}`;
+    document.getElementById('wvwSub').textContent = `Изменение за неделю · только данные из CSV (Omnidesk)`;
+    const wvwMetrics = [
+      {k:'tickets', label:'Тикеты', fmt:v=>v.toLocaleString('ru'), good:'down'},
+      {k:'calls', label:'Звонки', fmt:v=>v.toLocaleString('ru'), good:'down'},
+      {k:'chats', label:'Чаты', fmt:v=>v.toLocaleString('ru'), good:'up'},
+      {k:'sla_pct', label:'SLA', fmt:v=>v.toFixed(1)+'%', good:'up'},
+      {k:'csat_pct', label:'CSAT', fmt:v=>v.toFixed(1)+'%', good:'up'},
+      {k:'lcr', label:'LCR', fmt:v=>v.toFixed(2)+'%', good:'down'},
+      {k:'undesired_pct', label:'Нежел %', fmt:v=>v.toFixed(1)+'%', good:'down'},
+      {k:'repeat_pct', label:'Повтор %', fmt:v=>v.toFixed(1)+'%', good:'down'},
+    ];
+    document.getElementById('wvwGrid').innerHTML = wvwMetrics.map(m => {
+      const pv = WVW.prior[m.k] || 0;
+      const cv = WVW.current[m.k] || 0;
+      const d = WVW[m.k] || {abs:0, pct:0};
+      const isGood = m.good === 'up' ? d.pct > 0 : d.pct < 0;
+      const flat = Math.abs(d.pct) < 0.5;
+      const color = flat ? '#94A3B8' : (isGood ? '#10B981' : '#EF4444');
+      const arrow = d.pct > 0 ? '↑' : d.pct < 0 ? '↓' : '→';
+      return `
+        <div style="background:rgba(0,0,0,0.25);border-radius:8px;padding:12px 14px;border-left:3px solid ${color}">
+          <div style="font-size:9px;letter-spacing:.12em;color:var(--t4);text-transform:uppercase;margin-bottom:6px">${m.label}</div>
+          <div style="font-size:11px;color:var(--t3);font-family:var(--mono);margin-bottom:2px">${m.fmt(pv)} → <span style="color:var(--t1);font-weight:700">${m.fmt(cv)}</span></div>
+          <div style="font-size:13px;color:${color};font-weight:800;font-family:var(--mono);margin-top:4px">${arrow} ${d.pct>0?'+':''}${d.pct.toFixed(1)}%</div>
+        </div>`;
+    }).join('');
+  } else {
+    document.getElementById('wvwGrid').innerHTML = '<div style="grid-column:1/-1;text-align:center;padding:20px;color:var(--t3);font-size:12px">Данных week-vs-week нет</div>';
+  }
 })();
 </script>
 </body>

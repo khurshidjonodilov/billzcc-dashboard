@@ -2341,7 +2341,17 @@ const BILLZ_DATA = {
           ]
         }
       ],
-      "massoviy_cnt": 102
+      "massoviy_cnt": 102,
+      "sla_clean": 80.6,
+      "lcr_clean": 0.65,
+      "csat_clean": 93.4,
+      "afrt_clean": "24с",
+      "tickets_clean": 2594,
+      "undesired_clean": 1267,
+      "undesired_pct_clean": 48.8,
+      "repeat_pct_clean": 7.0,
+      "massoviy_sboy_count": 49,
+      "massoviy_sboy_pct": 1.9
     },
     "week_19": {
       "tickets": 2714,
@@ -2822,7 +2832,17 @@ const BILLZ_DATA = {
           ]
         }
       ],
-      "massoviy_cnt": 82
+      "massoviy_cnt": 82,
+      "sla_clean": 86.8,
+      "lcr_clean": 0.79,
+      "csat_clean": 94.7,
+      "afrt_clean": "18с",
+      "tickets_clean": 2654,
+      "undesired_clean": 1347,
+      "undesired_pct_clean": 50.8,
+      "repeat_pct_clean": 7.2,
+      "massoviy_sboy_count": 60,
+      "massoviy_sboy_pct": 2.2
     },
     "week_20": {
       "tickets": 2909,
@@ -3303,7 +3323,17 @@ const BILLZ_DATA = {
           ]
         }
       ],
-      "massoviy_cnt": 85
+      "massoviy_cnt": 85,
+      "sla_clean": 85.7,
+      "lcr_clean": 0.63,
+      "csat_clean": 95.1,
+      "afrt_clean": "18с",
+      "tickets_clean": 2831,
+      "undesired_clean": 1512,
+      "undesired_pct_clean": 53.4,
+      "repeat_pct_clean": 7.3,
+      "massoviy_sboy_count": 78,
+      "massoviy_sboy_pct": 2.7
     },
     "week_21": {
       "tickets": 4421,
@@ -3807,6 +3837,16 @@ const BILLZ_DATA = {
         }
       ],
       "massoviy_cnt": 90,
+      "sla_clean": 85.0,
+      "lcr_clean": 3.89,
+      "csat_clean": 91.0,
+      "afrt_clean": "1м 26с",
+      "tickets_clean": 2886,
+      "undesired_clean": 1542,
+      "undesired_pct_clean": 53.4,
+      "repeat_pct_clean": 6.4,
+      "massoviy_sboy_count": 1535,
+      "massoviy_sboy_pct": 34.7,
       "ats_data": {
         "incoming": 2511,
         "outgoing": 431,
@@ -3825,7 +3865,8 @@ const BILLZ_DATA = {
         "call_share": 54.7,
         "chat_share": 45.3,
         "downtime_calls": 446,
-        "unworktime": 15
+        "unworktime": 15,
+        "note": "Корректные данные за неделю из отчёта команды CC. LCR чистый = 3.89% (план 3.5%)"
       }
     }
   },
@@ -12954,7 +12995,14 @@ const BILLZ_DATA = {
       "peak_missed": 0,
       "insights": [],
       "verdict": "",
-      "no_massoviy": false
+      "no_massoviy": false,
+      "sla_clean": 72.5,
+      "lcr_clean": 1.27,
+      "csat_clean": 97.5,
+      "afrt_clean": "30с",
+      "tickets_clean": 483,
+      "massoviy_sboy_count": 8,
+      "massoviy_sboy_pct": 1.6
     },
     "2026-05-02": {
       "tickets": 437,
@@ -13341,7 +13389,14 @@ const BILLZ_DATA = {
       "peak_missed": 0,
       "insights": [],
       "verdict": "",
-      "no_massoviy": false
+      "no_massoviy": false,
+      "sla_clean": 88.4,
+      "lcr_clean": 1.1,
+      "csat_clean": 94.1,
+      "afrt_clean": "18с",
+      "tickets_clean": 437,
+      "massoviy_sboy_count": 0,
+      "massoviy_sboy_pct": 0.0
     },
     "2026-05-03": {
       "tickets": 340,
@@ -13713,7 +13768,14 @@ const BILLZ_DATA = {
       "peak_missed": 0,
       "insights": [],
       "verdict": "",
-      "no_massoviy": false
+      "no_massoviy": false,
+      "sla_clean": 81.0,
+      "lcr_clean": 0.0,
+      "csat_clean": 100.0,
+      "afrt_clean": "24с",
+      "tickets_clean": 340,
+      "massoviy_sboy_count": 0,
+      "massoviy_sboy_pct": 0.0
     },
     "2026-05-04": {
       "tickets": 437,
@@ -14103,7 +14165,14 @@ const BILLZ_DATA = {
       "peak_missed": 0,
       "insights": [],
       "verdict": "",
-      "no_massoviy": false
+      "no_massoviy": false,
+      "sla_clean": 81.6,
+      "lcr_clean": 0.63,
+      "csat_clean": 91.7,
+      "afrt_clean": "21с",
+      "tickets_clean": 437,
+      "massoviy_sboy_count": 0,
+      "massoviy_sboy_pct": 0.0
     },
     "2026-05-05": {
       "tickets": 392,
@@ -14484,7 +14553,14 @@ const BILLZ_DATA = {
       "peak_missed": 0,
       "insights": [],
       "verdict": "",
-      "no_massoviy": false
+      "no_massoviy": false,
+      "sla_clean": 83.1,
+      "lcr_clean": 3.38,
+      "csat_clean": 95.7,
+      "afrt_clean": "18с",
+      "tickets_clean": 389,
+      "massoviy_sboy_count": 3,
+      "massoviy_sboy_pct": 0.8
     },
     "2026-05-06": {
       "tickets": 355,
@@ -14859,7 +14935,14 @@ const BILLZ_DATA = {
       "peak_missed": 0,
       "insights": [],
       "verdict": "",
-      "no_massoviy": false
+      "no_massoviy": false,
+      "sla_clean": 88.1,
+      "lcr_clean": 0.0,
+      "csat_clean": 87.5,
+      "afrt_clean": "18с",
+      "tickets_clean": 355,
+      "massoviy_sboy_count": 0,
+      "massoviy_sboy_pct": 0.0
     },
     "2026-05-07": {
       "tickets": 440,
@@ -15239,7 +15322,14 @@ const BILLZ_DATA = {
       "peak_missed": 0,
       "insights": [],
       "verdict": "",
-      "no_massoviy": false
+      "no_massoviy": false,
+      "sla_clean": 87.0,
+      "lcr_clean": 1.3,
+      "csat_clean": 100.0,
+      "afrt_clean": "18с",
+      "tickets_clean": 440,
+      "massoviy_sboy_count": 0,
+      "massoviy_sboy_pct": 0.0
     },
     "2026-05-08": {
       "tickets": 453,
@@ -15627,7 +15717,14 @@ const BILLZ_DATA = {
       "peak_missed": 0,
       "insights": [],
       "verdict": "",
-      "no_massoviy": false
+      "no_massoviy": false,
+      "sla_clean": 92.3,
+      "lcr_clean": 0.0,
+      "csat_clean": 94.4,
+      "afrt_clean": "18с",
+      "tickets_clean": 453,
+      "massoviy_sboy_count": 0,
+      "massoviy_sboy_pct": 0.0
     },
     "2026-05-09": {
       "tickets": 359,
@@ -16029,7 +16126,14 @@ const BILLZ_DATA = {
       "peak_missed": 0,
       "insights": [],
       "verdict": "",
-      "no_massoviy": false
+      "no_massoviy": false,
+      "sla_clean": 89.7,
+      "lcr_clean": 0.0,
+      "csat_clean": 100.0,
+      "afrt_clean": "18с",
+      "tickets_clean": 302,
+      "massoviy_sboy_count": 57,
+      "massoviy_sboy_pct": 15.9
     },
     "2026-05-10": {
       "tickets": 278,
@@ -16406,7 +16510,14 @@ const BILLZ_DATA = {
       "peak_missed": 0,
       "insights": [],
       "verdict": "",
-      "no_massoviy": false
+      "no_massoviy": false,
+      "sla_clean": 86.3,
+      "lcr_clean": 0.0,
+      "csat_clean": 94.1,
+      "afrt_clean": "24с",
+      "tickets_clean": 278,
+      "massoviy_sboy_count": 0,
+      "massoviy_sboy_pct": 0.0
     },
     "2026-05-11": {
       "tickets": 482,
@@ -16814,7 +16925,14 @@ const BILLZ_DATA = {
       "peak_missed": 0,
       "insights": [],
       "verdict": "",
-      "no_massoviy": false
+      "no_massoviy": false,
+      "sla_clean": 88.3,
+      "lcr_clean": 0.0,
+      "csat_clean": 93.3,
+      "afrt_clean": "18с",
+      "tickets_clean": 482,
+      "massoviy_sboy_count": 0,
+      "massoviy_sboy_pct": 0.0
     },
     "2026-05-12": {
       "tickets": 540,
@@ -17224,7 +17342,14 @@ const BILLZ_DATA = {
       "peak_missed": 0,
       "insights": [],
       "verdict": "",
-      "no_massoviy": false
+      "no_massoviy": false,
+      "sla_clean": 86.6,
+      "lcr_clean": 0.0,
+      "csat_clean": 83.3,
+      "afrt_clean": "24с",
+      "tickets_clean": 492,
+      "massoviy_sboy_count": 48,
+      "massoviy_sboy_pct": 8.9
     },
     "2026-05-13": {
       "tickets": 423,
@@ -17635,7 +17760,14 @@ const BILLZ_DATA = {
       "peak_missed": 0,
       "insights": [],
       "verdict": "",
-      "no_massoviy": false
+      "no_massoviy": false,
+      "sla_clean": 73.4,
+      "lcr_clean": 2.7,
+      "csat_clean": 100.0,
+      "afrt_clean": "30с",
+      "tickets_clean": 418,
+      "massoviy_sboy_count": 5,
+      "massoviy_sboy_pct": 1.2
     },
     "2026-05-14": {
       "tickets": 388,
@@ -17997,7 +18129,14 @@ const BILLZ_DATA = {
       "peak_missed": 0,
       "insights": [],
       "verdict": "",
-      "no_massoviy": false
+      "no_massoviy": false,
+      "sla_clean": 91.5,
+      "lcr_clean": 0.0,
+      "csat_clean": 96.8,
+      "afrt_clean": "18с",
+      "tickets_clean": 388,
+      "massoviy_sboy_count": 0,
+      "massoviy_sboy_pct": 0.0
     },
     "2026-05-15": {
       "tickets": 390,
@@ -18388,7 +18527,14 @@ const BILLZ_DATA = {
       "peak_missed": 0,
       "insights": [],
       "verdict": "",
-      "no_massoviy": false
+      "no_massoviy": false,
+      "sla_clean": 90.3,
+      "lcr_clean": 0.65,
+      "csat_clean": 100.0,
+      "afrt_clean": "18с",
+      "tickets_clean": 368,
+      "massoviy_sboy_count": 22,
+      "massoviy_sboy_pct": 5.6
     },
     "2026-05-16": {
       "tickets": 382,
@@ -18757,7 +18903,14 @@ const BILLZ_DATA = {
       "peak_missed": 0,
       "insights": [],
       "verdict": "",
-      "no_massoviy": false
+      "no_massoviy": false,
+      "sla_clean": 86.2,
+      "lcr_clean": 0.0,
+      "csat_clean": 93.1,
+      "afrt_clean": "24с",
+      "tickets_clean": 380,
+      "massoviy_sboy_count": 2,
+      "massoviy_sboy_pct": 0.5
     },
     "2026-05-17": {
       "tickets": 304,
@@ -19156,7 +19309,14 @@ const BILLZ_DATA = {
       "peak_missed": 0,
       "insights": [],
       "verdict": "",
-      "no_massoviy": false
+      "no_massoviy": false,
+      "sla_clean": 90.7,
+      "lcr_clean": 0.0,
+      "csat_clean": 100.0,
+      "afrt_clean": "15с",
+      "tickets_clean": 303,
+      "massoviy_sboy_count": 1,
+      "massoviy_sboy_pct": 0.3
     },
     "2026-05-18": {
       "tickets": 509,
@@ -19560,7 +19720,14 @@ const BILLZ_DATA = {
       "peak_missed": 0,
       "insights": [],
       "verdict": "",
-      "no_massoviy": false
+      "no_massoviy": false,
+      "sla_clean": 86.1,
+      "lcr_clean": 1.73,
+      "csat_clean": 96.0,
+      "afrt_clean": "18с",
+      "tickets_clean": 423,
+      "massoviy_sboy_count": 86,
+      "massoviy_sboy_pct": 16.9
     },
     "2026-05-19": {
       "tickets": 905,
@@ -19994,7 +20161,13 @@ const BILLZ_DATA = {
       "incoming_clean": 192,
       "missed_clean": 14,
       "chats_clean": 219,
-      "lcr_clean": 7.2
+      "lcr_clean": 1.14,
+      "sla_clean": 80.1,
+      "csat_clean": 100.0,
+      "afrt_clean": "24с",
+      "tickets_clean": 516,
+      "massoviy_sboy_count": 389,
+      "massoviy_sboy_pct": 43.0
     },
     "2026-05-20": {
       "tickets": 362,
@@ -20433,7 +20606,14 @@ const BILLZ_DATA = {
           "count": 14
         }
       ],
-      "report_insight": "День прошёл стабильно. Пропущенные точечно в моменты занятости операторов."
+      "report_insight": "День прошёл стабильно. Пропущенные точечно в моменты занятости операторов.",
+      "sla_clean": 82.2,
+      "lcr_clean": 0.68,
+      "csat_clean": 100.0,
+      "afrt_clean": "24с",
+      "tickets_clean": 361,
+      "massoviy_sboy_count": 1,
+      "massoviy_sboy_pct": 0.3
     },
     "2026-05-21": {
       "tickets": 355,
@@ -20881,7 +21061,14 @@ const BILLZ_DATA = {
           "count": 12
         }
       ],
-      "report_insight": "Стабильный день без пиков. Технические вопросы по оборудованию и входу в аккаунт."
+      "report_insight": "Стабильный день без пиков. Технические вопросы по оборудованию и входу в аккаунт.",
+      "sla_clean": 84.4,
+      "lcr_clean": 2.22,
+      "csat_clean": 100.0,
+      "afrt_clean": "18с",
+      "tickets_clean": 355,
+      "massoviy_sboy_count": 0,
+      "massoviy_sboy_pct": 0.0
     },
     "2026-05-22": {
       "tickets": 1668,
@@ -21330,7 +21517,13 @@ const BILLZ_DATA = {
       "incoming_clean": 203,
       "missed_clean": 15,
       "chats_clean": 198,
-      "lcr_clean": 7.0
+      "lcr_clean": 33.63,
+      "sla_clean": 48.9,
+      "csat_clean": 92.3,
+      "afrt_clean": "1м 6с",
+      "tickets_clean": 610,
+      "massoviy_sboy_count": 1058,
+      "massoviy_sboy_pct": 63.4
     },
     "2026-05-23": {
       "tickets": 345,
@@ -21715,7 +21908,14 @@ const BILLZ_DATA = {
           "count": 15
         }
       ],
-      "report_insight": "Стабильная нагрузка. Сложные обращения по доступу в аккаунт."
+      "report_insight": "Стабильная нагрузка. Сложные обращения по доступу в аккаунт.",
+      "sla_clean": 83.6,
+      "lcr_clean": 2.86,
+      "csat_clean": 85.0,
+      "afrt_clean": "18с",
+      "tickets_clean": 344,
+      "massoviy_sboy_count": 1,
+      "massoviy_sboy_pct": 0.3
     },
     "2026-05-24": {
       "tickets": 277,
@@ -22127,20 +22327,28 @@ const BILLZ_DATA = {
           "count": 11
         }
       ],
-      "report_insight": "Массовый сбой по медленной работе кассовых операций, но линия не пострадала."
+      "report_insight": "Массовый сбой по медленной работе кассовых операций, но линия не пострадала.",
+      "sla_clean": 88.0,
+      "lcr_clean": 0.8,
+      "csat_clean": 95.2,
+      "afrt_clean": "24с",
+      "tickets_clean": 277,
+      "massoviy_sboy_count": 0,
+      "massoviy_sboy_pct": 0.0
     }
   },
   "quarterly": {
-    "period": "Январь–Апрель 2026",
+    "period": "Март – Май 2026 (май неполный)",
     "months": [
       "Январь",
       "Февраль",
       "Март",
-      "Апрель"
+      "Апрель",
+      "Май (1-24)"
     ],
     "summary": {
-      "total_tickets": 28409,
-      "total_cost_mln": 243.24,
+      "total_tickets": 35259,
+      "total_cost_mln": 295.0,
       "avg_cpt": 9856.0,
       "lcr_avg": 4.73,
       "csat_pct": 95.4,
@@ -22155,7 +22363,12 @@ const BILLZ_DATA = {
       "training_cost_mln": 22.42,
       "stores_count": 4165,
       "users_count": 37260,
-      "period": "Март–Май 2026 · текущий квартал"
+      "period": "Март–Май 2026 · текущий квартал",
+      "avg_sla": 82.1,
+      "avg_csat": 94.5,
+      "avg_lcr": 5.81,
+      "avg_undesired_pct": 54.1,
+      "avg_repeat_pct": 8.2
     },
     "by_month": [
       {
@@ -22191,20 +22404,21 @@ const BILLZ_DATA = {
         "frt_avg_sec": 50
       },
       {
-        "name": "Май",
-        "tickets": 4462,
-        "calls": 2439,
-        "chats": 2023,
-        "csat_pct": 94.8,
-        "sla_pct": 85.3,
-        "lcr": 6.78,
-        "cost_mln": 33.74,
+        "name": "Май 2026 (1-24)",
+        "tickets": 11312,
+        "calls": 6043,
+        "chats": 5269,
+        "csat_pct": 94.0,
+        "sla_pct": 77.2,
+        "lcr": 7.41,
+        "cost_mln": 85.53,
         "cost_per_ticket": 7561,
         "cpt": 7561,
-        "repeat_pct": 7.9,
-        "undesired_pct": 51.5,
-        "training_tickets": 176,
-        "frt_avg_sec": 39
+        "repeat_pct": 6.2,
+        "undesired_pct": 56.4,
+        "training_tickets": 302,
+        "frt_avg_sec": 24,
+        "partial": true
       }
     ],
     "operator_ranking": [
@@ -22847,161 +23061,1116 @@ const BILLZ_DATA = {
         "metric": "Нежелательные апр: 49.5% · цель <40%",
         "action": "Митинг с CS в среду — план снижения"
       }
-    ]
+    ],
+    "updated_to": "24.05.2026",
+    "period_label": "Март – Май 2026 (май неполный)"
   },
   "cs": {
     "period": "1–24 мая 2026",
-    "total_cs_tickets": 7960,
-    "total_cs_cost": 60185560,
-    "total_train_tickets": 247,
-    "total_train_cost": 1867567,
-    "partial_tickets": 227,
-    "full_tickets": 20,
-    "desired_total": 3457,
-    "undesired_total": 4244,
-    "undesired_pct_avg": 53.3,
-    "repeat_total": 554,
-    "repeat_pct_avg": 7.0,
-    "avg_med_close_min": 204.0,
-    "avg_med_frt_min": 0.4,
+    "whitelist_only": true,
+    "whitelist_count": 18,
+    "critical_count": 14,
+    "non_critical_count": 4,
+    "total_cs_tickets": 6515,
+    "total_cs_cost": 49259915,
+    "total_train_tickets": 216,
+    "total_train_cost": 1633176,
+    "partial_tickets": 200,
+    "full_tickets": 16,
+    "desired_total": 2878,
+    "undesired_total": 3487,
+    "undesired_pct_avg": 53.5,
+    "repeat_total": 450,
+    "repeat_pct_avg": 6.9,
+    "avg_med_close_min": 0,
+    "avg_med_frt_min": 0,
     "avg_call_min": 12,
-    "stores_count": 1760,
+    "stores_count": 1516,
     "users_count": 37260,
-    "tpc": 4.52,
-    "tpu": 0.2136,
+    "tpc": 4.3,
+    "tpu": 0.1749,
     "train_tpc": 0.14,
     "by_month": [
       {
         "month": "Май (1-24)",
-        "tickets": 7960,
-        "cost": 60185560,
-        "partial": 227,
-        "full": 20,
-        "train_tickets": 247
+        "tickets": 6515,
+        "cost": 49259915,
+        "partial": 200,
+        "full": 16,
+        "train_tickets": 216
       }
     ],
     "by_ks_manager": [
       {
         "name": "Baxtiyor Kasimov",
-        "tickets": 1186,
+        "role": "teamlead_bigbase",
+        "non_critical": true,
+        "tag_label": "👑 Тимлид · большая база",
+        "tag_color": "#A78BFA",
+        "tickets": 1191,
         "desired": 520,
-        "undesired": 640,
-        "undesired_pct": 54.0,
+        "undesired": 644,
+        "undesired_pct": 54.1,
         "partial": 22,
         "full": 2,
         "training_total": 24,
         "repeat_count": 99,
         "repeat_pct": 8.3,
-        "med_close": 3.05,
+        "med_close": 3.0,
         "med_frt_min": 0.35,
-        "stores_count": 222,
-        "cost": 8967346,
-        "tag": "big_base",
-        "tag_label": "🔵 Большая база",
-        "tag_color": "#3B82F6",
-        "big_base": true,
-        "note": "",
+        "stores_count": 225,
+        "massoviy_count": 148,
+        "cost": 9005151,
         "top_topic": "Массовый сбой BILLZ",
-        "top_undesired_topic": "Массовый сбой BILLZ"
+        "top_undesired_topic": "Массовый сбой BILLZ",
+        "topic_breakdown": [
+          {
+            "topic": "Массовый сбой BILLZ",
+            "count": 145,
+            "pct": 12.2,
+            "undesired": 107,
+            "undesired_pct": 73.8,
+            "repeat": 2,
+            "cost": 1096345
+          },
+          {
+            "topic": "Кассовые смены",
+            "count": 125,
+            "pct": 10.5,
+            "undesired": 91,
+            "undesired_pct": 72.8,
+            "repeat": 15,
+            "cost": 945125
+          },
+          {
+            "topic": "Документооборот",
+            "count": 109,
+            "pct": 9.2,
+            "undesired": 64,
+            "undesired_pct": 58.7,
+            "repeat": 7,
+            "cost": 824149
+          },
+          {
+            "topic": "Учётная запись",
+            "count": 86,
+            "pct": 7.2,
+            "undesired": 48,
+            "undesired_pct": 55.8,
+            "repeat": 10,
+            "cost": 650246
+          },
+          {
+            "topic": "Все продажи",
+            "count": 62,
+            "pct": 5.2,
+            "undesired": 33,
+            "undesired_pct": 53.2,
+            "repeat": 10,
+            "cost": 468782
+          },
+          {
+            "topic": "Каталог",
+            "count": 61,
+            "pct": 5.1,
+            "undesired": 21,
+            "undesired_pct": 34.4,
+            "repeat": 7,
+            "cost": 461221
+          },
+          {
+            "topic": "Оборудование",
+            "count": 59,
+            "pct": 5.0,
+            "undesired": 22,
+            "undesired_pct": 37.3,
+            "repeat": 2,
+            "cost": 446099
+          },
+          {
+            "topic": "Новая продажа",
+            "count": 44,
+            "pct": 3.7,
+            "undesired": 21,
+            "undesired_pct": 47.7,
+            "repeat": 2,
+            "cost": 332684
+          },
+          {
+            "topic": "SMS рассылка",
+            "count": 40,
+            "pct": 3.4,
+            "undesired": 13,
+            "undesired_pct": 32.5,
+            "repeat": 8,
+            "cost": 302440
+          },
+          {
+            "topic": "Настройка",
+            "count": 38,
+            "pct": 3.2,
+            "undesired": 12,
+            "undesired_pct": 31.6,
+            "repeat": 2,
+            "cost": 287318
+          },
+          {
+            "topic": "Отчёты",
+            "count": 34,
+            "pct": 2.9,
+            "undesired": 8,
+            "undesired_pct": 23.5,
+            "repeat": 3,
+            "cost": 257074
+          },
+          {
+            "topic": "Управление",
+            "count": 33,
+            "pct": 2.8,
+            "undesired": 10,
+            "undesired_pct": 30.3,
+            "repeat": 1,
+            "cost": 249513
+          },
+          {
+            "topic": "Баг (реквест)",
+            "count": 26,
+            "pct": 2.2,
+            "undesired": 9,
+            "undesired_pct": 34.6,
+            "repeat": 6,
+            "cost": 196586
+          },
+          {
+            "topic": "Реквест (внутренний запрос",
+            "count": 18,
+            "pct": 1.5,
+            "undesired": 12,
+            "undesired_pct": 66.7,
+            "repeat": 2,
+            "cost": 136098
+          },
+          {
+            "topic": "Инвентаризация",
+            "count": 17,
+            "pct": 1.4,
+            "undesired": 7,
+            "undesired_pct": 41.2,
+            "repeat": 2,
+            "cost": 128537
+          }
+        ],
+        "labels_breakdown": [
+          {
+            "label": "Массовый сбой BILLZ",
+            "count": 145,
+            "cost": 1096345
+          },
+          {
+            "label": "Кассовые смены — Открытие/Закрытие смен",
+            "count": 119,
+            "cost": 899759
+          },
+          {
+            "label": "Документооборот - Оплата за тариф",
+            "count": 71,
+            "cost": 536831
+          },
+          {
+            "label": "Оборудование - Установка/Настройка/Удаление принтера",
+            "count": 57,
+            "cost": 430977
+          },
+          {
+            "label": "Все продажи - Удаление/Редактирование продажи",
+            "count": 49,
+            "cost": 370489
+          },
+          {
+            "label": "Учётная запись - Блокировка/Разблокировка аккаунта",
+            "count": 43,
+            "cost": 325123
+          },
+          {
+            "label": "Учётная запись - Помощь со входом в аккаунт",
+            "count": 35,
+            "cost": 264635
+          },
+          {
+            "label": "Новая продажа - Не удаётся сделать продажу",
+            "count": 28,
+            "cost": 211708
+          },
+          {
+            "label": "Баг (реквест)",
+            "count": 26,
+            "cost": 196586
+          },
+          {
+            "label": "Каталог — настройка печати ценника",
+            "count": 25,
+            "cost": 189025
+          }
+        ]
       },
       {
         "name": "Shoxruh Maxmud",
-        "tickets": 855,
-        "desired": 399,
-        "undesired": 437,
-        "undesired_pct": 51.1,
-        "partial": 28,
-        "full": null,
-        "training_total": 28,
-        "repeat_count": 54,
-        "repeat_pct": 6.3,
-        "med_close": 4.0,
-        "med_frt_min": 0.4,
-        "stores_count": 219,
-        "cost": 6464655,
-        "tag": "big_base",
+        "role": "bigbase",
+        "non_critical": true,
         "tag_label": "🔵 Большая база",
         "tag_color": "#3B82F6",
-        "big_base": true,
-        "note": "",
-        "top_topic": "Массовый сбой BILLZ",
-        "top_undesired_topic": "Массовый сбой BILLZ"
+        "tickets": 977,
+        "desired": 447,
+        "undesired": 509,
+        "undesired_pct": 52.1,
+        "partial": 28,
+        "full": 1,
+        "training_total": 29,
+        "repeat_count": 71,
+        "repeat_pct": 7.3,
+        "med_close": 3.4,
+        "med_frt_min": 0.4,
+        "stores_count": 223,
+        "massoviy_count": 162,
+        "cost": 7387097,
+        "top_topic": "Документооборот",
+        "top_undesired_topic": "Массовый сбой BILLZ",
+        "topic_breakdown": [
+          {
+            "topic": "Документооборот",
+            "count": 160,
+            "pct": 16.4,
+            "undesired": 96,
+            "undesired_pct": 60.0,
+            "repeat": 14,
+            "cost": 1209760
+          },
+          {
+            "topic": "Массовый сбой BILLZ",
+            "count": 153,
+            "pct": 15.7,
+            "undesired": 116,
+            "undesired_pct": 75.8,
+            "repeat": 1,
+            "cost": 1156833
+          },
+          {
+            "topic": "Учётная запись",
+            "count": 68,
+            "pct": 7.0,
+            "undesired": 37,
+            "undesired_pct": 54.4,
+            "repeat": 2,
+            "cost": 514148
+          },
+          {
+            "topic": "Каталог",
+            "count": 59,
+            "pct": 6.0,
+            "undesired": 19,
+            "undesired_pct": 32.2,
+            "repeat": 9,
+            "cost": 446099
+          },
+          {
+            "topic": "Настройка",
+            "count": 47,
+            "pct": 4.8,
+            "undesired": 17,
+            "undesired_pct": 36.2,
+            "repeat": 4,
+            "cost": 355367
+          },
+          {
+            "topic": "Управление",
+            "count": 38,
+            "pct": 3.9,
+            "undesired": 9,
+            "undesired_pct": 23.7,
+            "repeat": 2,
+            "cost": 287318
+          },
+          {
+            "topic": "Баг (реквест)",
+            "count": 35,
+            "pct": 3.6,
+            "undesired": 12,
+            "undesired_pct": 34.3,
+            "repeat": 3,
+            "cost": 264635
+          },
+          {
+            "topic": "Новая продажа",
+            "count": 34,
+            "pct": 3.5,
+            "undesired": 17,
+            "undesired_pct": 50.0,
+            "repeat": 3,
+            "cost": 257074
+          },
+          {
+            "topic": "Оборудование",
+            "count": 32,
+            "pct": 3.3,
+            "undesired": 13,
+            "undesired_pct": 40.6,
+            "repeat": 1,
+            "cost": 241952
+          },
+          {
+            "topic": "Отчёты",
+            "count": 25,
+            "pct": 2.6,
+            "undesired": 5,
+            "undesired_pct": 20.0,
+            "repeat": 3,
+            "cost": 189025
+          },
+          {
+            "topic": "Трансфер",
+            "count": 24,
+            "pct": 2.5,
+            "undesired": 11,
+            "undesired_pct": 45.8,
+            "repeat": 3,
+            "cost": 181464
+          },
+          {
+            "topic": "Кассовые смены",
+            "count": 21,
+            "pct": 2.1,
+            "undesired": 7,
+            "undesired_pct": 33.3,
+            "repeat": 1,
+            "cost": 158781
+          },
+          {
+            "topic": "Импорт",
+            "count": 20,
+            "pct": 2.0,
+            "undesired": 10,
+            "undesired_pct": 50.0,
+            "repeat": 2,
+            "cost": 151220
+          },
+          {
+            "topic": "Инвентаризация",
+            "count": 16,
+            "pct": 1.6,
+            "undesired": 3,
+            "undesired_pct": 18.8,
+            "repeat": 1,
+            "cost": 120976
+          },
+          {
+            "topic": "Все клиенты",
+            "count": 14,
+            "pct": 1.4,
+            "undesired": 8,
+            "undesired_pct": 57.1,
+            "repeat": 0,
+            "cost": 105854
+          }
+        ],
+        "labels_breakdown": [
+          {
+            "label": "Массовый сбой BILLZ",
+            "count": 153,
+            "cost": 1156833
+          },
+          {
+            "label": "Документооборот - Оплата за тариф",
+            "count": 89,
+            "cost": 672929
+          },
+          {
+            "label": "Документооборот - Создание ссылки для оплаты",
+            "count": 37,
+            "cost": 279757
+          },
+          {
+            "label": "Баг (реквест)",
+            "count": 35,
+            "cost": 264635
+          },
+          {
+            "label": "Учётная запись - Помощь со входом в аккаунт",
+            "count": 29,
+            "cost": 219269
+          },
+          {
+            "label": "Учётная запись - Блокировка/Разблокировка аккаунта",
+            "count": 28,
+            "cost": 211708
+          },
+          {
+            "label": "Каталог — настройка печати ценника",
+            "count": 27,
+            "cost": 204147
+          },
+          {
+            "label": "Управление - Создание/Редактирвоание/Удаление роли",
+            "count": 25,
+            "cost": 189025
+          },
+          {
+            "label": "Оборудование - Установка/Настройка/Удаление принтера",
+            "count": 23,
+            "cost": 173903
+          },
+          {
+            "label": "Настройка - Создание/Редактирование/Удаление доп. точки",
+            "count": 20,
+            "cost": 151220
+          }
+        ]
       },
       {
         "name": "Husan Artikov",
-        "tickets": 699,
-        "desired": 305,
-        "undesired": 374,
+        "role": "critical",
+        "non_critical": false,
+        "tag_label": "⭐ Критичный · большая база",
+        "tag_color": "#EF4444",
+        "tickets": 703,
+        "desired": 307,
+        "undesired": 376,
         "undesired_pct": 53.5,
         "partial": 19,
         "full": null,
         "training_total": 19,
         "repeat_count": 36,
-        "repeat_pct": 5.2,
-        "med_close": 3.5,
+        "repeat_pct": 5.1,
+        "med_close": 3.4,
         "med_frt_min": 0.4,
-        "stores_count": 197,
-        "cost": 5285139,
-        "tag": "big_base",
-        "tag_label": "🔵 Большая база",
-        "tag_color": "#3B82F6",
-        "big_base": true,
-        "note": "",
+        "stores_count": 200,
+        "massoviy_count": 119,
+        "cost": 5315383,
         "top_topic": "Документооборот",
-        "top_undesired_topic": "Массовый сбой BILLZ"
+        "top_undesired_topic": "Массовый сбой BILLZ",
+        "topic_breakdown": [
+          {
+            "topic": "Документооборот",
+            "count": 135,
+            "pct": 19.2,
+            "undesired": 88,
+            "undesired_pct": 65.2,
+            "repeat": 9,
+            "cost": 1020735
+          },
+          {
+            "topic": "Массовый сбой BILLZ",
+            "count": 117,
+            "pct": 16.6,
+            "undesired": 91,
+            "undesired_pct": 77.8,
+            "repeat": 0,
+            "cost": 884637
+          },
+          {
+            "topic": "Учётная запись",
+            "count": 57,
+            "pct": 8.1,
+            "undesired": 27,
+            "undesired_pct": 47.4,
+            "repeat": 3,
+            "cost": 430977
+          },
+          {
+            "topic": "Оборудование",
+            "count": 46,
+            "pct": 6.5,
+            "undesired": 19,
+            "undesired_pct": 41.3,
+            "repeat": 2,
+            "cost": 347806
+          },
+          {
+            "topic": "Каталог",
+            "count": 38,
+            "pct": 5.4,
+            "undesired": 16,
+            "undesired_pct": 42.1,
+            "repeat": 3,
+            "cost": 287318
+          },
+          {
+            "topic": "Управление",
+            "count": 28,
+            "pct": 4.0,
+            "undesired": 9,
+            "undesired_pct": 32.1,
+            "repeat": 5,
+            "cost": 211708
+          },
+          {
+            "topic": "Новая продажа",
+            "count": 26,
+            "pct": 3.7,
+            "undesired": 10,
+            "undesired_pct": 38.5,
+            "repeat": 1,
+            "cost": 196586
+          },
+          {
+            "topic": "Настройка",
+            "count": 23,
+            "pct": 3.3,
+            "undesired": 5,
+            "undesired_pct": 21.7,
+            "repeat": 0,
+            "cost": 173903
+          },
+          {
+            "topic": "Отчёты",
+            "count": 15,
+            "pct": 2.1,
+            "undesired": 3,
+            "undesired_pct": 20.0,
+            "repeat": 1,
+            "cost": 113415
+          },
+          {
+            "topic": "SMS рассылка",
+            "count": 14,
+            "pct": 2.0,
+            "undesired": 5,
+            "undesired_pct": 35.7,
+            "repeat": 1,
+            "cost": 105854
+          },
+          {
+            "topic": "Баг (реквест)",
+            "count": 13,
+            "pct": 1.8,
+            "undesired": 4,
+            "undesired_pct": 30.8,
+            "repeat": 1,
+            "cost": 98293
+          },
+          {
+            "topic": "Все продажи",
+            "count": 10,
+            "pct": 1.4,
+            "undesired": 3,
+            "undesired_pct": 30.0,
+            "repeat": 0,
+            "cost": 75610
+          },
+          {
+            "topic": "Заказы",
+            "count": 9,
+            "pct": 1.3,
+            "undesired": 4,
+            "undesired_pct": 44.4,
+            "repeat": 1,
+            "cost": 68049
+          },
+          {
+            "topic": "Реквест (внутренний запрос",
+            "count": 8,
+            "pct": 1.1,
+            "undesired": 5,
+            "undesired_pct": 62.5,
+            "repeat": 0,
+            "cost": 60488
+          },
+          {
+            "topic": "Инвентаризация",
+            "count": 6,
+            "pct": 0.9,
+            "undesired": 1,
+            "undesired_pct": 16.7,
+            "repeat": 1,
+            "cost": 45366
+          }
+        ],
+        "labels_breakdown": [
+          {
+            "label": "Массовый сбой BILLZ",
+            "count": 117,
+            "cost": 884637
+          },
+          {
+            "label": "Документооборот - Оплата за тариф",
+            "count": 79,
+            "cost": 597319
+          },
+          {
+            "label": "Документооборот - Создание ссылки для оплаты",
+            "count": 39,
+            "cost": 294879
+          },
+          {
+            "label": "Оборудование - Установка/Настройка/Удаление принтера",
+            "count": 33,
+            "cost": 249513
+          },
+          {
+            "label": "Учётная запись - Помощь со входом в аккаунт",
+            "count": 22,
+            "cost": 166342
+          },
+          {
+            "label": "Учётная запись - Блокировка/Разблокировка аккаунта",
+            "count": 20,
+            "cost": 151220
+          },
+          {
+            "label": "Управление - Создание/Редактирвоание/Удаление роли",
+            "count": 16,
+            "cost": 120976
+          },
+          {
+            "label": "Баг (реквест)",
+            "count": 13,
+            "cost": 98293
+          },
+          {
+            "label": "Новая продажа - Не удаётся сделать продажу",
+            "count": 13,
+            "cost": 98293
+          },
+          {
+            "label": "Управление - Создание/Редактирвоание/Удаление сотрудника",
+            "count": 12,
+            "cost": 90732
+          }
+        ]
       },
       {
         "name": "Sunnattilla Abdurazzoqov",
-        "tickets": 548,
-        "desired": 228,
-        "undesired": 303,
+        "role": "critical",
+        "non_critical": false,
+        "tag_label": "⭐ Критичный · большая база",
+        "tag_color": "#EF4444",
+        "tickets": 557,
+        "desired": 231,
+        "undesired": 308,
         "undesired_pct": 55.3,
         "partial": 15,
         "full": null,
         "training_total": 15,
-        "repeat_count": 39,
-        "repeat_pct": 7.1,
+        "repeat_count": 40,
+        "repeat_pct": 7.2,
         "med_close": 3.7,
         "med_frt_min": 0.4,
-        "stores_count": 145,
-        "cost": 4143428,
-        "tag": "big_base",
-        "tag_label": "🔵 Большая база",
-        "tag_color": "#3B82F6",
-        "big_base": true,
-        "note": "",
+        "stores_count": 149,
+        "massoviy_count": 91,
+        "cost": 4211477,
         "top_topic": "Документооборот",
-        "top_undesired_topic": "Массовый сбой BILLZ"
+        "top_undesired_topic": "Массовый сбой BILLZ",
+        "topic_breakdown": [
+          {
+            "topic": "Документооборот",
+            "count": 91,
+            "pct": 16.3,
+            "undesired": 58,
+            "undesired_pct": 63.7,
+            "repeat": 8,
+            "cost": 688051
+          },
+          {
+            "topic": "Массовый сбой BILLZ",
+            "count": 90,
+            "pct": 16.2,
+            "undesired": 68,
+            "undesired_pct": 75.6,
+            "repeat": 1,
+            "cost": 680490
+          },
+          {
+            "topic": "Учётная запись",
+            "count": 64,
+            "pct": 11.5,
+            "undesired": 33,
+            "undesired_pct": 51.6,
+            "repeat": 3,
+            "cost": 483904
+          },
+          {
+            "topic": "Оборудование",
+            "count": 44,
+            "pct": 7.9,
+            "undesired": 23,
+            "undesired_pct": 52.3,
+            "repeat": 8,
+            "cost": 332684
+          },
+          {
+            "topic": "Каталог",
+            "count": 24,
+            "pct": 4.3,
+            "undesired": 8,
+            "undesired_pct": 33.3,
+            "repeat": 1,
+            "cost": 181464
+          },
+          {
+            "topic": "Настройка",
+            "count": 24,
+            "pct": 4.3,
+            "undesired": 4,
+            "undesired_pct": 16.7,
+            "repeat": 0,
+            "cost": 181464
+          },
+          {
+            "topic": "Кассовые смены",
+            "count": 17,
+            "pct": 3.1,
+            "undesired": 9,
+            "undesired_pct": 52.9,
+            "repeat": 5,
+            "cost": 128537
+          },
+          {
+            "topic": "Управление",
+            "count": 14,
+            "pct": 2.5,
+            "undesired": 3,
+            "undesired_pct": 21.4,
+            "repeat": 2,
+            "cost": 105854
+          },
+          {
+            "topic": "Импорт",
+            "count": 12,
+            "pct": 2.2,
+            "undesired": 1,
+            "undesired_pct": 8.3,
+            "repeat": 1,
+            "cost": 90732
+          },
+          {
+            "topic": "Новая продажа",
+            "count": 12,
+            "pct": 2.2,
+            "undesired": 5,
+            "undesired_pct": 41.7,
+            "repeat": 2,
+            "cost": 90732
+          },
+          {
+            "topic": "Отчёты",
+            "count": 9,
+            "pct": 1.6,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 68049
+          },
+          {
+            "topic": "Баг (реквест)",
+            "count": 9,
+            "pct": 1.6,
+            "undesired": 5,
+            "undesired_pct": 55.6,
+            "repeat": 1,
+            "cost": 68049
+          },
+          {
+            "topic": "Desktop",
+            "count": 9,
+            "pct": 1.6,
+            "undesired": 6,
+            "undesired_pct": 66.7,
+            "repeat": 1,
+            "cost": 68049
+          },
+          {
+            "topic": "Финансы",
+            "count": 7,
+            "pct": 1.3,
+            "undesired": 1,
+            "undesired_pct": 14.3,
+            "repeat": 0,
+            "cost": 52927
+          },
+          {
+            "topic": "Инвентаризация",
+            "count": 7,
+            "pct": 1.3,
+            "undesired": 2,
+            "undesired_pct": 28.6,
+            "repeat": 0,
+            "cost": 52927
+          }
+        ],
+        "labels_breakdown": [
+          {
+            "label": "Массовый сбой BILLZ",
+            "count": 90,
+            "cost": 680490
+          },
+          {
+            "label": "Документооборот - Оплата за тариф",
+            "count": 48,
+            "cost": 362928
+          },
+          {
+            "label": "Учётная запись - Помощь со входом в аккаунт",
+            "count": 30,
+            "cost": 226830
+          },
+          {
+            "label": "Документооборот - Создание ссылки для оплаты",
+            "count": 24,
+            "cost": 181464
+          },
+          {
+            "label": "Оборудование - Установка/Настройка/Удаление принтера",
+            "count": 23,
+            "cost": 173903
+          },
+          {
+            "label": "Учётная запись - Блокировка/Разблокировка аккаунта",
+            "count": 18,
+            "cost": 136098
+          },
+          {
+            "label": "Оборудование - Установка Anydesk/BILLZ Desktop/Программы компьютера и тд.",
+            "count": 16,
+            "cost": 120976
+          },
+          {
+            "label": "Кассовые смены — Открытие/Закрытие смен",
+            "count": 13,
+            "cost": 98293
+          },
+          {
+            "label": "Управление - Создание/Редактирвоание/Удаление роли",
+            "count": 11,
+            "cost": 83171
+          },
+          {
+            "label": "Документооборот - Реактивация клиента",
+            "count": 10,
+            "cost": 75610
+          }
+        ]
       },
       {
         "name": "Jasur Mukhamedjanov",
-        "tickets": 448,
-        "desired": 186,
-        "undesired": 244,
-        "undesired_pct": 54.5,
+        "role": "teamlead",
+        "non_critical": true,
+        "tag_label": "👑 Тимлид",
+        "tag_color": "#A78BFA",
+        "tickets": 451,
+        "desired": 188,
+        "undesired": 245,
+        "undesired_pct": 54.3,
         "partial": 12,
         "full": 5,
         "training_total": 17,
         "repeat_count": 30,
         "repeat_pct": 6.7,
         "med_close": 3.5,
-        "med_frt_min": 0.5,
-        "stores_count": 100,
-        "cost": 3387328,
-        "tag": "big_base",
-        "tag_label": "🔵 Большая база",
-        "tag_color": "#3B82F6",
-        "big_base": true,
-        "note": "",
+        "med_frt_min": 0.45,
+        "stores_count": 103,
+        "massoviy_count": 73,
+        "cost": 3410011,
         "top_topic": "Массовый сбой BILLZ",
-        "top_undesired_topic": "Массовый сбой BILLZ"
+        "top_undesired_topic": "Массовый сбой BILLZ",
+        "topic_breakdown": [
+          {
+            "topic": "Массовый сбой BILLZ",
+            "count": 70,
+            "pct": 15.5,
+            "undesired": 52,
+            "undesired_pct": 74.3,
+            "repeat": 0,
+            "cost": 529270
+          },
+          {
+            "topic": "Документооборот",
+            "count": 53,
+            "pct": 11.8,
+            "undesired": 31,
+            "undesired_pct": 58.5,
+            "repeat": 1,
+            "cost": 400733
+          },
+          {
+            "topic": "Учётная запись",
+            "count": 34,
+            "pct": 7.5,
+            "undesired": 19,
+            "undesired_pct": 55.9,
+            "repeat": 1,
+            "cost": 257074
+          },
+          {
+            "topic": "Кассовые смены",
+            "count": 30,
+            "pct": 6.7,
+            "undesired": 20,
+            "undesired_pct": 66.7,
+            "repeat": 5,
+            "cost": 226830
+          },
+          {
+            "topic": "Новая продажа",
+            "count": 29,
+            "pct": 6.4,
+            "undesired": 16,
+            "undesired_pct": 55.2,
+            "repeat": 3,
+            "cost": 219269
+          },
+          {
+            "topic": "Настройка",
+            "count": 26,
+            "pct": 5.8,
+            "undesired": 8,
+            "undesired_pct": 30.8,
+            "repeat": 2,
+            "cost": 196586
+          },
+          {
+            "topic": "Каталог",
+            "count": 16,
+            "pct": 3.5,
+            "undesired": 8,
+            "undesired_pct": 50.0,
+            "repeat": 1,
+            "cost": 120976
+          },
+          {
+            "topic": "Баг (реквест)",
+            "count": 13,
+            "pct": 2.9,
+            "undesired": 7,
+            "undesired_pct": 53.8,
+            "repeat": 0,
+            "cost": 98293
+          },
+          {
+            "topic": "Маркетинг",
+            "count": 12,
+            "pct": 2.7,
+            "undesired": 6,
+            "undesired_pct": 50.0,
+            "repeat": 4,
+            "cost": 90732
+          },
+          {
+            "topic": "Инвентаризация",
+            "count": 11,
+            "pct": 2.4,
+            "undesired": 3,
+            "undesired_pct": 27.3,
+            "repeat": 3,
+            "cost": 83171
+          },
+          {
+            "topic": "Управление",
+            "count": 9,
+            "pct": 2.0,
+            "undesired": 3,
+            "undesired_pct": 33.3,
+            "repeat": 2,
+            "cost": 68049
+          },
+          {
+            "topic": "Оборудование",
+            "count": 9,
+            "pct": 2.0,
+            "undesired": 1,
+            "undesired_pct": 11.1,
+            "repeat": 1,
+            "cost": 68049
+          },
+          {
+            "topic": "Импорт",
+            "count": 9,
+            "pct": 2.0,
+            "undesired": 1,
+            "undesired_pct": 11.1,
+            "repeat": 0,
+            "cost": 68049
+          },
+          {
+            "topic": "Все продажи",
+            "count": 9,
+            "pct": 2.0,
+            "undesired": 1,
+            "undesired_pct": 11.1,
+            "repeat": 0,
+            "cost": 68049
+          },
+          {
+            "topic": "Общались по звонку",
+            "count": 9,
+            "pct": 2.0,
+            "undesired": 7,
+            "undesired_pct": 77.8,
+            "repeat": 0,
+            "cost": 68049
+          }
+        ],
+        "labels_breakdown": [
+          {
+            "label": "Массовый сбой BILLZ",
+            "count": 70,
+            "cost": 529270
+          },
+          {
+            "label": "Документооборот - Оплата за тариф",
+            "count": 31,
+            "cost": 234391
+          },
+          {
+            "label": "Кассовые смены — Открытие/Закрытие смен",
+            "count": 19,
+            "cost": 143659
+          },
+          {
+            "label": "Новая продажа - Не удаётся сделать продажу",
+            "count": 17,
+            "cost": 128537
+          },
+          {
+            "label": "Учётная запись - Блокировка/Разблокировка аккаунта",
+            "count": 14,
+            "cost": 105854
+          },
+          {
+            "label": "Баг (реквест)",
+            "count": 13,
+            "cost": 98293
+          },
+          {
+            "label": "Учётная запись - Помощь со входом в аккаунт",
+            "count": 13,
+            "cost": 98293
+          },
+          {
+            "label": "Настройка - Установка BILLZ PAY/Payme/Epos/PAX",
+            "count": 13,
+            "cost": 98293
+          },
+          {
+            "label": "Маркетинг - Работа с Сертификатом/Ваучером",
+            "count": 12,
+            "cost": 90732
+          },
+          {
+            "label": "Кассовые смены — Расхождение суммы",
+            "count": 9,
+            "cost": 68049
+          }
+        ]
       },
       {
         "name": "Maftuna Shernazarova",
-        "tickets": 415,
+        "role": "critical",
+        "non_critical": false,
+        "tag_label": "⭐ Критичный · большая база",
+        "tag_color": "#EF4444",
+        "tickets": 416,
         "desired": 203,
         "undesired": 208,
-        "undesired_pct": 50.1,
+        "undesired_pct": 50.0,
         "partial": 18,
         "full": 2,
         "training_total": 20,
@@ -23009,91 +24178,635 @@ const BILLZ_DATA = {
         "repeat_pct": 8.2,
         "med_close": 3.8,
         "med_frt_min": 0.4,
-        "stores_count": 87,
-        "cost": 3137815,
-        "tag": "big_base",
-        "tag_label": "🔵 Большая база",
-        "tag_color": "#3B82F6",
-        "big_base": true,
-        "note": "",
+        "stores_count": 88,
+        "massoviy_count": 37,
+        "cost": 3145376,
         "top_topic": "Оборудование",
-        "top_undesired_topic": "Массовый сбой BILLZ"
+        "top_undesired_topic": "Массовый сбой BILLZ",
+        "topic_breakdown": [
+          {
+            "topic": "Оборудование",
+            "count": 44,
+            "pct": 10.6,
+            "undesired": 16,
+            "undesired_pct": 36.4,
+            "repeat": 8,
+            "cost": 332684
+          },
+          {
+            "topic": "Учётная запись",
+            "count": 38,
+            "pct": 9.1,
+            "undesired": 23,
+            "undesired_pct": 60.5,
+            "repeat": 2,
+            "cost": 287318
+          },
+          {
+            "topic": "Массовый сбой BILLZ",
+            "count": 35,
+            "pct": 8.4,
+            "undesired": 25,
+            "undesired_pct": 71.4,
+            "repeat": 1,
+            "cost": 264635
+          },
+          {
+            "topic": "Документооборот",
+            "count": 34,
+            "pct": 8.2,
+            "undesired": 17,
+            "undesired_pct": 50.0,
+            "repeat": 1,
+            "cost": 257074
+          },
+          {
+            "topic": "Каталог",
+            "count": 33,
+            "pct": 7.9,
+            "undesired": 14,
+            "undesired_pct": 42.4,
+            "repeat": 1,
+            "cost": 249513
+          },
+          {
+            "topic": "Новая продажа",
+            "count": 24,
+            "pct": 5.8,
+            "undesired": 9,
+            "undesired_pct": 37.5,
+            "repeat": 4,
+            "cost": 181464
+          },
+          {
+            "topic": "Настройка",
+            "count": 13,
+            "pct": 3.1,
+            "undesired": 4,
+            "undesired_pct": 30.8,
+            "repeat": 2,
+            "cost": 98293
+          },
+          {
+            "topic": "Отчёты",
+            "count": 12,
+            "pct": 2.9,
+            "undesired": 2,
+            "undesired_pct": 16.7,
+            "repeat": 0,
+            "cost": 90732
+          },
+          {
+            "topic": "Импорт",
+            "count": 10,
+            "pct": 2.4,
+            "undesired": 4,
+            "undesired_pct": 40.0,
+            "repeat": 2,
+            "cost": 75610
+          },
+          {
+            "topic": "Долги клиентов",
+            "count": 10,
+            "pct": 2.4,
+            "undesired": 3,
+            "undesired_pct": 30.0,
+            "repeat": 3,
+            "cost": 75610
+          },
+          {
+            "topic": "Управление",
+            "count": 10,
+            "pct": 2.4,
+            "undesired": 4,
+            "undesired_pct": 40.0,
+            "repeat": 1,
+            "cost": 75610
+          },
+          {
+            "topic": "Кассовые смены",
+            "count": 9,
+            "pct": 2.2,
+            "undesired": 3,
+            "undesired_pct": 33.3,
+            "repeat": 0,
+            "cost": 68049
+          },
+          {
+            "topic": "SMS рассылка",
+            "count": 9,
+            "pct": 2.2,
+            "undesired": 7,
+            "undesired_pct": 77.8,
+            "repeat": 0,
+            "cost": 68049
+          },
+          {
+            "topic": "Все продажи",
+            "count": 8,
+            "pct": 1.9,
+            "undesired": 1,
+            "undesired_pct": 12.5,
+            "repeat": 1,
+            "cost": 60488
+          },
+          {
+            "topic": "Инвентаризация",
+            "count": 7,
+            "pct": 1.7,
+            "undesired": 2,
+            "undesired_pct": 28.6,
+            "repeat": 0,
+            "cost": 52927
+          }
+        ],
+        "labels_breakdown": [
+          {
+            "label": "Массовый сбой BILLZ",
+            "count": 35,
+            "cost": 264635
+          },
+          {
+            "label": "Учётная запись - Помощь со входом в аккаунт",
+            "count": 21,
+            "cost": 158781
+          },
+          {
+            "label": "Документооборот - Оплата за тариф",
+            "count": 17,
+            "cost": 128537
+          },
+          {
+            "label": "Оборудование - Установка/Настройка/Удаление принтера",
+            "count": 16,
+            "cost": 120976
+          },
+          {
+            "label": "Каталог — настройка печати ценника",
+            "count": 14,
+            "cost": 105854
+          },
+          {
+            "label": "Оборудование - Загрузка базу товаров в весы",
+            "count": 14,
+            "cost": 105854
+          },
+          {
+            "label": "Документооборот - Создание ссылки для оплаты",
+            "count": 10,
+            "cost": 75610
+          },
+          {
+            "label": "Кассовые смены — Открытие/Закрытие смен",
+            "count": 9,
+            "cost": 68049
+          },
+          {
+            "label": "Оборудование - Установка Anydesk/BILLZ Desktop/Программы компьютера и тд.",
+            "count": 9,
+            "cost": 68049
+          },
+          {
+            "label": "Учётная запись - Блокировка/Разблокировка аккаунта",
+            "count": 9,
+            "cost": 68049
+          }
+        ]
       },
       {
         "name": "Xasanali Ummatov",
-        "tickets": 287,
+        "role": "critical",
+        "non_critical": false,
+        "tag_label": "⭐ Критичный · большая база",
+        "tag_color": "#EF4444",
+        "tickets": 291,
         "desired": 116,
-        "undesired": 166,
-        "undesired_pct": 57.8,
+        "undesired": 170,
+        "undesired_pct": 58.4,
         "partial": 7,
         "full": 1,
         "training_total": 8,
         "repeat_count": 26,
-        "repeat_pct": 9.1,
+        "repeat_pct": 8.9,
         "med_close": 2.7,
         "med_frt_min": 0.4,
-        "stores_count": 85,
-        "cost": 2170007,
-        "tag": "big_base",
-        "tag_label": "🔵 Большая база",
-        "tag_color": "#3B82F6",
-        "big_base": true,
-        "note": "",
+        "stores_count": 87,
+        "massoviy_count": 38,
+        "cost": 2200251,
         "top_topic": "Документооборот",
-        "top_undesired_topic": "Документооборот"
-      },
-      {
-        "name": "Self-onboarding",
-        "tickets": 263,
-        "desired": 132,
-        "undesired": 126,
-        "undesired_pct": 47.9,
-        "partial": 4,
-        "full": null,
-        "training_total": 4,
-        "repeat_count": 14,
-        "repeat_pct": 5.3,
-        "med_close": 3.4,
-        "med_frt_min": 0.4,
-        "stores_count": 88,
-        "cost": 1988543,
-        "tag": "big_base",
-        "tag_label": "🔵 Большая база",
-        "tag_color": "#3B82F6",
-        "big_base": true,
-        "note": "",
-        "top_topic": "Документооборот",
-        "top_undesired_topic": "Массовый сбой BILLZ"
+        "top_undesired_topic": "Документооборот",
+        "topic_breakdown": [
+          {
+            "topic": "Документооборот",
+            "count": 64,
+            "pct": 22.0,
+            "undesired": 34,
+            "undesired_pct": 53.1,
+            "repeat": 7,
+            "cost": 483904
+          },
+          {
+            "topic": "Массовый сбой BILLZ",
+            "count": 38,
+            "pct": 13.1,
+            "undesired": 33,
+            "undesired_pct": 86.8,
+            "repeat": 0,
+            "cost": 287318
+          },
+          {
+            "topic": "Учётная запись",
+            "count": 36,
+            "pct": 12.4,
+            "undesired": 20,
+            "undesired_pct": 55.6,
+            "repeat": 3,
+            "cost": 272196
+          },
+          {
+            "topic": "Оборудование",
+            "count": 13,
+            "pct": 4.5,
+            "undesired": 4,
+            "undesired_pct": 30.8,
+            "repeat": 1,
+            "cost": 98293
+          },
+          {
+            "topic": "Настройка",
+            "count": 12,
+            "pct": 4.1,
+            "undesired": 2,
+            "undesired_pct": 16.7,
+            "repeat": 2,
+            "cost": 90732
+          },
+          {
+            "topic": "Новая продажа",
+            "count": 10,
+            "pct": 3.4,
+            "undesired": 7,
+            "undesired_pct": 70.0,
+            "repeat": 2,
+            "cost": 75610
+          },
+          {
+            "topic": "Импорт",
+            "count": 10,
+            "pct": 3.4,
+            "undesired": 6,
+            "undesired_pct": 60.0,
+            "repeat": 0,
+            "cost": 75610
+          },
+          {
+            "topic": "Каталог",
+            "count": 9,
+            "pct": 3.1,
+            "undesired": 1,
+            "undesired_pct": 11.1,
+            "repeat": 0,
+            "cost": 68049
+          },
+          {
+            "topic": "Инвентаризация",
+            "count": 7,
+            "pct": 2.4,
+            "undesired": 1,
+            "undesired_pct": 14.3,
+            "repeat": 2,
+            "cost": 52927
+          },
+          {
+            "topic": "Финансы",
+            "count": 5,
+            "pct": 1.7,
+            "undesired": 2,
+            "undesired_pct": 40.0,
+            "repeat": 2,
+            "cost": 37805
+          },
+          {
+            "topic": "Отчёты",
+            "count": 5,
+            "pct": 1.7,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 37805
+          },
+          {
+            "topic": "Кассовые смены",
+            "count": 4,
+            "pct": 1.4,
+            "undesired": 2,
+            "undesired_pct": 50.0,
+            "repeat": 1,
+            "cost": 30244
+          },
+          {
+            "topic": "Баг (реквест)",
+            "count": 3,
+            "pct": 1.0,
+            "undesired": 1,
+            "undesired_pct": 33.3,
+            "repeat": 2,
+            "cost": 22683
+          },
+          {
+            "topic": "Все клиенты",
+            "count": 3,
+            "pct": 1.0,
+            "undesired": 1,
+            "undesired_pct": 33.3,
+            "repeat": 0,
+            "cost": 22683
+          },
+          {
+            "topic": "Управление",
+            "count": 3,
+            "pct": 1.0,
+            "undesired": 2,
+            "undesired_pct": 66.7,
+            "repeat": 0,
+            "cost": 22683
+          }
+        ],
+        "labels_breakdown": [
+          {
+            "label": "Документооборот - Оплата за тариф",
+            "count": 43,
+            "cost": 325123
+          },
+          {
+            "label": "Массовый сбой BILLZ",
+            "count": 38,
+            "cost": 287318
+          },
+          {
+            "label": "Учётная запись - Блокировка/Разблокировка аккаунта",
+            "count": 19,
+            "cost": 143659
+          },
+          {
+            "label": "Документооборот - Создание ссылки для оплаты",
+            "count": 14,
+            "cost": 105854
+          },
+          {
+            "label": "Учётная запись - Помощь со входом в аккаунт",
+            "count": 13,
+            "cost": 98293
+          },
+          {
+            "label": "Оборудование - Установка/Настройка/Удаление принтера",
+            "count": 11,
+            "cost": 83171
+          },
+          {
+            "label": "Импорт — импорт товаров через Excel",
+            "count": 9,
+            "cost": 68049
+          },
+          {
+            "label": "Настройка - Редактирование товаров",
+            "count": 5,
+            "cost": 37805
+          },
+          {
+            "label": "Новая продажа - Не удаётся сделать продажу",
+            "count": 5,
+            "cost": 37805
+          },
+          {
+            "label": "Новая продажа - Возврат/Обмен",
+            "count": 4,
+            "cost": 30244
+          }
+        ]
       },
       {
         "name": "Alina Hanieva",
-        "tickets": 255,
-        "desired": 108,
+        "role": "critical",
+        "non_critical": false,
+        "tag_label": "⭐ Критичный · большая база",
+        "tag_color": "#EF4444",
+        "tickets": 259,
+        "desired": 112,
         "undesired": 141,
-        "undesired_pct": 55.3,
+        "undesired_pct": 54.4,
         "partial": 5,
         "full": 1,
         "training_total": 6,
         "repeat_count": 14,
-        "repeat_pct": 5.5,
-        "med_close": 4.5,
+        "repeat_pct": 5.4,
+        "med_close": 4.4,
         "med_frt_min": 0.4,
-        "stores_count": 70,
-        "cost": 1928055,
-        "tag": "big_base",
-        "tag_label": "🔵 Большая база",
-        "tag_color": "#3B82F6",
-        "big_base": true,
-        "note": "",
+        "stores_count": 73,
+        "massoviy_count": 56,
+        "cost": 1958299,
         "top_topic": "Массовый сбой BILLZ",
-        "top_undesired_topic": "Массовый сбой BILLZ"
+        "top_undesired_topic": "Массовый сбой BILLZ",
+        "topic_breakdown": [
+          {
+            "topic": "Массовый сбой BILLZ",
+            "count": 56,
+            "pct": 21.6,
+            "undesired": 43,
+            "undesired_pct": 76.8,
+            "repeat": 0,
+            "cost": 423416
+          },
+          {
+            "topic": "Документооборот",
+            "count": 32,
+            "pct": 12.4,
+            "undesired": 19,
+            "undesired_pct": 59.4,
+            "repeat": 1,
+            "cost": 241952
+          },
+          {
+            "topic": "Каталог",
+            "count": 16,
+            "pct": 6.2,
+            "undesired": 3,
+            "undesired_pct": 18.8,
+            "repeat": 0,
+            "cost": 120976
+          },
+          {
+            "topic": "Настройка",
+            "count": 15,
+            "pct": 5.8,
+            "undesired": 5,
+            "undesired_pct": 33.3,
+            "repeat": 2,
+            "cost": 113415
+          },
+          {
+            "topic": "Оборудование",
+            "count": 12,
+            "pct": 4.6,
+            "undesired": 4,
+            "undesired_pct": 33.3,
+            "repeat": 1,
+            "cost": 90732
+          },
+          {
+            "topic": "Учётная запись",
+            "count": 12,
+            "pct": 4.6,
+            "undesired": 9,
+            "undesired_pct": 75.0,
+            "repeat": 0,
+            "cost": 90732
+          },
+          {
+            "topic": "SMS рассылка",
+            "count": 11,
+            "pct": 4.2,
+            "undesired": 2,
+            "undesired_pct": 18.2,
+            "repeat": 1,
+            "cost": 83171
+          },
+          {
+            "topic": "Инвентаризация",
+            "count": 8,
+            "pct": 3.1,
+            "undesired": 2,
+            "undesired_pct": 25.0,
+            "repeat": 0,
+            "cost": 60488
+          },
+          {
+            "topic": "Долги клиентов",
+            "count": 6,
+            "pct": 2.3,
+            "undesired": 1,
+            "undesired_pct": 16.7,
+            "repeat": 1,
+            "cost": 45366
+          },
+          {
+            "topic": "Управление",
+            "count": 6,
+            "pct": 2.3,
+            "undesired": 2,
+            "undesired_pct": 33.3,
+            "repeat": 0,
+            "cost": 45366
+          },
+          {
+            "topic": "Новая продажа",
+            "count": 6,
+            "pct": 2.3,
+            "undesired": 2,
+            "undesired_pct": 33.3,
+            "repeat": 2,
+            "cost": 45366
+          },
+          {
+            "topic": "Баг (реквест)",
+            "count": 6,
+            "pct": 2.3,
+            "undesired": 4,
+            "undesired_pct": 66.7,
+            "repeat": 2,
+            "cost": 45366
+          },
+          {
+            "topic": "спам",
+            "count": 3,
+            "pct": 1.2,
+            "undesired": 3,
+            "undesired_pct": 100.0,
+            "repeat": 0,
+            "cost": 22683
+          },
+          {
+            "topic": "Финансы",
+            "count": 3,
+            "pct": 1.2,
+            "undesired": 1,
+            "undesired_pct": 33.3,
+            "repeat": 0,
+            "cost": 22683
+          },
+          {
+            "topic": "Отчёты",
+            "count": 3,
+            "pct": 1.2,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 22683
+          }
+        ],
+        "labels_breakdown": [
+          {
+            "label": "Массовый сбой BILLZ",
+            "count": 56,
+            "cost": 423416
+          },
+          {
+            "label": "Документооборот - Оплата за тариф",
+            "count": 18,
+            "cost": 136098
+          },
+          {
+            "label": "Оборудование - Установка/Настройка/Удаление принтера",
+            "count": 12,
+            "cost": 90732
+          },
+          {
+            "label": "Настройка - Установка BILLZ PAY/Payme/Epos/PAX",
+            "count": 6,
+            "cost": 45366
+          },
+          {
+            "label": "Учётная запись - Блокировка/Разблокировка аккаунта",
+            "count": 6,
+            "cost": 45366
+          },
+          {
+            "label": "Каталог — настройка печати ценника",
+            "count": 6,
+            "cost": 45366
+          },
+          {
+            "label": "Учётная запись - Помощь со входом в аккаунт",
+            "count": 6,
+            "cost": 45366
+          },
+          {
+            "label": "Баг (реквест)",
+            "count": 6,
+            "cost": 45366
+          },
+          {
+            "label": "SMS рассылка - Шаблонирование",
+            "count": 6,
+            "cost": 45366
+          },
+          {
+            "label": "Долги клиентов - Погашение/Удаление/Редактирование долга",
+            "count": 5,
+            "cost": 37805
+          }
+        ]
       },
       {
         "name": "Akbarali Kidiraliev",
-        "tickets": 243,
+        "role": "critical",
+        "non_critical": false,
+        "tag_label": "⭐ Критичный · большая база",
+        "tag_color": "#EF4444",
+        "tickets": 244,
         "desired": 128,
-        "undesired": 108,
-        "undesired_pct": 44.4,
+        "undesired": 109,
+        "undesired_pct": 44.7,
         "partial": 16,
         "full": 1,
         "training_total": 17,
@@ -23101,64 +24814,419 @@ const BILLZ_DATA = {
         "repeat_pct": 4.5,
         "med_close": 4.2,
         "med_frt_min": 0.4,
-        "stores_count": 62,
-        "cost": 1837323,
-        "tag": "big_base",
-        "tag_label": "🔵 Большая база",
-        "tag_color": "#3B82F6",
-        "big_base": true,
-        "note": "",
+        "stores_count": 63,
+        "massoviy_count": 30,
+        "cost": 1844884,
         "top_topic": "Массовый сбой BILLZ",
-        "top_undesired_topic": "Массовый сбой BILLZ"
+        "top_undesired_topic": "Массовый сбой BILLZ",
+        "topic_breakdown": [
+          {
+            "topic": "Массовый сбой BILLZ",
+            "count": 30,
+            "pct": 12.3,
+            "undesired": 22,
+            "undesired_pct": 73.3,
+            "repeat": 0,
+            "cost": 226830
+          },
+          {
+            "topic": "Документооборот",
+            "count": 27,
+            "pct": 11.1,
+            "undesired": 18,
+            "undesired_pct": 66.7,
+            "repeat": 1,
+            "cost": 204147
+          },
+          {
+            "topic": "Каталог",
+            "count": 21,
+            "pct": 8.6,
+            "undesired": 4,
+            "undesired_pct": 19.0,
+            "repeat": 1,
+            "cost": 158781
+          },
+          {
+            "topic": "Учётная запись",
+            "count": 16,
+            "pct": 6.6,
+            "undesired": 8,
+            "undesired_pct": 50.0,
+            "repeat": 0,
+            "cost": 120976
+          },
+          {
+            "topic": "Оборудование",
+            "count": 12,
+            "pct": 4.9,
+            "undesired": 2,
+            "undesired_pct": 16.7,
+            "repeat": 1,
+            "cost": 90732
+          },
+          {
+            "topic": "Управление",
+            "count": 12,
+            "pct": 4.9,
+            "undesired": 4,
+            "undesired_pct": 33.3,
+            "repeat": 1,
+            "cost": 90732
+          },
+          {
+            "topic": "Настройка",
+            "count": 11,
+            "pct": 4.5,
+            "undesired": 2,
+            "undesired_pct": 18.2,
+            "repeat": 2,
+            "cost": 83171
+          },
+          {
+            "topic": "Кассовые смены",
+            "count": 10,
+            "pct": 4.1,
+            "undesired": 6,
+            "undesired_pct": 60.0,
+            "repeat": 2,
+            "cost": 75610
+          },
+          {
+            "topic": "Новая продажа",
+            "count": 10,
+            "pct": 4.1,
+            "undesired": 5,
+            "undesired_pct": 50.0,
+            "repeat": 0,
+            "cost": 75610
+          },
+          {
+            "topic": "Заказы",
+            "count": 10,
+            "pct": 4.1,
+            "undesired": 4,
+            "undesired_pct": 40.0,
+            "repeat": 1,
+            "cost": 75610
+          },
+          {
+            "topic": "Отчёты",
+            "count": 7,
+            "pct": 2.9,
+            "undesired": 1,
+            "undesired_pct": 14.3,
+            "repeat": 0,
+            "cost": 52927
+          },
+          {
+            "topic": "Все продажи",
+            "count": 6,
+            "pct": 2.5,
+            "undesired": 1,
+            "undesired_pct": 16.7,
+            "repeat": 0,
+            "cost": 45366
+          },
+          {
+            "topic": "Импорт",
+            "count": 4,
+            "pct": 1.6,
+            "undesired": 1,
+            "undesired_pct": 25.0,
+            "repeat": 0,
+            "cost": 30244
+          },
+          {
+            "topic": "Баг (реквест)",
+            "count": 4,
+            "pct": 1.6,
+            "undesired": 2,
+            "undesired_pct": 50.0,
+            "repeat": 0,
+            "cost": 30244
+          },
+          {
+            "topic": "Кассовые операции",
+            "count": 3,
+            "pct": 1.2,
+            "undesired": 1,
+            "undesired_pct": 33.3,
+            "repeat": 0,
+            "cost": 22683
+          }
+        ],
+        "labels_breakdown": [
+          {
+            "label": "Массовый сбой BILLZ",
+            "count": 30,
+            "cost": 226830
+          },
+          {
+            "label": "Документооборот - Оплата за тариф",
+            "count": 13,
+            "cost": 98293
+          },
+          {
+            "label": "Учётная запись - Помощь со входом в аккаунт",
+            "count": 10,
+            "cost": 75610
+          },
+          {
+            "label": "Кассовые смены — Открытие/Закрытие смен",
+            "count": 9,
+            "cost": 68049
+          },
+          {
+            "label": "Документооборот - Создание ссылки для оплаты",
+            "count": 7,
+            "cost": 52927
+          },
+          {
+            "label": "Оборудование - Установка/Настройка/Удаление принтера",
+            "count": 7,
+            "cost": 52927
+          },
+          {
+            "label": "Управление - Создание/Редактирвоание/Удаление роли",
+            "count": 7,
+            "cost": 52927
+          },
+          {
+            "label": "Заказы — консультация по модулю (частичное обучение)",
+            "count": 6,
+            "cost": 45366
+          },
+          {
+            "label": "Новая продажа - Возврат/Обмен",
+            "count": 6,
+            "cost": 45366
+          },
+          {
+            "label": "Настройка - Создание/Редактирование/Удаление доп. точки",
+            "count": 5,
+            "cost": 37805
+          }
+        ]
       },
       {
         "name": "Marfiya Shadiyeva",
-        "tickets": 225,
-        "desired": 93,
-        "undesired": 121,
-        "undesired_pct": 53.8,
-        "partial": 8,
-        "full": 2,
-        "training_total": 10,
-        "repeat_count": 10,
-        "repeat_pct": 4.4,
-        "med_close": 3.3,
-        "med_frt_min": 0.3,
-        "stores_count": 57,
-        "cost": 1701225,
-        "tag": "big_base",
-        "tag_label": "🔵 Большая база",
-        "tag_color": "#3B82F6",
-        "big_base": true,
-        "note": "",
-        "top_topic": "Учётная запись",
-        "top_undesired_topic": "Документооборот"
-      },
-      {
-        "name": "Наш чел",
-        "tickets": 221,
+        "role": "critical",
+        "non_critical": false,
+        "tag_label": "⭐ Критичный · большая база",
+        "tag_color": "#EF4444",
+        "tickets": 230,
         "desired": 97,
-        "undesired": 117,
-        "undesired_pct": 52.9,
-        "partial": 1,
-        "full": null,
-        "training_total": 1,
-        "repeat_count": 26,
-        "repeat_pct": 11.8,
-        "med_close": 1.3,
-        "med_frt_min": 0.4,
-        "stores_count": 2,
-        "cost": 1670981,
-        "tag": null,
-        "tag_label": null,
-        "tag_color": null,
-        "big_base": false,
-        "note": "",
+        "undesired": 122,
+        "undesired_pct": 53.0,
+        "partial": 9,
+        "full": 2,
+        "training_total": 11,
+        "repeat_count": 11,
+        "repeat_pct": 4.8,
+        "med_close": 3.4,
+        "med_frt_min": 0.3,
+        "stores_count": 58,
+        "massoviy_count": 24,
+        "cost": 1739030,
         "top_topic": "Документооборот",
-        "top_undesired_topic": "Документооборот"
+        "top_undesired_topic": "Документооборот",
+        "topic_breakdown": [
+          {
+            "topic": "Документооборот",
+            "count": 29,
+            "pct": 12.6,
+            "undesired": 19,
+            "undesired_pct": 65.5,
+            "repeat": 0,
+            "cost": 219269
+          },
+          {
+            "topic": "Учётная запись",
+            "count": 29,
+            "pct": 12.6,
+            "undesired": 18,
+            "undesired_pct": 62.1,
+            "repeat": 0,
+            "cost": 219269
+          },
+          {
+            "topic": "Массовый сбой BILLZ",
+            "count": 24,
+            "pct": 10.4,
+            "undesired": 15,
+            "undesired_pct": 62.5,
+            "repeat": 0,
+            "cost": 181464
+          },
+          {
+            "topic": "Каталог",
+            "count": 18,
+            "pct": 7.8,
+            "undesired": 8,
+            "undesired_pct": 44.4,
+            "repeat": 0,
+            "cost": 136098
+          },
+          {
+            "topic": "Оборудование",
+            "count": 14,
+            "pct": 6.1,
+            "undesired": 9,
+            "undesired_pct": 64.3,
+            "repeat": 1,
+            "cost": 105854
+          },
+          {
+            "topic": "Настройка",
+            "count": 9,
+            "pct": 3.9,
+            "undesired": 1,
+            "undesired_pct": 11.1,
+            "repeat": 0,
+            "cost": 68049
+          },
+          {
+            "topic": "Новая продажа",
+            "count": 8,
+            "pct": 3.5,
+            "undesired": 1,
+            "undesired_pct": 12.5,
+            "repeat": 0,
+            "cost": 60488
+          },
+          {
+            "topic": "Трансфер",
+            "count": 6,
+            "pct": 2.6,
+            "undesired": 2,
+            "undesired_pct": 33.3,
+            "repeat": 3,
+            "cost": 45366
+          },
+          {
+            "topic": "Управление",
+            "count": 6,
+            "pct": 2.6,
+            "undesired": 2,
+            "undesired_pct": 33.3,
+            "repeat": 0,
+            "cost": 45366
+          },
+          {
+            "topic": "Инвентаризация",
+            "count": 5,
+            "pct": 2.2,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 37805
+          },
+          {
+            "topic": "Кассовые смены",
+            "count": 5,
+            "pct": 2.2,
+            "undesired": 4,
+            "undesired_pct": 80.0,
+            "repeat": 2,
+            "cost": 37805
+          },
+          {
+            "topic": "Desktop",
+            "count": 5,
+            "pct": 2.2,
+            "undesired": 2,
+            "undesired_pct": 40.0,
+            "repeat": 0,
+            "cost": 37805
+          },
+          {
+            "topic": "Импорт",
+            "count": 5,
+            "pct": 2.2,
+            "undesired": 1,
+            "undesired_pct": 20.0,
+            "repeat": 0,
+            "cost": 37805
+          },
+          {
+            "topic": "Финансы",
+            "count": 3,
+            "pct": 1.3,
+            "undesired": 1,
+            "undesired_pct": 33.3,
+            "repeat": 0,
+            "cost": 22683
+          },
+          {
+            "topic": "Все продажи",
+            "count": 3,
+            "pct": 1.3,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 22683
+          }
+        ],
+        "labels_breakdown": [
+          {
+            "label": "Массовый сбой BILLZ",
+            "count": 24,
+            "cost": 181464
+          },
+          {
+            "label": "Учётная запись - Помощь со входом в аккаунт",
+            "count": 18,
+            "cost": 136098
+          },
+          {
+            "label": "Документооборот - Оплата за тариф",
+            "count": 15,
+            "cost": 113415
+          },
+          {
+            "label": "Оборудование - Установка/Настройка/Удаление принтера",
+            "count": 8,
+            "cost": 60488
+          },
+          {
+            "label": "Каталог — настройка печати ценника",
+            "count": 7,
+            "cost": 52927
+          },
+          {
+            "label": "Документооборот - Создание ссылки для оплаты",
+            "count": 6,
+            "cost": 45366
+          },
+          {
+            "label": "Учётная запись - Блокировка/Разблокировка аккаунта",
+            "count": 6,
+            "cost": 45366
+          },
+          {
+            "label": "Desktop - Ошибка синхронизации",
+            "count": 5,
+            "cost": 37805
+          },
+          {
+            "label": "Каталог — изменение свойств товара",
+            "count": 5,
+            "cost": 37805
+          },
+          {
+            "label": "Кассовые смены — Открытие/Закрытие смен",
+            "count": 4,
+            "cost": 30244
+          }
+        ]
       },
       {
         "name": "Sanat Toshpulatov",
+        "role": "critical",
+        "non_critical": false,
+        "tag_label": "⭐ Критичный",
+        "tag_color": "#F87171",
         "tickets": 214,
         "desired": 104,
         "undesired": 107,
@@ -23171,21 +25239,210 @@ const BILLZ_DATA = {
         "med_close": 3.8,
         "med_frt_min": 0.4,
         "stores_count": 34,
+        "massoviy_count": 20,
         "cost": 1618054,
-        "tag": "big_base",
-        "tag_label": "🔵 Большая база",
-        "tag_color": "#3B82F6",
-        "big_base": true,
-        "note": "",
         "top_topic": "Оборудование",
-        "top_undesired_topic": "Массовый сбой BILLZ"
+        "top_undesired_topic": "Массовый сбой BILLZ",
+        "topic_breakdown": [
+          {
+            "topic": "Оборудование",
+            "count": 28,
+            "pct": 13.1,
+            "undesired": 8,
+            "undesired_pct": 28.6,
+            "repeat": 4,
+            "cost": 211708
+          },
+          {
+            "topic": "Массовый сбой BILLZ",
+            "count": 20,
+            "pct": 9.3,
+            "undesired": 15,
+            "undesired_pct": 75.0,
+            "repeat": 1,
+            "cost": 151220
+          },
+          {
+            "topic": "Документооборот",
+            "count": 18,
+            "pct": 8.4,
+            "undesired": 10,
+            "undesired_pct": 55.6,
+            "repeat": 2,
+            "cost": 136098
+          },
+          {
+            "topic": "Новая продажа",
+            "count": 18,
+            "pct": 8.4,
+            "undesired": 7,
+            "undesired_pct": 38.9,
+            "repeat": 6,
+            "cost": 136098
+          },
+          {
+            "topic": "Каталог",
+            "count": 15,
+            "pct": 7.0,
+            "undesired": 8,
+            "undesired_pct": 53.3,
+            "repeat": 0,
+            "cost": 113415
+          },
+          {
+            "topic": "Настройка",
+            "count": 10,
+            "pct": 4.7,
+            "undesired": 3,
+            "undesired_pct": 30.0,
+            "repeat": 0,
+            "cost": 75610
+          },
+          {
+            "topic": "Кассовые смены",
+            "count": 10,
+            "pct": 4.7,
+            "undesired": 7,
+            "undesired_pct": 70.0,
+            "repeat": 4,
+            "cost": 75610
+          },
+          {
+            "topic": "Отчёты",
+            "count": 9,
+            "pct": 4.2,
+            "undesired": 1,
+            "undesired_pct": 11.1,
+            "repeat": 1,
+            "cost": 68049
+          },
+          {
+            "topic": "Учётная запись",
+            "count": 7,
+            "pct": 3.3,
+            "undesired": 3,
+            "undesired_pct": 42.9,
+            "repeat": 0,
+            "cost": 52927
+          },
+          {
+            "topic": "Импорт",
+            "count": 7,
+            "pct": 3.3,
+            "undesired": 2,
+            "undesired_pct": 28.6,
+            "repeat": 3,
+            "cost": 52927
+          },
+          {
+            "topic": "Управление",
+            "count": 6,
+            "pct": 2.8,
+            "undesired": 2,
+            "undesired_pct": 33.3,
+            "repeat": 1,
+            "cost": 45366
+          },
+          {
+            "topic": "Заказы",
+            "count": 5,
+            "pct": 2.3,
+            "undesired": 2,
+            "undesired_pct": 40.0,
+            "repeat": 0,
+            "cost": 37805
+          },
+          {
+            "topic": "Поставщики",
+            "count": 4,
+            "pct": 1.9,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 30244
+          },
+          {
+            "topic": "Финансы",
+            "count": 3,
+            "pct": 1.4,
+            "undesired": 1,
+            "undesired_pct": 33.3,
+            "repeat": 1,
+            "cost": 22683
+          },
+          {
+            "topic": "Сайт/Бот",
+            "count": 2,
+            "pct": 0.9,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 15122
+          }
+        ],
+        "labels_breakdown": [
+          {
+            "label": "Массовый сбой BILLZ",
+            "count": 20,
+            "cost": 151220
+          },
+          {
+            "label": "Оборудование - Установка/Настройка/Удаление принтера",
+            "count": 18,
+            "cost": 136098
+          },
+          {
+            "label": "Оборудование - Установка Anydesk/BILLZ Desktop/Программы компьютера и тд.",
+            "count": 10,
+            "cost": 75610
+          },
+          {
+            "label": "Каталог — настройка печати ценника",
+            "count": 9,
+            "cost": 68049
+          },
+          {
+            "label": "Кассовые смены — Открытие/Закрытие смен",
+            "count": 8,
+            "cost": 60488
+          },
+          {
+            "label": "Новая продажа - Возврат/Обмен",
+            "count": 7,
+            "cost": 52927
+          },
+          {
+            "label": "Документооборот - Оплата за тариф",
+            "count": 6,
+            "cost": 45366
+          },
+          {
+            "label": "Документооборот - Создание ссылки для оплаты",
+            "count": 6,
+            "cost": 45366
+          },
+          {
+            "label": "Новая продажа - Консультация",
+            "count": 5,
+            "cost": 37805
+          },
+          {
+            "label": "Импорт — импорт товаров через Excel",
+            "count": 5,
+            "cost": 37805
+          }
+        ]
       },
       {
         "name": "Azizjon Ibrohimov",
-        "tickets": 210,
-        "desired": 79,
+        "role": "critical",
+        "non_critical": false,
+        "tag_label": "⭐ Критичный · большая база",
+        "tag_color": "#EF4444",
+        "tickets": 211,
+        "desired": 80,
         "undesired": 127,
-        "undesired_pct": 60.5,
+        "undesired_pct": 60.2,
         "partial": 6,
         "full": null,
         "training_total": 6,
@@ -23193,64 +25450,631 @@ const BILLZ_DATA = {
         "repeat_pct": 7.1,
         "med_close": 4.6,
         "med_frt_min": 0.3,
-        "stores_count": 56,
-        "cost": 1587810,
-        "tag": "big_base",
-        "tag_label": "🔵 Большая база",
-        "tag_color": "#3B82F6",
-        "big_base": true,
-        "note": "",
+        "stores_count": 57,
+        "massoviy_count": 28,
+        "cost": 1595371,
         "top_topic": "Оборудование",
-        "top_undesired_topic": "Массовый сбой BILLZ"
+        "top_undesired_topic": "Массовый сбой BILLZ",
+        "topic_breakdown": [
+          {
+            "topic": "Оборудование",
+            "count": 35,
+            "pct": 16.6,
+            "undesired": 15,
+            "undesired_pct": 42.9,
+            "repeat": 6,
+            "cost": 264635
+          },
+          {
+            "topic": "Документооборот",
+            "count": 30,
+            "pct": 14.2,
+            "undesired": 16,
+            "undesired_pct": 53.3,
+            "repeat": 2,
+            "cost": 226830
+          },
+          {
+            "topic": "Массовый сбой BILLZ",
+            "count": 28,
+            "pct": 13.3,
+            "undesired": 26,
+            "undesired_pct": 92.9,
+            "repeat": 0,
+            "cost": 211708
+          },
+          {
+            "topic": "Учётная запись",
+            "count": 10,
+            "pct": 4.7,
+            "undesired": 8,
+            "undesired_pct": 80.0,
+            "repeat": 1,
+            "cost": 75610
+          },
+          {
+            "topic": "Каталог",
+            "count": 10,
+            "pct": 4.7,
+            "undesired": 3,
+            "undesired_pct": 30.0,
+            "repeat": 0,
+            "cost": 75610
+          },
+          {
+            "topic": "Настройка",
+            "count": 8,
+            "pct": 3.8,
+            "undesired": 2,
+            "undesired_pct": 25.0,
+            "repeat": 1,
+            "cost": 60488
+          },
+          {
+            "topic": "Новая продажа",
+            "count": 6,
+            "pct": 2.8,
+            "undesired": 2,
+            "undesired_pct": 33.3,
+            "repeat": 0,
+            "cost": 45366
+          },
+          {
+            "topic": "Инвентаризация",
+            "count": 6,
+            "pct": 2.8,
+            "undesired": 2,
+            "undesired_pct": 33.3,
+            "repeat": 2,
+            "cost": 45366
+          },
+          {
+            "topic": "Desktop",
+            "count": 4,
+            "pct": 1.9,
+            "undesired": 2,
+            "undesired_pct": 50.0,
+            "repeat": 0,
+            "cost": 30244
+          },
+          {
+            "topic": "Отчёты",
+            "count": 4,
+            "pct": 1.9,
+            "undesired": 3,
+            "undesired_pct": 75.0,
+            "repeat": 1,
+            "cost": 30244
+          },
+          {
+            "topic": "Импорт",
+            "count": 4,
+            "pct": 1.9,
+            "undesired": 1,
+            "undesired_pct": 25.0,
+            "repeat": 0,
+            "cost": 30244
+          },
+          {
+            "topic": "Долги клиентов",
+            "count": 4,
+            "pct": 1.9,
+            "undesired": 1,
+            "undesired_pct": 25.0,
+            "repeat": 0,
+            "cost": 30244
+          },
+          {
+            "topic": "Общались по звонку",
+            "count": 3,
+            "pct": 1.4,
+            "undesired": 3,
+            "undesired_pct": 100.0,
+            "repeat": 0,
+            "cost": 22683
+          },
+          {
+            "topic": "Все продажи",
+            "count": 3,
+            "pct": 1.4,
+            "undesired": 1,
+            "undesired_pct": 33.3,
+            "repeat": 0,
+            "cost": 22683
+          },
+          {
+            "topic": "Финансы",
+            "count": 2,
+            "pct": 0.9,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 15122
+          }
+        ],
+        "labels_breakdown": [
+          {
+            "label": "Массовый сбой BILLZ",
+            "count": 28,
+            "cost": 211708
+          },
+          {
+            "label": "Документооборот - Оплата за тариф",
+            "count": 19,
+            "cost": 143659
+          },
+          {
+            "label": "Оборудование - Установка/Настройка/Удаление принтера",
+            "count": 10,
+            "cost": 75610
+          },
+          {
+            "label": "Оборудование - Установка Anydesk/BILLZ Desktop/Программы компьютера и тд.",
+            "count": 9,
+            "cost": 68049
+          },
+          {
+            "label": "Оборудование - Загрузка базу товаров в весы",
+            "count": 8,
+            "cost": 60488
+          },
+          {
+            "label": "Учётная запись - Помощь со входом в аккаунт",
+            "count": 7,
+            "cost": 52927
+          },
+          {
+            "label": "Оборудование - Установка/Настройка/Удаление весов",
+            "count": 6,
+            "cost": 45366
+          },
+          {
+            "label": "Документооборот - Консультация по тарифу",
+            "count": 4,
+            "cost": 30244
+          },
+          {
+            "label": "Каталог — изменение свойств товара",
+            "count": 4,
+            "cost": 30244
+          },
+          {
+            "label": "Desktop - Ошибка синхронизации",
+            "count": 3,
+            "cost": 22683
+          }
+        ]
       },
       {
         "name": "Ismoil Shorahimov",
-        "tickets": 174,
-        "desired": 73,
-        "undesired": 101,
-        "undesired_pct": 58.0,
-        "partial": 9,
+        "role": "critical",
+        "non_critical": false,
+        "tag_label": "⭐ Критичный",
+        "tag_color": "#F87171",
+        "tickets": 179,
+        "desired": 77,
+        "undesired": 102,
+        "undesired_pct": 57.0,
+        "partial": 10,
         "full": null,
-        "training_total": 9,
-        "repeat_count": 10,
-        "repeat_pct": 5.7,
-        "med_close": 4.95,
+        "training_total": 10,
+        "repeat_count": 11,
+        "repeat_pct": 6.1,
+        "med_close": 4.9,
         "med_frt_min": 0.6,
-        "stores_count": 40,
-        "cost": 1315614,
-        "tag": "big_base",
-        "tag_label": "🔵 Большая база",
-        "tag_color": "#3B82F6",
-        "big_base": true,
-        "note": "",
+        "stores_count": 41,
+        "massoviy_count": 25,
+        "cost": 1353419,
         "top_topic": "Массовый сбой BILLZ",
-        "top_undesired_topic": "Массовый сбой BILLZ"
+        "top_undesired_topic": "Массовый сбой BILLZ",
+        "topic_breakdown": [
+          {
+            "topic": "Массовый сбой BILLZ",
+            "count": 25,
+            "pct": 14.0,
+            "undesired": 23,
+            "undesired_pct": 92.0,
+            "repeat": 0,
+            "cost": 189025
+          },
+          {
+            "topic": "Документооборот",
+            "count": 18,
+            "pct": 10.1,
+            "undesired": 10,
+            "undesired_pct": 55.6,
+            "repeat": 0,
+            "cost": 136098
+          },
+          {
+            "topic": "Учётная запись",
+            "count": 10,
+            "pct": 5.6,
+            "undesired": 5,
+            "undesired_pct": 50.0,
+            "repeat": 0,
+            "cost": 75610
+          },
+          {
+            "topic": "Оборудование",
+            "count": 10,
+            "pct": 5.6,
+            "undesired": 2,
+            "undesired_pct": 20.0,
+            "repeat": 0,
+            "cost": 75610
+          },
+          {
+            "topic": "Каталог",
+            "count": 10,
+            "pct": 5.6,
+            "undesired": 3,
+            "undesired_pct": 30.0,
+            "repeat": 0,
+            "cost": 75610
+          },
+          {
+            "topic": "Новая продажа",
+            "count": 7,
+            "pct": 3.9,
+            "undesired": 1,
+            "undesired_pct": 14.3,
+            "repeat": 1,
+            "cost": 52927
+          },
+          {
+            "topic": "Долги клиентов",
+            "count": 6,
+            "pct": 3.4,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 45366
+          },
+          {
+            "topic": "Desktop",
+            "count": 5,
+            "pct": 2.8,
+            "undesired": 3,
+            "undesired_pct": 60.0,
+            "repeat": 2,
+            "cost": 37805
+          },
+          {
+            "topic": "Настройка",
+            "count": 5,
+            "pct": 2.8,
+            "undesired": 1,
+            "undesired_pct": 20.0,
+            "repeat": 0,
+            "cost": 37805
+          },
+          {
+            "topic": "Трансфер",
+            "count": 4,
+            "pct": 2.2,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 1,
+            "cost": 30244
+          },
+          {
+            "topic": "Кассовые смены",
+            "count": 4,
+            "pct": 2.2,
+            "undesired": 2,
+            "undesired_pct": 50.0,
+            "repeat": 1,
+            "cost": 30244
+          },
+          {
+            "topic": "Вопрос не по программе",
+            "count": 3,
+            "pct": 1.7,
+            "undesired": 2,
+            "undesired_pct": 66.7,
+            "repeat": 0,
+            "cost": 22683
+          },
+          {
+            "topic": "спам",
+            "count": 3,
+            "pct": 1.7,
+            "undesired": 3,
+            "undesired_pct": 100.0,
+            "repeat": 0,
+            "cost": 22683
+          },
+          {
+            "topic": "Импорт",
+            "count": 2,
+            "pct": 1.1,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 15122
+          },
+          {
+            "topic": "Баг (реквест)",
+            "count": 2,
+            "pct": 1.1,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 1,
+            "cost": 15122
+          }
+        ],
+        "labels_breakdown": [
+          {
+            "label": "Массовый сбой BILLZ",
+            "count": 25,
+            "cost": 189025
+          },
+          {
+            "label": "Документооборот - Оплата за тариф",
+            "count": 10,
+            "cost": 75610
+          },
+          {
+            "label": "Оборудование - Установка Anydesk/BILLZ Desktop/Программы компьютера и тд.",
+            "count": 6,
+            "cost": 45366
+          },
+          {
+            "label": "Долги клиентов - Погашение/Удаление/Редактирование долга",
+            "count": 5,
+            "cost": 37805
+          },
+          {
+            "label": "Desktop - Ошибка синхронизации",
+            "count": 5,
+            "cost": 37805
+          },
+          {
+            "label": "Учётная запись - Помощь со входом в аккаунт",
+            "count": 5,
+            "cost": 37805
+          },
+          {
+            "label": "Каталог — изменение свойств товара",
+            "count": 4,
+            "cost": 30244
+          },
+          {
+            "label": "Трансфер - консультация по модулю (частичное обучение)",
+            "count": 4,
+            "cost": 30244
+          },
+          {
+            "label": "Учётная запись - Блокировка/Разблокировка аккаунта",
+            "count": 3,
+            "cost": 22683
+          },
+          {
+            "label": "Оборудование - Установка/Настройка/Удаление принтера",
+            "count": 3,
+            "cost": 22683
+          }
+        ]
       },
       {
         "name": "Mukhammadaziz Koshakbayev",
-        "tickets": 166,
-        "desired": 78,
-        "undesired": 86,
-        "undesired_pct": 51.8,
+        "role": "critical",
+        "non_critical": false,
+        "tag_label": "⭐ Критичный",
+        "tag_color": "#F87171",
+        "tickets": 173,
+        "desired": 82,
+        "undesired": 89,
+        "undesired_pct": 51.4,
         "partial": 6,
         "full": null,
         "training_total": 6,
-        "repeat_count": 9,
-        "repeat_pct": 5.4,
-        "med_close": 3.75,
+        "repeat_count": 10,
+        "repeat_pct": 5.8,
+        "med_close": 3.7,
         "med_frt_min": 0.4,
-        "stores_count": 37,
-        "cost": 1255126,
-        "tag": "big_base",
-        "tag_label": "🔵 Большая база",
-        "tag_color": "#3B82F6",
-        "big_base": true,
-        "note": "",
-        "top_topic": "Документооборот",
-        "top_undesired_topic": "Массовый сбой BILLZ"
+        "stores_count": 39,
+        "massoviy_count": 14,
+        "cost": 1308053,
+        "top_topic": "Оборудование",
+        "top_undesired_topic": "Массовый сбой BILLZ",
+        "topic_breakdown": [
+          {
+            "topic": "Оборудование",
+            "count": 17,
+            "pct": 9.8,
+            "undesired": 8,
+            "undesired_pct": 47.1,
+            "repeat": 1,
+            "cost": 128537
+          },
+          {
+            "topic": "Документооборот",
+            "count": 16,
+            "pct": 9.2,
+            "undesired": 9,
+            "undesired_pct": 56.2,
+            "repeat": 0,
+            "cost": 120976
+          },
+          {
+            "topic": "Каталог",
+            "count": 15,
+            "pct": 8.7,
+            "undesired": 5,
+            "undesired_pct": 33.3,
+            "repeat": 1,
+            "cost": 113415
+          },
+          {
+            "topic": "Массовый сбой BILLZ",
+            "count": 13,
+            "pct": 7.5,
+            "undesired": 11,
+            "undesired_pct": 84.6,
+            "repeat": 1,
+            "cost": 98293
+          },
+          {
+            "topic": "Учётная запись",
+            "count": 11,
+            "pct": 6.4,
+            "undesired": 9,
+            "undesired_pct": 81.8,
+            "repeat": 0,
+            "cost": 83171
+          },
+          {
+            "topic": "Импорт",
+            "count": 9,
+            "pct": 5.2,
+            "undesired": 3,
+            "undesired_pct": 33.3,
+            "repeat": 0,
+            "cost": 68049
+          },
+          {
+            "topic": "Долги клиентов",
+            "count": 8,
+            "pct": 4.6,
+            "undesired": 1,
+            "undesired_pct": 12.5,
+            "repeat": 1,
+            "cost": 60488
+          },
+          {
+            "topic": "Desktop",
+            "count": 6,
+            "pct": 3.5,
+            "undesired": 2,
+            "undesired_pct": 33.3,
+            "repeat": 0,
+            "cost": 45366
+          },
+          {
+            "topic": "Управление",
+            "count": 5,
+            "pct": 2.9,
+            "undesired": 1,
+            "undesired_pct": 20.0,
+            "repeat": 0,
+            "cost": 37805
+          },
+          {
+            "topic": "Все клиенты",
+            "count": 4,
+            "pct": 2.3,
+            "undesired": 2,
+            "undesired_pct": 50.0,
+            "repeat": 1,
+            "cost": 30244
+          },
+          {
+            "topic": "Новая продажа",
+            "count": 4,
+            "pct": 2.3,
+            "undesired": 1,
+            "undesired_pct": 25.0,
+            "repeat": 0,
+            "cost": 30244
+          },
+          {
+            "topic": "Все продажи",
+            "count": 4,
+            "pct": 2.3,
+            "undesired": 1,
+            "undesired_pct": 25.0,
+            "repeat": 0,
+            "cost": 30244
+          },
+          {
+            "topic": "Общались по звонку",
+            "count": 3,
+            "pct": 1.7,
+            "undesired": 2,
+            "undesired_pct": 66.7,
+            "repeat": 1,
+            "cost": 22683
+          },
+          {
+            "topic": "Финансы",
+            "count": 3,
+            "pct": 1.7,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 22683
+          },
+          {
+            "topic": "Кассовые смены",
+            "count": 3,
+            "pct": 1.7,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 22683
+          }
+        ],
+        "labels_breakdown": [
+          {
+            "label": "Массовый сбой BILLZ",
+            "count": 13,
+            "cost": 98293
+          },
+          {
+            "label": "Документооборот - Оплата за тариф",
+            "count": 12,
+            "cost": 90732
+          },
+          {
+            "label": "Оборудование - Установка/Настройка/Удаление принтера",
+            "count": 12,
+            "cost": 90732
+          },
+          {
+            "label": "Учётная запись - Помощь со входом в аккаунт",
+            "count": 7,
+            "cost": 52927
+          },
+          {
+            "label": "Импорт — импорт товаров через Excel",
+            "count": 7,
+            "cost": 52927
+          },
+          {
+            "label": "Долги клиентов - Погашение/Удаление/Редактирование долга",
+            "count": 6,
+            "cost": 45366
+          },
+          {
+            "label": "Desktop - Ошибка синхронизации",
+            "count": 6,
+            "cost": 45366
+          },
+          {
+            "label": "Все клиенты - Создание/удаление/редактирование",
+            "count": 4,
+            "cost": 30244
+          },
+          {
+            "label": "Оборудование - Установка Anydesk/BILLZ Desktop/Программы компьютера и тд.",
+            "count": 4,
+            "cost": 30244
+          },
+          {
+            "label": "Управление - Создание/Редактирвоание/Удаление роли",
+            "count": 3,
+            "cost": 22683
+          }
+        ]
       },
       {
         "name": "Saidamir Argumbaev",
+        "role": "critical",
+        "non_critical": false,
+        "tag_label": "⭐ Критичный",
+        "tag_color": "#F87171",
         "tickets": 125,
         "desired": 50,
         "undesired": 75,
@@ -23263,86 +26087,630 @@ const BILLZ_DATA = {
         "med_close": 3.95,
         "med_frt_min": 0.4,
         "stores_count": 34,
+        "massoviy_count": 13,
         "cost": 945125,
-        "tag": "big_base",
-        "tag_label": "🔵 Большая база",
-        "tag_color": "#3B82F6",
-        "big_base": true,
-        "note": "",
         "top_topic": "Массовый сбой BILLZ",
-        "top_undesired_topic": "Массовый сбой BILLZ"
+        "top_undesired_topic": "Массовый сбой BILLZ",
+        "topic_breakdown": [
+          {
+            "topic": "Массовый сбой BILLZ",
+            "count": 13,
+            "pct": 10.4,
+            "undesired": 12,
+            "undesired_pct": 92.3,
+            "repeat": 0,
+            "cost": 98293
+          },
+          {
+            "topic": "Учётная запись",
+            "count": 11,
+            "pct": 8.8,
+            "undesired": 6,
+            "undesired_pct": 54.5,
+            "repeat": 0,
+            "cost": 83171
+          },
+          {
+            "topic": "Каталог",
+            "count": 11,
+            "pct": 8.8,
+            "undesired": 5,
+            "undesired_pct": 45.5,
+            "repeat": 1,
+            "cost": 83171
+          },
+          {
+            "topic": "Документооборот",
+            "count": 9,
+            "pct": 7.2,
+            "undesired": 3,
+            "undesired_pct": 33.3,
+            "repeat": 0,
+            "cost": 68049
+          },
+          {
+            "topic": "Настройка",
+            "count": 7,
+            "pct": 5.6,
+            "undesired": 1,
+            "undesired_pct": 14.3,
+            "repeat": 1,
+            "cost": 52927
+          },
+          {
+            "topic": "Кассовые смены",
+            "count": 7,
+            "pct": 5.6,
+            "undesired": 6,
+            "undesired_pct": 85.7,
+            "repeat": 0,
+            "cost": 52927
+          },
+          {
+            "topic": "Новая продажа",
+            "count": 6,
+            "pct": 4.8,
+            "undesired": 2,
+            "undesired_pct": 33.3,
+            "repeat": 0,
+            "cost": 45366
+          },
+          {
+            "topic": "Оборудование",
+            "count": 6,
+            "pct": 4.8,
+            "undesired": 3,
+            "undesired_pct": 50.0,
+            "repeat": 0,
+            "cost": 45366
+          },
+          {
+            "topic": "Переоценка",
+            "count": 4,
+            "pct": 3.2,
+            "undesired": 1,
+            "undesired_pct": 25.0,
+            "repeat": 1,
+            "cost": 30244
+          },
+          {
+            "topic": "Импорт",
+            "count": 4,
+            "pct": 3.2,
+            "undesired": 2,
+            "undesired_pct": 50.0,
+            "repeat": 1,
+            "cost": 30244
+          },
+          {
+            "topic": "Баг (реквест)",
+            "count": 3,
+            "pct": 2.4,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 22683
+          },
+          {
+            "topic": "Отчёты",
+            "count": 3,
+            "pct": 2.4,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 22683
+          },
+          {
+            "topic": "Акции",
+            "count": 2,
+            "pct": 1.6,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 15122
+          },
+          {
+            "topic": "Все клиенты",
+            "count": 2,
+            "pct": 1.6,
+            "undesired": 1,
+            "undesired_pct": 50.0,
+            "repeat": 0,
+            "cost": 15122
+          },
+          {
+            "topic": "Долги клиентов",
+            "count": 2,
+            "pct": 1.6,
+            "undesired": 1,
+            "undesired_pct": 50.0,
+            "repeat": 0,
+            "cost": 15122
+          }
+        ],
+        "labels_breakdown": [
+          {
+            "label": "Массовый сбой BILLZ",
+            "count": 13,
+            "cost": 98293
+          },
+          {
+            "label": "Учётная запись - Помощь со входом в аккаунт",
+            "count": 8,
+            "cost": 60488
+          },
+          {
+            "label": "Кассовые смены — Открытие/Закрытие смен",
+            "count": 5,
+            "cost": 37805
+          },
+          {
+            "label": "Импорт — импорт товаров через Excel",
+            "count": 4,
+            "cost": 30244
+          },
+          {
+            "label": "Настройка - Создание/Редактирование/Удаление чека",
+            "count": 4,
+            "cost": 30244
+          },
+          {
+            "label": "Каталог - Архивация товаров",
+            "count": 4,
+            "cost": 30244
+          },
+          {
+            "label": "Оборудование - Установка/Настройка/Удаление принтера",
+            "count": 4,
+            "cost": 30244
+          },
+          {
+            "label": "Баг (реквест)",
+            "count": 3,
+            "cost": 22683
+          },
+          {
+            "label": "Каталог — настройка печати ценника",
+            "count": 3,
+            "cost": 22683
+          },
+          {
+            "label": "Каталог — изменение свойств товара",
+            "count": 2,
+            "cost": 15122
+          }
+        ]
       },
       {
         "name": "Robiya Alisherova",
-        "tickets": 118,
-        "desired": 63,
-        "undesired": 52,
-        "undesired_pct": 44.1,
+        "role": "critical",
+        "non_critical": false,
+        "tag_label": "⭐ Критичный",
+        "tag_color": "#F87171",
+        "tickets": 121,
+        "desired": 64,
+        "undesired": 54,
+        "undesired_pct": 44.6,
         "partial": 4,
         "full": 1,
         "training_total": 5,
-        "repeat_count": 5,
-        "repeat_pct": 4.2,
-        "med_close": 4.7,
+        "repeat_count": 6,
+        "repeat_pct": 5.0,
+        "med_close": 4.6,
         "med_frt_min": 0.4,
-        "stores_count": 45,
-        "cost": 892198,
-        "tag": "big_base",
-        "tag_label": "🔵 Большая база",
-        "tag_color": "#3B82F6",
-        "big_base": true,
-        "note": "",
-        "top_topic": "Массовый сбой BILLZ",
-        "top_undesired_topic": "Массовый сбой BILLZ"
-      },
-      {
-        "name": "Shoxrux Mahmud",
-        "tickets": 113,
-        "desired": 45,
-        "undesired": 67,
-        "undesired_pct": 59.3,
-        "partial": null,
-        "full": 1,
-        "training_total": 1,
-        "repeat_count": 17,
-        "repeat_pct": 15.0,
-        "med_close": 0.9,
-        "med_frt_min": 0.4,
-        "stores_count": 1,
-        "cost": 854393,
-        "tag": null,
-        "tag_label": null,
-        "tag_color": null,
-        "big_base": false,
-        "note": "",
+        "stores_count": 47,
+        "massoviy_count": 20,
+        "cost": 914881,
         "top_topic": "Документооборот",
-        "top_undesired_topic": "Документооборот"
+        "top_undesired_topic": "Массовый сбой BILLZ",
+        "topic_breakdown": [
+          {
+            "topic": "Документооборот",
+            "count": 20,
+            "pct": 16.5,
+            "undesired": 9,
+            "undesired_pct": 45.0,
+            "repeat": 1,
+            "cost": 151220
+          },
+          {
+            "topic": "Массовый сбой BILLZ",
+            "count": 20,
+            "pct": 16.5,
+            "undesired": 20,
+            "undesired_pct": 100.0,
+            "repeat": 0,
+            "cost": 151220
+          },
+          {
+            "topic": "Настройка",
+            "count": 11,
+            "pct": 9.1,
+            "undesired": 1,
+            "undesired_pct": 9.1,
+            "repeat": 0,
+            "cost": 83171
+          },
+          {
+            "topic": "Учётная запись",
+            "count": 8,
+            "pct": 6.6,
+            "undesired": 1,
+            "undesired_pct": 12.5,
+            "repeat": 0,
+            "cost": 60488
+          },
+          {
+            "topic": "Баг (реквест)",
+            "count": 6,
+            "pct": 5.0,
+            "undesired": 1,
+            "undesired_pct": 16.7,
+            "repeat": 1,
+            "cost": 45366
+          },
+          {
+            "topic": "API",
+            "count": 6,
+            "pct": 5.0,
+            "undesired": 3,
+            "undesired_pct": 50.0,
+            "repeat": 1,
+            "cost": 45366
+          },
+          {
+            "topic": "Оборудование",
+            "count": 6,
+            "pct": 5.0,
+            "undesired": 1,
+            "undesired_pct": 16.7,
+            "repeat": 0,
+            "cost": 45366
+          },
+          {
+            "topic": "Отчёты",
+            "count": 6,
+            "pct": 5.0,
+            "undesired": 2,
+            "undesired_pct": 33.3,
+            "repeat": 0,
+            "cost": 45366
+          },
+          {
+            "topic": "Инвентаризация",
+            "count": 5,
+            "pct": 4.1,
+            "undesired": 1,
+            "undesired_pct": 20.0,
+            "repeat": 0,
+            "cost": 37805
+          },
+          {
+            "topic": "Каталог",
+            "count": 5,
+            "pct": 4.1,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 37805
+          },
+          {
+            "topic": "Новая продажа",
+            "count": 3,
+            "pct": 2.5,
+            "undesired": 1,
+            "undesired_pct": 33.3,
+            "repeat": 0,
+            "cost": 22683
+          },
+          {
+            "topic": "Реквест (внутренний запрос",
+            "count": 2,
+            "pct": 1.7,
+            "undesired": 1,
+            "undesired_pct": 50.0,
+            "repeat": 0,
+            "cost": 15122
+          },
+          {
+            "topic": "Бэклог",
+            "count": 2,
+            "pct": 1.7,
+            "undesired": 1,
+            "undesired_pct": 50.0,
+            "repeat": 0,
+            "cost": 15122
+          },
+          {
+            "topic": "Маркетинг",
+            "count": 2,
+            "pct": 1.7,
+            "undesired": 1,
+            "undesired_pct": 50.0,
+            "repeat": 1,
+            "cost": 15122
+          },
+          {
+            "topic": "Управление",
+            "count": 2,
+            "pct": 1.7,
+            "undesired": 1,
+            "undesired_pct": 50.0,
+            "repeat": 1,
+            "cost": 15122
+          }
+        ],
+        "labels_breakdown": [
+          {
+            "label": "Массовый сбой BILLZ",
+            "count": 20,
+            "cost": 151220
+          },
+          {
+            "label": "Документооборот - Оплата за тариф",
+            "count": 12,
+            "cost": 90732
+          },
+          {
+            "label": "Учётная запись - Помощь со входом в аккаунт",
+            "count": 6,
+            "cost": 45366
+          },
+          {
+            "label": "Баг (реквест)",
+            "count": 6,
+            "cost": 45366
+          },
+          {
+            "label": "API - Консультация по API ключ",
+            "count": 5,
+            "cost": 37805
+          },
+          {
+            "label": "Оборудование - Установка/Настройка/Удаление принтера",
+            "count": 5,
+            "cost": 37805
+          },
+          {
+            "label": "Отчёты - Выгрузка отчёта",
+            "count": 5,
+            "cost": 37805
+          },
+          {
+            "label": "Настройка - Создание/Редактирование/Удаление доп. точки",
+            "count": 3,
+            "cost": 22683
+          },
+          {
+            "label": "Инвентаризация — консультация по модулю (частичное обучение)",
+            "count": 3,
+            "cost": 22683
+          },
+          {
+            "label": "Реквест (внутренний запрос",
+            "count": 2,
+            "cost": 15122
+          }
+        ]
       },
       {
-        "name": "наш чел",
-        "tickets": 97,
-        "desired": 35,
-        "undesired": 57,
-        "undesired_pct": 58.8,
-        "partial": 1,
-        "full": 1,
-        "training_total": 2,
-        "repeat_count": 10,
-        "repeat_pct": 10.3,
-        "med_close": 1.1,
-        "med_frt_min": 0.4,
-        "stores_count": 2,
-        "cost": 733417,
-        "tag": null,
-        "tag_label": null,
-        "tag_color": null,
-        "big_base": false,
-        "note": "",
-        "top_topic": "Учётная запись",
-        "top_undesired_topic": "Учётная запись"
+        "name": "Marat Mustafaev",
+        "role": "noncritical",
+        "non_critical": true,
+        "tag_label": "⚪ Не критичный",
+        "tag_color": "#94A3B8",
+        "tickets": 87,
+        "desired": 41,
+        "undesired": 46,
+        "undesired_pct": 52.9,
+        "partial": 4,
+        "full": null,
+        "training_total": 4,
+        "repeat_count": 4,
+        "repeat_pct": 4.6,
+        "med_close": 3.6,
+        "med_frt_min": 0.3,
+        "stores_count": 31,
+        "massoviy_count": 6,
+        "cost": 657807,
+        "top_topic": "Документооборот",
+        "top_undesired_topic": "Документооборот",
+        "topic_breakdown": [
+          {
+            "topic": "Документооборот",
+            "count": 19,
+            "pct": 21.8,
+            "undesired": 11,
+            "undesired_pct": 57.9,
+            "repeat": 0,
+            "cost": 143659
+          },
+          {
+            "topic": "Каталог",
+            "count": 8,
+            "pct": 9.2,
+            "undesired": 2,
+            "undesired_pct": 25.0,
+            "repeat": 0,
+            "cost": 60488
+          },
+          {
+            "topic": "Учётная запись",
+            "count": 6,
+            "pct": 6.9,
+            "undesired": 2,
+            "undesired_pct": 33.3,
+            "repeat": 0,
+            "cost": 45366
+          },
+          {
+            "topic": "Массовый сбой BILLZ",
+            "count": 6,
+            "pct": 6.9,
+            "undesired": 5,
+            "undesired_pct": 83.3,
+            "repeat": 0,
+            "cost": 45366
+          },
+          {
+            "topic": "Новая продажа",
+            "count": 5,
+            "pct": 5.7,
+            "undesired": 3,
+            "undesired_pct": 60.0,
+            "repeat": 0,
+            "cost": 37805
+          },
+          {
+            "topic": "Кассовые смены",
+            "count": 3,
+            "pct": 3.4,
+            "undesired": 1,
+            "undesired_pct": 33.3,
+            "repeat": 0,
+            "cost": 22683
+          },
+          {
+            "topic": "Отчёты",
+            "count": 3,
+            "pct": 3.4,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 1,
+            "cost": 22683
+          },
+          {
+            "topic": "Настройка",
+            "count": 2,
+            "pct": 2.3,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 15122
+          },
+          {
+            "topic": "Оборудование",
+            "count": 2,
+            "pct": 2.3,
+            "undesired": 1,
+            "undesired_pct": 50.0,
+            "repeat": 0,
+            "cost": 15122
+          },
+          {
+            "topic": "Кассовые операции",
+            "count": 2,
+            "pct": 2.3,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 15122
+          },
+          {
+            "topic": "Все продажи",
+            "count": 2,
+            "pct": 2.3,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 15122
+          },
+          {
+            "topic": "Вопрос не по программе",
+            "count": 2,
+            "pct": 2.3,
+            "undesired": 1,
+            "undesired_pct": 50.0,
+            "repeat": 1,
+            "cost": 15122
+          },
+          {
+            "topic": "Долги клиентов",
+            "count": 1,
+            "pct": 1.1,
+            "undesired": 1,
+            "undesired_pct": 100.0,
+            "repeat": 0,
+            "cost": 7561
+          },
+          {
+            "topic": "Трансфер",
+            "count": 1,
+            "pct": 1.1,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 7561
+          },
+          {
+            "topic": "Инвентаризация",
+            "count": 1,
+            "pct": 1.1,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 1,
+            "cost": 7561
+          }
+        ],
+        "labels_breakdown": [
+          {
+            "label": "Документооборот - Оплата за тариф",
+            "count": 14,
+            "cost": 105854
+          },
+          {
+            "label": "Массовый сбой BILLZ",
+            "count": 6,
+            "cost": 45366
+          },
+          {
+            "label": "Новая продажа - Возврат/Обмен",
+            "count": 4,
+            "cost": 30244
+          },
+          {
+            "label": "Кассовые смены — Открытие/Закрытие смен",
+            "count": 3,
+            "cost": 22683
+          },
+          {
+            "label": "Каталог — изменение свойств товара",
+            "count": 3,
+            "cost": 22683
+          },
+          {
+            "label": "Документооборот - Создание ссылки для оплаты",
+            "count": 3,
+            "cost": 22683
+          },
+          {
+            "label": "Учётная запись - Помощь со входом в аккаунт",
+            "count": 3,
+            "cost": 22683
+          },
+          {
+            "label": "Отчёты - Разбор отчётов",
+            "count": 2,
+            "cost": 15122
+          },
+          {
+            "label": "Кассовые операции - Создание дохода/расхода/инкассации",
+            "count": 2,
+            "cost": 15122
+          },
+          {
+            "label": "Каталог - Скачивание товаров",
+            "count": 2,
+            "cost": 15122
+          }
+        ]
       },
       {
         "name": "Abdulaziz Abduganiev",
+        "role": "critical",
+        "non_critical": false,
+        "tag_label": "⭐ Критичный",
+        "tag_color": "#F87171",
         "tickets": 86,
         "desired": 31,
         "undesired": 55,
@@ -23355,2280 +26723,340 @@ const BILLZ_DATA = {
         "med_close": 5.65,
         "med_frt_min": 0.3,
         "stores_count": 26,
+        "massoviy_count": 11,
         "cost": 650246,
-        "tag": "big_base",
-        "tag_label": "🔵 Большая база",
-        "tag_color": "#3B82F6",
-        "big_base": true,
-        "note": "",
         "top_topic": "Массовый сбой BILLZ",
-        "top_undesired_topic": "Массовый сбой BILLZ"
-      },
-      {
-        "name": "Marat Mustafaev",
-        "tickets": 84,
-        "desired": 39,
-        "undesired": 45,
-        "undesired_pct": 53.6,
-        "partial": 4,
-        "full": null,
-        "training_total": 4,
-        "repeat_count": 4,
-        "repeat_pct": 4.8,
-        "med_close": 3.9,
-        "med_frt_min": 0.3,
-        "stores_count": 29,
-        "cost": 635124,
-        "tag": "big_base",
-        "tag_label": "🔵 Большая база",
-        "tag_color": "#3B82F6",
-        "big_base": true,
-        "note": "",
-        "top_topic": "Документооборот",
-        "top_undesired_topic": "Документооборот"
-      },
-      {
-        "name": "Karim Serikov",
-        "tickets": 78,
-        "desired": 45,
-        "undesired": 30,
-        "undesired_pct": 38.5,
-        "partial": 7,
-        "full": null,
-        "training_total": 7,
-        "repeat_count": 7,
-        "repeat_pct": 9.0,
-        "med_close": 3.9,
-        "med_frt_min": 0.5,
-        "stores_count": 14,
-        "cost": 589758,
-        "tag": "big_base",
-        "tag_label": "🔵 Большая база",
-        "tag_color": "#3B82F6",
-        "big_base": true,
-        "note": "",
-        "top_topic": "Баг (реквест)",
-        "top_undesired_topic": "Массовый сбой BILLZ"
-      },
-      {
-        "name": "Наш сотрудник",
-        "tickets": 50,
-        "desired": 21,
-        "undesired": 28,
-        "undesired_pct": 56.0,
-        "partial": null,
-        "full": null,
-        "training_total": 0,
-        "repeat_count": 8,
-        "repeat_pct": 16.0,
-        "med_close": 0.9,
-        "med_frt_min": 0.4,
-        "stores_count": 2,
-        "cost": 378050,
-        "tag": null,
-        "tag_label": null,
-        "tag_color": null,
-        "big_base": false,
-        "note": "",
-        "top_topic": "Документооборот",
-        "top_undesired_topic": "Документооборот"
-      },
-      {
-        "name": "BILLZ",
-        "tickets": 48,
-        "desired": 22,
-        "undesired": 25,
-        "undesired_pct": 52.1,
-        "partial": 2,
-        "full": null,
-        "training_total": 2,
-        "repeat_count": 1,
-        "repeat_pct": 2.1,
-        "med_close": 1.7,
-        "med_frt_min": 0.3,
-        "stores_count": 2,
-        "cost": 362928,
-        "tag": null,
-        "tag_label": null,
-        "tag_color": null,
-        "big_base": false,
-        "note": "",
-        "top_topic": "Оборудование",
-        "top_undesired_topic": "Оборудование"
-      },
-      {
-        "name": "Нет КСника в админке",
-        "tickets": 42,
-        "desired": 9,
-        "undesired": 32,
-        "undesired_pct": 76.2,
-        "partial": 2,
-        "full": null,
-        "training_total": 2,
-        "repeat_count": 2,
-        "repeat_pct": 4.8,
-        "med_close": 6.6,
-        "med_frt_min": 0.3,
-        "stores_count": 10,
-        "cost": 317562,
-        "tag": "big_base",
-        "tag_label": "🔵 Большая база",
-        "tag_color": "#3B82F6",
-        "big_base": true,
-        "note": "",
-        "top_topic": "Массовый сбой BILLZ",
-        "top_undesired_topic": "Массовый сбой BILLZ"
-      },
-      {
-        "name": "КС",
-        "tickets": 38,
-        "desired": 20,
-        "undesired": 17,
-        "undesired_pct": 44.7,
-        "partial": null,
-        "full": null,
-        "training_total": 0,
-        "repeat_count": 3,
-        "repeat_pct": 7.9,
-        "med_close": 0.8,
-        "med_frt_min": 0.3,
-        "stores_count": 1,
-        "cost": 287318,
-        "tag": null,
-        "tag_label": null,
-        "tag_color": null,
-        "big_base": false,
-        "note": "",
-        "top_topic": "Документооборот",
-        "top_undesired_topic": "Документооборот"
-      },
-      {
-        "name": "Xabibullox Xudoyorov",
-        "tickets": 34,
-        "desired": 6,
-        "undesired": 27,
-        "undesired_pct": 79.4,
-        "partial": 2,
-        "full": null,
-        "training_total": 2,
-        "repeat_count": 0,
-        "repeat_pct": 0.0,
-        "med_close": 7.2,
-        "med_frt_min": 0.25,
-        "stores_count": 13,
-        "cost": 257074,
-        "tag": "big_base",
-        "tag_label": "🔵 Большая база",
-        "tag_color": "#3B82F6",
-        "big_base": true,
-        "note": "",
-        "top_topic": "Массовый сбой BILLZ",
-        "top_undesired_topic": "Массовый сбой BILLZ"
-      },
-      {
-        "name": "Мухаммадазиз Кошакбаев",
-        "tickets": 30,
-        "desired": 10,
-        "undesired": 19,
-        "undesired_pct": 63.3,
-        "partial": null,
-        "full": 1,
-        "training_total": 1,
-        "repeat_count": 4,
-        "repeat_pct": 13.3,
-        "med_close": 0.75,
-        "med_frt_min": 0.25,
-        "stores_count": 1,
-        "cost": 226830,
-        "tag": null,
-        "tag_label": null,
-        "tag_color": null,
-        "big_base": false,
-        "note": "",
-        "top_topic": "Учётная запись",
-        "top_undesired_topic": "Документооборот"
-      },
-      {
-        "name": "Head of CC in BILLZ Company",
-        "tickets": 29,
-        "desired": 7,
-        "undesired": 21,
-        "undesired_pct": 72.4,
-        "partial": null,
-        "full": null,
-        "training_total": 0,
-        "repeat_count": 2,
-        "repeat_pct": 6.9,
-        "med_close": 1.9,
-        "med_frt_min": 0.6,
-        "stores_count": 1,
-        "cost": 219269,
-        "tag": null,
-        "tag_label": null,
-        "tag_color": null,
-        "big_base": false,
-        "note": "",
-        "top_topic": "тест",
-        "top_undesired_topic": "тест"
-      },
-      {
-        "name": "Нет ксника",
-        "tickets": 27,
-        "desired": 12,
-        "undesired": 11,
-        "undesired_pct": 40.7,
-        "partial": null,
-        "full": null,
-        "training_total": 0,
-        "repeat_count": 3,
-        "repeat_pct": 11.1,
-        "med_close": 2.5,
-        "med_frt_min": 0.6,
-        "stores_count": 3,
-        "cost": 204147,
-        "tag": null,
-        "tag_label": null,
-        "tag_color": null,
-        "big_base": false,
-        "note": "",
-        "top_topic": "Кассовые смены",
-        "top_undesired_topic": "Новая продажа"
-      },
-      {
-        "name": "НАШ ЧЕЛ",
-        "tickets": 20,
-        "desired": 4,
-        "undesired": 13,
-        "undesired_pct": 65.0,
-        "partial": null,
-        "full": null,
-        "training_total": 0,
-        "repeat_count": 2,
-        "repeat_pct": 10.0,
-        "med_close": 1.1,
-        "med_frt_min": 0.4,
-        "stores_count": 2,
-        "cost": 151220,
-        "tag": null,
-        "tag_label": null,
-        "tag_color": null,
-        "big_base": false,
-        "note": "",
-        "top_topic": "Документооборот",
-        "top_undesired_topic": "Документооборот"
-      },
-      {
-        "name": "Sarvarbek Gulomjonov",
-        "tickets": 19,
-        "desired": 6,
-        "undesired": 13,
-        "undesired_pct": 68.4,
-        "partial": null,
-        "full": null,
-        "training_total": 0,
-        "repeat_count": 1,
-        "repeat_pct": 5.3,
-        "med_close": 6.0,
-        "med_frt_min": 0.35,
-        "stores_count": 1,
-        "cost": 143659,
-        "tag": null,
-        "tag_label": null,
-        "tag_color": null,
-        "big_base": false,
-        "note": "",
-        "top_topic": "Массовый сбой BILLZ",
-        "top_undesired_topic": "Массовый сбой BILLZ"
-      },
-      {
-        "name": "Мирамир АЕ",
-        "tickets": 18,
-        "desired": 10,
-        "undesired": 8,
-        "undesired_pct": 44.4,
-        "partial": null,
-        "full": null,
-        "training_total": 0,
-        "repeat_count": 3,
-        "repeat_pct": 16.7,
-        "med_close": 2.0,
-        "med_frt_min": 0.2,
-        "stores_count": 1,
-        "cost": 136098,
-        "tag": null,
-        "tag_label": null,
-        "tag_color": null,
-        "big_base": false,
-        "note": "",
-        "top_topic": "Документооборот",
-        "top_undesired_topic": "Учётная запись"
-      },
-      {
-        "name": "Kurman Saparbekov",
-        "tickets": 18,
-        "desired": 8,
-        "undesired": 8,
-        "undesired_pct": 44.4,
-        "partial": 1,
-        "full": null,
-        "training_total": 1,
-        "repeat_count": 1,
-        "repeat_pct": 5.6,
-        "med_close": 3.9,
-        "med_frt_min": 0.5,
-        "stores_count": 6,
-        "cost": 136098,
-        "tag": "big_base",
-        "tag_label": "🔵 Большая база",
-        "tag_color": "#3B82F6",
-        "big_base": true,
-        "note": "",
-        "top_topic": "Настройка",
-        "top_undesired_topic": "Учётная запись"
-      },
-      {
-        "name": "КСник",
-        "tickets": 15,
-        "desired": 8,
-        "undesired": 7,
-        "undesired_pct": 46.7,
-        "partial": null,
-        "full": null,
-        "training_total": 0,
-        "repeat_count": 0,
-        "repeat_pct": 0.0,
-        "med_close": 4.1,
-        "med_frt_min": 0,
-        "stores_count": 1,
-        "cost": 113415,
-        "tag": null,
-        "tag_label": null,
-        "tag_color": null,
-        "big_base": false,
-        "note": "",
-        "top_topic": "Каталог",
-        "top_undesired_topic": "Каталог"
-      },
-      {
-        "name": "Shoxruh Pirmukhametov",
-        "tickets": 15,
-        "desired": 8,
-        "undesired": 6,
-        "undesired_pct": 40.0,
-        "partial": 1,
-        "full": null,
-        "training_total": 1,
-        "repeat_count": 1,
-        "repeat_pct": 6.7,
-        "med_close": 7.5,
-        "med_frt_min": 1.0,
-        "stores_count": 6,
-        "cost": 113415,
-        "tag": "big_base",
-        "tag_label": "🔵 Большая база",
-        "tag_color": "#3B82F6",
-        "big_base": true,
-        "note": "",
-        "top_topic": "Массовый сбой BILLZ",
-        "top_undesired_topic": "Массовый сбой BILLZ"
-      },
-      {
-        "name": "Vadim Zakharyan",
-        "tickets": 15,
-        "desired": 5,
-        "undesired": 7,
-        "undesired_pct": 46.7,
-        "partial": null,
-        "full": null,
-        "training_total": 0,
-        "repeat_count": 0,
-        "repeat_pct": 0.0,
-        "med_close": 2.1,
-        "med_frt_min": 0.85,
-        "stores_count": 1,
-        "cost": 113415,
-        "tag": null,
-        "tag_label": null,
-        "tag_color": null,
-        "big_base": false,
-        "note": "",
-        "top_topic": "API",
-        "top_undesired_topic": "Настройка"
-      },
-      {
-        "name": "Нет менджера CS",
-        "tickets": 15,
-        "desired": 1,
-        "undesired": 14,
-        "undesired_pct": 93.3,
-        "partial": null,
-        "full": null,
-        "training_total": 0,
-        "repeat_count": 1,
-        "repeat_pct": 6.7,
-        "med_close": 1.3,
-        "med_frt_min": 0,
-        "stores_count": 1,
-        "cost": 113415,
-        "tag": null,
-        "tag_label": null,
-        "tag_color": null,
-        "big_base": false,
-        "note": "",
-        "top_topic": "",
-        "top_undesired_topic": ""
-      },
-      {
-        "name": "наша челиха",
-        "tickets": 14,
-        "desired": 1,
-        "undesired": 12,
-        "undesired_pct": 85.7,
-        "partial": null,
-        "full": null,
-        "training_total": 0,
-        "repeat_count": 0,
-        "repeat_pct": 0.0,
-        "med_close": 0.1,
-        "med_frt_min": 0.1,
-        "stores_count": 1,
-        "cost": 105854,
-        "tag": null,
-        "tag_label": null,
-        "tag_color": null,
-        "big_base": false,
-        "note": "",
-        "top_topic": "тест",
-        "top_undesired_topic": "тест"
-      },
-      {
-        "name": "BILLZ Lite",
-        "tickets": 13,
-        "desired": 5,
-        "undesired": 8,
-        "undesired_pct": 61.5,
-        "partial": 1,
-        "full": null,
-        "training_total": 1,
-        "repeat_count": 1,
-        "repeat_pct": 7.7,
-        "med_close": 2.8,
-        "med_frt_min": 0.3,
-        "stores_count": 6,
-        "cost": 98293,
-        "tag": "big_base",
-        "tag_label": "🔵 Большая база",
-        "tag_color": "#3B82F6",
-        "big_base": true,
-        "note": "",
-        "top_topic": "Документооборот",
-        "top_undesired_topic": "Документооборот"
-      },
-      {
-        "name": "AE",
-        "tickets": 12,
-        "desired": 4,
-        "undesired": 8,
-        "undesired_pct": 66.7,
-        "partial": null,
-        "full": null,
-        "training_total": 0,
-        "repeat_count": 0,
-        "repeat_pct": 0.0,
-        "med_close": 2.65,
-        "med_frt_min": 0.3,
-        "stores_count": 1,
-        "cost": 90732,
-        "tag": null,
-        "tag_label": null,
-        "tag_color": null,
-        "big_base": false,
-        "note": "",
-        "top_topic": "Документооборот",
-        "top_undesired_topic": "Документооборот"
-      },
-      {
-        "name": "Нет КСника",
-        "tickets": 10,
-        "desired": 4,
-        "undesired": 4,
-        "undesired_pct": 40.0,
-        "partial": null,
-        "full": null,
-        "training_total": 0,
-        "repeat_count": 0,
-        "repeat_pct": 0.0,
-        "med_close": 0.3,
-        "med_frt_min": 0.75,
-        "stores_count": 1,
-        "cost": 75610,
-        "tag": null,
-        "tag_label": null,
-        "tag_color": null,
-        "big_base": false,
-        "note": "",
-        "top_topic": "API",
-        "top_undesired_topic": "Оборудование"
-      },
-      {
-        "name": "Sanjar Raxmidinov",
-        "tickets": 9,
-        "desired": 3,
-        "undesired": 6,
-        "undesired_pct": 66.7,
-        "partial": null,
-        "full": null,
-        "training_total": 0,
-        "repeat_count": 1,
-        "repeat_pct": 11.1,
-        "med_close": 5.6,
-        "med_frt_min": 0,
-        "stores_count": 1,
-        "cost": 68049,
-        "tag": null,
-        "tag_label": null,
-        "tag_color": null,
-        "big_base": false,
-        "note": "",
-        "top_topic": "Настройка",
-        "top_undesired_topic": "Настройка"
-      },
-      {
-        "name": "Сотрудник",
-        "tickets": 9,
-        "desired": 0,
-        "undesired": 9,
-        "undesired_pct": 100.0,
-        "partial": null,
-        "full": null,
-        "training_total": 0,
-        "repeat_count": 0,
-        "repeat_pct": 0.0,
-        "med_close": 0.9,
-        "med_frt_min": 2.5,
-        "stores_count": 1,
-        "cost": 68049,
-        "tag": null,
-        "tag_label": null,
-        "tag_color": null,
-        "big_base": false,
-        "note": "",
-        "top_topic": "",
-        "top_undesired_topic": ""
-      },
-      {
-        "name": "Alina Xanieva",
-        "tickets": 8,
-        "desired": 4,
-        "undesired": 4,
-        "undesired_pct": 50.0,
-        "partial": null,
-        "full": null,
-        "training_total": 0,
-        "repeat_count": 1,
-        "repeat_pct": 12.5,
-        "med_close": 3.3,
-        "med_frt_min": 0.5,
-        "stores_count": 1,
-        "cost": 60488,
-        "tag": null,
-        "tag_label": null,
-        "tag_color": null,
-        "big_base": false,
-        "note": "",
-        "top_topic": "Массовый сбой BILLZ",
-        "top_undesired_topic": "Массовый сбой BILLZ"
-      },
-      {
-        "name": "Sanjar Rahmiddinov",
-        "tickets": 8,
-        "desired": 3,
-        "undesired": 3,
-        "undesired_pct": 37.5,
-        "partial": null,
-        "full": null,
-        "training_total": 0,
-        "repeat_count": 0,
-        "repeat_pct": 0.0,
-        "med_close": 3.55,
-        "med_frt_min": 0.55,
-        "stores_count": 5,
-        "cost": 60488,
-        "tag": "big_base",
-        "tag_label": "🔵 Большая база",
-        "tag_color": "#3B82F6",
-        "big_base": true,
-        "note": "",
-        "top_topic": "Документооборот",
-        "top_undesired_topic": "Документооборот"
-      },
-      {
-        "name": "Sarvar Salixov",
-        "tickets": 8,
-        "desired": 5,
-        "undesired": 3,
-        "undesired_pct": 37.5,
-        "partial": 1,
-        "full": null,
-        "training_total": 1,
-        "repeat_count": 2,
-        "repeat_pct": 25.0,
-        "med_close": 3.75,
-        "med_frt_min": 0.3,
-        "stores_count": 3,
-        "cost": 60488,
-        "tag": null,
-        "tag_label": null,
-        "tag_color": null,
-        "big_base": false,
-        "note": "",
-        "top_topic": "Настройка",
-        "top_undesired_topic": "Каталог"
-      },
-      {
-        "name": "Miramir Ergashev",
-        "tickets": 8,
-        "desired": 3,
-        "undesired": 5,
-        "undesired_pct": 62.5,
-        "partial": 1,
-        "full": null,
-        "training_total": 1,
-        "repeat_count": 3,
-        "repeat_pct": 37.5,
-        "med_close": 1.45,
-        "med_frt_min": 0.5,
-        "stores_count": 3,
-        "cost": 60488,
-        "tag": null,
-        "tag_label": null,
-        "tag_color": null,
-        "big_base": false,
-        "note": "",
-        "top_topic": "Отчёты",
-        "top_undesired_topic": "Отчёты"
-      },
-      {
-        "name": "Head CX depeartment",
-        "tickets": 8,
-        "desired": 2,
-        "undesired": 5,
-        "undesired_pct": 62.5,
-        "partial": null,
-        "full": null,
-        "training_total": 0,
-        "repeat_count": 0,
-        "repeat_pct": 0.0,
-        "med_close": 0.8,
-        "med_frt_min": 0.3,
-        "stores_count": 1,
-        "cost": 60488,
-        "tag": null,
-        "tag_label": null,
-        "tag_color": null,
-        "big_base": false,
-        "note": "",
-        "top_topic": "Вопрос не по программе",
-        "top_undesired_topic": "Баг (реквест)"
-      },
-      {
-        "name": "Shoxruh Mahmud",
-        "tickets": 8,
-        "desired": 1,
-        "undesired": 5,
-        "undesired_pct": 62.5,
-        "partial": null,
-        "full": null,
-        "training_total": 0,
-        "repeat_count": 0,
-        "repeat_pct": 0.0,
-        "med_close": 5.75,
-        "med_frt_min": 4.3,
-        "stores_count": 2,
-        "cost": 60488,
-        "tag": null,
-        "tag_label": null,
-        "tag_color": null,
-        "big_base": false,
-        "note": "",
-        "top_topic": "Новая продажа",
-        "top_undesired_topic": "Оборудование"
-      },
-      {
-        "name": "Lite",
-        "tickets": 8,
-        "desired": 4,
-        "undesired": 4,
-        "undesired_pct": 50.0,
-        "partial": 1,
-        "full": 1,
-        "training_total": 2,
-        "repeat_count": 0,
-        "repeat_pct": 0.0,
-        "med_close": 2.9,
-        "med_frt_min": 0,
-        "stores_count": 2,
-        "cost": 60488,
-        "tag": null,
-        "tag_label": null,
-        "tag_color": null,
-        "big_base": false,
-        "note": "",
-        "top_topic": "Управление",
-        "top_undesired_topic": "Управление"
-      },
-      {
-        "name": "Khumoyunmirzo Gulomiddinov",
-        "tickets": 7,
-        "desired": 4,
-        "undesired": 2,
-        "undesired_pct": 28.6,
-        "partial": null,
-        "full": null,
-        "training_total": 0,
-        "repeat_count": 0,
-        "repeat_pct": 0.0,
-        "med_close": 3.2,
-        "med_frt_min": 0.5,
-        "stores_count": 3,
-        "cost": 52927,
-        "tag": null,
-        "tag_label": null,
-        "tag_color": null,
-        "big_base": false,
-        "note": "",
-        "top_topic": "Массовый сбой BILLZ",
-        "top_undesired_topic": "Массовый сбой BILLZ"
-      },
-      {
-        "name": "Наш списочник",
-        "tickets": 7,
-        "desired": 1,
-        "undesired": 6,
-        "undesired_pct": 85.7,
-        "partial": null,
-        "full": null,
-        "training_total": 0,
-        "repeat_count": 1,
-        "repeat_pct": 14.3,
-        "med_close": 6.2,
-        "med_frt_min": 1.3,
-        "stores_count": 2,
-        "cost": 52927,
-        "tag": null,
-        "tag_label": null,
-        "tag_color": null,
-        "big_base": false,
-        "note": "",
-        "top_topic": "Учётная запись",
-        "top_undesired_topic": "Учётная запись"
-      },
-      {
-        "name": "Saidorif Muzaffarov Tashkent",
-        "tickets": 7,
-        "desired": 2,
-        "undesired": 5,
-        "undesired_pct": 71.4,
-        "partial": null,
-        "full": null,
-        "training_total": 0,
-        "repeat_count": 0,
-        "repeat_pct": 0.0,
-        "med_close": 6.5,
-        "med_frt_min": 0,
-        "stores_count": 3,
-        "cost": 52927,
-        "tag": null,
-        "tag_label": null,
-        "tag_color": null,
-        "big_base": false,
-        "note": "",
-        "top_topic": "Массовый сбой BILLZ",
-        "top_undesired_topic": "Массовый сбой BILLZ"
-      },
-      {
-        "name": "Наш Чел",
-        "tickets": 6,
-        "desired": 4,
-        "undesired": 1,
-        "undesired_pct": 16.7,
-        "partial": null,
-        "full": null,
-        "training_total": 0,
-        "repeat_count": 0,
-        "repeat_pct": 0.0,
-        "med_close": 4.05,
-        "med_frt_min": 0.5,
-        "stores_count": 1,
-        "cost": 45366,
-        "tag": null,
-        "tag_label": null,
-        "tag_color": null,
-        "big_base": false,
-        "note": "",
-        "top_topic": "Учётная запись",
-        "top_undesired_topic": ""
-      },
-      {
-        "name": "нету ксника",
-        "tickets": 6,
-        "desired": 0,
-        "undesired": 6,
-        "undesired_pct": 100.0,
-        "partial": null,
-        "full": null,
-        "training_total": 0,
-        "repeat_count": 1,
-        "repeat_pct": 16.7,
-        "med_close": 2.45,
-        "med_frt_min": 0,
-        "stores_count": 1,
-        "cost": 45366,
-        "tag": null,
-        "tag_label": null,
-        "tag_color": null,
-        "big_base": false,
-        "note": "",
-        "top_topic": "",
-        "top_undesired_topic": ""
-      },
-      {
-        "name": "Еще нет ксника",
-        "tickets": 6,
-        "desired": 3,
-        "undesired": 3,
-        "undesired_pct": 50.0,
-        "partial": null,
-        "full": null,
-        "training_total": 0,
-        "repeat_count": 0,
-        "repeat_pct": 0.0,
-        "med_close": 8.85,
-        "med_frt_min": 0,
-        "stores_count": 1,
-        "cost": 45366,
-        "tag": null,
-        "tag_label": null,
-        "tag_color": null,
-        "big_base": false,
-        "note": "",
-        "top_topic": "Кассовые смены",
-        "top_undesired_topic": "Кассовые смены"
-      },
-      {
-        "name": "Burxonjon Burxonjonov",
-        "tickets": 6,
-        "desired": 2,
-        "undesired": 3,
-        "undesired_pct": 50.0,
-        "partial": null,
-        "full": null,
-        "training_total": 0,
-        "repeat_count": 0,
-        "repeat_pct": 0.0,
-        "med_close": 19.6,
-        "med_frt_min": 0.2,
-        "stores_count": 2,
-        "cost": 45366,
-        "tag": null,
-        "tag_label": null,
-        "tag_color": null,
-        "big_base": false,
-        "note": "",
-        "top_topic": "Документооборот",
-        "top_undesired_topic": "Документооборот"
-      },
-      {
-        "name": "Mukhammadaziz Koshakb",
-        "tickets": 6,
-        "desired": 4,
-        "undesired": 2,
-        "undesired_pct": 33.3,
-        "partial": null,
-        "full": null,
-        "training_total": 0,
-        "repeat_count": 1,
-        "repeat_pct": 16.7,
-        "med_close": 1.6,
-        "med_frt_min": 0.3,
-        "stores_count": 1,
-        "cost": 45366,
-        "tag": null,
-        "tag_label": null,
-        "tag_color": null,
-        "big_base": false,
-        "note": "",
-        "top_topic": "Оборудование",
-        "top_undesired_topic": "Оборудование"
-      },
-      {
-        "name": "Больше не является парнтером",
-        "tickets": 6,
-        "desired": 2,
-        "undesired": 4,
-        "undesired_pct": 66.7,
-        "partial": null,
-        "full": null,
-        "training_total": 0,
-        "repeat_count": 0,
-        "repeat_pct": 0.0,
-        "med_close": 4.1,
-        "med_frt_min": 0.6,
-        "stores_count": 1,
-        "cost": 45366,
-        "tag": null,
-        "tag_label": null,
-        "tag_color": null,
-        "big_base": false,
-        "note": "",
-        "top_topic": "Документооборот",
-        "top_undesired_topic": "Документооборот"
-      },
-      {
-        "name": "Наша челиха",
-        "tickets": 6,
-        "desired": 3,
-        "undesired": 3,
-        "undesired_pct": 50.0,
-        "partial": null,
-        "full": null,
-        "training_total": 0,
-        "repeat_count": 0,
-        "repeat_pct": 0.0,
-        "med_close": 3.05,
-        "med_frt_min": 0.3,
-        "stores_count": 1,
-        "cost": 45366,
-        "tag": null,
-        "tag_label": null,
-        "tag_color": null,
-        "big_base": false,
-        "note": "",
-        "top_topic": "Управление",
-        "top_undesired_topic": "Управление"
-      },
-      {
-        "name": "Нукус технопос",
-        "tickets": 6,
-        "desired": 3,
-        "undesired": 3,
-        "undesired_pct": 50.0,
-        "partial": 1,
-        "full": null,
-        "training_total": 1,
-        "repeat_count": 0,
-        "repeat_pct": 0.0,
-        "med_close": 2.85,
-        "med_frt_min": 0,
-        "stores_count": 1,
-        "cost": 45366,
-        "tag": null,
-        "tag_label": null,
-        "tag_color": null,
-        "big_base": false,
-        "note": "",
-        "top_topic": "Каталог",
-        "top_undesired_topic": "Каталог"
-      },
-      {
-        "name": "TEXNOPOS",
-        "tickets": 6,
-        "desired": 1,
-        "undesired": 5,
-        "undesired_pct": 83.3,
-        "partial": null,
-        "full": null,
-        "training_total": 0,
-        "repeat_count": 1,
-        "repeat_pct": 16.7,
-        "med_close": 1.7,
-        "med_frt_min": 0,
-        "stores_count": 1,
-        "cost": 45366,
-        "tag": null,
-        "tag_label": null,
-        "tag_color": null,
-        "big_base": false,
-        "note": "",
-        "top_topic": "спам",
-        "top_undesired_topic": "спам"
-      },
-      {
-        "name": "ПАРТЕР ИЗ БУХАРЫ \\ УЧЕНИЦА УЛУГБЕКА",
-        "tickets": 6,
-        "desired": 3,
-        "undesired": 3,
-        "undesired_pct": 50.0,
-        "partial": null,
-        "full": null,
-        "training_total": 0,
-        "repeat_count": 0,
-        "repeat_pct": 0.0,
-        "med_close": 3.0,
-        "med_frt_min": 0.6,
-        "stores_count": 1,
-        "cost": 45366,
-        "tag": null,
-        "tag_label": null,
-        "tag_color": null,
-        "big_base": false,
-        "note": "",
-        "top_topic": "Документооборот",
-        "top_undesired_topic": "Документооборот"
-      },
-      {
-        "name": "ксника нет",
-        "tickets": 6,
-        "desired": 2,
-        "undesired": 4,
-        "undesired_pct": 66.7,
-        "partial": null,
-        "full": null,
-        "training_total": 0,
-        "repeat_count": 0,
-        "repeat_pct": 0.0,
-        "med_close": 4.85,
-        "med_frt_min": 0,
-        "stores_count": 1,
-        "cost": 45366,
-        "tag": null,
-        "tag_label": null,
-        "tag_color": null,
-        "big_base": false,
-        "note": "",
-        "top_topic": "Оборудование",
-        "top_undesired_topic": "Оборудование"
-      },
-      {
-        "name": "Не нашёл в админке",
-        "tickets": 5,
-        "desired": 2,
-        "undesired": 3,
-        "undesired_pct": 60.0,
-        "partial": null,
-        "full": null,
-        "training_total": 0,
-        "repeat_count": 0,
-        "repeat_pct": 0.0,
-        "med_close": 1.7,
-        "med_frt_min": 0,
-        "stores_count": 2,
-        "cost": 37805,
-        "tag": null,
-        "tag_label": null,
-        "tag_color": null,
-        "big_base": false,
-        "note": "",
-        "top_topic": "Новая продажа",
-        "top_undesired_topic": "Все продажи"
-      },
-      {
-        "name": "Oybek Lutfillaev",
-        "tickets": 5,
-        "desired": 3,
-        "undesired": 2,
-        "undesired_pct": 40.0,
-        "partial": null,
-        "full": null,
-        "training_total": 0,
-        "repeat_count": 1,
-        "repeat_pct": 20.0,
-        "med_close": 4.3,
-        "med_frt_min": 0.6,
-        "stores_count": 2,
-        "cost": 37805,
-        "tag": null,
-        "tag_label": null,
-        "tag_color": null,
-        "big_base": false,
-        "note": "",
-        "top_topic": "Оборудование",
-        "top_undesired_topic": "Оборудование"
-      },
-      {
-        "name": "Хороший человек",
-        "tickets": 5,
-        "desired": 4,
-        "undesired": 1,
-        "undesired_pct": 20.0,
-        "partial": null,
-        "full": null,
-        "training_total": 0,
-        "repeat_count": 1,
-        "repeat_pct": 20.0,
-        "med_close": 6.0,
-        "med_frt_min": 0.45,
-        "stores_count": 1,
-        "cost": 37805,
-        "tag": null,
-        "tag_label": null,
-        "tag_color": null,
-        "big_base": false,
-        "note": "",
-        "top_topic": "Инвентаризация",
-        "top_undesired_topic": "Переоценка"
-      },
-      {
-        "name": "SalesTexnoPOS SOFT",
-        "tickets": 5,
-        "desired": 5,
-        "undesired": 0,
-        "undesired_pct": 0.0,
-        "partial": null,
-        "full": null,
-        "training_total": 0,
-        "repeat_count": 0,
-        "repeat_pct": 0.0,
-        "med_close": 0.35,
-        "med_frt_min": 0.5,
-        "stores_count": 1,
-        "cost": 37805,
-        "tag": null,
-        "tag_label": null,
-        "tag_color": null,
-        "big_base": false,
-        "note": "",
-        "top_topic": "Учётная запись",
-        "top_undesired_topic": ""
-      },
-      {
-        "name": "Bobur Abdukakhkharov Kyrgyzstan",
-        "tickets": 5,
-        "desired": 3,
-        "undesired": 2,
-        "undesired_pct": 40.0,
-        "partial": null,
-        "full": null,
-        "training_total": 0,
-        "repeat_count": 0,
-        "repeat_pct": 0.0,
-        "med_close": 6.6,
-        "med_frt_min": 0.4,
-        "stores_count": 2,
-        "cost": 37805,
-        "tag": null,
-        "tag_label": null,
-        "tag_color": null,
-        "big_base": false,
-        "note": "",
-        "top_topic": "Учётная запись",
-        "top_undesired_topic": "Заказы"
-      },
-      {
-        "name": "Sunnatilla Abdurazzoqov",
-        "tickets": 5,
-        "desired": 3,
-        "undesired": 2,
-        "undesired_pct": 40.0,
-        "partial": null,
-        "full": null,
-        "training_total": 0,
-        "repeat_count": 1,
-        "repeat_pct": 20.0,
-        "med_close": 3.9,
-        "med_frt_min": 0,
-        "stores_count": 1,
-        "cost": 37805,
-        "tag": null,
-        "tag_label": null,
-        "tag_color": null,
-        "big_base": false,
-        "note": "",
-        "top_topic": "Учётная запись",
-        "top_undesired_topic": "Вопрос не по программе"
-      },
-      {
-        "name": "Ismoil Shorahimov . Marfiya Shadiyeva",
-        "tickets": 5,
-        "desired": 4,
-        "undesired": 1,
-        "undesired_pct": 20.0,
-        "partial": 1,
-        "full": null,
-        "training_total": 1,
-        "repeat_count": 1,
-        "repeat_pct": 20.0,
-        "med_close": 4.1,
-        "med_frt_min": 0,
-        "stores_count": 1,
-        "cost": 37805,
-        "tag": null,
-        "tag_label": null,
-        "tag_color": null,
-        "big_base": false,
-        "note": "",
-        "top_topic": "Долги клиентов",
-        "top_undesired_topic": ""
-      },
-      {
-        "name": "texnopos",
-        "tickets": 4,
-        "desired": 4,
-        "undesired": 0,
-        "undesired_pct": 0.0,
-        "partial": 2,
-        "full": null,
-        "training_total": 2,
-        "repeat_count": 1,
-        "repeat_pct": 25.0,
-        "med_close": 9.6,
-        "med_frt_min": 0,
-        "stores_count": 1,
-        "cost": 30244,
-        "tag": null,
-        "tag_label": null,
-        "tag_color": null,
-        "big_base": false,
-        "note": "",
-        "top_topic": "Заказы",
-        "top_undesired_topic": ""
-      },
-      {
-        "name": "Xikmatillo Baxtiyorov Partne",
-        "tickets": 4,
-        "desired": 2,
-        "undesired": 1,
-        "undesired_pct": 25.0,
-        "partial": null,
-        "full": null,
-        "training_total": 0,
-        "repeat_count": 0,
-        "repeat_pct": 0.0,
-        "med_close": 7.6,
-        "med_frt_min": 2.0,
-        "stores_count": 1,
-        "cost": 30244,
-        "tag": null,
-        "tag_label": null,
-        "tag_color": null,
-        "big_base": false,
-        "note": "",
-        "top_topic": "Учётная запись",
-        "top_undesired_topic": "Массовый сбой BILLZ"
-      },
-      {
-        "name": "Ещё нет в ЧБ",
-        "tickets": 4,
-        "desired": 1,
-        "undesired": 2,
-        "undesired_pct": 50.0,
-        "partial": null,
-        "full": null,
-        "training_total": 0,
-        "repeat_count": 0,
-        "repeat_pct": 0.0,
-        "med_close": 2.3,
-        "med_frt_min": 0.7,
-        "stores_count": 1,
-        "cost": 30244,
-        "tag": null,
-        "tag_label": null,
-        "tag_color": null,
-        "big_base": false,
-        "note": "",
-        "top_topic": "Оборудование",
-        "top_undesired_topic": ""
-      },
-      {
-        "name": "CEO",
-        "tickets": 4,
-        "desired": 2,
-        "undesired": 2,
-        "undesired_pct": 50.0,
-        "partial": null,
-        "full": null,
-        "training_total": 0,
-        "repeat_count": 0,
-        "repeat_pct": 0.0,
-        "med_close": 2.35,
-        "med_frt_min": 0.4,
-        "stores_count": 1,
-        "cost": 30244,
-        "tag": null,
-        "tag_label": null,
-        "tag_color": null,
-        "big_base": false,
-        "note": "",
-        "top_topic": "Финансирование",
-        "top_undesired_topic": ""
-      },
-      {
-        "name": "Наш ксник",
-        "tickets": 4,
-        "desired": 3,
-        "undesired": 1,
-        "undesired_pct": 25.0,
-        "partial": null,
-        "full": null,
-        "training_total": 0,
-        "repeat_count": 0,
-        "repeat_pct": 0.0,
-        "med_close": 6.55,
-        "med_frt_min": 0.4,
-        "stores_count": 1,
-        "cost": 30244,
-        "tag": null,
-        "tag_label": null,
-        "tag_color": null,
-        "big_base": false,
-        "note": "",
-        "top_topic": "Документооборот",
-        "top_undesired_topic": "Документооборот"
-      },
-      {
-        "name": "Наш ЧЕЛ",
-        "tickets": 4,
-        "desired": 0,
-        "undesired": 4,
-        "undesired_pct": 100.0,
-        "partial": null,
-        "full": null,
-        "training_total": 0,
-        "repeat_count": 0,
-        "repeat_pct": 0.0,
-        "med_close": 51.1,
-        "med_frt_min": 0.85,
-        "stores_count": 2,
-        "cost": 30244,
-        "tag": null,
-        "tag_label": null,
-        "tag_color": null,
-        "big_base": false,
-        "note": "",
-        "top_topic": "Учётная запись",
-        "top_undesired_topic": "Учётная запись"
-      },
-      {
-        "name": "Hojiakbar Hamidulla",
-        "tickets": 4,
-        "desired": 2,
-        "undesired": 2,
-        "undesired_pct": 50.0,
-        "partial": null,
-        "full": null,
-        "training_total": 0,
-        "repeat_count": 0,
-        "repeat_pct": 0.0,
-        "med_close": 13.7,
-        "med_frt_min": 0.45,
-        "stores_count": 1,
-        "cost": 30244,
-        "tag": null,
-        "tag_label": null,
-        "tag_color": null,
-        "big_base": false,
-        "note": "",
-        "top_topic": "Документооборот",
-        "top_undesired_topic": "Реквест (внутренний запрос"
-      },
-      {
-        "name": "Sunnattilla Abdurazzoqov/ Shoxruh Maxmud",
-        "tickets": 4,
-        "desired": 2,
-        "undesired": 1,
-        "undesired_pct": 25.0,
-        "partial": null,
-        "full": null,
-        "training_total": 0,
-        "repeat_count": 0,
-        "repeat_pct": 0.0,
-        "med_close": 3.3,
-        "med_frt_min": 0.3,
-        "stores_count": 1,
-        "cost": 30244,
-        "tag": null,
-        "tag_label": null,
-        "tag_color": null,
-        "big_base": false,
-        "note": "",
-        "top_topic": "Настройка",
-        "top_undesired_topic": "Настройка"
-      },
-      {
-        "name": "м",
-        "tickets": 4,
-        "desired": 2,
-        "undesired": 1,
-        "undesired_pct": 25.0,
-        "partial": null,
-        "full": null,
-        "training_total": 0,
-        "repeat_count": 0,
-        "repeat_pct": 0.0,
-        "med_close": 13.65,
-        "med_frt_min": 0.3,
-        "stores_count": 1,
-        "cost": 30244,
-        "tag": null,
-        "tag_label": null,
-        "tag_color": null,
-        "big_base": false,
-        "note": "",
-        "top_topic": "Настройка",
-        "top_undesired_topic": "Настройка"
-      },
-      {
-        "name": "Нет менеджера",
-        "tickets": 4,
-        "desired": 0,
-        "undesired": 4,
-        "undesired_pct": 100.0,
-        "partial": null,
-        "full": null,
-        "training_total": 0,
-        "repeat_count": 0,
-        "repeat_pct": 0.0,
-        "med_close": 1.45,
-        "med_frt_min": 0.2,
-        "stores_count": 1,
-        "cost": 30244,
-        "tag": null,
-        "tag_label": null,
-        "tag_color": null,
-        "big_base": false,
-        "note": "",
-        "top_topic": "тест",
-        "top_undesired_topic": "тест"
-      },
-      {
-        "name": "Support manager Baxtiyor Kasimov",
-        "tickets": 4,
-        "desired": 0,
-        "undesired": 4,
-        "undesired_pct": 100.0,
-        "partial": null,
-        "full": null,
-        "training_total": 0,
-        "repeat_count": 0,
-        "repeat_pct": 0.0,
-        "med_close": 1.9,
-        "med_frt_min": 0.2,
-        "stores_count": 2,
-        "cost": 30244,
-        "tag": null,
-        "tag_label": null,
-        "tag_color": null,
-        "big_base": false,
-        "note": "",
-        "top_topic": "Инвентаризация",
-        "top_undesired_topic": "Инвентаризация"
-      },
-      {
-        "name": "Ilnur Muxtasibovilnur",
-        "tickets": 3,
-        "desired": 0,
-        "undesired": 3,
-        "undesired_pct": 100.0,
-        "partial": null,
-        "full": null,
-        "training_total": 0,
-        "repeat_count": 0,
-        "repeat_pct": 0.0,
-        "med_close": 2.4,
-        "med_frt_min": 1.3,
-        "stores_count": 1,
-        "cost": 22683,
-        "tag": null,
-        "tag_label": null,
-        "tag_color": null,
-        "big_base": false,
-        "note": "",
-        "top_topic": "Массовый сбой BILLZ",
-        "top_undesired_topic": "Массовый сбой BILLZ"
-      },
-      {
-        "name": "Shoxruh Maxmud/ Xasanali Ummatov",
-        "tickets": 3,
-        "desired": 0,
-        "undesired": 3,
-        "undesired_pct": 100.0,
-        "partial": null,
-        "full": null,
-        "training_total": 0,
-        "repeat_count": 0,
-        "repeat_pct": 0.0,
-        "med_close": 33.0,
-        "med_frt_min": 2.2,
-        "stores_count": 1,
-        "cost": 22683,
-        "tag": null,
-        "tag_label": null,
-        "tag_color": null,
-        "big_base": false,
-        "note": "",
-        "top_topic": "",
-        "top_undesired_topic": ""
-      },
-      {
-        "name": "LITE",
-        "tickets": 3,
-        "desired": 0,
-        "undesired": 3,
-        "undesired_pct": 100.0,
-        "partial": null,
-        "full": null,
-        "training_total": 0,
-        "repeat_count": 0,
-        "repeat_pct": 0.0,
-        "med_close": 235.3,
-        "med_frt_min": 0,
-        "stores_count": 1,
-        "cost": 22683,
-        "tag": null,
-        "tag_label": null,
-        "tag_color": null,
-        "big_base": false,
-        "note": "",
-        "top_topic": "Баг (реквест)",
-        "top_undesired_topic": "Баг (реквест)"
-      },
-      {
-        "name": "Sanjar Alimov",
-        "tickets": 3,
-        "desired": 2,
-        "undesired": 1,
-        "undesired_pct": 33.3,
-        "partial": null,
-        "full": 1,
-        "training_total": 1,
-        "repeat_count": 0,
-        "repeat_pct": 0.0,
-        "med_close": 0.4,
-        "med_frt_min": 0.2,
-        "stores_count": 2,
-        "cost": 22683,
-        "tag": null,
-        "tag_label": null,
-        "tag_color": null,
-        "big_base": false,
-        "note": "",
-        "top_topic": "Документооборот",
-        "top_undesired_topic": "Импорт"
-      },
-      {
-        "name": "Алина Ханиева",
-        "tickets": 3,
-        "desired": 2,
-        "undesired": 1,
-        "undesired_pct": 33.3,
-        "partial": null,
-        "full": null,
-        "training_total": 0,
-        "repeat_count": 0,
-        "repeat_pct": 0.0,
-        "med_close": 0.3,
-        "med_frt_min": 0,
-        "stores_count": 3,
-        "cost": 22683,
-        "tag": null,
-        "tag_label": null,
-        "tag_color": null,
-        "big_base": false,
-        "note": "",
-        "top_topic": "Все продажи",
-        "top_undesired_topic": ""
-      },
-      {
-        "name": "Наш человек",
-        "tickets": 3,
-        "desired": 1,
-        "undesired": 2,
-        "undesired_pct": 66.7,
-        "partial": null,
-        "full": null,
-        "training_total": 0,
-        "repeat_count": 0,
-        "repeat_pct": 0.0,
-        "med_close": 1.5,
-        "med_frt_min": 0.2,
-        "stores_count": 1,
-        "cost": 22683,
-        "tag": null,
-        "tag_label": null,
-        "tag_color": null,
-        "big_base": false,
-        "note": "",
-        "top_topic": "Документооборот",
-        "top_undesired_topic": "Документооборот"
-      },
-      {
-        "name": "Self onboarding",
-        "tickets": 3,
-        "desired": 3,
-        "undesired": 0,
-        "undesired_pct": 0.0,
-        "partial": null,
-        "full": null,
-        "training_total": 0,
-        "repeat_count": 0,
-        "repeat_pct": 0.0,
-        "med_close": 2.4,
-        "med_frt_min": 0.2,
-        "stores_count": 2,
-        "cost": 22683,
-        "tag": null,
-        "tag_label": null,
-        "tag_color": null,
-        "big_base": false,
-        "note": "",
-        "top_topic": "Документооборот",
-        "top_undesired_topic": ""
-      },
-      {
-        "name": "Шохрух Махмуд",
-        "tickets": 3,
-        "desired": 3,
-        "undesired": 0,
-        "undesired_pct": 0.0,
-        "partial": null,
-        "full": null,
-        "training_total": 0,
-        "repeat_count": 0,
-        "repeat_pct": 0.0,
-        "med_close": 1.8,
-        "med_frt_min": 1.0,
-        "stores_count": 2,
-        "cost": 22683,
-        "tag": null,
-        "tag_label": null,
-        "tag_color": null,
-        "big_base": false,
-        "note": "",
-        "top_topic": "Документооборот",
-        "top_undesired_topic": ""
-      },
-      {
-        "name": "Alisher Azimov Fergana",
-        "tickets": 3,
-        "desired": 1,
-        "undesired": 2,
-        "undesired_pct": 66.7,
-        "partial": null,
-        "full": null,
-        "training_total": 0,
-        "repeat_count": 0,
-        "repeat_pct": 0.0,
-        "med_close": 10.5,
-        "med_frt_min": 0,
-        "stores_count": 1,
-        "cost": 22683,
-        "tag": null,
-        "tag_label": null,
-        "tag_color": null,
-        "big_base": false,
-        "note": "",
-        "top_topic": "Учётная запись",
-        "top_undesired_topic": "Учётная запись"
-      },
-      {
-        "name": "TexnoPOS SOFT Nukus",
-        "tickets": 3,
-        "desired": 0,
-        "undesired": 3,
-        "undesired_pct": 100.0,
-        "partial": null,
-        "full": null,
-        "training_total": 0,
-        "repeat_count": 1,
-        "repeat_pct": 33.3,
-        "med_close": 0.4,
-        "med_frt_min": 0,
-        "stores_count": 1,
-        "cost": 22683,
-        "tag": null,
-        "tag_label": null,
-        "tag_color": null,
-        "big_base": false,
-        "note": "",
-        "top_topic": "",
-        "top_undesired_topic": ""
-      },
-      {
-        "name": "Marat Mustafayev",
-        "tickets": 3,
-        "desired": 2,
-        "undesired": 1,
-        "undesired_pct": 33.3,
-        "partial": null,
-        "full": null,
-        "training_total": 0,
-        "repeat_count": 0,
-        "repeat_pct": 0.0,
-        "med_close": 0.2,
-        "med_frt_min": 0.2,
-        "stores_count": 1,
-        "cost": 22683,
-        "tag": null,
-        "tag_label": null,
-        "tag_color": null,
-        "big_base": false,
-        "note": "",
-        "top_topic": "Документооборот",
-        "top_undesired_topic": "Настройка"
-      },
-      {
-        "name": "Чб нету",
-        "tickets": 3,
-        "desired": 2,
-        "undesired": 1,
-        "undesired_pct": 33.3,
-        "partial": null,
-        "full": null,
-        "training_total": 0,
-        "repeat_count": 1,
-        "repeat_pct": 33.3,
-        "med_close": 4.6,
-        "med_frt_min": 0,
-        "stores_count": 1,
-        "cost": 22683,
-        "tag": null,
-        "tag_label": null,
-        "tag_color": null,
-        "big_base": false,
-        "note": "",
-        "top_topic": "Оборудование",
-        "top_undesired_topic": "Оборудование"
-      },
-      {
-        "name": "Шохрух махмуд",
-        "tickets": 2,
-        "desired": 2,
-        "undesired": 0,
-        "undesired_pct": 0.0,
-        "partial": null,
-        "full": null,
-        "training_total": 0,
-        "repeat_count": 0,
-        "repeat_pct": 0.0,
-        "med_close": 11.95,
-        "med_frt_min": 0.3,
-        "stores_count": 1,
-        "cost": 15122,
-        "tag": null,
-        "tag_label": null,
-        "tag_color": null,
-        "big_base": false,
-        "note": "",
-        "top_topic": "Настройка",
-        "top_undesired_topic": ""
-      },
-      {
-        "name": "Eldor Nurmatov",
-        "tickets": 2,
-        "desired": 2,
-        "undesired": 0,
-        "undesired_pct": 0.0,
-        "partial": null,
-        "full": null,
-        "training_total": 0,
-        "repeat_count": 0,
-        "repeat_pct": 0.0,
-        "med_close": 3.3,
-        "med_frt_min": 0,
-        "stores_count": 1,
-        "cost": 15122,
-        "tag": null,
-        "tag_label": null,
-        "tag_color": null,
-        "big_base": false,
-        "note": "",
-        "top_topic": "Настройка",
-        "top_undesired_topic": ""
-      },
-      {
-        "name": "Bekzod Suyundikov",
-        "tickets": 2,
-        "desired": 0,
-        "undesired": 2,
-        "undesired_pct": 100.0,
-        "partial": null,
-        "full": null,
-        "training_total": 0,
-        "repeat_count": 0,
-        "repeat_pct": 0.0,
-        "med_close": 0.75,
-        "med_frt_min": 0.35,
-        "stores_count": 1,
-        "cost": 15122,
-        "tag": null,
-        "tag_label": null,
-        "tag_color": null,
-        "big_base": false,
-        "note": "",
-        "top_topic": "Документооборот",
-        "top_undesired_topic": "Документооборот"
-      },
-      {
-        "name": "Farhodpoyabzal",
-        "tickets": 2,
-        "desired": 0,
-        "undesired": 2,
-        "undesired_pct": 100.0,
-        "partial": null,
-        "full": null,
-        "training_total": 0,
-        "repeat_count": 0,
-        "repeat_pct": 0.0,
-        "med_close": 1.05,
-        "med_frt_min": 0,
-        "stores_count": 1,
-        "cost": 15122,
-        "tag": null,
-        "tag_label": null,
-        "tag_color": null,
-        "big_base": false,
-        "note": "",
-        "top_topic": "",
-        "top_undesired_topic": ""
-      },
-      {
-        "name": "АЕ",
-        "tickets": 2,
-        "desired": 0,
-        "undesired": 2,
-        "undesired_pct": 100.0,
-        "partial": null,
-        "full": null,
-        "training_total": 0,
-        "repeat_count": 0,
-        "repeat_pct": 0.0,
-        "med_close": 7.85,
-        "med_frt_min": 2.15,
-        "stores_count": 1,
-        "cost": 15122,
-        "tag": null,
-        "tag_label": null,
-        "tag_color": null,
-        "big_base": false,
-        "note": "",
-        "top_topic": "Настройка",
-        "top_undesired_topic": "Настройка"
-      },
-      {
-        "name": "Mukhammadaziz Koshakbaev",
-        "tickets": 2,
-        "desired": 0,
-        "undesired": 2,
-        "undesired_pct": 100.0,
-        "partial": null,
-        "full": null,
-        "training_total": 0,
-        "repeat_count": 0,
-        "repeat_pct": 0.0,
-        "med_close": 1.35,
-        "med_frt_min": 0,
-        "stores_count": 1,
-        "cost": 15122,
-        "tag": null,
-        "tag_label": null,
-        "tag_color": null,
-        "big_base": false,
-        "note": "",
-        "top_topic": "Учётная запись",
-        "top_undesired_topic": "Учётная запись"
-      },
-      {
-        "name": "Sunnattilla Abdurazzoqov// Robiya Alisherova",
-        "tickets": 2,
-        "desired": 0,
-        "undesired": 2,
-        "undesired_pct": 100.0,
-        "partial": null,
-        "full": null,
-        "training_total": 0,
-        "repeat_count": 1,
-        "repeat_pct": 50.0,
-        "med_close": 3.45,
-        "med_frt_min": 1.2,
-        "stores_count": 1,
-        "cost": 15122,
-        "tag": null,
-        "tag_label": null,
-        "tag_color": null,
-        "big_base": false,
-        "note": "",
-        "top_topic": "Документооборот",
-        "top_undesired_topic": "Документооборот"
-      },
-      {
-        "name": "Хусан Артиков",
-        "tickets": 2,
-        "desired": 1,
-        "undesired": 1,
-        "undesired_pct": 50.0,
-        "partial": null,
-        "full": null,
-        "training_total": 0,
-        "repeat_count": 0,
-        "repeat_pct": 0.0,
-        "med_close": 2.75,
-        "med_frt_min": 0,
-        "stores_count": 2,
-        "cost": 15122,
-        "tag": null,
-        "tag_label": null,
-        "tag_color": null,
-        "big_base": false,
-        "note": "",
-        "top_topic": "Учётная запись",
-        "top_undesired_topic": ""
-      },
-      {
-        "name": "Бахтиёр Касимов",
-        "tickets": 2,
-        "desired": 0,
-        "undesired": 2,
-        "undesired_pct": 100.0,
-        "partial": null,
-        "full": null,
-        "training_total": 0,
-        "repeat_count": 0,
-        "repeat_pct": 0.0,
-        "med_close": 15.9,
-        "med_frt_min": 0,
-        "stores_count": 1,
-        "cost": 15122,
-        "tag": null,
-        "tag_label": null,
-        "tag_color": null,
-        "big_base": false,
-        "note": "",
-        "top_topic": "Все клиенты",
-        "top_undesired_topic": "Все клиенты"
-      },
-      {
-        "name": "В чб не выходит",
-        "tickets": 2,
-        "desired": 1,
-        "undesired": 1,
-        "undesired_pct": 50.0,
-        "partial": null,
-        "full": null,
-        "training_total": 0,
-        "repeat_count": 0,
-        "repeat_pct": 0.0,
-        "med_close": 9.1,
-        "med_frt_min": 1.05,
-        "stores_count": 1,
-        "cost": 15122,
-        "tag": null,
-        "tag_label": null,
-        "tag_color": null,
-        "big_base": false,
-        "note": "",
-        "top_topic": "Массовый сбой BILLZ",
-        "top_undesired_topic": "Массовый сбой BILLZ"
-      },
-      {
-        "name": "Nursultan Javliyev Kashkadarya",
-        "tickets": 2,
-        "desired": 0,
-        "undesired": 2,
-        "undesired_pct": 100.0,
-        "partial": null,
-        "full": null,
-        "training_total": 0,
-        "repeat_count": 0,
-        "repeat_pct": 0.0,
-        "med_close": 0.25,
-        "med_frt_min": 0.1,
-        "stores_count": 1,
-        "cost": 15122,
-        "tag": null,
-        "tag_label": null,
-        "tag_color": null,
-        "big_base": false,
-        "note": "",
-        "top_topic": "Общались по звонку",
-        "top_undesired_topic": "Общались по звонку"
-      },
-      {
-        "name": "Marat Mustafaev/Husan Artikov",
-        "tickets": 2,
-        "desired": 1,
-        "undesired": 1,
-        "undesired_pct": 50.0,
-        "partial": null,
-        "full": null,
-        "training_total": 0,
-        "repeat_count": 0,
-        "repeat_pct": 0.0,
-        "med_close": 1.9,
-        "med_frt_min": 0.5,
-        "stores_count": 1,
-        "cost": 15122,
-        "tag": null,
-        "tag_label": null,
-        "tag_color": null,
-        "big_base": false,
-        "note": "",
-        "top_topic": "Документооборот",
-        "top_undesired_topic": "Документооборот"
-      },
-      {
-        "name": "Doston Botirov",
-        "tickets": 2,
-        "desired": 0,
-        "undesired": 2,
-        "undesired_pct": 100.0,
-        "partial": null,
-        "full": null,
-        "training_total": 0,
-        "repeat_count": 0,
-        "repeat_pct": 0.0,
-        "med_close": 5.6,
-        "med_frt_min": 1.95,
-        "stores_count": 1,
-        "cost": 15122,
-        "tag": null,
-        "tag_label": null,
-        "tag_color": null,
-        "big_base": false,
-        "note": "",
-        "top_topic": "Документооборот",
-        "top_undesired_topic": "Документооборот"
-      },
-      {
-        "name": "еще не выбрали ксник",
-        "tickets": 2,
-        "desired": 1,
-        "undesired": 1,
-        "undesired_pct": 50.0,
-        "partial": null,
-        "full": null,
-        "training_total": 0,
-        "repeat_count": 0,
-        "repeat_pct": 0.0,
-        "med_close": 6.25,
-        "med_frt_min": 1.3,
-        "stores_count": 1,
-        "cost": 15122,
-        "tag": null,
-        "tag_label": null,
-        "tag_color": null,
-        "big_base": false,
-        "note": "",
-        "top_topic": "Массовый сбой BILLZ",
-        "top_undesired_topic": "Массовый сбой BILLZ"
-      },
-      {
-        "name": "Наш чел с АЕ",
-        "tickets": 2,
-        "desired": 2,
-        "undesired": 0,
-        "undesired_pct": 0.0,
-        "partial": null,
-        "full": null,
-        "training_total": 0,
-        "repeat_count": 0,
-        "repeat_pct": 0.0,
-        "med_close": 0.2,
-        "med_frt_min": 0.2,
-        "stores_count": 1,
-        "cost": 15122,
-        "tag": null,
-        "tag_label": null,
-        "tag_color": null,
-        "big_base": false,
-        "note": "",
-        "top_topic": "Учётная запись",
-        "top_undesired_topic": ""
-      },
-      {
-        "name": "Self-onboarding/Alina Hanieva",
-        "tickets": 2,
-        "desired": 2,
-        "undesired": 0,
-        "undesired_pct": 0.0,
-        "partial": null,
-        "full": null,
-        "training_total": 0,
-        "repeat_count": 0,
-        "repeat_pct": 0.0,
-        "med_close": 4.25,
-        "med_frt_min": 0,
-        "stores_count": 1,
-        "cost": 15122,
-        "tag": null,
-        "tag_label": null,
-        "tag_color": null,
-        "big_base": false,
-        "note": "",
-        "top_topic": "Оборудование",
-        "top_undesired_topic": ""
-      },
-      {
-        "name": "Support manager Sunnattilla Abdurazzoqov",
-        "tickets": 2,
-        "desired": 0,
-        "undesired": 2,
-        "undesired_pct": 100.0,
-        "partial": null,
-        "full": null,
-        "training_total": 0,
-        "repeat_count": 0,
-        "repeat_pct": 0.0,
-        "med_close": 15.45,
-        "med_frt_min": 10.2,
-        "stores_count": 2,
-        "cost": 15122,
-        "tag": null,
-        "tag_label": null,
-        "tag_color": null,
-        "big_base": false,
-        "note": "",
-        "top_topic": "спам",
-        "top_undesired_topic": "спам"
+        "top_undesired_topic": "Массовый сбой BILLZ",
+        "topic_breakdown": [
+          {
+            "topic": "Массовый сбой BILLZ",
+            "count": 11,
+            "pct": 12.8,
+            "undesired": 10,
+            "undesired_pct": 90.9,
+            "repeat": 0,
+            "cost": 83171
+          },
+          {
+            "topic": "Документооборот",
+            "count": 10,
+            "pct": 11.6,
+            "undesired": 6,
+            "undesired_pct": 60.0,
+            "repeat": 0,
+            "cost": 75610
+          },
+          {
+            "topic": "Оборудование",
+            "count": 9,
+            "pct": 10.5,
+            "undesired": 3,
+            "undesired_pct": 33.3,
+            "repeat": 2,
+            "cost": 68049
+          },
+          {
+            "topic": "Каталог",
+            "count": 8,
+            "pct": 9.3,
+            "undesired": 3,
+            "undesired_pct": 37.5,
+            "repeat": 0,
+            "cost": 60488
+          },
+          {
+            "topic": "Учётная запись",
+            "count": 6,
+            "pct": 7.0,
+            "undesired": 3,
+            "undesired_pct": 50.0,
+            "repeat": 0,
+            "cost": 45366
+          },
+          {
+            "topic": "Новая продажа",
+            "count": 4,
+            "pct": 4.7,
+            "undesired": 2,
+            "undesired_pct": 50.0,
+            "repeat": 0,
+            "cost": 30244
+          },
+          {
+            "topic": "Инвентаризация",
+            "count": 3,
+            "pct": 3.5,
+            "undesired": 1,
+            "undesired_pct": 33.3,
+            "repeat": 1,
+            "cost": 22683
+          },
+          {
+            "topic": "Отчёты",
+            "count": 2,
+            "pct": 2.3,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 1,
+            "cost": 15122
+          },
+          {
+            "topic": "Настройка",
+            "count": 1,
+            "pct": 1.2,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 7561
+          },
+          {
+            "topic": "Кассовые смены",
+            "count": 1,
+            "pct": 1.2,
+            "undesired": 1,
+            "undesired_pct": 100.0,
+            "repeat": 0,
+            "cost": 7561
+          },
+          {
+            "topic": "Списание",
+            "count": 1,
+            "pct": 1.2,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 7561
+          },
+          {
+            "topic": "Вопрос не по программе",
+            "count": 1,
+            "pct": 1.2,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 7561
+          },
+          {
+            "topic": "Управление",
+            "count": 1,
+            "pct": 1.2,
+            "undesired": 1,
+            "undesired_pct": 100.0,
+            "repeat": 0,
+            "cost": 7561
+          },
+          {
+            "topic": "Переоценка",
+            "count": 1,
+            "pct": 1.2,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 7561
+          }
+        ],
+        "labels_breakdown": [
+          {
+            "label": "Массовый сбой BILLZ",
+            "count": 11,
+            "cost": 83171
+          },
+          {
+            "label": "Документооборот - Оплата за тариф",
+            "count": 5,
+            "cost": 37805
+          },
+          {
+            "label": "Оборудование - Загрузка базу товаров в весы",
+            "count": 5,
+            "cost": 37805
+          },
+          {
+            "label": "Новая продажа - Возврат/Обмен",
+            "count": 4,
+            "cost": 30244
+          },
+          {
+            "label": "Каталог — настройка печати ценника",
+            "count": 3,
+            "cost": 22683
+          },
+          {
+            "label": "Каталог — запрос на добавление товара",
+            "count": 3,
+            "cost": 22683
+          },
+          {
+            "label": "Учётная запись - Помощь со входом в аккаунт",
+            "count": 3,
+            "cost": 22683
+          },
+          {
+            "label": "Документооборот - Создание ссылки для оплаты",
+            "count": 2,
+            "cost": 15122
+          },
+          {
+            "label": "Отчёты - Частичное обучение",
+            "count": 2,
+            "cost": 15122
+          },
+          {
+            "label": "Оборудование - Установка/Настройка/Удаление весов",
+            "count": 2,
+            "cost": 15122
+          }
+        ]
       }
     ],
     "top_labels": [
       {
         "name": "Массовый сбой BILLZ",
-        "tickets": 1013,
+        "tickets": 1788,
         "type": "Стандарт",
-        "cost": 7659293,
-        "undesired": 792
+        "cost": 13519068,
+        "undesired": 0
       },
       {
         "name": "Документооборот - Оплата за тариф",
-        "tickets": 625,
+        "tickets": 1006,
         "type": "Стандарт",
-        "cost": 4725625,
-        "undesired": 346
+        "cost": 7606366,
+        "undesired": 0
       },
       {
         "name": "Оборудование - Установка/Настройка/Удаление принтера",
-        "tickets": 297,
+        "tickets": 494,
         "type": "Стандарт",
-        "cost": 2245617,
-        "undesired": 108
+        "cost": 3735134,
+        "undesired": 0
       },
       {
         "name": "Учётная запись - Помощь со входом в аккаунт",
-        "tickets": 289,
+        "tickets": 476,
         "type": "Стандарт",
-        "cost": 2185129,
-        "undesired": 190
-      },
-      {
-        "name": "Документооборот - Создание ссылки для оплаты",
-        "tickets": 251,
-        "type": "Стандарт",
-        "cost": 1897811,
-        "undesired": 197
-      },
-      {
-        "name": "Учётная запись - Блокировка/Разблокировка аккаунта",
-        "tickets": 244,
-        "type": "Стандарт",
-        "cost": 1844884,
-        "undesired": 122
+        "cost": 3599036,
+        "undesired": 0
       },
       {
         "name": "Кассовые смены — Открытие/Закрытие смен",
-        "tickets": 239,
+        "tickets": 411,
         "type": "Стандарт",
-        "cost": 1807079,
-        "undesired": 150
+        "cost": 3107571,
+        "undesired": 0
+      },
+      {
+        "name": "Учётная запись - Блокировка/Разблокировка аккаунта",
+        "tickets": 340,
+        "type": "Стандарт",
+        "cost": 2570740,
+        "undesired": 0
+      },
+      {
+        "name": "Документооборот - Создание ссылки для оплаты",
+        "tickets": 333,
+        "type": "Стандарт",
+        "cost": 2517813,
+        "undesired": 0
       },
       {
         "name": "Баг (реквест)",
-        "tickets": 165,
+        "tickets": 235,
         "type": "Стандарт",
-        "cost": 1247565,
-        "undesired": 62
+        "cost": 1776835,
+        "undesired": 0
       },
       {
         "name": "Каталог — настройка печати ценника",
-        "tickets": 140,
+        "tickets": 219,
         "type": "Стандарт",
-        "cost": 1058540,
-        "undesired": 39
-      },
-      {
-        "name": "Управление - Создание/Редактирвоание/Удаление роли",
-        "tickets": 127,
-        "type": "Стандарт",
-        "cost": 960247,
-        "undesired": 46
+        "cost": 1655859,
+        "undesired": 0
       },
       {
         "name": "Новая продажа - Не удаётся сделать продажу",
-        "tickets": 114,
+        "tickets": 169,
         "type": "Стандарт",
-        "cost": 861954,
-        "undesired": 53
+        "cost": 1277809,
+        "undesired": 0
       },
       {
-        "name": "Настройка - Создание/Редактирование/Удаление доп. точки",
-        "tickets": 108,
+        "name": "Управление - Создание/Редактирвоание/Удаление роли",
+        "tickets": 167,
         "type": "Стандарт",
-        "cost": 816588,
-        "undesired": 22
-      },
-      {
-        "name": "Каталог — изменение свойств товара",
-        "tickets": 97,
-        "type": "Стандарт",
-        "cost": 733417,
-        "undesired": 38
+        "cost": 1262687,
+        "undesired": 0
       },
       {
         "name": "Оборудование - Установка Anydesk/BILLZ Desktop/Программы компьютера и тд.",
-        "tickets": 91,
+        "tickets": 131,
         "type": "Стандарт",
-        "cost": 688051,
-        "undesired": 39
-      },
-      {
-        "name": "Новая продажа - Возврат/Обмен",
-        "tickets": 89,
-        "type": "Стандарт",
-        "cost": 672929,
-        "undesired": 39
-      },
-      {
-        "name": "Управление - Создание/Редактирвоание/Удаление сотрудника",
-        "tickets": 88,
-        "type": "Стандарт",
-        "cost": 665368,
-        "undesired": 29
-      },
-      {
-        "name": "Импорт — импорт товаров через Excel",
-        "tickets": 82,
-        "type": "Стандарт",
-        "cost": 620002,
-        "undesired": 28
-      },
-      {
-        "name": "Отчёты - Разбор отчётов",
-        "tickets": 78,
-        "type": "Стандарт",
-        "cost": 589758,
-        "undesired": 16
+        "cost": 990491,
+        "undesired": 0
       },
       {
         "name": "Все продажи - Удаление/Редактирование продажи",
-        "tickets": 77,
+        "tickets": 120,
         "type": "Стандарт",
-        "cost": 582197,
-        "undesired": 40
+        "cost": 907320,
+        "undesired": 0
       },
       {
-        "name": "Каталог — запрос на добавление товара",
+        "name": "Настройка - Создание/Редактирование/Удаление доп. точки",
+        "tickets": 120,
+        "type": "Стандарт",
+        "cost": 907320,
+        "undesired": 0
+      },
+      {
+        "name": "Новая продажа - Возврат/Обмен",
+        "tickets": 100,
+        "type": "Стандарт",
+        "cost": 756100,
+        "undesired": 0
+      },
+      {
+        "name": "Импорт — импорт товаров через Excel",
+        "tickets": 97,
+        "type": "Стандарт",
+        "cost": 733417,
+        "undesired": 0
+      },
+      {
+        "name": "Каталог — изменение свойств товара",
+        "tickets": 94,
+        "type": "Стандарт",
+        "cost": 710734,
+        "undesired": 0
+      },
+      {
+        "name": "Управление - Создание/Редактирвоание/Удаление сотрудника",
+        "tickets": 84,
+        "type": "Стандарт",
+        "cost": 635124,
+        "undesired": 0
+      },
+      {
+        "name": "Оборудование - Загрузка базу товаров в весы",
         "tickets": 68,
         "type": "Стандарт",
         "cost": 514148,
-        "undesired": 26
+        "undesired": 0
+      },
+      {
+        "name": "Отчёты - Разбор отчётов",
+        "tickets": 66,
+        "type": "Стандарт",
+        "cost": 499026,
+        "undesired": 0
       }
     ],
     "by_store": [
       {
         "name": "BILLZ",
-        "tickets": 1133,
-        "cost": 8566613,
-        "ks": "Наш чел"
+        "tickets": 587,
+        "cost": 4438307,
+        "ks": "Shoxruh Maxmud"
       },
       {
         "name": "inbazar",
@@ -25649,15 +27077,9 @@ const BILLZ_DATA = {
         "ks": "Baxtiyor Kasimov"
       },
       {
-        "name": "КС",
-        "tickets": 47,
-        "cost": 355367,
-        "ks": "КС"
-      },
-      {
         "name": "Inbazar",
-        "tickets": 45,
-        "cost": 340245,
+        "tickets": 44,
+        "cost": 332684,
         "ks": "Baxtiyor Kasimov"
       },
       {
@@ -25673,16 +27095,16 @@ const BILLZ_DATA = {
         "ks": "Sunnattilla Abdurazzoqov"
       },
       {
-        "name": "akula-mobile",
-        "tickets": 41,
-        "cost": 310001,
-        "ks": "Akbarali Kidiraliev"
-      },
-      {
         "name": "kunleek",
         "tickets": 35,
         "cost": 264635,
         "ks": "Shoxruh Maxmud"
+      },
+      {
+        "name": "akula-mobile",
+        "tickets": 35,
+        "cost": 264635,
+        "ks": "Akbarali Kidiraliev"
       },
       {
         "name": "buttonshop",
@@ -25691,36 +27113,42 @@ const BILLZ_DATA = {
         "ks": "Baxtiyor Kasimov"
       },
       {
-        "name": "Наш сотрудник",
-        "tickets": 34,
-        "cost": 257074,
-        "ks": "Наш сотрудник"
-      },
-      {
         "name": "osiyometal",
         "tickets": 34,
         "cost": 257074,
         "ks": "Sanat Toshpulatov"
       },
       {
-        "name": "bloom",
-        "tickets": 32,
-        "cost": 241952,
-        "ks": "Jasur Mukhamedjanov"
-      },
-      {
         "name": "morano",
         "tickets": 31,
         "cost": 234391,
         "ks": "Sanat Toshpulatov"
+      },
+      {
+        "name": "bloom",
+        "tickets": 31,
+        "cost": 234391,
+        "ks": "Jasur Mukhamedjanov"
+      },
+      {
+        "name": "pkas",
+        "tickets": 30,
+        "cost": 226830,
+        "ks": "Jasur Mukhamedjanov"
+      },
+      {
+        "name": "skechers",
+        "tickets": 29,
+        "cost": 219269,
+        "ks": "Baxtiyor Kasimov"
       }
     ],
     "by_store_ks": [
       {
         "store": "BILLZ",
-        "ks": "Наш чел",
-        "tickets": 1133,
-        "cost": 8566613
+        "ks": "Shoxruh Maxmud",
+        "tickets": 587,
+        "cost": 4438307
       },
       {
         "store": "inbazar",
@@ -25741,16 +27169,10 @@ const BILLZ_DATA = {
         "cost": 400733
       },
       {
-        "store": "КС",
-        "ks": "КС",
-        "tickets": 47,
-        "cost": 355367
-      },
-      {
         "store": "Inbazar",
         "ks": "Baxtiyor Kasimov",
-        "tickets": 45,
-        "cost": 340245
+        "tickets": 44,
+        "cost": 332684
       },
       {
         "store": "luzett",
@@ -25765,14 +27187,14 @@ const BILLZ_DATA = {
         "cost": 317562
       },
       {
-        "store": "akula-mobile",
-        "ks": "Akbarali Kidiraliev",
-        "tickets": 41,
-        "cost": 310001
-      },
-      {
         "store": "kunleek",
         "ks": "Shoxruh Maxmud",
+        "tickets": 35,
+        "cost": 264635
+      },
+      {
+        "store": "akula-mobile",
+        "ks": "Akbarali Kidiraliev",
         "tickets": 35,
         "cost": 264635
       },
@@ -25783,26 +27205,20 @@ const BILLZ_DATA = {
         "cost": 257074
       },
       {
-        "store": "Наш сотрудник",
-        "ks": "Наш сотрудник",
-        "tickets": 34,
-        "cost": 257074
-      },
-      {
         "store": "osiyometal",
         "ks": "Sanat Toshpulatov",
         "tickets": 34,
         "cost": 257074
       },
       {
-        "store": "bloom",
-        "ks": "Jasur Mukhamedjanov",
-        "tickets": 32,
-        "cost": 241952
-      },
-      {
         "store": "morano",
         "ks": "Sanat Toshpulatov",
+        "tickets": 31,
+        "cost": 234391
+      },
+      {
+        "store": "bloom",
+        "ks": "Jasur Mukhamedjanov",
         "tickets": 31,
         "cost": 234391
       },
@@ -25835,44 +27251,44 @@ const BILLZ_DATA = {
         "ks": "Husan Artikov",
         "tickets": 25,
         "cost": 189025
+      },
+      {
+        "store": "baraka-oyinchoqlar",
+        "ks": "Mukhammadaziz Koshakbayev",
+        "tickets": 25,
+        "cost": 189025
+      },
+      {
+        "store": "scandihome",
+        "ks": "Shoxruh Maxmud",
+        "tickets": 25,
+        "cost": 189025
       }
     ],
     "repeat_connection": [
       {
-        "label": "Документооборот - Оплата за тариф",
-        "repeat": 32,
-        "context": "32 повторных · Техническая тема",
-        "cs_related": false
-      },
-      {
-        "label": "Баг (реквест)",
-        "repeat": 30,
-        "context": "30 повторных · Техническая тема",
-        "cs_related": false
-      },
-      {
         "label": "Кассовые смены — Открытие/Закрытие смен",
-        "repeat": 27,
-        "context": "27 повторных · Тема онбординга — возврат за тем же",
+        "repeat": 26,
+        "context": "26 повторных · Тема онбординга — возврат за тем же",
         "cs_related": true
       },
       {
-        "label": "Документооборот - Создание ссылки для оплаты",
+        "label": "Документооборот - Оплата за тариф",
         "repeat": 26,
         "context": "26 повторных · Техническая тема",
         "cs_related": false
       },
       {
-        "label": "Учётная запись - Блокировка/Разблокировка аккаунта",
+        "label": "Баг (реквест)",
         "repeat": 19,
         "context": "19 повторных · Техническая тема",
         "cs_related": false
       },
       {
-        "label": "Оборудование - Установка/Настройка/Удаление принтера",
-        "repeat": 19,
-        "context": "19 повторных · Тема онбординга — возврат за тем же",
-        "cs_related": true
+        "label": "Документооборот - Создание ссылки для оплаты",
+        "repeat": 14,
+        "context": "14 повторных · Техническая тема",
+        "cs_related": false
       },
       {
         "label": "Оборудование - Установка Anydesk/BILLZ Desktop/Программы компьютера и тд.",
@@ -25881,22 +27297,22 @@ const BILLZ_DATA = {
         "cs_related": false
       },
       {
+        "label": "Оборудование - Установка/Настройка/Удаление принтера",
+        "repeat": 14,
+        "context": "14 повторных · Тема онбординга — возврат за тем же",
+        "cs_related": true
+      },
+      {
         "label": "Каталог — настройка печати ценника",
         "repeat": 13,
         "context": "13 повторных · Тема онбординга — возврат за тем же",
         "cs_related": true
       },
       {
-        "label": "Учётная запись - Помощь со входом в аккаунт",
-        "repeat": 12,
-        "context": "12 повторных · Техническая тема",
+        "label": "Учётная запись - Блокировка/Разблокировка аккаунта",
+        "repeat": 13,
+        "context": "13 повторных · Техническая тема",
         "cs_related": false
-      },
-      {
-        "label": "Управление - Создание/Редактирвоание/Удаление роли",
-        "repeat": 12,
-        "context": "12 повторных · Тема онбординга — возврат за тем же",
-        "cs_related": true
       },
       {
         "label": "Все продажи - Удаление/Редактирование продажи",
@@ -25905,9 +27321,15 @@ const BILLZ_DATA = {
         "cs_related": false
       },
       {
-        "label": "SMS рассылка - Создание SMS рассылки",
+        "label": "Управление - Создание/Редактирвоание/Удаление роли",
         "repeat": 11,
-        "context": "11 повторных · Техническая тема",
+        "context": "11 повторных · Тема онбординга — возврат за тем же",
+        "cs_related": true
+      },
+      {
+        "label": "SMS рассылка - Создание SMS рассылки",
+        "repeat": 10,
+        "context": "10 повторных · Техническая тема",
         "cs_related": false
       },
       {
@@ -25923,7 +27345,13 @@ const BILLZ_DATA = {
         "cs_related": false
       },
       {
-        "label": "Документооборот - Реактивация клиента",
+        "label": "Учётная запись - Помощь со входом в аккаунт",
+        "repeat": 8,
+        "context": "8 повторных · Техническая тема",
+        "cs_related": false
+      },
+      {
+        "label": "Новая продажа - Не удаётся сделать продажу",
         "repeat": 8,
         "context": "8 повторных · Техническая тема",
         "cs_related": false
@@ -25933,26 +27361,32 @@ const BILLZ_DATA = {
       {
         "type": "finding",
         "icon": "👥",
-        "title": "7960 тикетов с CS-менеджерами за 1–24 мая",
-        "text": "113 активных менеджеров · 60.2 млн сум нагрузки на CC. Это 70% всех тикетов мая."
+        "title": "6 515 тикетов от 18 ключевых CS-менеджеров за 1–24 мая",
+        "text": "14 критичных + 4 некритичных (тимлиды + Marat) · 49.3 млн сум нагрузки."
       },
       {
         "type": "finding",
         "icon": "🏆",
-        "title": "Топ-3: Baxtiyor Kasimov (1186), Shoxruh Maxmud (855), Husan Artikov (699)",
-        "text": "Крупнейшие клиентские базы. Объём ожидаем — важнее % нежелательных и повторных."
+        "title": "Топ-3 по нагрузке: Baxtiyor Kasimov (1191), Shoxruh Maxmud (977), Husan Artikov (703)",
+        "text": "Большие базы. Объём ожидаем — оцениваем по нежелательным и повторным."
       },
       {
         "type": "finding",
         "icon": "🎓",
-        "title": "Обучения через CC: 247 (227 частичных + 20 полных)",
-        "text": "CC закрыл 3.1% работы CS через обучения."
+        "title": "Обучения через CC: 216 (200 частичных + 16 полных)",
+        "text": "CC закрыл 3.3% работы CS через обучения."
+      },
+      {
+        "type": "finding",
+        "icon": "⭐",
+        "title": "Критичные менеджеры — 14 из 18",
+        "text": "Бахтиёр, Жасур (тимлиды), Шохрух (большая база) и Марат — оцениваются по управленческим, а не клиентским метрикам."
       },
       {
         "type": "recommendation",
         "icon": "📊",
-        "title": "KPI по нежелательным и повторным для CS",
-        "text": "Замер: % нежел <50%, % повторных <15% по каждому CS. Ежемесячный мониторинг."
+        "title": "KPI для критичных CS",
+        "text": "Замер: % нежел <50%, % повторных <15%. Если превышение — разбор онбординга/качества базы."
       }
     ],
     "chat_share_history": [
@@ -26109,7 +27543,7 @@ const BILLZ_DATA = {
     "monthly": "24.05.2026",
     "weekly": "24.05.2026",
     "daily": "24.05.2026",
-    "quarterly": "17.05.2026",
+    "quarterly": "24.05.2026",
     "cs": "24.05.2026",
     "partners": "24.05.2026"
   },
@@ -56003,7 +57437,17 @@ const BILLZ_DATA = {
               ]
             }
           ],
-          "massoviy_cnt": 102
+          "massoviy_cnt": 102,
+          "sla_clean": 80.6,
+          "lcr_clean": 0.65,
+          "csat_clean": 93.4,
+          "afrt_clean": "24с",
+          "tickets_clean": 2594,
+          "undesired_clean": 1267,
+          "undesired_pct_clean": 48.8,
+          "repeat_pct_clean": 7.0,
+          "massoviy_sboy_count": 49,
+          "massoviy_sboy_pct": 1.9
         },
         "week_19": {
           "tickets": 2714,
@@ -56484,7 +57928,17 @@ const BILLZ_DATA = {
               ]
             }
           ],
-          "massoviy_cnt": 82
+          "massoviy_cnt": 82,
+          "sla_clean": 86.8,
+          "lcr_clean": 0.79,
+          "csat_clean": 94.7,
+          "afrt_clean": "18с",
+          "tickets_clean": 2654,
+          "undesired_clean": 1347,
+          "undesired_pct_clean": 50.8,
+          "repeat_pct_clean": 7.2,
+          "massoviy_sboy_count": 60,
+          "massoviy_sboy_pct": 2.2
         },
         "week_20": {
           "tickets": 2909,
@@ -56965,7 +58419,17 @@ const BILLZ_DATA = {
               ]
             }
           ],
-          "massoviy_cnt": 85
+          "massoviy_cnt": 85,
+          "sla_clean": 85.7,
+          "lcr_clean": 0.63,
+          "csat_clean": 95.1,
+          "afrt_clean": "18с",
+          "tickets_clean": 2831,
+          "undesired_clean": 1512,
+          "undesired_pct_clean": 53.4,
+          "repeat_pct_clean": 7.3,
+          "massoviy_sboy_count": 78,
+          "massoviy_sboy_pct": 2.7
         },
         "week_21": {
           "tickets": 4421,
@@ -57469,6 +58933,16 @@ const BILLZ_DATA = {
             }
           ],
           "massoviy_cnt": 90,
+          "sla_clean": 85.0,
+          "lcr_clean": 3.89,
+          "csat_clean": 91.0,
+          "afrt_clean": "1м 26с",
+          "tickets_clean": 2886,
+          "undesired_clean": 1542,
+          "undesired_pct_clean": 53.4,
+          "repeat_pct_clean": 6.4,
+          "massoviy_sboy_count": 1535,
+          "massoviy_sboy_pct": 34.7,
           "ats_data": {
             "incoming": 2511,
             "outgoing": 431,
@@ -57487,7 +58961,8 @@ const BILLZ_DATA = {
             "call_share": 54.7,
             "chat_share": 45.3,
             "downtime_calls": 446,
-            "unworktime": 15
+            "unworktime": 15,
+            "note": "Корректные данные за неделю из отчёта команды CC. LCR чистый = 3.89% (план 3.5%)"
           }
         }
       },
@@ -67067,157 +68542,1110 @@ const BILLZ_DATA = {
       },
       "cs": {
         "period": "1–24 мая 2026",
-        "total_cs_tickets": 7960,
-        "total_cs_cost": 60185560,
-        "total_train_tickets": 247,
-        "total_train_cost": 1867567,
-        "partial_tickets": 227,
-        "full_tickets": 20,
-        "desired_total": 3457,
-        "undesired_total": 4244,
-        "undesired_pct_avg": 53.3,
-        "repeat_total": 554,
-        "repeat_pct_avg": 7.0,
-        "avg_med_close_min": 204.0,
-        "avg_med_frt_min": 0.4,
+        "whitelist_only": true,
+        "whitelist_count": 18,
+        "critical_count": 14,
+        "non_critical_count": 4,
+        "total_cs_tickets": 6515,
+        "total_cs_cost": 49259915,
+        "total_train_tickets": 216,
+        "total_train_cost": 1633176,
+        "partial_tickets": 200,
+        "full_tickets": 16,
+        "desired_total": 2878,
+        "undesired_total": 3487,
+        "undesired_pct_avg": 53.5,
+        "repeat_total": 450,
+        "repeat_pct_avg": 6.9,
+        "avg_med_close_min": 0,
+        "avg_med_frt_min": 0,
         "avg_call_min": 12,
-        "stores_count": 1760,
+        "stores_count": 1516,
         "users_count": 37260,
-        "tpc": 4.52,
-        "tpu": 0.2136,
+        "tpc": 4.3,
+        "tpu": 0.1749,
         "train_tpc": 0.14,
         "by_month": [
           {
             "month": "Май (1-24)",
-            "tickets": 7960,
-            "cost": 60185560,
-            "partial": 227,
-            "full": 20,
-            "train_tickets": 247
+            "tickets": 6515,
+            "cost": 49259915,
+            "partial": 200,
+            "full": 16,
+            "train_tickets": 216
           }
         ],
         "by_ks_manager": [
           {
             "name": "Baxtiyor Kasimov",
-            "tickets": 1186,
+            "role": "teamlead_bigbase",
+            "non_critical": true,
+            "tag_label": "👑 Тимлид · большая база",
+            "tag_color": "#A78BFA",
+            "tickets": 1191,
             "desired": 520,
-            "undesired": 640,
-            "undesired_pct": 54.0,
+            "undesired": 644,
+            "undesired_pct": 54.1,
             "partial": 22,
             "full": 2,
             "training_total": 24,
             "repeat_count": 99,
             "repeat_pct": 8.3,
-            "med_close": 3.05,
+            "med_close": 3.0,
             "med_frt_min": 0.35,
-            "stores_count": 222,
-            "cost": 8967346,
-            "tag": "big_base",
-            "tag_label": "🔵 Большая база",
-            "tag_color": "#3B82F6",
-            "big_base": true,
-            "note": "",
+            "stores_count": 225,
+            "massoviy_count": 148,
+            "cost": 9005151,
             "top_topic": "Массовый сбой BILLZ",
-            "top_undesired_topic": "Массовый сбой BILLZ"
+            "top_undesired_topic": "Массовый сбой BILLZ",
+            "topic_breakdown": [
+              {
+                "topic": "Массовый сбой BILLZ",
+                "count": 145,
+                "pct": 12.2,
+                "undesired": 107,
+                "undesired_pct": 73.8,
+                "repeat": 2,
+                "cost": 1096345
+              },
+              {
+                "topic": "Кассовые смены",
+                "count": 125,
+                "pct": 10.5,
+                "undesired": 91,
+                "undesired_pct": 72.8,
+                "repeat": 15,
+                "cost": 945125
+              },
+              {
+                "topic": "Документооборот",
+                "count": 109,
+                "pct": 9.2,
+                "undesired": 64,
+                "undesired_pct": 58.7,
+                "repeat": 7,
+                "cost": 824149
+              },
+              {
+                "topic": "Учётная запись",
+                "count": 86,
+                "pct": 7.2,
+                "undesired": 48,
+                "undesired_pct": 55.8,
+                "repeat": 10,
+                "cost": 650246
+              },
+              {
+                "topic": "Все продажи",
+                "count": 62,
+                "pct": 5.2,
+                "undesired": 33,
+                "undesired_pct": 53.2,
+                "repeat": 10,
+                "cost": 468782
+              },
+              {
+                "topic": "Каталог",
+                "count": 61,
+                "pct": 5.1,
+                "undesired": 21,
+                "undesired_pct": 34.4,
+                "repeat": 7,
+                "cost": 461221
+              },
+              {
+                "topic": "Оборудование",
+                "count": 59,
+                "pct": 5.0,
+                "undesired": 22,
+                "undesired_pct": 37.3,
+                "repeat": 2,
+                "cost": 446099
+              },
+              {
+                "topic": "Новая продажа",
+                "count": 44,
+                "pct": 3.7,
+                "undesired": 21,
+                "undesired_pct": 47.7,
+                "repeat": 2,
+                "cost": 332684
+              },
+              {
+                "topic": "SMS рассылка",
+                "count": 40,
+                "pct": 3.4,
+                "undesired": 13,
+                "undesired_pct": 32.5,
+                "repeat": 8,
+                "cost": 302440
+              },
+              {
+                "topic": "Настройка",
+                "count": 38,
+                "pct": 3.2,
+                "undesired": 12,
+                "undesired_pct": 31.6,
+                "repeat": 2,
+                "cost": 287318
+              },
+              {
+                "topic": "Отчёты",
+                "count": 34,
+                "pct": 2.9,
+                "undesired": 8,
+                "undesired_pct": 23.5,
+                "repeat": 3,
+                "cost": 257074
+              },
+              {
+                "topic": "Управление",
+                "count": 33,
+                "pct": 2.8,
+                "undesired": 10,
+                "undesired_pct": 30.3,
+                "repeat": 1,
+                "cost": 249513
+              },
+              {
+                "topic": "Баг (реквест)",
+                "count": 26,
+                "pct": 2.2,
+                "undesired": 9,
+                "undesired_pct": 34.6,
+                "repeat": 6,
+                "cost": 196586
+              },
+              {
+                "topic": "Реквест (внутренний запрос",
+                "count": 18,
+                "pct": 1.5,
+                "undesired": 12,
+                "undesired_pct": 66.7,
+                "repeat": 2,
+                "cost": 136098
+              },
+              {
+                "topic": "Инвентаризация",
+                "count": 17,
+                "pct": 1.4,
+                "undesired": 7,
+                "undesired_pct": 41.2,
+                "repeat": 2,
+                "cost": 128537
+              }
+            ],
+            "labels_breakdown": [
+              {
+                "label": "Массовый сбой BILLZ",
+                "count": 145,
+                "cost": 1096345
+              },
+              {
+                "label": "Кассовые смены — Открытие/Закрытие смен",
+                "count": 119,
+                "cost": 899759
+              },
+              {
+                "label": "Документооборот - Оплата за тариф",
+                "count": 71,
+                "cost": 536831
+              },
+              {
+                "label": "Оборудование - Установка/Настройка/Удаление принтера",
+                "count": 57,
+                "cost": 430977
+              },
+              {
+                "label": "Все продажи - Удаление/Редактирование продажи",
+                "count": 49,
+                "cost": 370489
+              },
+              {
+                "label": "Учётная запись - Блокировка/Разблокировка аккаунта",
+                "count": 43,
+                "cost": 325123
+              },
+              {
+                "label": "Учётная запись - Помощь со входом в аккаунт",
+                "count": 35,
+                "cost": 264635
+              },
+              {
+                "label": "Новая продажа - Не удаётся сделать продажу",
+                "count": 28,
+                "cost": 211708
+              },
+              {
+                "label": "Баг (реквест)",
+                "count": 26,
+                "cost": 196586
+              },
+              {
+                "label": "Каталог — настройка печати ценника",
+                "count": 25,
+                "cost": 189025
+              }
+            ]
           },
           {
             "name": "Shoxruh Maxmud",
-            "tickets": 855,
-            "desired": 399,
-            "undesired": 437,
-            "undesired_pct": 51.1,
-            "partial": 28,
-            "full": null,
-            "training_total": 28,
-            "repeat_count": 54,
-            "repeat_pct": 6.3,
-            "med_close": 4.0,
-            "med_frt_min": 0.4,
-            "stores_count": 219,
-            "cost": 6464655,
-            "tag": "big_base",
+            "role": "bigbase",
+            "non_critical": true,
             "tag_label": "🔵 Большая база",
             "tag_color": "#3B82F6",
-            "big_base": true,
-            "note": "",
-            "top_topic": "Массовый сбой BILLZ",
-            "top_undesired_topic": "Массовый сбой BILLZ"
+            "tickets": 977,
+            "desired": 447,
+            "undesired": 509,
+            "undesired_pct": 52.1,
+            "partial": 28,
+            "full": 1,
+            "training_total": 29,
+            "repeat_count": 71,
+            "repeat_pct": 7.3,
+            "med_close": 3.4,
+            "med_frt_min": 0.4,
+            "stores_count": 223,
+            "massoviy_count": 162,
+            "cost": 7387097,
+            "top_topic": "Документооборот",
+            "top_undesired_topic": "Массовый сбой BILLZ",
+            "topic_breakdown": [
+              {
+                "topic": "Документооборот",
+                "count": 160,
+                "pct": 16.4,
+                "undesired": 96,
+                "undesired_pct": 60.0,
+                "repeat": 14,
+                "cost": 1209760
+              },
+              {
+                "topic": "Массовый сбой BILLZ",
+                "count": 153,
+                "pct": 15.7,
+                "undesired": 116,
+                "undesired_pct": 75.8,
+                "repeat": 1,
+                "cost": 1156833
+              },
+              {
+                "topic": "Учётная запись",
+                "count": 68,
+                "pct": 7.0,
+                "undesired": 37,
+                "undesired_pct": 54.4,
+                "repeat": 2,
+                "cost": 514148
+              },
+              {
+                "topic": "Каталог",
+                "count": 59,
+                "pct": 6.0,
+                "undesired": 19,
+                "undesired_pct": 32.2,
+                "repeat": 9,
+                "cost": 446099
+              },
+              {
+                "topic": "Настройка",
+                "count": 47,
+                "pct": 4.8,
+                "undesired": 17,
+                "undesired_pct": 36.2,
+                "repeat": 4,
+                "cost": 355367
+              },
+              {
+                "topic": "Управление",
+                "count": 38,
+                "pct": 3.9,
+                "undesired": 9,
+                "undesired_pct": 23.7,
+                "repeat": 2,
+                "cost": 287318
+              },
+              {
+                "topic": "Баг (реквест)",
+                "count": 35,
+                "pct": 3.6,
+                "undesired": 12,
+                "undesired_pct": 34.3,
+                "repeat": 3,
+                "cost": 264635
+              },
+              {
+                "topic": "Новая продажа",
+                "count": 34,
+                "pct": 3.5,
+                "undesired": 17,
+                "undesired_pct": 50.0,
+                "repeat": 3,
+                "cost": 257074
+              },
+              {
+                "topic": "Оборудование",
+                "count": 32,
+                "pct": 3.3,
+                "undesired": 13,
+                "undesired_pct": 40.6,
+                "repeat": 1,
+                "cost": 241952
+              },
+              {
+                "topic": "Отчёты",
+                "count": 25,
+                "pct": 2.6,
+                "undesired": 5,
+                "undesired_pct": 20.0,
+                "repeat": 3,
+                "cost": 189025
+              },
+              {
+                "topic": "Трансфер",
+                "count": 24,
+                "pct": 2.5,
+                "undesired": 11,
+                "undesired_pct": 45.8,
+                "repeat": 3,
+                "cost": 181464
+              },
+              {
+                "topic": "Кассовые смены",
+                "count": 21,
+                "pct": 2.1,
+                "undesired": 7,
+                "undesired_pct": 33.3,
+                "repeat": 1,
+                "cost": 158781
+              },
+              {
+                "topic": "Импорт",
+                "count": 20,
+                "pct": 2.0,
+                "undesired": 10,
+                "undesired_pct": 50.0,
+                "repeat": 2,
+                "cost": 151220
+              },
+              {
+                "topic": "Инвентаризация",
+                "count": 16,
+                "pct": 1.6,
+                "undesired": 3,
+                "undesired_pct": 18.8,
+                "repeat": 1,
+                "cost": 120976
+              },
+              {
+                "topic": "Все клиенты",
+                "count": 14,
+                "pct": 1.4,
+                "undesired": 8,
+                "undesired_pct": 57.1,
+                "repeat": 0,
+                "cost": 105854
+              }
+            ],
+            "labels_breakdown": [
+              {
+                "label": "Массовый сбой BILLZ",
+                "count": 153,
+                "cost": 1156833
+              },
+              {
+                "label": "Документооборот - Оплата за тариф",
+                "count": 89,
+                "cost": 672929
+              },
+              {
+                "label": "Документооборот - Создание ссылки для оплаты",
+                "count": 37,
+                "cost": 279757
+              },
+              {
+                "label": "Баг (реквест)",
+                "count": 35,
+                "cost": 264635
+              },
+              {
+                "label": "Учётная запись - Помощь со входом в аккаунт",
+                "count": 29,
+                "cost": 219269
+              },
+              {
+                "label": "Учётная запись - Блокировка/Разблокировка аккаунта",
+                "count": 28,
+                "cost": 211708
+              },
+              {
+                "label": "Каталог — настройка печати ценника",
+                "count": 27,
+                "cost": 204147
+              },
+              {
+                "label": "Управление - Создание/Редактирвоание/Удаление роли",
+                "count": 25,
+                "cost": 189025
+              },
+              {
+                "label": "Оборудование - Установка/Настройка/Удаление принтера",
+                "count": 23,
+                "cost": 173903
+              },
+              {
+                "label": "Настройка - Создание/Редактирование/Удаление доп. точки",
+                "count": 20,
+                "cost": 151220
+              }
+            ]
           },
           {
             "name": "Husan Artikov",
-            "tickets": 699,
-            "desired": 305,
-            "undesired": 374,
+            "role": "critical",
+            "non_critical": false,
+            "tag_label": "⭐ Критичный · большая база",
+            "tag_color": "#EF4444",
+            "tickets": 703,
+            "desired": 307,
+            "undesired": 376,
             "undesired_pct": 53.5,
             "partial": 19,
             "full": null,
             "training_total": 19,
             "repeat_count": 36,
-            "repeat_pct": 5.2,
-            "med_close": 3.5,
+            "repeat_pct": 5.1,
+            "med_close": 3.4,
             "med_frt_min": 0.4,
-            "stores_count": 197,
-            "cost": 5285139,
-            "tag": "big_base",
-            "tag_label": "🔵 Большая база",
-            "tag_color": "#3B82F6",
-            "big_base": true,
-            "note": "",
+            "stores_count": 200,
+            "massoviy_count": 119,
+            "cost": 5315383,
             "top_topic": "Документооборот",
-            "top_undesired_topic": "Массовый сбой BILLZ"
+            "top_undesired_topic": "Массовый сбой BILLZ",
+            "topic_breakdown": [
+              {
+                "topic": "Документооборот",
+                "count": 135,
+                "pct": 19.2,
+                "undesired": 88,
+                "undesired_pct": 65.2,
+                "repeat": 9,
+                "cost": 1020735
+              },
+              {
+                "topic": "Массовый сбой BILLZ",
+                "count": 117,
+                "pct": 16.6,
+                "undesired": 91,
+                "undesired_pct": 77.8,
+                "repeat": 0,
+                "cost": 884637
+              },
+              {
+                "topic": "Учётная запись",
+                "count": 57,
+                "pct": 8.1,
+                "undesired": 27,
+                "undesired_pct": 47.4,
+                "repeat": 3,
+                "cost": 430977
+              },
+              {
+                "topic": "Оборудование",
+                "count": 46,
+                "pct": 6.5,
+                "undesired": 19,
+                "undesired_pct": 41.3,
+                "repeat": 2,
+                "cost": 347806
+              },
+              {
+                "topic": "Каталог",
+                "count": 38,
+                "pct": 5.4,
+                "undesired": 16,
+                "undesired_pct": 42.1,
+                "repeat": 3,
+                "cost": 287318
+              },
+              {
+                "topic": "Управление",
+                "count": 28,
+                "pct": 4.0,
+                "undesired": 9,
+                "undesired_pct": 32.1,
+                "repeat": 5,
+                "cost": 211708
+              },
+              {
+                "topic": "Новая продажа",
+                "count": 26,
+                "pct": 3.7,
+                "undesired": 10,
+                "undesired_pct": 38.5,
+                "repeat": 1,
+                "cost": 196586
+              },
+              {
+                "topic": "Настройка",
+                "count": 23,
+                "pct": 3.3,
+                "undesired": 5,
+                "undesired_pct": 21.7,
+                "repeat": 0,
+                "cost": 173903
+              },
+              {
+                "topic": "Отчёты",
+                "count": 15,
+                "pct": 2.1,
+                "undesired": 3,
+                "undesired_pct": 20.0,
+                "repeat": 1,
+                "cost": 113415
+              },
+              {
+                "topic": "SMS рассылка",
+                "count": 14,
+                "pct": 2.0,
+                "undesired": 5,
+                "undesired_pct": 35.7,
+                "repeat": 1,
+                "cost": 105854
+              },
+              {
+                "topic": "Баг (реквест)",
+                "count": 13,
+                "pct": 1.8,
+                "undesired": 4,
+                "undesired_pct": 30.8,
+                "repeat": 1,
+                "cost": 98293
+              },
+              {
+                "topic": "Все продажи",
+                "count": 10,
+                "pct": 1.4,
+                "undesired": 3,
+                "undesired_pct": 30.0,
+                "repeat": 0,
+                "cost": 75610
+              },
+              {
+                "topic": "Заказы",
+                "count": 9,
+                "pct": 1.3,
+                "undesired": 4,
+                "undesired_pct": 44.4,
+                "repeat": 1,
+                "cost": 68049
+              },
+              {
+                "topic": "Реквест (внутренний запрос",
+                "count": 8,
+                "pct": 1.1,
+                "undesired": 5,
+                "undesired_pct": 62.5,
+                "repeat": 0,
+                "cost": 60488
+              },
+              {
+                "topic": "Инвентаризация",
+                "count": 6,
+                "pct": 0.9,
+                "undesired": 1,
+                "undesired_pct": 16.7,
+                "repeat": 1,
+                "cost": 45366
+              }
+            ],
+            "labels_breakdown": [
+              {
+                "label": "Массовый сбой BILLZ",
+                "count": 117,
+                "cost": 884637
+              },
+              {
+                "label": "Документооборот - Оплата за тариф",
+                "count": 79,
+                "cost": 597319
+              },
+              {
+                "label": "Документооборот - Создание ссылки для оплаты",
+                "count": 39,
+                "cost": 294879
+              },
+              {
+                "label": "Оборудование - Установка/Настройка/Удаление принтера",
+                "count": 33,
+                "cost": 249513
+              },
+              {
+                "label": "Учётная запись - Помощь со входом в аккаунт",
+                "count": 22,
+                "cost": 166342
+              },
+              {
+                "label": "Учётная запись - Блокировка/Разблокировка аккаунта",
+                "count": 20,
+                "cost": 151220
+              },
+              {
+                "label": "Управление - Создание/Редактирвоание/Удаление роли",
+                "count": 16,
+                "cost": 120976
+              },
+              {
+                "label": "Баг (реквест)",
+                "count": 13,
+                "cost": 98293
+              },
+              {
+                "label": "Новая продажа - Не удаётся сделать продажу",
+                "count": 13,
+                "cost": 98293
+              },
+              {
+                "label": "Управление - Создание/Редактирвоание/Удаление сотрудника",
+                "count": 12,
+                "cost": 90732
+              }
+            ]
           },
           {
             "name": "Sunnattilla Abdurazzoqov",
-            "tickets": 548,
-            "desired": 228,
-            "undesired": 303,
+            "role": "critical",
+            "non_critical": false,
+            "tag_label": "⭐ Критичный · большая база",
+            "tag_color": "#EF4444",
+            "tickets": 557,
+            "desired": 231,
+            "undesired": 308,
             "undesired_pct": 55.3,
             "partial": 15,
             "full": null,
             "training_total": 15,
-            "repeat_count": 39,
-            "repeat_pct": 7.1,
+            "repeat_count": 40,
+            "repeat_pct": 7.2,
             "med_close": 3.7,
             "med_frt_min": 0.4,
-            "stores_count": 145,
-            "cost": 4143428,
-            "tag": "big_base",
-            "tag_label": "🔵 Большая база",
-            "tag_color": "#3B82F6",
-            "big_base": true,
-            "note": "",
+            "stores_count": 149,
+            "massoviy_count": 91,
+            "cost": 4211477,
             "top_topic": "Документооборот",
-            "top_undesired_topic": "Массовый сбой BILLZ"
+            "top_undesired_topic": "Массовый сбой BILLZ",
+            "topic_breakdown": [
+              {
+                "topic": "Документооборот",
+                "count": 91,
+                "pct": 16.3,
+                "undesired": 58,
+                "undesired_pct": 63.7,
+                "repeat": 8,
+                "cost": 688051
+              },
+              {
+                "topic": "Массовый сбой BILLZ",
+                "count": 90,
+                "pct": 16.2,
+                "undesired": 68,
+                "undesired_pct": 75.6,
+                "repeat": 1,
+                "cost": 680490
+              },
+              {
+                "topic": "Учётная запись",
+                "count": 64,
+                "pct": 11.5,
+                "undesired": 33,
+                "undesired_pct": 51.6,
+                "repeat": 3,
+                "cost": 483904
+              },
+              {
+                "topic": "Оборудование",
+                "count": 44,
+                "pct": 7.9,
+                "undesired": 23,
+                "undesired_pct": 52.3,
+                "repeat": 8,
+                "cost": 332684
+              },
+              {
+                "topic": "Каталог",
+                "count": 24,
+                "pct": 4.3,
+                "undesired": 8,
+                "undesired_pct": 33.3,
+                "repeat": 1,
+                "cost": 181464
+              },
+              {
+                "topic": "Настройка",
+                "count": 24,
+                "pct": 4.3,
+                "undesired": 4,
+                "undesired_pct": 16.7,
+                "repeat": 0,
+                "cost": 181464
+              },
+              {
+                "topic": "Кассовые смены",
+                "count": 17,
+                "pct": 3.1,
+                "undesired": 9,
+                "undesired_pct": 52.9,
+                "repeat": 5,
+                "cost": 128537
+              },
+              {
+                "topic": "Управление",
+                "count": 14,
+                "pct": 2.5,
+                "undesired": 3,
+                "undesired_pct": 21.4,
+                "repeat": 2,
+                "cost": 105854
+              },
+              {
+                "topic": "Импорт",
+                "count": 12,
+                "pct": 2.2,
+                "undesired": 1,
+                "undesired_pct": 8.3,
+                "repeat": 1,
+                "cost": 90732
+              },
+              {
+                "topic": "Новая продажа",
+                "count": 12,
+                "pct": 2.2,
+                "undesired": 5,
+                "undesired_pct": 41.7,
+                "repeat": 2,
+                "cost": 90732
+              },
+              {
+                "topic": "Отчёты",
+                "count": 9,
+                "pct": 1.6,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 68049
+              },
+              {
+                "topic": "Баг (реквест)",
+                "count": 9,
+                "pct": 1.6,
+                "undesired": 5,
+                "undesired_pct": 55.6,
+                "repeat": 1,
+                "cost": 68049
+              },
+              {
+                "topic": "Desktop",
+                "count": 9,
+                "pct": 1.6,
+                "undesired": 6,
+                "undesired_pct": 66.7,
+                "repeat": 1,
+                "cost": 68049
+              },
+              {
+                "topic": "Финансы",
+                "count": 7,
+                "pct": 1.3,
+                "undesired": 1,
+                "undesired_pct": 14.3,
+                "repeat": 0,
+                "cost": 52927
+              },
+              {
+                "topic": "Инвентаризация",
+                "count": 7,
+                "pct": 1.3,
+                "undesired": 2,
+                "undesired_pct": 28.6,
+                "repeat": 0,
+                "cost": 52927
+              }
+            ],
+            "labels_breakdown": [
+              {
+                "label": "Массовый сбой BILLZ",
+                "count": 90,
+                "cost": 680490
+              },
+              {
+                "label": "Документооборот - Оплата за тариф",
+                "count": 48,
+                "cost": 362928
+              },
+              {
+                "label": "Учётная запись - Помощь со входом в аккаунт",
+                "count": 30,
+                "cost": 226830
+              },
+              {
+                "label": "Документооборот - Создание ссылки для оплаты",
+                "count": 24,
+                "cost": 181464
+              },
+              {
+                "label": "Оборудование - Установка/Настройка/Удаление принтера",
+                "count": 23,
+                "cost": 173903
+              },
+              {
+                "label": "Учётная запись - Блокировка/Разблокировка аккаунта",
+                "count": 18,
+                "cost": 136098
+              },
+              {
+                "label": "Оборудование - Установка Anydesk/BILLZ Desktop/Программы компьютера и тд.",
+                "count": 16,
+                "cost": 120976
+              },
+              {
+                "label": "Кассовые смены — Открытие/Закрытие смен",
+                "count": 13,
+                "cost": 98293
+              },
+              {
+                "label": "Управление - Создание/Редактирвоание/Удаление роли",
+                "count": 11,
+                "cost": 83171
+              },
+              {
+                "label": "Документооборот - Реактивация клиента",
+                "count": 10,
+                "cost": 75610
+              }
+            ]
           },
           {
             "name": "Jasur Mukhamedjanov",
-            "tickets": 448,
-            "desired": 186,
-            "undesired": 244,
-            "undesired_pct": 54.5,
+            "role": "teamlead",
+            "non_critical": true,
+            "tag_label": "👑 Тимлид",
+            "tag_color": "#A78BFA",
+            "tickets": 451,
+            "desired": 188,
+            "undesired": 245,
+            "undesired_pct": 54.3,
             "partial": 12,
             "full": 5,
             "training_total": 17,
             "repeat_count": 30,
             "repeat_pct": 6.7,
             "med_close": 3.5,
-            "med_frt_min": 0.5,
-            "stores_count": 100,
-            "cost": 3387328,
-            "tag": "big_base",
-            "tag_label": "🔵 Большая база",
-            "tag_color": "#3B82F6",
-            "big_base": true,
-            "note": "",
+            "med_frt_min": 0.45,
+            "stores_count": 103,
+            "massoviy_count": 73,
+            "cost": 3410011,
             "top_topic": "Массовый сбой BILLZ",
-            "top_undesired_topic": "Массовый сбой BILLZ"
+            "top_undesired_topic": "Массовый сбой BILLZ",
+            "topic_breakdown": [
+              {
+                "topic": "Массовый сбой BILLZ",
+                "count": 70,
+                "pct": 15.5,
+                "undesired": 52,
+                "undesired_pct": 74.3,
+                "repeat": 0,
+                "cost": 529270
+              },
+              {
+                "topic": "Документооборот",
+                "count": 53,
+                "pct": 11.8,
+                "undesired": 31,
+                "undesired_pct": 58.5,
+                "repeat": 1,
+                "cost": 400733
+              },
+              {
+                "topic": "Учётная запись",
+                "count": 34,
+                "pct": 7.5,
+                "undesired": 19,
+                "undesired_pct": 55.9,
+                "repeat": 1,
+                "cost": 257074
+              },
+              {
+                "topic": "Кассовые смены",
+                "count": 30,
+                "pct": 6.7,
+                "undesired": 20,
+                "undesired_pct": 66.7,
+                "repeat": 5,
+                "cost": 226830
+              },
+              {
+                "topic": "Новая продажа",
+                "count": 29,
+                "pct": 6.4,
+                "undesired": 16,
+                "undesired_pct": 55.2,
+                "repeat": 3,
+                "cost": 219269
+              },
+              {
+                "topic": "Настройка",
+                "count": 26,
+                "pct": 5.8,
+                "undesired": 8,
+                "undesired_pct": 30.8,
+                "repeat": 2,
+                "cost": 196586
+              },
+              {
+                "topic": "Каталог",
+                "count": 16,
+                "pct": 3.5,
+                "undesired": 8,
+                "undesired_pct": 50.0,
+                "repeat": 1,
+                "cost": 120976
+              },
+              {
+                "topic": "Баг (реквест)",
+                "count": 13,
+                "pct": 2.9,
+                "undesired": 7,
+                "undesired_pct": 53.8,
+                "repeat": 0,
+                "cost": 98293
+              },
+              {
+                "topic": "Маркетинг",
+                "count": 12,
+                "pct": 2.7,
+                "undesired": 6,
+                "undesired_pct": 50.0,
+                "repeat": 4,
+                "cost": 90732
+              },
+              {
+                "topic": "Инвентаризация",
+                "count": 11,
+                "pct": 2.4,
+                "undesired": 3,
+                "undesired_pct": 27.3,
+                "repeat": 3,
+                "cost": 83171
+              },
+              {
+                "topic": "Управление",
+                "count": 9,
+                "pct": 2.0,
+                "undesired": 3,
+                "undesired_pct": 33.3,
+                "repeat": 2,
+                "cost": 68049
+              },
+              {
+                "topic": "Оборудование",
+                "count": 9,
+                "pct": 2.0,
+                "undesired": 1,
+                "undesired_pct": 11.1,
+                "repeat": 1,
+                "cost": 68049
+              },
+              {
+                "topic": "Импорт",
+                "count": 9,
+                "pct": 2.0,
+                "undesired": 1,
+                "undesired_pct": 11.1,
+                "repeat": 0,
+                "cost": 68049
+              },
+              {
+                "topic": "Все продажи",
+                "count": 9,
+                "pct": 2.0,
+                "undesired": 1,
+                "undesired_pct": 11.1,
+                "repeat": 0,
+                "cost": 68049
+              },
+              {
+                "topic": "Общались по звонку",
+                "count": 9,
+                "pct": 2.0,
+                "undesired": 7,
+                "undesired_pct": 77.8,
+                "repeat": 0,
+                "cost": 68049
+              }
+            ],
+            "labels_breakdown": [
+              {
+                "label": "Массовый сбой BILLZ",
+                "count": 70,
+                "cost": 529270
+              },
+              {
+                "label": "Документооборот - Оплата за тариф",
+                "count": 31,
+                "cost": 234391
+              },
+              {
+                "label": "Кассовые смены — Открытие/Закрытие смен",
+                "count": 19,
+                "cost": 143659
+              },
+              {
+                "label": "Новая продажа - Не удаётся сделать продажу",
+                "count": 17,
+                "cost": 128537
+              },
+              {
+                "label": "Учётная запись - Блокировка/Разблокировка аккаунта",
+                "count": 14,
+                "cost": 105854
+              },
+              {
+                "label": "Баг (реквест)",
+                "count": 13,
+                "cost": 98293
+              },
+              {
+                "label": "Учётная запись - Помощь со входом в аккаунт",
+                "count": 13,
+                "cost": 98293
+              },
+              {
+                "label": "Настройка - Установка BILLZ PAY/Payme/Epos/PAX",
+                "count": 13,
+                "cost": 98293
+              },
+              {
+                "label": "Маркетинг - Работа с Сертификатом/Ваучером",
+                "count": 12,
+                "cost": 90732
+              },
+              {
+                "label": "Кассовые смены — Расхождение суммы",
+                "count": 9,
+                "cost": 68049
+              }
+            ]
           },
           {
             "name": "Maftuna Shernazarova",
-            "tickets": 415,
+            "role": "critical",
+            "non_critical": false,
+            "tag_label": "⭐ Критичный · большая база",
+            "tag_color": "#EF4444",
+            "tickets": 416,
             "desired": 203,
             "undesired": 208,
-            "undesired_pct": 50.1,
+            "undesired_pct": 50.0,
             "partial": 18,
             "full": 2,
             "training_total": 20,
@@ -67225,91 +69653,635 @@ const BILLZ_DATA = {
             "repeat_pct": 8.2,
             "med_close": 3.8,
             "med_frt_min": 0.4,
-            "stores_count": 87,
-            "cost": 3137815,
-            "tag": "big_base",
-            "tag_label": "🔵 Большая база",
-            "tag_color": "#3B82F6",
-            "big_base": true,
-            "note": "",
+            "stores_count": 88,
+            "massoviy_count": 37,
+            "cost": 3145376,
             "top_topic": "Оборудование",
-            "top_undesired_topic": "Массовый сбой BILLZ"
+            "top_undesired_topic": "Массовый сбой BILLZ",
+            "topic_breakdown": [
+              {
+                "topic": "Оборудование",
+                "count": 44,
+                "pct": 10.6,
+                "undesired": 16,
+                "undesired_pct": 36.4,
+                "repeat": 8,
+                "cost": 332684
+              },
+              {
+                "topic": "Учётная запись",
+                "count": 38,
+                "pct": 9.1,
+                "undesired": 23,
+                "undesired_pct": 60.5,
+                "repeat": 2,
+                "cost": 287318
+              },
+              {
+                "topic": "Массовый сбой BILLZ",
+                "count": 35,
+                "pct": 8.4,
+                "undesired": 25,
+                "undesired_pct": 71.4,
+                "repeat": 1,
+                "cost": 264635
+              },
+              {
+                "topic": "Документооборот",
+                "count": 34,
+                "pct": 8.2,
+                "undesired": 17,
+                "undesired_pct": 50.0,
+                "repeat": 1,
+                "cost": 257074
+              },
+              {
+                "topic": "Каталог",
+                "count": 33,
+                "pct": 7.9,
+                "undesired": 14,
+                "undesired_pct": 42.4,
+                "repeat": 1,
+                "cost": 249513
+              },
+              {
+                "topic": "Новая продажа",
+                "count": 24,
+                "pct": 5.8,
+                "undesired": 9,
+                "undesired_pct": 37.5,
+                "repeat": 4,
+                "cost": 181464
+              },
+              {
+                "topic": "Настройка",
+                "count": 13,
+                "pct": 3.1,
+                "undesired": 4,
+                "undesired_pct": 30.8,
+                "repeat": 2,
+                "cost": 98293
+              },
+              {
+                "topic": "Отчёты",
+                "count": 12,
+                "pct": 2.9,
+                "undesired": 2,
+                "undesired_pct": 16.7,
+                "repeat": 0,
+                "cost": 90732
+              },
+              {
+                "topic": "Импорт",
+                "count": 10,
+                "pct": 2.4,
+                "undesired": 4,
+                "undesired_pct": 40.0,
+                "repeat": 2,
+                "cost": 75610
+              },
+              {
+                "topic": "Долги клиентов",
+                "count": 10,
+                "pct": 2.4,
+                "undesired": 3,
+                "undesired_pct": 30.0,
+                "repeat": 3,
+                "cost": 75610
+              },
+              {
+                "topic": "Управление",
+                "count": 10,
+                "pct": 2.4,
+                "undesired": 4,
+                "undesired_pct": 40.0,
+                "repeat": 1,
+                "cost": 75610
+              },
+              {
+                "topic": "Кассовые смены",
+                "count": 9,
+                "pct": 2.2,
+                "undesired": 3,
+                "undesired_pct": 33.3,
+                "repeat": 0,
+                "cost": 68049
+              },
+              {
+                "topic": "SMS рассылка",
+                "count": 9,
+                "pct": 2.2,
+                "undesired": 7,
+                "undesired_pct": 77.8,
+                "repeat": 0,
+                "cost": 68049
+              },
+              {
+                "topic": "Все продажи",
+                "count": 8,
+                "pct": 1.9,
+                "undesired": 1,
+                "undesired_pct": 12.5,
+                "repeat": 1,
+                "cost": 60488
+              },
+              {
+                "topic": "Инвентаризация",
+                "count": 7,
+                "pct": 1.7,
+                "undesired": 2,
+                "undesired_pct": 28.6,
+                "repeat": 0,
+                "cost": 52927
+              }
+            ],
+            "labels_breakdown": [
+              {
+                "label": "Массовый сбой BILLZ",
+                "count": 35,
+                "cost": 264635
+              },
+              {
+                "label": "Учётная запись - Помощь со входом в аккаунт",
+                "count": 21,
+                "cost": 158781
+              },
+              {
+                "label": "Документооборот - Оплата за тариф",
+                "count": 17,
+                "cost": 128537
+              },
+              {
+                "label": "Оборудование - Установка/Настройка/Удаление принтера",
+                "count": 16,
+                "cost": 120976
+              },
+              {
+                "label": "Каталог — настройка печати ценника",
+                "count": 14,
+                "cost": 105854
+              },
+              {
+                "label": "Оборудование - Загрузка базу товаров в весы",
+                "count": 14,
+                "cost": 105854
+              },
+              {
+                "label": "Документооборот - Создание ссылки для оплаты",
+                "count": 10,
+                "cost": 75610
+              },
+              {
+                "label": "Кассовые смены — Открытие/Закрытие смен",
+                "count": 9,
+                "cost": 68049
+              },
+              {
+                "label": "Оборудование - Установка Anydesk/BILLZ Desktop/Программы компьютера и тд.",
+                "count": 9,
+                "cost": 68049
+              },
+              {
+                "label": "Учётная запись - Блокировка/Разблокировка аккаунта",
+                "count": 9,
+                "cost": 68049
+              }
+            ]
           },
           {
             "name": "Xasanali Ummatov",
-            "tickets": 287,
+            "role": "critical",
+            "non_critical": false,
+            "tag_label": "⭐ Критичный · большая база",
+            "tag_color": "#EF4444",
+            "tickets": 291,
             "desired": 116,
-            "undesired": 166,
-            "undesired_pct": 57.8,
+            "undesired": 170,
+            "undesired_pct": 58.4,
             "partial": 7,
             "full": 1,
             "training_total": 8,
             "repeat_count": 26,
-            "repeat_pct": 9.1,
+            "repeat_pct": 8.9,
             "med_close": 2.7,
             "med_frt_min": 0.4,
-            "stores_count": 85,
-            "cost": 2170007,
-            "tag": "big_base",
-            "tag_label": "🔵 Большая база",
-            "tag_color": "#3B82F6",
-            "big_base": true,
-            "note": "",
+            "stores_count": 87,
+            "massoviy_count": 38,
+            "cost": 2200251,
             "top_topic": "Документооборот",
-            "top_undesired_topic": "Документооборот"
-          },
-          {
-            "name": "Self-onboarding",
-            "tickets": 263,
-            "desired": 132,
-            "undesired": 126,
-            "undesired_pct": 47.9,
-            "partial": 4,
-            "full": null,
-            "training_total": 4,
-            "repeat_count": 14,
-            "repeat_pct": 5.3,
-            "med_close": 3.4,
-            "med_frt_min": 0.4,
-            "stores_count": 88,
-            "cost": 1988543,
-            "tag": "big_base",
-            "tag_label": "🔵 Большая база",
-            "tag_color": "#3B82F6",
-            "big_base": true,
-            "note": "",
-            "top_topic": "Документооборот",
-            "top_undesired_topic": "Массовый сбой BILLZ"
+            "top_undesired_topic": "Документооборот",
+            "topic_breakdown": [
+              {
+                "topic": "Документооборот",
+                "count": 64,
+                "pct": 22.0,
+                "undesired": 34,
+                "undesired_pct": 53.1,
+                "repeat": 7,
+                "cost": 483904
+              },
+              {
+                "topic": "Массовый сбой BILLZ",
+                "count": 38,
+                "pct": 13.1,
+                "undesired": 33,
+                "undesired_pct": 86.8,
+                "repeat": 0,
+                "cost": 287318
+              },
+              {
+                "topic": "Учётная запись",
+                "count": 36,
+                "pct": 12.4,
+                "undesired": 20,
+                "undesired_pct": 55.6,
+                "repeat": 3,
+                "cost": 272196
+              },
+              {
+                "topic": "Оборудование",
+                "count": 13,
+                "pct": 4.5,
+                "undesired": 4,
+                "undesired_pct": 30.8,
+                "repeat": 1,
+                "cost": 98293
+              },
+              {
+                "topic": "Настройка",
+                "count": 12,
+                "pct": 4.1,
+                "undesired": 2,
+                "undesired_pct": 16.7,
+                "repeat": 2,
+                "cost": 90732
+              },
+              {
+                "topic": "Новая продажа",
+                "count": 10,
+                "pct": 3.4,
+                "undesired": 7,
+                "undesired_pct": 70.0,
+                "repeat": 2,
+                "cost": 75610
+              },
+              {
+                "topic": "Импорт",
+                "count": 10,
+                "pct": 3.4,
+                "undesired": 6,
+                "undesired_pct": 60.0,
+                "repeat": 0,
+                "cost": 75610
+              },
+              {
+                "topic": "Каталог",
+                "count": 9,
+                "pct": 3.1,
+                "undesired": 1,
+                "undesired_pct": 11.1,
+                "repeat": 0,
+                "cost": 68049
+              },
+              {
+                "topic": "Инвентаризация",
+                "count": 7,
+                "pct": 2.4,
+                "undesired": 1,
+                "undesired_pct": 14.3,
+                "repeat": 2,
+                "cost": 52927
+              },
+              {
+                "topic": "Финансы",
+                "count": 5,
+                "pct": 1.7,
+                "undesired": 2,
+                "undesired_pct": 40.0,
+                "repeat": 2,
+                "cost": 37805
+              },
+              {
+                "topic": "Отчёты",
+                "count": 5,
+                "pct": 1.7,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 37805
+              },
+              {
+                "topic": "Кассовые смены",
+                "count": 4,
+                "pct": 1.4,
+                "undesired": 2,
+                "undesired_pct": 50.0,
+                "repeat": 1,
+                "cost": 30244
+              },
+              {
+                "topic": "Баг (реквест)",
+                "count": 3,
+                "pct": 1.0,
+                "undesired": 1,
+                "undesired_pct": 33.3,
+                "repeat": 2,
+                "cost": 22683
+              },
+              {
+                "topic": "Все клиенты",
+                "count": 3,
+                "pct": 1.0,
+                "undesired": 1,
+                "undesired_pct": 33.3,
+                "repeat": 0,
+                "cost": 22683
+              },
+              {
+                "topic": "Управление",
+                "count": 3,
+                "pct": 1.0,
+                "undesired": 2,
+                "undesired_pct": 66.7,
+                "repeat": 0,
+                "cost": 22683
+              }
+            ],
+            "labels_breakdown": [
+              {
+                "label": "Документооборот - Оплата за тариф",
+                "count": 43,
+                "cost": 325123
+              },
+              {
+                "label": "Массовый сбой BILLZ",
+                "count": 38,
+                "cost": 287318
+              },
+              {
+                "label": "Учётная запись - Блокировка/Разблокировка аккаунта",
+                "count": 19,
+                "cost": 143659
+              },
+              {
+                "label": "Документооборот - Создание ссылки для оплаты",
+                "count": 14,
+                "cost": 105854
+              },
+              {
+                "label": "Учётная запись - Помощь со входом в аккаунт",
+                "count": 13,
+                "cost": 98293
+              },
+              {
+                "label": "Оборудование - Установка/Настройка/Удаление принтера",
+                "count": 11,
+                "cost": 83171
+              },
+              {
+                "label": "Импорт — импорт товаров через Excel",
+                "count": 9,
+                "cost": 68049
+              },
+              {
+                "label": "Настройка - Редактирование товаров",
+                "count": 5,
+                "cost": 37805
+              },
+              {
+                "label": "Новая продажа - Не удаётся сделать продажу",
+                "count": 5,
+                "cost": 37805
+              },
+              {
+                "label": "Новая продажа - Возврат/Обмен",
+                "count": 4,
+                "cost": 30244
+              }
+            ]
           },
           {
             "name": "Alina Hanieva",
-            "tickets": 255,
-            "desired": 108,
+            "role": "critical",
+            "non_critical": false,
+            "tag_label": "⭐ Критичный · большая база",
+            "tag_color": "#EF4444",
+            "tickets": 259,
+            "desired": 112,
             "undesired": 141,
-            "undesired_pct": 55.3,
+            "undesired_pct": 54.4,
             "partial": 5,
             "full": 1,
             "training_total": 6,
             "repeat_count": 14,
-            "repeat_pct": 5.5,
-            "med_close": 4.5,
+            "repeat_pct": 5.4,
+            "med_close": 4.4,
             "med_frt_min": 0.4,
-            "stores_count": 70,
-            "cost": 1928055,
-            "tag": "big_base",
-            "tag_label": "🔵 Большая база",
-            "tag_color": "#3B82F6",
-            "big_base": true,
-            "note": "",
+            "stores_count": 73,
+            "massoviy_count": 56,
+            "cost": 1958299,
             "top_topic": "Массовый сбой BILLZ",
-            "top_undesired_topic": "Массовый сбой BILLZ"
+            "top_undesired_topic": "Массовый сбой BILLZ",
+            "topic_breakdown": [
+              {
+                "topic": "Массовый сбой BILLZ",
+                "count": 56,
+                "pct": 21.6,
+                "undesired": 43,
+                "undesired_pct": 76.8,
+                "repeat": 0,
+                "cost": 423416
+              },
+              {
+                "topic": "Документооборот",
+                "count": 32,
+                "pct": 12.4,
+                "undesired": 19,
+                "undesired_pct": 59.4,
+                "repeat": 1,
+                "cost": 241952
+              },
+              {
+                "topic": "Каталог",
+                "count": 16,
+                "pct": 6.2,
+                "undesired": 3,
+                "undesired_pct": 18.8,
+                "repeat": 0,
+                "cost": 120976
+              },
+              {
+                "topic": "Настройка",
+                "count": 15,
+                "pct": 5.8,
+                "undesired": 5,
+                "undesired_pct": 33.3,
+                "repeat": 2,
+                "cost": 113415
+              },
+              {
+                "topic": "Оборудование",
+                "count": 12,
+                "pct": 4.6,
+                "undesired": 4,
+                "undesired_pct": 33.3,
+                "repeat": 1,
+                "cost": 90732
+              },
+              {
+                "topic": "Учётная запись",
+                "count": 12,
+                "pct": 4.6,
+                "undesired": 9,
+                "undesired_pct": 75.0,
+                "repeat": 0,
+                "cost": 90732
+              },
+              {
+                "topic": "SMS рассылка",
+                "count": 11,
+                "pct": 4.2,
+                "undesired": 2,
+                "undesired_pct": 18.2,
+                "repeat": 1,
+                "cost": 83171
+              },
+              {
+                "topic": "Инвентаризация",
+                "count": 8,
+                "pct": 3.1,
+                "undesired": 2,
+                "undesired_pct": 25.0,
+                "repeat": 0,
+                "cost": 60488
+              },
+              {
+                "topic": "Долги клиентов",
+                "count": 6,
+                "pct": 2.3,
+                "undesired": 1,
+                "undesired_pct": 16.7,
+                "repeat": 1,
+                "cost": 45366
+              },
+              {
+                "topic": "Управление",
+                "count": 6,
+                "pct": 2.3,
+                "undesired": 2,
+                "undesired_pct": 33.3,
+                "repeat": 0,
+                "cost": 45366
+              },
+              {
+                "topic": "Новая продажа",
+                "count": 6,
+                "pct": 2.3,
+                "undesired": 2,
+                "undesired_pct": 33.3,
+                "repeat": 2,
+                "cost": 45366
+              },
+              {
+                "topic": "Баг (реквест)",
+                "count": 6,
+                "pct": 2.3,
+                "undesired": 4,
+                "undesired_pct": 66.7,
+                "repeat": 2,
+                "cost": 45366
+              },
+              {
+                "topic": "спам",
+                "count": 3,
+                "pct": 1.2,
+                "undesired": 3,
+                "undesired_pct": 100.0,
+                "repeat": 0,
+                "cost": 22683
+              },
+              {
+                "topic": "Финансы",
+                "count": 3,
+                "pct": 1.2,
+                "undesired": 1,
+                "undesired_pct": 33.3,
+                "repeat": 0,
+                "cost": 22683
+              },
+              {
+                "topic": "Отчёты",
+                "count": 3,
+                "pct": 1.2,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 22683
+              }
+            ],
+            "labels_breakdown": [
+              {
+                "label": "Массовый сбой BILLZ",
+                "count": 56,
+                "cost": 423416
+              },
+              {
+                "label": "Документооборот - Оплата за тариф",
+                "count": 18,
+                "cost": 136098
+              },
+              {
+                "label": "Оборудование - Установка/Настройка/Удаление принтера",
+                "count": 12,
+                "cost": 90732
+              },
+              {
+                "label": "Настройка - Установка BILLZ PAY/Payme/Epos/PAX",
+                "count": 6,
+                "cost": 45366
+              },
+              {
+                "label": "Учётная запись - Блокировка/Разблокировка аккаунта",
+                "count": 6,
+                "cost": 45366
+              },
+              {
+                "label": "Каталог — настройка печати ценника",
+                "count": 6,
+                "cost": 45366
+              },
+              {
+                "label": "Учётная запись - Помощь со входом в аккаунт",
+                "count": 6,
+                "cost": 45366
+              },
+              {
+                "label": "Баг (реквест)",
+                "count": 6,
+                "cost": 45366
+              },
+              {
+                "label": "SMS рассылка - Шаблонирование",
+                "count": 6,
+                "cost": 45366
+              },
+              {
+                "label": "Долги клиентов - Погашение/Удаление/Редактирование долга",
+                "count": 5,
+                "cost": 37805
+              }
+            ]
           },
           {
             "name": "Akbarali Kidiraliev",
-            "tickets": 243,
+            "role": "critical",
+            "non_critical": false,
+            "tag_label": "⭐ Критичный · большая база",
+            "tag_color": "#EF4444",
+            "tickets": 244,
             "desired": 128,
-            "undesired": 108,
-            "undesired_pct": 44.4,
+            "undesired": 109,
+            "undesired_pct": 44.7,
             "partial": 16,
             "full": 1,
             "training_total": 17,
@@ -67317,64 +70289,419 @@ const BILLZ_DATA = {
             "repeat_pct": 4.5,
             "med_close": 4.2,
             "med_frt_min": 0.4,
-            "stores_count": 62,
-            "cost": 1837323,
-            "tag": "big_base",
-            "tag_label": "🔵 Большая база",
-            "tag_color": "#3B82F6",
-            "big_base": true,
-            "note": "",
+            "stores_count": 63,
+            "massoviy_count": 30,
+            "cost": 1844884,
             "top_topic": "Массовый сбой BILLZ",
-            "top_undesired_topic": "Массовый сбой BILLZ"
+            "top_undesired_topic": "Массовый сбой BILLZ",
+            "topic_breakdown": [
+              {
+                "topic": "Массовый сбой BILLZ",
+                "count": 30,
+                "pct": 12.3,
+                "undesired": 22,
+                "undesired_pct": 73.3,
+                "repeat": 0,
+                "cost": 226830
+              },
+              {
+                "topic": "Документооборот",
+                "count": 27,
+                "pct": 11.1,
+                "undesired": 18,
+                "undesired_pct": 66.7,
+                "repeat": 1,
+                "cost": 204147
+              },
+              {
+                "topic": "Каталог",
+                "count": 21,
+                "pct": 8.6,
+                "undesired": 4,
+                "undesired_pct": 19.0,
+                "repeat": 1,
+                "cost": 158781
+              },
+              {
+                "topic": "Учётная запись",
+                "count": 16,
+                "pct": 6.6,
+                "undesired": 8,
+                "undesired_pct": 50.0,
+                "repeat": 0,
+                "cost": 120976
+              },
+              {
+                "topic": "Оборудование",
+                "count": 12,
+                "pct": 4.9,
+                "undesired": 2,
+                "undesired_pct": 16.7,
+                "repeat": 1,
+                "cost": 90732
+              },
+              {
+                "topic": "Управление",
+                "count": 12,
+                "pct": 4.9,
+                "undesired": 4,
+                "undesired_pct": 33.3,
+                "repeat": 1,
+                "cost": 90732
+              },
+              {
+                "topic": "Настройка",
+                "count": 11,
+                "pct": 4.5,
+                "undesired": 2,
+                "undesired_pct": 18.2,
+                "repeat": 2,
+                "cost": 83171
+              },
+              {
+                "topic": "Кассовые смены",
+                "count": 10,
+                "pct": 4.1,
+                "undesired": 6,
+                "undesired_pct": 60.0,
+                "repeat": 2,
+                "cost": 75610
+              },
+              {
+                "topic": "Новая продажа",
+                "count": 10,
+                "pct": 4.1,
+                "undesired": 5,
+                "undesired_pct": 50.0,
+                "repeat": 0,
+                "cost": 75610
+              },
+              {
+                "topic": "Заказы",
+                "count": 10,
+                "pct": 4.1,
+                "undesired": 4,
+                "undesired_pct": 40.0,
+                "repeat": 1,
+                "cost": 75610
+              },
+              {
+                "topic": "Отчёты",
+                "count": 7,
+                "pct": 2.9,
+                "undesired": 1,
+                "undesired_pct": 14.3,
+                "repeat": 0,
+                "cost": 52927
+              },
+              {
+                "topic": "Все продажи",
+                "count": 6,
+                "pct": 2.5,
+                "undesired": 1,
+                "undesired_pct": 16.7,
+                "repeat": 0,
+                "cost": 45366
+              },
+              {
+                "topic": "Импорт",
+                "count": 4,
+                "pct": 1.6,
+                "undesired": 1,
+                "undesired_pct": 25.0,
+                "repeat": 0,
+                "cost": 30244
+              },
+              {
+                "topic": "Баг (реквест)",
+                "count": 4,
+                "pct": 1.6,
+                "undesired": 2,
+                "undesired_pct": 50.0,
+                "repeat": 0,
+                "cost": 30244
+              },
+              {
+                "topic": "Кассовые операции",
+                "count": 3,
+                "pct": 1.2,
+                "undesired": 1,
+                "undesired_pct": 33.3,
+                "repeat": 0,
+                "cost": 22683
+              }
+            ],
+            "labels_breakdown": [
+              {
+                "label": "Массовый сбой BILLZ",
+                "count": 30,
+                "cost": 226830
+              },
+              {
+                "label": "Документооборот - Оплата за тариф",
+                "count": 13,
+                "cost": 98293
+              },
+              {
+                "label": "Учётная запись - Помощь со входом в аккаунт",
+                "count": 10,
+                "cost": 75610
+              },
+              {
+                "label": "Кассовые смены — Открытие/Закрытие смен",
+                "count": 9,
+                "cost": 68049
+              },
+              {
+                "label": "Документооборот - Создание ссылки для оплаты",
+                "count": 7,
+                "cost": 52927
+              },
+              {
+                "label": "Оборудование - Установка/Настройка/Удаление принтера",
+                "count": 7,
+                "cost": 52927
+              },
+              {
+                "label": "Управление - Создание/Редактирвоание/Удаление роли",
+                "count": 7,
+                "cost": 52927
+              },
+              {
+                "label": "Заказы — консультация по модулю (частичное обучение)",
+                "count": 6,
+                "cost": 45366
+              },
+              {
+                "label": "Новая продажа - Возврат/Обмен",
+                "count": 6,
+                "cost": 45366
+              },
+              {
+                "label": "Настройка - Создание/Редактирование/Удаление доп. точки",
+                "count": 5,
+                "cost": 37805
+              }
+            ]
           },
           {
             "name": "Marfiya Shadiyeva",
-            "tickets": 225,
-            "desired": 93,
-            "undesired": 121,
-            "undesired_pct": 53.8,
-            "partial": 8,
-            "full": 2,
-            "training_total": 10,
-            "repeat_count": 10,
-            "repeat_pct": 4.4,
-            "med_close": 3.3,
-            "med_frt_min": 0.3,
-            "stores_count": 57,
-            "cost": 1701225,
-            "tag": "big_base",
-            "tag_label": "🔵 Большая база",
-            "tag_color": "#3B82F6",
-            "big_base": true,
-            "note": "",
-            "top_topic": "Учётная запись",
-            "top_undesired_topic": "Документооборот"
-          },
-          {
-            "name": "Наш чел",
-            "tickets": 221,
+            "role": "critical",
+            "non_critical": false,
+            "tag_label": "⭐ Критичный · большая база",
+            "tag_color": "#EF4444",
+            "tickets": 230,
             "desired": 97,
-            "undesired": 117,
-            "undesired_pct": 52.9,
-            "partial": 1,
-            "full": null,
-            "training_total": 1,
-            "repeat_count": 26,
-            "repeat_pct": 11.8,
-            "med_close": 1.3,
-            "med_frt_min": 0.4,
-            "stores_count": 2,
-            "cost": 1670981,
-            "tag": null,
-            "tag_label": null,
-            "tag_color": null,
-            "big_base": false,
-            "note": "",
+            "undesired": 122,
+            "undesired_pct": 53.0,
+            "partial": 9,
+            "full": 2,
+            "training_total": 11,
+            "repeat_count": 11,
+            "repeat_pct": 4.8,
+            "med_close": 3.4,
+            "med_frt_min": 0.3,
+            "stores_count": 58,
+            "massoviy_count": 24,
+            "cost": 1739030,
             "top_topic": "Документооборот",
-            "top_undesired_topic": "Документооборот"
+            "top_undesired_topic": "Документооборот",
+            "topic_breakdown": [
+              {
+                "topic": "Документооборот",
+                "count": 29,
+                "pct": 12.6,
+                "undesired": 19,
+                "undesired_pct": 65.5,
+                "repeat": 0,
+                "cost": 219269
+              },
+              {
+                "topic": "Учётная запись",
+                "count": 29,
+                "pct": 12.6,
+                "undesired": 18,
+                "undesired_pct": 62.1,
+                "repeat": 0,
+                "cost": 219269
+              },
+              {
+                "topic": "Массовый сбой BILLZ",
+                "count": 24,
+                "pct": 10.4,
+                "undesired": 15,
+                "undesired_pct": 62.5,
+                "repeat": 0,
+                "cost": 181464
+              },
+              {
+                "topic": "Каталог",
+                "count": 18,
+                "pct": 7.8,
+                "undesired": 8,
+                "undesired_pct": 44.4,
+                "repeat": 0,
+                "cost": 136098
+              },
+              {
+                "topic": "Оборудование",
+                "count": 14,
+                "pct": 6.1,
+                "undesired": 9,
+                "undesired_pct": 64.3,
+                "repeat": 1,
+                "cost": 105854
+              },
+              {
+                "topic": "Настройка",
+                "count": 9,
+                "pct": 3.9,
+                "undesired": 1,
+                "undesired_pct": 11.1,
+                "repeat": 0,
+                "cost": 68049
+              },
+              {
+                "topic": "Новая продажа",
+                "count": 8,
+                "pct": 3.5,
+                "undesired": 1,
+                "undesired_pct": 12.5,
+                "repeat": 0,
+                "cost": 60488
+              },
+              {
+                "topic": "Трансфер",
+                "count": 6,
+                "pct": 2.6,
+                "undesired": 2,
+                "undesired_pct": 33.3,
+                "repeat": 3,
+                "cost": 45366
+              },
+              {
+                "topic": "Управление",
+                "count": 6,
+                "pct": 2.6,
+                "undesired": 2,
+                "undesired_pct": 33.3,
+                "repeat": 0,
+                "cost": 45366
+              },
+              {
+                "topic": "Инвентаризация",
+                "count": 5,
+                "pct": 2.2,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 37805
+              },
+              {
+                "topic": "Кассовые смены",
+                "count": 5,
+                "pct": 2.2,
+                "undesired": 4,
+                "undesired_pct": 80.0,
+                "repeat": 2,
+                "cost": 37805
+              },
+              {
+                "topic": "Desktop",
+                "count": 5,
+                "pct": 2.2,
+                "undesired": 2,
+                "undesired_pct": 40.0,
+                "repeat": 0,
+                "cost": 37805
+              },
+              {
+                "topic": "Импорт",
+                "count": 5,
+                "pct": 2.2,
+                "undesired": 1,
+                "undesired_pct": 20.0,
+                "repeat": 0,
+                "cost": 37805
+              },
+              {
+                "topic": "Финансы",
+                "count": 3,
+                "pct": 1.3,
+                "undesired": 1,
+                "undesired_pct": 33.3,
+                "repeat": 0,
+                "cost": 22683
+              },
+              {
+                "topic": "Все продажи",
+                "count": 3,
+                "pct": 1.3,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 22683
+              }
+            ],
+            "labels_breakdown": [
+              {
+                "label": "Массовый сбой BILLZ",
+                "count": 24,
+                "cost": 181464
+              },
+              {
+                "label": "Учётная запись - Помощь со входом в аккаунт",
+                "count": 18,
+                "cost": 136098
+              },
+              {
+                "label": "Документооборот - Оплата за тариф",
+                "count": 15,
+                "cost": 113415
+              },
+              {
+                "label": "Оборудование - Установка/Настройка/Удаление принтера",
+                "count": 8,
+                "cost": 60488
+              },
+              {
+                "label": "Каталог — настройка печати ценника",
+                "count": 7,
+                "cost": 52927
+              },
+              {
+                "label": "Документооборот - Создание ссылки для оплаты",
+                "count": 6,
+                "cost": 45366
+              },
+              {
+                "label": "Учётная запись - Блокировка/Разблокировка аккаунта",
+                "count": 6,
+                "cost": 45366
+              },
+              {
+                "label": "Desktop - Ошибка синхронизации",
+                "count": 5,
+                "cost": 37805
+              },
+              {
+                "label": "Каталог — изменение свойств товара",
+                "count": 5,
+                "cost": 37805
+              },
+              {
+                "label": "Кассовые смены — Открытие/Закрытие смен",
+                "count": 4,
+                "cost": 30244
+              }
+            ]
           },
           {
             "name": "Sanat Toshpulatov",
+            "role": "critical",
+            "non_critical": false,
+            "tag_label": "⭐ Критичный",
+            "tag_color": "#F87171",
             "tickets": 214,
             "desired": 104,
             "undesired": 107,
@@ -67387,21 +70714,210 @@ const BILLZ_DATA = {
             "med_close": 3.8,
             "med_frt_min": 0.4,
             "stores_count": 34,
+            "massoviy_count": 20,
             "cost": 1618054,
-            "tag": "big_base",
-            "tag_label": "🔵 Большая база",
-            "tag_color": "#3B82F6",
-            "big_base": true,
-            "note": "",
             "top_topic": "Оборудование",
-            "top_undesired_topic": "Массовый сбой BILLZ"
+            "top_undesired_topic": "Массовый сбой BILLZ",
+            "topic_breakdown": [
+              {
+                "topic": "Оборудование",
+                "count": 28,
+                "pct": 13.1,
+                "undesired": 8,
+                "undesired_pct": 28.6,
+                "repeat": 4,
+                "cost": 211708
+              },
+              {
+                "topic": "Массовый сбой BILLZ",
+                "count": 20,
+                "pct": 9.3,
+                "undesired": 15,
+                "undesired_pct": 75.0,
+                "repeat": 1,
+                "cost": 151220
+              },
+              {
+                "topic": "Документооборот",
+                "count": 18,
+                "pct": 8.4,
+                "undesired": 10,
+                "undesired_pct": 55.6,
+                "repeat": 2,
+                "cost": 136098
+              },
+              {
+                "topic": "Новая продажа",
+                "count": 18,
+                "pct": 8.4,
+                "undesired": 7,
+                "undesired_pct": 38.9,
+                "repeat": 6,
+                "cost": 136098
+              },
+              {
+                "topic": "Каталог",
+                "count": 15,
+                "pct": 7.0,
+                "undesired": 8,
+                "undesired_pct": 53.3,
+                "repeat": 0,
+                "cost": 113415
+              },
+              {
+                "topic": "Настройка",
+                "count": 10,
+                "pct": 4.7,
+                "undesired": 3,
+                "undesired_pct": 30.0,
+                "repeat": 0,
+                "cost": 75610
+              },
+              {
+                "topic": "Кассовые смены",
+                "count": 10,
+                "pct": 4.7,
+                "undesired": 7,
+                "undesired_pct": 70.0,
+                "repeat": 4,
+                "cost": 75610
+              },
+              {
+                "topic": "Отчёты",
+                "count": 9,
+                "pct": 4.2,
+                "undesired": 1,
+                "undesired_pct": 11.1,
+                "repeat": 1,
+                "cost": 68049
+              },
+              {
+                "topic": "Учётная запись",
+                "count": 7,
+                "pct": 3.3,
+                "undesired": 3,
+                "undesired_pct": 42.9,
+                "repeat": 0,
+                "cost": 52927
+              },
+              {
+                "topic": "Импорт",
+                "count": 7,
+                "pct": 3.3,
+                "undesired": 2,
+                "undesired_pct": 28.6,
+                "repeat": 3,
+                "cost": 52927
+              },
+              {
+                "topic": "Управление",
+                "count": 6,
+                "pct": 2.8,
+                "undesired": 2,
+                "undesired_pct": 33.3,
+                "repeat": 1,
+                "cost": 45366
+              },
+              {
+                "topic": "Заказы",
+                "count": 5,
+                "pct": 2.3,
+                "undesired": 2,
+                "undesired_pct": 40.0,
+                "repeat": 0,
+                "cost": 37805
+              },
+              {
+                "topic": "Поставщики",
+                "count": 4,
+                "pct": 1.9,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 30244
+              },
+              {
+                "topic": "Финансы",
+                "count": 3,
+                "pct": 1.4,
+                "undesired": 1,
+                "undesired_pct": 33.3,
+                "repeat": 1,
+                "cost": 22683
+              },
+              {
+                "topic": "Сайт/Бот",
+                "count": 2,
+                "pct": 0.9,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 15122
+              }
+            ],
+            "labels_breakdown": [
+              {
+                "label": "Массовый сбой BILLZ",
+                "count": 20,
+                "cost": 151220
+              },
+              {
+                "label": "Оборудование - Установка/Настройка/Удаление принтера",
+                "count": 18,
+                "cost": 136098
+              },
+              {
+                "label": "Оборудование - Установка Anydesk/BILLZ Desktop/Программы компьютера и тд.",
+                "count": 10,
+                "cost": 75610
+              },
+              {
+                "label": "Каталог — настройка печати ценника",
+                "count": 9,
+                "cost": 68049
+              },
+              {
+                "label": "Кассовые смены — Открытие/Закрытие смен",
+                "count": 8,
+                "cost": 60488
+              },
+              {
+                "label": "Новая продажа - Возврат/Обмен",
+                "count": 7,
+                "cost": 52927
+              },
+              {
+                "label": "Документооборот - Оплата за тариф",
+                "count": 6,
+                "cost": 45366
+              },
+              {
+                "label": "Документооборот - Создание ссылки для оплаты",
+                "count": 6,
+                "cost": 45366
+              },
+              {
+                "label": "Новая продажа - Консультация",
+                "count": 5,
+                "cost": 37805
+              },
+              {
+                "label": "Импорт — импорт товаров через Excel",
+                "count": 5,
+                "cost": 37805
+              }
+            ]
           },
           {
             "name": "Azizjon Ibrohimov",
-            "tickets": 210,
-            "desired": 79,
+            "role": "critical",
+            "non_critical": false,
+            "tag_label": "⭐ Критичный · большая база",
+            "tag_color": "#EF4444",
+            "tickets": 211,
+            "desired": 80,
             "undesired": 127,
-            "undesired_pct": 60.5,
+            "undesired_pct": 60.2,
             "partial": 6,
             "full": null,
             "training_total": 6,
@@ -67409,64 +70925,631 @@ const BILLZ_DATA = {
             "repeat_pct": 7.1,
             "med_close": 4.6,
             "med_frt_min": 0.3,
-            "stores_count": 56,
-            "cost": 1587810,
-            "tag": "big_base",
-            "tag_label": "🔵 Большая база",
-            "tag_color": "#3B82F6",
-            "big_base": true,
-            "note": "",
+            "stores_count": 57,
+            "massoviy_count": 28,
+            "cost": 1595371,
             "top_topic": "Оборудование",
-            "top_undesired_topic": "Массовый сбой BILLZ"
+            "top_undesired_topic": "Массовый сбой BILLZ",
+            "topic_breakdown": [
+              {
+                "topic": "Оборудование",
+                "count": 35,
+                "pct": 16.6,
+                "undesired": 15,
+                "undesired_pct": 42.9,
+                "repeat": 6,
+                "cost": 264635
+              },
+              {
+                "topic": "Документооборот",
+                "count": 30,
+                "pct": 14.2,
+                "undesired": 16,
+                "undesired_pct": 53.3,
+                "repeat": 2,
+                "cost": 226830
+              },
+              {
+                "topic": "Массовый сбой BILLZ",
+                "count": 28,
+                "pct": 13.3,
+                "undesired": 26,
+                "undesired_pct": 92.9,
+                "repeat": 0,
+                "cost": 211708
+              },
+              {
+                "topic": "Учётная запись",
+                "count": 10,
+                "pct": 4.7,
+                "undesired": 8,
+                "undesired_pct": 80.0,
+                "repeat": 1,
+                "cost": 75610
+              },
+              {
+                "topic": "Каталог",
+                "count": 10,
+                "pct": 4.7,
+                "undesired": 3,
+                "undesired_pct": 30.0,
+                "repeat": 0,
+                "cost": 75610
+              },
+              {
+                "topic": "Настройка",
+                "count": 8,
+                "pct": 3.8,
+                "undesired": 2,
+                "undesired_pct": 25.0,
+                "repeat": 1,
+                "cost": 60488
+              },
+              {
+                "topic": "Новая продажа",
+                "count": 6,
+                "pct": 2.8,
+                "undesired": 2,
+                "undesired_pct": 33.3,
+                "repeat": 0,
+                "cost": 45366
+              },
+              {
+                "topic": "Инвентаризация",
+                "count": 6,
+                "pct": 2.8,
+                "undesired": 2,
+                "undesired_pct": 33.3,
+                "repeat": 2,
+                "cost": 45366
+              },
+              {
+                "topic": "Desktop",
+                "count": 4,
+                "pct": 1.9,
+                "undesired": 2,
+                "undesired_pct": 50.0,
+                "repeat": 0,
+                "cost": 30244
+              },
+              {
+                "topic": "Отчёты",
+                "count": 4,
+                "pct": 1.9,
+                "undesired": 3,
+                "undesired_pct": 75.0,
+                "repeat": 1,
+                "cost": 30244
+              },
+              {
+                "topic": "Импорт",
+                "count": 4,
+                "pct": 1.9,
+                "undesired": 1,
+                "undesired_pct": 25.0,
+                "repeat": 0,
+                "cost": 30244
+              },
+              {
+                "topic": "Долги клиентов",
+                "count": 4,
+                "pct": 1.9,
+                "undesired": 1,
+                "undesired_pct": 25.0,
+                "repeat": 0,
+                "cost": 30244
+              },
+              {
+                "topic": "Общались по звонку",
+                "count": 3,
+                "pct": 1.4,
+                "undesired": 3,
+                "undesired_pct": 100.0,
+                "repeat": 0,
+                "cost": 22683
+              },
+              {
+                "topic": "Все продажи",
+                "count": 3,
+                "pct": 1.4,
+                "undesired": 1,
+                "undesired_pct": 33.3,
+                "repeat": 0,
+                "cost": 22683
+              },
+              {
+                "topic": "Финансы",
+                "count": 2,
+                "pct": 0.9,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 15122
+              }
+            ],
+            "labels_breakdown": [
+              {
+                "label": "Массовый сбой BILLZ",
+                "count": 28,
+                "cost": 211708
+              },
+              {
+                "label": "Документооборот - Оплата за тариф",
+                "count": 19,
+                "cost": 143659
+              },
+              {
+                "label": "Оборудование - Установка/Настройка/Удаление принтера",
+                "count": 10,
+                "cost": 75610
+              },
+              {
+                "label": "Оборудование - Установка Anydesk/BILLZ Desktop/Программы компьютера и тд.",
+                "count": 9,
+                "cost": 68049
+              },
+              {
+                "label": "Оборудование - Загрузка базу товаров в весы",
+                "count": 8,
+                "cost": 60488
+              },
+              {
+                "label": "Учётная запись - Помощь со входом в аккаунт",
+                "count": 7,
+                "cost": 52927
+              },
+              {
+                "label": "Оборудование - Установка/Настройка/Удаление весов",
+                "count": 6,
+                "cost": 45366
+              },
+              {
+                "label": "Документооборот - Консультация по тарифу",
+                "count": 4,
+                "cost": 30244
+              },
+              {
+                "label": "Каталог — изменение свойств товара",
+                "count": 4,
+                "cost": 30244
+              },
+              {
+                "label": "Desktop - Ошибка синхронизации",
+                "count": 3,
+                "cost": 22683
+              }
+            ]
           },
           {
             "name": "Ismoil Shorahimov",
-            "tickets": 174,
-            "desired": 73,
-            "undesired": 101,
-            "undesired_pct": 58.0,
-            "partial": 9,
+            "role": "critical",
+            "non_critical": false,
+            "tag_label": "⭐ Критичный",
+            "tag_color": "#F87171",
+            "tickets": 179,
+            "desired": 77,
+            "undesired": 102,
+            "undesired_pct": 57.0,
+            "partial": 10,
             "full": null,
-            "training_total": 9,
-            "repeat_count": 10,
-            "repeat_pct": 5.7,
-            "med_close": 4.95,
+            "training_total": 10,
+            "repeat_count": 11,
+            "repeat_pct": 6.1,
+            "med_close": 4.9,
             "med_frt_min": 0.6,
-            "stores_count": 40,
-            "cost": 1315614,
-            "tag": "big_base",
-            "tag_label": "🔵 Большая база",
-            "tag_color": "#3B82F6",
-            "big_base": true,
-            "note": "",
+            "stores_count": 41,
+            "massoviy_count": 25,
+            "cost": 1353419,
             "top_topic": "Массовый сбой BILLZ",
-            "top_undesired_topic": "Массовый сбой BILLZ"
+            "top_undesired_topic": "Массовый сбой BILLZ",
+            "topic_breakdown": [
+              {
+                "topic": "Массовый сбой BILLZ",
+                "count": 25,
+                "pct": 14.0,
+                "undesired": 23,
+                "undesired_pct": 92.0,
+                "repeat": 0,
+                "cost": 189025
+              },
+              {
+                "topic": "Документооборот",
+                "count": 18,
+                "pct": 10.1,
+                "undesired": 10,
+                "undesired_pct": 55.6,
+                "repeat": 0,
+                "cost": 136098
+              },
+              {
+                "topic": "Учётная запись",
+                "count": 10,
+                "pct": 5.6,
+                "undesired": 5,
+                "undesired_pct": 50.0,
+                "repeat": 0,
+                "cost": 75610
+              },
+              {
+                "topic": "Оборудование",
+                "count": 10,
+                "pct": 5.6,
+                "undesired": 2,
+                "undesired_pct": 20.0,
+                "repeat": 0,
+                "cost": 75610
+              },
+              {
+                "topic": "Каталог",
+                "count": 10,
+                "pct": 5.6,
+                "undesired": 3,
+                "undesired_pct": 30.0,
+                "repeat": 0,
+                "cost": 75610
+              },
+              {
+                "topic": "Новая продажа",
+                "count": 7,
+                "pct": 3.9,
+                "undesired": 1,
+                "undesired_pct": 14.3,
+                "repeat": 1,
+                "cost": 52927
+              },
+              {
+                "topic": "Долги клиентов",
+                "count": 6,
+                "pct": 3.4,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 45366
+              },
+              {
+                "topic": "Desktop",
+                "count": 5,
+                "pct": 2.8,
+                "undesired": 3,
+                "undesired_pct": 60.0,
+                "repeat": 2,
+                "cost": 37805
+              },
+              {
+                "topic": "Настройка",
+                "count": 5,
+                "pct": 2.8,
+                "undesired": 1,
+                "undesired_pct": 20.0,
+                "repeat": 0,
+                "cost": 37805
+              },
+              {
+                "topic": "Трансфер",
+                "count": 4,
+                "pct": 2.2,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 1,
+                "cost": 30244
+              },
+              {
+                "topic": "Кассовые смены",
+                "count": 4,
+                "pct": 2.2,
+                "undesired": 2,
+                "undesired_pct": 50.0,
+                "repeat": 1,
+                "cost": 30244
+              },
+              {
+                "topic": "Вопрос не по программе",
+                "count": 3,
+                "pct": 1.7,
+                "undesired": 2,
+                "undesired_pct": 66.7,
+                "repeat": 0,
+                "cost": 22683
+              },
+              {
+                "topic": "спам",
+                "count": 3,
+                "pct": 1.7,
+                "undesired": 3,
+                "undesired_pct": 100.0,
+                "repeat": 0,
+                "cost": 22683
+              },
+              {
+                "topic": "Импорт",
+                "count": 2,
+                "pct": 1.1,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 15122
+              },
+              {
+                "topic": "Баг (реквест)",
+                "count": 2,
+                "pct": 1.1,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 1,
+                "cost": 15122
+              }
+            ],
+            "labels_breakdown": [
+              {
+                "label": "Массовый сбой BILLZ",
+                "count": 25,
+                "cost": 189025
+              },
+              {
+                "label": "Документооборот - Оплата за тариф",
+                "count": 10,
+                "cost": 75610
+              },
+              {
+                "label": "Оборудование - Установка Anydesk/BILLZ Desktop/Программы компьютера и тд.",
+                "count": 6,
+                "cost": 45366
+              },
+              {
+                "label": "Долги клиентов - Погашение/Удаление/Редактирование долга",
+                "count": 5,
+                "cost": 37805
+              },
+              {
+                "label": "Desktop - Ошибка синхронизации",
+                "count": 5,
+                "cost": 37805
+              },
+              {
+                "label": "Учётная запись - Помощь со входом в аккаунт",
+                "count": 5,
+                "cost": 37805
+              },
+              {
+                "label": "Каталог — изменение свойств товара",
+                "count": 4,
+                "cost": 30244
+              },
+              {
+                "label": "Трансфер - консультация по модулю (частичное обучение)",
+                "count": 4,
+                "cost": 30244
+              },
+              {
+                "label": "Учётная запись - Блокировка/Разблокировка аккаунта",
+                "count": 3,
+                "cost": 22683
+              },
+              {
+                "label": "Оборудование - Установка/Настройка/Удаление принтера",
+                "count": 3,
+                "cost": 22683
+              }
+            ]
           },
           {
             "name": "Mukhammadaziz Koshakbayev",
-            "tickets": 166,
-            "desired": 78,
-            "undesired": 86,
-            "undesired_pct": 51.8,
+            "role": "critical",
+            "non_critical": false,
+            "tag_label": "⭐ Критичный",
+            "tag_color": "#F87171",
+            "tickets": 173,
+            "desired": 82,
+            "undesired": 89,
+            "undesired_pct": 51.4,
             "partial": 6,
             "full": null,
             "training_total": 6,
-            "repeat_count": 9,
-            "repeat_pct": 5.4,
-            "med_close": 3.75,
+            "repeat_count": 10,
+            "repeat_pct": 5.8,
+            "med_close": 3.7,
             "med_frt_min": 0.4,
-            "stores_count": 37,
-            "cost": 1255126,
-            "tag": "big_base",
-            "tag_label": "🔵 Большая база",
-            "tag_color": "#3B82F6",
-            "big_base": true,
-            "note": "",
-            "top_topic": "Документооборот",
-            "top_undesired_topic": "Массовый сбой BILLZ"
+            "stores_count": 39,
+            "massoviy_count": 14,
+            "cost": 1308053,
+            "top_topic": "Оборудование",
+            "top_undesired_topic": "Массовый сбой BILLZ",
+            "topic_breakdown": [
+              {
+                "topic": "Оборудование",
+                "count": 17,
+                "pct": 9.8,
+                "undesired": 8,
+                "undesired_pct": 47.1,
+                "repeat": 1,
+                "cost": 128537
+              },
+              {
+                "topic": "Документооборот",
+                "count": 16,
+                "pct": 9.2,
+                "undesired": 9,
+                "undesired_pct": 56.2,
+                "repeat": 0,
+                "cost": 120976
+              },
+              {
+                "topic": "Каталог",
+                "count": 15,
+                "pct": 8.7,
+                "undesired": 5,
+                "undesired_pct": 33.3,
+                "repeat": 1,
+                "cost": 113415
+              },
+              {
+                "topic": "Массовый сбой BILLZ",
+                "count": 13,
+                "pct": 7.5,
+                "undesired": 11,
+                "undesired_pct": 84.6,
+                "repeat": 1,
+                "cost": 98293
+              },
+              {
+                "topic": "Учётная запись",
+                "count": 11,
+                "pct": 6.4,
+                "undesired": 9,
+                "undesired_pct": 81.8,
+                "repeat": 0,
+                "cost": 83171
+              },
+              {
+                "topic": "Импорт",
+                "count": 9,
+                "pct": 5.2,
+                "undesired": 3,
+                "undesired_pct": 33.3,
+                "repeat": 0,
+                "cost": 68049
+              },
+              {
+                "topic": "Долги клиентов",
+                "count": 8,
+                "pct": 4.6,
+                "undesired": 1,
+                "undesired_pct": 12.5,
+                "repeat": 1,
+                "cost": 60488
+              },
+              {
+                "topic": "Desktop",
+                "count": 6,
+                "pct": 3.5,
+                "undesired": 2,
+                "undesired_pct": 33.3,
+                "repeat": 0,
+                "cost": 45366
+              },
+              {
+                "topic": "Управление",
+                "count": 5,
+                "pct": 2.9,
+                "undesired": 1,
+                "undesired_pct": 20.0,
+                "repeat": 0,
+                "cost": 37805
+              },
+              {
+                "topic": "Все клиенты",
+                "count": 4,
+                "pct": 2.3,
+                "undesired": 2,
+                "undesired_pct": 50.0,
+                "repeat": 1,
+                "cost": 30244
+              },
+              {
+                "topic": "Новая продажа",
+                "count": 4,
+                "pct": 2.3,
+                "undesired": 1,
+                "undesired_pct": 25.0,
+                "repeat": 0,
+                "cost": 30244
+              },
+              {
+                "topic": "Все продажи",
+                "count": 4,
+                "pct": 2.3,
+                "undesired": 1,
+                "undesired_pct": 25.0,
+                "repeat": 0,
+                "cost": 30244
+              },
+              {
+                "topic": "Общались по звонку",
+                "count": 3,
+                "pct": 1.7,
+                "undesired": 2,
+                "undesired_pct": 66.7,
+                "repeat": 1,
+                "cost": 22683
+              },
+              {
+                "topic": "Финансы",
+                "count": 3,
+                "pct": 1.7,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 22683
+              },
+              {
+                "topic": "Кассовые смены",
+                "count": 3,
+                "pct": 1.7,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 22683
+              }
+            ],
+            "labels_breakdown": [
+              {
+                "label": "Массовый сбой BILLZ",
+                "count": 13,
+                "cost": 98293
+              },
+              {
+                "label": "Документооборот - Оплата за тариф",
+                "count": 12,
+                "cost": 90732
+              },
+              {
+                "label": "Оборудование - Установка/Настройка/Удаление принтера",
+                "count": 12,
+                "cost": 90732
+              },
+              {
+                "label": "Учётная запись - Помощь со входом в аккаунт",
+                "count": 7,
+                "cost": 52927
+              },
+              {
+                "label": "Импорт — импорт товаров через Excel",
+                "count": 7,
+                "cost": 52927
+              },
+              {
+                "label": "Долги клиентов - Погашение/Удаление/Редактирование долга",
+                "count": 6,
+                "cost": 45366
+              },
+              {
+                "label": "Desktop - Ошибка синхронизации",
+                "count": 6,
+                "cost": 45366
+              },
+              {
+                "label": "Все клиенты - Создание/удаление/редактирование",
+                "count": 4,
+                "cost": 30244
+              },
+              {
+                "label": "Оборудование - Установка Anydesk/BILLZ Desktop/Программы компьютера и тд.",
+                "count": 4,
+                "cost": 30244
+              },
+              {
+                "label": "Управление - Создание/Редактирвоание/Удаление роли",
+                "count": 3,
+                "cost": 22683
+              }
+            ]
           },
           {
             "name": "Saidamir Argumbaev",
+            "role": "critical",
+            "non_critical": false,
+            "tag_label": "⭐ Критичный",
+            "tag_color": "#F87171",
             "tickets": 125,
             "desired": 50,
             "undesired": 75,
@@ -67479,86 +71562,630 @@ const BILLZ_DATA = {
             "med_close": 3.95,
             "med_frt_min": 0.4,
             "stores_count": 34,
+            "massoviy_count": 13,
             "cost": 945125,
-            "tag": "big_base",
-            "tag_label": "🔵 Большая база",
-            "tag_color": "#3B82F6",
-            "big_base": true,
-            "note": "",
             "top_topic": "Массовый сбой BILLZ",
-            "top_undesired_topic": "Массовый сбой BILLZ"
+            "top_undesired_topic": "Массовый сбой BILLZ",
+            "topic_breakdown": [
+              {
+                "topic": "Массовый сбой BILLZ",
+                "count": 13,
+                "pct": 10.4,
+                "undesired": 12,
+                "undesired_pct": 92.3,
+                "repeat": 0,
+                "cost": 98293
+              },
+              {
+                "topic": "Учётная запись",
+                "count": 11,
+                "pct": 8.8,
+                "undesired": 6,
+                "undesired_pct": 54.5,
+                "repeat": 0,
+                "cost": 83171
+              },
+              {
+                "topic": "Каталог",
+                "count": 11,
+                "pct": 8.8,
+                "undesired": 5,
+                "undesired_pct": 45.5,
+                "repeat": 1,
+                "cost": 83171
+              },
+              {
+                "topic": "Документооборот",
+                "count": 9,
+                "pct": 7.2,
+                "undesired": 3,
+                "undesired_pct": 33.3,
+                "repeat": 0,
+                "cost": 68049
+              },
+              {
+                "topic": "Настройка",
+                "count": 7,
+                "pct": 5.6,
+                "undesired": 1,
+                "undesired_pct": 14.3,
+                "repeat": 1,
+                "cost": 52927
+              },
+              {
+                "topic": "Кассовые смены",
+                "count": 7,
+                "pct": 5.6,
+                "undesired": 6,
+                "undesired_pct": 85.7,
+                "repeat": 0,
+                "cost": 52927
+              },
+              {
+                "topic": "Новая продажа",
+                "count": 6,
+                "pct": 4.8,
+                "undesired": 2,
+                "undesired_pct": 33.3,
+                "repeat": 0,
+                "cost": 45366
+              },
+              {
+                "topic": "Оборудование",
+                "count": 6,
+                "pct": 4.8,
+                "undesired": 3,
+                "undesired_pct": 50.0,
+                "repeat": 0,
+                "cost": 45366
+              },
+              {
+                "topic": "Переоценка",
+                "count": 4,
+                "pct": 3.2,
+                "undesired": 1,
+                "undesired_pct": 25.0,
+                "repeat": 1,
+                "cost": 30244
+              },
+              {
+                "topic": "Импорт",
+                "count": 4,
+                "pct": 3.2,
+                "undesired": 2,
+                "undesired_pct": 50.0,
+                "repeat": 1,
+                "cost": 30244
+              },
+              {
+                "topic": "Баг (реквест)",
+                "count": 3,
+                "pct": 2.4,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 22683
+              },
+              {
+                "topic": "Отчёты",
+                "count": 3,
+                "pct": 2.4,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 22683
+              },
+              {
+                "topic": "Акции",
+                "count": 2,
+                "pct": 1.6,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 15122
+              },
+              {
+                "topic": "Все клиенты",
+                "count": 2,
+                "pct": 1.6,
+                "undesired": 1,
+                "undesired_pct": 50.0,
+                "repeat": 0,
+                "cost": 15122
+              },
+              {
+                "topic": "Долги клиентов",
+                "count": 2,
+                "pct": 1.6,
+                "undesired": 1,
+                "undesired_pct": 50.0,
+                "repeat": 0,
+                "cost": 15122
+              }
+            ],
+            "labels_breakdown": [
+              {
+                "label": "Массовый сбой BILLZ",
+                "count": 13,
+                "cost": 98293
+              },
+              {
+                "label": "Учётная запись - Помощь со входом в аккаунт",
+                "count": 8,
+                "cost": 60488
+              },
+              {
+                "label": "Кассовые смены — Открытие/Закрытие смен",
+                "count": 5,
+                "cost": 37805
+              },
+              {
+                "label": "Импорт — импорт товаров через Excel",
+                "count": 4,
+                "cost": 30244
+              },
+              {
+                "label": "Настройка - Создание/Редактирование/Удаление чека",
+                "count": 4,
+                "cost": 30244
+              },
+              {
+                "label": "Каталог - Архивация товаров",
+                "count": 4,
+                "cost": 30244
+              },
+              {
+                "label": "Оборудование - Установка/Настройка/Удаление принтера",
+                "count": 4,
+                "cost": 30244
+              },
+              {
+                "label": "Баг (реквест)",
+                "count": 3,
+                "cost": 22683
+              },
+              {
+                "label": "Каталог — настройка печати ценника",
+                "count": 3,
+                "cost": 22683
+              },
+              {
+                "label": "Каталог — изменение свойств товара",
+                "count": 2,
+                "cost": 15122
+              }
+            ]
           },
           {
             "name": "Robiya Alisherova",
-            "tickets": 118,
-            "desired": 63,
-            "undesired": 52,
-            "undesired_pct": 44.1,
+            "role": "critical",
+            "non_critical": false,
+            "tag_label": "⭐ Критичный",
+            "tag_color": "#F87171",
+            "tickets": 121,
+            "desired": 64,
+            "undesired": 54,
+            "undesired_pct": 44.6,
             "partial": 4,
             "full": 1,
             "training_total": 5,
-            "repeat_count": 5,
-            "repeat_pct": 4.2,
-            "med_close": 4.7,
+            "repeat_count": 6,
+            "repeat_pct": 5.0,
+            "med_close": 4.6,
             "med_frt_min": 0.4,
-            "stores_count": 45,
-            "cost": 892198,
-            "tag": "big_base",
-            "tag_label": "🔵 Большая база",
-            "tag_color": "#3B82F6",
-            "big_base": true,
-            "note": "",
-            "top_topic": "Массовый сбой BILLZ",
-            "top_undesired_topic": "Массовый сбой BILLZ"
-          },
-          {
-            "name": "Shoxrux Mahmud",
-            "tickets": 113,
-            "desired": 45,
-            "undesired": 67,
-            "undesired_pct": 59.3,
-            "partial": null,
-            "full": 1,
-            "training_total": 1,
-            "repeat_count": 17,
-            "repeat_pct": 15.0,
-            "med_close": 0.9,
-            "med_frt_min": 0.4,
-            "stores_count": 1,
-            "cost": 854393,
-            "tag": null,
-            "tag_label": null,
-            "tag_color": null,
-            "big_base": false,
-            "note": "",
+            "stores_count": 47,
+            "massoviy_count": 20,
+            "cost": 914881,
             "top_topic": "Документооборот",
-            "top_undesired_topic": "Документооборот"
+            "top_undesired_topic": "Массовый сбой BILLZ",
+            "topic_breakdown": [
+              {
+                "topic": "Документооборот",
+                "count": 20,
+                "pct": 16.5,
+                "undesired": 9,
+                "undesired_pct": 45.0,
+                "repeat": 1,
+                "cost": 151220
+              },
+              {
+                "topic": "Массовый сбой BILLZ",
+                "count": 20,
+                "pct": 16.5,
+                "undesired": 20,
+                "undesired_pct": 100.0,
+                "repeat": 0,
+                "cost": 151220
+              },
+              {
+                "topic": "Настройка",
+                "count": 11,
+                "pct": 9.1,
+                "undesired": 1,
+                "undesired_pct": 9.1,
+                "repeat": 0,
+                "cost": 83171
+              },
+              {
+                "topic": "Учётная запись",
+                "count": 8,
+                "pct": 6.6,
+                "undesired": 1,
+                "undesired_pct": 12.5,
+                "repeat": 0,
+                "cost": 60488
+              },
+              {
+                "topic": "Баг (реквест)",
+                "count": 6,
+                "pct": 5.0,
+                "undesired": 1,
+                "undesired_pct": 16.7,
+                "repeat": 1,
+                "cost": 45366
+              },
+              {
+                "topic": "API",
+                "count": 6,
+                "pct": 5.0,
+                "undesired": 3,
+                "undesired_pct": 50.0,
+                "repeat": 1,
+                "cost": 45366
+              },
+              {
+                "topic": "Оборудование",
+                "count": 6,
+                "pct": 5.0,
+                "undesired": 1,
+                "undesired_pct": 16.7,
+                "repeat": 0,
+                "cost": 45366
+              },
+              {
+                "topic": "Отчёты",
+                "count": 6,
+                "pct": 5.0,
+                "undesired": 2,
+                "undesired_pct": 33.3,
+                "repeat": 0,
+                "cost": 45366
+              },
+              {
+                "topic": "Инвентаризация",
+                "count": 5,
+                "pct": 4.1,
+                "undesired": 1,
+                "undesired_pct": 20.0,
+                "repeat": 0,
+                "cost": 37805
+              },
+              {
+                "topic": "Каталог",
+                "count": 5,
+                "pct": 4.1,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 37805
+              },
+              {
+                "topic": "Новая продажа",
+                "count": 3,
+                "pct": 2.5,
+                "undesired": 1,
+                "undesired_pct": 33.3,
+                "repeat": 0,
+                "cost": 22683
+              },
+              {
+                "topic": "Реквест (внутренний запрос",
+                "count": 2,
+                "pct": 1.7,
+                "undesired": 1,
+                "undesired_pct": 50.0,
+                "repeat": 0,
+                "cost": 15122
+              },
+              {
+                "topic": "Бэклог",
+                "count": 2,
+                "pct": 1.7,
+                "undesired": 1,
+                "undesired_pct": 50.0,
+                "repeat": 0,
+                "cost": 15122
+              },
+              {
+                "topic": "Маркетинг",
+                "count": 2,
+                "pct": 1.7,
+                "undesired": 1,
+                "undesired_pct": 50.0,
+                "repeat": 1,
+                "cost": 15122
+              },
+              {
+                "topic": "Управление",
+                "count": 2,
+                "pct": 1.7,
+                "undesired": 1,
+                "undesired_pct": 50.0,
+                "repeat": 1,
+                "cost": 15122
+              }
+            ],
+            "labels_breakdown": [
+              {
+                "label": "Массовый сбой BILLZ",
+                "count": 20,
+                "cost": 151220
+              },
+              {
+                "label": "Документооборот - Оплата за тариф",
+                "count": 12,
+                "cost": 90732
+              },
+              {
+                "label": "Учётная запись - Помощь со входом в аккаунт",
+                "count": 6,
+                "cost": 45366
+              },
+              {
+                "label": "Баг (реквест)",
+                "count": 6,
+                "cost": 45366
+              },
+              {
+                "label": "API - Консультация по API ключ",
+                "count": 5,
+                "cost": 37805
+              },
+              {
+                "label": "Оборудование - Установка/Настройка/Удаление принтера",
+                "count": 5,
+                "cost": 37805
+              },
+              {
+                "label": "Отчёты - Выгрузка отчёта",
+                "count": 5,
+                "cost": 37805
+              },
+              {
+                "label": "Настройка - Создание/Редактирование/Удаление доп. точки",
+                "count": 3,
+                "cost": 22683
+              },
+              {
+                "label": "Инвентаризация — консультация по модулю (частичное обучение)",
+                "count": 3,
+                "cost": 22683
+              },
+              {
+                "label": "Реквест (внутренний запрос",
+                "count": 2,
+                "cost": 15122
+              }
+            ]
           },
           {
-            "name": "наш чел",
-            "tickets": 97,
-            "desired": 35,
-            "undesired": 57,
-            "undesired_pct": 58.8,
-            "partial": 1,
-            "full": 1,
-            "training_total": 2,
-            "repeat_count": 10,
-            "repeat_pct": 10.3,
-            "med_close": 1.1,
-            "med_frt_min": 0.4,
-            "stores_count": 2,
-            "cost": 733417,
-            "tag": null,
-            "tag_label": null,
-            "tag_color": null,
-            "big_base": false,
-            "note": "",
-            "top_topic": "Учётная запись",
-            "top_undesired_topic": "Учётная запись"
+            "name": "Marat Mustafaev",
+            "role": "noncritical",
+            "non_critical": true,
+            "tag_label": "⚪ Не критичный",
+            "tag_color": "#94A3B8",
+            "tickets": 87,
+            "desired": 41,
+            "undesired": 46,
+            "undesired_pct": 52.9,
+            "partial": 4,
+            "full": null,
+            "training_total": 4,
+            "repeat_count": 4,
+            "repeat_pct": 4.6,
+            "med_close": 3.6,
+            "med_frt_min": 0.3,
+            "stores_count": 31,
+            "massoviy_count": 6,
+            "cost": 657807,
+            "top_topic": "Документооборот",
+            "top_undesired_topic": "Документооборот",
+            "topic_breakdown": [
+              {
+                "topic": "Документооборот",
+                "count": 19,
+                "pct": 21.8,
+                "undesired": 11,
+                "undesired_pct": 57.9,
+                "repeat": 0,
+                "cost": 143659
+              },
+              {
+                "topic": "Каталог",
+                "count": 8,
+                "pct": 9.2,
+                "undesired": 2,
+                "undesired_pct": 25.0,
+                "repeat": 0,
+                "cost": 60488
+              },
+              {
+                "topic": "Учётная запись",
+                "count": 6,
+                "pct": 6.9,
+                "undesired": 2,
+                "undesired_pct": 33.3,
+                "repeat": 0,
+                "cost": 45366
+              },
+              {
+                "topic": "Массовый сбой BILLZ",
+                "count": 6,
+                "pct": 6.9,
+                "undesired": 5,
+                "undesired_pct": 83.3,
+                "repeat": 0,
+                "cost": 45366
+              },
+              {
+                "topic": "Новая продажа",
+                "count": 5,
+                "pct": 5.7,
+                "undesired": 3,
+                "undesired_pct": 60.0,
+                "repeat": 0,
+                "cost": 37805
+              },
+              {
+                "topic": "Кассовые смены",
+                "count": 3,
+                "pct": 3.4,
+                "undesired": 1,
+                "undesired_pct": 33.3,
+                "repeat": 0,
+                "cost": 22683
+              },
+              {
+                "topic": "Отчёты",
+                "count": 3,
+                "pct": 3.4,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 1,
+                "cost": 22683
+              },
+              {
+                "topic": "Настройка",
+                "count": 2,
+                "pct": 2.3,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 15122
+              },
+              {
+                "topic": "Оборудование",
+                "count": 2,
+                "pct": 2.3,
+                "undesired": 1,
+                "undesired_pct": 50.0,
+                "repeat": 0,
+                "cost": 15122
+              },
+              {
+                "topic": "Кассовые операции",
+                "count": 2,
+                "pct": 2.3,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 15122
+              },
+              {
+                "topic": "Все продажи",
+                "count": 2,
+                "pct": 2.3,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 15122
+              },
+              {
+                "topic": "Вопрос не по программе",
+                "count": 2,
+                "pct": 2.3,
+                "undesired": 1,
+                "undesired_pct": 50.0,
+                "repeat": 1,
+                "cost": 15122
+              },
+              {
+                "topic": "Долги клиентов",
+                "count": 1,
+                "pct": 1.1,
+                "undesired": 1,
+                "undesired_pct": 100.0,
+                "repeat": 0,
+                "cost": 7561
+              },
+              {
+                "topic": "Трансфер",
+                "count": 1,
+                "pct": 1.1,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 7561
+              },
+              {
+                "topic": "Инвентаризация",
+                "count": 1,
+                "pct": 1.1,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 1,
+                "cost": 7561
+              }
+            ],
+            "labels_breakdown": [
+              {
+                "label": "Документооборот - Оплата за тариф",
+                "count": 14,
+                "cost": 105854
+              },
+              {
+                "label": "Массовый сбой BILLZ",
+                "count": 6,
+                "cost": 45366
+              },
+              {
+                "label": "Новая продажа - Возврат/Обмен",
+                "count": 4,
+                "cost": 30244
+              },
+              {
+                "label": "Кассовые смены — Открытие/Закрытие смен",
+                "count": 3,
+                "cost": 22683
+              },
+              {
+                "label": "Каталог — изменение свойств товара",
+                "count": 3,
+                "cost": 22683
+              },
+              {
+                "label": "Документооборот - Создание ссылки для оплаты",
+                "count": 3,
+                "cost": 22683
+              },
+              {
+                "label": "Учётная запись - Помощь со входом в аккаунт",
+                "count": 3,
+                "cost": 22683
+              },
+              {
+                "label": "Отчёты - Разбор отчётов",
+                "count": 2,
+                "cost": 15122
+              },
+              {
+                "label": "Кассовые операции - Создание дохода/расхода/инкассации",
+                "count": 2,
+                "cost": 15122
+              },
+              {
+                "label": "Каталог - Скачивание товаров",
+                "count": 2,
+                "cost": 15122
+              }
+            ]
           },
           {
             "name": "Abdulaziz Abduganiev",
+            "role": "critical",
+            "non_critical": false,
+            "tag_label": "⭐ Критичный",
+            "tag_color": "#F87171",
             "tickets": 86,
             "desired": 31,
             "undesired": 55,
@@ -67571,2280 +72198,340 @@ const BILLZ_DATA = {
             "med_close": 5.65,
             "med_frt_min": 0.3,
             "stores_count": 26,
+            "massoviy_count": 11,
             "cost": 650246,
-            "tag": "big_base",
-            "tag_label": "🔵 Большая база",
-            "tag_color": "#3B82F6",
-            "big_base": true,
-            "note": "",
             "top_topic": "Массовый сбой BILLZ",
-            "top_undesired_topic": "Массовый сбой BILLZ"
-          },
-          {
-            "name": "Marat Mustafaev",
-            "tickets": 84,
-            "desired": 39,
-            "undesired": 45,
-            "undesired_pct": 53.6,
-            "partial": 4,
-            "full": null,
-            "training_total": 4,
-            "repeat_count": 4,
-            "repeat_pct": 4.8,
-            "med_close": 3.9,
-            "med_frt_min": 0.3,
-            "stores_count": 29,
-            "cost": 635124,
-            "tag": "big_base",
-            "tag_label": "🔵 Большая база",
-            "tag_color": "#3B82F6",
-            "big_base": true,
-            "note": "",
-            "top_topic": "Документооборот",
-            "top_undesired_topic": "Документооборот"
-          },
-          {
-            "name": "Karim Serikov",
-            "tickets": 78,
-            "desired": 45,
-            "undesired": 30,
-            "undesired_pct": 38.5,
-            "partial": 7,
-            "full": null,
-            "training_total": 7,
-            "repeat_count": 7,
-            "repeat_pct": 9.0,
-            "med_close": 3.9,
-            "med_frt_min": 0.5,
-            "stores_count": 14,
-            "cost": 589758,
-            "tag": "big_base",
-            "tag_label": "🔵 Большая база",
-            "tag_color": "#3B82F6",
-            "big_base": true,
-            "note": "",
-            "top_topic": "Баг (реквест)",
-            "top_undesired_topic": "Массовый сбой BILLZ"
-          },
-          {
-            "name": "Наш сотрудник",
-            "tickets": 50,
-            "desired": 21,
-            "undesired": 28,
-            "undesired_pct": 56.0,
-            "partial": null,
-            "full": null,
-            "training_total": 0,
-            "repeat_count": 8,
-            "repeat_pct": 16.0,
-            "med_close": 0.9,
-            "med_frt_min": 0.4,
-            "stores_count": 2,
-            "cost": 378050,
-            "tag": null,
-            "tag_label": null,
-            "tag_color": null,
-            "big_base": false,
-            "note": "",
-            "top_topic": "Документооборот",
-            "top_undesired_topic": "Документооборот"
-          },
-          {
-            "name": "BILLZ",
-            "tickets": 48,
-            "desired": 22,
-            "undesired": 25,
-            "undesired_pct": 52.1,
-            "partial": 2,
-            "full": null,
-            "training_total": 2,
-            "repeat_count": 1,
-            "repeat_pct": 2.1,
-            "med_close": 1.7,
-            "med_frt_min": 0.3,
-            "stores_count": 2,
-            "cost": 362928,
-            "tag": null,
-            "tag_label": null,
-            "tag_color": null,
-            "big_base": false,
-            "note": "",
-            "top_topic": "Оборудование",
-            "top_undesired_topic": "Оборудование"
-          },
-          {
-            "name": "Нет КСника в админке",
-            "tickets": 42,
-            "desired": 9,
-            "undesired": 32,
-            "undesired_pct": 76.2,
-            "partial": 2,
-            "full": null,
-            "training_total": 2,
-            "repeat_count": 2,
-            "repeat_pct": 4.8,
-            "med_close": 6.6,
-            "med_frt_min": 0.3,
-            "stores_count": 10,
-            "cost": 317562,
-            "tag": "big_base",
-            "tag_label": "🔵 Большая база",
-            "tag_color": "#3B82F6",
-            "big_base": true,
-            "note": "",
-            "top_topic": "Массовый сбой BILLZ",
-            "top_undesired_topic": "Массовый сбой BILLZ"
-          },
-          {
-            "name": "КС",
-            "tickets": 38,
-            "desired": 20,
-            "undesired": 17,
-            "undesired_pct": 44.7,
-            "partial": null,
-            "full": null,
-            "training_total": 0,
-            "repeat_count": 3,
-            "repeat_pct": 7.9,
-            "med_close": 0.8,
-            "med_frt_min": 0.3,
-            "stores_count": 1,
-            "cost": 287318,
-            "tag": null,
-            "tag_label": null,
-            "tag_color": null,
-            "big_base": false,
-            "note": "",
-            "top_topic": "Документооборот",
-            "top_undesired_topic": "Документооборот"
-          },
-          {
-            "name": "Xabibullox Xudoyorov",
-            "tickets": 34,
-            "desired": 6,
-            "undesired": 27,
-            "undesired_pct": 79.4,
-            "partial": 2,
-            "full": null,
-            "training_total": 2,
-            "repeat_count": 0,
-            "repeat_pct": 0.0,
-            "med_close": 7.2,
-            "med_frt_min": 0.25,
-            "stores_count": 13,
-            "cost": 257074,
-            "tag": "big_base",
-            "tag_label": "🔵 Большая база",
-            "tag_color": "#3B82F6",
-            "big_base": true,
-            "note": "",
-            "top_topic": "Массовый сбой BILLZ",
-            "top_undesired_topic": "Массовый сбой BILLZ"
-          },
-          {
-            "name": "Мухаммадазиз Кошакбаев",
-            "tickets": 30,
-            "desired": 10,
-            "undesired": 19,
-            "undesired_pct": 63.3,
-            "partial": null,
-            "full": 1,
-            "training_total": 1,
-            "repeat_count": 4,
-            "repeat_pct": 13.3,
-            "med_close": 0.75,
-            "med_frt_min": 0.25,
-            "stores_count": 1,
-            "cost": 226830,
-            "tag": null,
-            "tag_label": null,
-            "tag_color": null,
-            "big_base": false,
-            "note": "",
-            "top_topic": "Учётная запись",
-            "top_undesired_topic": "Документооборот"
-          },
-          {
-            "name": "Head of CC in BILLZ Company",
-            "tickets": 29,
-            "desired": 7,
-            "undesired": 21,
-            "undesired_pct": 72.4,
-            "partial": null,
-            "full": null,
-            "training_total": 0,
-            "repeat_count": 2,
-            "repeat_pct": 6.9,
-            "med_close": 1.9,
-            "med_frt_min": 0.6,
-            "stores_count": 1,
-            "cost": 219269,
-            "tag": null,
-            "tag_label": null,
-            "tag_color": null,
-            "big_base": false,
-            "note": "",
-            "top_topic": "тест",
-            "top_undesired_topic": "тест"
-          },
-          {
-            "name": "Нет ксника",
-            "tickets": 27,
-            "desired": 12,
-            "undesired": 11,
-            "undesired_pct": 40.7,
-            "partial": null,
-            "full": null,
-            "training_total": 0,
-            "repeat_count": 3,
-            "repeat_pct": 11.1,
-            "med_close": 2.5,
-            "med_frt_min": 0.6,
-            "stores_count": 3,
-            "cost": 204147,
-            "tag": null,
-            "tag_label": null,
-            "tag_color": null,
-            "big_base": false,
-            "note": "",
-            "top_topic": "Кассовые смены",
-            "top_undesired_topic": "Новая продажа"
-          },
-          {
-            "name": "НАШ ЧЕЛ",
-            "tickets": 20,
-            "desired": 4,
-            "undesired": 13,
-            "undesired_pct": 65.0,
-            "partial": null,
-            "full": null,
-            "training_total": 0,
-            "repeat_count": 2,
-            "repeat_pct": 10.0,
-            "med_close": 1.1,
-            "med_frt_min": 0.4,
-            "stores_count": 2,
-            "cost": 151220,
-            "tag": null,
-            "tag_label": null,
-            "tag_color": null,
-            "big_base": false,
-            "note": "",
-            "top_topic": "Документооборот",
-            "top_undesired_topic": "Документооборот"
-          },
-          {
-            "name": "Sarvarbek Gulomjonov",
-            "tickets": 19,
-            "desired": 6,
-            "undesired": 13,
-            "undesired_pct": 68.4,
-            "partial": null,
-            "full": null,
-            "training_total": 0,
-            "repeat_count": 1,
-            "repeat_pct": 5.3,
-            "med_close": 6.0,
-            "med_frt_min": 0.35,
-            "stores_count": 1,
-            "cost": 143659,
-            "tag": null,
-            "tag_label": null,
-            "tag_color": null,
-            "big_base": false,
-            "note": "",
-            "top_topic": "Массовый сбой BILLZ",
-            "top_undesired_topic": "Массовый сбой BILLZ"
-          },
-          {
-            "name": "Мирамир АЕ",
-            "tickets": 18,
-            "desired": 10,
-            "undesired": 8,
-            "undesired_pct": 44.4,
-            "partial": null,
-            "full": null,
-            "training_total": 0,
-            "repeat_count": 3,
-            "repeat_pct": 16.7,
-            "med_close": 2.0,
-            "med_frt_min": 0.2,
-            "stores_count": 1,
-            "cost": 136098,
-            "tag": null,
-            "tag_label": null,
-            "tag_color": null,
-            "big_base": false,
-            "note": "",
-            "top_topic": "Документооборот",
-            "top_undesired_topic": "Учётная запись"
-          },
-          {
-            "name": "Kurman Saparbekov",
-            "tickets": 18,
-            "desired": 8,
-            "undesired": 8,
-            "undesired_pct": 44.4,
-            "partial": 1,
-            "full": null,
-            "training_total": 1,
-            "repeat_count": 1,
-            "repeat_pct": 5.6,
-            "med_close": 3.9,
-            "med_frt_min": 0.5,
-            "stores_count": 6,
-            "cost": 136098,
-            "tag": "big_base",
-            "tag_label": "🔵 Большая база",
-            "tag_color": "#3B82F6",
-            "big_base": true,
-            "note": "",
-            "top_topic": "Настройка",
-            "top_undesired_topic": "Учётная запись"
-          },
-          {
-            "name": "КСник",
-            "tickets": 15,
-            "desired": 8,
-            "undesired": 7,
-            "undesired_pct": 46.7,
-            "partial": null,
-            "full": null,
-            "training_total": 0,
-            "repeat_count": 0,
-            "repeat_pct": 0.0,
-            "med_close": 4.1,
-            "med_frt_min": 0,
-            "stores_count": 1,
-            "cost": 113415,
-            "tag": null,
-            "tag_label": null,
-            "tag_color": null,
-            "big_base": false,
-            "note": "",
-            "top_topic": "Каталог",
-            "top_undesired_topic": "Каталог"
-          },
-          {
-            "name": "Shoxruh Pirmukhametov",
-            "tickets": 15,
-            "desired": 8,
-            "undesired": 6,
-            "undesired_pct": 40.0,
-            "partial": 1,
-            "full": null,
-            "training_total": 1,
-            "repeat_count": 1,
-            "repeat_pct": 6.7,
-            "med_close": 7.5,
-            "med_frt_min": 1.0,
-            "stores_count": 6,
-            "cost": 113415,
-            "tag": "big_base",
-            "tag_label": "🔵 Большая база",
-            "tag_color": "#3B82F6",
-            "big_base": true,
-            "note": "",
-            "top_topic": "Массовый сбой BILLZ",
-            "top_undesired_topic": "Массовый сбой BILLZ"
-          },
-          {
-            "name": "Vadim Zakharyan",
-            "tickets": 15,
-            "desired": 5,
-            "undesired": 7,
-            "undesired_pct": 46.7,
-            "partial": null,
-            "full": null,
-            "training_total": 0,
-            "repeat_count": 0,
-            "repeat_pct": 0.0,
-            "med_close": 2.1,
-            "med_frt_min": 0.85,
-            "stores_count": 1,
-            "cost": 113415,
-            "tag": null,
-            "tag_label": null,
-            "tag_color": null,
-            "big_base": false,
-            "note": "",
-            "top_topic": "API",
-            "top_undesired_topic": "Настройка"
-          },
-          {
-            "name": "Нет менджера CS",
-            "tickets": 15,
-            "desired": 1,
-            "undesired": 14,
-            "undesired_pct": 93.3,
-            "partial": null,
-            "full": null,
-            "training_total": 0,
-            "repeat_count": 1,
-            "repeat_pct": 6.7,
-            "med_close": 1.3,
-            "med_frt_min": 0,
-            "stores_count": 1,
-            "cost": 113415,
-            "tag": null,
-            "tag_label": null,
-            "tag_color": null,
-            "big_base": false,
-            "note": "",
-            "top_topic": "",
-            "top_undesired_topic": ""
-          },
-          {
-            "name": "наша челиха",
-            "tickets": 14,
-            "desired": 1,
-            "undesired": 12,
-            "undesired_pct": 85.7,
-            "partial": null,
-            "full": null,
-            "training_total": 0,
-            "repeat_count": 0,
-            "repeat_pct": 0.0,
-            "med_close": 0.1,
-            "med_frt_min": 0.1,
-            "stores_count": 1,
-            "cost": 105854,
-            "tag": null,
-            "tag_label": null,
-            "tag_color": null,
-            "big_base": false,
-            "note": "",
-            "top_topic": "тест",
-            "top_undesired_topic": "тест"
-          },
-          {
-            "name": "BILLZ Lite",
-            "tickets": 13,
-            "desired": 5,
-            "undesired": 8,
-            "undesired_pct": 61.5,
-            "partial": 1,
-            "full": null,
-            "training_total": 1,
-            "repeat_count": 1,
-            "repeat_pct": 7.7,
-            "med_close": 2.8,
-            "med_frt_min": 0.3,
-            "stores_count": 6,
-            "cost": 98293,
-            "tag": "big_base",
-            "tag_label": "🔵 Большая база",
-            "tag_color": "#3B82F6",
-            "big_base": true,
-            "note": "",
-            "top_topic": "Документооборот",
-            "top_undesired_topic": "Документооборот"
-          },
-          {
-            "name": "AE",
-            "tickets": 12,
-            "desired": 4,
-            "undesired": 8,
-            "undesired_pct": 66.7,
-            "partial": null,
-            "full": null,
-            "training_total": 0,
-            "repeat_count": 0,
-            "repeat_pct": 0.0,
-            "med_close": 2.65,
-            "med_frt_min": 0.3,
-            "stores_count": 1,
-            "cost": 90732,
-            "tag": null,
-            "tag_label": null,
-            "tag_color": null,
-            "big_base": false,
-            "note": "",
-            "top_topic": "Документооборот",
-            "top_undesired_topic": "Документооборот"
-          },
-          {
-            "name": "Нет КСника",
-            "tickets": 10,
-            "desired": 4,
-            "undesired": 4,
-            "undesired_pct": 40.0,
-            "partial": null,
-            "full": null,
-            "training_total": 0,
-            "repeat_count": 0,
-            "repeat_pct": 0.0,
-            "med_close": 0.3,
-            "med_frt_min": 0.75,
-            "stores_count": 1,
-            "cost": 75610,
-            "tag": null,
-            "tag_label": null,
-            "tag_color": null,
-            "big_base": false,
-            "note": "",
-            "top_topic": "API",
-            "top_undesired_topic": "Оборудование"
-          },
-          {
-            "name": "Sanjar Raxmidinov",
-            "tickets": 9,
-            "desired": 3,
-            "undesired": 6,
-            "undesired_pct": 66.7,
-            "partial": null,
-            "full": null,
-            "training_total": 0,
-            "repeat_count": 1,
-            "repeat_pct": 11.1,
-            "med_close": 5.6,
-            "med_frt_min": 0,
-            "stores_count": 1,
-            "cost": 68049,
-            "tag": null,
-            "tag_label": null,
-            "tag_color": null,
-            "big_base": false,
-            "note": "",
-            "top_topic": "Настройка",
-            "top_undesired_topic": "Настройка"
-          },
-          {
-            "name": "Сотрудник",
-            "tickets": 9,
-            "desired": 0,
-            "undesired": 9,
-            "undesired_pct": 100.0,
-            "partial": null,
-            "full": null,
-            "training_total": 0,
-            "repeat_count": 0,
-            "repeat_pct": 0.0,
-            "med_close": 0.9,
-            "med_frt_min": 2.5,
-            "stores_count": 1,
-            "cost": 68049,
-            "tag": null,
-            "tag_label": null,
-            "tag_color": null,
-            "big_base": false,
-            "note": "",
-            "top_topic": "",
-            "top_undesired_topic": ""
-          },
-          {
-            "name": "Alina Xanieva",
-            "tickets": 8,
-            "desired": 4,
-            "undesired": 4,
-            "undesired_pct": 50.0,
-            "partial": null,
-            "full": null,
-            "training_total": 0,
-            "repeat_count": 1,
-            "repeat_pct": 12.5,
-            "med_close": 3.3,
-            "med_frt_min": 0.5,
-            "stores_count": 1,
-            "cost": 60488,
-            "tag": null,
-            "tag_label": null,
-            "tag_color": null,
-            "big_base": false,
-            "note": "",
-            "top_topic": "Массовый сбой BILLZ",
-            "top_undesired_topic": "Массовый сбой BILLZ"
-          },
-          {
-            "name": "Sanjar Rahmiddinov",
-            "tickets": 8,
-            "desired": 3,
-            "undesired": 3,
-            "undesired_pct": 37.5,
-            "partial": null,
-            "full": null,
-            "training_total": 0,
-            "repeat_count": 0,
-            "repeat_pct": 0.0,
-            "med_close": 3.55,
-            "med_frt_min": 0.55,
-            "stores_count": 5,
-            "cost": 60488,
-            "tag": "big_base",
-            "tag_label": "🔵 Большая база",
-            "tag_color": "#3B82F6",
-            "big_base": true,
-            "note": "",
-            "top_topic": "Документооборот",
-            "top_undesired_topic": "Документооборот"
-          },
-          {
-            "name": "Sarvar Salixov",
-            "tickets": 8,
-            "desired": 5,
-            "undesired": 3,
-            "undesired_pct": 37.5,
-            "partial": 1,
-            "full": null,
-            "training_total": 1,
-            "repeat_count": 2,
-            "repeat_pct": 25.0,
-            "med_close": 3.75,
-            "med_frt_min": 0.3,
-            "stores_count": 3,
-            "cost": 60488,
-            "tag": null,
-            "tag_label": null,
-            "tag_color": null,
-            "big_base": false,
-            "note": "",
-            "top_topic": "Настройка",
-            "top_undesired_topic": "Каталог"
-          },
-          {
-            "name": "Miramir Ergashev",
-            "tickets": 8,
-            "desired": 3,
-            "undesired": 5,
-            "undesired_pct": 62.5,
-            "partial": 1,
-            "full": null,
-            "training_total": 1,
-            "repeat_count": 3,
-            "repeat_pct": 37.5,
-            "med_close": 1.45,
-            "med_frt_min": 0.5,
-            "stores_count": 3,
-            "cost": 60488,
-            "tag": null,
-            "tag_label": null,
-            "tag_color": null,
-            "big_base": false,
-            "note": "",
-            "top_topic": "Отчёты",
-            "top_undesired_topic": "Отчёты"
-          },
-          {
-            "name": "Head CX depeartment",
-            "tickets": 8,
-            "desired": 2,
-            "undesired": 5,
-            "undesired_pct": 62.5,
-            "partial": null,
-            "full": null,
-            "training_total": 0,
-            "repeat_count": 0,
-            "repeat_pct": 0.0,
-            "med_close": 0.8,
-            "med_frt_min": 0.3,
-            "stores_count": 1,
-            "cost": 60488,
-            "tag": null,
-            "tag_label": null,
-            "tag_color": null,
-            "big_base": false,
-            "note": "",
-            "top_topic": "Вопрос не по программе",
-            "top_undesired_topic": "Баг (реквест)"
-          },
-          {
-            "name": "Shoxruh Mahmud",
-            "tickets": 8,
-            "desired": 1,
-            "undesired": 5,
-            "undesired_pct": 62.5,
-            "partial": null,
-            "full": null,
-            "training_total": 0,
-            "repeat_count": 0,
-            "repeat_pct": 0.0,
-            "med_close": 5.75,
-            "med_frt_min": 4.3,
-            "stores_count": 2,
-            "cost": 60488,
-            "tag": null,
-            "tag_label": null,
-            "tag_color": null,
-            "big_base": false,
-            "note": "",
-            "top_topic": "Новая продажа",
-            "top_undesired_topic": "Оборудование"
-          },
-          {
-            "name": "Lite",
-            "tickets": 8,
-            "desired": 4,
-            "undesired": 4,
-            "undesired_pct": 50.0,
-            "partial": 1,
-            "full": 1,
-            "training_total": 2,
-            "repeat_count": 0,
-            "repeat_pct": 0.0,
-            "med_close": 2.9,
-            "med_frt_min": 0,
-            "stores_count": 2,
-            "cost": 60488,
-            "tag": null,
-            "tag_label": null,
-            "tag_color": null,
-            "big_base": false,
-            "note": "",
-            "top_topic": "Управление",
-            "top_undesired_topic": "Управление"
-          },
-          {
-            "name": "Khumoyunmirzo Gulomiddinov",
-            "tickets": 7,
-            "desired": 4,
-            "undesired": 2,
-            "undesired_pct": 28.6,
-            "partial": null,
-            "full": null,
-            "training_total": 0,
-            "repeat_count": 0,
-            "repeat_pct": 0.0,
-            "med_close": 3.2,
-            "med_frt_min": 0.5,
-            "stores_count": 3,
-            "cost": 52927,
-            "tag": null,
-            "tag_label": null,
-            "tag_color": null,
-            "big_base": false,
-            "note": "",
-            "top_topic": "Массовый сбой BILLZ",
-            "top_undesired_topic": "Массовый сбой BILLZ"
-          },
-          {
-            "name": "Наш списочник",
-            "tickets": 7,
-            "desired": 1,
-            "undesired": 6,
-            "undesired_pct": 85.7,
-            "partial": null,
-            "full": null,
-            "training_total": 0,
-            "repeat_count": 1,
-            "repeat_pct": 14.3,
-            "med_close": 6.2,
-            "med_frt_min": 1.3,
-            "stores_count": 2,
-            "cost": 52927,
-            "tag": null,
-            "tag_label": null,
-            "tag_color": null,
-            "big_base": false,
-            "note": "",
-            "top_topic": "Учётная запись",
-            "top_undesired_topic": "Учётная запись"
-          },
-          {
-            "name": "Saidorif Muzaffarov Tashkent",
-            "tickets": 7,
-            "desired": 2,
-            "undesired": 5,
-            "undesired_pct": 71.4,
-            "partial": null,
-            "full": null,
-            "training_total": 0,
-            "repeat_count": 0,
-            "repeat_pct": 0.0,
-            "med_close": 6.5,
-            "med_frt_min": 0,
-            "stores_count": 3,
-            "cost": 52927,
-            "tag": null,
-            "tag_label": null,
-            "tag_color": null,
-            "big_base": false,
-            "note": "",
-            "top_topic": "Массовый сбой BILLZ",
-            "top_undesired_topic": "Массовый сбой BILLZ"
-          },
-          {
-            "name": "Наш Чел",
-            "tickets": 6,
-            "desired": 4,
-            "undesired": 1,
-            "undesired_pct": 16.7,
-            "partial": null,
-            "full": null,
-            "training_total": 0,
-            "repeat_count": 0,
-            "repeat_pct": 0.0,
-            "med_close": 4.05,
-            "med_frt_min": 0.5,
-            "stores_count": 1,
-            "cost": 45366,
-            "tag": null,
-            "tag_label": null,
-            "tag_color": null,
-            "big_base": false,
-            "note": "",
-            "top_topic": "Учётная запись",
-            "top_undesired_topic": ""
-          },
-          {
-            "name": "нету ксника",
-            "tickets": 6,
-            "desired": 0,
-            "undesired": 6,
-            "undesired_pct": 100.0,
-            "partial": null,
-            "full": null,
-            "training_total": 0,
-            "repeat_count": 1,
-            "repeat_pct": 16.7,
-            "med_close": 2.45,
-            "med_frt_min": 0,
-            "stores_count": 1,
-            "cost": 45366,
-            "tag": null,
-            "tag_label": null,
-            "tag_color": null,
-            "big_base": false,
-            "note": "",
-            "top_topic": "",
-            "top_undesired_topic": ""
-          },
-          {
-            "name": "Еще нет ксника",
-            "tickets": 6,
-            "desired": 3,
-            "undesired": 3,
-            "undesired_pct": 50.0,
-            "partial": null,
-            "full": null,
-            "training_total": 0,
-            "repeat_count": 0,
-            "repeat_pct": 0.0,
-            "med_close": 8.85,
-            "med_frt_min": 0,
-            "stores_count": 1,
-            "cost": 45366,
-            "tag": null,
-            "tag_label": null,
-            "tag_color": null,
-            "big_base": false,
-            "note": "",
-            "top_topic": "Кассовые смены",
-            "top_undesired_topic": "Кассовые смены"
-          },
-          {
-            "name": "Burxonjon Burxonjonov",
-            "tickets": 6,
-            "desired": 2,
-            "undesired": 3,
-            "undesired_pct": 50.0,
-            "partial": null,
-            "full": null,
-            "training_total": 0,
-            "repeat_count": 0,
-            "repeat_pct": 0.0,
-            "med_close": 19.6,
-            "med_frt_min": 0.2,
-            "stores_count": 2,
-            "cost": 45366,
-            "tag": null,
-            "tag_label": null,
-            "tag_color": null,
-            "big_base": false,
-            "note": "",
-            "top_topic": "Документооборот",
-            "top_undesired_topic": "Документооборот"
-          },
-          {
-            "name": "Mukhammadaziz Koshakb",
-            "tickets": 6,
-            "desired": 4,
-            "undesired": 2,
-            "undesired_pct": 33.3,
-            "partial": null,
-            "full": null,
-            "training_total": 0,
-            "repeat_count": 1,
-            "repeat_pct": 16.7,
-            "med_close": 1.6,
-            "med_frt_min": 0.3,
-            "stores_count": 1,
-            "cost": 45366,
-            "tag": null,
-            "tag_label": null,
-            "tag_color": null,
-            "big_base": false,
-            "note": "",
-            "top_topic": "Оборудование",
-            "top_undesired_topic": "Оборудование"
-          },
-          {
-            "name": "Больше не является парнтером",
-            "tickets": 6,
-            "desired": 2,
-            "undesired": 4,
-            "undesired_pct": 66.7,
-            "partial": null,
-            "full": null,
-            "training_total": 0,
-            "repeat_count": 0,
-            "repeat_pct": 0.0,
-            "med_close": 4.1,
-            "med_frt_min": 0.6,
-            "stores_count": 1,
-            "cost": 45366,
-            "tag": null,
-            "tag_label": null,
-            "tag_color": null,
-            "big_base": false,
-            "note": "",
-            "top_topic": "Документооборот",
-            "top_undesired_topic": "Документооборот"
-          },
-          {
-            "name": "Наша челиха",
-            "tickets": 6,
-            "desired": 3,
-            "undesired": 3,
-            "undesired_pct": 50.0,
-            "partial": null,
-            "full": null,
-            "training_total": 0,
-            "repeat_count": 0,
-            "repeat_pct": 0.0,
-            "med_close": 3.05,
-            "med_frt_min": 0.3,
-            "stores_count": 1,
-            "cost": 45366,
-            "tag": null,
-            "tag_label": null,
-            "tag_color": null,
-            "big_base": false,
-            "note": "",
-            "top_topic": "Управление",
-            "top_undesired_topic": "Управление"
-          },
-          {
-            "name": "Нукус технопос",
-            "tickets": 6,
-            "desired": 3,
-            "undesired": 3,
-            "undesired_pct": 50.0,
-            "partial": 1,
-            "full": null,
-            "training_total": 1,
-            "repeat_count": 0,
-            "repeat_pct": 0.0,
-            "med_close": 2.85,
-            "med_frt_min": 0,
-            "stores_count": 1,
-            "cost": 45366,
-            "tag": null,
-            "tag_label": null,
-            "tag_color": null,
-            "big_base": false,
-            "note": "",
-            "top_topic": "Каталог",
-            "top_undesired_topic": "Каталог"
-          },
-          {
-            "name": "TEXNOPOS",
-            "tickets": 6,
-            "desired": 1,
-            "undesired": 5,
-            "undesired_pct": 83.3,
-            "partial": null,
-            "full": null,
-            "training_total": 0,
-            "repeat_count": 1,
-            "repeat_pct": 16.7,
-            "med_close": 1.7,
-            "med_frt_min": 0,
-            "stores_count": 1,
-            "cost": 45366,
-            "tag": null,
-            "tag_label": null,
-            "tag_color": null,
-            "big_base": false,
-            "note": "",
-            "top_topic": "спам",
-            "top_undesired_topic": "спам"
-          },
-          {
-            "name": "ПАРТЕР ИЗ БУХАРЫ \\ УЧЕНИЦА УЛУГБЕКА",
-            "tickets": 6,
-            "desired": 3,
-            "undesired": 3,
-            "undesired_pct": 50.0,
-            "partial": null,
-            "full": null,
-            "training_total": 0,
-            "repeat_count": 0,
-            "repeat_pct": 0.0,
-            "med_close": 3.0,
-            "med_frt_min": 0.6,
-            "stores_count": 1,
-            "cost": 45366,
-            "tag": null,
-            "tag_label": null,
-            "tag_color": null,
-            "big_base": false,
-            "note": "",
-            "top_topic": "Документооборот",
-            "top_undesired_topic": "Документооборот"
-          },
-          {
-            "name": "ксника нет",
-            "tickets": 6,
-            "desired": 2,
-            "undesired": 4,
-            "undesired_pct": 66.7,
-            "partial": null,
-            "full": null,
-            "training_total": 0,
-            "repeat_count": 0,
-            "repeat_pct": 0.0,
-            "med_close": 4.85,
-            "med_frt_min": 0,
-            "stores_count": 1,
-            "cost": 45366,
-            "tag": null,
-            "tag_label": null,
-            "tag_color": null,
-            "big_base": false,
-            "note": "",
-            "top_topic": "Оборудование",
-            "top_undesired_topic": "Оборудование"
-          },
-          {
-            "name": "Не нашёл в админке",
-            "tickets": 5,
-            "desired": 2,
-            "undesired": 3,
-            "undesired_pct": 60.0,
-            "partial": null,
-            "full": null,
-            "training_total": 0,
-            "repeat_count": 0,
-            "repeat_pct": 0.0,
-            "med_close": 1.7,
-            "med_frt_min": 0,
-            "stores_count": 2,
-            "cost": 37805,
-            "tag": null,
-            "tag_label": null,
-            "tag_color": null,
-            "big_base": false,
-            "note": "",
-            "top_topic": "Новая продажа",
-            "top_undesired_topic": "Все продажи"
-          },
-          {
-            "name": "Oybek Lutfillaev",
-            "tickets": 5,
-            "desired": 3,
-            "undesired": 2,
-            "undesired_pct": 40.0,
-            "partial": null,
-            "full": null,
-            "training_total": 0,
-            "repeat_count": 1,
-            "repeat_pct": 20.0,
-            "med_close": 4.3,
-            "med_frt_min": 0.6,
-            "stores_count": 2,
-            "cost": 37805,
-            "tag": null,
-            "tag_label": null,
-            "tag_color": null,
-            "big_base": false,
-            "note": "",
-            "top_topic": "Оборудование",
-            "top_undesired_topic": "Оборудование"
-          },
-          {
-            "name": "Хороший человек",
-            "tickets": 5,
-            "desired": 4,
-            "undesired": 1,
-            "undesired_pct": 20.0,
-            "partial": null,
-            "full": null,
-            "training_total": 0,
-            "repeat_count": 1,
-            "repeat_pct": 20.0,
-            "med_close": 6.0,
-            "med_frt_min": 0.45,
-            "stores_count": 1,
-            "cost": 37805,
-            "tag": null,
-            "tag_label": null,
-            "tag_color": null,
-            "big_base": false,
-            "note": "",
-            "top_topic": "Инвентаризация",
-            "top_undesired_topic": "Переоценка"
-          },
-          {
-            "name": "SalesTexnoPOS SOFT",
-            "tickets": 5,
-            "desired": 5,
-            "undesired": 0,
-            "undesired_pct": 0.0,
-            "partial": null,
-            "full": null,
-            "training_total": 0,
-            "repeat_count": 0,
-            "repeat_pct": 0.0,
-            "med_close": 0.35,
-            "med_frt_min": 0.5,
-            "stores_count": 1,
-            "cost": 37805,
-            "tag": null,
-            "tag_label": null,
-            "tag_color": null,
-            "big_base": false,
-            "note": "",
-            "top_topic": "Учётная запись",
-            "top_undesired_topic": ""
-          },
-          {
-            "name": "Bobur Abdukakhkharov Kyrgyzstan",
-            "tickets": 5,
-            "desired": 3,
-            "undesired": 2,
-            "undesired_pct": 40.0,
-            "partial": null,
-            "full": null,
-            "training_total": 0,
-            "repeat_count": 0,
-            "repeat_pct": 0.0,
-            "med_close": 6.6,
-            "med_frt_min": 0.4,
-            "stores_count": 2,
-            "cost": 37805,
-            "tag": null,
-            "tag_label": null,
-            "tag_color": null,
-            "big_base": false,
-            "note": "",
-            "top_topic": "Учётная запись",
-            "top_undesired_topic": "Заказы"
-          },
-          {
-            "name": "Sunnatilla Abdurazzoqov",
-            "tickets": 5,
-            "desired": 3,
-            "undesired": 2,
-            "undesired_pct": 40.0,
-            "partial": null,
-            "full": null,
-            "training_total": 0,
-            "repeat_count": 1,
-            "repeat_pct": 20.0,
-            "med_close": 3.9,
-            "med_frt_min": 0,
-            "stores_count": 1,
-            "cost": 37805,
-            "tag": null,
-            "tag_label": null,
-            "tag_color": null,
-            "big_base": false,
-            "note": "",
-            "top_topic": "Учётная запись",
-            "top_undesired_topic": "Вопрос не по программе"
-          },
-          {
-            "name": "Ismoil Shorahimov . Marfiya Shadiyeva",
-            "tickets": 5,
-            "desired": 4,
-            "undesired": 1,
-            "undesired_pct": 20.0,
-            "partial": 1,
-            "full": null,
-            "training_total": 1,
-            "repeat_count": 1,
-            "repeat_pct": 20.0,
-            "med_close": 4.1,
-            "med_frt_min": 0,
-            "stores_count": 1,
-            "cost": 37805,
-            "tag": null,
-            "tag_label": null,
-            "tag_color": null,
-            "big_base": false,
-            "note": "",
-            "top_topic": "Долги клиентов",
-            "top_undesired_topic": ""
-          },
-          {
-            "name": "texnopos",
-            "tickets": 4,
-            "desired": 4,
-            "undesired": 0,
-            "undesired_pct": 0.0,
-            "partial": 2,
-            "full": null,
-            "training_total": 2,
-            "repeat_count": 1,
-            "repeat_pct": 25.0,
-            "med_close": 9.6,
-            "med_frt_min": 0,
-            "stores_count": 1,
-            "cost": 30244,
-            "tag": null,
-            "tag_label": null,
-            "tag_color": null,
-            "big_base": false,
-            "note": "",
-            "top_topic": "Заказы",
-            "top_undesired_topic": ""
-          },
-          {
-            "name": "Xikmatillo Baxtiyorov Partne",
-            "tickets": 4,
-            "desired": 2,
-            "undesired": 1,
-            "undesired_pct": 25.0,
-            "partial": null,
-            "full": null,
-            "training_total": 0,
-            "repeat_count": 0,
-            "repeat_pct": 0.0,
-            "med_close": 7.6,
-            "med_frt_min": 2.0,
-            "stores_count": 1,
-            "cost": 30244,
-            "tag": null,
-            "tag_label": null,
-            "tag_color": null,
-            "big_base": false,
-            "note": "",
-            "top_topic": "Учётная запись",
-            "top_undesired_topic": "Массовый сбой BILLZ"
-          },
-          {
-            "name": "Ещё нет в ЧБ",
-            "tickets": 4,
-            "desired": 1,
-            "undesired": 2,
-            "undesired_pct": 50.0,
-            "partial": null,
-            "full": null,
-            "training_total": 0,
-            "repeat_count": 0,
-            "repeat_pct": 0.0,
-            "med_close": 2.3,
-            "med_frt_min": 0.7,
-            "stores_count": 1,
-            "cost": 30244,
-            "tag": null,
-            "tag_label": null,
-            "tag_color": null,
-            "big_base": false,
-            "note": "",
-            "top_topic": "Оборудование",
-            "top_undesired_topic": ""
-          },
-          {
-            "name": "CEO",
-            "tickets": 4,
-            "desired": 2,
-            "undesired": 2,
-            "undesired_pct": 50.0,
-            "partial": null,
-            "full": null,
-            "training_total": 0,
-            "repeat_count": 0,
-            "repeat_pct": 0.0,
-            "med_close": 2.35,
-            "med_frt_min": 0.4,
-            "stores_count": 1,
-            "cost": 30244,
-            "tag": null,
-            "tag_label": null,
-            "tag_color": null,
-            "big_base": false,
-            "note": "",
-            "top_topic": "Финансирование",
-            "top_undesired_topic": ""
-          },
-          {
-            "name": "Наш ксник",
-            "tickets": 4,
-            "desired": 3,
-            "undesired": 1,
-            "undesired_pct": 25.0,
-            "partial": null,
-            "full": null,
-            "training_total": 0,
-            "repeat_count": 0,
-            "repeat_pct": 0.0,
-            "med_close": 6.55,
-            "med_frt_min": 0.4,
-            "stores_count": 1,
-            "cost": 30244,
-            "tag": null,
-            "tag_label": null,
-            "tag_color": null,
-            "big_base": false,
-            "note": "",
-            "top_topic": "Документооборот",
-            "top_undesired_topic": "Документооборот"
-          },
-          {
-            "name": "Наш ЧЕЛ",
-            "tickets": 4,
-            "desired": 0,
-            "undesired": 4,
-            "undesired_pct": 100.0,
-            "partial": null,
-            "full": null,
-            "training_total": 0,
-            "repeat_count": 0,
-            "repeat_pct": 0.0,
-            "med_close": 51.1,
-            "med_frt_min": 0.85,
-            "stores_count": 2,
-            "cost": 30244,
-            "tag": null,
-            "tag_label": null,
-            "tag_color": null,
-            "big_base": false,
-            "note": "",
-            "top_topic": "Учётная запись",
-            "top_undesired_topic": "Учётная запись"
-          },
-          {
-            "name": "Hojiakbar Hamidulla",
-            "tickets": 4,
-            "desired": 2,
-            "undesired": 2,
-            "undesired_pct": 50.0,
-            "partial": null,
-            "full": null,
-            "training_total": 0,
-            "repeat_count": 0,
-            "repeat_pct": 0.0,
-            "med_close": 13.7,
-            "med_frt_min": 0.45,
-            "stores_count": 1,
-            "cost": 30244,
-            "tag": null,
-            "tag_label": null,
-            "tag_color": null,
-            "big_base": false,
-            "note": "",
-            "top_topic": "Документооборот",
-            "top_undesired_topic": "Реквест (внутренний запрос"
-          },
-          {
-            "name": "Sunnattilla Abdurazzoqov/ Shoxruh Maxmud",
-            "tickets": 4,
-            "desired": 2,
-            "undesired": 1,
-            "undesired_pct": 25.0,
-            "partial": null,
-            "full": null,
-            "training_total": 0,
-            "repeat_count": 0,
-            "repeat_pct": 0.0,
-            "med_close": 3.3,
-            "med_frt_min": 0.3,
-            "stores_count": 1,
-            "cost": 30244,
-            "tag": null,
-            "tag_label": null,
-            "tag_color": null,
-            "big_base": false,
-            "note": "",
-            "top_topic": "Настройка",
-            "top_undesired_topic": "Настройка"
-          },
-          {
-            "name": "м",
-            "tickets": 4,
-            "desired": 2,
-            "undesired": 1,
-            "undesired_pct": 25.0,
-            "partial": null,
-            "full": null,
-            "training_total": 0,
-            "repeat_count": 0,
-            "repeat_pct": 0.0,
-            "med_close": 13.65,
-            "med_frt_min": 0.3,
-            "stores_count": 1,
-            "cost": 30244,
-            "tag": null,
-            "tag_label": null,
-            "tag_color": null,
-            "big_base": false,
-            "note": "",
-            "top_topic": "Настройка",
-            "top_undesired_topic": "Настройка"
-          },
-          {
-            "name": "Нет менеджера",
-            "tickets": 4,
-            "desired": 0,
-            "undesired": 4,
-            "undesired_pct": 100.0,
-            "partial": null,
-            "full": null,
-            "training_total": 0,
-            "repeat_count": 0,
-            "repeat_pct": 0.0,
-            "med_close": 1.45,
-            "med_frt_min": 0.2,
-            "stores_count": 1,
-            "cost": 30244,
-            "tag": null,
-            "tag_label": null,
-            "tag_color": null,
-            "big_base": false,
-            "note": "",
-            "top_topic": "тест",
-            "top_undesired_topic": "тест"
-          },
-          {
-            "name": "Support manager Baxtiyor Kasimov",
-            "tickets": 4,
-            "desired": 0,
-            "undesired": 4,
-            "undesired_pct": 100.0,
-            "partial": null,
-            "full": null,
-            "training_total": 0,
-            "repeat_count": 0,
-            "repeat_pct": 0.0,
-            "med_close": 1.9,
-            "med_frt_min": 0.2,
-            "stores_count": 2,
-            "cost": 30244,
-            "tag": null,
-            "tag_label": null,
-            "tag_color": null,
-            "big_base": false,
-            "note": "",
-            "top_topic": "Инвентаризация",
-            "top_undesired_topic": "Инвентаризация"
-          },
-          {
-            "name": "Ilnur Muxtasibovilnur",
-            "tickets": 3,
-            "desired": 0,
-            "undesired": 3,
-            "undesired_pct": 100.0,
-            "partial": null,
-            "full": null,
-            "training_total": 0,
-            "repeat_count": 0,
-            "repeat_pct": 0.0,
-            "med_close": 2.4,
-            "med_frt_min": 1.3,
-            "stores_count": 1,
-            "cost": 22683,
-            "tag": null,
-            "tag_label": null,
-            "tag_color": null,
-            "big_base": false,
-            "note": "",
-            "top_topic": "Массовый сбой BILLZ",
-            "top_undesired_topic": "Массовый сбой BILLZ"
-          },
-          {
-            "name": "Shoxruh Maxmud/ Xasanali Ummatov",
-            "tickets": 3,
-            "desired": 0,
-            "undesired": 3,
-            "undesired_pct": 100.0,
-            "partial": null,
-            "full": null,
-            "training_total": 0,
-            "repeat_count": 0,
-            "repeat_pct": 0.0,
-            "med_close": 33.0,
-            "med_frt_min": 2.2,
-            "stores_count": 1,
-            "cost": 22683,
-            "tag": null,
-            "tag_label": null,
-            "tag_color": null,
-            "big_base": false,
-            "note": "",
-            "top_topic": "",
-            "top_undesired_topic": ""
-          },
-          {
-            "name": "LITE",
-            "tickets": 3,
-            "desired": 0,
-            "undesired": 3,
-            "undesired_pct": 100.0,
-            "partial": null,
-            "full": null,
-            "training_total": 0,
-            "repeat_count": 0,
-            "repeat_pct": 0.0,
-            "med_close": 235.3,
-            "med_frt_min": 0,
-            "stores_count": 1,
-            "cost": 22683,
-            "tag": null,
-            "tag_label": null,
-            "tag_color": null,
-            "big_base": false,
-            "note": "",
-            "top_topic": "Баг (реквест)",
-            "top_undesired_topic": "Баг (реквест)"
-          },
-          {
-            "name": "Sanjar Alimov",
-            "tickets": 3,
-            "desired": 2,
-            "undesired": 1,
-            "undesired_pct": 33.3,
-            "partial": null,
-            "full": 1,
-            "training_total": 1,
-            "repeat_count": 0,
-            "repeat_pct": 0.0,
-            "med_close": 0.4,
-            "med_frt_min": 0.2,
-            "stores_count": 2,
-            "cost": 22683,
-            "tag": null,
-            "tag_label": null,
-            "tag_color": null,
-            "big_base": false,
-            "note": "",
-            "top_topic": "Документооборот",
-            "top_undesired_topic": "Импорт"
-          },
-          {
-            "name": "Алина Ханиева",
-            "tickets": 3,
-            "desired": 2,
-            "undesired": 1,
-            "undesired_pct": 33.3,
-            "partial": null,
-            "full": null,
-            "training_total": 0,
-            "repeat_count": 0,
-            "repeat_pct": 0.0,
-            "med_close": 0.3,
-            "med_frt_min": 0,
-            "stores_count": 3,
-            "cost": 22683,
-            "tag": null,
-            "tag_label": null,
-            "tag_color": null,
-            "big_base": false,
-            "note": "",
-            "top_topic": "Все продажи",
-            "top_undesired_topic": ""
-          },
-          {
-            "name": "Наш человек",
-            "tickets": 3,
-            "desired": 1,
-            "undesired": 2,
-            "undesired_pct": 66.7,
-            "partial": null,
-            "full": null,
-            "training_total": 0,
-            "repeat_count": 0,
-            "repeat_pct": 0.0,
-            "med_close": 1.5,
-            "med_frt_min": 0.2,
-            "stores_count": 1,
-            "cost": 22683,
-            "tag": null,
-            "tag_label": null,
-            "tag_color": null,
-            "big_base": false,
-            "note": "",
-            "top_topic": "Документооборот",
-            "top_undesired_topic": "Документооборот"
-          },
-          {
-            "name": "Self onboarding",
-            "tickets": 3,
-            "desired": 3,
-            "undesired": 0,
-            "undesired_pct": 0.0,
-            "partial": null,
-            "full": null,
-            "training_total": 0,
-            "repeat_count": 0,
-            "repeat_pct": 0.0,
-            "med_close": 2.4,
-            "med_frt_min": 0.2,
-            "stores_count": 2,
-            "cost": 22683,
-            "tag": null,
-            "tag_label": null,
-            "tag_color": null,
-            "big_base": false,
-            "note": "",
-            "top_topic": "Документооборот",
-            "top_undesired_topic": ""
-          },
-          {
-            "name": "Шохрух Махмуд",
-            "tickets": 3,
-            "desired": 3,
-            "undesired": 0,
-            "undesired_pct": 0.0,
-            "partial": null,
-            "full": null,
-            "training_total": 0,
-            "repeat_count": 0,
-            "repeat_pct": 0.0,
-            "med_close": 1.8,
-            "med_frt_min": 1.0,
-            "stores_count": 2,
-            "cost": 22683,
-            "tag": null,
-            "tag_label": null,
-            "tag_color": null,
-            "big_base": false,
-            "note": "",
-            "top_topic": "Документооборот",
-            "top_undesired_topic": ""
-          },
-          {
-            "name": "Alisher Azimov Fergana",
-            "tickets": 3,
-            "desired": 1,
-            "undesired": 2,
-            "undesired_pct": 66.7,
-            "partial": null,
-            "full": null,
-            "training_total": 0,
-            "repeat_count": 0,
-            "repeat_pct": 0.0,
-            "med_close": 10.5,
-            "med_frt_min": 0,
-            "stores_count": 1,
-            "cost": 22683,
-            "tag": null,
-            "tag_label": null,
-            "tag_color": null,
-            "big_base": false,
-            "note": "",
-            "top_topic": "Учётная запись",
-            "top_undesired_topic": "Учётная запись"
-          },
-          {
-            "name": "TexnoPOS SOFT Nukus",
-            "tickets": 3,
-            "desired": 0,
-            "undesired": 3,
-            "undesired_pct": 100.0,
-            "partial": null,
-            "full": null,
-            "training_total": 0,
-            "repeat_count": 1,
-            "repeat_pct": 33.3,
-            "med_close": 0.4,
-            "med_frt_min": 0,
-            "stores_count": 1,
-            "cost": 22683,
-            "tag": null,
-            "tag_label": null,
-            "tag_color": null,
-            "big_base": false,
-            "note": "",
-            "top_topic": "",
-            "top_undesired_topic": ""
-          },
-          {
-            "name": "Marat Mustafayev",
-            "tickets": 3,
-            "desired": 2,
-            "undesired": 1,
-            "undesired_pct": 33.3,
-            "partial": null,
-            "full": null,
-            "training_total": 0,
-            "repeat_count": 0,
-            "repeat_pct": 0.0,
-            "med_close": 0.2,
-            "med_frt_min": 0.2,
-            "stores_count": 1,
-            "cost": 22683,
-            "tag": null,
-            "tag_label": null,
-            "tag_color": null,
-            "big_base": false,
-            "note": "",
-            "top_topic": "Документооборот",
-            "top_undesired_topic": "Настройка"
-          },
-          {
-            "name": "Чб нету",
-            "tickets": 3,
-            "desired": 2,
-            "undesired": 1,
-            "undesired_pct": 33.3,
-            "partial": null,
-            "full": null,
-            "training_total": 0,
-            "repeat_count": 1,
-            "repeat_pct": 33.3,
-            "med_close": 4.6,
-            "med_frt_min": 0,
-            "stores_count": 1,
-            "cost": 22683,
-            "tag": null,
-            "tag_label": null,
-            "tag_color": null,
-            "big_base": false,
-            "note": "",
-            "top_topic": "Оборудование",
-            "top_undesired_topic": "Оборудование"
-          },
-          {
-            "name": "Шохрух махмуд",
-            "tickets": 2,
-            "desired": 2,
-            "undesired": 0,
-            "undesired_pct": 0.0,
-            "partial": null,
-            "full": null,
-            "training_total": 0,
-            "repeat_count": 0,
-            "repeat_pct": 0.0,
-            "med_close": 11.95,
-            "med_frt_min": 0.3,
-            "stores_count": 1,
-            "cost": 15122,
-            "tag": null,
-            "tag_label": null,
-            "tag_color": null,
-            "big_base": false,
-            "note": "",
-            "top_topic": "Настройка",
-            "top_undesired_topic": ""
-          },
-          {
-            "name": "Eldor Nurmatov",
-            "tickets": 2,
-            "desired": 2,
-            "undesired": 0,
-            "undesired_pct": 0.0,
-            "partial": null,
-            "full": null,
-            "training_total": 0,
-            "repeat_count": 0,
-            "repeat_pct": 0.0,
-            "med_close": 3.3,
-            "med_frt_min": 0,
-            "stores_count": 1,
-            "cost": 15122,
-            "tag": null,
-            "tag_label": null,
-            "tag_color": null,
-            "big_base": false,
-            "note": "",
-            "top_topic": "Настройка",
-            "top_undesired_topic": ""
-          },
-          {
-            "name": "Bekzod Suyundikov",
-            "tickets": 2,
-            "desired": 0,
-            "undesired": 2,
-            "undesired_pct": 100.0,
-            "partial": null,
-            "full": null,
-            "training_total": 0,
-            "repeat_count": 0,
-            "repeat_pct": 0.0,
-            "med_close": 0.75,
-            "med_frt_min": 0.35,
-            "stores_count": 1,
-            "cost": 15122,
-            "tag": null,
-            "tag_label": null,
-            "tag_color": null,
-            "big_base": false,
-            "note": "",
-            "top_topic": "Документооборот",
-            "top_undesired_topic": "Документооборот"
-          },
-          {
-            "name": "Farhodpoyabzal",
-            "tickets": 2,
-            "desired": 0,
-            "undesired": 2,
-            "undesired_pct": 100.0,
-            "partial": null,
-            "full": null,
-            "training_total": 0,
-            "repeat_count": 0,
-            "repeat_pct": 0.0,
-            "med_close": 1.05,
-            "med_frt_min": 0,
-            "stores_count": 1,
-            "cost": 15122,
-            "tag": null,
-            "tag_label": null,
-            "tag_color": null,
-            "big_base": false,
-            "note": "",
-            "top_topic": "",
-            "top_undesired_topic": ""
-          },
-          {
-            "name": "АЕ",
-            "tickets": 2,
-            "desired": 0,
-            "undesired": 2,
-            "undesired_pct": 100.0,
-            "partial": null,
-            "full": null,
-            "training_total": 0,
-            "repeat_count": 0,
-            "repeat_pct": 0.0,
-            "med_close": 7.85,
-            "med_frt_min": 2.15,
-            "stores_count": 1,
-            "cost": 15122,
-            "tag": null,
-            "tag_label": null,
-            "tag_color": null,
-            "big_base": false,
-            "note": "",
-            "top_topic": "Настройка",
-            "top_undesired_topic": "Настройка"
-          },
-          {
-            "name": "Mukhammadaziz Koshakbaev",
-            "tickets": 2,
-            "desired": 0,
-            "undesired": 2,
-            "undesired_pct": 100.0,
-            "partial": null,
-            "full": null,
-            "training_total": 0,
-            "repeat_count": 0,
-            "repeat_pct": 0.0,
-            "med_close": 1.35,
-            "med_frt_min": 0,
-            "stores_count": 1,
-            "cost": 15122,
-            "tag": null,
-            "tag_label": null,
-            "tag_color": null,
-            "big_base": false,
-            "note": "",
-            "top_topic": "Учётная запись",
-            "top_undesired_topic": "Учётная запись"
-          },
-          {
-            "name": "Sunnattilla Abdurazzoqov// Robiya Alisherova",
-            "tickets": 2,
-            "desired": 0,
-            "undesired": 2,
-            "undesired_pct": 100.0,
-            "partial": null,
-            "full": null,
-            "training_total": 0,
-            "repeat_count": 1,
-            "repeat_pct": 50.0,
-            "med_close": 3.45,
-            "med_frt_min": 1.2,
-            "stores_count": 1,
-            "cost": 15122,
-            "tag": null,
-            "tag_label": null,
-            "tag_color": null,
-            "big_base": false,
-            "note": "",
-            "top_topic": "Документооборот",
-            "top_undesired_topic": "Документооборот"
-          },
-          {
-            "name": "Хусан Артиков",
-            "tickets": 2,
-            "desired": 1,
-            "undesired": 1,
-            "undesired_pct": 50.0,
-            "partial": null,
-            "full": null,
-            "training_total": 0,
-            "repeat_count": 0,
-            "repeat_pct": 0.0,
-            "med_close": 2.75,
-            "med_frt_min": 0,
-            "stores_count": 2,
-            "cost": 15122,
-            "tag": null,
-            "tag_label": null,
-            "tag_color": null,
-            "big_base": false,
-            "note": "",
-            "top_topic": "Учётная запись",
-            "top_undesired_topic": ""
-          },
-          {
-            "name": "Бахтиёр Касимов",
-            "tickets": 2,
-            "desired": 0,
-            "undesired": 2,
-            "undesired_pct": 100.0,
-            "partial": null,
-            "full": null,
-            "training_total": 0,
-            "repeat_count": 0,
-            "repeat_pct": 0.0,
-            "med_close": 15.9,
-            "med_frt_min": 0,
-            "stores_count": 1,
-            "cost": 15122,
-            "tag": null,
-            "tag_label": null,
-            "tag_color": null,
-            "big_base": false,
-            "note": "",
-            "top_topic": "Все клиенты",
-            "top_undesired_topic": "Все клиенты"
-          },
-          {
-            "name": "В чб не выходит",
-            "tickets": 2,
-            "desired": 1,
-            "undesired": 1,
-            "undesired_pct": 50.0,
-            "partial": null,
-            "full": null,
-            "training_total": 0,
-            "repeat_count": 0,
-            "repeat_pct": 0.0,
-            "med_close": 9.1,
-            "med_frt_min": 1.05,
-            "stores_count": 1,
-            "cost": 15122,
-            "tag": null,
-            "tag_label": null,
-            "tag_color": null,
-            "big_base": false,
-            "note": "",
-            "top_topic": "Массовый сбой BILLZ",
-            "top_undesired_topic": "Массовый сбой BILLZ"
-          },
-          {
-            "name": "Nursultan Javliyev Kashkadarya",
-            "tickets": 2,
-            "desired": 0,
-            "undesired": 2,
-            "undesired_pct": 100.0,
-            "partial": null,
-            "full": null,
-            "training_total": 0,
-            "repeat_count": 0,
-            "repeat_pct": 0.0,
-            "med_close": 0.25,
-            "med_frt_min": 0.1,
-            "stores_count": 1,
-            "cost": 15122,
-            "tag": null,
-            "tag_label": null,
-            "tag_color": null,
-            "big_base": false,
-            "note": "",
-            "top_topic": "Общались по звонку",
-            "top_undesired_topic": "Общались по звонку"
-          },
-          {
-            "name": "Marat Mustafaev/Husan Artikov",
-            "tickets": 2,
-            "desired": 1,
-            "undesired": 1,
-            "undesired_pct": 50.0,
-            "partial": null,
-            "full": null,
-            "training_total": 0,
-            "repeat_count": 0,
-            "repeat_pct": 0.0,
-            "med_close": 1.9,
-            "med_frt_min": 0.5,
-            "stores_count": 1,
-            "cost": 15122,
-            "tag": null,
-            "tag_label": null,
-            "tag_color": null,
-            "big_base": false,
-            "note": "",
-            "top_topic": "Документооборот",
-            "top_undesired_topic": "Документооборот"
-          },
-          {
-            "name": "Doston Botirov",
-            "tickets": 2,
-            "desired": 0,
-            "undesired": 2,
-            "undesired_pct": 100.0,
-            "partial": null,
-            "full": null,
-            "training_total": 0,
-            "repeat_count": 0,
-            "repeat_pct": 0.0,
-            "med_close": 5.6,
-            "med_frt_min": 1.95,
-            "stores_count": 1,
-            "cost": 15122,
-            "tag": null,
-            "tag_label": null,
-            "tag_color": null,
-            "big_base": false,
-            "note": "",
-            "top_topic": "Документооборот",
-            "top_undesired_topic": "Документооборот"
-          },
-          {
-            "name": "еще не выбрали ксник",
-            "tickets": 2,
-            "desired": 1,
-            "undesired": 1,
-            "undesired_pct": 50.0,
-            "partial": null,
-            "full": null,
-            "training_total": 0,
-            "repeat_count": 0,
-            "repeat_pct": 0.0,
-            "med_close": 6.25,
-            "med_frt_min": 1.3,
-            "stores_count": 1,
-            "cost": 15122,
-            "tag": null,
-            "tag_label": null,
-            "tag_color": null,
-            "big_base": false,
-            "note": "",
-            "top_topic": "Массовый сбой BILLZ",
-            "top_undesired_topic": "Массовый сбой BILLZ"
-          },
-          {
-            "name": "Наш чел с АЕ",
-            "tickets": 2,
-            "desired": 2,
-            "undesired": 0,
-            "undesired_pct": 0.0,
-            "partial": null,
-            "full": null,
-            "training_total": 0,
-            "repeat_count": 0,
-            "repeat_pct": 0.0,
-            "med_close": 0.2,
-            "med_frt_min": 0.2,
-            "stores_count": 1,
-            "cost": 15122,
-            "tag": null,
-            "tag_label": null,
-            "tag_color": null,
-            "big_base": false,
-            "note": "",
-            "top_topic": "Учётная запись",
-            "top_undesired_topic": ""
-          },
-          {
-            "name": "Self-onboarding/Alina Hanieva",
-            "tickets": 2,
-            "desired": 2,
-            "undesired": 0,
-            "undesired_pct": 0.0,
-            "partial": null,
-            "full": null,
-            "training_total": 0,
-            "repeat_count": 0,
-            "repeat_pct": 0.0,
-            "med_close": 4.25,
-            "med_frt_min": 0,
-            "stores_count": 1,
-            "cost": 15122,
-            "tag": null,
-            "tag_label": null,
-            "tag_color": null,
-            "big_base": false,
-            "note": "",
-            "top_topic": "Оборудование",
-            "top_undesired_topic": ""
-          },
-          {
-            "name": "Support manager Sunnattilla Abdurazzoqov",
-            "tickets": 2,
-            "desired": 0,
-            "undesired": 2,
-            "undesired_pct": 100.0,
-            "partial": null,
-            "full": null,
-            "training_total": 0,
-            "repeat_count": 0,
-            "repeat_pct": 0.0,
-            "med_close": 15.45,
-            "med_frt_min": 10.2,
-            "stores_count": 2,
-            "cost": 15122,
-            "tag": null,
-            "tag_label": null,
-            "tag_color": null,
-            "big_base": false,
-            "note": "",
-            "top_topic": "спам",
-            "top_undesired_topic": "спам"
+            "top_undesired_topic": "Массовый сбой BILLZ",
+            "topic_breakdown": [
+              {
+                "topic": "Массовый сбой BILLZ",
+                "count": 11,
+                "pct": 12.8,
+                "undesired": 10,
+                "undesired_pct": 90.9,
+                "repeat": 0,
+                "cost": 83171
+              },
+              {
+                "topic": "Документооборот",
+                "count": 10,
+                "pct": 11.6,
+                "undesired": 6,
+                "undesired_pct": 60.0,
+                "repeat": 0,
+                "cost": 75610
+              },
+              {
+                "topic": "Оборудование",
+                "count": 9,
+                "pct": 10.5,
+                "undesired": 3,
+                "undesired_pct": 33.3,
+                "repeat": 2,
+                "cost": 68049
+              },
+              {
+                "topic": "Каталог",
+                "count": 8,
+                "pct": 9.3,
+                "undesired": 3,
+                "undesired_pct": 37.5,
+                "repeat": 0,
+                "cost": 60488
+              },
+              {
+                "topic": "Учётная запись",
+                "count": 6,
+                "pct": 7.0,
+                "undesired": 3,
+                "undesired_pct": 50.0,
+                "repeat": 0,
+                "cost": 45366
+              },
+              {
+                "topic": "Новая продажа",
+                "count": 4,
+                "pct": 4.7,
+                "undesired": 2,
+                "undesired_pct": 50.0,
+                "repeat": 0,
+                "cost": 30244
+              },
+              {
+                "topic": "Инвентаризация",
+                "count": 3,
+                "pct": 3.5,
+                "undesired": 1,
+                "undesired_pct": 33.3,
+                "repeat": 1,
+                "cost": 22683
+              },
+              {
+                "topic": "Отчёты",
+                "count": 2,
+                "pct": 2.3,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 1,
+                "cost": 15122
+              },
+              {
+                "topic": "Настройка",
+                "count": 1,
+                "pct": 1.2,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 7561
+              },
+              {
+                "topic": "Кассовые смены",
+                "count": 1,
+                "pct": 1.2,
+                "undesired": 1,
+                "undesired_pct": 100.0,
+                "repeat": 0,
+                "cost": 7561
+              },
+              {
+                "topic": "Списание",
+                "count": 1,
+                "pct": 1.2,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 7561
+              },
+              {
+                "topic": "Вопрос не по программе",
+                "count": 1,
+                "pct": 1.2,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 7561
+              },
+              {
+                "topic": "Управление",
+                "count": 1,
+                "pct": 1.2,
+                "undesired": 1,
+                "undesired_pct": 100.0,
+                "repeat": 0,
+                "cost": 7561
+              },
+              {
+                "topic": "Переоценка",
+                "count": 1,
+                "pct": 1.2,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 7561
+              }
+            ],
+            "labels_breakdown": [
+              {
+                "label": "Массовый сбой BILLZ",
+                "count": 11,
+                "cost": 83171
+              },
+              {
+                "label": "Документооборот - Оплата за тариф",
+                "count": 5,
+                "cost": 37805
+              },
+              {
+                "label": "Оборудование - Загрузка базу товаров в весы",
+                "count": 5,
+                "cost": 37805
+              },
+              {
+                "label": "Новая продажа - Возврат/Обмен",
+                "count": 4,
+                "cost": 30244
+              },
+              {
+                "label": "Каталог — настройка печати ценника",
+                "count": 3,
+                "cost": 22683
+              },
+              {
+                "label": "Каталог — запрос на добавление товара",
+                "count": 3,
+                "cost": 22683
+              },
+              {
+                "label": "Учётная запись - Помощь со входом в аккаунт",
+                "count": 3,
+                "cost": 22683
+              },
+              {
+                "label": "Документооборот - Создание ссылки для оплаты",
+                "count": 2,
+                "cost": 15122
+              },
+              {
+                "label": "Отчёты - Частичное обучение",
+                "count": 2,
+                "cost": 15122
+              },
+              {
+                "label": "Оборудование - Установка/Настройка/Удаление весов",
+                "count": 2,
+                "cost": 15122
+              }
+            ]
           }
         ],
         "top_labels": [
           {
             "name": "Массовый сбой BILLZ",
-            "tickets": 1013,
+            "tickets": 1788,
             "type": "Стандарт",
-            "cost": 7659293,
-            "undesired": 792
+            "cost": 13519068,
+            "undesired": 0
           },
           {
             "name": "Документооборот - Оплата за тариф",
-            "tickets": 625,
+            "tickets": 1006,
             "type": "Стандарт",
-            "cost": 4725625,
-            "undesired": 346
+            "cost": 7606366,
+            "undesired": 0
           },
           {
             "name": "Оборудование - Установка/Настройка/Удаление принтера",
-            "tickets": 297,
+            "tickets": 494,
             "type": "Стандарт",
-            "cost": 2245617,
-            "undesired": 108
+            "cost": 3735134,
+            "undesired": 0
           },
           {
             "name": "Учётная запись - Помощь со входом в аккаунт",
-            "tickets": 289,
+            "tickets": 476,
             "type": "Стандарт",
-            "cost": 2185129,
-            "undesired": 190
-          },
-          {
-            "name": "Документооборот - Создание ссылки для оплаты",
-            "tickets": 251,
-            "type": "Стандарт",
-            "cost": 1897811,
-            "undesired": 197
-          },
-          {
-            "name": "Учётная запись - Блокировка/Разблокировка аккаунта",
-            "tickets": 244,
-            "type": "Стандарт",
-            "cost": 1844884,
-            "undesired": 122
+            "cost": 3599036,
+            "undesired": 0
           },
           {
             "name": "Кассовые смены — Открытие/Закрытие смен",
-            "tickets": 239,
+            "tickets": 411,
             "type": "Стандарт",
-            "cost": 1807079,
-            "undesired": 150
+            "cost": 3107571,
+            "undesired": 0
+          },
+          {
+            "name": "Учётная запись - Блокировка/Разблокировка аккаунта",
+            "tickets": 340,
+            "type": "Стандарт",
+            "cost": 2570740,
+            "undesired": 0
+          },
+          {
+            "name": "Документооборот - Создание ссылки для оплаты",
+            "tickets": 333,
+            "type": "Стандарт",
+            "cost": 2517813,
+            "undesired": 0
           },
           {
             "name": "Баг (реквест)",
-            "tickets": 165,
+            "tickets": 235,
             "type": "Стандарт",
-            "cost": 1247565,
-            "undesired": 62
+            "cost": 1776835,
+            "undesired": 0
           },
           {
             "name": "Каталог — настройка печати ценника",
-            "tickets": 140,
+            "tickets": 219,
             "type": "Стандарт",
-            "cost": 1058540,
-            "undesired": 39
-          },
-          {
-            "name": "Управление - Создание/Редактирвоание/Удаление роли",
-            "tickets": 127,
-            "type": "Стандарт",
-            "cost": 960247,
-            "undesired": 46
+            "cost": 1655859,
+            "undesired": 0
           },
           {
             "name": "Новая продажа - Не удаётся сделать продажу",
-            "tickets": 114,
+            "tickets": 169,
             "type": "Стандарт",
-            "cost": 861954,
-            "undesired": 53
+            "cost": 1277809,
+            "undesired": 0
           },
           {
-            "name": "Настройка - Создание/Редактирование/Удаление доп. точки",
-            "tickets": 108,
+            "name": "Управление - Создание/Редактирвоание/Удаление роли",
+            "tickets": 167,
             "type": "Стандарт",
-            "cost": 816588,
-            "undesired": 22
-          },
-          {
-            "name": "Каталог — изменение свойств товара",
-            "tickets": 97,
-            "type": "Стандарт",
-            "cost": 733417,
-            "undesired": 38
+            "cost": 1262687,
+            "undesired": 0
           },
           {
             "name": "Оборудование - Установка Anydesk/BILLZ Desktop/Программы компьютера и тд.",
-            "tickets": 91,
+            "tickets": 131,
             "type": "Стандарт",
-            "cost": 688051,
-            "undesired": 39
-          },
-          {
-            "name": "Новая продажа - Возврат/Обмен",
-            "tickets": 89,
-            "type": "Стандарт",
-            "cost": 672929,
-            "undesired": 39
-          },
-          {
-            "name": "Управление - Создание/Редактирвоание/Удаление сотрудника",
-            "tickets": 88,
-            "type": "Стандарт",
-            "cost": 665368,
-            "undesired": 29
-          },
-          {
-            "name": "Импорт — импорт товаров через Excel",
-            "tickets": 82,
-            "type": "Стандарт",
-            "cost": 620002,
-            "undesired": 28
-          },
-          {
-            "name": "Отчёты - Разбор отчётов",
-            "tickets": 78,
-            "type": "Стандарт",
-            "cost": 589758,
-            "undesired": 16
+            "cost": 990491,
+            "undesired": 0
           },
           {
             "name": "Все продажи - Удаление/Редактирование продажи",
-            "tickets": 77,
+            "tickets": 120,
             "type": "Стандарт",
-            "cost": 582197,
-            "undesired": 40
+            "cost": 907320,
+            "undesired": 0
           },
           {
-            "name": "Каталог — запрос на добавление товара",
+            "name": "Настройка - Создание/Редактирование/Удаление доп. точки",
+            "tickets": 120,
+            "type": "Стандарт",
+            "cost": 907320,
+            "undesired": 0
+          },
+          {
+            "name": "Новая продажа - Возврат/Обмен",
+            "tickets": 100,
+            "type": "Стандарт",
+            "cost": 756100,
+            "undesired": 0
+          },
+          {
+            "name": "Импорт — импорт товаров через Excel",
+            "tickets": 97,
+            "type": "Стандарт",
+            "cost": 733417,
+            "undesired": 0
+          },
+          {
+            "name": "Каталог — изменение свойств товара",
+            "tickets": 94,
+            "type": "Стандарт",
+            "cost": 710734,
+            "undesired": 0
+          },
+          {
+            "name": "Управление - Создание/Редактирвоание/Удаление сотрудника",
+            "tickets": 84,
+            "type": "Стандарт",
+            "cost": 635124,
+            "undesired": 0
+          },
+          {
+            "name": "Оборудование - Загрузка базу товаров в весы",
             "tickets": 68,
             "type": "Стандарт",
             "cost": 514148,
-            "undesired": 26
+            "undesired": 0
+          },
+          {
+            "name": "Отчёты - Разбор отчётов",
+            "tickets": 66,
+            "type": "Стандарт",
+            "cost": 499026,
+            "undesired": 0
           }
         ],
         "by_store": [
           {
             "name": "BILLZ",
-            "tickets": 1133,
-            "cost": 8566613,
-            "ks": "Наш чел"
+            "tickets": 587,
+            "cost": 4438307,
+            "ks": "Shoxruh Maxmud"
           },
           {
             "name": "inbazar",
@@ -69865,15 +72552,9 @@ const BILLZ_DATA = {
             "ks": "Baxtiyor Kasimov"
           },
           {
-            "name": "КС",
-            "tickets": 47,
-            "cost": 355367,
-            "ks": "КС"
-          },
-          {
             "name": "Inbazar",
-            "tickets": 45,
-            "cost": 340245,
+            "tickets": 44,
+            "cost": 332684,
             "ks": "Baxtiyor Kasimov"
           },
           {
@@ -69889,16 +72570,16 @@ const BILLZ_DATA = {
             "ks": "Sunnattilla Abdurazzoqov"
           },
           {
-            "name": "akula-mobile",
-            "tickets": 41,
-            "cost": 310001,
-            "ks": "Akbarali Kidiraliev"
-          },
-          {
             "name": "kunleek",
             "tickets": 35,
             "cost": 264635,
             "ks": "Shoxruh Maxmud"
+          },
+          {
+            "name": "akula-mobile",
+            "tickets": 35,
+            "cost": 264635,
+            "ks": "Akbarali Kidiraliev"
           },
           {
             "name": "buttonshop",
@@ -69907,36 +72588,42 @@ const BILLZ_DATA = {
             "ks": "Baxtiyor Kasimov"
           },
           {
-            "name": "Наш сотрудник",
-            "tickets": 34,
-            "cost": 257074,
-            "ks": "Наш сотрудник"
-          },
-          {
             "name": "osiyometal",
             "tickets": 34,
             "cost": 257074,
             "ks": "Sanat Toshpulatov"
           },
           {
-            "name": "bloom",
-            "tickets": 32,
-            "cost": 241952,
-            "ks": "Jasur Mukhamedjanov"
-          },
-          {
             "name": "morano",
             "tickets": 31,
             "cost": 234391,
             "ks": "Sanat Toshpulatov"
+          },
+          {
+            "name": "bloom",
+            "tickets": 31,
+            "cost": 234391,
+            "ks": "Jasur Mukhamedjanov"
+          },
+          {
+            "name": "pkas",
+            "tickets": 30,
+            "cost": 226830,
+            "ks": "Jasur Mukhamedjanov"
+          },
+          {
+            "name": "skechers",
+            "tickets": 29,
+            "cost": 219269,
+            "ks": "Baxtiyor Kasimov"
           }
         ],
         "by_store_ks": [
           {
             "store": "BILLZ",
-            "ks": "Наш чел",
-            "tickets": 1133,
-            "cost": 8566613
+            "ks": "Shoxruh Maxmud",
+            "tickets": 587,
+            "cost": 4438307
           },
           {
             "store": "inbazar",
@@ -69957,16 +72644,10 @@ const BILLZ_DATA = {
             "cost": 400733
           },
           {
-            "store": "КС",
-            "ks": "КС",
-            "tickets": 47,
-            "cost": 355367
-          },
-          {
             "store": "Inbazar",
             "ks": "Baxtiyor Kasimov",
-            "tickets": 45,
-            "cost": 340245
+            "tickets": 44,
+            "cost": 332684
           },
           {
             "store": "luzett",
@@ -69981,14 +72662,14 @@ const BILLZ_DATA = {
             "cost": 317562
           },
           {
-            "store": "akula-mobile",
-            "ks": "Akbarali Kidiraliev",
-            "tickets": 41,
-            "cost": 310001
-          },
-          {
             "store": "kunleek",
             "ks": "Shoxruh Maxmud",
+            "tickets": 35,
+            "cost": 264635
+          },
+          {
+            "store": "akula-mobile",
+            "ks": "Akbarali Kidiraliev",
             "tickets": 35,
             "cost": 264635
           },
@@ -69999,26 +72680,20 @@ const BILLZ_DATA = {
             "cost": 257074
           },
           {
-            "store": "Наш сотрудник",
-            "ks": "Наш сотрудник",
-            "tickets": 34,
-            "cost": 257074
-          },
-          {
             "store": "osiyometal",
             "ks": "Sanat Toshpulatov",
             "tickets": 34,
             "cost": 257074
           },
           {
-            "store": "bloom",
-            "ks": "Jasur Mukhamedjanov",
-            "tickets": 32,
-            "cost": 241952
-          },
-          {
             "store": "morano",
             "ks": "Sanat Toshpulatov",
+            "tickets": 31,
+            "cost": 234391
+          },
+          {
+            "store": "bloom",
+            "ks": "Jasur Mukhamedjanov",
             "tickets": 31,
             "cost": 234391
           },
@@ -70051,44 +72726,44 @@ const BILLZ_DATA = {
             "ks": "Husan Artikov",
             "tickets": 25,
             "cost": 189025
+          },
+          {
+            "store": "baraka-oyinchoqlar",
+            "ks": "Mukhammadaziz Koshakbayev",
+            "tickets": 25,
+            "cost": 189025
+          },
+          {
+            "store": "scandihome",
+            "ks": "Shoxruh Maxmud",
+            "tickets": 25,
+            "cost": 189025
           }
         ],
         "repeat_connection": [
           {
-            "label": "Документооборот - Оплата за тариф",
-            "repeat": 32,
-            "context": "32 повторных · Техническая тема",
-            "cs_related": false
-          },
-          {
-            "label": "Баг (реквест)",
-            "repeat": 30,
-            "context": "30 повторных · Техническая тема",
-            "cs_related": false
-          },
-          {
             "label": "Кассовые смены — Открытие/Закрытие смен",
-            "repeat": 27,
-            "context": "27 повторных · Тема онбординга — возврат за тем же",
+            "repeat": 26,
+            "context": "26 повторных · Тема онбординга — возврат за тем же",
             "cs_related": true
           },
           {
-            "label": "Документооборот - Создание ссылки для оплаты",
+            "label": "Документооборот - Оплата за тариф",
             "repeat": 26,
             "context": "26 повторных · Техническая тема",
             "cs_related": false
           },
           {
-            "label": "Учётная запись - Блокировка/Разблокировка аккаунта",
+            "label": "Баг (реквест)",
             "repeat": 19,
             "context": "19 повторных · Техническая тема",
             "cs_related": false
           },
           {
-            "label": "Оборудование - Установка/Настройка/Удаление принтера",
-            "repeat": 19,
-            "context": "19 повторных · Тема онбординга — возврат за тем же",
-            "cs_related": true
+            "label": "Документооборот - Создание ссылки для оплаты",
+            "repeat": 14,
+            "context": "14 повторных · Техническая тема",
+            "cs_related": false
           },
           {
             "label": "Оборудование - Установка Anydesk/BILLZ Desktop/Программы компьютера и тд.",
@@ -70097,22 +72772,22 @@ const BILLZ_DATA = {
             "cs_related": false
           },
           {
+            "label": "Оборудование - Установка/Настройка/Удаление принтера",
+            "repeat": 14,
+            "context": "14 повторных · Тема онбординга — возврат за тем же",
+            "cs_related": true
+          },
+          {
             "label": "Каталог — настройка печати ценника",
             "repeat": 13,
             "context": "13 повторных · Тема онбординга — возврат за тем же",
             "cs_related": true
           },
           {
-            "label": "Учётная запись - Помощь со входом в аккаунт",
-            "repeat": 12,
-            "context": "12 повторных · Техническая тема",
+            "label": "Учётная запись - Блокировка/Разблокировка аккаунта",
+            "repeat": 13,
+            "context": "13 повторных · Техническая тема",
             "cs_related": false
-          },
-          {
-            "label": "Управление - Создание/Редактирвоание/Удаление роли",
-            "repeat": 12,
-            "context": "12 повторных · Тема онбординга — возврат за тем же",
-            "cs_related": true
           },
           {
             "label": "Все продажи - Удаление/Редактирование продажи",
@@ -70121,9 +72796,15 @@ const BILLZ_DATA = {
             "cs_related": false
           },
           {
-            "label": "SMS рассылка - Создание SMS рассылки",
+            "label": "Управление - Создание/Редактирвоание/Удаление роли",
             "repeat": 11,
-            "context": "11 повторных · Техническая тема",
+            "context": "11 повторных · Тема онбординга — возврат за тем же",
+            "cs_related": true
+          },
+          {
+            "label": "SMS рассылка - Создание SMS рассылки",
+            "repeat": 10,
+            "context": "10 повторных · Техническая тема",
             "cs_related": false
           },
           {
@@ -70139,7 +72820,13 @@ const BILLZ_DATA = {
             "cs_related": false
           },
           {
-            "label": "Документооборот - Реактивация клиента",
+            "label": "Учётная запись - Помощь со входом в аккаунт",
+            "repeat": 8,
+            "context": "8 повторных · Техническая тема",
+            "cs_related": false
+          },
+          {
+            "label": "Новая продажа - Не удаётся сделать продажу",
             "repeat": 8,
             "context": "8 повторных · Техническая тема",
             "cs_related": false
@@ -70149,26 +72836,32 @@ const BILLZ_DATA = {
           {
             "type": "finding",
             "icon": "👥",
-            "title": "7960 тикетов с CS-менеджерами за 1–24 мая",
-            "text": "113 активных менеджеров · 60.2 млн сум нагрузки на CC. Это 70% всех тикетов мая."
+            "title": "6 515 тикетов от 18 ключевых CS-менеджеров за 1–24 мая",
+            "text": "14 критичных + 4 некритичных (тимлиды + Marat) · 49.3 млн сум нагрузки."
           },
           {
             "type": "finding",
             "icon": "🏆",
-            "title": "Топ-3: Baxtiyor Kasimov (1186), Shoxruh Maxmud (855), Husan Artikov (699)",
-            "text": "Крупнейшие клиентские базы. Объём ожидаем — важнее % нежелательных и повторных."
+            "title": "Топ-3 по нагрузке: Baxtiyor Kasimov (1191), Shoxruh Maxmud (977), Husan Artikov (703)",
+            "text": "Большие базы. Объём ожидаем — оцениваем по нежелательным и повторным."
           },
           {
             "type": "finding",
             "icon": "🎓",
-            "title": "Обучения через CC: 247 (227 частичных + 20 полных)",
-            "text": "CC закрыл 3.1% работы CS через обучения."
+            "title": "Обучения через CC: 216 (200 частичных + 16 полных)",
+            "text": "CC закрыл 3.3% работы CS через обучения."
+          },
+          {
+            "type": "finding",
+            "icon": "⭐",
+            "title": "Критичные менеджеры — 14 из 18",
+            "text": "Бахтиёр, Жасур (тимлиды), Шохрух (большая база) и Марат — оцениваются по управленческим, а не клиентским метрикам."
           },
           {
             "type": "recommendation",
             "icon": "📊",
-            "title": "KPI по нежелательным и повторным для CS",
-            "text": "Замер: % нежел <50%, % повторных <15% по каждому CS. Ежемесячный мониторинг."
+            "title": "KPI для критичных CS",
+            "text": "Замер: % нежел <50%, % повторных <15%. Если превышение — разбор онбординга/качества базы."
           }
         ],
         "chat_share_history": [
@@ -70298,7 +72991,7 @@ const BILLZ_DATA = {
         "total_partner_tickets": 1281,
         "total_partner_cost": 9685641,
         "partner_share_pct": 11.3,
-        "partners_count": 52,
+        "partners_count": 50,
         "desired_total": 567,
         "undesired_total": 683,
         "undesired_pct_avg": 53.3,
@@ -70308,22 +73001,175 @@ const BILLZ_DATA = {
         "tpc": 4.42,
         "by_partner": [
           {
-            "name": "ПАРТНЁР",
-            "tickets": 143,
-            "desired": 65,
+            "name": "ПАРТНЁР (без указания)",
+            "tickets": 145,
+            "desired": 67,
             "undesired": 75,
-            "undesired_pct": 52.4,
+            "undesired_pct": 51.7,
             "repeat_count": 12,
-            "repeat_pct": 8.4,
+            "repeat_pct": 8.3,
+            "massoviy_count": 3,
             "med_close": 2.3,
             "med_frt_min": 0.4,
-            "stores_count": 3,
+            "stores_count": 4,
             "training_partial": 0,
             "training_full": 0,
             "training_total": 0,
-            "cost": 1081223,
+            "cost": 1096345,
             "top_topic": "Учётная запись",
-            "top_label": "Учётная запись - Блокировка/Разблокировка аккаунта"
+            "top_label": "Учётная запись - Блокировка/Разблокировка аккаунта",
+            "topic_breakdown": [
+              {
+                "topic": "Учётная запись",
+                "count": 37,
+                "pct": 25.5,
+                "undesired": 20,
+                "undesired_pct": 54.1,
+                "repeat": 4,
+                "cost": 279757
+              },
+              {
+                "topic": "Документооборот",
+                "count": 31,
+                "pct": 21.4,
+                "undesired": 13,
+                "undesired_pct": 41.9,
+                "repeat": 1,
+                "cost": 234391
+              },
+              {
+                "topic": "Каталог",
+                "count": 10,
+                "pct": 6.9,
+                "undesired": 5,
+                "undesired_pct": 50.0,
+                "repeat": 1,
+                "cost": 75610
+              },
+              {
+                "topic": "Оборудование",
+                "count": 7,
+                "pct": 4.8,
+                "undesired": 3,
+                "undesired_pct": 42.9,
+                "repeat": 0,
+                "cost": 52927
+              },
+              {
+                "topic": "Настройка",
+                "count": 6,
+                "pct": 4.1,
+                "undesired": 2,
+                "undesired_pct": 33.3,
+                "repeat": 1,
+                "cost": 45366
+              },
+              {
+                "topic": "Управление",
+                "count": 4,
+                "pct": 2.8,
+                "undesired": 2,
+                "undesired_pct": 50.0,
+                "repeat": 0,
+                "cost": 30244
+              },
+              {
+                "topic": "Долги клиентов",
+                "count": 4,
+                "pct": 2.8,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 1,
+                "cost": 30244
+              },
+              {
+                "topic": "Новая продажа",
+                "count": 4,
+                "pct": 2.8,
+                "undesired": 1,
+                "undesired_pct": 25.0,
+                "repeat": 0,
+                "cost": 30244
+              },
+              {
+                "topic": "Массовый сбой BILLZ",
+                "count": 3,
+                "pct": 2.1,
+                "undesired": 2,
+                "undesired_pct": 66.7,
+                "repeat": 0,
+                "cost": 22683
+              },
+              {
+                "topic": "Финансы",
+                "count": 2,
+                "pct": 1.4,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 15122
+              },
+              {
+                "topic": "Вопрос не по программе",
+                "count": 2,
+                "pct": 1.4,
+                "undesired": 2,
+                "undesired_pct": 100.0,
+                "repeat": 0,
+                "cost": 15122
+              },
+              {
+                "topic": "Импорт",
+                "count": 1,
+                "pct": 0.7,
+                "undesired": 1,
+                "undesired_pct": 100.0,
+                "repeat": 0,
+                "cost": 7561
+              }
+            ],
+            "labels_breakdown": [
+              {
+                "label": "Учётная запись - Блокировка/Разблокировка аккаунта",
+                "count": 15,
+                "cost": 113415
+              },
+              {
+                "label": "Документооборот - Оплата за тариф",
+                "count": 13,
+                "cost": 98293
+              },
+              {
+                "label": "Документооборот - Создание ссылки для оплаты",
+                "count": 11,
+                "cost": 83171
+              },
+              {
+                "label": "Учётная запись - Создание магазина",
+                "count": 10,
+                "cost": 75610
+              },
+              {
+                "label": "Учётная запись - Помощь со входом в аккаунт",
+                "count": 5,
+                "cost": 37805
+              },
+              {
+                "label": "Учётная запись - Очистка магазина",
+                "count": 5,
+                "cost": 37805
+              },
+              {
+                "label": "Каталог — запрос на добавление товара",
+                "count": 4,
+                "cost": 30244
+              },
+              {
+                "label": "Оборудование - Установка/Настройка/Удаление принтера",
+                "count": 4,
+                "cost": 30244
+              }
+            ]
           },
           {
             "name": "Parviz Khafizov Partner",
@@ -70333,6 +73179,7 @@ const BILLZ_DATA = {
             "undesired_pct": 45.4,
             "repeat_count": 7,
             "repeat_pct": 5.9,
+            "massoviy_count": 14,
             "med_close": 5.6,
             "med_frt_min": 0.4,
             "stores_count": 28,
@@ -70341,7 +73188,159 @@ const BILLZ_DATA = {
             "training_total": 5,
             "cost": 899759,
             "top_topic": "Документооборот",
-            "top_label": "Документооборот - Оплата за тариф"
+            "top_label": "Документооборот - Оплата за тариф",
+            "topic_breakdown": [
+              {
+                "topic": "Документооборот",
+                "count": 18,
+                "pct": 15.1,
+                "undesired": 14,
+                "undesired_pct": 77.8,
+                "repeat": 3,
+                "cost": 136098
+              },
+              {
+                "topic": "Массовый сбой BILLZ",
+                "count": 14,
+                "pct": 11.8,
+                "undesired": 11,
+                "undesired_pct": 78.6,
+                "repeat": 0,
+                "cost": 105854
+              },
+              {
+                "topic": "Оборудование",
+                "count": 10,
+                "pct": 8.4,
+                "undesired": 6,
+                "undesired_pct": 60.0,
+                "repeat": 0,
+                "cost": 75610
+              },
+              {
+                "topic": "Каталог",
+                "count": 8,
+                "pct": 6.7,
+                "undesired": 3,
+                "undesired_pct": 37.5,
+                "repeat": 0,
+                "cost": 60488
+              },
+              {
+                "topic": "Новая продажа",
+                "count": 7,
+                "pct": 5.9,
+                "undesired": 2,
+                "undesired_pct": 28.6,
+                "repeat": 0,
+                "cost": 52927
+              },
+              {
+                "topic": "Настройка",
+                "count": 7,
+                "pct": 5.9,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 1,
+                "cost": 52927
+              },
+              {
+                "topic": "Отчёты",
+                "count": 6,
+                "pct": 5.0,
+                "undesired": 2,
+                "undesired_pct": 33.3,
+                "repeat": 0,
+                "cost": 45366
+              },
+              {
+                "topic": "Учётная запись",
+                "count": 5,
+                "pct": 4.2,
+                "undesired": 2,
+                "undesired_pct": 40.0,
+                "repeat": 1,
+                "cost": 37805
+              },
+              {
+                "topic": "Кассовые смены",
+                "count": 5,
+                "pct": 4.2,
+                "undesired": 2,
+                "undesired_pct": 40.0,
+                "repeat": 0,
+                "cost": 37805
+              },
+              {
+                "topic": "Баг (реквест)",
+                "count": 4,
+                "pct": 3.4,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 1,
+                "cost": 30244
+              },
+              {
+                "topic": "Программа лояльности",
+                "count": 3,
+                "pct": 2.5,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 22683
+              },
+              {
+                "topic": "Инвентаризация",
+                "count": 3,
+                "pct": 2.5,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 22683
+              }
+            ],
+            "labels_breakdown": [
+              {
+                "label": "Документооборот - Оплата за тариф",
+                "count": 14,
+                "cost": 105854
+              },
+              {
+                "label": "Массовый сбой BILLZ",
+                "count": 14,
+                "cost": 105854
+              },
+              {
+                "label": "Оборудование - Установка Anydesk/BILLZ Desktop/Программы компьютера и тд.",
+                "count": 6,
+                "cost": 45366
+              },
+              {
+                "label": "Каталог — настройка печати ценника",
+                "count": 5,
+                "cost": 37805
+              },
+              {
+                "label": "Новая продажа - Возврат/Обмен",
+                "count": 4,
+                "cost": 30244
+              },
+              {
+                "label": "Оборудование - Установка/Настройка/Удаление принтера",
+                "count": 4,
+                "cost": 30244
+              },
+              {
+                "label": "Отчёты - Выгрузка отчёта",
+                "count": 4,
+                "cost": 30244
+              },
+              {
+                "label": "Баг (реквест)",
+                "count": 4,
+                "cost": 30244
+              }
+            ]
           },
           {
             "name": "Other Partner",
@@ -70351,6 +73350,7 @@ const BILLZ_DATA = {
             "undesired_pct": 47.2,
             "repeat_count": 4,
             "repeat_pct": 3.7,
+            "massoviy_count": 21,
             "med_close": 5.0,
             "med_frt_min": 0.4,
             "stores_count": 29,
@@ -70359,7 +73359,159 @@ const BILLZ_DATA = {
             "training_total": 3,
             "cost": 816588,
             "top_topic": "Массовый сбой BILLZ",
-            "top_label": "Массовый сбой BILLZ"
+            "top_label": "Массовый сбой BILLZ",
+            "topic_breakdown": [
+              {
+                "topic": "Массовый сбой BILLZ",
+                "count": 20,
+                "pct": 18.5,
+                "undesired": 17,
+                "undesired_pct": 85.0,
+                "repeat": 0,
+                "cost": 151220
+              },
+              {
+                "topic": "Документооборот",
+                "count": 12,
+                "pct": 11.1,
+                "undesired": 7,
+                "undesired_pct": 58.3,
+                "repeat": 0,
+                "cost": 90732
+              },
+              {
+                "topic": "Настройка",
+                "count": 11,
+                "pct": 10.2,
+                "undesired": 3,
+                "undesired_pct": 27.3,
+                "repeat": 1,
+                "cost": 83171
+              },
+              {
+                "topic": "Учётная запись",
+                "count": 10,
+                "pct": 9.3,
+                "undesired": 3,
+                "undesired_pct": 30.0,
+                "repeat": 0,
+                "cost": 75610
+              },
+              {
+                "topic": "Каталог",
+                "count": 7,
+                "pct": 6.5,
+                "undesired": 1,
+                "undesired_pct": 14.3,
+                "repeat": 0,
+                "cost": 52927
+              },
+              {
+                "topic": "Оборудование",
+                "count": 6,
+                "pct": 5.6,
+                "undesired": 2,
+                "undesired_pct": 33.3,
+                "repeat": 1,
+                "cost": 45366
+              },
+              {
+                "topic": "Отчёты",
+                "count": 6,
+                "pct": 5.6,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 45366
+              },
+              {
+                "topic": "Новая продажа",
+                "count": 6,
+                "pct": 5.6,
+                "undesired": 5,
+                "undesired_pct": 83.3,
+                "repeat": 0,
+                "cost": 45366
+              },
+              {
+                "topic": "Управление",
+                "count": 4,
+                "pct": 3.7,
+                "undesired": 1,
+                "undesired_pct": 25.0,
+                "repeat": 0,
+                "cost": 30244
+              },
+              {
+                "topic": "Баг (реквест)",
+                "count": 3,
+                "pct": 2.8,
+                "undesired": 1,
+                "undesired_pct": 33.3,
+                "repeat": 1,
+                "cost": 22683
+              },
+              {
+                "topic": "Все продажи",
+                "count": 3,
+                "pct": 2.8,
+                "undesired": 2,
+                "undesired_pct": 66.7,
+                "repeat": 0,
+                "cost": 22683
+              },
+              {
+                "topic": "Общались по звонку",
+                "count": 2,
+                "pct": 1.9,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 15122
+              }
+            ],
+            "labels_breakdown": [
+              {
+                "label": "Массовый сбой BILLZ",
+                "count": 20,
+                "cost": 151220
+              },
+              {
+                "label": "Документооборот - Оплата за тариф",
+                "count": 8,
+                "cost": 60488
+              },
+              {
+                "label": "Учётная запись - Блокировка/Разблокировка аккаунта",
+                "count": 5,
+                "cost": 37805
+              },
+              {
+                "label": "Настройка - Создание/Редактирование/Удаление чека",
+                "count": 4,
+                "cost": 30244
+              },
+              {
+                "label": "Оборудование - Установка/Настройка/Удаление принтера",
+                "count": 4,
+                "cost": 30244
+              },
+              {
+                "label": "Отчёты - Разбор отчётов",
+                "count": 4,
+                "cost": 30244
+              },
+              {
+                "label": "Новая продажа - Не удаётся сделать продажу",
+                "count": 4,
+                "cost": 30244
+              },
+              {
+                "label": "Каталог — настройка печати ценника",
+                "count": 3,
+                "cost": 22683
+              }
+            ]
           },
           {
             "name": "Xikmatillo Baxtiyorov Partner",
@@ -70369,6 +73521,7 @@ const BILLZ_DATA = {
             "undesired_pct": 53.3,
             "repeat_count": 11,
             "repeat_pct": 10.3,
+            "massoviy_count": 19,
             "med_close": 2.6,
             "med_frt_min": 0.3,
             "stores_count": 30,
@@ -70377,25 +73530,330 @@ const BILLZ_DATA = {
             "training_total": 6,
             "cost": 809027,
             "top_topic": "Документооборот",
-            "top_label": "Массовый сбой BILLZ"
+            "top_label": "Массовый сбой BILLZ",
+            "topic_breakdown": [
+              {
+                "topic": "Документооборот",
+                "count": 29,
+                "pct": 27.1,
+                "undesired": 17,
+                "undesired_pct": 58.6,
+                "repeat": 2,
+                "cost": 219269
+              },
+              {
+                "topic": "Массовый сбой BILLZ",
+                "count": 19,
+                "pct": 17.8,
+                "undesired": 12,
+                "undesired_pct": 63.2,
+                "repeat": 1,
+                "cost": 143659
+              },
+              {
+                "topic": "Учётная запись",
+                "count": 11,
+                "pct": 10.3,
+                "undesired": 5,
+                "undesired_pct": 45.5,
+                "repeat": 3,
+                "cost": 83171
+              },
+              {
+                "topic": "Каталог",
+                "count": 5,
+                "pct": 4.7,
+                "undesired": 2,
+                "undesired_pct": 40.0,
+                "repeat": 0,
+                "cost": 37805
+              },
+              {
+                "topic": "Баг (реквест)",
+                "count": 3,
+                "pct": 2.8,
+                "undesired": 2,
+                "undesired_pct": 66.7,
+                "repeat": 1,
+                "cost": 22683
+              },
+              {
+                "topic": "Desktop",
+                "count": 3,
+                "pct": 2.8,
+                "undesired": 1,
+                "undesired_pct": 33.3,
+                "repeat": 1,
+                "cost": 22683
+              },
+              {
+                "topic": "Все продажи",
+                "count": 3,
+                "pct": 2.8,
+                "undesired": 1,
+                "undesired_pct": 33.3,
+                "repeat": 1,
+                "cost": 22683
+              },
+              {
+                "topic": "Настройка",
+                "count": 3,
+                "pct": 2.8,
+                "undesired": 1,
+                "undesired_pct": 33.3,
+                "repeat": 1,
+                "cost": 22683
+              },
+              {
+                "topic": "Инвентаризация",
+                "count": 3,
+                "pct": 2.8,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 1,
+                "cost": 22683
+              },
+              {
+                "topic": "Все клиенты",
+                "count": 2,
+                "pct": 1.9,
+                "undesired": 1,
+                "undesired_pct": 50.0,
+                "repeat": 0,
+                "cost": 15122
+              },
+              {
+                "topic": "Новая продажа",
+                "count": 2,
+                "pct": 1.9,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 15122
+              },
+              {
+                "topic": "Оборудование",
+                "count": 2,
+                "pct": 1.9,
+                "undesired": 1,
+                "undesired_pct": 50.0,
+                "repeat": 0,
+                "cost": 15122
+              }
+            ],
+            "labels_breakdown": [
+              {
+                "label": "Массовый сбой BILLZ",
+                "count": 19,
+                "cost": 143659
+              },
+              {
+                "label": "Документооборот - Оплата за тариф",
+                "count": 17,
+                "cost": 128537
+              },
+              {
+                "label": "Документооборот - Консультация по сумме долга",
+                "count": 4,
+                "cost": 30244
+              },
+              {
+                "label": "Баг (реквест)",
+                "count": 3,
+                "cost": 22683
+              },
+              {
+                "label": "Учётная запись - Создание магазина",
+                "count": 3,
+                "cost": 22683
+              },
+              {
+                "label": "Desktop - Ошибка синхронизации",
+                "count": 3,
+                "cost": 22683
+              },
+              {
+                "label": "Учётная запись - Сброс пароля",
+                "count": 3,
+                "cost": 22683
+              },
+              {
+                "label": "Учётная запись - Помощь со входом в аккаунт",
+                "count": 3,
+                "cost": 22683
+              }
+            ]
           },
           {
             "name": "Texnopos Partner",
-            "tickets": 97,
-            "desired": 41,
+            "tickets": 99,
+            "desired": 43,
             "undesired": 56,
-            "undesired_pct": 57.7,
+            "undesired_pct": 56.6,
             "repeat_count": 7,
-            "repeat_pct": 7.2,
-            "med_close": 3.9,
-            "med_frt_min": 0.25,
-            "stores_count": 39,
+            "repeat_pct": 7.1,
+            "massoviy_count": 11,
+            "med_close": 4.1,
+            "med_frt_min": 0.2,
+            "stores_count": 40,
             "training_partial": 1,
             "training_full": 0,
             "training_total": 1,
-            "cost": 733417,
+            "cost": 748539,
             "top_topic": "Документооборот",
-            "top_label": "Документооборот - Оплата за тариф"
+            "top_label": "Документооборот - Оплата за тариф",
+            "topic_breakdown": [
+              {
+                "topic": "Документооборот",
+                "count": 17,
+                "pct": 17.2,
+                "undesired": 12,
+                "undesired_pct": 70.6,
+                "repeat": 0,
+                "cost": 128537
+              },
+              {
+                "topic": "Учётная запись",
+                "count": 13,
+                "pct": 13.1,
+                "undesired": 1,
+                "undesired_pct": 7.7,
+                "repeat": 1,
+                "cost": 98293
+              },
+              {
+                "topic": "Массовый сбой BILLZ",
+                "count": 10,
+                "pct": 10.1,
+                "undesired": 6,
+                "undesired_pct": 60.0,
+                "repeat": 0,
+                "cost": 75610
+              },
+              {
+                "topic": "Управление",
+                "count": 7,
+                "pct": 7.1,
+                "undesired": 3,
+                "undesired_pct": 42.9,
+                "repeat": 2,
+                "cost": 52927
+              },
+              {
+                "topic": "Каталог",
+                "count": 6,
+                "pct": 6.1,
+                "undesired": 3,
+                "undesired_pct": 50.0,
+                "repeat": 0,
+                "cost": 45366
+              },
+              {
+                "topic": "Оборудование",
+                "count": 3,
+                "pct": 3.0,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 22683
+              },
+              {
+                "topic": "Новая продажа",
+                "count": 2,
+                "pct": 2.0,
+                "undesired": 2,
+                "undesired_pct": 100.0,
+                "repeat": 0,
+                "cost": 15122
+              },
+              {
+                "topic": "Заказы",
+                "count": 2,
+                "pct": 2.0,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 15122
+              },
+              {
+                "topic": "Настройка",
+                "count": 2,
+                "pct": 2.0,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 15122
+              },
+              {
+                "topic": "Кассовые смены",
+                "count": 2,
+                "pct": 2.0,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 15122
+              },
+              {
+                "topic": "Долги клиентов",
+                "count": 1,
+                "pct": 1.0,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 7561
+              },
+              {
+                "topic": "Вопрос не по программе",
+                "count": 1,
+                "pct": 1.0,
+                "undesired": 1,
+                "undesired_pct": 100.0,
+                "repeat": 0,
+                "cost": 7561
+              }
+            ],
+            "labels_breakdown": [
+              {
+                "label": "Документооборот - Оплата за тариф",
+                "count": 14,
+                "cost": 105854
+              },
+              {
+                "label": "Массовый сбой BILLZ",
+                "count": 10,
+                "cost": 75610
+              },
+              {
+                "label": "Управление - Создание/Редактирвоание/Удаление роли",
+                "count": 5,
+                "cost": 37805
+              },
+              {
+                "label": "Учётная запись - Помощь со входом в аккаунт",
+                "count": 5,
+                "cost": 37805
+              },
+              {
+                "label": "Учётная запись - Очистка магазина",
+                "count": 3,
+                "cost": 22683
+              },
+              {
+                "label": "Учётная запись - Создание магазина",
+                "count": 3,
+                "cost": 22683
+              },
+              {
+                "label": "Каталог — настройка печати ценника",
+                "count": 3,
+                "cost": 22683
+              },
+              {
+                "label": "Оборудование - Установка/Настройка/Удаление принтера",
+                "count": 3,
+                "cost": 22683
+              }
+            ]
           },
           {
             "name": "Sardor Ibrohimov Partner",
@@ -70405,6 +73863,7 @@ const BILLZ_DATA = {
             "undesired_pct": 50.6,
             "repeat_count": 2,
             "repeat_pct": 2.6,
+            "massoviy_count": 9,
             "med_close": 3.1,
             "med_frt_min": 0.3,
             "stores_count": 12,
@@ -70413,7 +73872,159 @@ const BILLZ_DATA = {
             "training_total": 0,
             "cost": 582197,
             "top_topic": "Документооборот",
-            "top_label": "Оборудование - Установка Anydesk/BILLZ Desktop/Программы компьютера и тд."
+            "top_label": "Оборудование - Установка Anydesk/BILLZ Desktop/Программы компьютера и тд.",
+            "topic_breakdown": [
+              {
+                "topic": "Документооборот",
+                "count": 18,
+                "pct": 23.4,
+                "undesired": 13,
+                "undesired_pct": 72.2,
+                "repeat": 1,
+                "cost": 136098
+              },
+              {
+                "topic": "Оборудование",
+                "count": 12,
+                "pct": 15.6,
+                "undesired": 5,
+                "undesired_pct": 41.7,
+                "repeat": 0,
+                "cost": 90732
+              },
+              {
+                "topic": "Массовый сбой BILLZ",
+                "count": 9,
+                "pct": 11.7,
+                "undesired": 5,
+                "undesired_pct": 55.6,
+                "repeat": 0,
+                "cost": 68049
+              },
+              {
+                "topic": "Каталог",
+                "count": 7,
+                "pct": 9.1,
+                "undesired": 3,
+                "undesired_pct": 42.9,
+                "repeat": 0,
+                "cost": 52927
+              },
+              {
+                "topic": "Настройка",
+                "count": 7,
+                "pct": 9.1,
+                "undesired": 1,
+                "undesired_pct": 14.3,
+                "repeat": 0,
+                "cost": 52927
+              },
+              {
+                "topic": "Учётная запись",
+                "count": 4,
+                "pct": 5.2,
+                "undesired": 3,
+                "undesired_pct": 75.0,
+                "repeat": 0,
+                "cost": 30244
+              },
+              {
+                "topic": "Новая продажа",
+                "count": 4,
+                "pct": 5.2,
+                "undesired": 1,
+                "undesired_pct": 25.0,
+                "repeat": 0,
+                "cost": 30244
+              },
+              {
+                "topic": "Вопрос не по программе",
+                "count": 3,
+                "pct": 3.9,
+                "undesired": 3,
+                "undesired_pct": 100.0,
+                "repeat": 0,
+                "cost": 22683
+              },
+              {
+                "topic": "Управление",
+                "count": 2,
+                "pct": 2.6,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 15122
+              },
+              {
+                "topic": "Долги клиентов",
+                "count": 2,
+                "pct": 2.6,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 15122
+              },
+              {
+                "topic": "Desktop",
+                "count": 1,
+                "pct": 1.3,
+                "undesired": 1,
+                "undesired_pct": 100.0,
+                "repeat": 0,
+                "cost": 7561
+              },
+              {
+                "topic": "Реквест (внутренний запрос",
+                "count": 1,
+                "pct": 1.3,
+                "undesired": 1,
+                "undesired_pct": 100.0,
+                "repeat": 0,
+                "cost": 7561
+              }
+            ],
+            "labels_breakdown": [
+              {
+                "label": "Оборудование - Установка Anydesk/BILLZ Desktop/Программы компьютера и тд.",
+                "count": 10,
+                "cost": 75610
+              },
+              {
+                "label": "Документооборот - Оплата за тариф",
+                "count": 10,
+                "cost": 75610
+              },
+              {
+                "label": "Массовый сбой BILLZ",
+                "count": 9,
+                "cost": 68049
+              },
+              {
+                "label": "Документооборот - Консультация по тарифу",
+                "count": 4,
+                "cost": 30244
+              },
+              {
+                "label": "Вопрос не по программе",
+                "count": 3,
+                "cost": 22683
+              },
+              {
+                "label": "Учётная запись - Создание магазина",
+                "count": 3,
+                "cost": 22683
+              },
+              {
+                "label": "Настройка - Создание/Редактирование валюты",
+                "count": 3,
+                "cost": 22683
+              },
+              {
+                "label": "Каталог — изменение свойств товара",
+                "count": 2,
+                "cost": 15122
+              }
+            ]
           },
           {
             "name": "Burhan Ergashev Partner",
@@ -70423,6 +74034,7 @@ const BILLZ_DATA = {
             "undesired_pct": 63.5,
             "repeat_count": 8,
             "repeat_pct": 12.7,
+            "massoviy_count": 12,
             "med_close": 5.9,
             "med_frt_min": 0.6,
             "stores_count": 10,
@@ -70431,7 +74043,159 @@ const BILLZ_DATA = {
             "training_total": 0,
             "cost": 476343,
             "top_topic": "Массовый сбой BILLZ",
-            "top_label": "Массовый сбой BILLZ"
+            "top_label": "Массовый сбой BILLZ",
+            "topic_breakdown": [
+              {
+                "topic": "Массовый сбой BILLZ",
+                "count": 12,
+                "pct": 19.0,
+                "undesired": 11,
+                "undesired_pct": 91.7,
+                "repeat": 0,
+                "cost": 90732
+              },
+              {
+                "topic": "Каталог",
+                "count": 10,
+                "pct": 15.9,
+                "undesired": 6,
+                "undesired_pct": 60.0,
+                "repeat": 3,
+                "cost": 75610
+              },
+              {
+                "topic": "Документооборот",
+                "count": 7,
+                "pct": 11.1,
+                "undesired": 3,
+                "undesired_pct": 42.9,
+                "repeat": 0,
+                "cost": 52927
+              },
+              {
+                "topic": "Оборудование",
+                "count": 5,
+                "pct": 7.9,
+                "undesired": 3,
+                "undesired_pct": 60.0,
+                "repeat": 1,
+                "cost": 37805
+              },
+              {
+                "topic": "Настройка",
+                "count": 4,
+                "pct": 6.3,
+                "undesired": 1,
+                "undesired_pct": 25.0,
+                "repeat": 0,
+                "cost": 30244
+              },
+              {
+                "topic": "Учётная запись",
+                "count": 2,
+                "pct": 3.2,
+                "undesired": 2,
+                "undesired_pct": 100.0,
+                "repeat": 0,
+                "cost": 15122
+              },
+              {
+                "topic": "Отчёты",
+                "count": 2,
+                "pct": 3.2,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 15122
+              },
+              {
+                "topic": "Бэклог",
+                "count": 2,
+                "pct": 3.2,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 1,
+                "cost": 15122
+              },
+              {
+                "topic": "Desktop",
+                "count": 2,
+                "pct": 3.2,
+                "undesired": 2,
+                "undesired_pct": 100.0,
+                "repeat": 0,
+                "cost": 15122
+              },
+              {
+                "topic": "Общались по звонку",
+                "count": 2,
+                "pct": 3.2,
+                "undesired": 1,
+                "undesired_pct": 50.0,
+                "repeat": 0,
+                "cost": 15122
+              },
+              {
+                "topic": "Импорт",
+                "count": 1,
+                "pct": 1.6,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 7561
+              },
+              {
+                "topic": "Все продажи",
+                "count": 1,
+                "pct": 1.6,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 7561
+              }
+            ],
+            "labels_breakdown": [
+              {
+                "label": "Массовый сбой BILLZ",
+                "count": 12,
+                "cost": 90732
+              },
+              {
+                "label": "Каталог — запрос на добавление товара",
+                "count": 5,
+                "cost": 37805
+              },
+              {
+                "label": "Документооборот - Оплата за тариф",
+                "count": 5,
+                "cost": 37805
+              },
+              {
+                "label": "Оборудование - Установка Anydesk/BILLZ Desktop/Программы компьютера и тд.",
+                "count": 3,
+                "cost": 22683
+              },
+              {
+                "label": "Настройка - Создание/Редактирование/Удаление чека",
+                "count": 3,
+                "cost": 22683
+              },
+              {
+                "label": "Учётная запись - Помощь со входом в аккаунт",
+                "count": 2,
+                "cost": 15122
+              },
+              {
+                "label": "Документооборот - Консультация по тарифу",
+                "count": 2,
+                "cost": 15122
+              },
+              {
+                "label": "Отчёты - Разбор отчётов",
+                "count": 2,
+                "cost": 15122
+              }
+            ]
           },
           {
             "name": "Наш партнер",
@@ -70441,6 +74205,7 @@ const BILLZ_DATA = {
             "undesired_pct": 61.9,
             "repeat_count": 4,
             "repeat_pct": 6.3,
+            "massoviy_count": 0,
             "med_close": 2.6,
             "med_frt_min": 0.3,
             "stores_count": 2,
@@ -70449,7 +74214,159 @@ const BILLZ_DATA = {
             "training_total": 3,
             "cost": 476343,
             "top_topic": "Учётная запись",
-            "top_label": "Учётная запись - Создание магазина"
+            "top_label": "Учётная запись - Создание магазина",
+            "topic_breakdown": [
+              {
+                "topic": "Учётная запись",
+                "count": 17,
+                "pct": 27.0,
+                "undesired": 10,
+                "undesired_pct": 58.8,
+                "repeat": 1,
+                "cost": 128537
+              },
+              {
+                "topic": "Документооборот",
+                "count": 9,
+                "pct": 14.3,
+                "undesired": 7,
+                "undesired_pct": 77.8,
+                "repeat": 0,
+                "cost": 68049
+              },
+              {
+                "topic": "Каталог",
+                "count": 4,
+                "pct": 6.3,
+                "undesired": 2,
+                "undesired_pct": 50.0,
+                "repeat": 0,
+                "cost": 30244
+              },
+              {
+                "topic": "Вопрос не по программе",
+                "count": 3,
+                "pct": 4.8,
+                "undesired": 2,
+                "undesired_pct": 66.7,
+                "repeat": 0,
+                "cost": 22683
+              },
+              {
+                "topic": "Настройка",
+                "count": 3,
+                "pct": 4.8,
+                "undesired": 1,
+                "undesired_pct": 33.3,
+                "repeat": 0,
+                "cost": 22683
+              },
+              {
+                "topic": "Оборудование",
+                "count": 3,
+                "pct": 4.8,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 22683
+              },
+              {
+                "topic": "Кассовые смены",
+                "count": 3,
+                "pct": 4.8,
+                "undesired": 3,
+                "undesired_pct": 100.0,
+                "repeat": 2,
+                "cost": 22683
+              },
+              {
+                "topic": "Управление",
+                "count": 2,
+                "pct": 3.2,
+                "undesired": 2,
+                "undesired_pct": 100.0,
+                "repeat": 0,
+                "cost": 15122
+              },
+              {
+                "topic": "Инвентаризация",
+                "count": 2,
+                "pct": 3.2,
+                "undesired": 2,
+                "undesired_pct": 100.0,
+                "repeat": 0,
+                "cost": 15122
+              },
+              {
+                "topic": "Новая продажа",
+                "count": 2,
+                "pct": 3.2,
+                "undesired": 1,
+                "undesired_pct": 50.0,
+                "repeat": 0,
+                "cost": 15122
+              },
+              {
+                "topic": "Баг (реквест)",
+                "count": 1,
+                "pct": 1.6,
+                "undesired": 1,
+                "undesired_pct": 100.0,
+                "repeat": 0,
+                "cost": 7561
+              },
+              {
+                "topic": "Все продажи",
+                "count": 1,
+                "pct": 1.6,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 7561
+              }
+            ],
+            "labels_breakdown": [
+              {
+                "label": "Учётная запись - Создание магазина",
+                "count": 11,
+                "cost": 83171
+              },
+              {
+                "label": "Вопрос не по программе",
+                "count": 3,
+                "cost": 22683
+              },
+              {
+                "label": "Документооборот - Консультация по тарифу",
+                "count": 3,
+                "cost": 22683
+              },
+              {
+                "label": "Документооборот - Создание ссылки для оплаты",
+                "count": 3,
+                "cost": 22683
+              },
+              {
+                "label": "Учётная запись - Помощь со входом в аккаунт",
+                "count": 3,
+                "cost": 22683
+              },
+              {
+                "label": "Документооборот - Оплата за тариф",
+                "count": 3,
+                "cost": 22683
+              },
+              {
+                "label": "Кассовые смены — Открытие/Закрытие смен",
+                "count": 3,
+                "cost": 22683
+              },
+              {
+                "label": "Учётная запись - Блокировка/Разблокировка аккаунта",
+                "count": 2,
+                "cost": 15122
+              }
+            ]
           },
           {
             "name": "Ulugbek Salimov Partner (Nasimjon Mobile)",
@@ -70459,6 +74376,7 @@ const BILLZ_DATA = {
             "undesired_pct": 52.3,
             "repeat_count": 2,
             "repeat_pct": 4.5,
+            "massoviy_count": 9,
             "med_close": 3.1,
             "med_frt_min": 0.4,
             "stores_count": 12,
@@ -70467,7 +74385,159 @@ const BILLZ_DATA = {
             "training_total": 0,
             "cost": 332684,
             "top_topic": "Документооборот",
-            "top_label": "Документооборот - Оплата за тариф"
+            "top_label": "Документооборот - Оплата за тариф",
+            "topic_breakdown": [
+              {
+                "topic": "Документооборот",
+                "count": 9,
+                "pct": 20.5,
+                "undesired": 5,
+                "undesired_pct": 55.6,
+                "repeat": 0,
+                "cost": 68049
+              },
+              {
+                "topic": "Массовый сбой BILLZ",
+                "count": 9,
+                "pct": 20.5,
+                "undesired": 7,
+                "undesired_pct": 77.8,
+                "repeat": 0,
+                "cost": 68049
+              },
+              {
+                "topic": "Оборудование",
+                "count": 4,
+                "pct": 9.1,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 30244
+              },
+              {
+                "topic": "Учётная запись",
+                "count": 4,
+                "pct": 9.1,
+                "undesired": 3,
+                "undesired_pct": 75.0,
+                "repeat": 0,
+                "cost": 30244
+              },
+              {
+                "topic": "Долги клиентов",
+                "count": 2,
+                "pct": 4.5,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 15122
+              },
+              {
+                "topic": "Заказы",
+                "count": 2,
+                "pct": 4.5,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 15122
+              },
+              {
+                "topic": "Управление",
+                "count": 1,
+                "pct": 2.3,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 7561
+              },
+              {
+                "topic": "Вопрос не по программе",
+                "count": 1,
+                "pct": 2.3,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 7561
+              },
+              {
+                "topic": "Кассовые смены",
+                "count": 1,
+                "pct": 2.3,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 1,
+                "cost": 7561
+              },
+              {
+                "topic": "Отчёты",
+                "count": 1,
+                "pct": 2.3,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 7561
+              },
+              {
+                "topic": "Новая продажа",
+                "count": 1,
+                "pct": 2.3,
+                "undesired": 1,
+                "undesired_pct": 100.0,
+                "repeat": 0,
+                "cost": 7561
+              },
+              {
+                "topic": "Настройка",
+                "count": 1,
+                "pct": 2.3,
+                "undesired": 1,
+                "undesired_pct": 100.0,
+                "repeat": 0,
+                "cost": 7561
+              }
+            ],
+            "labels_breakdown": [
+              {
+                "label": "Документооборот - Оплата за тариф",
+                "count": 9,
+                "cost": 68049
+              },
+              {
+                "label": "Массовый сбой BILLZ",
+                "count": 9,
+                "cost": 68049
+              },
+              {
+                "label": "Оборудование - Установка Anydesk/BILLZ Desktop/Программы компьютера и тд.",
+                "count": 3,
+                "cost": 22683
+              },
+              {
+                "label": "Долги клиентов - SMS рассылка по должникам",
+                "count": 2,
+                "cost": 15122
+              },
+              {
+                "label": "Учётная запись - Сброс пароля",
+                "count": 2,
+                "cost": 15122
+              },
+              {
+                "label": "Заказы — отмена/возврат заказа",
+                "count": 2,
+                "cost": 15122
+              },
+              {
+                "label": "Управление - Создание/Редактирвоание/Удаление сотрудника",
+                "count": 1,
+                "cost": 7561
+              },
+              {
+                "label": "Оборудование - Загрузка базу товаров в весы",
+                "count": 1,
+                "cost": 7561
+              }
+            ]
           },
           {
             "name": "Marufhon Bahodirhonov Partner",
@@ -70477,6 +74547,7 @@ const BILLZ_DATA = {
             "undesired_pct": 54.3,
             "repeat_count": 2,
             "repeat_pct": 5.7,
+            "massoviy_count": 11,
             "med_close": 5.5,
             "med_frt_min": 0.4,
             "stores_count": 13,
@@ -70485,7 +74556,123 @@ const BILLZ_DATA = {
             "training_total": 1,
             "cost": 264635,
             "top_topic": "Массовый сбой BILLZ",
-            "top_label": "Массовый сбой BILLZ"
+            "top_label": "Массовый сбой BILLZ",
+            "topic_breakdown": [
+              {
+                "topic": "Массовый сбой BILLZ",
+                "count": 11,
+                "pct": 31.4,
+                "undesired": 7,
+                "undesired_pct": 63.6,
+                "repeat": 0,
+                "cost": 83171
+              },
+              {
+                "topic": "Документооборот",
+                "count": 6,
+                "pct": 17.1,
+                "undesired": 6,
+                "undesired_pct": 100.0,
+                "repeat": 1,
+                "cost": 45366
+              },
+              {
+                "topic": "Переоценка",
+                "count": 4,
+                "pct": 11.4,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 1,
+                "cost": 30244
+              },
+              {
+                "topic": "Новая продажа",
+                "count": 3,
+                "pct": 8.6,
+                "undesired": 2,
+                "undesired_pct": 66.7,
+                "repeat": 0,
+                "cost": 22683
+              },
+              {
+                "topic": "Списание",
+                "count": 1,
+                "pct": 2.9,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 7561
+              },
+              {
+                "topic": "Кассовые смены",
+                "count": 1,
+                "pct": 2.9,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 7561
+              },
+              {
+                "topic": "Оборудование",
+                "count": 1,
+                "pct": 2.9,
+                "undesired": 1,
+                "undesired_pct": 100.0,
+                "repeat": 0,
+                "cost": 7561
+              },
+              {
+                "topic": "Баг (реквест)",
+                "count": 1,
+                "pct": 2.9,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 7561
+              }
+            ],
+            "labels_breakdown": [
+              {
+                "label": "Массовый сбой BILLZ",
+                "count": 11,
+                "cost": 83171
+              },
+              {
+                "label": "Документооборот - Оплата за тариф",
+                "count": 6,
+                "cost": 45366
+              },
+              {
+                "label": "Переоценка - Изменение по курсу",
+                "count": 4,
+                "cost": 30244
+              },
+              {
+                "label": "Новая продажа - Не удаётся сделать продажу",
+                "count": 2,
+                "cost": 15122
+              },
+              {
+                "label": "Списание - частичное обучение",
+                "count": 1,
+                "cost": 7561
+              },
+              {
+                "label": "Кассовые смены — Расхождение суммы",
+                "count": 1,
+                "cost": 7561
+              },
+              {
+                "label": "Оборудование - Установка/Настройка/Удаление принтера",
+                "count": 1,
+                "cost": 7561
+              },
+              {
+                "label": "Новая продажа - Создание/Завершение",
+                "count": 1,
+                "cost": 7561
+              }
+            ]
           },
           {
             "name": "Naim Shokirov Partner \"RSA FRESH TECHNO GROUP\"",
@@ -70495,6 +74682,7 @@ const BILLZ_DATA = {
             "undesired_pct": 75.8,
             "repeat_count": 0,
             "repeat_pct": 0.0,
+            "massoviy_count": 15,
             "med_close": 9.0,
             "med_frt_min": 0.3,
             "stores_count": 12,
@@ -70503,7 +74691,159 @@ const BILLZ_DATA = {
             "training_total": 0,
             "cost": 249513,
             "top_topic": "Массовый сбой BILLZ",
-            "top_label": "Массовый сбой BILLZ"
+            "top_label": "Массовый сбой BILLZ",
+            "topic_breakdown": [
+              {
+                "topic": "Массовый сбой BILLZ",
+                "count": 15,
+                "pct": 45.5,
+                "undesired": 14,
+                "undesired_pct": 93.3,
+                "repeat": 0,
+                "cost": 113415
+              },
+              {
+                "topic": "Учётная запись",
+                "count": 3,
+                "pct": 9.1,
+                "undesired": 3,
+                "undesired_pct": 100.0,
+                "repeat": 0,
+                "cost": 22683
+              },
+              {
+                "topic": "Документооборот",
+                "count": 3,
+                "pct": 9.1,
+                "undesired": 2,
+                "undesired_pct": 66.7,
+                "repeat": 0,
+                "cost": 22683
+              },
+              {
+                "topic": "Оборудование",
+                "count": 2,
+                "pct": 6.1,
+                "undesired": 1,
+                "undesired_pct": 50.0,
+                "repeat": 0,
+                "cost": 15122
+              },
+              {
+                "topic": "Отчёты",
+                "count": 1,
+                "pct": 3.0,
+                "undesired": 1,
+                "undesired_pct": 100.0,
+                "repeat": 0,
+                "cost": 7561
+              },
+              {
+                "topic": "Баг (реквест)",
+                "count": 1,
+                "pct": 3.0,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 7561
+              },
+              {
+                "topic": "Управление",
+                "count": 1,
+                "pct": 3.0,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 7561
+              },
+              {
+                "topic": "SMS рассылка",
+                "count": 1,
+                "pct": 3.0,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 7561
+              },
+              {
+                "topic": "Каталог",
+                "count": 1,
+                "pct": 3.0,
+                "undesired": 1,
+                "undesired_pct": 100.0,
+                "repeat": 0,
+                "cost": 7561
+              },
+              {
+                "topic": "Новая продажа",
+                "count": 1,
+                "pct": 3.0,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 7561
+              },
+              {
+                "topic": "Общались по звонку",
+                "count": 1,
+                "pct": 3.0,
+                "undesired": 1,
+                "undesired_pct": 100.0,
+                "repeat": 0,
+                "cost": 7561
+              },
+              {
+                "topic": "Долги клиентов",
+                "count": 1,
+                "pct": 3.0,
+                "undesired": 1,
+                "undesired_pct": 100.0,
+                "repeat": 0,
+                "cost": 7561
+              }
+            ],
+            "labels_breakdown": [
+              {
+                "label": "Массовый сбой BILLZ",
+                "count": 15,
+                "cost": 113415
+              },
+              {
+                "label": "Учётная запись - Помощь со входом в аккаунт",
+                "count": 2,
+                "cost": 15122
+              },
+              {
+                "label": "Оборудование - Установка/Настройка/Удаление принтера",
+                "count": 2,
+                "cost": 15122
+              },
+              {
+                "label": "Документооборот - Оплата за тариф",
+                "count": 2,
+                "cost": 15122
+              },
+              {
+                "label": "Отчёты - Разбор отчётов",
+                "count": 1,
+                "cost": 7561
+              },
+              {
+                "label": "Баг (реквест)",
+                "count": 1,
+                "cost": 7561
+              },
+              {
+                "label": "Управление - Создание/Редактирвоание/Удаление роли",
+                "count": 1,
+                "cost": 7561
+              },
+              {
+                "label": "Документооборот - Консультация по тарифу",
+                "count": 1,
+                "cost": 7561
+              }
+            ]
           },
           {
             "name": "Alisher Azimov Partner (YTT TILYABAYEVA SITORAXON G'ULOMQODIR QI)",
@@ -70513,6 +74853,7 @@ const BILLZ_DATA = {
             "undesired_pct": 34.5,
             "repeat_count": 2,
             "repeat_pct": 6.9,
+            "massoviy_count": 5,
             "med_close": 4.5,
             "med_frt_min": 0.25,
             "stores_count": 9,
@@ -70521,7 +74862,123 @@ const BILLZ_DATA = {
             "training_total": 0,
             "cost": 219269,
             "top_topic": "Документооборот",
-            "top_label": "Оборудование - Установка/Настройка/Удаление принтера"
+            "top_label": "Оборудование - Установка/Настройка/Удаление принтера",
+            "topic_breakdown": [
+              {
+                "topic": "Документооборот",
+                "count": 6,
+                "pct": 20.7,
+                "undesired": 2,
+                "undesired_pct": 33.3,
+                "repeat": 0,
+                "cost": 45366
+              },
+              {
+                "topic": "Оборудование",
+                "count": 5,
+                "pct": 17.2,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 1,
+                "cost": 37805
+              },
+              {
+                "topic": "Массовый сбой BILLZ",
+                "count": 5,
+                "pct": 17.2,
+                "undesired": 3,
+                "undesired_pct": 60.0,
+                "repeat": 0,
+                "cost": 37805
+              },
+              {
+                "topic": "Настройка",
+                "count": 4,
+                "pct": 13.8,
+                "undesired": 2,
+                "undesired_pct": 50.0,
+                "repeat": 0,
+                "cost": 30244
+              },
+              {
+                "topic": "Каталог",
+                "count": 3,
+                "pct": 10.3,
+                "undesired": 1,
+                "undesired_pct": 33.3,
+                "repeat": 1,
+                "cost": 22683
+              },
+              {
+                "topic": "Учётная запись",
+                "count": 3,
+                "pct": 10.3,
+                "undesired": 1,
+                "undesired_pct": 33.3,
+                "repeat": 0,
+                "cost": 22683
+              },
+              {
+                "topic": "Баг (реквест)",
+                "count": 1,
+                "pct": 3.4,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 7561
+              },
+              {
+                "topic": "Новая продажа",
+                "count": 1,
+                "pct": 3.4,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 7561
+              }
+            ],
+            "labels_breakdown": [
+              {
+                "label": "Оборудование - Установка/Настройка/Удаление принтера",
+                "count": 5,
+                "cost": 37805
+              },
+              {
+                "label": "Массовый сбой BILLZ",
+                "count": 5,
+                "cost": 37805
+              },
+              {
+                "label": "Настройка - Создание/Редактирование/Удаление доп. точки",
+                "count": 4,
+                "cost": 30244
+              },
+              {
+                "label": "Каталог — настройка печати ценника",
+                "count": 2,
+                "cost": 15122
+              },
+              {
+                "label": "Документооборот - Оплата за тариф",
+                "count": 2,
+                "cost": 15122
+              },
+              {
+                "label": "Документооборот - Реактивация клиента",
+                "count": 2,
+                "cost": 15122
+              },
+              {
+                "label": "Документооборот - Помощь в оплате долга",
+                "count": 1,
+                "cost": 7561
+              },
+              {
+                "label": "Каталог - Скачивание товаров",
+                "count": 1,
+                "cost": 7561
+              }
+            ]
           },
           {
             "name": "Партнер",
@@ -70531,6 +74988,7 @@ const BILLZ_DATA = {
             "undesired_pct": 42.9,
             "repeat_count": 0,
             "repeat_pct": 0.0,
+            "massoviy_count": 0,
             "med_close": 2.15,
             "med_frt_min": 0.5,
             "stores_count": 7,
@@ -70539,7 +74997,141 @@ const BILLZ_DATA = {
             "training_total": 1,
             "cost": 211708,
             "top_topic": "Учётная запись",
-            "top_label": "Учётная запись - Создание магазина"
+            "top_label": "Учётная запись - Создание магазина",
+            "topic_breakdown": [
+              {
+                "topic": "Учётная запись",
+                "count": 9,
+                "pct": 32.1,
+                "undesired": 5,
+                "undesired_pct": 55.6,
+                "repeat": 0,
+                "cost": 68049
+              },
+              {
+                "topic": "Каталог",
+                "count": 3,
+                "pct": 10.7,
+                "undesired": 1,
+                "undesired_pct": 33.3,
+                "repeat": 0,
+                "cost": 22683
+              },
+              {
+                "topic": "Новая продажа",
+                "count": 3,
+                "pct": 10.7,
+                "undesired": 1,
+                "undesired_pct": 33.3,
+                "repeat": 0,
+                "cost": 22683
+              },
+              {
+                "topic": "Оборудование",
+                "count": 2,
+                "pct": 7.1,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 15122
+              },
+              {
+                "topic": "Документооборот",
+                "count": 2,
+                "pct": 7.1,
+                "undesired": 1,
+                "undesired_pct": 50.0,
+                "repeat": 0,
+                "cost": 15122
+              },
+              {
+                "topic": "Заказы",
+                "count": 1,
+                "pct": 3.6,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 7561
+              },
+              {
+                "topic": "Долги клиентов",
+                "count": 1,
+                "pct": 3.6,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 7561
+              },
+              {
+                "topic": "Настройка",
+                "count": 1,
+                "pct": 3.6,
+                "undesired": 1,
+                "undesired_pct": 100.0,
+                "repeat": 0,
+                "cost": 7561
+              },
+              {
+                "topic": "Управление",
+                "count": 1,
+                "pct": 3.6,
+                "undesired": 1,
+                "undesired_pct": 100.0,
+                "repeat": 0,
+                "cost": 7561
+              },
+              {
+                "topic": "Нет фунционала",
+                "count": 1,
+                "pct": 3.6,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 7561
+              }
+            ],
+            "labels_breakdown": [
+              {
+                "label": "Учётная запись - Создание магазина",
+                "count": 7,
+                "cost": 52927
+              },
+              {
+                "label": "Новая продажа - Черновики/Отложки",
+                "count": 3,
+                "cost": 22683
+              },
+              {
+                "label": "Каталог — запрос на добавление товара",
+                "count": 2,
+                "cost": 15122
+              },
+              {
+                "label": "Учётная запись - Блокировка/Разблокировка аккаунта",
+                "count": 2,
+                "cost": 15122
+              },
+              {
+                "label": "Оборудование - Загрузка базу товаров в весы",
+                "count": 1,
+                "cost": 7561
+              },
+              {
+                "label": "Каталог — настройка печати ценника",
+                "count": 1,
+                "cost": 7561
+              },
+              {
+                "label": "Заказы - Создание заказа",
+                "count": 1,
+                "cost": 7561
+              },
+              {
+                "label": "Долги клиентов - Полное обучение",
+                "count": 1,
+                "cost": 7561
+              }
+            ]
           },
           {
             "name": "Sarvar Alimov Partner Partner (YATT DADAYEV XABIBULLA XAMIDULLAYEVICH)",
@@ -70549,6 +75141,7 @@ const BILLZ_DATA = {
             "undesired_pct": 42.9,
             "repeat_count": 0,
             "repeat_pct": 0.0,
+            "massoviy_count": 3,
             "med_close": 2.45,
             "med_frt_min": 0.3,
             "stores_count": 5,
@@ -70557,7 +75150,141 @@ const BILLZ_DATA = {
             "training_total": 1,
             "cost": 211708,
             "top_topic": "Документооборот",
-            "top_label": "Документооборот - Оплата за тариф"
+            "top_label": "Документооборот - Оплата за тариф",
+            "topic_breakdown": [
+              {
+                "topic": "Документооборот",
+                "count": 6,
+                "pct": 21.4,
+                "undesired": 3,
+                "undesired_pct": 50.0,
+                "repeat": 0,
+                "cost": 45366
+              },
+              {
+                "topic": "Каталог",
+                "count": 4,
+                "pct": 14.3,
+                "undesired": 1,
+                "undesired_pct": 25.0,
+                "repeat": 0,
+                "cost": 30244
+              },
+              {
+                "topic": "Импорт",
+                "count": 3,
+                "pct": 10.7,
+                "undesired": 1,
+                "undesired_pct": 33.3,
+                "repeat": 0,
+                "cost": 22683
+              },
+              {
+                "topic": "Учётная запись",
+                "count": 3,
+                "pct": 10.7,
+                "undesired": 1,
+                "undesired_pct": 33.3,
+                "repeat": 0,
+                "cost": 22683
+              },
+              {
+                "topic": "Массовый сбой BILLZ",
+                "count": 3,
+                "pct": 10.7,
+                "undesired": 3,
+                "undesired_pct": 100.0,
+                "repeat": 0,
+                "cost": 22683
+              },
+              {
+                "topic": "Заказы",
+                "count": 3,
+                "pct": 10.7,
+                "undesired": 1,
+                "undesired_pct": 33.3,
+                "repeat": 0,
+                "cost": 22683
+              },
+              {
+                "topic": "Настройка",
+                "count": 2,
+                "pct": 7.1,
+                "undesired": 1,
+                "undesired_pct": 50.0,
+                "repeat": 0,
+                "cost": 15122
+              },
+              {
+                "topic": "Переоценка",
+                "count": 1,
+                "pct": 3.6,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 7561
+              },
+              {
+                "topic": "Кассовые смены",
+                "count": 1,
+                "pct": 3.6,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 7561
+              },
+              {
+                "topic": "Отчёты",
+                "count": 1,
+                "pct": 3.6,
+                "undesired": 1,
+                "undesired_pct": 100.0,
+                "repeat": 0,
+                "cost": 7561
+              }
+            ],
+            "labels_breakdown": [
+              {
+                "label": "Документооборот - Оплата за тариф",
+                "count": 6,
+                "cost": 45366
+              },
+              {
+                "label": "Массовый сбой BILLZ",
+                "count": 3,
+                "cost": 22683
+              },
+              {
+                "label": "Импорт — импорт товаров через Excel",
+                "count": 2,
+                "cost": 15122
+              },
+              {
+                "label": "Учётная запись - Очистка магазина",
+                "count": 2,
+                "cost": 15122
+              },
+              {
+                "label": "Заказы — отмена/возврат заказа",
+                "count": 2,
+                "cost": 15122
+              },
+              {
+                "label": "Каталог — изменение свойств товара",
+                "count": 1,
+                "cost": 7561
+              },
+              {
+                "label": "Переоценка - Изменение цены продажи",
+                "count": 1,
+                "cost": 7561
+              },
+              {
+                "label": "Импорт - Удаление импорта",
+                "count": 1,
+                "cost": 7561
+              }
+            ]
           },
           {
             "name": "Saidorif Muzaffarov Partner",
@@ -70567,6 +75294,7 @@ const BILLZ_DATA = {
             "undesired_pct": 58.3,
             "repeat_count": 0,
             "repeat_pct": 0.0,
+            "massoviy_count": 2,
             "med_close": 4.0,
             "med_frt_min": 0.4,
             "stores_count": 12,
@@ -70575,7 +75303,132 @@ const BILLZ_DATA = {
             "training_total": 0,
             "cost": 181464,
             "top_topic": "Документооборот",
-            "top_label": "Оборудование - Установка Anydesk/BILLZ Desktop/Программы компьютера и тд."
+            "top_label": "Оборудование - Установка Anydesk/BILLZ Desktop/Программы компьютера и тд.",
+            "topic_breakdown": [
+              {
+                "topic": "Документооборот",
+                "count": 5,
+                "pct": 20.8,
+                "undesired": 3,
+                "undesired_pct": 60.0,
+                "repeat": 0,
+                "cost": 37805
+              },
+              {
+                "topic": "Оборудование",
+                "count": 5,
+                "pct": 20.8,
+                "undesired": 2,
+                "undesired_pct": 40.0,
+                "repeat": 0,
+                "cost": 37805
+              },
+              {
+                "topic": "Каталог",
+                "count": 2,
+                "pct": 8.3,
+                "undesired": 1,
+                "undesired_pct": 50.0,
+                "repeat": 0,
+                "cost": 15122
+              },
+              {
+                "topic": "Учётная запись",
+                "count": 2,
+                "pct": 8.3,
+                "undesired": 1,
+                "undesired_pct": 50.0,
+                "repeat": 0,
+                "cost": 15122
+              },
+              {
+                "topic": "Массовый сбой BILLZ",
+                "count": 2,
+                "pct": 8.3,
+                "undesired": 2,
+                "undesired_pct": 100.0,
+                "repeat": 0,
+                "cost": 15122
+              },
+              {
+                "topic": "Отчёты",
+                "count": 1,
+                "pct": 4.2,
+                "undesired": 1,
+                "undesired_pct": 100.0,
+                "repeat": 0,
+                "cost": 7561
+              },
+              {
+                "topic": "Общались по звонку",
+                "count": 1,
+                "pct": 4.2,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 7561
+              },
+              {
+                "topic": "Управление",
+                "count": 1,
+                "pct": 4.2,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 7561
+              },
+              {
+                "topic": "Desktop",
+                "count": 1,
+                "pct": 4.2,
+                "undesired": 1,
+                "undesired_pct": 100.0,
+                "repeat": 0,
+                "cost": 7561
+              }
+            ],
+            "labels_breakdown": [
+              {
+                "label": "Оборудование - Установка Anydesk/BILLZ Desktop/Программы компьютера и тд.",
+                "count": 3,
+                "cost": 22683
+              },
+              {
+                "label": "Документооборот - Оплата за тариф",
+                "count": 2,
+                "cost": 15122
+              },
+              {
+                "label": "Оборудование - Загрузка базу товаров в весы",
+                "count": 2,
+                "cost": 15122
+              },
+              {
+                "label": "Массовый сбой BILLZ",
+                "count": 2,
+                "cost": 15122
+              },
+              {
+                "label": "Отчёты - Выгрузка отчёта",
+                "count": 1,
+                "cost": 7561
+              },
+              {
+                "label": "Общались по звонку",
+                "count": 1,
+                "cost": 7561
+              },
+              {
+                "label": "Каталог — запрос на добавление товара",
+                "count": 1,
+                "cost": 7561
+              },
+              {
+                "label": "Управление - Создание/Редактирвоание/Удаление сотрудника",
+                "count": 1,
+                "cost": 7561
+              }
+            ]
           },
           {
             "name": "Boburjon Karabayev Partner",
@@ -70585,6 +75438,7 @@ const BILLZ_DATA = {
             "undesired_pct": 50.0,
             "repeat_count": 0,
             "repeat_pct": 0.0,
+            "massoviy_count": 12,
             "med_close": 7.0,
             "med_frt_min": 0.25,
             "stores_count": 8,
@@ -70593,7 +75447,123 @@ const BILLZ_DATA = {
             "training_total": 1,
             "cost": 181464,
             "top_topic": "Массовый сбой BILLZ",
-            "top_label": "Массовый сбой BILLZ"
+            "top_label": "Массовый сбой BILLZ",
+            "topic_breakdown": [
+              {
+                "topic": "Массовый сбой BILLZ",
+                "count": 12,
+                "pct": 50.0,
+                "undesired": 8,
+                "undesired_pct": 66.7,
+                "repeat": 0,
+                "cost": 90732
+              },
+              {
+                "topic": "Учётная запись",
+                "count": 2,
+                "pct": 8.3,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 15122
+              },
+              {
+                "topic": "Документооборот",
+                "count": 2,
+                "pct": 8.3,
+                "undesired": 2,
+                "undesired_pct": 100.0,
+                "repeat": 0,
+                "cost": 15122
+              },
+              {
+                "topic": "Управление",
+                "count": 2,
+                "pct": 8.3,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 15122
+              },
+              {
+                "topic": "Каталог",
+                "count": 2,
+                "pct": 8.3,
+                "undesired": 1,
+                "undesired_pct": 50.0,
+                "repeat": 0,
+                "cost": 15122
+              },
+              {
+                "topic": "Поставщики",
+                "count": 1,
+                "pct": 4.2,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 7561
+              },
+              {
+                "topic": "Акции",
+                "count": 1,
+                "pct": 4.2,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 7561
+              },
+              {
+                "topic": "Финансы",
+                "count": 1,
+                "pct": 4.2,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 7561
+              }
+            ],
+            "labels_breakdown": [
+              {
+                "label": "Массовый сбой BILLZ",
+                "count": 12,
+                "cost": 90732
+              },
+              {
+                "label": "Управление - Создание/Редактирвоание/Удаление роли",
+                "count": 2,
+                "cost": 15122
+              },
+              {
+                "label": "Учётная запись - Помощь со входом в аккаунт",
+                "count": 1,
+                "cost": 7561
+              },
+              {
+                "label": "Документооборот - Смена тарифа (upsell/downsell)",
+                "count": 1,
+                "cost": 7561
+              },
+              {
+                "label": "Поставщики - Статистика по поставщику",
+                "count": 1,
+                "cost": 7561
+              },
+              {
+                "label": "Каталог — запрос на добавление товара",
+                "count": 1,
+                "cost": 7561
+              },
+              {
+                "label": "Каталог — товары не отображаются",
+                "count": 1,
+                "cost": 7561
+              },
+              {
+                "label": "Документооборот - Консультация по тарифу",
+                "count": 1,
+                "cost": 7561
+              }
+            ]
           },
           {
             "name": "Bobur Abdukakhkharov Partner",
@@ -70603,6 +75573,7 @@ const BILLZ_DATA = {
             "undesired_pct": 50.0,
             "repeat_count": 1,
             "repeat_pct": 4.2,
+            "massoviy_count": 6,
             "med_close": 3.45,
             "med_frt_min": 0.6,
             "stores_count": 10,
@@ -70611,7 +75582,123 @@ const BILLZ_DATA = {
             "training_total": 0,
             "cost": 181464,
             "top_topic": "Документооборот",
-            "top_label": "Массовый сбой BILLZ"
+            "top_label": "Массовый сбой BILLZ",
+            "topic_breakdown": [
+              {
+                "topic": "Документооборот",
+                "count": 6,
+                "pct": 25.0,
+                "undesired": 3,
+                "undesired_pct": 50.0,
+                "repeat": 1,
+                "cost": 45366
+              },
+              {
+                "topic": "Массовый сбой BILLZ",
+                "count": 6,
+                "pct": 25.0,
+                "undesired": 4,
+                "undesired_pct": 66.7,
+                "repeat": 0,
+                "cost": 45366
+              },
+              {
+                "topic": "Учётная запись",
+                "count": 4,
+                "pct": 16.7,
+                "undesired": 1,
+                "undesired_pct": 25.0,
+                "repeat": 0,
+                "cost": 30244
+              },
+              {
+                "topic": "Оборудование",
+                "count": 2,
+                "pct": 8.3,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 15122
+              },
+              {
+                "topic": "Каталог",
+                "count": 1,
+                "pct": 4.2,
+                "undesired": 1,
+                "undesired_pct": 100.0,
+                "repeat": 0,
+                "cost": 7561
+              },
+              {
+                "topic": "API",
+                "count": 1,
+                "pct": 4.2,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 7561
+              },
+              {
+                "topic": "Новая продажа",
+                "count": 1,
+                "pct": 4.2,
+                "undesired": 1,
+                "undesired_pct": 100.0,
+                "repeat": 0,
+                "cost": 7561
+              },
+              {
+                "topic": "Управление",
+                "count": 1,
+                "pct": 4.2,
+                "undesired": 1,
+                "undesired_pct": 100.0,
+                "repeat": 0,
+                "cost": 7561
+              }
+            ],
+            "labels_breakdown": [
+              {
+                "label": "Массовый сбой BILLZ",
+                "count": 6,
+                "cost": 45366
+              },
+              {
+                "label": "Документооборот - Оплата за тариф",
+                "count": 4,
+                "cost": 30244
+              },
+              {
+                "label": "Оборудование - Установка Anydesk/BILLZ Desktop/Программы компьютера и тд.",
+                "count": 2,
+                "cost": 15122
+              },
+              {
+                "label": "Документооборот - Создание ссылки для оплаты",
+                "count": 2,
+                "cost": 15122
+              },
+              {
+                "label": "Учётная запись - Помощь со входом в аккаунт",
+                "count": 2,
+                "cost": 15122
+              },
+              {
+                "label": "Каталог - Скачивание товаров",
+                "count": 1,
+                "cost": 7561
+              },
+              {
+                "label": "Учётная запись - Очистка магазина",
+                "count": 1,
+                "cost": 7561
+              },
+              {
+                "label": "API - Консультация по API ключ",
+                "count": 1,
+                "cost": 7561
+              }
+            ]
           },
           {
             "name": "Umedjon Kosimov Partner",
@@ -70621,6 +75708,7 @@ const BILLZ_DATA = {
             "undesired_pct": 68.2,
             "repeat_count": 0,
             "repeat_pct": 0.0,
+            "massoviy_count": 7,
             "med_close": 8.75,
             "med_frt_min": 1.3,
             "stores_count": 3,
@@ -70629,7 +75717,105 @@ const BILLZ_DATA = {
             "training_total": 1,
             "cost": 166342,
             "top_topic": "SMS рассылка",
-            "top_label": "Массовый сбой BILLZ"
+            "top_label": "Массовый сбой BILLZ",
+            "topic_breakdown": [
+              {
+                "topic": "SMS рассылка",
+                "count": 7,
+                "pct": 31.8,
+                "undesired": 4,
+                "undesired_pct": 57.1,
+                "repeat": 0,
+                "cost": 52927
+              },
+              {
+                "topic": "Массовый сбой BILLZ",
+                "count": 6,
+                "pct": 27.3,
+                "undesired": 6,
+                "undesired_pct": 100.0,
+                "repeat": 0,
+                "cost": 45366
+              },
+              {
+                "topic": "Документооборот",
+                "count": 3,
+                "pct": 13.6,
+                "undesired": 2,
+                "undesired_pct": 66.7,
+                "repeat": 0,
+                "cost": 22683
+              },
+              {
+                "topic": "Отчёты",
+                "count": 2,
+                "pct": 9.1,
+                "undesired": 1,
+                "undesired_pct": 50.0,
+                "repeat": 0,
+                "cost": 15122
+              },
+              {
+                "topic": "Реквест (внутренний запрос",
+                "count": 1,
+                "pct": 4.5,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 7561
+              },
+              {
+                "topic": "Все клиенты",
+                "count": 1,
+                "pct": 4.5,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 7561
+              }
+            ],
+            "labels_breakdown": [
+              {
+                "label": "Массовый сбой BILLZ",
+                "count": 6,
+                "cost": 45366
+              },
+              {
+                "label": "SMS рассылка - Создание SMS рассылки",
+                "count": 4,
+                "cost": 30244
+              },
+              {
+                "label": "SMS рассылка - Шаблонирование",
+                "count": 2,
+                "cost": 15122
+              },
+              {
+                "label": "Отчёты - Разбор отчётов",
+                "count": 1,
+                "cost": 7561
+              },
+              {
+                "label": "Отчёты - Частичное обучение",
+                "count": 1,
+                "cost": 7561
+              },
+              {
+                "label": "Реквест (внутренний запрос",
+                "count": 1,
+                "cost": 7561
+              },
+              {
+                "label": "Документооборот - Оплата за тариф",
+                "count": 1,
+                "cost": 7561
+              },
+              {
+                "label": "Все клиенты - Создание/удаление/редактирование",
+                "count": 1,
+                "cost": 7561
+              }
+            ]
           },
           {
             "name": "Muzaffar Abduvoxidov Partner",
@@ -70639,6 +75825,7 @@ const BILLZ_DATA = {
             "undesired_pct": 57.1,
             "repeat_count": 2,
             "repeat_pct": 9.5,
+            "massoviy_count": 10,
             "med_close": 8.9,
             "med_frt_min": 2.0,
             "stores_count": 1,
@@ -70647,7 +75834,100 @@ const BILLZ_DATA = {
             "training_total": 0,
             "cost": 158781,
             "top_topic": "Массовый сбой BILLZ",
-            "top_label": "Массовый сбой BILLZ"
+            "top_label": "Массовый сбой BILLZ",
+            "topic_breakdown": [
+              {
+                "topic": "Массовый сбой BILLZ",
+                "count": 10,
+                "pct": 47.6,
+                "undesired": 7,
+                "undesired_pct": 70.0,
+                "repeat": 1,
+                "cost": 75610
+              },
+              {
+                "topic": "Оборудование",
+                "count": 5,
+                "pct": 23.8,
+                "undesired": 2,
+                "undesired_pct": 40.0,
+                "repeat": 0,
+                "cost": 37805
+              },
+              {
+                "topic": "Оборудовние",
+                "count": 1,
+                "pct": 4.8,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 7561
+              },
+              {
+                "topic": "Сайт/Бот",
+                "count": 1,
+                "pct": 4.8,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 7561
+              },
+              {
+                "topic": "Акции",
+                "count": 1,
+                "pct": 4.8,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 7561
+              },
+              {
+                "topic": "Новая продажа",
+                "count": 1,
+                "pct": 4.8,
+                "undesired": 1,
+                "undesired_pct": 100.0,
+                "repeat": 1,
+                "cost": 7561
+              }
+            ],
+            "labels_breakdown": [
+              {
+                "label": "Массовый сбой BILLZ",
+                "count": 10,
+                "cost": 75610
+              },
+              {
+                "label": "Оборудование - Установка/Настройка/Удаление принтера",
+                "count": 3,
+                "cost": 22683
+              },
+              {
+                "label": "Оборудование - Установка Anydesk/BILLZ Desktop/Программы компьютера и тд.",
+                "count": 2,
+                "cost": 15122
+              },
+              {
+                "label": "Оборудовние - Установка не стандартного оборудования",
+                "count": 1,
+                "cost": 7561
+              },
+              {
+                "label": "Сайт/Бот - Настройка/Удаление/Редактирование функций",
+                "count": 1,
+                "cost": 7561
+              },
+              {
+                "label": "Акции - Создание/Редактирование/Удаление акции",
+                "count": 1,
+                "cost": 7561
+              },
+              {
+                "label": "Новая продажа - Не удаётся сделать продажу",
+                "count": 1,
+                "cost": 7561
+              }
+            ]
           },
           {
             "name": "наш партнер",
@@ -70657,6 +75937,7 @@ const BILLZ_DATA = {
             "undesired_pct": 63.2,
             "repeat_count": 3,
             "repeat_pct": 15.8,
+            "massoviy_count": 3,
             "med_close": 2.35,
             "med_frt_min": 0.3,
             "stores_count": 1,
@@ -70665,7 +75946,132 @@ const BILLZ_DATA = {
             "training_total": 0,
             "cost": 143659,
             "top_topic": "Учётная запись",
-            "top_label": "Массовый сбой BILLZ"
+            "top_label": "Массовый сбой BILLZ",
+            "topic_breakdown": [
+              {
+                "topic": "Учётная запись",
+                "count": 4,
+                "pct": 21.1,
+                "undesired": 2,
+                "undesired_pct": 50.0,
+                "repeat": 0,
+                "cost": 30244
+              },
+              {
+                "topic": "Массовый сбой BILLZ",
+                "count": 3,
+                "pct": 15.8,
+                "undesired": 2,
+                "undesired_pct": 66.7,
+                "repeat": 1,
+                "cost": 22683
+              },
+              {
+                "topic": "Документооборот",
+                "count": 2,
+                "pct": 10.5,
+                "undesired": 1,
+                "undesired_pct": 50.0,
+                "repeat": 0,
+                "cost": 15122
+              },
+              {
+                "topic": "Управление",
+                "count": 2,
+                "pct": 10.5,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 15122
+              },
+              {
+                "topic": "Все продажи",
+                "count": 1,
+                "pct": 5.3,
+                "undesired": 1,
+                "undesired_pct": 100.0,
+                "repeat": 0,
+                "cost": 7561
+              },
+              {
+                "topic": "Настройка",
+                "count": 1,
+                "pct": 5.3,
+                "undesired": 1,
+                "undesired_pct": 100.0,
+                "repeat": 0,
+                "cost": 7561
+              },
+              {
+                "topic": "Оборудование",
+                "count": 1,
+                "pct": 5.3,
+                "undesired": 1,
+                "undesired_pct": 100.0,
+                "repeat": 1,
+                "cost": 7561
+              },
+              {
+                "topic": "SMS рассылка",
+                "count": 1,
+                "pct": 5.3,
+                "undesired": 1,
+                "undesired_pct": 100.0,
+                "repeat": 1,
+                "cost": 7561
+              },
+              {
+                "topic": "Акции",
+                "count": 1,
+                "pct": 5.3,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 7561
+              }
+            ],
+            "labels_breakdown": [
+              {
+                "label": "Массовый сбой BILLZ",
+                "count": 3,
+                "cost": 22683
+              },
+              {
+                "label": "Учётная запись - Создание магазина",
+                "count": 3,
+                "cost": 22683
+              },
+              {
+                "label": "Документооборот - Оплата за тариф",
+                "count": 2,
+                "cost": 15122
+              },
+              {
+                "label": "Учётная запись - Помощь со входом в аккаунт",
+                "count": 1,
+                "cost": 7561
+              },
+              {
+                "label": "Все продажи - Сумма транзакций",
+                "count": 1,
+                "cost": 7561
+              },
+              {
+                "label": "Настройка - Установка/Редактирование/Удаление интеграций (приложения)",
+                "count": 1,
+                "cost": 7561
+              },
+              {
+                "label": "Управление - Создание/Редактирвоание/Удаление сотрудника",
+                "count": 1,
+                "cost": 7561
+              },
+              {
+                "label": "Управление - Создание/Редактирвоание/Удаление роли",
+                "count": 1,
+                "cost": 7561
+              }
+            ]
           },
           {
             "name": "Elnur Muxtasibov Partner («ILNUR OIL SERVICE» XK)",
@@ -70675,6 +76081,7 @@ const BILLZ_DATA = {
             "undesired_pct": 42.1,
             "repeat_count": 1,
             "repeat_pct": 5.3,
+            "massoviy_count": 5,
             "med_close": 2.9,
             "med_frt_min": 0.45,
             "stores_count": 4,
@@ -70683,7 +76090,123 @@ const BILLZ_DATA = {
             "training_total": 0,
             "cost": 143659,
             "top_topic": "Массовый сбой BILLZ",
-            "top_label": "Массовый сбой BILLZ"
+            "top_label": "Массовый сбой BILLZ",
+            "topic_breakdown": [
+              {
+                "topic": "Массовый сбой BILLZ",
+                "count": 5,
+                "pct": 26.3,
+                "undesired": 3,
+                "undesired_pct": 60.0,
+                "repeat": 0,
+                "cost": 37805
+              },
+              {
+                "topic": "Оборудование",
+                "count": 3,
+                "pct": 15.8,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 22683
+              },
+              {
+                "topic": "Каталог",
+                "count": 2,
+                "pct": 10.5,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 15122
+              },
+              {
+                "topic": "Новая продажа",
+                "count": 2,
+                "pct": 10.5,
+                "undesired": 1,
+                "undesired_pct": 50.0,
+                "repeat": 0,
+                "cost": 15122
+              },
+              {
+                "topic": "Управление",
+                "count": 1,
+                "pct": 5.3,
+                "undesired": 1,
+                "undesired_pct": 100.0,
+                "repeat": 0,
+                "cost": 7561
+              },
+              {
+                "topic": "Поставщики",
+                "count": 1,
+                "pct": 5.3,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 7561
+              },
+              {
+                "topic": "Настройка",
+                "count": 1,
+                "pct": 5.3,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 7561
+              },
+              {
+                "topic": "Учётная запись",
+                "count": 1,
+                "pct": 5.3,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 1,
+                "cost": 7561
+              }
+            ],
+            "labels_breakdown": [
+              {
+                "label": "Массовый сбой BILLZ",
+                "count": 5,
+                "cost": 37805
+              },
+              {
+                "label": "Новая продажа - Не удаётся сделать продажу",
+                "count": 2,
+                "cost": 15122
+              },
+              {
+                "label": "Оборудование - Установка/Настройка/Удаление принтера",
+                "count": 2,
+                "cost": 15122
+              },
+              {
+                "label": "Каталог — изменение свойств товара",
+                "count": 1,
+                "cost": 7561
+              },
+              {
+                "label": "Каталог - Просмотр статистики",
+                "count": 1,
+                "cost": 7561
+              },
+              {
+                "label": "Управление - Создание/Редактирвоание/Удаление сотрудника",
+                "count": 1,
+                "cost": 7561
+              },
+              {
+                "label": "Поставщики - Редактирование данных",
+                "count": 1,
+                "cost": 7561
+              },
+              {
+                "label": "Настройка - Установка BILLZ PAY/Payme/Epos/PAX",
+                "count": 1,
+                "cost": 7561
+              }
+            ]
           },
           {
             "name": "Nursulton Javliyev Partner \"INVEST BEST TRADE PRODUCT\"",
@@ -70693,6 +76216,7 @@ const BILLZ_DATA = {
             "undesired_pct": 35.7,
             "repeat_count": 0,
             "repeat_pct": 0.0,
+            "massoviy_count": 2,
             "med_close": 3.85,
             "med_frt_min": 0.45,
             "stores_count": 7,
@@ -70701,7 +76225,132 @@ const BILLZ_DATA = {
             "training_total": 0,
             "cost": 105854,
             "top_topic": "Документооборот",
-            "top_label": "Баг (реквест)"
+            "top_label": "Баг (реквест)",
+            "topic_breakdown": [
+              {
+                "topic": "Документооборот",
+                "count": 3,
+                "pct": 21.4,
+                "undesired": 2,
+                "undesired_pct": 66.7,
+                "repeat": 0,
+                "cost": 22683
+              },
+              {
+                "topic": "Баг (реквест)",
+                "count": 2,
+                "pct": 14.3,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 15122
+              },
+              {
+                "topic": "Массовый сбой BILLZ",
+                "count": 2,
+                "pct": 14.3,
+                "undesired": 1,
+                "undesired_pct": 50.0,
+                "repeat": 0,
+                "cost": 15122
+              },
+              {
+                "topic": "Отчёты",
+                "count": 1,
+                "pct": 7.1,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 7561
+              },
+              {
+                "topic": "Каталог",
+                "count": 1,
+                "pct": 7.1,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 7561
+              },
+              {
+                "topic": "Учётная запись",
+                "count": 1,
+                "pct": 7.1,
+                "undesired": 1,
+                "undesired_pct": 100.0,
+                "repeat": 0,
+                "cost": 7561
+              },
+              {
+                "topic": "Управление",
+                "count": 1,
+                "pct": 7.1,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 7561
+              },
+              {
+                "topic": "Новая продажа",
+                "count": 1,
+                "pct": 7.1,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 7561
+              },
+              {
+                "topic": "Общались по звонку",
+                "count": 1,
+                "pct": 7.1,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 7561
+              }
+            ],
+            "labels_breakdown": [
+              {
+                "label": "Баг (реквест)",
+                "count": 2,
+                "cost": 15122
+              },
+              {
+                "label": "Документооборот - Оплата за тариф",
+                "count": 2,
+                "cost": 15122
+              },
+              {
+                "label": "Массовый сбой BILLZ",
+                "count": 2,
+                "cost": 15122
+              },
+              {
+                "label": "Отчёты - Разбор отчётов",
+                "count": 1,
+                "cost": 7561
+              },
+              {
+                "label": "Документооборот - Консультация по тарифу",
+                "count": 1,
+                "cost": 7561
+              },
+              {
+                "label": "Каталог — изменение свойств товара",
+                "count": 1,
+                "cost": 7561
+              },
+              {
+                "label": "Учётная запись - Блокировка/Разблокировка аккаунта",
+                "count": 1,
+                "cost": 7561
+              },
+              {
+                "label": "Управление - Создание/Редактирвоание/Удаление роли",
+                "count": 1,
+                "cost": 7561
+              }
+            ]
           },
           {
             "name": "Yusupov Mansur Partner (\"MBOS UNION\" XK)",
@@ -70711,6 +76360,7 @@ const BILLZ_DATA = {
             "undesired_pct": 41.7,
             "repeat_count": 0,
             "repeat_pct": 0.0,
+            "massoviy_count": 3,
             "med_close": 3.85,
             "med_frt_min": 0.6,
             "stores_count": 1,
@@ -70719,7 +76369,105 @@ const BILLZ_DATA = {
             "training_total": 0,
             "cost": 90732,
             "top_topic": "Учётная запись",
-            "top_label": "Массовый сбой BILLZ"
+            "top_label": "Массовый сбой BILLZ",
+            "topic_breakdown": [
+              {
+                "topic": "Учётная запись",
+                "count": 4,
+                "pct": 33.3,
+                "undesired": 2,
+                "undesired_pct": 50.0,
+                "repeat": 0,
+                "cost": 30244
+              },
+              {
+                "topic": "Массовый сбой BILLZ",
+                "count": 3,
+                "pct": 25.0,
+                "undesired": 2,
+                "undesired_pct": 66.7,
+                "repeat": 0,
+                "cost": 22683
+              },
+              {
+                "topic": "Документооборот",
+                "count": 2,
+                "pct": 16.7,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 15122
+              },
+              {
+                "topic": "Каталог",
+                "count": 1,
+                "pct": 8.3,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 7561
+              },
+              {
+                "topic": "Управление",
+                "count": 1,
+                "pct": 8.3,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 7561
+              },
+              {
+                "topic": "Отчёты",
+                "count": 1,
+                "pct": 8.3,
+                "undesired": 1,
+                "undesired_pct": 100.0,
+                "repeat": 0,
+                "cost": 7561
+              }
+            ],
+            "labels_breakdown": [
+              {
+                "label": "Массовый сбой BILLZ",
+                "count": 3,
+                "cost": 22683
+              },
+              {
+                "label": "Учётная запись - Создание магазина",
+                "count": 2,
+                "cost": 15122
+              },
+              {
+                "label": "Учётная запись - Очистка магазина",
+                "count": 2,
+                "cost": 15122
+              },
+              {
+                "label": "Документооборот - Реактивация клиента",
+                "count": 1,
+                "cost": 7561
+              },
+              {
+                "label": "Документооборот - Оплата за тариф",
+                "count": 1,
+                "cost": 7561
+              },
+              {
+                "label": "Каталог — изменение свойств товара",
+                "count": 1,
+                "cost": 7561
+              },
+              {
+                "label": "Управление - Создание/Редактирвоание/Удаление роли",
+                "count": 1,
+                "cost": 7561
+              },
+              {
+                "label": "Отчёты - Разбор отчётов",
+                "count": 1,
+                "cost": 7561
+              }
+            ]
           },
           {
             "name": "Nursulton Javliyev  Partner \"INVEST BEST TRADE PRODUCT\"",
@@ -70729,6 +76477,7 @@ const BILLZ_DATA = {
             "undesired_pct": 27.3,
             "repeat_count": 0,
             "repeat_pct": 0.0,
+            "massoviy_count": 0,
             "med_close": 4.6,
             "med_frt_min": 7.8,
             "stores_count": 6,
@@ -70737,7 +76486,105 @@ const BILLZ_DATA = {
             "training_total": 1,
             "cost": 83171,
             "top_topic": "Оборудование",
-            "top_label": "Оборудование - Установка/Настройка/Удаление принтера"
+            "top_label": "Оборудование - Установка/Настройка/Удаление принтера",
+            "topic_breakdown": [
+              {
+                "topic": "Оборудование",
+                "count": 3,
+                "pct": 27.3,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 22683
+              },
+              {
+                "topic": "Документооборот",
+                "count": 3,
+                "pct": 27.3,
+                "undesired": 2,
+                "undesired_pct": 66.7,
+                "repeat": 0,
+                "cost": 22683
+              },
+              {
+                "topic": "Кассовые операции",
+                "count": 1,
+                "pct": 9.1,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 7561
+              },
+              {
+                "topic": "Долги клиентов",
+                "count": 1,
+                "pct": 9.1,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 7561
+              },
+              {
+                "topic": "Каталог",
+                "count": 1,
+                "pct": 9.1,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 7561
+              },
+              {
+                "topic": "Финансы",
+                "count": 1,
+                "pct": 9.1,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 7561
+              }
+            ],
+            "labels_breakdown": [
+              {
+                "label": "Оборудование - Установка/Настройка/Удаление принтера",
+                "count": 2,
+                "cost": 15122
+              },
+              {
+                "label": "Документооборот - Оплата за тариф",
+                "count": 2,
+                "cost": 15122
+              },
+              {
+                "label": "Кассовые операции - Создание дохода/расхода/инкассации",
+                "count": 1,
+                "cost": 7561
+              },
+              {
+                "label": "Долги клиентов - Просмотр статистики по долгам",
+                "count": 1,
+                "cost": 7561
+              },
+              {
+                "label": "Каталог — настройка печати ценника",
+                "count": 1,
+                "cost": 7561
+              },
+              {
+                "label": "Финансы - Частичное обучение",
+                "count": 1,
+                "cost": 7561
+              },
+              {
+                "label": "Документооборот - Реактивация клиента",
+                "count": 1,
+                "cost": 7561
+              },
+              {
+                "label": "Оборудование - Загрузка базу товаров в весы",
+                "count": 1,
+                "cost": 7561
+              }
+            ]
           },
           {
             "name": "O'ktam Murtazaev Partner",
@@ -70747,6 +76594,7 @@ const BILLZ_DATA = {
             "undesired_pct": 55.6,
             "repeat_count": 0,
             "repeat_pct": 0.0,
+            "massoviy_count": 0,
             "med_close": 3.6,
             "med_frt_min": 0.8,
             "stores_count": 3,
@@ -70755,7 +76603,91 @@ const BILLZ_DATA = {
             "training_total": 1,
             "cost": 68049,
             "top_topic": "Документооборот",
-            "top_label": "Документооборот - Оплата за тариф"
+            "top_label": "Документооборот - Оплата за тариф",
+            "topic_breakdown": [
+              {
+                "topic": "Документооборот",
+                "count": 5,
+                "pct": 55.6,
+                "undesired": 3,
+                "undesired_pct": 60.0,
+                "repeat": 0,
+                "cost": 37805
+              },
+              {
+                "topic": "Учётная запись",
+                "count": 1,
+                "pct": 11.1,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 7561
+              },
+              {
+                "topic": "Оборудование",
+                "count": 1,
+                "pct": 11.1,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 7561
+              },
+              {
+                "topic": "Вопрос не по программе",
+                "count": 1,
+                "pct": 11.1,
+                "undesired": 1,
+                "undesired_pct": 100.0,
+                "repeat": 0,
+                "cost": 7561
+              },
+              {
+                "topic": "Трансфер",
+                "count": 1,
+                "pct": 11.1,
+                "undesired": 1,
+                "undesired_pct": 100.0,
+                "repeat": 0,
+                "cost": 7561
+              }
+            ],
+            "labels_breakdown": [
+              {
+                "label": "Документооборот - Оплата за тариф",
+                "count": 3,
+                "cost": 22683
+              },
+              {
+                "label": "Учётная запись - Консультация по данным доп. точек",
+                "count": 1,
+                "cost": 7561
+              },
+              {
+                "label": "Документооборот - Создание ссылки для оплаты",
+                "count": 1,
+                "cost": 7561
+              },
+              {
+                "label": "Оборудование - Установка/Настройка/Удаление принтера",
+                "count": 1,
+                "cost": 7561
+              },
+              {
+                "label": "Документооборот - Консультация по тарифу",
+                "count": 1,
+                "cost": 7561
+              },
+              {
+                "label": "Вопрос не по программе",
+                "count": 1,
+                "cost": 7561
+              },
+              {
+                "label": "Трансфер - консультация по модулю (частичное обучение)",
+                "count": 1,
+                "cost": 7561
+              }
+            ]
           },
           {
             "name": "Baxtiyorov Xikmatillo Partner",
@@ -70765,6 +76697,7 @@ const BILLZ_DATA = {
             "undesired_pct": 55.6,
             "repeat_count": 1,
             "repeat_pct": 11.1,
+            "massoviy_count": 4,
             "med_close": 3.4,
             "med_frt_min": 0.3,
             "stores_count": 2,
@@ -70773,7 +76706,81 @@ const BILLZ_DATA = {
             "training_total": 0,
             "cost": 68049,
             "top_topic": "Массовый сбой BILLZ",
-            "top_label": "Массовый сбой BILLZ"
+            "top_label": "Массовый сбой BILLZ",
+            "topic_breakdown": [
+              {
+                "topic": "Массовый сбой BILLZ",
+                "count": 4,
+                "pct": 44.4,
+                "undesired": 3,
+                "undesired_pct": 75.0,
+                "repeat": 1,
+                "cost": 30244
+              },
+              {
+                "topic": "Кассовые смены",
+                "count": 2,
+                "pct": 22.2,
+                "undesired": 1,
+                "undesired_pct": 50.0,
+                "repeat": 0,
+                "cost": 15122
+              },
+              {
+                "topic": "Каталог",
+                "count": 1,
+                "pct": 11.1,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 7561
+              },
+              {
+                "topic": "Учётная запись",
+                "count": 1,
+                "pct": 11.1,
+                "undesired": 1,
+                "undesired_pct": 100.0,
+                "repeat": 0,
+                "cost": 7561
+              },
+              {
+                "topic": "Все клиенты",
+                "count": 1,
+                "pct": 11.1,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 7561
+              }
+            ],
+            "labels_breakdown": [
+              {
+                "label": "Массовый сбой BILLZ",
+                "count": 4,
+                "cost": 30244
+              },
+              {
+                "label": "Кассовые смены — Расхождение суммы",
+                "count": 2,
+                "cost": 15122
+              },
+              {
+                "label": "Каталог - Просмотр статистики",
+                "count": 1,
+                "cost": 7561
+              },
+              {
+                "label": "Учётная запись - Помощь со входом в аккаунт",
+                "count": 1,
+                "cost": 7561
+              },
+              {
+                "label": "Все клиенты - Редактирование баланса клиента",
+                "count": 1,
+                "cost": 7561
+              }
+            ]
           },
           {
             "name": "Partner",
@@ -70783,6 +76790,7 @@ const BILLZ_DATA = {
             "undesired_pct": 66.7,
             "repeat_count": 0,
             "repeat_pct": 0.0,
+            "massoviy_count": 1,
             "med_close": 7.4,
             "med_frt_min": 0.55,
             "stores_count": 1,
@@ -70791,7 +76799,86 @@ const BILLZ_DATA = {
             "training_total": 0,
             "cost": 68049,
             "top_topic": "Каталог",
-            "top_label": "Импорт — импорт товаров через Excel"
+            "top_label": "Импорт — импорт товаров через Excel",
+            "topic_breakdown": [
+              {
+                "topic": "Каталог",
+                "count": 2,
+                "pct": 22.2,
+                "undesired": 1,
+                "undesired_pct": 50.0,
+                "repeat": 0,
+                "cost": 15122
+              },
+              {
+                "topic": "Импорт",
+                "count": 1,
+                "pct": 11.1,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 7561
+              },
+              {
+                "topic": "Учётная запись",
+                "count": 1,
+                "pct": 11.1,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 7561
+              },
+              {
+                "topic": "Документооборот",
+                "count": 1,
+                "pct": 11.1,
+                "undesired": 1,
+                "undesired_pct": 100.0,
+                "repeat": 0,
+                "cost": 7561
+              },
+              {
+                "topic": "Массовый сбой BILLZ",
+                "count": 1,
+                "pct": 11.1,
+                "undesired": 1,
+                "undesired_pct": 100.0,
+                "repeat": 0,
+                "cost": 7561
+              }
+            ],
+            "labels_breakdown": [
+              {
+                "label": "Импорт — импорт товаров через Excel",
+                "count": 1,
+                "cost": 7561
+              },
+              {
+                "label": "Учётная запись - Очистка магазина",
+                "count": 1,
+                "cost": 7561
+              },
+              {
+                "label": "Каталог - Расхождения количества товаров",
+                "count": 1,
+                "cost": 7561
+              },
+              {
+                "label": "Документооборот - Консультация по тарифу",
+                "count": 1,
+                "cost": 7561
+              },
+              {
+                "label": "Массовый сбой BILLZ",
+                "count": 1,
+                "cost": 7561
+              },
+              {
+                "label": "Каталог - Просмотр статистики",
+                "count": 1,
+                "cost": 7561
+              }
+            ]
           },
           {
             "name": "Azamat Sharipov Partner",
@@ -70801,6 +76888,7 @@ const BILLZ_DATA = {
             "undesired_pct": 75.0,
             "repeat_count": 0,
             "repeat_pct": 0.0,
+            "massoviy_count": 0,
             "med_close": 2.55,
             "med_frt_min": 0.3,
             "stores_count": 4,
@@ -70809,7 +76897,81 @@ const BILLZ_DATA = {
             "training_total": 0,
             "cost": 60488,
             "top_topic": "Документооборот",
-            "top_label": "Документооборот - Консультация по сумме долга"
+            "top_label": "Документооборот - Консультация по сумме долга",
+            "topic_breakdown": [
+              {
+                "topic": "Документооборот",
+                "count": 1,
+                "pct": 12.5,
+                "undesired": 1,
+                "undesired_pct": 100.0,
+                "repeat": 0,
+                "cost": 7561
+              },
+              {
+                "topic": "Учётная запись",
+                "count": 1,
+                "pct": 12.5,
+                "undesired": 1,
+                "undesired_pct": 100.0,
+                "repeat": 0,
+                "cost": 7561
+              },
+              {
+                "topic": "Оборудование",
+                "count": 1,
+                "pct": 12.5,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 7561
+              },
+              {
+                "topic": "SMS рассылка",
+                "count": 1,
+                "pct": 12.5,
+                "undesired": 1,
+                "undesired_pct": 100.0,
+                "repeat": 0,
+                "cost": 7561
+              },
+              {
+                "topic": "Настройка",
+                "count": 1,
+                "pct": 12.5,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 7561
+              }
+            ],
+            "labels_breakdown": [
+              {
+                "label": "Документооборот - Консультация по сумме долга",
+                "count": 1,
+                "cost": 7561
+              },
+              {
+                "label": "Учётная запись - Блокировка/Разблокировка аккаунта",
+                "count": 1,
+                "cost": 7561
+              },
+              {
+                "label": "Оборудование - Установка/Настройка/Удаление принтера",
+                "count": 1,
+                "cost": 7561
+              },
+              {
+                "label": "SMS рассылка - Создание SMS рассылки",
+                "count": 1,
+                "cost": 7561
+              },
+              {
+                "label": "Настройка - Установка BILLZ PAY/Payme/Epos/PAX",
+                "count": 1,
+                "cost": 7561
+              }
+            ]
           },
           {
             "name": "Abdurauf Bobodjonov Partner",
@@ -70819,6 +76981,7 @@ const BILLZ_DATA = {
             "undesired_pct": 50.0,
             "repeat_count": 1,
             "repeat_pct": 12.5,
+            "massoviy_count": 1,
             "med_close": 11.6,
             "med_frt_min": 0.3,
             "stores_count": 2,
@@ -70827,7 +76990,86 @@ const BILLZ_DATA = {
             "training_total": 0,
             "cost": 60488,
             "top_topic": "Документооборот",
-            "top_label": "Документооборот - Оплата за тариф"
+            "top_label": "Документооборот - Оплата за тариф",
+            "topic_breakdown": [
+              {
+                "topic": "Документооборот",
+                "count": 4,
+                "pct": 50.0,
+                "undesired": 2,
+                "undesired_pct": 50.0,
+                "repeat": 1,
+                "cost": 30244
+              },
+              {
+                "topic": "Баг (реквест)",
+                "count": 1,
+                "pct": 12.5,
+                "undesired": 1,
+                "undesired_pct": 100.0,
+                "repeat": 0,
+                "cost": 7561
+              },
+              {
+                "topic": "Все продажи",
+                "count": 1,
+                "pct": 12.5,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 7561
+              },
+              {
+                "topic": "Долги клиентов",
+                "count": 1,
+                "pct": 12.5,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 7561
+              },
+              {
+                "topic": "Массовый сбой BILLZ",
+                "count": 1,
+                "pct": 12.5,
+                "undesired": 1,
+                "undesired_pct": 100.0,
+                "repeat": 0,
+                "cost": 7561
+              }
+            ],
+            "labels_breakdown": [
+              {
+                "label": "Документооборот - Оплата за тариф",
+                "count": 3,
+                "cost": 22683
+              },
+              {
+                "label": "Документооборот - Создание ссылки для оплаты",
+                "count": 1,
+                "cost": 7561
+              },
+              {
+                "label": "Баг (реквест)",
+                "count": 1,
+                "cost": 7561
+              },
+              {
+                "label": "Все продажи - Не удается найти продажу",
+                "count": 1,
+                "cost": 7561
+              },
+              {
+                "label": "Долги клиентов - Погашение/Удаление/Редактирование долга",
+                "count": 1,
+                "cost": 7561
+              },
+              {
+                "label": "Массовый сбой BILLZ",
+                "count": 1,
+                "cost": 7561
+              }
+            ]
           },
           {
             "name": "Safarov Azamat Partner",
@@ -70837,6 +77079,7 @@ const BILLZ_DATA = {
             "undesired_pct": 28.6,
             "repeat_count": 0,
             "repeat_pct": 0.0,
+            "massoviy_count": 2,
             "med_close": 6.0,
             "med_frt_min": 0.4,
             "stores_count": 1,
@@ -70845,7 +77088,95 @@ const BILLZ_DATA = {
             "training_total": 0,
             "cost": 52927,
             "top_topic": "Массовый сбой BILLZ",
-            "top_label": "Массовый сбой BILLZ"
+            "top_label": "Массовый сбой BILLZ",
+            "topic_breakdown": [
+              {
+                "topic": "Массовый сбой BILLZ",
+                "count": 2,
+                "pct": 28.6,
+                "undesired": 1,
+                "undesired_pct": 50.0,
+                "repeat": 0,
+                "cost": 15122
+              },
+              {
+                "topic": "Управление",
+                "count": 1,
+                "pct": 14.3,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 7561
+              },
+              {
+                "topic": "Новая продажа",
+                "count": 1,
+                "pct": 14.3,
+                "undesired": 1,
+                "undesired_pct": 100.0,
+                "repeat": 0,
+                "cost": 7561
+              },
+              {
+                "topic": "Учётная запись",
+                "count": 1,
+                "pct": 14.3,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 7561
+              },
+              {
+                "topic": "Сверка данных",
+                "count": 1,
+                "pct": 14.3,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 7561
+              },
+              {
+                "topic": "Баг (реквест)",
+                "count": 1,
+                "pct": 14.3,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 7561
+              }
+            ],
+            "labels_breakdown": [
+              {
+                "label": "Массовый сбой BILLZ",
+                "count": 2,
+                "cost": 15122
+              },
+              {
+                "label": "Управление - Создание/Редактирвоание/Удаление роли",
+                "count": 1,
+                "cost": 7561
+              },
+              {
+                "label": "Новая продажа - Возврат/Обмен",
+                "count": 1,
+                "cost": 7561
+              },
+              {
+                "label": "Учётная запись - Создание магазина",
+                "count": 1,
+                "cost": 7561
+              },
+              {
+                "label": "Сверка данных",
+                "count": 1,
+                "cost": 7561
+              },
+              {
+                "label": "Баг (реквест)",
+                "count": 1,
+                "cost": 7561
+              }
+            ]
           },
           {
             "name": "Sales Partner",
@@ -70855,6 +77186,7 @@ const BILLZ_DATA = {
             "undesired_pct": 66.7,
             "repeat_count": 1,
             "repeat_pct": 16.7,
+            "massoviy_count": 3,
             "med_close": 3.65,
             "med_frt_min": 0,
             "stores_count": 3,
@@ -70863,7 +77195,53 @@ const BILLZ_DATA = {
             "training_total": 0,
             "cost": 45366,
             "top_topic": "Массовый сбой BILLZ",
-            "top_label": "Массовый сбой BILLZ"
+            "top_label": "Массовый сбой BILLZ",
+            "topic_breakdown": [
+              {
+                "topic": "Массовый сбой BILLZ",
+                "count": 3,
+                "pct": 50.0,
+                "undesired": 2,
+                "undesired_pct": 66.7,
+                "repeat": 0,
+                "cost": 22683
+              },
+              {
+                "topic": "Учётная запись",
+                "count": 1,
+                "pct": 16.7,
+                "undesired": 1,
+                "undesired_pct": 100.0,
+                "repeat": 0,
+                "cost": 7561
+              },
+              {
+                "topic": "Новая продажа",
+                "count": 1,
+                "pct": 16.7,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 7561
+              }
+            ],
+            "labels_breakdown": [
+              {
+                "label": "Массовый сбой BILLZ",
+                "count": 3,
+                "cost": 22683
+              },
+              {
+                "label": "Учётная запись - Помощь со входом в аккаунт",
+                "count": 1,
+                "cost": 7561
+              },
+              {
+                "label": "Новая продажа - Не удаётся сделать продажу",
+                "count": 1,
+                "cost": 7561
+              }
+            ]
           },
           {
             "name": "Shuxrat Ergashev Partner",
@@ -70873,6 +77251,7 @@ const BILLZ_DATA = {
             "undesired_pct": 83.3,
             "repeat_count": 0,
             "repeat_pct": 0.0,
+            "massoviy_count": 4,
             "med_close": 21.95,
             "med_frt_min": 0,
             "stores_count": 1,
@@ -70881,7 +77260,25 @@ const BILLZ_DATA = {
             "training_total": 0,
             "cost": 45366,
             "top_topic": "Массовый сбой BILLZ",
-            "top_label": "Массовый сбой BILLZ"
+            "top_label": "Массовый сбой BILLZ",
+            "topic_breakdown": [
+              {
+                "topic": "Массовый сбой BILLZ",
+                "count": 4,
+                "pct": 66.7,
+                "undesired": 3,
+                "undesired_pct": 75.0,
+                "repeat": 0,
+                "cost": 30244
+              }
+            ],
+            "labels_breakdown": [
+              {
+                "label": "Массовый сбой BILLZ",
+                "count": 4,
+                "cost": 30244
+              }
+            ]
           },
           {
             "name": "Nurali Raxmatov Partner (OOO DILNUR PRINT)",
@@ -70891,6 +77288,7 @@ const BILLZ_DATA = {
             "undesired_pct": 100.0,
             "repeat_count": 1,
             "repeat_pct": 20.0,
+            "massoviy_count": 0,
             "med_close": 10.8,
             "med_frt_min": 0,
             "stores_count": 1,
@@ -70899,7 +77297,44 @@ const BILLZ_DATA = {
             "training_total": 0,
             "cost": 37805,
             "top_topic": "Документооборот",
-            "top_label": "Документооборот - Оплата за тариф"
+            "top_label": "Документооборот - Оплата за тариф",
+            "topic_breakdown": [
+              {
+                "topic": "Документооборот",
+                "count": 3,
+                "pct": 60.0,
+                "undesired": 3,
+                "undesired_pct": 100.0,
+                "repeat": 1,
+                "cost": 22683
+              },
+              {
+                "topic": "Оборудование",
+                "count": 2,
+                "pct": 40.0,
+                "undesired": 2,
+                "undesired_pct": 100.0,
+                "repeat": 0,
+                "cost": 15122
+              }
+            ],
+            "labels_breakdown": [
+              {
+                "label": "Документооборот - Оплата за тариф",
+                "count": 2,
+                "cost": 15122
+              },
+              {
+                "label": "Оборудование - Установка/Настройка/Удаление принтера",
+                "count": 2,
+                "cost": 15122
+              },
+              {
+                "label": "Документооборот - Консультация по сумме долга",
+                "count": 1,
+                "cost": 7561
+              }
+            ]
           },
           {
             "name": "Nozim Axunjanov Partner (ONHAYOT TRADE MCHJ)",
@@ -70909,6 +77344,7 @@ const BILLZ_DATA = {
             "undesired_pct": 40.0,
             "repeat_count": 0,
             "repeat_pct": 0.0,
+            "massoviy_count": 1,
             "med_close": 12.3,
             "med_frt_min": 9.3,
             "stores_count": 3,
@@ -70917,7 +77353,67 @@ const BILLZ_DATA = {
             "training_total": 1,
             "cost": 37805,
             "top_topic": "Новая продажа",
-            "top_label": "Новая продажа - Возврат/Обмен"
+            "top_label": "Новая продажа - Возврат/Обмен",
+            "topic_breakdown": [
+              {
+                "topic": "Новая продажа",
+                "count": 2,
+                "pct": 40.0,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 15122
+              },
+              {
+                "topic": "Каталог",
+                "count": 1,
+                "pct": 20.0,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 7561
+              },
+              {
+                "topic": "Трансфер",
+                "count": 1,
+                "pct": 20.0,
+                "undesired": 1,
+                "undesired_pct": 100.0,
+                "repeat": 0,
+                "cost": 7561
+              },
+              {
+                "topic": "Массовый сбой BILLZ",
+                "count": 1,
+                "pct": 20.0,
+                "undesired": 1,
+                "undesired_pct": 100.0,
+                "repeat": 0,
+                "cost": 7561
+              }
+            ],
+            "labels_breakdown": [
+              {
+                "label": "Новая продажа - Возврат/Обмен",
+                "count": 2,
+                "cost": 15122
+              },
+              {
+                "label": "Каталог - Просмотр статистики",
+                "count": 1,
+                "cost": 7561
+              },
+              {
+                "label": "Трансфер - консультация по модулю (частичное обучение)",
+                "count": 1,
+                "cost": 7561
+              },
+              {
+                "label": "Массовый сбой BILLZ",
+                "count": 1,
+                "cost": 7561
+              }
+            ]
           },
           {
             "name": "CS партнёр",
@@ -70927,6 +77423,7 @@ const BILLZ_DATA = {
             "undesired_pct": 60.0,
             "repeat_count": 0,
             "repeat_pct": 0.0,
+            "massoviy_count": 0,
             "med_close": 1.7,
             "med_frt_min": 0.35,
             "stores_count": 1,
@@ -70935,7 +77432,44 @@ const BILLZ_DATA = {
             "training_total": 0,
             "cost": 37805,
             "top_topic": "Настройка",
-            "top_label": "Настройка - Создание/Редактирование/Удаление доп. точки"
+            "top_label": "Настройка - Создание/Редактирование/Удаление доп. точки",
+            "topic_breakdown": [
+              {
+                "topic": "Настройка",
+                "count": 2,
+                "pct": 40.0,
+                "undesired": 1,
+                "undesired_pct": 50.0,
+                "repeat": 0,
+                "cost": 15122
+              },
+              {
+                "topic": "Все продажи",
+                "count": 1,
+                "pct": 20.0,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 7561
+              }
+            ],
+            "labels_breakdown": [
+              {
+                "label": "Настройка - Создание/Редактирование/Удаление доп. точки",
+                "count": 1,
+                "cost": 7561
+              },
+              {
+                "label": "Настройка - Установка BILLZ PAY/Payme/Epos/PAX",
+                "count": 1,
+                "cost": 7561
+              },
+              {
+                "label": "Все продажи - Удаление/Редактирование продажи",
+                "count": 1,
+                "cost": 7561
+              }
+            ]
           },
           {
             "name": "Shuhrat Asadov Partner",
@@ -70945,6 +77479,7 @@ const BILLZ_DATA = {
             "undesired_pct": 100.0,
             "repeat_count": 0,
             "repeat_pct": 0.0,
+            "massoviy_count": 1,
             "med_close": 2.55,
             "med_frt_min": 0.4,
             "stores_count": 1,
@@ -70953,7 +77488,53 @@ const BILLZ_DATA = {
             "training_total": 0,
             "cost": 30244,
             "top_topic": "Документооборот",
-            "top_label": "Документооборот - Оплата за тариф"
+            "top_label": "Документооборот - Оплата за тариф",
+            "topic_breakdown": [
+              {
+                "topic": "Документооборот",
+                "count": 2,
+                "pct": 50.0,
+                "undesired": 2,
+                "undesired_pct": 100.0,
+                "repeat": 0,
+                "cost": 15122
+              },
+              {
+                "topic": "Массовый сбой BILLZ",
+                "count": 1,
+                "pct": 25.0,
+                "undesired": 1,
+                "undesired_pct": 100.0,
+                "repeat": 0,
+                "cost": 7561
+              },
+              {
+                "topic": "Баг (реквест)",
+                "count": 1,
+                "pct": 25.0,
+                "undesired": 1,
+                "undesired_pct": 100.0,
+                "repeat": 0,
+                "cost": 7561
+              }
+            ],
+            "labels_breakdown": [
+              {
+                "label": "Документооборот - Оплата за тариф",
+                "count": 2,
+                "cost": 15122
+              },
+              {
+                "label": "Массовый сбой BILLZ",
+                "count": 1,
+                "cost": 7561
+              },
+              {
+                "label": "Баг (реквест)",
+                "count": 1,
+                "cost": 7561
+              }
+            ]
           },
           {
             "name": "Shaxobiddinov Javlonbek Surxandarya Partner (\"DIGITAL TEXSERVIS\" MChJ)",
@@ -70963,6 +77544,7 @@ const BILLZ_DATA = {
             "undesired_pct": 50.0,
             "repeat_count": 0,
             "repeat_pct": 0.0,
+            "massoviy_count": 0,
             "med_close": 8.45,
             "med_frt_min": 0,
             "stores_count": 2,
@@ -70971,7 +77553,53 @@ const BILLZ_DATA = {
             "training_total": 0,
             "cost": 30244,
             "top_topic": "Оборудование",
-            "top_label": "Оборудование - Установка/Настройка/Удаление принтера"
+            "top_label": "Оборудование - Установка/Настройка/Удаление принтера",
+            "topic_breakdown": [
+              {
+                "topic": "Оборудование",
+                "count": 2,
+                "pct": 50.0,
+                "undesired": 1,
+                "undesired_pct": 50.0,
+                "repeat": 0,
+                "cost": 15122
+              },
+              {
+                "topic": "Учётная запись",
+                "count": 1,
+                "pct": 25.0,
+                "undesired": 1,
+                "undesired_pct": 100.0,
+                "repeat": 0,
+                "cost": 7561
+              },
+              {
+                "topic": "Каталог",
+                "count": 1,
+                "pct": 25.0,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 7561
+              }
+            ],
+            "labels_breakdown": [
+              {
+                "label": "Оборудование - Установка/Настройка/Удаление принтера",
+                "count": 2,
+                "cost": 15122
+              },
+              {
+                "label": "Учётная запись - Помощь со входом в аккаунт",
+                "count": 1,
+                "cost": 7561
+              },
+              {
+                "label": "Каталог - Скачивание товаров",
+                "count": 1,
+                "cost": 7561
+              }
+            ]
           },
           {
             "name": "Наш партнёр",
@@ -70981,6 +77609,7 @@ const BILLZ_DATA = {
             "undesired_pct": 100.0,
             "repeat_count": 1,
             "repeat_pct": 25.0,
+            "massoviy_count": 0,
             "med_close": 1.0,
             "med_frt_min": 0.4,
             "stores_count": 1,
@@ -70989,7 +77618,39 @@ const BILLZ_DATA = {
             "training_total": 0,
             "cost": 30244,
             "top_topic": "Учётная запись",
-            "top_label": "Учётная запись - Создание магазина"
+            "top_label": "Учётная запись - Создание магазина",
+            "topic_breakdown": [
+              {
+                "topic": "Учётная запись",
+                "count": 3,
+                "pct": 75.0,
+                "undesired": 3,
+                "undesired_pct": 100.0,
+                "repeat": 1,
+                "cost": 22683
+              },
+              {
+                "topic": "Вопрос не по программе",
+                "count": 1,
+                "pct": 25.0,
+                "undesired": 1,
+                "undesired_pct": 100.0,
+                "repeat": 0,
+                "cost": 7561
+              }
+            ],
+            "labels_breakdown": [
+              {
+                "label": "Учётная запись - Создание магазина",
+                "count": 3,
+                "cost": 22683
+              },
+              {
+                "label": "Вопрос не по программе",
+                "count": 1,
+                "cost": 7561
+              }
+            ]
           },
           {
             "name": "Elnur Muxtasibov («ILNUR OIL SERVICE» XK Partner)",
@@ -70999,6 +77660,7 @@ const BILLZ_DATA = {
             "undesired_pct": 100.0,
             "repeat_count": 0,
             "repeat_pct": 0.0,
+            "massoviy_count": 2,
             "med_close": 28.7,
             "med_frt_min": 0,
             "stores_count": 2,
@@ -71007,7 +77669,25 @@ const BILLZ_DATA = {
             "training_total": 0,
             "cost": 22683,
             "top_topic": "Массовый сбой BILLZ",
-            "top_label": "Массовый сбой BILLZ"
+            "top_label": "Массовый сбой BILLZ",
+            "topic_breakdown": [
+              {
+                "topic": "Массовый сбой BILLZ",
+                "count": 2,
+                "pct": 66.7,
+                "undesired": 2,
+                "undesired_pct": 100.0,
+                "repeat": 0,
+                "cost": 15122
+              }
+            ],
+            "labels_breakdown": [
+              {
+                "label": "Массовый сбой BILLZ",
+                "count": 2,
+                "cost": 15122
+              }
+            ]
           },
           {
             "name": "Bunyod Baxriddinov Partner (\"BAXORA HAYRIYA\" OK)",
@@ -71017,6 +77697,7 @@ const BILLZ_DATA = {
             "undesired_pct": 33.3,
             "repeat_count": 0,
             "repeat_pct": 0.0,
+            "massoviy_count": 0,
             "med_close": 4.6,
             "med_frt_min": 0.5,
             "stores_count": 1,
@@ -71025,7 +77706,39 @@ const BILLZ_DATA = {
             "training_total": 1,
             "cost": 22683,
             "top_topic": "Новая продажа",
-            "top_label": "Новая продажа - Возврат/Обмен"
+            "top_label": "Новая продажа - Возврат/Обмен",
+            "topic_breakdown": [
+              {
+                "topic": "Новая продажа",
+                "count": 2,
+                "pct": 66.7,
+                "undesired": 1,
+                "undesired_pct": 50.0,
+                "repeat": 0,
+                "cost": 15122
+              },
+              {
+                "topic": "Все продажи",
+                "count": 1,
+                "pct": 33.3,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 7561
+              }
+            ],
+            "labels_breakdown": [
+              {
+                "label": "Новая продажа - Возврат/Обмен",
+                "count": 2,
+                "cost": 15122
+              },
+              {
+                "label": "Все продажи - Частичное обучение",
+                "count": 1,
+                "cost": 7561
+              }
+            ]
           },
           {
             "name": "Mirjon Muzafarov Partner",
@@ -71035,6 +77748,7 @@ const BILLZ_DATA = {
             "undesired_pct": 33.3,
             "repeat_count": 0,
             "repeat_pct": 0.0,
+            "massoviy_count": 0,
             "med_close": 1.2,
             "med_frt_min": 0.3,
             "stores_count": 1,
@@ -71043,7 +77757,25 @@ const BILLZ_DATA = {
             "training_total": 0,
             "cost": 22683,
             "top_topic": "Документооборот",
-            "top_label": "Документооборот - Оплата за тариф"
+            "top_label": "Документооборот - Оплата за тариф",
+            "topic_breakdown": [
+              {
+                "topic": "Документооборот",
+                "count": 2,
+                "pct": 66.7,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 15122
+              }
+            ],
+            "labels_breakdown": [
+              {
+                "label": "Документооборот - Оплата за тариф",
+                "count": 2,
+                "cost": 15122
+              }
+            ]
           },
           {
             "name": "ПАРТНЕР",
@@ -71053,6 +77785,7 @@ const BILLZ_DATA = {
             "undesired_pct": 66.7,
             "repeat_count": 1,
             "repeat_pct": 33.3,
+            "massoviy_count": 0,
             "med_close": 2.6,
             "med_frt_min": 0,
             "stores_count": 1,
@@ -71061,7 +77794,39 @@ const BILLZ_DATA = {
             "training_total": 0,
             "cost": 22683,
             "top_topic": "Группы и теги",
-            "top_label": "Группы и теги - Создание/Удаление/Редактирование"
+            "top_label": "Группы и теги - Создание/Удаление/Редактирование",
+            "topic_breakdown": [
+              {
+                "topic": "Группы и теги",
+                "count": 2,
+                "pct": 66.7,
+                "undesired": 2,
+                "undesired_pct": 100.0,
+                "repeat": 1,
+                "cost": 15122
+              },
+              {
+                "topic": "Управление",
+                "count": 1,
+                "pct": 33.3,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 7561
+              }
+            ],
+            "labels_breakdown": [
+              {
+                "label": "Группы и теги - Создание/Удаление/Редактирование",
+                "count": 2,
+                "cost": 15122
+              },
+              {
+                "label": "Управление - Создание/Редактирвоание/Удаление роли",
+                "count": 1,
+                "cost": 7561
+              }
+            ]
           },
           {
             "name": "Ilnur Партнер самарканд",
@@ -71071,6 +77836,7 @@ const BILLZ_DATA = {
             "undesired_pct": 100.0,
             "repeat_count": 0,
             "repeat_pct": 0.0,
+            "massoviy_count": 3,
             "med_close": 4.3,
             "med_frt_min": 0,
             "stores_count": 1,
@@ -71079,7 +77845,25 @@ const BILLZ_DATA = {
             "training_total": 0,
             "cost": 22683,
             "top_topic": "Массовый сбой BILLZ",
-            "top_label": "Массовый сбой BILLZ"
+            "top_label": "Массовый сбой BILLZ",
+            "topic_breakdown": [
+              {
+                "topic": "Массовый сбой BILLZ",
+                "count": 3,
+                "pct": 100.0,
+                "undesired": 3,
+                "undesired_pct": 100.0,
+                "repeat": 0,
+                "cost": 22683
+              }
+            ],
+            "labels_breakdown": [
+              {
+                "label": "Массовый сбой BILLZ",
+                "count": 3,
+                "cost": 22683
+              }
+            ]
           },
           {
             "name": "PARTNER Aziz Shakirov",
@@ -71089,6 +77873,7 @@ const BILLZ_DATA = {
             "undesired_pct": 50.0,
             "repeat_count": 0,
             "repeat_pct": 0.0,
+            "massoviy_count": 0,
             "med_close": 3.25,
             "med_frt_min": 0.2,
             "stores_count": 1,
@@ -71097,43 +77882,39 @@ const BILLZ_DATA = {
             "training_total": 0,
             "cost": 15122,
             "top_topic": "Учётная запись",
-            "top_label": "Учётная запись - Помощь со входом в аккаунт"
-          },
-          {
-            "name": "Партнёр",
-            "tickets": 2,
-            "desired": 2,
-            "undesired": 0,
-            "undesired_pct": 0.0,
-            "repeat_count": 0,
-            "repeat_pct": 0.0,
-            "med_close": 2.5,
-            "med_frt_min": 0,
-            "stores_count": 1,
-            "training_partial": 0,
-            "training_full": 0,
-            "training_total": 0,
-            "cost": 15122,
-            "top_topic": "Каталог — настройка печати ценника",
-            "top_label": "Каталог — настройка печати ценника"
-          },
-          {
-            "name": "Husan Artikov /  Texnopos Partner",
-            "tickets": 2,
-            "desired": 2,
-            "undesired": 0,
-            "undesired_pct": 0.0,
-            "repeat_count": 0,
-            "repeat_pct": 0.0,
-            "med_close": 5.75,
-            "med_frt_min": 0.2,
-            "stores_count": 1,
-            "training_partial": 0,
-            "training_full": 0,
-            "training_total": 0,
-            "cost": 15122,
-            "top_topic": "Оборудование",
-            "top_label": "Оборудование - Установка/Настройка/Удаление принтера"
+            "top_label": "Учётная запись - Помощь со входом в аккаунт",
+            "topic_breakdown": [
+              {
+                "topic": "Учётная запись",
+                "count": 1,
+                "pct": 50.0,
+                "undesired": 1,
+                "undesired_pct": 100.0,
+                "repeat": 0,
+                "cost": 7561
+              },
+              {
+                "topic": "Каталог",
+                "count": 1,
+                "pct": 50.0,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 7561
+              }
+            ],
+            "labels_breakdown": [
+              {
+                "label": "Учётная запись - Помощь со входом в аккаунт",
+                "count": 1,
+                "cost": 7561
+              },
+              {
+                "label": "Каталог - Скачивание товаров",
+                "count": 1,
+                "cost": 7561
+              }
+            ]
           },
           {
             "name": "Support manager Other Partner",
@@ -71143,6 +77924,7 @@ const BILLZ_DATA = {
             "undesired_pct": 50.0,
             "repeat_count": 0,
             "repeat_pct": 0.0,
+            "massoviy_count": 0,
             "med_close": 8.1,
             "med_frt_min": 0,
             "stores_count": 1,
@@ -71151,7 +77933,25 @@ const BILLZ_DATA = {
             "training_total": 0,
             "cost": 15122,
             "top_topic": "Учётная запись",
-            "top_label": "Учётная запись - Не удаётся войти в аккаунт"
+            "top_label": "Учётная запись - Не удаётся войти в аккаунт",
+            "topic_breakdown": [
+              {
+                "topic": "Учётная запись",
+                "count": 1,
+                "pct": 50.0,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 7561
+              }
+            ],
+            "labels_breakdown": [
+              {
+                "label": "Учётная запись - Не удаётся войти в аккаунт",
+                "count": 1,
+                "cost": 7561
+              }
+            ]
           },
           {
             "name": "Alisher Azimov (PartnerYTT TILYABAYEVA SITORAXON G'ULOMQODIR QI)",
@@ -71161,6 +77961,7 @@ const BILLZ_DATA = {
             "undesired_pct": 0.0,
             "repeat_count": 0,
             "repeat_pct": 0.0,
+            "massoviy_count": 0,
             "med_close": 1.4,
             "med_frt_min": 0.2,
             "stores_count": 1,
@@ -71169,7 +77970,25 @@ const BILLZ_DATA = {
             "training_total": 0,
             "cost": 7561,
             "top_topic": "Документооборот",
-            "top_label": "Документооборот - Создание ссылки для оплаты"
+            "top_label": "Документооборот - Создание ссылки для оплаты",
+            "topic_breakdown": [
+              {
+                "topic": "Документооборот",
+                "count": 1,
+                "pct": 100.0,
+                "undesired": 0,
+                "undesired_pct": 0.0,
+                "repeat": 0,
+                "cost": 7561
+              }
+            ],
+            "labels_breakdown": [
+              {
+                "label": "Документооборот - Создание ссылки для оплаты",
+                "count": 1,
+                "cost": 7561
+              }
+            ]
           },
           {
             "name": "Rahmatulloh Mahmudov Partner",
@@ -71179,6 +77998,7 @@ const BILLZ_DATA = {
             "undesired_pct": 100.0,
             "repeat_count": 0,
             "repeat_pct": 0.0,
+            "massoviy_count": 0,
             "med_close": 14.9,
             "med_frt_min": 0.5,
             "stores_count": 1,
@@ -71187,7 +78007,25 @@ const BILLZ_DATA = {
             "training_total": 0,
             "cost": 7561,
             "top_topic": "Документооборот",
-            "top_label": "Документооборот - Оплата за тариф"
+            "top_label": "Документооборот - Оплата за тариф",
+            "topic_breakdown": [
+              {
+                "topic": "Документооборот",
+                "count": 1,
+                "pct": 100.0,
+                "undesired": 1,
+                "undesired_pct": 100.0,
+                "repeat": 0,
+                "cost": 7561
+              }
+            ],
+            "labels_breakdown": [
+              {
+                "label": "Документооборот - Оплата за тариф",
+                "count": 1,
+                "cost": 7561
+              }
+            ]
           },
           {
             "name": "Nozim Axunjanov (Partner ONHAYOT TRADE MCHJ)",
@@ -71197,6 +78035,7 @@ const BILLZ_DATA = {
             "undesired_pct": 100.0,
             "repeat_count": 0,
             "repeat_pct": 0.0,
+            "massoviy_count": 0,
             "med_close": 38.9,
             "med_frt_min": 0,
             "stores_count": 1,
@@ -71205,7 +78044,25 @@ const BILLZ_DATA = {
             "training_total": 0,
             "cost": 7561,
             "top_topic": "Трансфер",
-            "top_label": "Трансфер - Просмотр логов действий"
+            "top_label": "Трансфер - Просмотр логов действий",
+            "topic_breakdown": [
+              {
+                "topic": "Трансфер",
+                "count": 1,
+                "pct": 100.0,
+                "undesired": 1,
+                "undesired_pct": 100.0,
+                "repeat": 0,
+                "cost": 7561
+              }
+            ],
+            "labels_breakdown": [
+              {
+                "label": "Трансфер - Просмотр логов действий",
+                "count": 1,
+                "cost": 7561
+              }
+            ]
           },
           {
             "name": "Nozim Axunjanov (Partner)",
@@ -71215,6 +78072,7 @@ const BILLZ_DATA = {
             "undesired_pct": 100.0,
             "repeat_count": 0,
             "repeat_pct": 0.0,
+            "massoviy_count": 1,
             "med_close": 0.7,
             "med_frt_min": 0.5,
             "stores_count": 1,
@@ -71223,7 +78081,25 @@ const BILLZ_DATA = {
             "training_total": 0,
             "cost": 7561,
             "top_topic": "Массовый сбой BILLZ",
-            "top_label": "Массовый сбой BILLZ"
+            "top_label": "Массовый сбой BILLZ",
+            "topic_breakdown": [
+              {
+                "topic": "Массовый сбой BILLZ",
+                "count": 1,
+                "pct": 100.0,
+                "undesired": 1,
+                "undesired_pct": 100.0,
+                "repeat": 0,
+                "cost": 7561
+              }
+            ],
+            "labels_breakdown": [
+              {
+                "label": "Массовый сбой BILLZ",
+                "count": 1,
+                "cost": 7561
+              }
+            ]
           },
           {
             "name": "Ruslan Ernazarov Partner",
@@ -71233,6 +78109,7 @@ const BILLZ_DATA = {
             "undesired_pct": 100.0,
             "repeat_count": 0,
             "repeat_pct": 0.0,
+            "massoviy_count": 0,
             "med_close": 3.7,
             "med_frt_min": 0,
             "stores_count": 1,
@@ -71240,8 +78117,26 @@ const BILLZ_DATA = {
             "training_full": 0,
             "training_total": 0,
             "cost": 7561,
-            "top_topic": "Каталог — настройка печати ценника",
-            "top_label": "Каталог — настройка печати ценника"
+            "top_topic": "Каталог",
+            "top_label": "Каталог — настройка печати ценника",
+            "topic_breakdown": [
+              {
+                "topic": "Каталог",
+                "count": 1,
+                "pct": 100.0,
+                "undesired": 1,
+                "undesired_pct": 100.0,
+                "repeat": 0,
+                "cost": 7561
+              }
+            ],
+            "labels_breakdown": [
+              {
+                "label": "Каталог — настройка печати ценника",
+                "count": 1,
+                "cost": 7561
+              }
+            ]
           }
         ],
         "top_labels": [
@@ -71404,6 +78299,10 @@ const BILLZ_DATA = {
             "tickets": 87
           },
           {
+            "name": "Каталог",
+            "tickets": 85
+          },
+          {
             "name": "Настройка",
             "tickets": 56
           },
@@ -71420,24 +78319,8 @@ const BILLZ_DATA = {
             "tickets": 25
           },
           {
-            "name": "Каталог — настройка печати ценника",
-            "tickets": 24
-          },
-          {
             "name": "Баг (реквест)",
             "tickets": 21
-          },
-          {
-            "name": "Каталог",
-            "tickets": 20
-          },
-          {
-            "name": "Каталог — запрос на добавление товара",
-            "tickets": 19
-          },
-          {
-            "name": "Каталог — изменение свойств товара",
-            "tickets": 16
           },
           {
             "name": "Долги клиентов",
@@ -71446,6 +78329,18 @@ const BILLZ_DATA = {
           {
             "name": "Все продажи",
             "tickets": 15
+          },
+          {
+            "name": "Кассовые смены",
+            "tickets": 15
+          },
+          {
+            "name": "SMS рассылка",
+            "tickets": 13
+          },
+          {
+            "name": "Вопрос не по программе",
+            "tickets": 12
           }
         ],
         "by_store": [
@@ -71453,7 +78348,7 @@ const BILLZ_DATA = {
             "name": "BILLZ",
             "tickets": 232,
             "cost": 1754152,
-            "partner": "ПАРТНЁР"
+            "partner": "ПАРТНЁР (без указания)"
           },
           {
             "name": "ota-bola-fayiz",
@@ -71471,7 +78366,7 @@ const BILLZ_DATA = {
             "name": "ПАРТНЁР",
             "tickets": 21,
             "cost": 158781,
-            "partner": "ПАРТНЁР"
+            "partner": "ПАРТНЁР (без указания)"
           },
           {
             "name": "chinobodlyuks",
@@ -72123,7 +79018,7 @@ const BILLZ_DATA = {
     "total_partner_tickets": 1281,
     "total_partner_cost": 9685641,
     "partner_share_pct": 11.3,
-    "partners_count": 52,
+    "partners_count": 50,
     "desired_total": 567,
     "undesired_total": 683,
     "undesired_pct_avg": 53.3,
@@ -72133,22 +79028,175 @@ const BILLZ_DATA = {
     "tpc": 4.42,
     "by_partner": [
       {
-        "name": "ПАРТНЁР",
-        "tickets": 143,
-        "desired": 65,
+        "name": "ПАРТНЁР (без указания)",
+        "tickets": 145,
+        "desired": 67,
         "undesired": 75,
-        "undesired_pct": 52.4,
+        "undesired_pct": 51.7,
         "repeat_count": 12,
-        "repeat_pct": 8.4,
+        "repeat_pct": 8.3,
+        "massoviy_count": 3,
         "med_close": 2.3,
         "med_frt_min": 0.4,
-        "stores_count": 3,
+        "stores_count": 4,
         "training_partial": 0,
         "training_full": 0,
         "training_total": 0,
-        "cost": 1081223,
+        "cost": 1096345,
         "top_topic": "Учётная запись",
-        "top_label": "Учётная запись - Блокировка/Разблокировка аккаунта"
+        "top_label": "Учётная запись - Блокировка/Разблокировка аккаунта",
+        "topic_breakdown": [
+          {
+            "topic": "Учётная запись",
+            "count": 37,
+            "pct": 25.5,
+            "undesired": 20,
+            "undesired_pct": 54.1,
+            "repeat": 4,
+            "cost": 279757
+          },
+          {
+            "topic": "Документооборот",
+            "count": 31,
+            "pct": 21.4,
+            "undesired": 13,
+            "undesired_pct": 41.9,
+            "repeat": 1,
+            "cost": 234391
+          },
+          {
+            "topic": "Каталог",
+            "count": 10,
+            "pct": 6.9,
+            "undesired": 5,
+            "undesired_pct": 50.0,
+            "repeat": 1,
+            "cost": 75610
+          },
+          {
+            "topic": "Оборудование",
+            "count": 7,
+            "pct": 4.8,
+            "undesired": 3,
+            "undesired_pct": 42.9,
+            "repeat": 0,
+            "cost": 52927
+          },
+          {
+            "topic": "Настройка",
+            "count": 6,
+            "pct": 4.1,
+            "undesired": 2,
+            "undesired_pct": 33.3,
+            "repeat": 1,
+            "cost": 45366
+          },
+          {
+            "topic": "Управление",
+            "count": 4,
+            "pct": 2.8,
+            "undesired": 2,
+            "undesired_pct": 50.0,
+            "repeat": 0,
+            "cost": 30244
+          },
+          {
+            "topic": "Долги клиентов",
+            "count": 4,
+            "pct": 2.8,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 1,
+            "cost": 30244
+          },
+          {
+            "topic": "Новая продажа",
+            "count": 4,
+            "pct": 2.8,
+            "undesired": 1,
+            "undesired_pct": 25.0,
+            "repeat": 0,
+            "cost": 30244
+          },
+          {
+            "topic": "Массовый сбой BILLZ",
+            "count": 3,
+            "pct": 2.1,
+            "undesired": 2,
+            "undesired_pct": 66.7,
+            "repeat": 0,
+            "cost": 22683
+          },
+          {
+            "topic": "Финансы",
+            "count": 2,
+            "pct": 1.4,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 15122
+          },
+          {
+            "topic": "Вопрос не по программе",
+            "count": 2,
+            "pct": 1.4,
+            "undesired": 2,
+            "undesired_pct": 100.0,
+            "repeat": 0,
+            "cost": 15122
+          },
+          {
+            "topic": "Импорт",
+            "count": 1,
+            "pct": 0.7,
+            "undesired": 1,
+            "undesired_pct": 100.0,
+            "repeat": 0,
+            "cost": 7561
+          }
+        ],
+        "labels_breakdown": [
+          {
+            "label": "Учётная запись - Блокировка/Разблокировка аккаунта",
+            "count": 15,
+            "cost": 113415
+          },
+          {
+            "label": "Документооборот - Оплата за тариф",
+            "count": 13,
+            "cost": 98293
+          },
+          {
+            "label": "Документооборот - Создание ссылки для оплаты",
+            "count": 11,
+            "cost": 83171
+          },
+          {
+            "label": "Учётная запись - Создание магазина",
+            "count": 10,
+            "cost": 75610
+          },
+          {
+            "label": "Учётная запись - Помощь со входом в аккаунт",
+            "count": 5,
+            "cost": 37805
+          },
+          {
+            "label": "Учётная запись - Очистка магазина",
+            "count": 5,
+            "cost": 37805
+          },
+          {
+            "label": "Каталог — запрос на добавление товара",
+            "count": 4,
+            "cost": 30244
+          },
+          {
+            "label": "Оборудование - Установка/Настройка/Удаление принтера",
+            "count": 4,
+            "cost": 30244
+          }
+        ]
       },
       {
         "name": "Parviz Khafizov Partner",
@@ -72158,6 +79206,7 @@ const BILLZ_DATA = {
         "undesired_pct": 45.4,
         "repeat_count": 7,
         "repeat_pct": 5.9,
+        "massoviy_count": 14,
         "med_close": 5.6,
         "med_frt_min": 0.4,
         "stores_count": 28,
@@ -72166,7 +79215,159 @@ const BILLZ_DATA = {
         "training_total": 5,
         "cost": 899759,
         "top_topic": "Документооборот",
-        "top_label": "Документооборот - Оплата за тариф"
+        "top_label": "Документооборот - Оплата за тариф",
+        "topic_breakdown": [
+          {
+            "topic": "Документооборот",
+            "count": 18,
+            "pct": 15.1,
+            "undesired": 14,
+            "undesired_pct": 77.8,
+            "repeat": 3,
+            "cost": 136098
+          },
+          {
+            "topic": "Массовый сбой BILLZ",
+            "count": 14,
+            "pct": 11.8,
+            "undesired": 11,
+            "undesired_pct": 78.6,
+            "repeat": 0,
+            "cost": 105854
+          },
+          {
+            "topic": "Оборудование",
+            "count": 10,
+            "pct": 8.4,
+            "undesired": 6,
+            "undesired_pct": 60.0,
+            "repeat": 0,
+            "cost": 75610
+          },
+          {
+            "topic": "Каталог",
+            "count": 8,
+            "pct": 6.7,
+            "undesired": 3,
+            "undesired_pct": 37.5,
+            "repeat": 0,
+            "cost": 60488
+          },
+          {
+            "topic": "Новая продажа",
+            "count": 7,
+            "pct": 5.9,
+            "undesired": 2,
+            "undesired_pct": 28.6,
+            "repeat": 0,
+            "cost": 52927
+          },
+          {
+            "topic": "Настройка",
+            "count": 7,
+            "pct": 5.9,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 1,
+            "cost": 52927
+          },
+          {
+            "topic": "Отчёты",
+            "count": 6,
+            "pct": 5.0,
+            "undesired": 2,
+            "undesired_pct": 33.3,
+            "repeat": 0,
+            "cost": 45366
+          },
+          {
+            "topic": "Учётная запись",
+            "count": 5,
+            "pct": 4.2,
+            "undesired": 2,
+            "undesired_pct": 40.0,
+            "repeat": 1,
+            "cost": 37805
+          },
+          {
+            "topic": "Кассовые смены",
+            "count": 5,
+            "pct": 4.2,
+            "undesired": 2,
+            "undesired_pct": 40.0,
+            "repeat": 0,
+            "cost": 37805
+          },
+          {
+            "topic": "Баг (реквест)",
+            "count": 4,
+            "pct": 3.4,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 1,
+            "cost": 30244
+          },
+          {
+            "topic": "Программа лояльности",
+            "count": 3,
+            "pct": 2.5,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 22683
+          },
+          {
+            "topic": "Инвентаризация",
+            "count": 3,
+            "pct": 2.5,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 22683
+          }
+        ],
+        "labels_breakdown": [
+          {
+            "label": "Документооборот - Оплата за тариф",
+            "count": 14,
+            "cost": 105854
+          },
+          {
+            "label": "Массовый сбой BILLZ",
+            "count": 14,
+            "cost": 105854
+          },
+          {
+            "label": "Оборудование - Установка Anydesk/BILLZ Desktop/Программы компьютера и тд.",
+            "count": 6,
+            "cost": 45366
+          },
+          {
+            "label": "Каталог — настройка печати ценника",
+            "count": 5,
+            "cost": 37805
+          },
+          {
+            "label": "Новая продажа - Возврат/Обмен",
+            "count": 4,
+            "cost": 30244
+          },
+          {
+            "label": "Оборудование - Установка/Настройка/Удаление принтера",
+            "count": 4,
+            "cost": 30244
+          },
+          {
+            "label": "Отчёты - Выгрузка отчёта",
+            "count": 4,
+            "cost": 30244
+          },
+          {
+            "label": "Баг (реквест)",
+            "count": 4,
+            "cost": 30244
+          }
+        ]
       },
       {
         "name": "Other Partner",
@@ -72176,6 +79377,7 @@ const BILLZ_DATA = {
         "undesired_pct": 47.2,
         "repeat_count": 4,
         "repeat_pct": 3.7,
+        "massoviy_count": 21,
         "med_close": 5.0,
         "med_frt_min": 0.4,
         "stores_count": 29,
@@ -72184,7 +79386,159 @@ const BILLZ_DATA = {
         "training_total": 3,
         "cost": 816588,
         "top_topic": "Массовый сбой BILLZ",
-        "top_label": "Массовый сбой BILLZ"
+        "top_label": "Массовый сбой BILLZ",
+        "topic_breakdown": [
+          {
+            "topic": "Массовый сбой BILLZ",
+            "count": 20,
+            "pct": 18.5,
+            "undesired": 17,
+            "undesired_pct": 85.0,
+            "repeat": 0,
+            "cost": 151220
+          },
+          {
+            "topic": "Документооборот",
+            "count": 12,
+            "pct": 11.1,
+            "undesired": 7,
+            "undesired_pct": 58.3,
+            "repeat": 0,
+            "cost": 90732
+          },
+          {
+            "topic": "Настройка",
+            "count": 11,
+            "pct": 10.2,
+            "undesired": 3,
+            "undesired_pct": 27.3,
+            "repeat": 1,
+            "cost": 83171
+          },
+          {
+            "topic": "Учётная запись",
+            "count": 10,
+            "pct": 9.3,
+            "undesired": 3,
+            "undesired_pct": 30.0,
+            "repeat": 0,
+            "cost": 75610
+          },
+          {
+            "topic": "Каталог",
+            "count": 7,
+            "pct": 6.5,
+            "undesired": 1,
+            "undesired_pct": 14.3,
+            "repeat": 0,
+            "cost": 52927
+          },
+          {
+            "topic": "Оборудование",
+            "count": 6,
+            "pct": 5.6,
+            "undesired": 2,
+            "undesired_pct": 33.3,
+            "repeat": 1,
+            "cost": 45366
+          },
+          {
+            "topic": "Отчёты",
+            "count": 6,
+            "pct": 5.6,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 45366
+          },
+          {
+            "topic": "Новая продажа",
+            "count": 6,
+            "pct": 5.6,
+            "undesired": 5,
+            "undesired_pct": 83.3,
+            "repeat": 0,
+            "cost": 45366
+          },
+          {
+            "topic": "Управление",
+            "count": 4,
+            "pct": 3.7,
+            "undesired": 1,
+            "undesired_pct": 25.0,
+            "repeat": 0,
+            "cost": 30244
+          },
+          {
+            "topic": "Баг (реквест)",
+            "count": 3,
+            "pct": 2.8,
+            "undesired": 1,
+            "undesired_pct": 33.3,
+            "repeat": 1,
+            "cost": 22683
+          },
+          {
+            "topic": "Все продажи",
+            "count": 3,
+            "pct": 2.8,
+            "undesired": 2,
+            "undesired_pct": 66.7,
+            "repeat": 0,
+            "cost": 22683
+          },
+          {
+            "topic": "Общались по звонку",
+            "count": 2,
+            "pct": 1.9,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 15122
+          }
+        ],
+        "labels_breakdown": [
+          {
+            "label": "Массовый сбой BILLZ",
+            "count": 20,
+            "cost": 151220
+          },
+          {
+            "label": "Документооборот - Оплата за тариф",
+            "count": 8,
+            "cost": 60488
+          },
+          {
+            "label": "Учётная запись - Блокировка/Разблокировка аккаунта",
+            "count": 5,
+            "cost": 37805
+          },
+          {
+            "label": "Настройка - Создание/Редактирование/Удаление чека",
+            "count": 4,
+            "cost": 30244
+          },
+          {
+            "label": "Оборудование - Установка/Настройка/Удаление принтера",
+            "count": 4,
+            "cost": 30244
+          },
+          {
+            "label": "Отчёты - Разбор отчётов",
+            "count": 4,
+            "cost": 30244
+          },
+          {
+            "label": "Новая продажа - Не удаётся сделать продажу",
+            "count": 4,
+            "cost": 30244
+          },
+          {
+            "label": "Каталог — настройка печати ценника",
+            "count": 3,
+            "cost": 22683
+          }
+        ]
       },
       {
         "name": "Xikmatillo Baxtiyorov Partner",
@@ -72194,6 +79548,7 @@ const BILLZ_DATA = {
         "undesired_pct": 53.3,
         "repeat_count": 11,
         "repeat_pct": 10.3,
+        "massoviy_count": 19,
         "med_close": 2.6,
         "med_frt_min": 0.3,
         "stores_count": 30,
@@ -72202,25 +79557,330 @@ const BILLZ_DATA = {
         "training_total": 6,
         "cost": 809027,
         "top_topic": "Документооборот",
-        "top_label": "Массовый сбой BILLZ"
+        "top_label": "Массовый сбой BILLZ",
+        "topic_breakdown": [
+          {
+            "topic": "Документооборот",
+            "count": 29,
+            "pct": 27.1,
+            "undesired": 17,
+            "undesired_pct": 58.6,
+            "repeat": 2,
+            "cost": 219269
+          },
+          {
+            "topic": "Массовый сбой BILLZ",
+            "count": 19,
+            "pct": 17.8,
+            "undesired": 12,
+            "undesired_pct": 63.2,
+            "repeat": 1,
+            "cost": 143659
+          },
+          {
+            "topic": "Учётная запись",
+            "count": 11,
+            "pct": 10.3,
+            "undesired": 5,
+            "undesired_pct": 45.5,
+            "repeat": 3,
+            "cost": 83171
+          },
+          {
+            "topic": "Каталог",
+            "count": 5,
+            "pct": 4.7,
+            "undesired": 2,
+            "undesired_pct": 40.0,
+            "repeat": 0,
+            "cost": 37805
+          },
+          {
+            "topic": "Баг (реквест)",
+            "count": 3,
+            "pct": 2.8,
+            "undesired": 2,
+            "undesired_pct": 66.7,
+            "repeat": 1,
+            "cost": 22683
+          },
+          {
+            "topic": "Desktop",
+            "count": 3,
+            "pct": 2.8,
+            "undesired": 1,
+            "undesired_pct": 33.3,
+            "repeat": 1,
+            "cost": 22683
+          },
+          {
+            "topic": "Все продажи",
+            "count": 3,
+            "pct": 2.8,
+            "undesired": 1,
+            "undesired_pct": 33.3,
+            "repeat": 1,
+            "cost": 22683
+          },
+          {
+            "topic": "Настройка",
+            "count": 3,
+            "pct": 2.8,
+            "undesired": 1,
+            "undesired_pct": 33.3,
+            "repeat": 1,
+            "cost": 22683
+          },
+          {
+            "topic": "Инвентаризация",
+            "count": 3,
+            "pct": 2.8,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 1,
+            "cost": 22683
+          },
+          {
+            "topic": "Все клиенты",
+            "count": 2,
+            "pct": 1.9,
+            "undesired": 1,
+            "undesired_pct": 50.0,
+            "repeat": 0,
+            "cost": 15122
+          },
+          {
+            "topic": "Новая продажа",
+            "count": 2,
+            "pct": 1.9,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 15122
+          },
+          {
+            "topic": "Оборудование",
+            "count": 2,
+            "pct": 1.9,
+            "undesired": 1,
+            "undesired_pct": 50.0,
+            "repeat": 0,
+            "cost": 15122
+          }
+        ],
+        "labels_breakdown": [
+          {
+            "label": "Массовый сбой BILLZ",
+            "count": 19,
+            "cost": 143659
+          },
+          {
+            "label": "Документооборот - Оплата за тариф",
+            "count": 17,
+            "cost": 128537
+          },
+          {
+            "label": "Документооборот - Консультация по сумме долга",
+            "count": 4,
+            "cost": 30244
+          },
+          {
+            "label": "Баг (реквест)",
+            "count": 3,
+            "cost": 22683
+          },
+          {
+            "label": "Учётная запись - Создание магазина",
+            "count": 3,
+            "cost": 22683
+          },
+          {
+            "label": "Desktop - Ошибка синхронизации",
+            "count": 3,
+            "cost": 22683
+          },
+          {
+            "label": "Учётная запись - Сброс пароля",
+            "count": 3,
+            "cost": 22683
+          },
+          {
+            "label": "Учётная запись - Помощь со входом в аккаунт",
+            "count": 3,
+            "cost": 22683
+          }
+        ]
       },
       {
         "name": "Texnopos Partner",
-        "tickets": 97,
-        "desired": 41,
+        "tickets": 99,
+        "desired": 43,
         "undesired": 56,
-        "undesired_pct": 57.7,
+        "undesired_pct": 56.6,
         "repeat_count": 7,
-        "repeat_pct": 7.2,
-        "med_close": 3.9,
-        "med_frt_min": 0.25,
-        "stores_count": 39,
+        "repeat_pct": 7.1,
+        "massoviy_count": 11,
+        "med_close": 4.1,
+        "med_frt_min": 0.2,
+        "stores_count": 40,
         "training_partial": 1,
         "training_full": 0,
         "training_total": 1,
-        "cost": 733417,
+        "cost": 748539,
         "top_topic": "Документооборот",
-        "top_label": "Документооборот - Оплата за тариф"
+        "top_label": "Документооборот - Оплата за тариф",
+        "topic_breakdown": [
+          {
+            "topic": "Документооборот",
+            "count": 17,
+            "pct": 17.2,
+            "undesired": 12,
+            "undesired_pct": 70.6,
+            "repeat": 0,
+            "cost": 128537
+          },
+          {
+            "topic": "Учётная запись",
+            "count": 13,
+            "pct": 13.1,
+            "undesired": 1,
+            "undesired_pct": 7.7,
+            "repeat": 1,
+            "cost": 98293
+          },
+          {
+            "topic": "Массовый сбой BILLZ",
+            "count": 10,
+            "pct": 10.1,
+            "undesired": 6,
+            "undesired_pct": 60.0,
+            "repeat": 0,
+            "cost": 75610
+          },
+          {
+            "topic": "Управление",
+            "count": 7,
+            "pct": 7.1,
+            "undesired": 3,
+            "undesired_pct": 42.9,
+            "repeat": 2,
+            "cost": 52927
+          },
+          {
+            "topic": "Каталог",
+            "count": 6,
+            "pct": 6.1,
+            "undesired": 3,
+            "undesired_pct": 50.0,
+            "repeat": 0,
+            "cost": 45366
+          },
+          {
+            "topic": "Оборудование",
+            "count": 3,
+            "pct": 3.0,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 22683
+          },
+          {
+            "topic": "Новая продажа",
+            "count": 2,
+            "pct": 2.0,
+            "undesired": 2,
+            "undesired_pct": 100.0,
+            "repeat": 0,
+            "cost": 15122
+          },
+          {
+            "topic": "Заказы",
+            "count": 2,
+            "pct": 2.0,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 15122
+          },
+          {
+            "topic": "Настройка",
+            "count": 2,
+            "pct": 2.0,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 15122
+          },
+          {
+            "topic": "Кассовые смены",
+            "count": 2,
+            "pct": 2.0,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 15122
+          },
+          {
+            "topic": "Долги клиентов",
+            "count": 1,
+            "pct": 1.0,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 7561
+          },
+          {
+            "topic": "Вопрос не по программе",
+            "count": 1,
+            "pct": 1.0,
+            "undesired": 1,
+            "undesired_pct": 100.0,
+            "repeat": 0,
+            "cost": 7561
+          }
+        ],
+        "labels_breakdown": [
+          {
+            "label": "Документооборот - Оплата за тариф",
+            "count": 14,
+            "cost": 105854
+          },
+          {
+            "label": "Массовый сбой BILLZ",
+            "count": 10,
+            "cost": 75610
+          },
+          {
+            "label": "Управление - Создание/Редактирвоание/Удаление роли",
+            "count": 5,
+            "cost": 37805
+          },
+          {
+            "label": "Учётная запись - Помощь со входом в аккаунт",
+            "count": 5,
+            "cost": 37805
+          },
+          {
+            "label": "Учётная запись - Очистка магазина",
+            "count": 3,
+            "cost": 22683
+          },
+          {
+            "label": "Учётная запись - Создание магазина",
+            "count": 3,
+            "cost": 22683
+          },
+          {
+            "label": "Каталог — настройка печати ценника",
+            "count": 3,
+            "cost": 22683
+          },
+          {
+            "label": "Оборудование - Установка/Настройка/Удаление принтера",
+            "count": 3,
+            "cost": 22683
+          }
+        ]
       },
       {
         "name": "Sardor Ibrohimov Partner",
@@ -72230,6 +79890,7 @@ const BILLZ_DATA = {
         "undesired_pct": 50.6,
         "repeat_count": 2,
         "repeat_pct": 2.6,
+        "massoviy_count": 9,
         "med_close": 3.1,
         "med_frt_min": 0.3,
         "stores_count": 12,
@@ -72238,7 +79899,159 @@ const BILLZ_DATA = {
         "training_total": 0,
         "cost": 582197,
         "top_topic": "Документооборот",
-        "top_label": "Оборудование - Установка Anydesk/BILLZ Desktop/Программы компьютера и тд."
+        "top_label": "Оборудование - Установка Anydesk/BILLZ Desktop/Программы компьютера и тд.",
+        "topic_breakdown": [
+          {
+            "topic": "Документооборот",
+            "count": 18,
+            "pct": 23.4,
+            "undesired": 13,
+            "undesired_pct": 72.2,
+            "repeat": 1,
+            "cost": 136098
+          },
+          {
+            "topic": "Оборудование",
+            "count": 12,
+            "pct": 15.6,
+            "undesired": 5,
+            "undesired_pct": 41.7,
+            "repeat": 0,
+            "cost": 90732
+          },
+          {
+            "topic": "Массовый сбой BILLZ",
+            "count": 9,
+            "pct": 11.7,
+            "undesired": 5,
+            "undesired_pct": 55.6,
+            "repeat": 0,
+            "cost": 68049
+          },
+          {
+            "topic": "Каталог",
+            "count": 7,
+            "pct": 9.1,
+            "undesired": 3,
+            "undesired_pct": 42.9,
+            "repeat": 0,
+            "cost": 52927
+          },
+          {
+            "topic": "Настройка",
+            "count": 7,
+            "pct": 9.1,
+            "undesired": 1,
+            "undesired_pct": 14.3,
+            "repeat": 0,
+            "cost": 52927
+          },
+          {
+            "topic": "Учётная запись",
+            "count": 4,
+            "pct": 5.2,
+            "undesired": 3,
+            "undesired_pct": 75.0,
+            "repeat": 0,
+            "cost": 30244
+          },
+          {
+            "topic": "Новая продажа",
+            "count": 4,
+            "pct": 5.2,
+            "undesired": 1,
+            "undesired_pct": 25.0,
+            "repeat": 0,
+            "cost": 30244
+          },
+          {
+            "topic": "Вопрос не по программе",
+            "count": 3,
+            "pct": 3.9,
+            "undesired": 3,
+            "undesired_pct": 100.0,
+            "repeat": 0,
+            "cost": 22683
+          },
+          {
+            "topic": "Управление",
+            "count": 2,
+            "pct": 2.6,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 15122
+          },
+          {
+            "topic": "Долги клиентов",
+            "count": 2,
+            "pct": 2.6,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 15122
+          },
+          {
+            "topic": "Desktop",
+            "count": 1,
+            "pct": 1.3,
+            "undesired": 1,
+            "undesired_pct": 100.0,
+            "repeat": 0,
+            "cost": 7561
+          },
+          {
+            "topic": "Реквест (внутренний запрос",
+            "count": 1,
+            "pct": 1.3,
+            "undesired": 1,
+            "undesired_pct": 100.0,
+            "repeat": 0,
+            "cost": 7561
+          }
+        ],
+        "labels_breakdown": [
+          {
+            "label": "Оборудование - Установка Anydesk/BILLZ Desktop/Программы компьютера и тд.",
+            "count": 10,
+            "cost": 75610
+          },
+          {
+            "label": "Документооборот - Оплата за тариф",
+            "count": 10,
+            "cost": 75610
+          },
+          {
+            "label": "Массовый сбой BILLZ",
+            "count": 9,
+            "cost": 68049
+          },
+          {
+            "label": "Документооборот - Консультация по тарифу",
+            "count": 4,
+            "cost": 30244
+          },
+          {
+            "label": "Вопрос не по программе",
+            "count": 3,
+            "cost": 22683
+          },
+          {
+            "label": "Учётная запись - Создание магазина",
+            "count": 3,
+            "cost": 22683
+          },
+          {
+            "label": "Настройка - Создание/Редактирование валюты",
+            "count": 3,
+            "cost": 22683
+          },
+          {
+            "label": "Каталог — изменение свойств товара",
+            "count": 2,
+            "cost": 15122
+          }
+        ]
       },
       {
         "name": "Burhan Ergashev Partner",
@@ -72248,6 +80061,7 @@ const BILLZ_DATA = {
         "undesired_pct": 63.5,
         "repeat_count": 8,
         "repeat_pct": 12.7,
+        "massoviy_count": 12,
         "med_close": 5.9,
         "med_frt_min": 0.6,
         "stores_count": 10,
@@ -72256,7 +80070,159 @@ const BILLZ_DATA = {
         "training_total": 0,
         "cost": 476343,
         "top_topic": "Массовый сбой BILLZ",
-        "top_label": "Массовый сбой BILLZ"
+        "top_label": "Массовый сбой BILLZ",
+        "topic_breakdown": [
+          {
+            "topic": "Массовый сбой BILLZ",
+            "count": 12,
+            "pct": 19.0,
+            "undesired": 11,
+            "undesired_pct": 91.7,
+            "repeat": 0,
+            "cost": 90732
+          },
+          {
+            "topic": "Каталог",
+            "count": 10,
+            "pct": 15.9,
+            "undesired": 6,
+            "undesired_pct": 60.0,
+            "repeat": 3,
+            "cost": 75610
+          },
+          {
+            "topic": "Документооборот",
+            "count": 7,
+            "pct": 11.1,
+            "undesired": 3,
+            "undesired_pct": 42.9,
+            "repeat": 0,
+            "cost": 52927
+          },
+          {
+            "topic": "Оборудование",
+            "count": 5,
+            "pct": 7.9,
+            "undesired": 3,
+            "undesired_pct": 60.0,
+            "repeat": 1,
+            "cost": 37805
+          },
+          {
+            "topic": "Настройка",
+            "count": 4,
+            "pct": 6.3,
+            "undesired": 1,
+            "undesired_pct": 25.0,
+            "repeat": 0,
+            "cost": 30244
+          },
+          {
+            "topic": "Учётная запись",
+            "count": 2,
+            "pct": 3.2,
+            "undesired": 2,
+            "undesired_pct": 100.0,
+            "repeat": 0,
+            "cost": 15122
+          },
+          {
+            "topic": "Отчёты",
+            "count": 2,
+            "pct": 3.2,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 15122
+          },
+          {
+            "topic": "Бэклог",
+            "count": 2,
+            "pct": 3.2,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 1,
+            "cost": 15122
+          },
+          {
+            "topic": "Desktop",
+            "count": 2,
+            "pct": 3.2,
+            "undesired": 2,
+            "undesired_pct": 100.0,
+            "repeat": 0,
+            "cost": 15122
+          },
+          {
+            "topic": "Общались по звонку",
+            "count": 2,
+            "pct": 3.2,
+            "undesired": 1,
+            "undesired_pct": 50.0,
+            "repeat": 0,
+            "cost": 15122
+          },
+          {
+            "topic": "Импорт",
+            "count": 1,
+            "pct": 1.6,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 7561
+          },
+          {
+            "topic": "Все продажи",
+            "count": 1,
+            "pct": 1.6,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 7561
+          }
+        ],
+        "labels_breakdown": [
+          {
+            "label": "Массовый сбой BILLZ",
+            "count": 12,
+            "cost": 90732
+          },
+          {
+            "label": "Каталог — запрос на добавление товара",
+            "count": 5,
+            "cost": 37805
+          },
+          {
+            "label": "Документооборот - Оплата за тариф",
+            "count": 5,
+            "cost": 37805
+          },
+          {
+            "label": "Оборудование - Установка Anydesk/BILLZ Desktop/Программы компьютера и тд.",
+            "count": 3,
+            "cost": 22683
+          },
+          {
+            "label": "Настройка - Создание/Редактирование/Удаление чека",
+            "count": 3,
+            "cost": 22683
+          },
+          {
+            "label": "Учётная запись - Помощь со входом в аккаунт",
+            "count": 2,
+            "cost": 15122
+          },
+          {
+            "label": "Документооборот - Консультация по тарифу",
+            "count": 2,
+            "cost": 15122
+          },
+          {
+            "label": "Отчёты - Разбор отчётов",
+            "count": 2,
+            "cost": 15122
+          }
+        ]
       },
       {
         "name": "Наш партнер",
@@ -72266,6 +80232,7 @@ const BILLZ_DATA = {
         "undesired_pct": 61.9,
         "repeat_count": 4,
         "repeat_pct": 6.3,
+        "massoviy_count": 0,
         "med_close": 2.6,
         "med_frt_min": 0.3,
         "stores_count": 2,
@@ -72274,7 +80241,159 @@ const BILLZ_DATA = {
         "training_total": 3,
         "cost": 476343,
         "top_topic": "Учётная запись",
-        "top_label": "Учётная запись - Создание магазина"
+        "top_label": "Учётная запись - Создание магазина",
+        "topic_breakdown": [
+          {
+            "topic": "Учётная запись",
+            "count": 17,
+            "pct": 27.0,
+            "undesired": 10,
+            "undesired_pct": 58.8,
+            "repeat": 1,
+            "cost": 128537
+          },
+          {
+            "topic": "Документооборот",
+            "count": 9,
+            "pct": 14.3,
+            "undesired": 7,
+            "undesired_pct": 77.8,
+            "repeat": 0,
+            "cost": 68049
+          },
+          {
+            "topic": "Каталог",
+            "count": 4,
+            "pct": 6.3,
+            "undesired": 2,
+            "undesired_pct": 50.0,
+            "repeat": 0,
+            "cost": 30244
+          },
+          {
+            "topic": "Вопрос не по программе",
+            "count": 3,
+            "pct": 4.8,
+            "undesired": 2,
+            "undesired_pct": 66.7,
+            "repeat": 0,
+            "cost": 22683
+          },
+          {
+            "topic": "Настройка",
+            "count": 3,
+            "pct": 4.8,
+            "undesired": 1,
+            "undesired_pct": 33.3,
+            "repeat": 0,
+            "cost": 22683
+          },
+          {
+            "topic": "Оборудование",
+            "count": 3,
+            "pct": 4.8,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 22683
+          },
+          {
+            "topic": "Кассовые смены",
+            "count": 3,
+            "pct": 4.8,
+            "undesired": 3,
+            "undesired_pct": 100.0,
+            "repeat": 2,
+            "cost": 22683
+          },
+          {
+            "topic": "Управление",
+            "count": 2,
+            "pct": 3.2,
+            "undesired": 2,
+            "undesired_pct": 100.0,
+            "repeat": 0,
+            "cost": 15122
+          },
+          {
+            "topic": "Инвентаризация",
+            "count": 2,
+            "pct": 3.2,
+            "undesired": 2,
+            "undesired_pct": 100.0,
+            "repeat": 0,
+            "cost": 15122
+          },
+          {
+            "topic": "Новая продажа",
+            "count": 2,
+            "pct": 3.2,
+            "undesired": 1,
+            "undesired_pct": 50.0,
+            "repeat": 0,
+            "cost": 15122
+          },
+          {
+            "topic": "Баг (реквест)",
+            "count": 1,
+            "pct": 1.6,
+            "undesired": 1,
+            "undesired_pct": 100.0,
+            "repeat": 0,
+            "cost": 7561
+          },
+          {
+            "topic": "Все продажи",
+            "count": 1,
+            "pct": 1.6,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 7561
+          }
+        ],
+        "labels_breakdown": [
+          {
+            "label": "Учётная запись - Создание магазина",
+            "count": 11,
+            "cost": 83171
+          },
+          {
+            "label": "Вопрос не по программе",
+            "count": 3,
+            "cost": 22683
+          },
+          {
+            "label": "Документооборот - Консультация по тарифу",
+            "count": 3,
+            "cost": 22683
+          },
+          {
+            "label": "Документооборот - Создание ссылки для оплаты",
+            "count": 3,
+            "cost": 22683
+          },
+          {
+            "label": "Учётная запись - Помощь со входом в аккаунт",
+            "count": 3,
+            "cost": 22683
+          },
+          {
+            "label": "Документооборот - Оплата за тариф",
+            "count": 3,
+            "cost": 22683
+          },
+          {
+            "label": "Кассовые смены — Открытие/Закрытие смен",
+            "count": 3,
+            "cost": 22683
+          },
+          {
+            "label": "Учётная запись - Блокировка/Разблокировка аккаунта",
+            "count": 2,
+            "cost": 15122
+          }
+        ]
       },
       {
         "name": "Ulugbek Salimov Partner (Nasimjon Mobile)",
@@ -72284,6 +80403,7 @@ const BILLZ_DATA = {
         "undesired_pct": 52.3,
         "repeat_count": 2,
         "repeat_pct": 4.5,
+        "massoviy_count": 9,
         "med_close": 3.1,
         "med_frt_min": 0.4,
         "stores_count": 12,
@@ -72292,7 +80412,159 @@ const BILLZ_DATA = {
         "training_total": 0,
         "cost": 332684,
         "top_topic": "Документооборот",
-        "top_label": "Документооборот - Оплата за тариф"
+        "top_label": "Документооборот - Оплата за тариф",
+        "topic_breakdown": [
+          {
+            "topic": "Документооборот",
+            "count": 9,
+            "pct": 20.5,
+            "undesired": 5,
+            "undesired_pct": 55.6,
+            "repeat": 0,
+            "cost": 68049
+          },
+          {
+            "topic": "Массовый сбой BILLZ",
+            "count": 9,
+            "pct": 20.5,
+            "undesired": 7,
+            "undesired_pct": 77.8,
+            "repeat": 0,
+            "cost": 68049
+          },
+          {
+            "topic": "Оборудование",
+            "count": 4,
+            "pct": 9.1,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 30244
+          },
+          {
+            "topic": "Учётная запись",
+            "count": 4,
+            "pct": 9.1,
+            "undesired": 3,
+            "undesired_pct": 75.0,
+            "repeat": 0,
+            "cost": 30244
+          },
+          {
+            "topic": "Долги клиентов",
+            "count": 2,
+            "pct": 4.5,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 15122
+          },
+          {
+            "topic": "Заказы",
+            "count": 2,
+            "pct": 4.5,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 15122
+          },
+          {
+            "topic": "Управление",
+            "count": 1,
+            "pct": 2.3,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 7561
+          },
+          {
+            "topic": "Вопрос не по программе",
+            "count": 1,
+            "pct": 2.3,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 7561
+          },
+          {
+            "topic": "Кассовые смены",
+            "count": 1,
+            "pct": 2.3,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 1,
+            "cost": 7561
+          },
+          {
+            "topic": "Отчёты",
+            "count": 1,
+            "pct": 2.3,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 7561
+          },
+          {
+            "topic": "Новая продажа",
+            "count": 1,
+            "pct": 2.3,
+            "undesired": 1,
+            "undesired_pct": 100.0,
+            "repeat": 0,
+            "cost": 7561
+          },
+          {
+            "topic": "Настройка",
+            "count": 1,
+            "pct": 2.3,
+            "undesired": 1,
+            "undesired_pct": 100.0,
+            "repeat": 0,
+            "cost": 7561
+          }
+        ],
+        "labels_breakdown": [
+          {
+            "label": "Документооборот - Оплата за тариф",
+            "count": 9,
+            "cost": 68049
+          },
+          {
+            "label": "Массовый сбой BILLZ",
+            "count": 9,
+            "cost": 68049
+          },
+          {
+            "label": "Оборудование - Установка Anydesk/BILLZ Desktop/Программы компьютера и тд.",
+            "count": 3,
+            "cost": 22683
+          },
+          {
+            "label": "Долги клиентов - SMS рассылка по должникам",
+            "count": 2,
+            "cost": 15122
+          },
+          {
+            "label": "Учётная запись - Сброс пароля",
+            "count": 2,
+            "cost": 15122
+          },
+          {
+            "label": "Заказы — отмена/возврат заказа",
+            "count": 2,
+            "cost": 15122
+          },
+          {
+            "label": "Управление - Создание/Редактирвоание/Удаление сотрудника",
+            "count": 1,
+            "cost": 7561
+          },
+          {
+            "label": "Оборудование - Загрузка базу товаров в весы",
+            "count": 1,
+            "cost": 7561
+          }
+        ]
       },
       {
         "name": "Marufhon Bahodirhonov Partner",
@@ -72302,6 +80574,7 @@ const BILLZ_DATA = {
         "undesired_pct": 54.3,
         "repeat_count": 2,
         "repeat_pct": 5.7,
+        "massoviy_count": 11,
         "med_close": 5.5,
         "med_frt_min": 0.4,
         "stores_count": 13,
@@ -72310,7 +80583,123 @@ const BILLZ_DATA = {
         "training_total": 1,
         "cost": 264635,
         "top_topic": "Массовый сбой BILLZ",
-        "top_label": "Массовый сбой BILLZ"
+        "top_label": "Массовый сбой BILLZ",
+        "topic_breakdown": [
+          {
+            "topic": "Массовый сбой BILLZ",
+            "count": 11,
+            "pct": 31.4,
+            "undesired": 7,
+            "undesired_pct": 63.6,
+            "repeat": 0,
+            "cost": 83171
+          },
+          {
+            "topic": "Документооборот",
+            "count": 6,
+            "pct": 17.1,
+            "undesired": 6,
+            "undesired_pct": 100.0,
+            "repeat": 1,
+            "cost": 45366
+          },
+          {
+            "topic": "Переоценка",
+            "count": 4,
+            "pct": 11.4,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 1,
+            "cost": 30244
+          },
+          {
+            "topic": "Новая продажа",
+            "count": 3,
+            "pct": 8.6,
+            "undesired": 2,
+            "undesired_pct": 66.7,
+            "repeat": 0,
+            "cost": 22683
+          },
+          {
+            "topic": "Списание",
+            "count": 1,
+            "pct": 2.9,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 7561
+          },
+          {
+            "topic": "Кассовые смены",
+            "count": 1,
+            "pct": 2.9,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 7561
+          },
+          {
+            "topic": "Оборудование",
+            "count": 1,
+            "pct": 2.9,
+            "undesired": 1,
+            "undesired_pct": 100.0,
+            "repeat": 0,
+            "cost": 7561
+          },
+          {
+            "topic": "Баг (реквест)",
+            "count": 1,
+            "pct": 2.9,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 7561
+          }
+        ],
+        "labels_breakdown": [
+          {
+            "label": "Массовый сбой BILLZ",
+            "count": 11,
+            "cost": 83171
+          },
+          {
+            "label": "Документооборот - Оплата за тариф",
+            "count": 6,
+            "cost": 45366
+          },
+          {
+            "label": "Переоценка - Изменение по курсу",
+            "count": 4,
+            "cost": 30244
+          },
+          {
+            "label": "Новая продажа - Не удаётся сделать продажу",
+            "count": 2,
+            "cost": 15122
+          },
+          {
+            "label": "Списание - частичное обучение",
+            "count": 1,
+            "cost": 7561
+          },
+          {
+            "label": "Кассовые смены — Расхождение суммы",
+            "count": 1,
+            "cost": 7561
+          },
+          {
+            "label": "Оборудование - Установка/Настройка/Удаление принтера",
+            "count": 1,
+            "cost": 7561
+          },
+          {
+            "label": "Новая продажа - Создание/Завершение",
+            "count": 1,
+            "cost": 7561
+          }
+        ]
       },
       {
         "name": "Naim Shokirov Partner \"RSA FRESH TECHNO GROUP\"",
@@ -72320,6 +80709,7 @@ const BILLZ_DATA = {
         "undesired_pct": 75.8,
         "repeat_count": 0,
         "repeat_pct": 0.0,
+        "massoviy_count": 15,
         "med_close": 9.0,
         "med_frt_min": 0.3,
         "stores_count": 12,
@@ -72328,7 +80718,159 @@ const BILLZ_DATA = {
         "training_total": 0,
         "cost": 249513,
         "top_topic": "Массовый сбой BILLZ",
-        "top_label": "Массовый сбой BILLZ"
+        "top_label": "Массовый сбой BILLZ",
+        "topic_breakdown": [
+          {
+            "topic": "Массовый сбой BILLZ",
+            "count": 15,
+            "pct": 45.5,
+            "undesired": 14,
+            "undesired_pct": 93.3,
+            "repeat": 0,
+            "cost": 113415
+          },
+          {
+            "topic": "Учётная запись",
+            "count": 3,
+            "pct": 9.1,
+            "undesired": 3,
+            "undesired_pct": 100.0,
+            "repeat": 0,
+            "cost": 22683
+          },
+          {
+            "topic": "Документооборот",
+            "count": 3,
+            "pct": 9.1,
+            "undesired": 2,
+            "undesired_pct": 66.7,
+            "repeat": 0,
+            "cost": 22683
+          },
+          {
+            "topic": "Оборудование",
+            "count": 2,
+            "pct": 6.1,
+            "undesired": 1,
+            "undesired_pct": 50.0,
+            "repeat": 0,
+            "cost": 15122
+          },
+          {
+            "topic": "Отчёты",
+            "count": 1,
+            "pct": 3.0,
+            "undesired": 1,
+            "undesired_pct": 100.0,
+            "repeat": 0,
+            "cost": 7561
+          },
+          {
+            "topic": "Баг (реквест)",
+            "count": 1,
+            "pct": 3.0,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 7561
+          },
+          {
+            "topic": "Управление",
+            "count": 1,
+            "pct": 3.0,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 7561
+          },
+          {
+            "topic": "SMS рассылка",
+            "count": 1,
+            "pct": 3.0,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 7561
+          },
+          {
+            "topic": "Каталог",
+            "count": 1,
+            "pct": 3.0,
+            "undesired": 1,
+            "undesired_pct": 100.0,
+            "repeat": 0,
+            "cost": 7561
+          },
+          {
+            "topic": "Новая продажа",
+            "count": 1,
+            "pct": 3.0,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 7561
+          },
+          {
+            "topic": "Общались по звонку",
+            "count": 1,
+            "pct": 3.0,
+            "undesired": 1,
+            "undesired_pct": 100.0,
+            "repeat": 0,
+            "cost": 7561
+          },
+          {
+            "topic": "Долги клиентов",
+            "count": 1,
+            "pct": 3.0,
+            "undesired": 1,
+            "undesired_pct": 100.0,
+            "repeat": 0,
+            "cost": 7561
+          }
+        ],
+        "labels_breakdown": [
+          {
+            "label": "Массовый сбой BILLZ",
+            "count": 15,
+            "cost": 113415
+          },
+          {
+            "label": "Учётная запись - Помощь со входом в аккаунт",
+            "count": 2,
+            "cost": 15122
+          },
+          {
+            "label": "Оборудование - Установка/Настройка/Удаление принтера",
+            "count": 2,
+            "cost": 15122
+          },
+          {
+            "label": "Документооборот - Оплата за тариф",
+            "count": 2,
+            "cost": 15122
+          },
+          {
+            "label": "Отчёты - Разбор отчётов",
+            "count": 1,
+            "cost": 7561
+          },
+          {
+            "label": "Баг (реквест)",
+            "count": 1,
+            "cost": 7561
+          },
+          {
+            "label": "Управление - Создание/Редактирвоание/Удаление роли",
+            "count": 1,
+            "cost": 7561
+          },
+          {
+            "label": "Документооборот - Консультация по тарифу",
+            "count": 1,
+            "cost": 7561
+          }
+        ]
       },
       {
         "name": "Alisher Azimov Partner (YTT TILYABAYEVA SITORAXON G'ULOMQODIR QI)",
@@ -72338,6 +80880,7 @@ const BILLZ_DATA = {
         "undesired_pct": 34.5,
         "repeat_count": 2,
         "repeat_pct": 6.9,
+        "massoviy_count": 5,
         "med_close": 4.5,
         "med_frt_min": 0.25,
         "stores_count": 9,
@@ -72346,7 +80889,123 @@ const BILLZ_DATA = {
         "training_total": 0,
         "cost": 219269,
         "top_topic": "Документооборот",
-        "top_label": "Оборудование - Установка/Настройка/Удаление принтера"
+        "top_label": "Оборудование - Установка/Настройка/Удаление принтера",
+        "topic_breakdown": [
+          {
+            "topic": "Документооборот",
+            "count": 6,
+            "pct": 20.7,
+            "undesired": 2,
+            "undesired_pct": 33.3,
+            "repeat": 0,
+            "cost": 45366
+          },
+          {
+            "topic": "Оборудование",
+            "count": 5,
+            "pct": 17.2,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 1,
+            "cost": 37805
+          },
+          {
+            "topic": "Массовый сбой BILLZ",
+            "count": 5,
+            "pct": 17.2,
+            "undesired": 3,
+            "undesired_pct": 60.0,
+            "repeat": 0,
+            "cost": 37805
+          },
+          {
+            "topic": "Настройка",
+            "count": 4,
+            "pct": 13.8,
+            "undesired": 2,
+            "undesired_pct": 50.0,
+            "repeat": 0,
+            "cost": 30244
+          },
+          {
+            "topic": "Каталог",
+            "count": 3,
+            "pct": 10.3,
+            "undesired": 1,
+            "undesired_pct": 33.3,
+            "repeat": 1,
+            "cost": 22683
+          },
+          {
+            "topic": "Учётная запись",
+            "count": 3,
+            "pct": 10.3,
+            "undesired": 1,
+            "undesired_pct": 33.3,
+            "repeat": 0,
+            "cost": 22683
+          },
+          {
+            "topic": "Баг (реквест)",
+            "count": 1,
+            "pct": 3.4,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 7561
+          },
+          {
+            "topic": "Новая продажа",
+            "count": 1,
+            "pct": 3.4,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 7561
+          }
+        ],
+        "labels_breakdown": [
+          {
+            "label": "Оборудование - Установка/Настройка/Удаление принтера",
+            "count": 5,
+            "cost": 37805
+          },
+          {
+            "label": "Массовый сбой BILLZ",
+            "count": 5,
+            "cost": 37805
+          },
+          {
+            "label": "Настройка - Создание/Редактирование/Удаление доп. точки",
+            "count": 4,
+            "cost": 30244
+          },
+          {
+            "label": "Каталог — настройка печати ценника",
+            "count": 2,
+            "cost": 15122
+          },
+          {
+            "label": "Документооборот - Оплата за тариф",
+            "count": 2,
+            "cost": 15122
+          },
+          {
+            "label": "Документооборот - Реактивация клиента",
+            "count": 2,
+            "cost": 15122
+          },
+          {
+            "label": "Документооборот - Помощь в оплате долга",
+            "count": 1,
+            "cost": 7561
+          },
+          {
+            "label": "Каталог - Скачивание товаров",
+            "count": 1,
+            "cost": 7561
+          }
+        ]
       },
       {
         "name": "Партнер",
@@ -72356,6 +81015,7 @@ const BILLZ_DATA = {
         "undesired_pct": 42.9,
         "repeat_count": 0,
         "repeat_pct": 0.0,
+        "massoviy_count": 0,
         "med_close": 2.15,
         "med_frt_min": 0.5,
         "stores_count": 7,
@@ -72364,7 +81024,141 @@ const BILLZ_DATA = {
         "training_total": 1,
         "cost": 211708,
         "top_topic": "Учётная запись",
-        "top_label": "Учётная запись - Создание магазина"
+        "top_label": "Учётная запись - Создание магазина",
+        "topic_breakdown": [
+          {
+            "topic": "Учётная запись",
+            "count": 9,
+            "pct": 32.1,
+            "undesired": 5,
+            "undesired_pct": 55.6,
+            "repeat": 0,
+            "cost": 68049
+          },
+          {
+            "topic": "Каталог",
+            "count": 3,
+            "pct": 10.7,
+            "undesired": 1,
+            "undesired_pct": 33.3,
+            "repeat": 0,
+            "cost": 22683
+          },
+          {
+            "topic": "Новая продажа",
+            "count": 3,
+            "pct": 10.7,
+            "undesired": 1,
+            "undesired_pct": 33.3,
+            "repeat": 0,
+            "cost": 22683
+          },
+          {
+            "topic": "Оборудование",
+            "count": 2,
+            "pct": 7.1,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 15122
+          },
+          {
+            "topic": "Документооборот",
+            "count": 2,
+            "pct": 7.1,
+            "undesired": 1,
+            "undesired_pct": 50.0,
+            "repeat": 0,
+            "cost": 15122
+          },
+          {
+            "topic": "Заказы",
+            "count": 1,
+            "pct": 3.6,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 7561
+          },
+          {
+            "topic": "Долги клиентов",
+            "count": 1,
+            "pct": 3.6,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 7561
+          },
+          {
+            "topic": "Настройка",
+            "count": 1,
+            "pct": 3.6,
+            "undesired": 1,
+            "undesired_pct": 100.0,
+            "repeat": 0,
+            "cost": 7561
+          },
+          {
+            "topic": "Управление",
+            "count": 1,
+            "pct": 3.6,
+            "undesired": 1,
+            "undesired_pct": 100.0,
+            "repeat": 0,
+            "cost": 7561
+          },
+          {
+            "topic": "Нет фунционала",
+            "count": 1,
+            "pct": 3.6,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 7561
+          }
+        ],
+        "labels_breakdown": [
+          {
+            "label": "Учётная запись - Создание магазина",
+            "count": 7,
+            "cost": 52927
+          },
+          {
+            "label": "Новая продажа - Черновики/Отложки",
+            "count": 3,
+            "cost": 22683
+          },
+          {
+            "label": "Каталог — запрос на добавление товара",
+            "count": 2,
+            "cost": 15122
+          },
+          {
+            "label": "Учётная запись - Блокировка/Разблокировка аккаунта",
+            "count": 2,
+            "cost": 15122
+          },
+          {
+            "label": "Оборудование - Загрузка базу товаров в весы",
+            "count": 1,
+            "cost": 7561
+          },
+          {
+            "label": "Каталог — настройка печати ценника",
+            "count": 1,
+            "cost": 7561
+          },
+          {
+            "label": "Заказы - Создание заказа",
+            "count": 1,
+            "cost": 7561
+          },
+          {
+            "label": "Долги клиентов - Полное обучение",
+            "count": 1,
+            "cost": 7561
+          }
+        ]
       },
       {
         "name": "Sarvar Alimov Partner Partner (YATT DADAYEV XABIBULLA XAMIDULLAYEVICH)",
@@ -72374,6 +81168,7 @@ const BILLZ_DATA = {
         "undesired_pct": 42.9,
         "repeat_count": 0,
         "repeat_pct": 0.0,
+        "massoviy_count": 3,
         "med_close": 2.45,
         "med_frt_min": 0.3,
         "stores_count": 5,
@@ -72382,7 +81177,141 @@ const BILLZ_DATA = {
         "training_total": 1,
         "cost": 211708,
         "top_topic": "Документооборот",
-        "top_label": "Документооборот - Оплата за тариф"
+        "top_label": "Документооборот - Оплата за тариф",
+        "topic_breakdown": [
+          {
+            "topic": "Документооборот",
+            "count": 6,
+            "pct": 21.4,
+            "undesired": 3,
+            "undesired_pct": 50.0,
+            "repeat": 0,
+            "cost": 45366
+          },
+          {
+            "topic": "Каталог",
+            "count": 4,
+            "pct": 14.3,
+            "undesired": 1,
+            "undesired_pct": 25.0,
+            "repeat": 0,
+            "cost": 30244
+          },
+          {
+            "topic": "Импорт",
+            "count": 3,
+            "pct": 10.7,
+            "undesired": 1,
+            "undesired_pct": 33.3,
+            "repeat": 0,
+            "cost": 22683
+          },
+          {
+            "topic": "Учётная запись",
+            "count": 3,
+            "pct": 10.7,
+            "undesired": 1,
+            "undesired_pct": 33.3,
+            "repeat": 0,
+            "cost": 22683
+          },
+          {
+            "topic": "Массовый сбой BILLZ",
+            "count": 3,
+            "pct": 10.7,
+            "undesired": 3,
+            "undesired_pct": 100.0,
+            "repeat": 0,
+            "cost": 22683
+          },
+          {
+            "topic": "Заказы",
+            "count": 3,
+            "pct": 10.7,
+            "undesired": 1,
+            "undesired_pct": 33.3,
+            "repeat": 0,
+            "cost": 22683
+          },
+          {
+            "topic": "Настройка",
+            "count": 2,
+            "pct": 7.1,
+            "undesired": 1,
+            "undesired_pct": 50.0,
+            "repeat": 0,
+            "cost": 15122
+          },
+          {
+            "topic": "Переоценка",
+            "count": 1,
+            "pct": 3.6,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 7561
+          },
+          {
+            "topic": "Кассовые смены",
+            "count": 1,
+            "pct": 3.6,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 7561
+          },
+          {
+            "topic": "Отчёты",
+            "count": 1,
+            "pct": 3.6,
+            "undesired": 1,
+            "undesired_pct": 100.0,
+            "repeat": 0,
+            "cost": 7561
+          }
+        ],
+        "labels_breakdown": [
+          {
+            "label": "Документооборот - Оплата за тариф",
+            "count": 6,
+            "cost": 45366
+          },
+          {
+            "label": "Массовый сбой BILLZ",
+            "count": 3,
+            "cost": 22683
+          },
+          {
+            "label": "Импорт — импорт товаров через Excel",
+            "count": 2,
+            "cost": 15122
+          },
+          {
+            "label": "Учётная запись - Очистка магазина",
+            "count": 2,
+            "cost": 15122
+          },
+          {
+            "label": "Заказы — отмена/возврат заказа",
+            "count": 2,
+            "cost": 15122
+          },
+          {
+            "label": "Каталог — изменение свойств товара",
+            "count": 1,
+            "cost": 7561
+          },
+          {
+            "label": "Переоценка - Изменение цены продажи",
+            "count": 1,
+            "cost": 7561
+          },
+          {
+            "label": "Импорт - Удаление импорта",
+            "count": 1,
+            "cost": 7561
+          }
+        ]
       },
       {
         "name": "Saidorif Muzaffarov Partner",
@@ -72392,6 +81321,7 @@ const BILLZ_DATA = {
         "undesired_pct": 58.3,
         "repeat_count": 0,
         "repeat_pct": 0.0,
+        "massoviy_count": 2,
         "med_close": 4.0,
         "med_frt_min": 0.4,
         "stores_count": 12,
@@ -72400,7 +81330,132 @@ const BILLZ_DATA = {
         "training_total": 0,
         "cost": 181464,
         "top_topic": "Документооборот",
-        "top_label": "Оборудование - Установка Anydesk/BILLZ Desktop/Программы компьютера и тд."
+        "top_label": "Оборудование - Установка Anydesk/BILLZ Desktop/Программы компьютера и тд.",
+        "topic_breakdown": [
+          {
+            "topic": "Документооборот",
+            "count": 5,
+            "pct": 20.8,
+            "undesired": 3,
+            "undesired_pct": 60.0,
+            "repeat": 0,
+            "cost": 37805
+          },
+          {
+            "topic": "Оборудование",
+            "count": 5,
+            "pct": 20.8,
+            "undesired": 2,
+            "undesired_pct": 40.0,
+            "repeat": 0,
+            "cost": 37805
+          },
+          {
+            "topic": "Каталог",
+            "count": 2,
+            "pct": 8.3,
+            "undesired": 1,
+            "undesired_pct": 50.0,
+            "repeat": 0,
+            "cost": 15122
+          },
+          {
+            "topic": "Учётная запись",
+            "count": 2,
+            "pct": 8.3,
+            "undesired": 1,
+            "undesired_pct": 50.0,
+            "repeat": 0,
+            "cost": 15122
+          },
+          {
+            "topic": "Массовый сбой BILLZ",
+            "count": 2,
+            "pct": 8.3,
+            "undesired": 2,
+            "undesired_pct": 100.0,
+            "repeat": 0,
+            "cost": 15122
+          },
+          {
+            "topic": "Отчёты",
+            "count": 1,
+            "pct": 4.2,
+            "undesired": 1,
+            "undesired_pct": 100.0,
+            "repeat": 0,
+            "cost": 7561
+          },
+          {
+            "topic": "Общались по звонку",
+            "count": 1,
+            "pct": 4.2,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 7561
+          },
+          {
+            "topic": "Управление",
+            "count": 1,
+            "pct": 4.2,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 7561
+          },
+          {
+            "topic": "Desktop",
+            "count": 1,
+            "pct": 4.2,
+            "undesired": 1,
+            "undesired_pct": 100.0,
+            "repeat": 0,
+            "cost": 7561
+          }
+        ],
+        "labels_breakdown": [
+          {
+            "label": "Оборудование - Установка Anydesk/BILLZ Desktop/Программы компьютера и тд.",
+            "count": 3,
+            "cost": 22683
+          },
+          {
+            "label": "Документооборот - Оплата за тариф",
+            "count": 2,
+            "cost": 15122
+          },
+          {
+            "label": "Оборудование - Загрузка базу товаров в весы",
+            "count": 2,
+            "cost": 15122
+          },
+          {
+            "label": "Массовый сбой BILLZ",
+            "count": 2,
+            "cost": 15122
+          },
+          {
+            "label": "Отчёты - Выгрузка отчёта",
+            "count": 1,
+            "cost": 7561
+          },
+          {
+            "label": "Общались по звонку",
+            "count": 1,
+            "cost": 7561
+          },
+          {
+            "label": "Каталог — запрос на добавление товара",
+            "count": 1,
+            "cost": 7561
+          },
+          {
+            "label": "Управление - Создание/Редактирвоание/Удаление сотрудника",
+            "count": 1,
+            "cost": 7561
+          }
+        ]
       },
       {
         "name": "Boburjon Karabayev Partner",
@@ -72410,6 +81465,7 @@ const BILLZ_DATA = {
         "undesired_pct": 50.0,
         "repeat_count": 0,
         "repeat_pct": 0.0,
+        "massoviy_count": 12,
         "med_close": 7.0,
         "med_frt_min": 0.25,
         "stores_count": 8,
@@ -72418,7 +81474,123 @@ const BILLZ_DATA = {
         "training_total": 1,
         "cost": 181464,
         "top_topic": "Массовый сбой BILLZ",
-        "top_label": "Массовый сбой BILLZ"
+        "top_label": "Массовый сбой BILLZ",
+        "topic_breakdown": [
+          {
+            "topic": "Массовый сбой BILLZ",
+            "count": 12,
+            "pct": 50.0,
+            "undesired": 8,
+            "undesired_pct": 66.7,
+            "repeat": 0,
+            "cost": 90732
+          },
+          {
+            "topic": "Учётная запись",
+            "count": 2,
+            "pct": 8.3,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 15122
+          },
+          {
+            "topic": "Документооборот",
+            "count": 2,
+            "pct": 8.3,
+            "undesired": 2,
+            "undesired_pct": 100.0,
+            "repeat": 0,
+            "cost": 15122
+          },
+          {
+            "topic": "Управление",
+            "count": 2,
+            "pct": 8.3,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 15122
+          },
+          {
+            "topic": "Каталог",
+            "count": 2,
+            "pct": 8.3,
+            "undesired": 1,
+            "undesired_pct": 50.0,
+            "repeat": 0,
+            "cost": 15122
+          },
+          {
+            "topic": "Поставщики",
+            "count": 1,
+            "pct": 4.2,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 7561
+          },
+          {
+            "topic": "Акции",
+            "count": 1,
+            "pct": 4.2,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 7561
+          },
+          {
+            "topic": "Финансы",
+            "count": 1,
+            "pct": 4.2,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 7561
+          }
+        ],
+        "labels_breakdown": [
+          {
+            "label": "Массовый сбой BILLZ",
+            "count": 12,
+            "cost": 90732
+          },
+          {
+            "label": "Управление - Создание/Редактирвоание/Удаление роли",
+            "count": 2,
+            "cost": 15122
+          },
+          {
+            "label": "Учётная запись - Помощь со входом в аккаунт",
+            "count": 1,
+            "cost": 7561
+          },
+          {
+            "label": "Документооборот - Смена тарифа (upsell/downsell)",
+            "count": 1,
+            "cost": 7561
+          },
+          {
+            "label": "Поставщики - Статистика по поставщику",
+            "count": 1,
+            "cost": 7561
+          },
+          {
+            "label": "Каталог — запрос на добавление товара",
+            "count": 1,
+            "cost": 7561
+          },
+          {
+            "label": "Каталог — товары не отображаются",
+            "count": 1,
+            "cost": 7561
+          },
+          {
+            "label": "Документооборот - Консультация по тарифу",
+            "count": 1,
+            "cost": 7561
+          }
+        ]
       },
       {
         "name": "Bobur Abdukakhkharov Partner",
@@ -72428,6 +81600,7 @@ const BILLZ_DATA = {
         "undesired_pct": 50.0,
         "repeat_count": 1,
         "repeat_pct": 4.2,
+        "massoviy_count": 6,
         "med_close": 3.45,
         "med_frt_min": 0.6,
         "stores_count": 10,
@@ -72436,7 +81609,123 @@ const BILLZ_DATA = {
         "training_total": 0,
         "cost": 181464,
         "top_topic": "Документооборот",
-        "top_label": "Массовый сбой BILLZ"
+        "top_label": "Массовый сбой BILLZ",
+        "topic_breakdown": [
+          {
+            "topic": "Документооборот",
+            "count": 6,
+            "pct": 25.0,
+            "undesired": 3,
+            "undesired_pct": 50.0,
+            "repeat": 1,
+            "cost": 45366
+          },
+          {
+            "topic": "Массовый сбой BILLZ",
+            "count": 6,
+            "pct": 25.0,
+            "undesired": 4,
+            "undesired_pct": 66.7,
+            "repeat": 0,
+            "cost": 45366
+          },
+          {
+            "topic": "Учётная запись",
+            "count": 4,
+            "pct": 16.7,
+            "undesired": 1,
+            "undesired_pct": 25.0,
+            "repeat": 0,
+            "cost": 30244
+          },
+          {
+            "topic": "Оборудование",
+            "count": 2,
+            "pct": 8.3,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 15122
+          },
+          {
+            "topic": "Каталог",
+            "count": 1,
+            "pct": 4.2,
+            "undesired": 1,
+            "undesired_pct": 100.0,
+            "repeat": 0,
+            "cost": 7561
+          },
+          {
+            "topic": "API",
+            "count": 1,
+            "pct": 4.2,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 7561
+          },
+          {
+            "topic": "Новая продажа",
+            "count": 1,
+            "pct": 4.2,
+            "undesired": 1,
+            "undesired_pct": 100.0,
+            "repeat": 0,
+            "cost": 7561
+          },
+          {
+            "topic": "Управление",
+            "count": 1,
+            "pct": 4.2,
+            "undesired": 1,
+            "undesired_pct": 100.0,
+            "repeat": 0,
+            "cost": 7561
+          }
+        ],
+        "labels_breakdown": [
+          {
+            "label": "Массовый сбой BILLZ",
+            "count": 6,
+            "cost": 45366
+          },
+          {
+            "label": "Документооборот - Оплата за тариф",
+            "count": 4,
+            "cost": 30244
+          },
+          {
+            "label": "Оборудование - Установка Anydesk/BILLZ Desktop/Программы компьютера и тд.",
+            "count": 2,
+            "cost": 15122
+          },
+          {
+            "label": "Документооборот - Создание ссылки для оплаты",
+            "count": 2,
+            "cost": 15122
+          },
+          {
+            "label": "Учётная запись - Помощь со входом в аккаунт",
+            "count": 2,
+            "cost": 15122
+          },
+          {
+            "label": "Каталог - Скачивание товаров",
+            "count": 1,
+            "cost": 7561
+          },
+          {
+            "label": "Учётная запись - Очистка магазина",
+            "count": 1,
+            "cost": 7561
+          },
+          {
+            "label": "API - Консультация по API ключ",
+            "count": 1,
+            "cost": 7561
+          }
+        ]
       },
       {
         "name": "Umedjon Kosimov Partner",
@@ -72446,6 +81735,7 @@ const BILLZ_DATA = {
         "undesired_pct": 68.2,
         "repeat_count": 0,
         "repeat_pct": 0.0,
+        "massoviy_count": 7,
         "med_close": 8.75,
         "med_frt_min": 1.3,
         "stores_count": 3,
@@ -72454,7 +81744,105 @@ const BILLZ_DATA = {
         "training_total": 1,
         "cost": 166342,
         "top_topic": "SMS рассылка",
-        "top_label": "Массовый сбой BILLZ"
+        "top_label": "Массовый сбой BILLZ",
+        "topic_breakdown": [
+          {
+            "topic": "SMS рассылка",
+            "count": 7,
+            "pct": 31.8,
+            "undesired": 4,
+            "undesired_pct": 57.1,
+            "repeat": 0,
+            "cost": 52927
+          },
+          {
+            "topic": "Массовый сбой BILLZ",
+            "count": 6,
+            "pct": 27.3,
+            "undesired": 6,
+            "undesired_pct": 100.0,
+            "repeat": 0,
+            "cost": 45366
+          },
+          {
+            "topic": "Документооборот",
+            "count": 3,
+            "pct": 13.6,
+            "undesired": 2,
+            "undesired_pct": 66.7,
+            "repeat": 0,
+            "cost": 22683
+          },
+          {
+            "topic": "Отчёты",
+            "count": 2,
+            "pct": 9.1,
+            "undesired": 1,
+            "undesired_pct": 50.0,
+            "repeat": 0,
+            "cost": 15122
+          },
+          {
+            "topic": "Реквест (внутренний запрос",
+            "count": 1,
+            "pct": 4.5,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 7561
+          },
+          {
+            "topic": "Все клиенты",
+            "count": 1,
+            "pct": 4.5,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 7561
+          }
+        ],
+        "labels_breakdown": [
+          {
+            "label": "Массовый сбой BILLZ",
+            "count": 6,
+            "cost": 45366
+          },
+          {
+            "label": "SMS рассылка - Создание SMS рассылки",
+            "count": 4,
+            "cost": 30244
+          },
+          {
+            "label": "SMS рассылка - Шаблонирование",
+            "count": 2,
+            "cost": 15122
+          },
+          {
+            "label": "Отчёты - Разбор отчётов",
+            "count": 1,
+            "cost": 7561
+          },
+          {
+            "label": "Отчёты - Частичное обучение",
+            "count": 1,
+            "cost": 7561
+          },
+          {
+            "label": "Реквест (внутренний запрос",
+            "count": 1,
+            "cost": 7561
+          },
+          {
+            "label": "Документооборот - Оплата за тариф",
+            "count": 1,
+            "cost": 7561
+          },
+          {
+            "label": "Все клиенты - Создание/удаление/редактирование",
+            "count": 1,
+            "cost": 7561
+          }
+        ]
       },
       {
         "name": "Muzaffar Abduvoxidov Partner",
@@ -72464,6 +81852,7 @@ const BILLZ_DATA = {
         "undesired_pct": 57.1,
         "repeat_count": 2,
         "repeat_pct": 9.5,
+        "massoviy_count": 10,
         "med_close": 8.9,
         "med_frt_min": 2.0,
         "stores_count": 1,
@@ -72472,7 +81861,100 @@ const BILLZ_DATA = {
         "training_total": 0,
         "cost": 158781,
         "top_topic": "Массовый сбой BILLZ",
-        "top_label": "Массовый сбой BILLZ"
+        "top_label": "Массовый сбой BILLZ",
+        "topic_breakdown": [
+          {
+            "topic": "Массовый сбой BILLZ",
+            "count": 10,
+            "pct": 47.6,
+            "undesired": 7,
+            "undesired_pct": 70.0,
+            "repeat": 1,
+            "cost": 75610
+          },
+          {
+            "topic": "Оборудование",
+            "count": 5,
+            "pct": 23.8,
+            "undesired": 2,
+            "undesired_pct": 40.0,
+            "repeat": 0,
+            "cost": 37805
+          },
+          {
+            "topic": "Оборудовние",
+            "count": 1,
+            "pct": 4.8,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 7561
+          },
+          {
+            "topic": "Сайт/Бот",
+            "count": 1,
+            "pct": 4.8,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 7561
+          },
+          {
+            "topic": "Акции",
+            "count": 1,
+            "pct": 4.8,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 7561
+          },
+          {
+            "topic": "Новая продажа",
+            "count": 1,
+            "pct": 4.8,
+            "undesired": 1,
+            "undesired_pct": 100.0,
+            "repeat": 1,
+            "cost": 7561
+          }
+        ],
+        "labels_breakdown": [
+          {
+            "label": "Массовый сбой BILLZ",
+            "count": 10,
+            "cost": 75610
+          },
+          {
+            "label": "Оборудование - Установка/Настройка/Удаление принтера",
+            "count": 3,
+            "cost": 22683
+          },
+          {
+            "label": "Оборудование - Установка Anydesk/BILLZ Desktop/Программы компьютера и тд.",
+            "count": 2,
+            "cost": 15122
+          },
+          {
+            "label": "Оборудовние - Установка не стандартного оборудования",
+            "count": 1,
+            "cost": 7561
+          },
+          {
+            "label": "Сайт/Бот - Настройка/Удаление/Редактирование функций",
+            "count": 1,
+            "cost": 7561
+          },
+          {
+            "label": "Акции - Создание/Редактирование/Удаление акции",
+            "count": 1,
+            "cost": 7561
+          },
+          {
+            "label": "Новая продажа - Не удаётся сделать продажу",
+            "count": 1,
+            "cost": 7561
+          }
+        ]
       },
       {
         "name": "наш партнер",
@@ -72482,6 +81964,7 @@ const BILLZ_DATA = {
         "undesired_pct": 63.2,
         "repeat_count": 3,
         "repeat_pct": 15.8,
+        "massoviy_count": 3,
         "med_close": 2.35,
         "med_frt_min": 0.3,
         "stores_count": 1,
@@ -72490,7 +81973,132 @@ const BILLZ_DATA = {
         "training_total": 0,
         "cost": 143659,
         "top_topic": "Учётная запись",
-        "top_label": "Массовый сбой BILLZ"
+        "top_label": "Массовый сбой BILLZ",
+        "topic_breakdown": [
+          {
+            "topic": "Учётная запись",
+            "count": 4,
+            "pct": 21.1,
+            "undesired": 2,
+            "undesired_pct": 50.0,
+            "repeat": 0,
+            "cost": 30244
+          },
+          {
+            "topic": "Массовый сбой BILLZ",
+            "count": 3,
+            "pct": 15.8,
+            "undesired": 2,
+            "undesired_pct": 66.7,
+            "repeat": 1,
+            "cost": 22683
+          },
+          {
+            "topic": "Документооборот",
+            "count": 2,
+            "pct": 10.5,
+            "undesired": 1,
+            "undesired_pct": 50.0,
+            "repeat": 0,
+            "cost": 15122
+          },
+          {
+            "topic": "Управление",
+            "count": 2,
+            "pct": 10.5,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 15122
+          },
+          {
+            "topic": "Все продажи",
+            "count": 1,
+            "pct": 5.3,
+            "undesired": 1,
+            "undesired_pct": 100.0,
+            "repeat": 0,
+            "cost": 7561
+          },
+          {
+            "topic": "Настройка",
+            "count": 1,
+            "pct": 5.3,
+            "undesired": 1,
+            "undesired_pct": 100.0,
+            "repeat": 0,
+            "cost": 7561
+          },
+          {
+            "topic": "Оборудование",
+            "count": 1,
+            "pct": 5.3,
+            "undesired": 1,
+            "undesired_pct": 100.0,
+            "repeat": 1,
+            "cost": 7561
+          },
+          {
+            "topic": "SMS рассылка",
+            "count": 1,
+            "pct": 5.3,
+            "undesired": 1,
+            "undesired_pct": 100.0,
+            "repeat": 1,
+            "cost": 7561
+          },
+          {
+            "topic": "Акции",
+            "count": 1,
+            "pct": 5.3,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 7561
+          }
+        ],
+        "labels_breakdown": [
+          {
+            "label": "Массовый сбой BILLZ",
+            "count": 3,
+            "cost": 22683
+          },
+          {
+            "label": "Учётная запись - Создание магазина",
+            "count": 3,
+            "cost": 22683
+          },
+          {
+            "label": "Документооборот - Оплата за тариф",
+            "count": 2,
+            "cost": 15122
+          },
+          {
+            "label": "Учётная запись - Помощь со входом в аккаунт",
+            "count": 1,
+            "cost": 7561
+          },
+          {
+            "label": "Все продажи - Сумма транзакций",
+            "count": 1,
+            "cost": 7561
+          },
+          {
+            "label": "Настройка - Установка/Редактирование/Удаление интеграций (приложения)",
+            "count": 1,
+            "cost": 7561
+          },
+          {
+            "label": "Управление - Создание/Редактирвоание/Удаление сотрудника",
+            "count": 1,
+            "cost": 7561
+          },
+          {
+            "label": "Управление - Создание/Редактирвоание/Удаление роли",
+            "count": 1,
+            "cost": 7561
+          }
+        ]
       },
       {
         "name": "Elnur Muxtasibov Partner («ILNUR OIL SERVICE» XK)",
@@ -72500,6 +82108,7 @@ const BILLZ_DATA = {
         "undesired_pct": 42.1,
         "repeat_count": 1,
         "repeat_pct": 5.3,
+        "massoviy_count": 5,
         "med_close": 2.9,
         "med_frt_min": 0.45,
         "stores_count": 4,
@@ -72508,7 +82117,123 @@ const BILLZ_DATA = {
         "training_total": 0,
         "cost": 143659,
         "top_topic": "Массовый сбой BILLZ",
-        "top_label": "Массовый сбой BILLZ"
+        "top_label": "Массовый сбой BILLZ",
+        "topic_breakdown": [
+          {
+            "topic": "Массовый сбой BILLZ",
+            "count": 5,
+            "pct": 26.3,
+            "undesired": 3,
+            "undesired_pct": 60.0,
+            "repeat": 0,
+            "cost": 37805
+          },
+          {
+            "topic": "Оборудование",
+            "count": 3,
+            "pct": 15.8,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 22683
+          },
+          {
+            "topic": "Каталог",
+            "count": 2,
+            "pct": 10.5,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 15122
+          },
+          {
+            "topic": "Новая продажа",
+            "count": 2,
+            "pct": 10.5,
+            "undesired": 1,
+            "undesired_pct": 50.0,
+            "repeat": 0,
+            "cost": 15122
+          },
+          {
+            "topic": "Управление",
+            "count": 1,
+            "pct": 5.3,
+            "undesired": 1,
+            "undesired_pct": 100.0,
+            "repeat": 0,
+            "cost": 7561
+          },
+          {
+            "topic": "Поставщики",
+            "count": 1,
+            "pct": 5.3,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 7561
+          },
+          {
+            "topic": "Настройка",
+            "count": 1,
+            "pct": 5.3,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 7561
+          },
+          {
+            "topic": "Учётная запись",
+            "count": 1,
+            "pct": 5.3,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 1,
+            "cost": 7561
+          }
+        ],
+        "labels_breakdown": [
+          {
+            "label": "Массовый сбой BILLZ",
+            "count": 5,
+            "cost": 37805
+          },
+          {
+            "label": "Новая продажа - Не удаётся сделать продажу",
+            "count": 2,
+            "cost": 15122
+          },
+          {
+            "label": "Оборудование - Установка/Настройка/Удаление принтера",
+            "count": 2,
+            "cost": 15122
+          },
+          {
+            "label": "Каталог — изменение свойств товара",
+            "count": 1,
+            "cost": 7561
+          },
+          {
+            "label": "Каталог - Просмотр статистики",
+            "count": 1,
+            "cost": 7561
+          },
+          {
+            "label": "Управление - Создание/Редактирвоание/Удаление сотрудника",
+            "count": 1,
+            "cost": 7561
+          },
+          {
+            "label": "Поставщики - Редактирование данных",
+            "count": 1,
+            "cost": 7561
+          },
+          {
+            "label": "Настройка - Установка BILLZ PAY/Payme/Epos/PAX",
+            "count": 1,
+            "cost": 7561
+          }
+        ]
       },
       {
         "name": "Nursulton Javliyev Partner \"INVEST BEST TRADE PRODUCT\"",
@@ -72518,6 +82243,7 @@ const BILLZ_DATA = {
         "undesired_pct": 35.7,
         "repeat_count": 0,
         "repeat_pct": 0.0,
+        "massoviy_count": 2,
         "med_close": 3.85,
         "med_frt_min": 0.45,
         "stores_count": 7,
@@ -72526,7 +82252,132 @@ const BILLZ_DATA = {
         "training_total": 0,
         "cost": 105854,
         "top_topic": "Документооборот",
-        "top_label": "Баг (реквест)"
+        "top_label": "Баг (реквест)",
+        "topic_breakdown": [
+          {
+            "topic": "Документооборот",
+            "count": 3,
+            "pct": 21.4,
+            "undesired": 2,
+            "undesired_pct": 66.7,
+            "repeat": 0,
+            "cost": 22683
+          },
+          {
+            "topic": "Баг (реквест)",
+            "count": 2,
+            "pct": 14.3,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 15122
+          },
+          {
+            "topic": "Массовый сбой BILLZ",
+            "count": 2,
+            "pct": 14.3,
+            "undesired": 1,
+            "undesired_pct": 50.0,
+            "repeat": 0,
+            "cost": 15122
+          },
+          {
+            "topic": "Отчёты",
+            "count": 1,
+            "pct": 7.1,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 7561
+          },
+          {
+            "topic": "Каталог",
+            "count": 1,
+            "pct": 7.1,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 7561
+          },
+          {
+            "topic": "Учётная запись",
+            "count": 1,
+            "pct": 7.1,
+            "undesired": 1,
+            "undesired_pct": 100.0,
+            "repeat": 0,
+            "cost": 7561
+          },
+          {
+            "topic": "Управление",
+            "count": 1,
+            "pct": 7.1,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 7561
+          },
+          {
+            "topic": "Новая продажа",
+            "count": 1,
+            "pct": 7.1,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 7561
+          },
+          {
+            "topic": "Общались по звонку",
+            "count": 1,
+            "pct": 7.1,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 7561
+          }
+        ],
+        "labels_breakdown": [
+          {
+            "label": "Баг (реквест)",
+            "count": 2,
+            "cost": 15122
+          },
+          {
+            "label": "Документооборот - Оплата за тариф",
+            "count": 2,
+            "cost": 15122
+          },
+          {
+            "label": "Массовый сбой BILLZ",
+            "count": 2,
+            "cost": 15122
+          },
+          {
+            "label": "Отчёты - Разбор отчётов",
+            "count": 1,
+            "cost": 7561
+          },
+          {
+            "label": "Документооборот - Консультация по тарифу",
+            "count": 1,
+            "cost": 7561
+          },
+          {
+            "label": "Каталог — изменение свойств товара",
+            "count": 1,
+            "cost": 7561
+          },
+          {
+            "label": "Учётная запись - Блокировка/Разблокировка аккаунта",
+            "count": 1,
+            "cost": 7561
+          },
+          {
+            "label": "Управление - Создание/Редактирвоание/Удаление роли",
+            "count": 1,
+            "cost": 7561
+          }
+        ]
       },
       {
         "name": "Yusupov Mansur Partner (\"MBOS UNION\" XK)",
@@ -72536,6 +82387,7 @@ const BILLZ_DATA = {
         "undesired_pct": 41.7,
         "repeat_count": 0,
         "repeat_pct": 0.0,
+        "massoviy_count": 3,
         "med_close": 3.85,
         "med_frt_min": 0.6,
         "stores_count": 1,
@@ -72544,7 +82396,105 @@ const BILLZ_DATA = {
         "training_total": 0,
         "cost": 90732,
         "top_topic": "Учётная запись",
-        "top_label": "Массовый сбой BILLZ"
+        "top_label": "Массовый сбой BILLZ",
+        "topic_breakdown": [
+          {
+            "topic": "Учётная запись",
+            "count": 4,
+            "pct": 33.3,
+            "undesired": 2,
+            "undesired_pct": 50.0,
+            "repeat": 0,
+            "cost": 30244
+          },
+          {
+            "topic": "Массовый сбой BILLZ",
+            "count": 3,
+            "pct": 25.0,
+            "undesired": 2,
+            "undesired_pct": 66.7,
+            "repeat": 0,
+            "cost": 22683
+          },
+          {
+            "topic": "Документооборот",
+            "count": 2,
+            "pct": 16.7,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 15122
+          },
+          {
+            "topic": "Каталог",
+            "count": 1,
+            "pct": 8.3,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 7561
+          },
+          {
+            "topic": "Управление",
+            "count": 1,
+            "pct": 8.3,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 7561
+          },
+          {
+            "topic": "Отчёты",
+            "count": 1,
+            "pct": 8.3,
+            "undesired": 1,
+            "undesired_pct": 100.0,
+            "repeat": 0,
+            "cost": 7561
+          }
+        ],
+        "labels_breakdown": [
+          {
+            "label": "Массовый сбой BILLZ",
+            "count": 3,
+            "cost": 22683
+          },
+          {
+            "label": "Учётная запись - Создание магазина",
+            "count": 2,
+            "cost": 15122
+          },
+          {
+            "label": "Учётная запись - Очистка магазина",
+            "count": 2,
+            "cost": 15122
+          },
+          {
+            "label": "Документооборот - Реактивация клиента",
+            "count": 1,
+            "cost": 7561
+          },
+          {
+            "label": "Документооборот - Оплата за тариф",
+            "count": 1,
+            "cost": 7561
+          },
+          {
+            "label": "Каталог — изменение свойств товара",
+            "count": 1,
+            "cost": 7561
+          },
+          {
+            "label": "Управление - Создание/Редактирвоание/Удаление роли",
+            "count": 1,
+            "cost": 7561
+          },
+          {
+            "label": "Отчёты - Разбор отчётов",
+            "count": 1,
+            "cost": 7561
+          }
+        ]
       },
       {
         "name": "Nursulton Javliyev  Partner \"INVEST BEST TRADE PRODUCT\"",
@@ -72554,6 +82504,7 @@ const BILLZ_DATA = {
         "undesired_pct": 27.3,
         "repeat_count": 0,
         "repeat_pct": 0.0,
+        "massoviy_count": 0,
         "med_close": 4.6,
         "med_frt_min": 7.8,
         "stores_count": 6,
@@ -72562,7 +82513,105 @@ const BILLZ_DATA = {
         "training_total": 1,
         "cost": 83171,
         "top_topic": "Оборудование",
-        "top_label": "Оборудование - Установка/Настройка/Удаление принтера"
+        "top_label": "Оборудование - Установка/Настройка/Удаление принтера",
+        "topic_breakdown": [
+          {
+            "topic": "Оборудование",
+            "count": 3,
+            "pct": 27.3,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 22683
+          },
+          {
+            "topic": "Документооборот",
+            "count": 3,
+            "pct": 27.3,
+            "undesired": 2,
+            "undesired_pct": 66.7,
+            "repeat": 0,
+            "cost": 22683
+          },
+          {
+            "topic": "Кассовые операции",
+            "count": 1,
+            "pct": 9.1,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 7561
+          },
+          {
+            "topic": "Долги клиентов",
+            "count": 1,
+            "pct": 9.1,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 7561
+          },
+          {
+            "topic": "Каталог",
+            "count": 1,
+            "pct": 9.1,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 7561
+          },
+          {
+            "topic": "Финансы",
+            "count": 1,
+            "pct": 9.1,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 7561
+          }
+        ],
+        "labels_breakdown": [
+          {
+            "label": "Оборудование - Установка/Настройка/Удаление принтера",
+            "count": 2,
+            "cost": 15122
+          },
+          {
+            "label": "Документооборот - Оплата за тариф",
+            "count": 2,
+            "cost": 15122
+          },
+          {
+            "label": "Кассовые операции - Создание дохода/расхода/инкассации",
+            "count": 1,
+            "cost": 7561
+          },
+          {
+            "label": "Долги клиентов - Просмотр статистики по долгам",
+            "count": 1,
+            "cost": 7561
+          },
+          {
+            "label": "Каталог — настройка печати ценника",
+            "count": 1,
+            "cost": 7561
+          },
+          {
+            "label": "Финансы - Частичное обучение",
+            "count": 1,
+            "cost": 7561
+          },
+          {
+            "label": "Документооборот - Реактивация клиента",
+            "count": 1,
+            "cost": 7561
+          },
+          {
+            "label": "Оборудование - Загрузка базу товаров в весы",
+            "count": 1,
+            "cost": 7561
+          }
+        ]
       },
       {
         "name": "O'ktam Murtazaev Partner",
@@ -72572,6 +82621,7 @@ const BILLZ_DATA = {
         "undesired_pct": 55.6,
         "repeat_count": 0,
         "repeat_pct": 0.0,
+        "massoviy_count": 0,
         "med_close": 3.6,
         "med_frt_min": 0.8,
         "stores_count": 3,
@@ -72580,7 +82630,91 @@ const BILLZ_DATA = {
         "training_total": 1,
         "cost": 68049,
         "top_topic": "Документооборот",
-        "top_label": "Документооборот - Оплата за тариф"
+        "top_label": "Документооборот - Оплата за тариф",
+        "topic_breakdown": [
+          {
+            "topic": "Документооборот",
+            "count": 5,
+            "pct": 55.6,
+            "undesired": 3,
+            "undesired_pct": 60.0,
+            "repeat": 0,
+            "cost": 37805
+          },
+          {
+            "topic": "Учётная запись",
+            "count": 1,
+            "pct": 11.1,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 7561
+          },
+          {
+            "topic": "Оборудование",
+            "count": 1,
+            "pct": 11.1,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 7561
+          },
+          {
+            "topic": "Вопрос не по программе",
+            "count": 1,
+            "pct": 11.1,
+            "undesired": 1,
+            "undesired_pct": 100.0,
+            "repeat": 0,
+            "cost": 7561
+          },
+          {
+            "topic": "Трансфер",
+            "count": 1,
+            "pct": 11.1,
+            "undesired": 1,
+            "undesired_pct": 100.0,
+            "repeat": 0,
+            "cost": 7561
+          }
+        ],
+        "labels_breakdown": [
+          {
+            "label": "Документооборот - Оплата за тариф",
+            "count": 3,
+            "cost": 22683
+          },
+          {
+            "label": "Учётная запись - Консультация по данным доп. точек",
+            "count": 1,
+            "cost": 7561
+          },
+          {
+            "label": "Документооборот - Создание ссылки для оплаты",
+            "count": 1,
+            "cost": 7561
+          },
+          {
+            "label": "Оборудование - Установка/Настройка/Удаление принтера",
+            "count": 1,
+            "cost": 7561
+          },
+          {
+            "label": "Документооборот - Консультация по тарифу",
+            "count": 1,
+            "cost": 7561
+          },
+          {
+            "label": "Вопрос не по программе",
+            "count": 1,
+            "cost": 7561
+          },
+          {
+            "label": "Трансфер - консультация по модулю (частичное обучение)",
+            "count": 1,
+            "cost": 7561
+          }
+        ]
       },
       {
         "name": "Baxtiyorov Xikmatillo Partner",
@@ -72590,6 +82724,7 @@ const BILLZ_DATA = {
         "undesired_pct": 55.6,
         "repeat_count": 1,
         "repeat_pct": 11.1,
+        "massoviy_count": 4,
         "med_close": 3.4,
         "med_frt_min": 0.3,
         "stores_count": 2,
@@ -72598,7 +82733,81 @@ const BILLZ_DATA = {
         "training_total": 0,
         "cost": 68049,
         "top_topic": "Массовый сбой BILLZ",
-        "top_label": "Массовый сбой BILLZ"
+        "top_label": "Массовый сбой BILLZ",
+        "topic_breakdown": [
+          {
+            "topic": "Массовый сбой BILLZ",
+            "count": 4,
+            "pct": 44.4,
+            "undesired": 3,
+            "undesired_pct": 75.0,
+            "repeat": 1,
+            "cost": 30244
+          },
+          {
+            "topic": "Кассовые смены",
+            "count": 2,
+            "pct": 22.2,
+            "undesired": 1,
+            "undesired_pct": 50.0,
+            "repeat": 0,
+            "cost": 15122
+          },
+          {
+            "topic": "Каталог",
+            "count": 1,
+            "pct": 11.1,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 7561
+          },
+          {
+            "topic": "Учётная запись",
+            "count": 1,
+            "pct": 11.1,
+            "undesired": 1,
+            "undesired_pct": 100.0,
+            "repeat": 0,
+            "cost": 7561
+          },
+          {
+            "topic": "Все клиенты",
+            "count": 1,
+            "pct": 11.1,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 7561
+          }
+        ],
+        "labels_breakdown": [
+          {
+            "label": "Массовый сбой BILLZ",
+            "count": 4,
+            "cost": 30244
+          },
+          {
+            "label": "Кассовые смены — Расхождение суммы",
+            "count": 2,
+            "cost": 15122
+          },
+          {
+            "label": "Каталог - Просмотр статистики",
+            "count": 1,
+            "cost": 7561
+          },
+          {
+            "label": "Учётная запись - Помощь со входом в аккаунт",
+            "count": 1,
+            "cost": 7561
+          },
+          {
+            "label": "Все клиенты - Редактирование баланса клиента",
+            "count": 1,
+            "cost": 7561
+          }
+        ]
       },
       {
         "name": "Partner",
@@ -72608,6 +82817,7 @@ const BILLZ_DATA = {
         "undesired_pct": 66.7,
         "repeat_count": 0,
         "repeat_pct": 0.0,
+        "massoviy_count": 1,
         "med_close": 7.4,
         "med_frt_min": 0.55,
         "stores_count": 1,
@@ -72616,7 +82826,86 @@ const BILLZ_DATA = {
         "training_total": 0,
         "cost": 68049,
         "top_topic": "Каталог",
-        "top_label": "Импорт — импорт товаров через Excel"
+        "top_label": "Импорт — импорт товаров через Excel",
+        "topic_breakdown": [
+          {
+            "topic": "Каталог",
+            "count": 2,
+            "pct": 22.2,
+            "undesired": 1,
+            "undesired_pct": 50.0,
+            "repeat": 0,
+            "cost": 15122
+          },
+          {
+            "topic": "Импорт",
+            "count": 1,
+            "pct": 11.1,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 7561
+          },
+          {
+            "topic": "Учётная запись",
+            "count": 1,
+            "pct": 11.1,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 7561
+          },
+          {
+            "topic": "Документооборот",
+            "count": 1,
+            "pct": 11.1,
+            "undesired": 1,
+            "undesired_pct": 100.0,
+            "repeat": 0,
+            "cost": 7561
+          },
+          {
+            "topic": "Массовый сбой BILLZ",
+            "count": 1,
+            "pct": 11.1,
+            "undesired": 1,
+            "undesired_pct": 100.0,
+            "repeat": 0,
+            "cost": 7561
+          }
+        ],
+        "labels_breakdown": [
+          {
+            "label": "Импорт — импорт товаров через Excel",
+            "count": 1,
+            "cost": 7561
+          },
+          {
+            "label": "Учётная запись - Очистка магазина",
+            "count": 1,
+            "cost": 7561
+          },
+          {
+            "label": "Каталог - Расхождения количества товаров",
+            "count": 1,
+            "cost": 7561
+          },
+          {
+            "label": "Документооборот - Консультация по тарифу",
+            "count": 1,
+            "cost": 7561
+          },
+          {
+            "label": "Массовый сбой BILLZ",
+            "count": 1,
+            "cost": 7561
+          },
+          {
+            "label": "Каталог - Просмотр статистики",
+            "count": 1,
+            "cost": 7561
+          }
+        ]
       },
       {
         "name": "Azamat Sharipov Partner",
@@ -72626,6 +82915,7 @@ const BILLZ_DATA = {
         "undesired_pct": 75.0,
         "repeat_count": 0,
         "repeat_pct": 0.0,
+        "massoviy_count": 0,
         "med_close": 2.55,
         "med_frt_min": 0.3,
         "stores_count": 4,
@@ -72634,7 +82924,81 @@ const BILLZ_DATA = {
         "training_total": 0,
         "cost": 60488,
         "top_topic": "Документооборот",
-        "top_label": "Документооборот - Консультация по сумме долга"
+        "top_label": "Документооборот - Консультация по сумме долга",
+        "topic_breakdown": [
+          {
+            "topic": "Документооборот",
+            "count": 1,
+            "pct": 12.5,
+            "undesired": 1,
+            "undesired_pct": 100.0,
+            "repeat": 0,
+            "cost": 7561
+          },
+          {
+            "topic": "Учётная запись",
+            "count": 1,
+            "pct": 12.5,
+            "undesired": 1,
+            "undesired_pct": 100.0,
+            "repeat": 0,
+            "cost": 7561
+          },
+          {
+            "topic": "Оборудование",
+            "count": 1,
+            "pct": 12.5,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 7561
+          },
+          {
+            "topic": "SMS рассылка",
+            "count": 1,
+            "pct": 12.5,
+            "undesired": 1,
+            "undesired_pct": 100.0,
+            "repeat": 0,
+            "cost": 7561
+          },
+          {
+            "topic": "Настройка",
+            "count": 1,
+            "pct": 12.5,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 7561
+          }
+        ],
+        "labels_breakdown": [
+          {
+            "label": "Документооборот - Консультация по сумме долга",
+            "count": 1,
+            "cost": 7561
+          },
+          {
+            "label": "Учётная запись - Блокировка/Разблокировка аккаунта",
+            "count": 1,
+            "cost": 7561
+          },
+          {
+            "label": "Оборудование - Установка/Настройка/Удаление принтера",
+            "count": 1,
+            "cost": 7561
+          },
+          {
+            "label": "SMS рассылка - Создание SMS рассылки",
+            "count": 1,
+            "cost": 7561
+          },
+          {
+            "label": "Настройка - Установка BILLZ PAY/Payme/Epos/PAX",
+            "count": 1,
+            "cost": 7561
+          }
+        ]
       },
       {
         "name": "Abdurauf Bobodjonov Partner",
@@ -72644,6 +83008,7 @@ const BILLZ_DATA = {
         "undesired_pct": 50.0,
         "repeat_count": 1,
         "repeat_pct": 12.5,
+        "massoviy_count": 1,
         "med_close": 11.6,
         "med_frt_min": 0.3,
         "stores_count": 2,
@@ -72652,7 +83017,86 @@ const BILLZ_DATA = {
         "training_total": 0,
         "cost": 60488,
         "top_topic": "Документооборот",
-        "top_label": "Документооборот - Оплата за тариф"
+        "top_label": "Документооборот - Оплата за тариф",
+        "topic_breakdown": [
+          {
+            "topic": "Документооборот",
+            "count": 4,
+            "pct": 50.0,
+            "undesired": 2,
+            "undesired_pct": 50.0,
+            "repeat": 1,
+            "cost": 30244
+          },
+          {
+            "topic": "Баг (реквест)",
+            "count": 1,
+            "pct": 12.5,
+            "undesired": 1,
+            "undesired_pct": 100.0,
+            "repeat": 0,
+            "cost": 7561
+          },
+          {
+            "topic": "Все продажи",
+            "count": 1,
+            "pct": 12.5,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 7561
+          },
+          {
+            "topic": "Долги клиентов",
+            "count": 1,
+            "pct": 12.5,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 7561
+          },
+          {
+            "topic": "Массовый сбой BILLZ",
+            "count": 1,
+            "pct": 12.5,
+            "undesired": 1,
+            "undesired_pct": 100.0,
+            "repeat": 0,
+            "cost": 7561
+          }
+        ],
+        "labels_breakdown": [
+          {
+            "label": "Документооборот - Оплата за тариф",
+            "count": 3,
+            "cost": 22683
+          },
+          {
+            "label": "Документооборот - Создание ссылки для оплаты",
+            "count": 1,
+            "cost": 7561
+          },
+          {
+            "label": "Баг (реквест)",
+            "count": 1,
+            "cost": 7561
+          },
+          {
+            "label": "Все продажи - Не удается найти продажу",
+            "count": 1,
+            "cost": 7561
+          },
+          {
+            "label": "Долги клиентов - Погашение/Удаление/Редактирование долга",
+            "count": 1,
+            "cost": 7561
+          },
+          {
+            "label": "Массовый сбой BILLZ",
+            "count": 1,
+            "cost": 7561
+          }
+        ]
       },
       {
         "name": "Safarov Azamat Partner",
@@ -72662,6 +83106,7 @@ const BILLZ_DATA = {
         "undesired_pct": 28.6,
         "repeat_count": 0,
         "repeat_pct": 0.0,
+        "massoviy_count": 2,
         "med_close": 6.0,
         "med_frt_min": 0.4,
         "stores_count": 1,
@@ -72670,7 +83115,95 @@ const BILLZ_DATA = {
         "training_total": 0,
         "cost": 52927,
         "top_topic": "Массовый сбой BILLZ",
-        "top_label": "Массовый сбой BILLZ"
+        "top_label": "Массовый сбой BILLZ",
+        "topic_breakdown": [
+          {
+            "topic": "Массовый сбой BILLZ",
+            "count": 2,
+            "pct": 28.6,
+            "undesired": 1,
+            "undesired_pct": 50.0,
+            "repeat": 0,
+            "cost": 15122
+          },
+          {
+            "topic": "Управление",
+            "count": 1,
+            "pct": 14.3,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 7561
+          },
+          {
+            "topic": "Новая продажа",
+            "count": 1,
+            "pct": 14.3,
+            "undesired": 1,
+            "undesired_pct": 100.0,
+            "repeat": 0,
+            "cost": 7561
+          },
+          {
+            "topic": "Учётная запись",
+            "count": 1,
+            "pct": 14.3,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 7561
+          },
+          {
+            "topic": "Сверка данных",
+            "count": 1,
+            "pct": 14.3,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 7561
+          },
+          {
+            "topic": "Баг (реквест)",
+            "count": 1,
+            "pct": 14.3,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 7561
+          }
+        ],
+        "labels_breakdown": [
+          {
+            "label": "Массовый сбой BILLZ",
+            "count": 2,
+            "cost": 15122
+          },
+          {
+            "label": "Управление - Создание/Редактирвоание/Удаление роли",
+            "count": 1,
+            "cost": 7561
+          },
+          {
+            "label": "Новая продажа - Возврат/Обмен",
+            "count": 1,
+            "cost": 7561
+          },
+          {
+            "label": "Учётная запись - Создание магазина",
+            "count": 1,
+            "cost": 7561
+          },
+          {
+            "label": "Сверка данных",
+            "count": 1,
+            "cost": 7561
+          },
+          {
+            "label": "Баг (реквест)",
+            "count": 1,
+            "cost": 7561
+          }
+        ]
       },
       {
         "name": "Sales Partner",
@@ -72680,6 +83213,7 @@ const BILLZ_DATA = {
         "undesired_pct": 66.7,
         "repeat_count": 1,
         "repeat_pct": 16.7,
+        "massoviy_count": 3,
         "med_close": 3.65,
         "med_frt_min": 0,
         "stores_count": 3,
@@ -72688,7 +83222,53 @@ const BILLZ_DATA = {
         "training_total": 0,
         "cost": 45366,
         "top_topic": "Массовый сбой BILLZ",
-        "top_label": "Массовый сбой BILLZ"
+        "top_label": "Массовый сбой BILLZ",
+        "topic_breakdown": [
+          {
+            "topic": "Массовый сбой BILLZ",
+            "count": 3,
+            "pct": 50.0,
+            "undesired": 2,
+            "undesired_pct": 66.7,
+            "repeat": 0,
+            "cost": 22683
+          },
+          {
+            "topic": "Учётная запись",
+            "count": 1,
+            "pct": 16.7,
+            "undesired": 1,
+            "undesired_pct": 100.0,
+            "repeat": 0,
+            "cost": 7561
+          },
+          {
+            "topic": "Новая продажа",
+            "count": 1,
+            "pct": 16.7,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 7561
+          }
+        ],
+        "labels_breakdown": [
+          {
+            "label": "Массовый сбой BILLZ",
+            "count": 3,
+            "cost": 22683
+          },
+          {
+            "label": "Учётная запись - Помощь со входом в аккаунт",
+            "count": 1,
+            "cost": 7561
+          },
+          {
+            "label": "Новая продажа - Не удаётся сделать продажу",
+            "count": 1,
+            "cost": 7561
+          }
+        ]
       },
       {
         "name": "Shuxrat Ergashev Partner",
@@ -72698,6 +83278,7 @@ const BILLZ_DATA = {
         "undesired_pct": 83.3,
         "repeat_count": 0,
         "repeat_pct": 0.0,
+        "massoviy_count": 4,
         "med_close": 21.95,
         "med_frt_min": 0,
         "stores_count": 1,
@@ -72706,7 +83287,25 @@ const BILLZ_DATA = {
         "training_total": 0,
         "cost": 45366,
         "top_topic": "Массовый сбой BILLZ",
-        "top_label": "Массовый сбой BILLZ"
+        "top_label": "Массовый сбой BILLZ",
+        "topic_breakdown": [
+          {
+            "topic": "Массовый сбой BILLZ",
+            "count": 4,
+            "pct": 66.7,
+            "undesired": 3,
+            "undesired_pct": 75.0,
+            "repeat": 0,
+            "cost": 30244
+          }
+        ],
+        "labels_breakdown": [
+          {
+            "label": "Массовый сбой BILLZ",
+            "count": 4,
+            "cost": 30244
+          }
+        ]
       },
       {
         "name": "Nurali Raxmatov Partner (OOO DILNUR PRINT)",
@@ -72716,6 +83315,7 @@ const BILLZ_DATA = {
         "undesired_pct": 100.0,
         "repeat_count": 1,
         "repeat_pct": 20.0,
+        "massoviy_count": 0,
         "med_close": 10.8,
         "med_frt_min": 0,
         "stores_count": 1,
@@ -72724,7 +83324,44 @@ const BILLZ_DATA = {
         "training_total": 0,
         "cost": 37805,
         "top_topic": "Документооборот",
-        "top_label": "Документооборот - Оплата за тариф"
+        "top_label": "Документооборот - Оплата за тариф",
+        "topic_breakdown": [
+          {
+            "topic": "Документооборот",
+            "count": 3,
+            "pct": 60.0,
+            "undesired": 3,
+            "undesired_pct": 100.0,
+            "repeat": 1,
+            "cost": 22683
+          },
+          {
+            "topic": "Оборудование",
+            "count": 2,
+            "pct": 40.0,
+            "undesired": 2,
+            "undesired_pct": 100.0,
+            "repeat": 0,
+            "cost": 15122
+          }
+        ],
+        "labels_breakdown": [
+          {
+            "label": "Документооборот - Оплата за тариф",
+            "count": 2,
+            "cost": 15122
+          },
+          {
+            "label": "Оборудование - Установка/Настройка/Удаление принтера",
+            "count": 2,
+            "cost": 15122
+          },
+          {
+            "label": "Документооборот - Консультация по сумме долга",
+            "count": 1,
+            "cost": 7561
+          }
+        ]
       },
       {
         "name": "Nozim Axunjanov Partner (ONHAYOT TRADE MCHJ)",
@@ -72734,6 +83371,7 @@ const BILLZ_DATA = {
         "undesired_pct": 40.0,
         "repeat_count": 0,
         "repeat_pct": 0.0,
+        "massoviy_count": 1,
         "med_close": 12.3,
         "med_frt_min": 9.3,
         "stores_count": 3,
@@ -72742,7 +83380,67 @@ const BILLZ_DATA = {
         "training_total": 1,
         "cost": 37805,
         "top_topic": "Новая продажа",
-        "top_label": "Новая продажа - Возврат/Обмен"
+        "top_label": "Новая продажа - Возврат/Обмен",
+        "topic_breakdown": [
+          {
+            "topic": "Новая продажа",
+            "count": 2,
+            "pct": 40.0,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 15122
+          },
+          {
+            "topic": "Каталог",
+            "count": 1,
+            "pct": 20.0,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 7561
+          },
+          {
+            "topic": "Трансфер",
+            "count": 1,
+            "pct": 20.0,
+            "undesired": 1,
+            "undesired_pct": 100.0,
+            "repeat": 0,
+            "cost": 7561
+          },
+          {
+            "topic": "Массовый сбой BILLZ",
+            "count": 1,
+            "pct": 20.0,
+            "undesired": 1,
+            "undesired_pct": 100.0,
+            "repeat": 0,
+            "cost": 7561
+          }
+        ],
+        "labels_breakdown": [
+          {
+            "label": "Новая продажа - Возврат/Обмен",
+            "count": 2,
+            "cost": 15122
+          },
+          {
+            "label": "Каталог - Просмотр статистики",
+            "count": 1,
+            "cost": 7561
+          },
+          {
+            "label": "Трансфер - консультация по модулю (частичное обучение)",
+            "count": 1,
+            "cost": 7561
+          },
+          {
+            "label": "Массовый сбой BILLZ",
+            "count": 1,
+            "cost": 7561
+          }
+        ]
       },
       {
         "name": "CS партнёр",
@@ -72752,6 +83450,7 @@ const BILLZ_DATA = {
         "undesired_pct": 60.0,
         "repeat_count": 0,
         "repeat_pct": 0.0,
+        "massoviy_count": 0,
         "med_close": 1.7,
         "med_frt_min": 0.35,
         "stores_count": 1,
@@ -72760,7 +83459,44 @@ const BILLZ_DATA = {
         "training_total": 0,
         "cost": 37805,
         "top_topic": "Настройка",
-        "top_label": "Настройка - Создание/Редактирование/Удаление доп. точки"
+        "top_label": "Настройка - Создание/Редактирование/Удаление доп. точки",
+        "topic_breakdown": [
+          {
+            "topic": "Настройка",
+            "count": 2,
+            "pct": 40.0,
+            "undesired": 1,
+            "undesired_pct": 50.0,
+            "repeat": 0,
+            "cost": 15122
+          },
+          {
+            "topic": "Все продажи",
+            "count": 1,
+            "pct": 20.0,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 7561
+          }
+        ],
+        "labels_breakdown": [
+          {
+            "label": "Настройка - Создание/Редактирование/Удаление доп. точки",
+            "count": 1,
+            "cost": 7561
+          },
+          {
+            "label": "Настройка - Установка BILLZ PAY/Payme/Epos/PAX",
+            "count": 1,
+            "cost": 7561
+          },
+          {
+            "label": "Все продажи - Удаление/Редактирование продажи",
+            "count": 1,
+            "cost": 7561
+          }
+        ]
       },
       {
         "name": "Shuhrat Asadov Partner",
@@ -72770,6 +83506,7 @@ const BILLZ_DATA = {
         "undesired_pct": 100.0,
         "repeat_count": 0,
         "repeat_pct": 0.0,
+        "massoviy_count": 1,
         "med_close": 2.55,
         "med_frt_min": 0.4,
         "stores_count": 1,
@@ -72778,7 +83515,53 @@ const BILLZ_DATA = {
         "training_total": 0,
         "cost": 30244,
         "top_topic": "Документооборот",
-        "top_label": "Документооборот - Оплата за тариф"
+        "top_label": "Документооборот - Оплата за тариф",
+        "topic_breakdown": [
+          {
+            "topic": "Документооборот",
+            "count": 2,
+            "pct": 50.0,
+            "undesired": 2,
+            "undesired_pct": 100.0,
+            "repeat": 0,
+            "cost": 15122
+          },
+          {
+            "topic": "Массовый сбой BILLZ",
+            "count": 1,
+            "pct": 25.0,
+            "undesired": 1,
+            "undesired_pct": 100.0,
+            "repeat": 0,
+            "cost": 7561
+          },
+          {
+            "topic": "Баг (реквест)",
+            "count": 1,
+            "pct": 25.0,
+            "undesired": 1,
+            "undesired_pct": 100.0,
+            "repeat": 0,
+            "cost": 7561
+          }
+        ],
+        "labels_breakdown": [
+          {
+            "label": "Документооборот - Оплата за тариф",
+            "count": 2,
+            "cost": 15122
+          },
+          {
+            "label": "Массовый сбой BILLZ",
+            "count": 1,
+            "cost": 7561
+          },
+          {
+            "label": "Баг (реквест)",
+            "count": 1,
+            "cost": 7561
+          }
+        ]
       },
       {
         "name": "Shaxobiddinov Javlonbek Surxandarya Partner (\"DIGITAL TEXSERVIS\" MChJ)",
@@ -72788,6 +83571,7 @@ const BILLZ_DATA = {
         "undesired_pct": 50.0,
         "repeat_count": 0,
         "repeat_pct": 0.0,
+        "massoviy_count": 0,
         "med_close": 8.45,
         "med_frt_min": 0,
         "stores_count": 2,
@@ -72796,7 +83580,53 @@ const BILLZ_DATA = {
         "training_total": 0,
         "cost": 30244,
         "top_topic": "Оборудование",
-        "top_label": "Оборудование - Установка/Настройка/Удаление принтера"
+        "top_label": "Оборудование - Установка/Настройка/Удаление принтера",
+        "topic_breakdown": [
+          {
+            "topic": "Оборудование",
+            "count": 2,
+            "pct": 50.0,
+            "undesired": 1,
+            "undesired_pct": 50.0,
+            "repeat": 0,
+            "cost": 15122
+          },
+          {
+            "topic": "Учётная запись",
+            "count": 1,
+            "pct": 25.0,
+            "undesired": 1,
+            "undesired_pct": 100.0,
+            "repeat": 0,
+            "cost": 7561
+          },
+          {
+            "topic": "Каталог",
+            "count": 1,
+            "pct": 25.0,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 7561
+          }
+        ],
+        "labels_breakdown": [
+          {
+            "label": "Оборудование - Установка/Настройка/Удаление принтера",
+            "count": 2,
+            "cost": 15122
+          },
+          {
+            "label": "Учётная запись - Помощь со входом в аккаунт",
+            "count": 1,
+            "cost": 7561
+          },
+          {
+            "label": "Каталог - Скачивание товаров",
+            "count": 1,
+            "cost": 7561
+          }
+        ]
       },
       {
         "name": "Наш партнёр",
@@ -72806,6 +83636,7 @@ const BILLZ_DATA = {
         "undesired_pct": 100.0,
         "repeat_count": 1,
         "repeat_pct": 25.0,
+        "massoviy_count": 0,
         "med_close": 1.0,
         "med_frt_min": 0.4,
         "stores_count": 1,
@@ -72814,7 +83645,39 @@ const BILLZ_DATA = {
         "training_total": 0,
         "cost": 30244,
         "top_topic": "Учётная запись",
-        "top_label": "Учётная запись - Создание магазина"
+        "top_label": "Учётная запись - Создание магазина",
+        "topic_breakdown": [
+          {
+            "topic": "Учётная запись",
+            "count": 3,
+            "pct": 75.0,
+            "undesired": 3,
+            "undesired_pct": 100.0,
+            "repeat": 1,
+            "cost": 22683
+          },
+          {
+            "topic": "Вопрос не по программе",
+            "count": 1,
+            "pct": 25.0,
+            "undesired": 1,
+            "undesired_pct": 100.0,
+            "repeat": 0,
+            "cost": 7561
+          }
+        ],
+        "labels_breakdown": [
+          {
+            "label": "Учётная запись - Создание магазина",
+            "count": 3,
+            "cost": 22683
+          },
+          {
+            "label": "Вопрос не по программе",
+            "count": 1,
+            "cost": 7561
+          }
+        ]
       },
       {
         "name": "Elnur Muxtasibov («ILNUR OIL SERVICE» XK Partner)",
@@ -72824,6 +83687,7 @@ const BILLZ_DATA = {
         "undesired_pct": 100.0,
         "repeat_count": 0,
         "repeat_pct": 0.0,
+        "massoviy_count": 2,
         "med_close": 28.7,
         "med_frt_min": 0,
         "stores_count": 2,
@@ -72832,7 +83696,25 @@ const BILLZ_DATA = {
         "training_total": 0,
         "cost": 22683,
         "top_topic": "Массовый сбой BILLZ",
-        "top_label": "Массовый сбой BILLZ"
+        "top_label": "Массовый сбой BILLZ",
+        "topic_breakdown": [
+          {
+            "topic": "Массовый сбой BILLZ",
+            "count": 2,
+            "pct": 66.7,
+            "undesired": 2,
+            "undesired_pct": 100.0,
+            "repeat": 0,
+            "cost": 15122
+          }
+        ],
+        "labels_breakdown": [
+          {
+            "label": "Массовый сбой BILLZ",
+            "count": 2,
+            "cost": 15122
+          }
+        ]
       },
       {
         "name": "Bunyod Baxriddinov Partner (\"BAXORA HAYRIYA\" OK)",
@@ -72842,6 +83724,7 @@ const BILLZ_DATA = {
         "undesired_pct": 33.3,
         "repeat_count": 0,
         "repeat_pct": 0.0,
+        "massoviy_count": 0,
         "med_close": 4.6,
         "med_frt_min": 0.5,
         "stores_count": 1,
@@ -72850,7 +83733,39 @@ const BILLZ_DATA = {
         "training_total": 1,
         "cost": 22683,
         "top_topic": "Новая продажа",
-        "top_label": "Новая продажа - Возврат/Обмен"
+        "top_label": "Новая продажа - Возврат/Обмен",
+        "topic_breakdown": [
+          {
+            "topic": "Новая продажа",
+            "count": 2,
+            "pct": 66.7,
+            "undesired": 1,
+            "undesired_pct": 50.0,
+            "repeat": 0,
+            "cost": 15122
+          },
+          {
+            "topic": "Все продажи",
+            "count": 1,
+            "pct": 33.3,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 7561
+          }
+        ],
+        "labels_breakdown": [
+          {
+            "label": "Новая продажа - Возврат/Обмен",
+            "count": 2,
+            "cost": 15122
+          },
+          {
+            "label": "Все продажи - Частичное обучение",
+            "count": 1,
+            "cost": 7561
+          }
+        ]
       },
       {
         "name": "Mirjon Muzafarov Partner",
@@ -72860,6 +83775,7 @@ const BILLZ_DATA = {
         "undesired_pct": 33.3,
         "repeat_count": 0,
         "repeat_pct": 0.0,
+        "massoviy_count": 0,
         "med_close": 1.2,
         "med_frt_min": 0.3,
         "stores_count": 1,
@@ -72868,7 +83784,25 @@ const BILLZ_DATA = {
         "training_total": 0,
         "cost": 22683,
         "top_topic": "Документооборот",
-        "top_label": "Документооборот - Оплата за тариф"
+        "top_label": "Документооборот - Оплата за тариф",
+        "topic_breakdown": [
+          {
+            "topic": "Документооборот",
+            "count": 2,
+            "pct": 66.7,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 15122
+          }
+        ],
+        "labels_breakdown": [
+          {
+            "label": "Документооборот - Оплата за тариф",
+            "count": 2,
+            "cost": 15122
+          }
+        ]
       },
       {
         "name": "ПАРТНЕР",
@@ -72878,6 +83812,7 @@ const BILLZ_DATA = {
         "undesired_pct": 66.7,
         "repeat_count": 1,
         "repeat_pct": 33.3,
+        "massoviy_count": 0,
         "med_close": 2.6,
         "med_frt_min": 0,
         "stores_count": 1,
@@ -72886,7 +83821,39 @@ const BILLZ_DATA = {
         "training_total": 0,
         "cost": 22683,
         "top_topic": "Группы и теги",
-        "top_label": "Группы и теги - Создание/Удаление/Редактирование"
+        "top_label": "Группы и теги - Создание/Удаление/Редактирование",
+        "topic_breakdown": [
+          {
+            "topic": "Группы и теги",
+            "count": 2,
+            "pct": 66.7,
+            "undesired": 2,
+            "undesired_pct": 100.0,
+            "repeat": 1,
+            "cost": 15122
+          },
+          {
+            "topic": "Управление",
+            "count": 1,
+            "pct": 33.3,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 7561
+          }
+        ],
+        "labels_breakdown": [
+          {
+            "label": "Группы и теги - Создание/Удаление/Редактирование",
+            "count": 2,
+            "cost": 15122
+          },
+          {
+            "label": "Управление - Создание/Редактирвоание/Удаление роли",
+            "count": 1,
+            "cost": 7561
+          }
+        ]
       },
       {
         "name": "Ilnur Партнер самарканд",
@@ -72896,6 +83863,7 @@ const BILLZ_DATA = {
         "undesired_pct": 100.0,
         "repeat_count": 0,
         "repeat_pct": 0.0,
+        "massoviy_count": 3,
         "med_close": 4.3,
         "med_frt_min": 0,
         "stores_count": 1,
@@ -72904,7 +83872,25 @@ const BILLZ_DATA = {
         "training_total": 0,
         "cost": 22683,
         "top_topic": "Массовый сбой BILLZ",
-        "top_label": "Массовый сбой BILLZ"
+        "top_label": "Массовый сбой BILLZ",
+        "topic_breakdown": [
+          {
+            "topic": "Массовый сбой BILLZ",
+            "count": 3,
+            "pct": 100.0,
+            "undesired": 3,
+            "undesired_pct": 100.0,
+            "repeat": 0,
+            "cost": 22683
+          }
+        ],
+        "labels_breakdown": [
+          {
+            "label": "Массовый сбой BILLZ",
+            "count": 3,
+            "cost": 22683
+          }
+        ]
       },
       {
         "name": "PARTNER Aziz Shakirov",
@@ -72914,6 +83900,7 @@ const BILLZ_DATA = {
         "undesired_pct": 50.0,
         "repeat_count": 0,
         "repeat_pct": 0.0,
+        "massoviy_count": 0,
         "med_close": 3.25,
         "med_frt_min": 0.2,
         "stores_count": 1,
@@ -72922,43 +83909,39 @@ const BILLZ_DATA = {
         "training_total": 0,
         "cost": 15122,
         "top_topic": "Учётная запись",
-        "top_label": "Учётная запись - Помощь со входом в аккаунт"
-      },
-      {
-        "name": "Партнёр",
-        "tickets": 2,
-        "desired": 2,
-        "undesired": 0,
-        "undesired_pct": 0.0,
-        "repeat_count": 0,
-        "repeat_pct": 0.0,
-        "med_close": 2.5,
-        "med_frt_min": 0,
-        "stores_count": 1,
-        "training_partial": 0,
-        "training_full": 0,
-        "training_total": 0,
-        "cost": 15122,
-        "top_topic": "Каталог — настройка печати ценника",
-        "top_label": "Каталог — настройка печати ценника"
-      },
-      {
-        "name": "Husan Artikov /  Texnopos Partner",
-        "tickets": 2,
-        "desired": 2,
-        "undesired": 0,
-        "undesired_pct": 0.0,
-        "repeat_count": 0,
-        "repeat_pct": 0.0,
-        "med_close": 5.75,
-        "med_frt_min": 0.2,
-        "stores_count": 1,
-        "training_partial": 0,
-        "training_full": 0,
-        "training_total": 0,
-        "cost": 15122,
-        "top_topic": "Оборудование",
-        "top_label": "Оборудование - Установка/Настройка/Удаление принтера"
+        "top_label": "Учётная запись - Помощь со входом в аккаунт",
+        "topic_breakdown": [
+          {
+            "topic": "Учётная запись",
+            "count": 1,
+            "pct": 50.0,
+            "undesired": 1,
+            "undesired_pct": 100.0,
+            "repeat": 0,
+            "cost": 7561
+          },
+          {
+            "topic": "Каталог",
+            "count": 1,
+            "pct": 50.0,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 7561
+          }
+        ],
+        "labels_breakdown": [
+          {
+            "label": "Учётная запись - Помощь со входом в аккаунт",
+            "count": 1,
+            "cost": 7561
+          },
+          {
+            "label": "Каталог - Скачивание товаров",
+            "count": 1,
+            "cost": 7561
+          }
+        ]
       },
       {
         "name": "Support manager Other Partner",
@@ -72968,6 +83951,7 @@ const BILLZ_DATA = {
         "undesired_pct": 50.0,
         "repeat_count": 0,
         "repeat_pct": 0.0,
+        "massoviy_count": 0,
         "med_close": 8.1,
         "med_frt_min": 0,
         "stores_count": 1,
@@ -72976,7 +83960,25 @@ const BILLZ_DATA = {
         "training_total": 0,
         "cost": 15122,
         "top_topic": "Учётная запись",
-        "top_label": "Учётная запись - Не удаётся войти в аккаунт"
+        "top_label": "Учётная запись - Не удаётся войти в аккаунт",
+        "topic_breakdown": [
+          {
+            "topic": "Учётная запись",
+            "count": 1,
+            "pct": 50.0,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 7561
+          }
+        ],
+        "labels_breakdown": [
+          {
+            "label": "Учётная запись - Не удаётся войти в аккаунт",
+            "count": 1,
+            "cost": 7561
+          }
+        ]
       },
       {
         "name": "Alisher Azimov (PartnerYTT TILYABAYEVA SITORAXON G'ULOMQODIR QI)",
@@ -72986,6 +83988,7 @@ const BILLZ_DATA = {
         "undesired_pct": 0.0,
         "repeat_count": 0,
         "repeat_pct": 0.0,
+        "massoviy_count": 0,
         "med_close": 1.4,
         "med_frt_min": 0.2,
         "stores_count": 1,
@@ -72994,7 +83997,25 @@ const BILLZ_DATA = {
         "training_total": 0,
         "cost": 7561,
         "top_topic": "Документооборот",
-        "top_label": "Документооборот - Создание ссылки для оплаты"
+        "top_label": "Документооборот - Создание ссылки для оплаты",
+        "topic_breakdown": [
+          {
+            "topic": "Документооборот",
+            "count": 1,
+            "pct": 100.0,
+            "undesired": 0,
+            "undesired_pct": 0.0,
+            "repeat": 0,
+            "cost": 7561
+          }
+        ],
+        "labels_breakdown": [
+          {
+            "label": "Документооборот - Создание ссылки для оплаты",
+            "count": 1,
+            "cost": 7561
+          }
+        ]
       },
       {
         "name": "Rahmatulloh Mahmudov Partner",
@@ -73004,6 +84025,7 @@ const BILLZ_DATA = {
         "undesired_pct": 100.0,
         "repeat_count": 0,
         "repeat_pct": 0.0,
+        "massoviy_count": 0,
         "med_close": 14.9,
         "med_frt_min": 0.5,
         "stores_count": 1,
@@ -73012,7 +84034,25 @@ const BILLZ_DATA = {
         "training_total": 0,
         "cost": 7561,
         "top_topic": "Документооборот",
-        "top_label": "Документооборот - Оплата за тариф"
+        "top_label": "Документооборот - Оплата за тариф",
+        "topic_breakdown": [
+          {
+            "topic": "Документооборот",
+            "count": 1,
+            "pct": 100.0,
+            "undesired": 1,
+            "undesired_pct": 100.0,
+            "repeat": 0,
+            "cost": 7561
+          }
+        ],
+        "labels_breakdown": [
+          {
+            "label": "Документооборот - Оплата за тариф",
+            "count": 1,
+            "cost": 7561
+          }
+        ]
       },
       {
         "name": "Nozim Axunjanov (Partner ONHAYOT TRADE MCHJ)",
@@ -73022,6 +84062,7 @@ const BILLZ_DATA = {
         "undesired_pct": 100.0,
         "repeat_count": 0,
         "repeat_pct": 0.0,
+        "massoviy_count": 0,
         "med_close": 38.9,
         "med_frt_min": 0,
         "stores_count": 1,
@@ -73030,7 +84071,25 @@ const BILLZ_DATA = {
         "training_total": 0,
         "cost": 7561,
         "top_topic": "Трансфер",
-        "top_label": "Трансфер - Просмотр логов действий"
+        "top_label": "Трансфер - Просмотр логов действий",
+        "topic_breakdown": [
+          {
+            "topic": "Трансфер",
+            "count": 1,
+            "pct": 100.0,
+            "undesired": 1,
+            "undesired_pct": 100.0,
+            "repeat": 0,
+            "cost": 7561
+          }
+        ],
+        "labels_breakdown": [
+          {
+            "label": "Трансфер - Просмотр логов действий",
+            "count": 1,
+            "cost": 7561
+          }
+        ]
       },
       {
         "name": "Nozim Axunjanov (Partner)",
@@ -73040,6 +84099,7 @@ const BILLZ_DATA = {
         "undesired_pct": 100.0,
         "repeat_count": 0,
         "repeat_pct": 0.0,
+        "massoviy_count": 1,
         "med_close": 0.7,
         "med_frt_min": 0.5,
         "stores_count": 1,
@@ -73048,7 +84108,25 @@ const BILLZ_DATA = {
         "training_total": 0,
         "cost": 7561,
         "top_topic": "Массовый сбой BILLZ",
-        "top_label": "Массовый сбой BILLZ"
+        "top_label": "Массовый сбой BILLZ",
+        "topic_breakdown": [
+          {
+            "topic": "Массовый сбой BILLZ",
+            "count": 1,
+            "pct": 100.0,
+            "undesired": 1,
+            "undesired_pct": 100.0,
+            "repeat": 0,
+            "cost": 7561
+          }
+        ],
+        "labels_breakdown": [
+          {
+            "label": "Массовый сбой BILLZ",
+            "count": 1,
+            "cost": 7561
+          }
+        ]
       },
       {
         "name": "Ruslan Ernazarov Partner",
@@ -73058,6 +84136,7 @@ const BILLZ_DATA = {
         "undesired_pct": 100.0,
         "repeat_count": 0,
         "repeat_pct": 0.0,
+        "massoviy_count": 0,
         "med_close": 3.7,
         "med_frt_min": 0,
         "stores_count": 1,
@@ -73065,8 +84144,26 @@ const BILLZ_DATA = {
         "training_full": 0,
         "training_total": 0,
         "cost": 7561,
-        "top_topic": "Каталог — настройка печати ценника",
-        "top_label": "Каталог — настройка печати ценника"
+        "top_topic": "Каталог",
+        "top_label": "Каталог — настройка печати ценника",
+        "topic_breakdown": [
+          {
+            "topic": "Каталог",
+            "count": 1,
+            "pct": 100.0,
+            "undesired": 1,
+            "undesired_pct": 100.0,
+            "repeat": 0,
+            "cost": 7561
+          }
+        ],
+        "labels_breakdown": [
+          {
+            "label": "Каталог — настройка печати ценника",
+            "count": 1,
+            "cost": 7561
+          }
+        ]
       }
     ],
     "top_labels": [
@@ -73229,6 +84326,10 @@ const BILLZ_DATA = {
         "tickets": 87
       },
       {
+        "name": "Каталог",
+        "tickets": 85
+      },
+      {
         "name": "Настройка",
         "tickets": 56
       },
@@ -73245,24 +84346,8 @@ const BILLZ_DATA = {
         "tickets": 25
       },
       {
-        "name": "Каталог — настройка печати ценника",
-        "tickets": 24
-      },
-      {
         "name": "Баг (реквест)",
         "tickets": 21
-      },
-      {
-        "name": "Каталог",
-        "tickets": 20
-      },
-      {
-        "name": "Каталог — запрос на добавление товара",
-        "tickets": 19
-      },
-      {
-        "name": "Каталог — изменение свойств товара",
-        "tickets": 16
       },
       {
         "name": "Долги клиентов",
@@ -73271,6 +84356,18 @@ const BILLZ_DATA = {
       {
         "name": "Все продажи",
         "tickets": 15
+      },
+      {
+        "name": "Кассовые смены",
+        "tickets": 15
+      },
+      {
+        "name": "SMS рассылка",
+        "tickets": 13
+      },
+      {
+        "name": "Вопрос не по программе",
+        "tickets": 12
       }
     ],
     "by_store": [
@@ -73278,7 +84375,7 @@ const BILLZ_DATA = {
         "name": "BILLZ",
         "tickets": 232,
         "cost": 1754152,
-        "partner": "ПАРТНЁР"
+        "partner": "ПАРТНЁР (без указания)"
       },
       {
         "name": "ota-bola-fayiz",
@@ -73296,7 +84393,7 @@ const BILLZ_DATA = {
         "name": "ПАРТНЁР",
         "tickets": 21,
         "cost": 158781,
-        "partner": "ПАРТНЁР"
+        "partner": "ПАРТНЁР (без указания)"
       },
       {
         "name": "chinobodlyuks",
@@ -73398,5 +84495,96 @@ const BILLZ_DATA = {
     "training_partial_total": 24,
     "training_full_total": 3,
     "training_total": 27
-  }
+  },
+  "week_vs_week": {
+    "label_a": "Нед 19 · 04–10.05",
+    "label_b": "Нед 20 · 11–17.05",
+    "tickets": {
+      "abs": 195,
+      "pct": 7.2
+    },
+    "calls": {
+      "abs": -105,
+      "pct": -6.8
+    },
+    "chats": {
+      "abs": 300,
+      "pct": 25.6
+    },
+    "desired": {
+      "abs": 10,
+      "pct": 0.8
+    },
+    "undesired": {
+      "abs": 184,
+      "pct": 13.2
+    },
+    "sla_pct": {
+      "abs": -1.4,
+      "pct": -1.6
+    },
+    "csat_pct": {
+      "abs": 1.1,
+      "pct": 1.2
+    },
+    "lcr": {
+      "abs": -0.15,
+      "pct": -19.7
+    },
+    "repeat_pct": {
+      "abs": 0.3,
+      "pct": 4.2
+    },
+    "afrt_raw": {
+      "abs": 0.0,
+      "pct": 0.0
+    },
+    "art_raw": {
+      "abs": -0.1,
+      "pct": -3.6
+    },
+    "undesired_pct": {
+      "abs": 2.8,
+      "pct": 5.4
+    },
+    "cost": {
+      "abs": 1474395,
+      "pct": 7.2
+    },
+    "prior": {
+      "tickets": 2714,
+      "calls": 1541,
+      "chats": 1173,
+      "desired": 1293,
+      "undesired": 1394,
+      "sla_pct": 87.2,
+      "csat_pct": 94.1,
+      "lcr": 0.76,
+      "repeat_pct": 7.1,
+      "afrt_raw": 0.3,
+      "art_raw": 2.8,
+      "undesired_pct": 51.4,
+      "cost": 20520554,
+      "afrt": "18с",
+      "art": "2.80ч"
+    },
+    "current": {
+      "tickets": 2909,
+      "calls": 1436,
+      "chats": 1473,
+      "desired": 1303,
+      "undesired": 1578,
+      "sla_pct": 85.8,
+      "csat_pct": 95.2,
+      "lcr": 0.61,
+      "repeat_pct": 7.4,
+      "afrt_raw": 0.3,
+      "art_raw": 2.7,
+      "undesired_pct": 54.2,
+      "cost": 21994949,
+      "afrt": "18с",
+      "art": "2.70ч"
+    }
+  },
+  "data_last_refreshed": "24.05.2026"
 };

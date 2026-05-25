@@ -316,6 +316,38 @@ if (document.readyState === 'loading') {
   buildMonthSwitcher();
 }
 
+// ── Inject global "last updated" banner right under top-nav ──────────────
+function injectUpdatedBanner() {
+  try {
+    if (typeof BILLZ_DATA === 'undefined') return;
+    const dateStr = (BILLZ_DATA.data_last_refreshed)
+      || (BILLZ_DATA.last_updated && (BILLZ_DATA.last_updated.daily || BILLZ_DATA.last_updated.weekly || BILLZ_DATA.last_updated.monthly))
+      || '24.05.2026';
+    const nav = document.querySelector('nav.top-nav');
+    if (!nav) return;
+    // Avoid duplicate banners
+    if (document.getElementById('updatedBanner')) return;
+    const banner = document.createElement('div');
+    banner.id = 'updatedBanner';
+    banner.setAttribute('style',
+      'display:flex;align-items:center;justify-content:center;gap:10px;' +
+      'padding:6px 16px;background:rgba(15,23,42,0.5);border-bottom:1px solid rgba(96,165,250,0.15);' +
+      'font-family:\'JetBrains Mono\',monospace;font-size:10px;color:#94A3B8;letter-spacing:.04em');
+    banner.innerHTML =
+      '<span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:#10B981;box-shadow:0 0 6px rgba(16,185,129,0.6)"></span>' +
+      '<span>Данные актуальны на</span>' +
+      '<span style="color:#34D399;font-weight:700">' + dateStr + '</span>' +
+      '<span style="color:var(--text4,#64748B)">·</span>' +
+      '<span>источник: Omnidesk CRM + АТС OnlinePBX</span>';
+    nav.insertAdjacentElement('afterend', banner);
+  } catch(e) { /* silent */ }
+}
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', injectUpdatedBanner);
+} else {
+  injectUpdatedBanner();
+}
+
 const fmt = {
   num:  v => Math.round(v).toLocaleString('ru'),
   pct:  (v, d=1) => Number(v).toFixed(d) + '%',

@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>BILLZ CC · Customer Success Анализ</title>
-<link rel="stylesheet" href="shared.css?v=40">
+<link rel="stylesheet" href="shared.css?v=41">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
-<script src="data.js?v=40"></script>
-<script src="shared.js?v=40"></script>
+<script src="data.js?v=41"></script>
+<script src="shared.js?v=41"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 <style>
 .cs-insight{background:rgba(124,58,237,0.07);border:1px solid rgba(124,58,237,0.22);border-radius:10px;padding:16px 18px;display:flex;gap:14px;align-items:flex-start;margin-bottom:8px;transition:border-color .2s}
@@ -160,18 +160,29 @@
 
   <!-- New section: Full CS manager stats (shows when month has full data) -->
   <div id="csFullSection" style="display:none">
-    <div class="sec"><div class="sec-num">03A</div><div class="sec-title">Полная нагрузка по CS-менеджерам · все тикеты</div><div class="sec-line"></div></div>
+    <div class="sec"><div class="sec-num">03A</div><div class="sec-title">CS-менеджеры · 18 ключевых · полная разбивка</div><div class="sec-line"></div></div>
+    
+    <!-- Role legend -->
+    <div style="background:rgba(15,23,42,0.5);border:1px solid var(--br2);border-radius:8px;padding:12px 16px;margin-bottom:14px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;font-size:11px">
+      <span style="color:var(--text3);font-weight:600">Роли:</span>
+      <span style="display:inline-flex;align-items:center;gap:6px"><span style="display:inline-block;width:10px;height:10px;border-radius:3px;background:#A78BFA"></span>👑 Тимлид · не клиентские KPI</span>
+      <span style="display:inline-flex;align-items:center;gap:6px"><span style="display:inline-block;width:10px;height:10px;border-radius:3px;background:#3B82F6"></span>🔵 Большая база · не критичный</span>
+      <span style="display:inline-flex;align-items:center;gap:6px"><span style="display:inline-block;width:10px;height:10px;border-radius:3px;background:#94A3B8"></span>⚪ Не критичный</span>
+      <span style="display:inline-flex;align-items:center;gap:6px"><span style="display:inline-block;width:10px;height:10px;border-radius:3px;background:#EF4444"></span>⭐ Критичный</span>
+    </div>
+    
     <div class="row one">
       <div class="card">
         <div class="card-hd">
           <div class="card-title">CS-менеджеры — все обращения клиентов в CC</div>
-          <div class="card-note">не только обучения · разбивка по нежел./повторным</div>
+          <div class="card-note">кликабельная строка · раскрытие тем</div>
         </div>
         <div style="overflow-x:auto">
           <table class="tbl" style="font-size:11px">
             <thead><tr>
               <th>#</th>
               <th>CS Менеджер</th>
+              <th>Роль</th>
               <th>Тикеты</th>
               <th>Нежел.%</th>
               <th>Повтор.%</th>
@@ -184,6 +195,7 @@
             <tbody id="csFullTable"></tbody>
           </table>
         </div>
+        <div class="card-formula">📐 Кликните на строку чтобы развернуть разбивку по темам обращений клиентов этого менеджера</div>
       </div>
     </div>
   </div>
@@ -504,27 +516,82 @@ if (CS.total_cs_tickets) {
         const rpct = k.repeat_pct || 0;
         const uClass = upct > 60 ? 'bad' : upct > 40 ? 'warn' : 'ok';
         const rClass = rpct > 15 ? 'bad' : rpct > 8 ? 'warn' : 'ok';
-        const badge = k.tag === 'big_base'
-          ? '<span style="font-size:9px;padding:2px 6px;border-radius:4px;background:rgba(59,130,246,0.15);color:#60A5FA;margin-left:5px;font-weight:600;border:1px solid rgba(59,130,246,0.3)">🔵</span>'
-          : k.tag === 'red_flag'
-          ? '<span style="font-size:9px;padding:2px 6px;border-radius:4px;background:rgba(239,68,68,0.15);color:#F87171;margin-left:5px;font-weight:600;border:1px solid rgba(239,68,68,0.3)">🔴</span>'
-          : '';
-        return `<tr>
-          <td style="font-weight:700;color:var(--amber2)">${i+1}</td>
-          <td class="n-name" style="font-size:11px">${k.name}${badge}</td>
-          <td class="n-num">${fmt.num(k.tickets)}</td>
-          <td><span class="b ${uClass}">${upct.toFixed(1)}%</span></td>
-          <td><span class="b ${rClass}">${rpct.toFixed(1)}%</span></td>
-          <td style="color:var(--text2);font-family:var(--mono);font-size:10px">${k.training_total || 0}</td>
-          <td style="color:var(--text3);font-family:var(--mono);font-size:10px">${k.stores_count || 0}</td>
-          <td style="color:var(--text3);font-family:var(--mono);font-size:10px">${k.med_close || 0}</td>
-          <td style="font-size:10px;color:var(--text2);max-width:180px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="${k.top_topic || ''}">${k.top_topic || '—'}</td>
-          <td style="font-family:var(--mono);font-size:10px;color:var(--text3)">${fmt.mln(k.cost)}</td>
-        </tr>`;
+        const tagColor = k.tag_color || '#94A3B8';
+        const tagLabel = k.tag_label || '⭐ Критичный';
+        const rowBg = k.non_critical ? 'background:rgba(167,139,250,0.04)' : '';
+        const rowId = `csrow${i}`;
+        const detailId = `csdetail${i}`;
+        
+        // Build topic detail HTML
+        const topics = k.topic_breakdown || [];
+        const topicRows = topics.length ? topics.slice(0, 12).map(t => {
+          const uCls = t.undesired_pct > 60 ? 'bad' : t.undesired_pct > 40 ? 'warn' : 'ok';
+          return `<tr>
+            <td style="padding:5px 8px;font-size:11px;color:var(--text2)">${t.topic}</td>
+            <td style="text-align:right;padding:5px 8px;font-family:var(--mono);font-size:11px;color:var(--blue2);font-weight:700">${t.count}</td>
+            <td style="text-align:right;padding:5px 8px;font-family:var(--mono);font-size:10px;color:var(--text3)">${t.pct}%</td>
+            <td style="text-align:right;padding:5px 8px;font-family:var(--mono);font-size:10px"><span class="b ${uCls}">${t.undesired_pct}%</span></td>
+            <td style="text-align:right;padding:5px 8px;font-family:var(--mono);font-size:10px;color:${t.repeat>0?'#F87171':'var(--text4)'}">${t.repeat||'—'}</td>
+            <td style="text-align:right;padding:5px 8px;font-family:var(--mono);font-size:10px;color:var(--text3)">${fmt.mln(t.cost)}</td>
+          </tr>`;
+        }).join('') : '<tr><td colspan="6" style="padding:14px;text-align:center;color:var(--text3);font-size:11px">Нет данных по темам</td></tr>';
+        
+        const labelsList = (k.labels_breakdown || []).slice(0, 5);
+        const labelChips = labelsList.length ? labelsList.map(l => 
+          `<span style="display:inline-block;font-size:10px;padding:3px 8px;background:rgba(96,165,250,0.10);color:#7DD3FC;border-radius:4px;border:1px solid rgba(96,165,250,0.2);margin:2px 4px 2px 0">${l.label} · <b>${l.count}</b></span>`
+        ).join('') : '';
+        
+        return `
+          <tr id="${rowId}" style="cursor:pointer;${rowBg}" onclick="toggleCsRow('${detailId}', '${rowId}')">
+            <td style="font-weight:700;color:${tagColor}">${i+1}</td>
+            <td class="n-name" style="font-size:11px;color:${k.non_critical?tagColor:'var(--text)'};font-weight:600">▸ ${k.name}</td>
+            <td><span style="display:inline-block;font-size:9px;padding:2px 7px;border-radius:4px;background:${tagColor}22;color:${tagColor};font-weight:700;border:1px solid ${tagColor}55;white-space:nowrap">${tagLabel}</span></td>
+            <td class="n-num">${fmt.num(k.tickets)}</td>
+            <td>${k.non_critical ? '<span style="color:var(--text4);font-size:10px">—</span>' : `<span class="b ${uClass}">${upct.toFixed(1)}%</span>`}</td>
+            <td>${k.non_critical ? '<span style="color:var(--text4);font-size:10px">—</span>' : `<span class="b ${rClass}">${rpct.toFixed(1)}%</span>`}</td>
+            <td style="color:var(--text2);font-family:var(--mono);font-size:10px">${k.training_total || 0}</td>
+            <td style="color:var(--text3);font-family:var(--mono);font-size:10px">${k.stores_count || 0}</td>
+            <td style="color:var(--text3);font-family:var(--mono);font-size:10px">${k.med_close || 0}</td>
+            <td style="font-size:10px;color:var(--text2);max-width:180px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="${k.top_topic || ''}">${k.top_topic || '—'}</td>
+            <td style="font-family:var(--mono);font-size:10px;color:var(--text3)">${fmt.mln(k.cost)}</td>
+          </tr>
+          <tr id="${detailId}" style="display:none">
+            <td colspan="11" style="background:rgba(15,23,42,0.6);padding:14px 20px;border-bottom:2px solid ${tagColor}33">
+              <div style="font-size:11px;font-weight:700;color:${tagColor};margin-bottom:10px;letter-spacing:.05em;text-transform:uppercase">📊 Темы обращений клиентов · ${k.name}</div>
+              <table style="width:100%;border-collapse:collapse;background:rgba(0,0,0,0.2);border-radius:6px;overflow:hidden">
+                <thead><tr style="background:rgba(255,255,255,0.04)">
+                  <th style="text-align:left;padding:7px 8px;font-size:9px;letter-spacing:.1em;color:var(--text4);text-transform:uppercase">Тема обращения</th>
+                  <th style="text-align:right;padding:7px 8px;font-size:9px;letter-spacing:.1em;color:var(--text4);text-transform:uppercase">Тикетов</th>
+                  <th style="text-align:right;padding:7px 8px;font-size:9px;letter-spacing:.1em;color:var(--text4);text-transform:uppercase">% от объёма</th>
+                  <th style="text-align:right;padding:7px 8px;font-size:9px;letter-spacing:.1em;color:var(--text4);text-transform:uppercase">% нежел</th>
+                  <th style="text-align:right;padding:7px 8px;font-size:9px;letter-spacing:.1em;color:var(--text4);text-transform:uppercase">Повтор</th>
+                  <th style="text-align:right;padding:7px 8px;font-size:9px;letter-spacing:.1em;color:var(--text4);text-transform:uppercase">Затраты</th>
+                </tr></thead>
+                <tbody>${topicRows}</tbody>
+              </table>
+              ${labelChips ? `<div style="margin-top:10px;padding-top:10px;border-top:1px solid rgba(255,255,255,0.05)"><div style="font-size:9px;letter-spacing:.1em;color:var(--text4);text-transform:uppercase;margin-bottom:6px">📌 Топ-метки</div>${labelChips}</div>` : ''}
+            </td>
+          </tr>
+        `;
       }).join('');
     }
   }
 }
+
+// Toggle CS detail row
+window.toggleCsRow = function(detailId, rowId) {
+  const detail = document.getElementById(detailId);
+  const row = document.getElementById(rowId);
+  if (!detail || !row) return;
+  const isOpen = detail.style.display !== 'none';
+  detail.style.display = isOpen ? 'none' : '';
+  // Update arrow
+  const nameCell = row.querySelector('.n-name');
+  if (nameCell) {
+    const txt = nameCell.textContent;
+    nameCell.innerHTML = (isOpen ? '▸ ' : '▾ ') + txt.replace(/^[▸▾]\s*/, '');
+  }
+};
 </script>
 
 

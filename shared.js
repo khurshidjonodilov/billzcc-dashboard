@@ -184,9 +184,9 @@ function updatePageHeaders() {
   const hasData = BILLZ_DATA._monthHasData !== false;
   
   const monthNames = {
-    'mar': {ru: 'Март', short:'Март 2026', period: '01–31 марта 2026', genitive:'марта'},
-    'apr': {ru: 'Апрель', short:'Апрель 2026', period: '01–30 апреля 2026', genitive:'апреля'},
-    'may': {ru: 'Май', short:'Май 2026', period: '1–4 мая 2026', genitive:'мая'},
+    'mar': {ru: 'Март', short:'Март 2026', period: '01–31 марта 2026', genitive:'марта', prepositional:'марте', upper:'МАРТ', low:'март'},
+    'apr': {ru: 'Апрель', short:'Апрель 2026', period: '01–30 апреля 2026', genitive:'апреля', prepositional:'апреле', upper:'АПРЕЛЬ', low:'апрель'},
+    'may': {ru: 'Май', short:'Май 2026', period: '01–31 мая 2026', genitive:'мая', prepositional:'мае', upper:'МАЙ', low:'май'},
   };
   const mn = monthNames[selected] || monthNames['apr'];
   
@@ -209,6 +209,20 @@ function updatePageHeaders() {
   document.querySelectorAll('[data-cs-period]').forEach(el => {
     el.textContent = mn.short;
   });
+  
+  // 3b) Special-form month label spans (genitive/prepositional/upper/low)
+  document.querySelectorAll('[data-month-label-genitive]').forEach(el => {
+    el.textContent = mn.genitive;
+  });
+  document.querySelectorAll('[data-month-label-prepos]').forEach(el => {
+    el.textContent = mn.prepositional;
+  });
+  document.querySelectorAll('[data-month-label-upper]').forEach(el => {
+    el.textContent = mn.upper;
+  });
+  document.querySelectorAll('[data-month-label-low]').forEach(el => {
+    el.textContent = mn.low;
+  });
 
   // 4) #phSub
   const phSub = document.getElementById('phSub');
@@ -221,15 +235,45 @@ function updatePageHeaders() {
   }
 
   // 6) Walk through static section titles and update April → current month
-  document.querySelectorAll('.sec-title, .ct, .card-title, .phdr-eyebrow').forEach(el => {
+  document.querySelectorAll('.sec-title, .ct, .card-title, .phdr-eyebrow, .team-alert-title, .export-bar-title, .export-bar-sub, .cost-ey, .cost-d, .phdr-sub, .card-note').forEach(el => {
     if (!el.textContent) return;
     const orig = el.textContent;
     let updated = orig
       .replace(/АПРЕЛЬ 2026/g, `${mn.ru.toUpperCase()} 2026`)
+      .replace(/АПРЕЛЯ 2026/g, `${mn.ru.toUpperCase()}А 2026`)
+      .replace(/АПРЕЛЬ/g, mn.ru.toUpperCase())
       .replace(/Апрель 2026/g, mn.short)
+      .replace(/Апреля 2026/g, mn.ru + 'я 2026')
       .replace(/апрель 2026/gi, mn.short)
-      .replace(/АПРЕЛЯ/g, mn.ru.toUpperCase()+'А')  // not perfect but ok
-      .replace(/апреля/g, mn.genitive);
+      .replace(/АПРЕЛЯ/g, mn.ru.toUpperCase()+'А')
+      .replace(/Апреля/g, mn.ru + 'я')
+      .replace(/апреля/g, mn.genitive)
+      .replace(/апрель/g, mn.ru.toLowerCase())
+      .replace(/Итоги апреля/g, `Итоги ${mn.genitive}`)
+      .replace(/Январь–Апрель 2026/g, `Январь–${mn.ru} 2026`);
+    if (updated !== orig) el.textContent = updated;
+  });
+  
+  // 7) Walk through any text node with hardcoded "апрель" patterns
+  // (covers free-floating text in headers like "Операторы — апрель 2026")
+  document.querySelectorAll('h1, h2, h3, h4, div, span, p').forEach(el => {
+    // Skip script tags, already-bound elements, and elements with children
+    if (el.children.length > 0) return;
+    if (!el.textContent || el.textContent.length > 200) return;
+    const orig = el.textContent;
+    if (!/[Аа]прел[ьея]/.test(orig)) return;
+    let updated = orig
+      .replace(/Апрель 2026/g, mn.short)
+      .replace(/апрель 2026/g, mn.short.toLowerCase())
+      .replace(/Апреля 2026/g, mn.ru + 'я 2026')
+      .replace(/апреля 2026/g, mn.genitive + ' 2026')
+      .replace(/АПРЕЛЬ 2026/g, `${mn.ru.toUpperCase()} 2026`)
+      .replace(/АПРЕЛЯ 2026/g, `${mn.ru.toUpperCase()}А 2026`)
+      .replace(/Апреля/g, mn.ru + 'я')
+      .replace(/апреля/g, mn.genitive)
+      .replace(/Апрель(?=[^а-я])/g, mn.ru)
+      .replace(/апрель(?=[^а-я])/g, mn.ru.toLowerCase())
+      .replace(/АПРЕЛЬ(?=[^А-Я])/g, mn.ru.toUpperCase());
     if (updated !== orig) el.textContent = updated;
   });
 

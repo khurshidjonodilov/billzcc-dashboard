@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>BILLZ CC · Квартальный анализ</title>
-<link rel="stylesheet" href="shared.css?v=41">
+<link rel="stylesheet" href="shared.css?v=42">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
-<script src="data.js?v=41"></script>
-<script src="shared.js?v=41"></script>
+<script src="data.js?v=42"></script>
+<script src="shared.js?v=42"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 <style>
 .export-bar{margin-top:32px;padding:20px 24px;background:var(--surface);border:1px solid var(--br2);border-radius:12px;display:flex;align-items:center;justify-content:space-between;gap:16px}
@@ -86,17 +86,17 @@
       <div class="phdr-eyebrow">BILLZ · Колл-центр · Квартальный анализ</div>
       <div class="phdr-title" id="qPhdrTitle">Мар–Май <em>2026</em></div>
       <div class="phdr-sub" id="qPhdrSub">Источник: Omnidesk CRM</div>
-      <div class="phdr-pills">
-        <span class="pill a">32 865 тикетов</span>
-        <span class="pill">CPT: ~9 800 сум</span>
-        <span class="pill">4 045 магазинов</span>
-        <span class="pill">36 264 пользователей</span>
+      <div class="phdr-pills" id="qPhdrPills">
+        <span class="pill a" id="qPillTickets">—</span>
+        <span class="pill" id="qPillCpt">CPT: —</span>
+        <span class="pill" id="qPillStores">— магазинов</span>
+        <span class="pill" id="qPillUsers">— пользователей</span>
       </div>
     </div>
     <div class="phdr-right">
       <div class="cost-ey">Затраты за период</div>
       <div class="cost-n" id="totalCost">—</div>
-      <div class="cost-d">сум · 3 месяца</div>
+      <div class="cost-d" id="qCostDesc">сум · 3 месяца</div>
       <div class="live"><span class="live-dot"></span>данные актуальны</div>
     </div>
   </div>
@@ -139,9 +139,9 @@
         <thead>
           <tr>
             <th>Показатель</th>
-            <th>Февраль</th>
             <th>Март</th>
             <th>Апрель</th>
+            <th>Май</th>
             <th>Динамика</th>
           </tr>
         </thead>
@@ -151,7 +151,7 @@
   </div>
 
   <!-- Operator Ranking -->
-  <div class="sec"><div class="sec-num">03</div><div class="sec-title">Рейтинг операторов · Фев–Апр</div><div class="sec-line"></div></div>
+  <div class="sec"><div class="sec-num">03</div><div class="sec-title">Рейтинг операторов · Март–Май</div><div class="sec-line"></div></div>
   <div class="row two">
     <div class="card">
       <div class="card-hd">
@@ -266,7 +266,7 @@
 
   <div class="ftr">
     <div class="fl">BILLZ · CC Intelligence · Omnidesk CRM · Анализ: Фев–Апр 2026</div>
-    <div class="fr">Квартальный отчёт · <span id="ftrPeriod">Март–Май 2026 (май неполный)</span><span style="font-size:10px;color:var(--text4);font-family:var(--mono)">📅 Обновлено: <strong style="color:var(--text3)">24.05.2026</strong></span>
+    <div class="fr">Квартальный отчёт · <span id="ftrPeriod">Март–Май 2026 (май неполный)</span><span style="font-size:10px;color:var(--text4);font-family:var(--mono)">📅 Обновлено: <strong style="color:var(--text3)">31.05.2026</strong></span>
     </div>
   </div>
 </div>
@@ -280,27 +280,40 @@ const months = Q.by_month;
 const mnNames = months.map(m=>m.name);
 
 { const _np=document.getElementById('navPeriod'); if(_np) _np.textContent=Q.period; }
+const stores = (BILLZ_DATA.monthly?.stores_count) || (BILLZ_DATA.monthly?.clients_fact) || 4045;
+const users = (BILLZ_DATA.monthly?.users_count) || 38770;
 { 
   const totalT = months.reduce((s,m)=>s+(m.tickets||0), 0);
   const phdrSubEl = document.getElementById('qPhdrSub');
   if (phdrSubEl) phdrSubEl.innerHTML = `${months.length} месяца · ${fmt.num(totalT)} тикетов · Источник: Omnidesk CRM`;
+  
+  // Fill pills
+  const pTix = document.getElementById('qPillTickets');
+  if (pTix) pTix.textContent = `${fmt.num(totalT)} тикетов`;
+  const pCpt = document.getElementById('qPillCpt');
+  if (pCpt) pCpt.textContent = `CPT: ~${fmt.num(Q.summary.avg_cpt || 7561)} сум`;
+  const pSt = document.getElementById('qPillStores');
+  if (pSt) pSt.textContent = `${fmt.num(stores)} магазинов`;
+  const pUs = document.getElementById('qPillUsers');
+  if (pUs) pUs.textContent = `${fmt.num(users)} пользователей`;
 }
 document.getElementById('totalCost').textContent =
   Q.summary.total_cost_mln.toFixed(1) + ' млн';
+{ const cd = document.getElementById('qCostDesc'); if (cd) cd.textContent = `сум · ${months.length} мес.`; }
 
 // ── KPI Grid ──────────────────────────────────────────────────────────────────
 const s = Q.summary;
 document.getElementById('kpiGrid').innerHTML = [
-  kpi('Всего тикетов',    fmt.num(s.total_tickets),          '3 месяца',                        'gold'),
+  kpi('Всего тикетов',    fmt.num(s.total_tickets),          `${months.length} месяца`,         'gold'),
   kpi('Затраты итого',    s.total_cost_mln.toFixed(1)+' млн','ср. CPT: '+fmt.num(s.avg_cpt),    'gold'),
   kpi('LCR средний',      fmt.pct(s.lcr_avg),                'мин 3.78% → макс 7.80%',          s.lcr_avg<5?'sage':'rose','▲'),
   kpi('CSAT Отлично',     fmt.pct(s.csat_pct),               'стабильно >94% все 3 мес.',        'sage','✓'),
   kpi('SLA ≤ 1 мин',      fmt.pct(s.sla_pct),                'тренд: 68.6%→77.2%',              s.sla_pct>=75?'sage':'rose'),
   kpi('FRT среднее',      s.frt_avg_sec.toFixed(0)+'с',      'медиана: '+s.frt_med_sec+'с',      'gold'),
   kpi('Повторные',        fmt.pct(s.repeat_pct_avg),         'тренд: 6.3%→9.6%↑',               s.repeat_pct_avg<8?'sage':'rose','⚠'),
-  kpi('Нежелательные',    fmt.pct(s.undesired_pct_avg),      '>50% все 3 месяца — ⚠',            'rose','▲'),
+  kpi('Нежелательные',    fmt.pct(s.undesired_pct_avg),      `>50% все ${months.length} месяца — ⚠`,'rose','▲'),
   kpi('Массовый сбой',    fmt.num(s.massoviy_tickets),       s.massoviy_cost_mln+'млн сум потерь','rose','❗'),
-  kpi('Тикетов/магазин',  (s.total_tickets/4045).toFixed(2), '4 045 магазинов',                 'gold'),
+  kpi('Тикетов/магазин',  (s.total_tickets/stores).toFixed(2), `${fmt.num(stores)} магазинов`,    'gold'),
 ].join('');
 
 // ── Insights ──────────────────────────────────────────────────────────────────
@@ -310,6 +323,57 @@ const insHtml = [
   ...ins.negatives.map(t=>`<div class="alert rose"><div class="alert-num">❌</div><div><div class="al-label">Внимание</div><div class="al-txt">${t}</div></div></div>`),
 ].join('');
 document.getElementById('insightsGrid').innerHTML = insHtml;
+
+// ── Monthly comparison table ──────────────────────────────────────────────────
+(function fillMonthlyTable(){
+  const tbody = document.getElementById('monthlyTable');
+  if (!tbody) return;
+  const months = Q.by_month;
+  if (!months || months.length === 0) return;
+  
+  // Helper: trend arrow comparing last vs prev
+  function trendCell(values, isInverted) {
+    if (values.length < 2) return '<span style="color:var(--text4)">—</span>';
+    const last = values[values.length - 1];
+    const prev = values[values.length - 2];
+    if (last == null || prev == null || prev === 0) return '<span style="color:var(--text4)">—</span>';
+    const delta = last - prev;
+    const pct = (delta / prev) * 100;
+    const isGood = isInverted ? delta < 0 : delta > 0;
+    const flat = Math.abs(pct) < 0.5;
+    const color = flat ? '#94A3B8' : (isGood ? '#10B981' : '#EF4444');
+    const arrow = delta > 0 ? '↑' : delta < 0 ? '↓' : '→';
+    return `<span style="color:${color};font-weight:700;font-family:var(--mono);font-size:11px">${arrow} ${pct>0?'+':''}${pct.toFixed(1)}%</span>`;
+  }
+  
+  const rows = [
+    {label:'Тикеты',         get:m=>m.tickets,            fmt:v=>v.toLocaleString('ru'),                      inverted:true},
+    {label:'Звонки',         get:m=>m.calls,              fmt:v=>v.toLocaleString('ru'),                      inverted:true},
+    {label:'Чаты',           get:m=>m.chats,              fmt:v=>v.toLocaleString('ru'),                      inverted:false},
+    {label:'SLA %',          get:m=>m.sla_pct,            fmt:v=>v.toFixed(1)+'%',                            inverted:false},
+    {label:'CSAT %',         get:m=>m.csat_pct,           fmt:v=>v.toFixed(1)+'%',                            inverted:false},
+    {label:'LCR %',          get:m=>m.lcr,                fmt:v=>v.toFixed(2)+'%',                            inverted:true},
+    {label:'AFRT (сек)',     get:m=>m.frt_avg_sec,        fmt:v=>v?Math.round(v)+'с':'—',                     inverted:true},
+    {label:'Нежелательные %',get:m=>m.undesired_pct,      fmt:v=>v.toFixed(1)+'%',                            inverted:true},
+    {label:'Повторные %',    get:m=>m.repeat_pct,         fmt:v=>v.toFixed(1)+'%',                            inverted:true},
+    {label:'Обучения через CC', get:m=>m.training_tickets, fmt:v=>v.toLocaleString('ru'),                     inverted:true},
+    {label:'Затраты (млн)',  get:m=>m.cost_mln,           fmt:v=>v.toFixed(1),                                inverted:true},
+  ];
+  
+  tbody.innerHTML = rows.map(r => {
+    const values = months.map(r.get);
+    const tds = months.map(m => {
+      const v = r.get(m);
+      return `<td style="text-align:right;font-family:var(--mono);font-weight:700;color:var(--text)">${v == null ? '—' : r.fmt(v)}</td>`;
+    }).join('');
+    return `<tr>
+      <td style="font-weight:600;color:var(--text)">${r.label}</td>
+      ${tds}
+      <td style="text-align:right">${trendCell(values, r.inverted)}</td>
+    </tr>`;
+  }).join('');
+})();
+
 
 // ── Charts ────────────────────────────────────────────────────────────────────
 let charts = {};

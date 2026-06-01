@@ -4,11 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>BILLZ CC · Ежемесячно</title>
-<link rel="stylesheet" href="shared.css?v=41">
+<link rel="stylesheet" href="shared.css?v=42">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
-<script src="data.js?v=41"></script>
-<script src="shared.js?v=41"></script>
+<script src="data.js?v=42"></script>
+<script src="shared.js?v=42"></script>
 <style>
 .formula-bar {
   margin-top: 12px !important;
@@ -80,7 +80,7 @@
       <div class="cost-ey">ЗАТРАТЫ ЗА МЕСЯЦ</div>
       <div class="cost-n" id="costVal">—</div>
       <div class="cost-d">сум · тикеты × CPT</div>
-      <div class="live"><span class="live-dot"></span>данные актуальны · 24.05.2026</div>
+      <div class="live"><span class="live-dot"></span>данные актуальны · 31.05.2026</div>
     </div>
   </div>
 
@@ -88,11 +88,23 @@
   <div class="team-alert" id="teamChangesAlert">
     <div class="team-alert-icon">⚠️</div>
     <div>
-      <div class="team-alert-title">Изменения в команде — апрель 2026</div>
+      <div class="team-alert-title">Изменения в команде — <span data-month-label-genitive>апреле</span> 2026</div>
       <div class="team-alert-text" id="teamChangesText"></div>
     </div>
     <button onclick="this.parentElement.style.display='none'"
       style="background:none;border:none;color:#4B5563;cursor:pointer;font-size:15px;margin-left:auto;flex-shrink:0">✕</button>
+  </div>
+
+  <!-- Clean/Dirty toggle (only shown if current month has clean & dirty data) -->
+  <div id="cleanDirtyToggle" style="display:none;margin-bottom:14px;padding:10px 16px;background:rgba(15,23,42,0.5);border:1px solid var(--br2);border-radius:10px">
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px">
+      <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+        <span style="font-size:11px;font-weight:600;color:var(--t2)">Режим:</span>
+        <button id="modeClean" class="mode-btn active" onclick="setDataMode('clean')" style="font-size:11px;font-weight:600;padding:6px 14px;border-radius:6px;border:1px solid #10B981;background:rgba(16,185,129,0.15);color:#34D399;cursor:pointer">🧹 Чистый (без массового сбоя)</button>
+        <button id="modeDirty" class="mode-btn" onclick="setDataMode('dirty')" style="font-size:11px;font-weight:600;padding:6px 14px;border-radius:6px;border:1px solid var(--br2);background:transparent;color:var(--t3);cursor:pointer">🔥 С даунтаймом (все данные)</button>
+      </div>
+      <div id="modeNote" style="font-size:10px;color:var(--t3);font-family:var(--mono)">Метрики SLA, AFRT, ART, CSAT берутся без меток «Массовый сбой BILLZ» и операторов Хуршид/Дильшод</div>
+    </div>
   </div>
 
   <!-- KPIs -->
@@ -102,7 +114,7 @@
   <div class="alert-grid" id="alertGrid"></div>
 
   <!-- 01 OPERATORS -->
-  <div class="sec"><div class="sec-num">01</div><div class="sec-title">Операторы — апрель 2026</div><div class="sec-line"></div></div>
+  <div class="sec"><div class="sec-num">01</div><div class="sec-title">Операторы — <span data-month-label-prepos>апреле</span> 2026</div><div class="sec-line"></div></div>
   <div class="row wn">
     <div class="card">
       <div class="card-hd">
@@ -171,7 +183,7 @@
   <!-- EXPORT -->
   
   <!-- ── APRIL CONCLUSIONS ─────────────────────────────────────────────────── -->
-  <div class="sec"><div class="sec-num">05</div><div class="sec-title">Итоги апреля · Ключевые выводы</div><div class="sec-line"></div></div>
+  <div class="sec"><div class="sec-num">05</div><div class="sec-title">Итоги <span data-month-label-genitive>апреля</span> · Ключевые выводы</div><div class="sec-line"></div></div>
   <div id="csatSplit" style="margin-bottom:10px"></div>
   <div id="aprilInsights" style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px"></div>
 
@@ -189,7 +201,7 @@
 
   <div class="export-bar">
     <div class="export-bar-left">
-      <div class="export-bar-title">📥 Скачать — Ежемесячный отчёт апрель 2026</div>
+      <div class="export-bar-title">📥 Скачать — Ежемесячный отчёт <span data-month-label-low>апрель</span> 2026</div>
       <div class="export-bar-sub">Excel · Сводка · Операторы · Метки · Компании · пароль для скачивания</div>
     </div>
     <button class="export-btn" id="exportBtn" onclick="checkAndExport()">
@@ -205,7 +217,7 @@
   <div class="ftr">
     <div class="fl">BILLZ · CC Intelligence · Omnidesk CRM · без тикетов Дильшода</div>
     <div class="fr">
-      <span>📅 Обновлено: <strong style="color:var(--t2)">24.05.2026</strong></span>
+      <span>📅 Обновлено: <strong style="color:var(--t2)">31.05.2026</strong></span>
       <span>Ежемесячно · <span class="month-text" data-month-label>Апрель 2026</span></span>
     </div>
   </div>
@@ -217,17 +229,68 @@ const CPT = (typeof M !== "undefined" && M.cpt) ? M.cpt : 7561;
 const STORES = M.clients || 4165;
 const USERS  = M.users  || 37260;
 
+// Show clean/dirty toggle only when monthly has both versions
+if (M && (M.sla_pct_dirty != null || M.afrt_dirty != null)) {
+  const t = document.getElementById('cleanDirtyToggle');
+  if (t) t.style.display = '';
+}
+
+// Toggle function — rewrites M fields and re-renders
+window.setDataMode = function(mode) {
+  const cleanBtn = document.getElementById('modeClean');
+  const dirtyBtn = document.getElementById('modeDirty');
+  const noteEl = document.getElementById('modeNote');
+  if (mode === 'clean') {
+    cleanBtn.style.background = 'rgba(16,185,129,0.15)';
+    cleanBtn.style.borderColor = '#10B981';
+    cleanBtn.style.color = '#34D399';
+    dirtyBtn.style.background = 'transparent';
+    dirtyBtn.style.borderColor = 'var(--br2)';
+    dirtyBtn.style.color = 'var(--t3)';
+    noteEl.textContent = 'Чистые данные: без меток «Массовый сбой BILLZ» и операторов Хуршид/Дильшод';
+    M.sla_pct = M._sla_clean ?? M.sla_pct;
+    M.afrt = M._afrt_clean ?? M.afrt;
+    M.csat_pct = M._csat_clean ?? M.csat_pct;
+    M.avg_close_h = M._avg_close_h_clean ?? M.avg_close_h;
+  } else {
+    cleanBtn.style.background = 'transparent';
+    cleanBtn.style.borderColor = 'var(--br2)';
+    cleanBtn.style.color = 'var(--t3)';
+    dirtyBtn.style.background = 'rgba(239,68,68,0.15)';
+    dirtyBtn.style.borderColor = '#EF4444';
+    dirtyBtn.style.color = '#F87171';
+    noteEl.textContent = 'С даунтаймом: все обращения мая, включая массовые сбои';
+    M.sla_pct = M.sla_pct_dirty;
+    M.afrt = M.afrt_dirty;
+    M.csat_pct = M.csat_pct_dirty;
+    M.avg_close_h = M.avg_close_h_dirty;
+  }
+  // Re-render parts that depend on these fields
+  if (typeof window._renderHeader === 'function') window._renderHeader();
+  if (typeof window._renderKPIs === 'function') window._renderKPIs();
+  if (typeof window._renderAlerts === 'function') window._renderAlerts();
+};
+
+// Stash original clean values (current M.* are CLEAN by default)
+M._sla_clean = M.sla_pct;
+M._afrt_clean = M.afrt;
+M._csat_clean = M.csat_pct;
+M._avg_close_h_clean = M.avg_close_h;
+
 /* Header */
-document.getElementById('phSub').textContent =
-  `${fmt.num(M.tickets)} тикетов · ${fmt.num(M.calls)} звонков · ${fmt.num(M.chats)} чатов · CPT ${fmt.num(CPT)} сум`;
-document.getElementById('costVal').textContent = fmt.mlnS(M.cost);
-document.getElementById('phPills').innerHTML = [
-  `<span class="pill a">LCR ${M.lcr}%</span>`,
-  `<span class="pill ${M.csat_pct >= 95 ? 'g' : ''}">CSAT ${M.csat_pct}%</span>`,
-  `<span class="pill">SLA ${M.sla_pct}% (чаты)</span>`,
-  `<span class="pill">${fmt.num(STORES)} магазинов · ${fmt.num(USERS)} польз.</span>`,
-  `<span class="pill r">${fmt.num(M.training_tickets || 0)} обучений через CC</span>`,
-].join('');
+window._renderHeader = function() {
+  document.getElementById('phSub').textContent =
+    `${fmt.num(M.tickets)} тикетов · ${fmt.num(M.calls)} звонков · ${fmt.num(M.chats)} чатов · CPT ${fmt.num(CPT)} сум`;
+  document.getElementById('costVal').textContent = fmt.mlnS(M.cost);
+  document.getElementById('phPills').innerHTML = [
+    `<span class="pill a">LCR ${M.lcr}%</span>`,
+    `<span class="pill ${M.csat_pct >= 95 ? 'g' : ''}">CSAT ${M.csat_pct}%</span>`,
+    `<span class="pill">SLA ${M.sla_pct}%</span>`,
+    `<span class="pill">${fmt.num(STORES)} магазинов · ${fmt.num(USERS)} польз.</span>`,
+    `<span class="pill r">${fmt.num(M.training_tickets || 0)} обучений через CC</span>`,
+  ].join('');
+};
+_renderHeader();
 
 /* Team changes */
 const tc = M.team_changes || [];
@@ -245,53 +308,56 @@ if (tc.length) {
 /* KPIs */
 const totalDesired = M.desired; const totalUndesired = M.undesired;
 const undPct = totalUndesired / M.tickets * 100;
-document.getElementById('kpiGrid').innerHTML = [
-  kpi('Всего тикетов', fmt.num(M.tickets), `≈${Math.round(M.tickets/30)} тикетов/день`,
-    'blue', '', [], [`Звонки: ${fmt.num(M.calls)}`, `Чаты: ${fmt.num(M.chats)}`],
-    'Сумма всех тикетов за месяц · Звонки = Поступило вручную'),
+window._renderKPIs = function() {
+  document.getElementById('kpiGrid').innerHTML = [
+    kpi('Всего тикетов', fmt.num(M.tickets), `≈${Math.round(M.tickets/(M.period?.match(/(\d+)–(\d+)/)?31:30))} тикетов/день`,
+      'blue', '', [], [`Звонки: ${fmt.num(M.calls)}`, `Чаты: ${fmt.num(M.chats)}`],
+      'Сумма всех обращений за месяц · ATS + Omnidesk'),
 
-  kpi('LCR (>5 сек)', fmt.pct(M.lcr), 'Lost Call Rate · цель <5%',
-    M.lcr > 7 ? 'red' : M.lcr > 5 ? 'amber' : 'sage',
-    M.lcr > 7 ? '▲' : '', [], ['Пик 17:00–22:00'],
-    'Пропущ. >5сек / все входящие × 100 · данные из АТС'),
+    kpi('LCR (>5 сек)', fmt.pct(M.lcr), `Lost Call Rate · план <${M.lcr_5sec_plan||3}%`,
+      M.lcr > 7 ? 'red' : M.lcr > 5 ? 'amber' : 'sage',
+      M.lcr > 7 ? '▲' : '', [], [`С даунтаймом: ${M.lcr_all||'—'}%`],
+      'Пропущ. >5сек / все входящие × 100 · данные из АТС'),
 
-  kpi('CSAT «Отлично»', fmt.pct(M.csat_pct), `${M.csat_rated || 631} оценок из ${fmt.num(M.tickets)}`,
-    M.csat_pct >= 95 ? 'green' : 'amber', '✓', [],
-    [`Оценено: ${M.csat_rated || 631} (${((M.csat_rated||631)/M.tickets*100).toFixed(1)}%)`],
-    'Оценок «Отлично» / всего оценок × 100 · оценивают ~6% тикетов'),
+    kpi('CSAT «Отлично»', fmt.pct(M.csat_pct), `${M.csat_rated || '—'} оценок из ${fmt.num(M.tickets)}`,
+      M.csat_pct >= 95 ? 'green' : 'amber', '✓', [],
+      [`Оценено: ${M.csat_rated || '—'}`],
+      'Оценок «Отлично» / всего оценок × 100'),
 
-  kpi('SLA ≤ 1 мин', fmt.pct(M.sla_pct),
-    `Не соблюдён: ${fmt.pct(M.sla_not_met)} · только чаты`,
-    M.sla_pct >= 80 ? 'sage' : M.sla_pct >= 70 ? 'amber' : 'red',
-    '', [], [`Замер: ${fmt.num(4185)} чатов`],
-    'FRT ≤ 1 мин / замеренных чатов × 100 · звонки: SLA >90% по АТС'),
+    kpi('SLA ≤ 1 мин', fmt.pct(M.sla_pct),
+      `Не соблюдён: ${fmt.pct(M.sla_not_met)}`,
+      M.sla_pct >= 80 ? 'sage' : M.sla_pct >= 70 ? 'amber' : 'red',
+      '', [], [],
+      'FRT ≤ 1 мин / замеренных тикетов × 100'),
 
-  kpi('Нежелательные', fmt.pct(undPct), `${fmt.num(totalUndesired)} из ${fmt.num(M.tickets)}`,
-    undPct > 55 ? 'red' : 'amber', '▲', [],
-    [`Желательных: ${fmt.num(totalDesired)}`],
-    'Нежелательные тикеты / все тикеты × 100'),
+    kpi('Нежелательные', fmt.pct(undPct), `${fmt.num(totalUndesired)} из ${fmt.num(M.tickets)}`,
+      undPct > 55 ? 'red' : 'amber', '▲', [],
+      [`Желательных: ${fmt.num(totalDesired)}`],
+      'Нежелательные тикеты / все тикеты × 100'),
 
-  kpi('Затраты (CPT)', fmt.mlnS(M.cost), `${fmt.num(CPT)} сум × ${fmt.num(M.tickets)}`,
-    'amber', '', [], [`${M.tpc} тик/магаз.`, `${M.tpu} тик/польз.`],
-    'Затраты = кол-во тикетов × CPT · Тик/магаз = тикеты / 4 165'),
+    kpi('Затраты (CPT)', fmt.mlnS(M.cost), `${fmt.num(CPT)} сум × ${fmt.num(M.tickets_omnidesk_dirty||M.tickets)}`,
+      'amber', '', [], [`${M.tpc} тик/магаз.`, `${M.tpu} тик/польз.`],
+      'Затраты = кол-во тикетов × CPT'),
 
-  kpi('Доля чатов', fmt.pct(M.chats/M.tickets*100), 'Тренд: снижение с нед 12',
-    'purple', '', [], [`Звонки: ${fmt.pct(M.calls/M.tickets*100)}`, 'Мин нед 17: 39.9%'],
-    'Чаты / все тикеты × 100 · нед 12 пик: 51.3% · апр среднее: 45.1%'),
+    kpi('Доля чатов', fmt.pct(M.chats/M.tickets*100), `Звонки: ${fmt.pct(M.calls/M.tickets*100)}`,
+      'purple', '', [], [`Звонков: ${fmt.num(M.calls)}`, `Чатов: ${fmt.num(M.chats)}`],
+      'Чаты / все обращения × 100'),
 
-  kpi('Повторные', fmt.pct(M.repeat_pct), 'Повторные обращения',
-    M.repeat_pct > 10 ? 'red' : 'amber', '⚠', [], [],
-    'Повторные тикеты / все тикеты × 100'),
+    kpi('Повторные', fmt.pct(M.repeat_pct), 'Повторные обращения',
+      M.repeat_pct > 10 ? 'red' : 'amber', '⚠', [], [],
+      'Повторные тикеты / все тикеты × 100'),
 
-  kpi('Операторов', '11', '7–8 в смене · цель 13–14',
-    'cyan', '', [], ['Дефицит', 'HR заявка ✓'],
-    '3 выбыли в апреле · 11 остались · допчасы для покрытия пиков'),
+    kpi('Операторов', M.operators_count || '—', '7–8 в смене · цель 13–14',
+      'cyan', '', [], ['Активных в мае'],
+      'Из таблицы ATS · активные операторы линии'),
 
-  kpi('Обучений (CC→CS)', fmt.num(M.training_tickets || 401),
-    `${fmt.mln((M.training_tickets||401)*CPT)}`,
-    'rose', '!', [], ['Работа CS-команды'],
-    'Тикеты с меткой «Обучение*» × CPT 7 561 сум = нагрузка CC'),
-].join('');
+    kpi('Обучений (CC→CS)', fmt.num(M.training_tickets || 0),
+      `${fmt.mln((M.training_tickets||0)*CPT)}`,
+      'rose', '!', [], ['Работа CS-команды'],
+      'Тикеты с меткой «Обучение*» × CPT 7 561 сум = нагрузка CC'),
+  ].join('');
+};
+_renderKPIs();
 
 /* Alerts */
 document.getElementById('alertGrid').innerHTML = `
@@ -324,7 +390,7 @@ document.getElementById('alertGrid').innerHTML = `
     <div>
       <div class="al-label">Затраты ${fmt.mln(M.cost)}</div>
       <div class="al-txt">${fmt.num(M.tickets)} тикетов × ${fmt.num(CPT)} сум CPT. Из них обучений через CC: ${M.training_tickets||401} тик = ${fmt.mln((M.training_tickets||401)*CPT)}.</div>
-      <div class="al-formula">📐 Затраты = тикеты × CPT · CPT апрель = 7 561 сум</div>
+      <div class="al-formula">📐 Затраты = тикеты × CPT · CPT = 7 561 сум</div>
     </div>
   </div>
 `;
@@ -525,8 +591,8 @@ function exportCSExcel() {
       ['SLA не соблюдён', M.sla_not_met, '100 − SLA %'],
       ['AFRT', M.afrt, 'Среднее время первого ответа'],
       ['Повторные %', M.repeat_pct, 'Повторные / все × 100'],
-      ['Клиентов (магазинов)', STORES, 'На 24.05.2026'],
-      ['Пользователей', USERS, 'На 24.05.2026'],
+      ['Клиентов (магазинов)', STORES, 'На 31.05.2026'],
+      ['Пользователей', USERS, 'На 31.05.2026'],
       ['Тик/магазин', M.tpc, 'Тикеты / магазины'],
       ['Тик/пользователь', M.tpu, 'Тикеты / пользователи'],
       ['Обучений через CC', M.training_tickets||401, 'Тикеты с меткой "Обучени*"'],
@@ -551,39 +617,56 @@ function exportCSExcel() {
     btn.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Скачать Excel';
   }, 150);
 }
-  // ── SECTION 05: April insights ─────────────────────────────────────────
+  // ── SECTION 05: Monthly insights (apr / may dynamic) ──────────────────────
   const aprilInsightsEl = document.getElementById('aprilInsights');
   if (aprilInsightsEl) {
-    const insights = [
-      {
-        color: '#EF4444', icon: '🔴', title: 'LCR 4.59% при плане 3% — дефицит команды',
-        body: 'АТС: 306 пропущ. / 6 667 вход. = 4.59%. Не перезвонили >7сек: 270 клиентов — прямые потери. 3 оператора покинули в апреле (Шохинабону, Нурлан, Алишерова→КС). Пик 17–22ч не перекрыт. 2 новых выходят 05.05.',
-        metric: 'LCR факт: 4.59% · план: 3% · потери: 270 не перезвонили',
-        action: '→ Найм закрыть до 20 мая · IVR-разгрузка',
-        bg: 'rgba(239,68,68,0.06)', border: 'rgba(239,68,68,0.2)'
-      },
-      {
-        color: '#F59E0B', icon: '🟡', title: 'Доля чатов 45.1% — ниже цели >47%',
-        body: 'Тренд снижения с нед 12 (пик 51.3%) → нед 17 минимум 39.9% → нед 18 восстановление 48.4%. CSAT: звонки 95% = план, чаты 91.8% (-3.2пп). Без IVR-маршрутизации клиенты выбирают звонки.',
-        metric: 'Чаты апр: 5 235 / 11 604 = 45.1% · CSAT чаты: 91.8%',
-        action: '→ IVR-запрос в продукт + FAQ топ-5 тем',
-        bg: 'rgba(245,158,11,0.06)', border: 'rgba(245,158,11,0.2)'
-      },
-      {
-        color: '#EF4444', icon: '🔴', title: '471 обучение через CC = 4.65 млн сум',
-        body: 'За январь–апрель CS-команда переложила на CC 2 343 обучения = 23.11 млн сум потерь. В апреле: 471 тикет (4.65 млн). Топ повторных тематик: Кассовые смены (262), Создание ссылки (239), Помощь со входом (76) — все онбординг CS.',
-        metric: 'Q1+апр обучения: 2 343 тик · 23.11 млн сум',
-        action: '→ Митинг с CS · стандарт онбординга до 15.05',
-        bg: 'rgba(239,68,68,0.06)', border: 'rgba(239,68,68,0.2)'
-      },
-      {
-        color: '#10B981', icon: '🟢', title: 'CSAT 94.6% — команда держит качество',
-        body: 'SLA взвешенный (Omnidesk): 92.5%. Анасхон 97.1%, Шохина 97.8%, Нурилло 95.5%. Топ-операторы работают на 179% от нормы (1470 тик у Анасхон). Качество сохранено несмотря на дефицит — высокий профессионализм команды.',
-        metric: 'CSAT: 94.6% · SLA Omnidesk: 92.5% · план: ≥95%',
-        action: '→ Сохранить качество при найме новых операторов',
-        bg: 'rgba(16,185,129,0.06)', border: 'rgba(16,185,129,0.2)'
-      },
-    ];
+    const isMay = BILLZ_DATA.current_month === 'may';
+    let insights;
+    if (isMay && BILLZ_DATA.may_insights && BILLZ_DATA.may_insights.length) {
+      // Use dynamic may insights from data.js
+      insights = BILLZ_DATA.may_insights.map(ins => ({
+        color: ins.color,
+        icon: ins.icon,
+        title: ins.title,
+        body: ins.body,
+        metric: ins.metric,
+        action: ins.action ? `→ ${ins.action}` : '',
+        bg: ins.bg,
+        border: ins.border,
+      }));
+    } else {
+      // April hardcoded insights (preserve original)
+      insights = [
+        {
+          color: '#EF4444', icon: '🔴', title: 'LCR 4.59% при плане 3% — дефицит команды',
+          body: 'АТС: 306 пропущ. / 6 667 вход. = 4.59%. Не перезвонили >7сек: 270 клиентов — прямые потери. 3 оператора покинули в апреле (Шохинабону, Нурлан, Алишерова→КС). Пик 17–22ч не перекрыт. 2 новых выходят 05.05.',
+          metric: 'LCR факт: 4.59% · план: 3% · потери: 270 не перезвонили',
+          action: '→ Найм закрыть до 20 мая · IVR-разгрузка',
+          bg: 'rgba(239,68,68,0.06)', border: 'rgba(239,68,68,0.2)'
+        },
+        {
+          color: '#F59E0B', icon: '🟡', title: 'Доля чатов 45.1% — ниже цели >47%',
+          body: 'Тренд снижения с нед 12 (пик 51.3%) → нед 17 минимум 39.9% → нед 18 восстановление 48.4%. CSAT: звонки 95% = план, чаты 91.8% (-3.2пп). Без IVR-маршрутизации клиенты выбирают звонки.',
+          metric: 'Чаты апр: 5 235 / 11 604 = 45.1% · CSAT чаты: 91.8%',
+          action: '→ IVR-запрос в продукт + FAQ топ-5 тем',
+          bg: 'rgba(245,158,11,0.06)', border: 'rgba(245,158,11,0.2)'
+        },
+        {
+          color: '#EF4444', icon: '🔴', title: '471 обучение через CC = 4.65 млн сум',
+          body: 'За январь–апрель CS-команда переложила на CC 2 343 обучения = 23.11 млн сум потерь. В апреле: 471 тикет (4.65 млн). Топ повторных тематик: Кассовые смены (262), Создание ссылки (239), Помощь со входом (76) — все онбординг CS.',
+          metric: 'Q1+апр обучения: 2 343 тик · 23.11 млн сум',
+          action: '→ Митинг с CS · стандарт онбординга до 15.05',
+          bg: 'rgba(239,68,68,0.06)', border: 'rgba(239,68,68,0.2)'
+        },
+        {
+          color: '#10B981', icon: '🟢', title: 'CSAT 94.6% — команда держит качество',
+          body: 'SLA взвешенный (Omnidesk): 92.5%. Анасхон 97.1%, Шохина 97.8%, Нурилло 95.5%. Топ-операторы работают на 179% от нормы (1470 тик у Анасхон). Качество сохранено несмотря на дефицит — высокий профессионализм команды.',
+          metric: 'CSAT: 94.6% · SLA Omnidesk: 92.5% · план: ≥95%',
+          action: '→ Сохранить качество при найме новых операторов',
+          bg: 'rgba(16,185,129,0.06)', border: 'rgba(16,185,129,0.2)'
+        },
+      ];
+    }
 
     aprilInsightsEl.innerHTML = insights.map(ins => `
       <div style="background:${ins.bg};border:1px solid ${ins.border};
@@ -596,9 +679,9 @@ function exportCSExcel() {
         <div style="font-size:10px;font-family:var(--mono);color:${ins.color};
           background:${ins.bg};border:1px solid ${ins.border};
           padding:4px 10px;border-radius:5px;margin-bottom:5px">📊 ${ins.metric}</div>
-        <div style="font-size:10px;font-weight:600;color:var(--t3);
+        ${ins.action ? `<div style="font-size:10px;font-weight:600;color:var(--t3);
           background:rgba(255,255,255,0.04);padding:4px 10px;border-radius:5px">
-          ${ins.action}</div>
+          ${ins.action}</div>` : ''}
       </div>`).join('');
   }
 
@@ -610,7 +693,7 @@ function exportCSExcel() {
     const cPlan = M.csat_plan || 95.0;
     csatSplitEl.innerHTML = `
       <div class="card">
-        <div class="ch"><div class="ct">CSAT по каналам · Апрель 2026</div>
+        <div class="ch"><div class="ct">CSAT по каналам · ${BILLZ_DATA.current_month === 'may' ? 'Май 2026' : 'Апрель 2026'}</div>
           <div class="cn2">план: ${cPlan}%</div></div>
         <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px">
           <div style="text-align:center;padding:16px;background:rgba(16,185,129,0.06);
@@ -684,14 +767,26 @@ function exportCSExcel() {
           <div style="font-size:10px;color:var(--t3)">по мере поступления<br>обращений в мае</div>
           <div style="margin-top:12px;font-size:10px;font-family:monospace;
             color:var(--blue2);background:rgba(59,130,246,0.08);
-            padding:5px 10px;border-radius:6px">Обновлено: 24.05.2026</div>
+            padding:5px 10px;border-radius:6px">Обновлено: 31.05.2026</div>
         </div>
       </div>`;
   }
-  // ── ATS APRIL STATS TABLE ──────────────────────────────────────────────
+  // ── ATS STATS TABLE ──────────────────────────────────────────────
   const atsCardEl = document.getElementById('atsCard');
   if (atsCardEl && M.ats_data) {
     const ats = M.ats_data;
+    // Field normalization (apr-style vs may-style)
+    ats.incoming_total       = ats.incoming_total       ?? ats.incoming_calls_ats ?? 0;
+    ats.incoming_no_downtime = ats.incoming_no_downtime ?? ats.incoming_calls_ats ?? 0;
+    ats.incoming_no_missed_pd= ats.incoming_no_missed_pd?? 0;
+    ats.missed_all           = ats.missed_all           ?? ats.missed_calls_total ?? 0;
+    ats.missed_from_7        = ats.missed_from_7        ?? ats.missed_from_7sec ?? 0;
+    ats.missed_unworktime    = ats.missed_unworktime    ?? 0;
+    ats.missed_pd_6_15       = ats.missed_pd_6_15       ?? 0;
+    ats.downtime             = ats.downtime             ?? 0;
+    ats.missed_total         = ats.missed_total         ?? ats.missed_calls_total ?? 0;
+    ats.lcr_final            = ats.lcr_final            ?? ats.lcr_5sec_fact ?? M.lcr ?? 0;
+    const monthLabelAts = (BILLZ_DATA.current_month === 'may') ? 'Май 2026' : 'Апрель 2026';
     const rows = [
       {label:'Вход (всего)', val:(ats.incoming_total || 0).toLocaleString('ru'), color:'var(--t2)'},
       {label:'Вход (за вычетом пропуск от ПД)', val:(ats.incoming_no_missed_pd || 0).toLocaleString('ru'), color:'var(--t3)'},
@@ -707,7 +802,7 @@ function exportCSExcel() {
     atsCardEl.innerHTML = `<div class="card" style="display:grid;grid-template-columns:1fr 1fr;gap:0;overflow:hidden">
       <div style="padding:18px 20px;border-right:1px solid rgba(255,255,255,0.07)">
         <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px">
-          <div class="ct">Статистика звонков АТС · Апрель 2026</div>
+          <div class="ct">Статистика звонков АТС · ${monthLabelAts}</div>
           <div class="cn2">Официальный отчёт АТС</div>
         </div>
         <table style="width:100%;border-collapse:collapse">
@@ -746,7 +841,7 @@ function exportCSExcel() {
             {label:'Пропущ. >7сек',val:ats.missed_from_7,sub:'рабочее время',bg:'rgba(239,68,68,0.08)',bc:'rgba(239,68,68,0.2)',lc:'#FCA5A5',vc:'#F87171'},
             {label:'Нерабочее время',val:ats.missed_unworktime,sub:'не считается в LCR',bg:'rgba(245,158,11,0.07)',bc:'rgba(245,158,11,0.2)',lc:'#FDE68A',vc:'#FCD34D'},
             {label:'Даунтайм',val:ats.downtime,sub:'вычтен из базы',bg:'rgba(100,116,139,0.07)',bc:'rgba(100,116,139,0.18)',lc:'#94A3B8',vc:'#CBD5E1'},
-            {label:'Итог LCR апрель',val:ats.lcr_final+'%',sub:'цель &lt; 3%',bg:'rgba(239,68,68,0.12)',bc:'rgba(239,68,68,0.35)',lc:'#FCA5A5',vc:'#F87171',big:true},
+            {label:'Итог LCR',val:ats.lcr_final+'%',sub:'план &lt; 3.5%',bg:'rgba(239,68,68,0.12)',bc:'rgba(239,68,68,0.35)',lc:'#FCA5A5',vc:'#F87171',big:true},
           ].map(c=>`<div style="background:${c.bg};border:1px solid ${c.bc};border-radius:10px;padding:14px;text-align:center">
             <div style="font-size:9px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:${c.lc};margin-bottom:8px">${c.label}</div>
             <div style="font-size:${c.big?'26px':'24px'};font-weight:${c.big?'900':'800'};color:${c.vc}">${c.val}</div>

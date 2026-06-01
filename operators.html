@@ -4,11 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>BILLZ CC · Операторы</title>
-<link rel="stylesheet" href="shared.css?v=41">
+<link rel="stylesheet" href="shared.css?v=42">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
-<script src="data.js?v=41"></script>
-<script src="shared.js?v=41"></script>
+<script src="data.js?v=42"></script>
+<script src="shared.js?v=42"></script>
 <style>
 .formula-bar {
   margin-top: 12px !important;
@@ -76,10 +76,10 @@
       <div class="phdr-pills" id="teamPills"></div>
     </div>
     <div class="phdr-right">
-      <div class="cost-ey">ФОТ ОЦЕНКА (АПРЕЛЬ)</div>
+      <div class="cost-ey">ФОТ ОЦЕНКА (<span data-month-label-upper>АПРЕЛЬ</span>)</div>
       <div class="cost-n" id="totalCost">—</div>
       <div class="cost-d">сум · тикеты × CPT 7 561</div>
-      <div class="live"><span class="live-dot"></span>данные актуальны · 24.05.2026</div>
+      <div class="live"><span class="live-dot"></span>данные актуальны · 31.05.2026</div>
     </div>
   </div>
 
@@ -87,7 +87,7 @@
   <div class="team-alert">
     <div class="team-alert-icon">⚠️</div>
     <div>
-      <div class="team-alert-title">Изменения в команде — апрель 2026</div>
+      <div class="team-alert-title">Изменения в команде — <span data-month-label-genitive>апреле</span> 2026</div>
       <div class="team-alert-text">
         Уволены: <strong style="color:#fff">Шохинабону</strong> (учёба) и <strong style="color:#fff">Нурлан</strong>.
         Алишерова Робия переведена в КС. Итого активных: <strong style="color:#FCD34D">11 операторов, 7–8 в смене</strong>.
@@ -113,6 +113,19 @@
           <div class="card-note">SLA = % чатов FRT≤1мин · CSAT = Отлично / оценённых</div>
         </div>
       </div>
+      
+      <!-- Clean/Dirty toggle for operators -->
+      <div id="opModeToggle" style="display:none;margin-bottom:12px;padding:10px 14px;background:rgba(15,23,42,0.5);border:1px solid var(--br2);border-radius:8px">
+        <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px">
+          <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+            <span style="font-size:11px;font-weight:600;color:var(--t2)">Данные операторов:</span>
+            <button id="opModeAll" class="op-mode-btn active" onclick="setOpMode('all')" style="font-size:10px;font-weight:600;padding:5px 12px;border-radius:5px;border:1px solid #EF4444;background:rgba(239,68,68,0.15);color:#F87171;cursor:pointer">🔥 Все (с даунтаймом)</button>
+            <button id="opModeClean" class="op-mode-btn" onclick="setOpMode('clean')" style="font-size:10px;font-weight:600;padding:5px 12px;border-radius:5px;border:1px solid var(--br2);background:transparent;color:var(--t3);cursor:pointer">🧹 Без массового сбоя</button>
+          </div>
+          <div id="opModeNote" style="font-size:10px;color:var(--t3);font-family:var(--mono)">Все операторы и все тикеты</div>
+        </div>
+      </div>
+      
       <div id="opTableWrap">
         <table class="tbl" id="opTable">
           <thead><tr>
@@ -121,6 +134,9 @@
             <th>Нагрузка %</th>
             <th>Burnout</th>
             <th>SLA %</th>
+            <th title="Average First Response Time — медиана">AFRT</th>
+            <th title="Average Response Time — медиана">ART</th>
+            <th title="Скорость закрытия — медиана">Закрытие</th>
             <th>CSAT %</th>
             <th>Оценок</th>
             <th>Затраты</th>
@@ -130,8 +146,10 @@
       </div>
       <div class="formula-bar">
         <span class="f-key">📐 Нагрузка</span> = тикеты оператора / макс. тикеты в команде × 100 &nbsp;·&nbsp;
-        <span class="f-key">SLA</span> = чаты с FRT≤1мин / все замеренные чаты оператора × 100 &nbsp;·&nbsp;
-        <span class="f-key">CSAT</span> = оценок «Отлично» / всего оценок оператора × 100 &nbsp;·&nbsp;
+        <span class="f-key">SLA</span> = тикеты с FRT≤1мин / все замеренные тикеты × 100 &nbsp;·&nbsp;
+        <span class="f-key">AFRT</span> = медиана скорости первого ответа &nbsp;·&nbsp;
+        <span class="f-key">ART</span> = медиана скорости написания ответа &nbsp;·&nbsp;
+        <span class="f-key">CSAT</span> = оценок «Отлично» / всего оценок × 100 &nbsp;·&nbsp;
         <span class="f-key">Затраты</span> = тикеты × CPT <span class="f-val">7 561 сум</span>
       </div>
     </div>
@@ -194,7 +212,7 @@
   </div>
   <div class="row one" id="chartsRow4">
     <div class="card">
-      <div class="card-hd"><div class="card-title">Тикеты по операторам · недели 14–17</div><div class="card-note">все активные операторы апреля</div></div>
+      <div class="card-hd"><div class="card-title">Тикеты по операторам · полный месяц</div><div class="card-note">все активные операторы периода</div></div>
       <div style="position:relative;height:300px"><canvas id="weeklyChart"></canvas></div>
       <div class="formula-bar"><span class="f-key">📐 Нагрузка нед N</span> = тикеты оператора за неделю / рабочих дней × ставка &nbsp;·&nbsp; <span class="f-key">Риск выгорания</span>: если нагрузка стабильно выше среднего 3+ недели</div>
     </div>
@@ -218,7 +236,7 @@
   <div class="export-bar">
     <div class="export-bar-left">
       <div class="export-bar-title">📥 Скачать отчёт по операторам</div>
-      <div class="export-bar-sub">Excel · перформанс · все метрики · апрель 2026</div>
+      <div class="export-bar-sub">Excel · перформанс · все метрики · <span data-month-label-low>апрель</span> 2026</div>
     </div>
     <div style="display:flex;gap:8px">
       <button onclick="exportPagePNG('.wrap','billz-operators-full')" style="display:inline-flex;align-items:center;gap:6px;background:linear-gradient(135deg,#4C1D95,#7C3AED);border:none;border-radius:9px;padding:9px 18px;font-size:12px;font-weight:600;color:#fff;cursor:pointer;font-family:inherit;box-shadow:0 2px 16px rgba(124,58,237,0.3)">📷 Страница PNG</button>
@@ -232,7 +250,7 @@
   <div class="ftr">
     <div class="fl">BILLZ · CC Intelligence · Omnidesk CRM</div>
     <div class="fr">
-      <span>📅 Обновлено: <strong style="color:var(--t2)">24.05.2026</strong></span>
+      <span>📅 Обновлено: <strong style="color:var(--t2)">31.05.2026</strong></span>
       <span>Операторы · <span class="month-text" data-month-label>Апрель 2026</span></span>
     </div>
   </div>
@@ -243,18 +261,65 @@ const M = BILLZ_DATA.monthly;
 const W = BILLZ_DATA.weekly;
 const CPT = (typeof M !== "undefined" && M.cpt) ? M.cpt : 7561;
 let currentPeriod = 'monthly';
+let opDataMode = 'all'; // 'all' or 'clean'
 let charts = {};
 
+function getOpsFor(periodKey) {
+  // Returns ops array for given period, considering clean/dirty mode
+  if (periodKey === 'monthly') {
+    return opDataMode === 'clean' && M.operators_clean ? M.operators_clean : (M.operators_dirty || M.operators);
+  }
+  const wk = W[periodKey];
+  if (!wk) return [];
+  return opDataMode === 'clean' && wk.operators_clean ? wk.operators_clean : (wk.operators || []);
+}
+
 const PERIODS = {
-  monthly: { label: BILLZ_DATA.current_month === 'may' ? 'Май 2026 (1–19)' : 'Апрель 2026 (полный)', ops: M.operators },
-  week_21: { label: 'Нед 21 · 18–24 мая',  ops: W.week_21?.operators || [] },
-  week_20: { label: 'Нед 20 · 11–17 мая',  ops: W.week_20?.operators || [] },
-  week_19: { label: 'Нед 19 · 04–10 мая',  ops: W.week_19?.operators || [] },
-  week_18: { label: 'Нед 18 · 27.04–03.05', ops: W.week_18?.operators || [] },
-  week_17: { label: 'Нед 17 · 20–26 апр',  ops: W.week_17?.operators || [] },
-  week_16: { label: 'Нед 16 · 13–19 апр',  ops: W.week_16?.operators || [] },
-  week_15: { label: 'Нед 15 · 6–12 апр',   ops: W.week_15?.operators || [] },
-  week_14: { label: 'Нед 14 · 1–5 апр',    ops: W.week_14?.operators || [] },
+  monthly: { label: BILLZ_DATA.current_month === 'may' ? 'Май 2026 (полный)' : 'Апрель 2026 (полный)' },
+  week_22: { label: 'Нед 22 · 25–31 мая' },
+  week_21: { label: 'Нед 21 · 18–24 мая' },
+  week_20: { label: 'Нед 20 · 11–17 мая' },
+  week_19: { label: 'Нед 19 · 04–10 мая' },
+  week_18: { label: 'Нед 18 · 27.04–03.05' },
+  week_17: { label: 'Нед 17 · 20–26 апр' },
+  week_16: { label: 'Нед 16 · 13–19 апр' },
+  week_15: { label: 'Нед 15 · 6–12 апр'  },
+  week_14: { label: 'Нед 14 · 1–5 апр'   },
+};
+// Add dynamic ops getter
+Object.keys(PERIODS).forEach(k => {
+  Object.defineProperty(PERIODS[k], 'ops', { get() { return getOpsFor(k); }, configurable: true });
+});
+
+// Show clean/dirty toggle if monthly has both ops arrays
+if (M && M.operators_clean && M.operators_dirty) {
+  const t = document.getElementById('opModeToggle');
+  if (t) t.style.display = '';
+}
+
+window.setOpMode = function(mode) {
+  opDataMode = mode;
+  const allBtn = document.getElementById('opModeAll');
+  const cleanBtn = document.getElementById('opModeClean');
+  const noteEl = document.getElementById('opModeNote');
+  if (mode === 'all') {
+    allBtn.style.background = 'rgba(239,68,68,0.15)';
+    allBtn.style.borderColor = '#EF4444';
+    allBtn.style.color = '#F87171';
+    cleanBtn.style.background = 'transparent';
+    cleanBtn.style.borderColor = 'var(--br2)';
+    cleanBtn.style.color = 'var(--t3)';
+    noteEl.textContent = 'Все операторы (включая Хуршид/Дильшод) и все тикеты с массовым сбоем';
+  } else {
+    allBtn.style.background = 'transparent';
+    allBtn.style.borderColor = 'var(--br2)';
+    allBtn.style.color = 'var(--t3)';
+    cleanBtn.style.background = 'rgba(16,185,129,0.15)';
+    cleanBtn.style.borderColor = '#10B981';
+    cleanBtn.style.color = '#34D399';
+    noteEl.textContent = 'Чистые данные: без меток «Массовый сбой BILLZ» и операторов Хуршид/Дильшод';
+  }
+  render();
 };
 
 // Build period switcher
@@ -291,7 +356,7 @@ function getColor(val, low, high) {
 }
 
 function render() {
-  const ops = PERIODS[currentPeriod].ops.filter(o => o.tickets > 0 && !['Хуршид'].includes(o.name));
+  const ops = PERIODS[currentPeriod].ops.filter(o => o.tickets > 0);
   if(!ops.length) return;
 
   const maxT = Math.max(...ops.map(o=>o.tickets));
@@ -331,13 +396,18 @@ function render() {
     const closeC = op.avg_close<=4?'f':op.avg_close<=24?'m':'s';
     const isLeft = ['Шохина','Нурлан','Азизбек'].some(n=>op.name.includes(n));
     const isCs = op.name.includes('Алишерова') || op.name.includes('Робия А');
-    const status = isLeft ? '<span class="b bad">Выбыл</span>' : isCs ? '<span class="b warn">→ КС</span>' : '<span class="b ok">Активен</span>';
-    return `<tr>
-      <td class="n-name" style="color:${OP_COLORS[i%OP_COLORS.length]}">${op.name}</td>
+    const isExcluded = ['Хуршид','Дильшод'].includes(op.name);
+    const status = isLeft ? '<span class="b bad">Выбыл</span>' : isCs ? '<span class="b warn">→ КС</span>' : isExcluded ? '<span class="b bad">⚠ Не в чистом расчёте</span>' : '<span class="b ok">Активен</span>';
+    const rowStyle = isExcluded ? 'opacity:0.7;background:rgba(239,68,68,0.04)' : '';
+    return `<tr style="${rowStyle}">
+      <td class="n-name" style="color:${isExcluded ? '#F87171' : OP_COLORS[i%OP_COLORS.length]}">${op.name}${isExcluded ? ' <span style="font-size:9px;color:#F87171;font-weight:600">(искл. в clean)</span>' : ''}</td>
       <td class="n-num">${fmt.num(op.tickets)}</td>
       <td><div class="bw"><div class="bb"><div class="bf" style="width:${bw}%;background:${OP_COLORS[i%OP_COLORS.length]}"></div></div><span class="bp">${bw}%</span></div></td>
       <td>${(()=>{const lvl=op.burnout_level||(op.tickets>=1000?'high':(op.tickets>=900?'mid':'norm'));const lbl={high:'🔴 Высокий',mid:'🟡 Средний',norm:'🟢 Норма'}[lvl];const col={high:'#EF4444',mid:'#F59E0B',norm:'#10B981'}[lvl];const bg={high:'rgba(239,68,68,0.15)',mid:'rgba(245,158,11,0.15)',norm:'rgba(16,185,129,0.15)'}[lvl];return `<span style="font-size:10px;font-weight:700;padding:3px 8px;border-radius:5px;background:${bg};color:${col}">${lbl}</span>`;})()}</td>
       <td><span class="b ${slaC}">${op.sla_pct||0}%</span></td>
+      <td style="font-family:var(--mono);font-size:10px;color:var(--t2)">${op.frt_str || (op.frt_sec ? op.frt_sec+'с' : '—')}</td>
+      <td style="font-family:var(--mono);font-size:10px;color:var(--t2)">${op.art_str || (op.art_sec ? op.art_sec+'с' : '—')}</td>
+      <td style="font-family:var(--mono);font-size:10px;color:var(--t3)">${op.avg_close_str || (op.avg_close ? op.avg_close+'ч' : '—')}</td>
       <td>${(op.rated||0)>0?`<span class="b ${csatC}">${op.rating_pct||0}%</span>`:'<span style="color:var(--t4);font-size:10px">нет оценок</span>'}</td>
       <td style="font-size:10px;color:var(--t3)">${op.rated||0}</td>
       <td class="cost-cell">${fmt.mln(op.cost||op.tickets*CPT)}</td>

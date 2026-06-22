@@ -4,11 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>BILLZ CC · Динамика</title>
-<link rel="stylesheet" href="shared.css?v=42">
+<link rel="stylesheet" href="shared.css?v=43">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
-<script src="data.js?v=42"></script>
-<script src="shared.js?v=42"></script>
+<script src="data.js?v=43"></script>
+<script src="shared.js?v=43"></script>
 <style>
 .formula-bar {
   margin-top: 12px !important; padding: 9px 14px !important;
@@ -96,13 +96,13 @@
     <div>
       <div class="phdr-eyebrow">BILLZ · КОЛЛ-ЦЕНТР · ДИНАМИКА ПЕРИОДОВ</div>
       <div class="phdr-title">Динамика <em>по неделям</em></div>
-      <div class="phdr-sub">Текущий период (11.05–31.05, 21 день) vs предыдущий период (27.04–10.05, 14 дн). Сравнение нормализовано на день для корректности.</div>
+      <div class="phdr-sub">Текущий период (01–21.06, 21 день) vs предыдущий период (11–31.05, 14 дн). Сравнение нормализовано на день для корректности.</div>
     </div>
     <div class="phdr-right">
       <div class="cost-ey">ОБРАЩЕНИЙ ЗА ТЕКУЩУЮ НЕДЕЛЮ</div>
       <div class="cost-n" id="totalTickets">—</div>
-      <div class="cost-d">11.05 — 31.05 · 21 день</div>
-      <div class="live"><span class="live-dot"></span>обновлено 31.05.2026</div>
+      <div class="cost-d">01.06 — 21.06 · 21 день</div>
+      <div class="live"><span class="live-dot"></span>обновлено 22.06.2026</div>
     </div>
   </div>
 
@@ -117,7 +117,7 @@
     <div class="card">
       <div class="card-hd"><div class="card-title">Тикеты по дням · оба периода</div></div>
       <div style="position:relative;height:240px"><canvas id="dailyVolumeChart"></canvas></div>
-      <div class="card-formula">📐 Голубой = 27.04–10.05 (14 дн) · Фиолетовый = 11.05–31.05 (21 день)</div>
+      <div class="card-formula">📐 Голубой = 11–31.05 (21 день) · Фиолетовый = 01–21.06 (21 день)</div>
     </div>
     <div class="card">
       <div class="card-hd"><div class="card-title">Звонки vs Чаты — структура</div></div>
@@ -162,11 +162,11 @@
     <div class="metric-cmp-card" style="border-left:3px solid #06B6D4">
       <div class="mc-label" style="color:#06B6D4">🤝 ВСЕГО ОТ ПАРТНЁРОВ</div>
       <div class="mc-row">
-        <span class="mc-period">27.04–10.05 (14 дн)</span>
+        <span class="mc-period">11–31.05 (21 день)</span>
         <span class="mc-val" id="partnerPriorTotal">—</span>
       </div>
       <div class="mc-row">
-        <span class="mc-period">11.05–31.05 (21 день)</span>
+        <span class="mc-period">01–21.06 (21 день)</span>
         <span class="mc-val" style="color:#06B6D4" id="partnerCurrTotal">—</span>
       </div>
       <div class="mc-delta">
@@ -177,11 +177,11 @@
     <div class="metric-cmp-card" style="border-left:3px solid #10B981">
       <div class="mc-label" style="color:#10B981">✅ ЖЕЛАТЕЛЬНЫЕ (партнёры)</div>
       <div class="mc-row">
-        <span class="mc-period">27.04–10.05</span>
+        <span class="mc-period">11–31.05</span>
         <span class="mc-val" id="partnerPriorDes">—</span>
       </div>
       <div class="mc-row">
-        <span class="mc-period">11.05–31.05</span>
+        <span class="mc-period">01–21.06</span>
         <span class="mc-val" style="color:#10B981" id="partnerCurrDes">—</span>
       </div>
       <div class="mc-delta">
@@ -192,11 +192,11 @@
     <div class="metric-cmp-card" style="border-left:3px solid #EF4444">
       <div class="mc-label" style="color:#EF4444">❌ НЕЖЕЛАТЕЛЬНЫЕ (партнёры)</div>
       <div class="mc-row">
-        <span class="mc-period">27.04–10.05</span>
+        <span class="mc-period">11–31.05</span>
         <span class="mc-val" id="partnerPriorUndes">—</span>
       </div>
       <div class="mc-row">
-        <span class="mc-period">11.05–31.05</span>
+        <span class="mc-period">01–21.06</span>
         <span class="mc-val" style="color:#EF4444" id="partnerCurrUndes">—</span>
       </div>
       <div class="mc-delta">
@@ -208,18 +208,18 @@
 
   <div class="row two">
     <div class="card">
-      <div class="card-hd"><div class="card-title">Топ-партнёры по обращениям · 27.04–10.05</div></div>
+      <div class="card-hd"><div class="card-title">Топ-партнёры по обращениям · 11–31.05</div></div>
       <table class="ntable" style="width:100%"><thead>
         <tr><th>Партнёр</th><th style="text-align:right">Тикеты</th><th style="text-align:right">/день</th></tr>
       </thead><tbody id="partnerMgrsBody"></tbody></table>
       <div class="card-formula">📐 Поле "КС менеджер" в Omnidesk · "ПАРТНЁР" — без указания конкретного партнёра</div>
     </div>
     <div class="card">
-      <div class="card-hd"><div class="card-title">Топ-темы партнёрских обращений · 27.04–10.05</div></div>
+      <div class="card-hd"><div class="card-title">Топ-темы партнёрских обращений · 11–31.05</div></div>
       <table class="ntable" style="width:100%"><thead>
         <tr><th>Тема</th><th style="text-align:right">Тикеты</th><th style="text-align:right">% от партн.</th></tr>
       </thead><tbody id="partnerTopicsBody"></tbody></table>
-      <div class="card-formula">📐 Первая метка в Omnidesk · от <span id="partnerCountFormula">—</span> партнёрских тикетов за 14 дн</div>
+      <div class="card-formula">📐 Первая метка в Omnidesk · от <span id="partnerCountFormula">—</span> партнёрских тикетов за 21 день</div>
     </div>
   </div>
 
@@ -247,9 +247,9 @@
     <table class="ntable" id="summaryTable" style="width:100%">
       <thead><tr>
         <th style="text-align:left">Метрика</th>
-        <th style="text-align:right">27.04–10.05 (14 дн)</th>
+        <th style="text-align:right">11–31.05 (21 день)</th>
         <th style="text-align:right">в день</th>
-        <th style="text-align:right">11.05–31.05 (21 день)</th>
+        <th style="text-align:right">01–21.06 (21 день)</th>
         <th style="text-align:right">в день</th>
         <th style="text-align:right">Δ /день</th>
       </tr></thead>
@@ -269,7 +269,7 @@
       <div style="font-size:10px;color:var(--text4);font-family:var(--mono);background:rgba(167,139,250,0.10);padding:3px 9px;border-radius:5px;border:1px solid rgba(167,139,250,0.25)">из BILLZ_DATA.week_vs_week</div>
     </div>
     <div id="wvwGrid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px"></div>
-    <div class="card-formula" style="margin-top:14px">📐 Сравнивается последняя неделя 22 (25–31.05) с предыдущей неделей 21 (18–24.05). Обе недели содержат массовые сбои — учтены полные данные.</div>
+    <div class="card-formula" style="margin-top:14px">📐 Сравнивается последняя неделя 22 (08–14.06) с неделей 25 (15–21.06). Неделя 24 включает массовый сбой 08.06, неделя 25 — без сбоев.</div>
   </div>
 
   <div class="sec"><div class="sec-num">09</div><div class="sec-title">Инсайты по динамике</div><div class="sec-line"></div></div>
@@ -280,8 +280,8 @@
 (function() {
   const PC = BILLZ_DATA.period_compare;
   const P = PC.prior, C = PC.current, D = PC.delta;
-  const dailyMay = BILLZ_DATA.months.may.daily;
-  const dailyApr = BILLZ_DATA.months.apr.daily;
+  const dailyMay = BILLZ_DATA.months.jun.daily;
+  const dailyApr = BILLZ_DATA.months.may.daily;
   
   document.getElementById('totalTickets').textContent = C.tickets.toLocaleString('ru');
 
@@ -299,8 +299,8 @@
     const arrow = d.pct > 0 ? '↑' : (d.pct < 0 ? '↓' : '→');
     return `<div class="metric-cmp-card" style="border-left:3px solid ${m.color}">
       <div class="mc-label" style="color:${m.color}">${m.label}</div>
-      <div class="mc-row"><span class="mc-period">27.04–10.05</span><span class="mc-val">${m.fmt(pv)}${m.suffix}</span></div>
-      <div class="mc-row"><span class="mc-period">11.05–31.05</span><span class="mc-val" style="color:${m.color}">${m.fmt(cv)}${m.suffix}</span></div>
+      <div class="mc-row"><span class="mc-period">11–31.05</span><span class="mc-val">${m.fmt(pv)}${m.suffix}</span></div>
+      <div class="mc-row"><span class="mc-period">01–21.06</span><span class="mc-val" style="color:${m.color}">${m.fmt(cv)}${m.suffix}</span></div>
       <div class="mc-delta">
         <span class="${cls}" style="font-size:11px">${arrow} ${d.pct>0?'+':''}${d.pct.toFixed(1)}%</span>
         <span class="mc-delta-pct ${cls}">${d.abs>0?'+':''}${m.fmt(Math.abs(d.abs))}</span>
@@ -321,8 +321,8 @@
     const arrow = d.abs > 0 ? '↑' : (d.abs < 0 ? '↓' : '→');
     return `<div class="metric-cmp-card" style="border-left:3px solid ${m.color}">
       <div class="mc-label" style="color:${m.color}">${m.label}</div>
-      <div class="mc-row"><span class="mc-period">27.04–10.05</span><span class="mc-val">${m.fmt(pv)}${m.suffix}</span></div>
-      <div class="mc-row"><span class="mc-period">11.05–31.05</span><span class="mc-val" style="color:${m.color}">${m.fmt(cv)}${m.suffix}</span></div>
+      <div class="mc-row"><span class="mc-period">11–31.05</span><span class="mc-val">${m.fmt(pv)}${m.suffix}</span></div>
+      <div class="mc-row"><span class="mc-period">01–21.06</span><span class="mc-val" style="color:${m.color}">${m.fmt(cv)}${m.suffix}</span></div>
       <div class="mc-delta">
         <span class="${cls}" style="font-size:11px">${arrow} абс</span>
         <span class="mc-delta-pct ${cls}">${d.abs>0?'+':''}${d.abs.toFixed(2)} пп</span>
@@ -364,7 +364,7 @@
   new Chart(document.getElementById('channelMixChart'), {
     type:'bar',
     data:{
-      labels: ['27.04–10.05', '11.05–31.05'],
+      labels: ['11–31.05', '01–21.06'],
       datasets:[
         {label:'Звонки (всего)', data:[P.calls, C.calls], backgroundColor:'rgba(59,130,246,0.85)', borderRadius:6, stack:'a'},
         {label:'Чаты (всего)', data:[P.chats, C.chats], backgroundColor:'rgba(139,92,246,0.85)', borderRadius:6, stack:'a'}
@@ -412,7 +412,7 @@
   new Chart(document.getElementById('trainingChart'), {
     type:'bar',
     data:{
-      labels: ['27.04–10.05 (14 дн)', '11.05–31.05 (21 день)'],
+      labels: ['11–31.05 (21 день)', '01–21.06 (21 день)'],
       datasets:[
         {label:'Частичные', data:[P.training_partial, C.training_partial], backgroundColor:'rgba(245,158,11,0.7)', borderRadius:6, stack:'a'},
         {label:'Полные', data:[P.training_full, C.training_full], backgroundColor:'rgba(239,68,68,0.7)', borderRadius:6, stack:'a'},
@@ -426,13 +426,13 @@
   const tArrow = tD.pct > 0 ? '↑' : (tD.pct < 0 ? '↓' : '→');
   document.getElementById('trainingSummaryBody').innerHTML = `
     <table style="width:100%;font-size:11px">
-      <tr><td style="color:var(--t3);padding:6px 0">Всего · 27.04–10.05</td><td style="text-align:right;font-weight:700;font-family:var(--mono)">${P.training_total} <span style="color:var(--t3);font-size:10px">за 14 дн</span></td></tr>
-      <tr><td style="color:var(--t3);padding:6px 0">Всего · 11.05–31.05</td><td style="text-align:right;font-weight:700;color:#F59E0B;font-family:var(--mono)">${C.training_total} <span style="color:var(--t3);font-size:10px">за 14 дн</span></td></tr>
+      <tr><td style="color:var(--t3);padding:6px 0">Всего · 11–31.05</td><td style="text-align:right;font-weight:700;font-family:var(--mono)">${P.training_total} <span style="color:var(--t3);font-size:10px">за 21 день</span></td></tr>
+      <tr><td style="color:var(--t3);padding:6px 0">Всего · 01–21.06</td><td style="text-align:right;font-weight:700;color:#F59E0B;font-family:var(--mono)">${C.training_total} <span style="color:var(--t3);font-size:10px">за 21 день</span></td></tr>
       <tr style="border-top:1px solid rgba(255,255,255,0.08)"><td style="color:var(--t3);padding:8px 0">/день · предыдущий</td><td style="text-align:right;font-weight:700;font-family:var(--mono)">${P.training_per_day.toFixed(1)}</td></tr>
       <tr><td style="color:var(--t3);padding:6px 0">/день · текущий</td><td style="text-align:right;font-weight:700;color:#F59E0B;font-family:var(--mono)">${C.training_per_day.toFixed(1)}</td></tr>
       <tr style="border-top:1px solid rgba(255,255,255,0.08)"><td style="color:var(--t3);padding:8px 0">Динамика /день</td><td style="text-align:right;font-weight:800;font-size:13px;font-family:var(--mono)" class="${tDir}">${tArrow} ${tD.pct>0?'+':''}${tD.pct.toFixed(1)}%</td></tr>
       <tr><td style="color:var(--t3);padding:6px 0">Полные / Частичные</td><td style="text-align:right;font-family:var(--mono);font-size:11px">P: ${P.training_full}/${P.training_partial} · C: ${C.training_full}/${C.training_partial}</td></tr>
-      <tr><td style="color:var(--t3);padding:6px 0">Затраты · текущий период</td><td style="text-align:right;font-weight:700;font-family:var(--mono);color:#F59E0B">${(C.training_total*7561/1e6).toFixed(2)} млн<br/><span style="font-size:10px;color:var(--t3)">vs ${(P.training_total*7561/1e6).toFixed(2)} млн за 14 дн</span></td></tr>
+      <tr><td style="color:var(--t3);padding:6px 0">Затраты · текущий период</td><td style="text-align:right;font-weight:700;font-family:var(--mono);color:#F59E0B">${(C.training_total*7561/1e6).toFixed(2)} млн<br/><span style="font-size:10px;color:var(--t3)">vs ${(P.training_total*7561/1e6).toFixed(2)} млн за 21 день</span></td></tr>
     </table>`;
 
   const tIns = [];
@@ -522,7 +522,7 @@
   new Chart(document.getElementById('repeatChart'), {
     type:'bar',
     data:{
-      labels: ['27.04–10.05', '11.05–31.05'],
+      labels: ['11–31.05', '01–21.06'],
       datasets:[{
         label:'% повторных',
         data:[P.repeat_pct, C.repeat_pct],

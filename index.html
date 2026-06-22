@@ -4,11 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>BILLZ CC · Ежемесячно</title>
-<link rel="stylesheet" href="shared.css?v=42">
+<link rel="stylesheet" href="shared.css?v=43">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
-<script src="data.js?v=42"></script>
-<script src="shared.js?v=42"></script>
+<script src="data.js?v=43"></script>
+<script src="shared.js?v=43"></script>
 <style>
 .formula-bar {
   margin-top: 12px !important;
@@ -80,7 +80,7 @@
       <div class="cost-ey">ЗАТРАТЫ ЗА МЕСЯЦ</div>
       <div class="cost-n" id="costVal">—</div>
       <div class="cost-d">сум · тикеты × CPT</div>
-      <div class="live"><span class="live-dot"></span>данные актуальны · 31.05.2026</div>
+      <div class="live"><span class="live-dot"></span>данные актуальны · 22.06.2026</div>
     </div>
   </div>
 
@@ -125,7 +125,7 @@
         <thead><tr><th>Оператор</th><th>Тикеты</th><th>Нагрузка</th><th>Ср. закрытие</th><th>Закрыто</th><th>SLA</th><th>CSAT</th><th>Затраты</th></tr></thead>
         <tbody id="opTable"></tbody>
       </table>
-      <div class="card-formula">📐 Нагрузка = тикеты оператора / макс. тикеты × 100 · Затраты = тикеты × CPT (7 561 сум)</div>
+      <div class="card-formula">📐 Нагрузка = тикеты оператора / макс. тикеты × 100 · Затраты = тикеты × CPT (9 353 сум)</div>
     </div>
     <div class="card">
       <div class="card-hd"><div class="card-title">Доля звонков vs чатов</div><div class="card-note" id="chanNote"></div></div>
@@ -142,7 +142,7 @@
   <div class="sec"><div class="sec-num">02</div><div class="sec-title">Топ меток и затраты (CPT)</div><div class="sec-line"></div></div>
   <div class="row two">
     <div class="card">
-      <div class="card-hd"><div class="card-title">Топ-12 меток по объёму</div><div class="card-note">каждый тикет = 7 561 сум</div></div>
+      <div class="card-hd"><div class="card-title">Топ-12 меток по объёму</div><div class="card-note">каждый тикет = 9 353 сум</div></div>
       <table class="tbl">
         <thead><tr><th>Метка</th><th>Тикеты</th><th>Объём</th><th>Нежел.</th><th>Затраты</th></tr></thead>
         <tbody id="lblTable"></tbody>
@@ -152,7 +152,7 @@
     <div class="card">
       <div class="card-hd"><div class="card-title">Топ-8 меток — объём</div></div>
       <div style="position:relative;height:280px"><canvas id="labelsChart"></canvas></div>
-      <div class="card-formula">📐 Затраты метки = тикеты по метке × CPT 7 561 сум</div>
+      <div class="card-formula">📐 Затраты метки = тикеты по метке × CPT 9 353 сум</div>
     </div>
   </div>
 
@@ -188,15 +188,15 @@
   <div id="aprilInsights" style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px"></div>
 
   <!-- ── MAY 2026 ──────────────────────────────────────────────────────────── -->
-  <div class="sec"><div class="sec-num">06</div><div class="sec-title">Май 2026 · Фокус и план</div><div class="sec-line"></div></div>
+  <div class="sec"><div class="sec-num">06</div><div class="sec-title">Июнь 2026 · Фокус и план</div><div class="sec-line"></div></div>
   <div id="mayBlock" style="margin-bottom:14px"></div>
 
   <!-- ── MAY 2026 INSIGHTS ─────────────────────────────────────────────── -->
-  <div class="sec"><div class="sec-num">07</div><div class="sec-title">Май 2026 · Инсайты по первым дням</div><div class="sec-line"></div></div>
+  <div class="sec"><div class="sec-num">07</div><div class="sec-title">Июнь 2026 · Инсайты по первым дням</div><div class="sec-line"></div></div>
   <div id="mayInsights" style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px"></div>
 
   <!-- ── MAY RECOMMENDATIONS ───────────────────────────────────────────── -->
-  <div class="sec"><div class="sec-num">08</div><div class="sec-title">Май 2026 · Рекомендации и приоритеты</div><div class="sec-line"></div></div>
+  <div class="sec"><div class="sec-num">08</div><div class="sec-title">Июнь 2026 · Рекомендации и приоритеты</div><div class="sec-line"></div></div>
   <div id="mayRecs" style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px"></div>
 
   <div class="export-bar">
@@ -217,7 +217,7 @@
   <div class="ftr">
     <div class="fl">BILLZ · CC Intelligence · Omnidesk CRM · без тикетов Дильшода</div>
     <div class="fr">
-      <span>📅 Обновлено: <strong style="color:var(--t2)">31.05.2026</strong></span>
+      <span>📅 Обновлено: <strong style="color:var(--t2)">22.06.2026</strong></span>
       <span>Ежемесячно · <span class="month-text" data-month-label>Апрель 2026</span></span>
     </div>
   </div>
@@ -226,7 +226,7 @@
 <script>const M = BILLZ_DATA.monthly;
 const charts = {};
 const CPT = (typeof M !== "undefined" && M.cpt) ? M.cpt : 7561;
-const STORES = M.clients || 4165;
+const STORES = M.clients || 1988;
 const USERS  = M.users  || 37260;
 
 // Show clean/dirty toggle only when monthly has both versions
@@ -348,13 +348,13 @@ window._renderKPIs = function() {
       'Повторные тикеты / все тикеты × 100'),
 
     kpi('Операторов', M.operators_count || '—', '7–8 в смене · цель 13–14',
-      'cyan', '', [], ['Активных в мае'],
+      'cyan', '', [], ['Активных в июне'],
       'Из таблицы ATS · активные операторы линии'),
 
     kpi('Обучений (CC→CS)', fmt.num(M.training_tickets || 0),
       `${fmt.mln((M.training_tickets||0)*CPT)}`,
       'rose', '!', [], ['Работа CS-команды'],
-      'Тикеты с меткой «Обучение*» × CPT 7 561 сум = нагрузка CC'),
+      'Тикеты с меткой «Обучение*» × CPT 9 353 сум = нагрузка CC'),
   ].join('');
 };
 _renderKPIs();
@@ -389,8 +389,8 @@ document.getElementById('alertGrid').innerHTML = `
     <div class="alert-num">04</div>
     <div>
       <div class="al-label">Затраты ${fmt.mln(M.cost)}</div>
-      <div class="al-txt">${fmt.num(M.tickets)} тикетов × ${fmt.num(CPT)} сум CPT. Из них обучений через CC: ${M.training_tickets||401} тик = ${fmt.mln((M.training_tickets||401)*CPT)}.</div>
-      <div class="al-formula">📐 Затраты = тикеты × CPT · CPT = 7 561 сум</div>
+      <div class="al-txt">${fmt.num(M.tickets)} тикетов × ${fmt.num(CPT)} сум CPT. Из них обучений через CC: ${M.training_tickets||344} тик = ${fmt.mln((M.training_tickets||344)*CPT)}.</div>
+      <div class="al-formula">📐 Затраты = тикеты × CPT · CPT = 9 353 сум</div>
     </div>
   </div>
 `;
@@ -452,7 +452,7 @@ charts.labels = buildNeonBar('labelsChart',
     colorFn: (v,i) => { const c=NEON_COLORS[i%NEON_COLORS.length]; const {r,g,b}=hexRGB(c); return `rgba(${r},${g},${b},0.85)`; },
   }],
   { radius: 8, yFmt: v => v.toLocaleString('ru'),
-    tooltipFmt: ctx => ` ${ctx.raw.toLocaleString('ru')} тикетов · ${fmt.mln(ctx.raw*7561)}` }
+    tooltipFmt: ctx => ` ${ctx.raw.toLocaleString('ru')} тикетов · ${fmt.mln(ctx.raw*(M.cpt||9353))}` }
 );
 
 /* Companies */
@@ -581,7 +581,7 @@ function exportCSExcel() {
       ['Желательные', M.desired, 'Тип обращения = Желательный'],
       ['Нежелательные', M.undesired, 'Тип обращения = Нежелательный'],
       ['Нежел. %', +(M.undesired/M.tickets*100).toFixed(1), 'Нежелательные / тикеты × 100'],
-      ['CPT', 7561, 'Стоимость одного тикета, сум'],
+      ['CPT', (M.cpt||9353), 'Стоимость одного тикета, сум'],
       ['Затраты', M.cost, 'Тикеты × CPT'],
       ['Затраты (млн)', +(M.cost/1e6).toFixed(2), ''],
       ['LCR %', M.lcr, 'Пропущ. >5сек / входящие × 100 (АТС)'],
@@ -591,12 +591,12 @@ function exportCSExcel() {
       ['SLA не соблюдён', M.sla_not_met, '100 − SLA %'],
       ['AFRT', M.afrt, 'Среднее время первого ответа'],
       ['Повторные %', M.repeat_pct, 'Повторные / все × 100'],
-      ['Клиентов (магазинов)', STORES, 'На 31.05.2026'],
-      ['Пользователей', USERS, 'На 31.05.2026'],
+      ['Клиентов (магазинов)', STORES, 'На 22.06.2026'],
+      ['Пользователей', USERS, 'На 22.06.2026'],
       ['Тик/магазин', M.tpc, 'Тикеты / магазины'],
       ['Тик/пользователь', M.tpu, 'Тикеты / пользователи'],
-      ['Обучений через CC', M.training_tickets||401, 'Тикеты с меткой "Обучени*"'],
-      ['Обучения затраты', (M.training_tickets||401)*7561, 'Обучения × CPT'],
+      ['Обучений через CC', M.training_tickets||344, 'Тикеты с меткой "Обучени*"'],
+      ['Обучения затраты', (M.training_tickets||344)*(M.cpt||9353), 'Обучения × CPT'],
     ];
     XLSX.utils.book_append_sheet(wb, makeSheet(sum,[36,16,45]), '📊 Сводка');
 
@@ -620,11 +620,11 @@ function exportCSExcel() {
   // ── SECTION 05: Monthly insights (apr / may dynamic) ──────────────────────
   const aprilInsightsEl = document.getElementById('aprilInsights');
   if (aprilInsightsEl) {
-    const isMay = BILLZ_DATA.current_month === 'may';
+    const isMay = (BILLZ_DATA.current_month==='may'||BILLZ_DATA.current_month==='jun');
     let insights;
-    if (isMay && BILLZ_DATA.may_insights && BILLZ_DATA.may_insights.length) {
+    if (isMay && (BILLZ_DATA[BILLZ_DATA.current_month+'_insights']||BILLZ_DATA.may_insights) && (BILLZ_DATA[BILLZ_DATA.current_month+'_insights']||BILLZ_DATA.may_insights).length) {
       // Use dynamic may insights from data.js
-      insights = BILLZ_DATA.may_insights.map(ins => ({
+      insights = (BILLZ_DATA[BILLZ_DATA.current_month+'_insights']||BILLZ_DATA.may_insights).map(ins => ({
         color: ins.color,
         icon: ins.icon,
         title: ins.title,
@@ -693,7 +693,7 @@ function exportCSExcel() {
     const cPlan = M.csat_plan || 95.0;
     csatSplitEl.innerHTML = `
       <div class="card">
-        <div class="ch"><div class="ct">CSAT по каналам · ${BILLZ_DATA.current_month === 'may' ? 'Май 2026' : 'Апрель 2026'}</div>
+        <div class="ch"><div class="ct">CSAT по каналам · ${(BILLZ_DATA._monthLabel || 'Июнь 2026')}</div>
           <div class="cn2">план: ${cPlan}%</div></div>
         <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px">
           <div style="text-align:center;padding:16px;background:rgba(16,185,129,0.06);
@@ -729,7 +729,7 @@ function exportCSExcel() {
     // ── SECTION 06: May 2026 ───────────────────────────────────────────────
   const mayEl = document.getElementById('mayBlock');
   if (mayEl) {
-    const mayData = BILLZ_DATA.may || {};
+    const mayData = BILLZ_DATA[BILLZ_DATA.current_month] || BILLZ_DATA.may || {};
     const focus = mayData.focus || ['Снизить LCR до <3%','Увеличить долю чатов >47%','Передача онбординга CS','Найм 2–3 операторов'];
     mayEl.innerHTML = `
       <div style="background:var(--card);border:1px solid rgba(59,130,246,0.15);
@@ -767,7 +767,7 @@ function exportCSExcel() {
           <div style="font-size:10px;color:var(--t3)">по мере поступления<br>обращений в мае</div>
           <div style="margin-top:12px;font-size:10px;font-family:monospace;
             color:var(--blue2);background:rgba(59,130,246,0.08);
-            padding:5px 10px;border-radius:6px">Обновлено: 31.05.2026</div>
+            padding:5px 10px;border-radius:6px">Обновлено: 22.06.2026</div>
         </div>
       </div>`;
   }
@@ -786,7 +786,7 @@ function exportCSExcel() {
     ats.downtime             = ats.downtime             ?? 0;
     ats.missed_total         = ats.missed_total         ?? ats.missed_calls_total ?? 0;
     ats.lcr_final            = ats.lcr_final            ?? ats.lcr_5sec_fact ?? M.lcr ?? 0;
-    const monthLabelAts = (BILLZ_DATA.current_month === 'may') ? 'Май 2026' : 'Апрель 2026';
+    const monthLabelAts = (BILLZ_DATA._monthLabel || 'Июнь 2026');
     const rows = [
       {label:'Вход (всего)', val:(ats.incoming_total || 0).toLocaleString('ru'), color:'var(--t2)'},
       {label:'Вход (за вычетом пропуск от ПД)', val:(ats.incoming_no_missed_pd || 0).toLocaleString('ru'), color:'var(--t3)'},
@@ -853,8 +853,8 @@ function exportCSExcel() {
   }
   // ── MAY INSIGHTS ─────────────────────────────────────────────────────────
   const mayInsightsEl = document.getElementById('mayInsights');
-  if (mayInsightsEl && BILLZ_DATA.may_insights) {
-    mayInsightsEl.innerHTML = BILLZ_DATA.may_insights.map(ins => `
+  if (mayInsightsEl && (BILLZ_DATA[BILLZ_DATA.current_month+'_insights']||BILLZ_DATA.may_insights)) {
+    mayInsightsEl.innerHTML = (BILLZ_DATA[BILLZ_DATA.current_month+'_insights']||BILLZ_DATA.may_insights).map(ins => `
       <div style="background:${ins.bg};border:1px solid ${ins.border};
         border-left:3px solid ${ins.color};border-radius:12px;padding:16px 18px">
         <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
@@ -872,8 +872,8 @@ function exportCSExcel() {
 
   // ── MAY RECOMMENDATIONS ──────────────────────────────────────────────────
   const mayRecsEl = document.getElementById('mayRecs');
-  if (mayRecsEl && BILLZ_DATA.may_recommendations) {
-    mayRecsEl.innerHTML = BILLZ_DATA.may_recommendations.map(r => `
+  if (mayRecsEl && (BILLZ_DATA[BILLZ_DATA.current_month+'_recommendations']||BILLZ_DATA.may_recommendations)) {
+    mayRecsEl.innerHTML = (BILLZ_DATA[BILLZ_DATA.current_month+'_recommendations']||BILLZ_DATA.may_recommendations).map(r => `
       <div style="background:var(--card);border:1px solid ${r.color}30;
         border-left:3px solid ${r.color};border-radius:12px;padding:16px 18px">
         <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">

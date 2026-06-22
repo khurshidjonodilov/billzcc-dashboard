@@ -7,8 +7,8 @@
   
   // Read selected month from localStorage (default = 'apr')
   const KEY = 'billz_selected_month';
-  let selected = localStorage.getItem(KEY) || 'apr';
-  if (!BILLZ_DATA.months[selected]) selected = 'apr';
+  let selected = localStorage.getItem(KEY) || BILLZ_DATA.current_month || 'apr';
+  if (!BILLZ_DATA.months[selected]) selected = BILLZ_DATA.current_month || 'apr';
   
   const monthData = BILLZ_DATA.months[selected];
   
@@ -37,7 +37,8 @@ function buildMonthSwitcher() {
   const monthLabels = {
     'mar': 'Март 2026',
     'apr': 'Апрель 2026',
-    'may': 'Май 2026'
+    'may': 'Май 2026',
+    'jun': 'Июнь 2026'
   };
   
   // Build container
@@ -80,6 +81,7 @@ function buildMonthSwitcher() {
     {key:'mar', label:'Март 2026', has_data: BILLZ_DATA.months.mar?.has_data},
     {key:'apr', label:'Апрель 2026', has_data: BILLZ_DATA.months.apr?.has_data},
     {key:'may', label:'Май 2026', has_data: BILLZ_DATA.months.may?.has_data},
+    {key:'jun', label:'Июнь 2026', has_data: BILLZ_DATA.months.jun?.has_data},
   ];
   
   months.forEach(m => {
@@ -187,6 +189,7 @@ function updatePageHeaders() {
     'mar': {ru: 'Март', short:'Март 2026', period: '01–31 марта 2026', genitive:'марта', prepositional:'марте', upper:'МАРТ', low:'март'},
     'apr': {ru: 'Апрель', short:'Апрель 2026', period: '01–30 апреля 2026', genitive:'апреля', prepositional:'апреле', upper:'АПРЕЛЬ', low:'апрель'},
     'may': {ru: 'Май', short:'Май 2026', period: '01–31 мая 2026', genitive:'мая', prepositional:'мае', upper:'МАЙ', low:'май'},
+    'jun': {ru: 'Июнь', short:'Июнь 2026', period: '01–21 июня 2026', genitive:'июня', prepositional:'июне', upper:'ИЮНЬ', low:'июнь'},
   };
   const mn = monthNames[selected] || monthNames['apr'];
   
@@ -316,7 +319,7 @@ function showNoDataPlaceholder() {
 }
 
 function injectNoDataBanner(sectionName, month) {
-  const monthLabels = {'mar':'Март','apr':'Апрель','may':'Май'};
+  const monthLabels = {'mar':'Март','apr':'Апрель','may':'Май','jun':'Июнь'};
   const wrap = document.querySelector('.wrap') || document.querySelector('main') || document.body;
   if (!wrap || document.getElementById('noDataPageBanner')) return;
   const banner = document.createElement('div');

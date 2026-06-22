@@ -4,11 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>BILLZ CC · Операторы</title>
-<link rel="stylesheet" href="shared.css?v=42">
+<link rel="stylesheet" href="shared.css?v=43">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
-<script src="data.js?v=42"></script>
-<script src="shared.js?v=42"></script>
+<script src="data.js?v=43"></script>
+<script src="shared.js?v=43"></script>
 <style>
 .formula-bar {
   margin-top: 12px !important;
@@ -79,7 +79,7 @@
       <div class="cost-ey">ФОТ ОЦЕНКА (<span data-month-label-upper>АПРЕЛЬ</span>)</div>
       <div class="cost-n" id="totalCost">—</div>
       <div class="cost-d">сум · тикеты × CPT 7 561</div>
-      <div class="live"><span class="live-dot"></span>данные актуальны · 31.05.2026</div>
+      <div class="live"><span class="live-dot"></span>данные актуальны · 22.06.2026</div>
     </div>
   </div>
 
@@ -250,7 +250,7 @@
   <div class="ftr">
     <div class="fl">BILLZ · CC Intelligence · Omnidesk CRM</div>
     <div class="fr">
-      <span>📅 Обновлено: <strong style="color:var(--t2)">31.05.2026</strong></span>
+      <span>📅 Обновлено: <strong style="color:var(--t2)">22.06.2026</strong></span>
       <span>Операторы · <span class="month-text" data-month-label>Апрель 2026</span></span>
     </div>
   </div>
@@ -275,7 +275,7 @@ function getOpsFor(periodKey) {
 }
 
 const PERIODS = {
-  monthly: { label: BILLZ_DATA.current_month === 'may' ? 'Май 2026 (полный)' : 'Апрель 2026 (полный)' },
+  monthly: { label: (BILLZ_DATA._monthLabel||'Июнь 2026')+' (полный)' },
   week_22: { label: 'Нед 22 · 25–31 мая' },
   week_21: { label: 'Нед 21 · 18–24 мая' },
   week_20: { label: 'Нед 20 · 11–17 мая' },
@@ -683,7 +683,7 @@ render();
       if (typeof BILLZ_DATA === 'undefined') return;
       // Only show KK section if data exists AND we are not in May 2026 mode
       const ke = BILLZ_DATA.kk_errors;
-      const isMay = BILLZ_DATA.current_month === 'may';
+      const isMay = (BILLZ_DATA.current_month==='may'||BILLZ_DATA.current_month==='jun');
       const wrap = document.getElementById('kkSectionWrap');
       if (!wrap) return;
       if (isMay || !ke || !ke.top_error_categories || ke.top_error_categories.length === 0) {

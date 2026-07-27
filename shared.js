@@ -82,6 +82,7 @@ function buildMonthSwitcher() {
     {key:'apr', label:'Апрель 2026', has_data: BILLZ_DATA.months.apr?.has_data},
     {key:'may', label:'Май 2026', has_data: BILLZ_DATA.months.may?.has_data},
     {key:'jun', label:'Июнь 2026', has_data: BILLZ_DATA.months.jun?.has_data},
+    {key:'jul', label:'Июль 2026', has_data: BILLZ_DATA.months.jul?.has_data},
   ];
   
   months.forEach(m => {

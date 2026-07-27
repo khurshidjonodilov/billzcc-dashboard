@@ -620,7 +620,7 @@ function exportCSExcel() {
   // ── SECTION 05: Monthly insights (apr / may dynamic) ──────────────────────
   const aprilInsightsEl = document.getElementById('aprilInsights');
   if (aprilInsightsEl) {
-    const isMay = (BILLZ_DATA.current_month==='may'||BILLZ_DATA.current_month==='jun');
+    const isMay = (BILLZ_DATA.current_month==='may'||BILLZ_DATA.current_month==='jun'||BILLZ_DATA.current_month==='jul');
     let insights;
     if (isMay && (BILLZ_DATA[BILLZ_DATA.current_month+'_insights']||BILLZ_DATA.may_insights) && (BILLZ_DATA[BILLZ_DATA.current_month+'_insights']||BILLZ_DATA.may_insights).length) {
       // Use dynamic may insights from data.js
